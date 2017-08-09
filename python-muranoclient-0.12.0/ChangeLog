@@ -1,0 +1,874 @@
+CHANGES
+=======
+
+0.12.0
+------
+
+* Exclude build dir for flake8 test
+* Add debug to tox enviroment
+* Remove white space between print ()
+* Fixes filtering applications by name with glare
+* Remove the data assert to pass the gate
+* Add package delete to openstack CLI
+* Using sys.exit(main()) instead of main()
+* Return error code when a error occurred during package-import
+* Fix Murano client to use V3 and MultiDomain Authentication
+* Use assertGreater() and assertLess()
+* Support i18n for LOG.warning
+* Update author in setup.cfg
+* Updated from global requirements
+* Show team and repo badges on README
+* Support for environment list filtering by project id
+* Delete python bytecode file
+* Fix typos in cover.sh
+* Fix removes date_time items from dictionaries
+* Fix removes date_time items from dictionaries
+* Updated from global requirements
+* move old apiclient code out of openstack/common
+* Updated from global requirements
+* Add validation to package import
+* Updated from global requirements
+* Updated from global requirements
+* Add plug-in summary for osc doc
+* Updated from global requirements
+* Add functional test for environment-model-show
+* Fix osc plugin gives the error when using keystone v3
+* Add docstrings for environment-model-edit and environment-model-show commands
+* Fix OpenStack Licensing
+* OSC plugin should be using region/interface
+* Enable release notes translation
+* Add support for environment edit API
+* Fixing environment creation from template
+* Unskip the test due to bugfix
+* Skip some tests when using glare in a right way
+* Mark .testr.conf as non-executable
+* Make some OSC tests more clean
+* Updated from global requirements
+* TrivialFix: Fix typo in the bash shell file
+* Add package list to openstack CLI
+* Updated from global requirements
+* Updated from global requirements
+* TrivialFix: Using assertTrue() instead of assertEqual(True)
+* Remove unnecessary setUp
+* Updated from global requirements
+* Make OSC plugin be able to use glare backend
+* Updated from global requirements
+* Make --limit argument in package-list command robust
+* Add opportunity to import package from directory
+* Add Glare to python-muranloclient tests
+* Fix 'owned' flag when Glare is used
+* Populate tenant information in client
+* Cleanup, clarify newton release-notes
+* Update reno for stable/newton
+* Deprecate usage of 'glance' for --murano-pcakages-service
+
+0.11.0
+------
+
+* Sync tools/tox_install.sh
+* Increase yaql quotas
+* [docs] Update Readme with correct Doc URL
+* Replace functions 'Dict.get' and 'del' with 'Dict.pop'
+* Updated from global requirements
+* Updated from global requirements
+* Decode PrettyTable output before printing for Python3
+* Use upper constraints for all jobs in tox.ini
+* Updated from global requirements
+* Updated from global requirements
+* Add script for unit test coverage job
+* Trivial: clean up oslo-incubator related stuff
+* Add package create to openstack CLI
+
+0.10.0
+------
+
+* Correct default class version for static action call
+* Support for Schemas API was added
+* Support for multi-class yamls in client
+* Add Python 3.5 classifier and venv
+* Updated from global requirements
+* Change image for package in the code taken from Glance
+* Remove discover from test-requirements
+* Make environment-action-call command accept JSON arguments
+* Updated from global requirements
+* Add support for static actions API
+* Updated from global requirements
+* Add deployment list to openstack CLI
+* Add environment apps edit to openstack CLI
+* Add py27-mitaka tox target
+* Updated from global requirements
+* Use upper-constraints in tox test environments
+* Add __ne__ built-in function
+* Updated from global requirements
+* Use osc_lib instead of cliff
+* Add 'description_text' filed to test_table_struct_env_show
+* Use osc-lib instead of openstackclient
+
+0.9.0
+-----
+
+* Updated from global requirements
+* Use DummyYaqlYamlLoader to load classes during upload
+* Use yaml.SafeLoader instead of yaml.Loader
+* Replace print statment with print function
+* Updated from global requirements
+* Fix python 2,3 compatibility issue with six
+* Fix client could not init glance client
+* Import package and dependencies in correct order
+* Fix typo in env-template-create-env arg description
+* Replace tempest_lib with tempest.lib
+* Add environment deploy to openstack CLI
+* Support resources-dir for hot-packages
+* Reorder releasenotes and increase toctree depth
+* Add '--dep-exists-action' argument to murano CLI
+* Utilize enpoint_type argument for client creation
+* Modified docstrings to comply with pep8 H405 style check
+* Store transitive inheritance information in glare
+* Updated from global requirements
+* Updated from global requirements
+* Remove unused httplib2 requirement
+* Updated from global requirements
+* Further refactor of Glare API urls
+* Improve muranoclient install scripts syntax
+* Updated from global requirements
+* Updated from global requirements
+* Refactor urls to Glare API
+* Fall back to glance API v1
+* Correct variable name in code adopted from Glance
+* Updated from global requirements
+* Fix test case of test_category_create_long_name
+* Typo fix for python-muranoclient
+* GetPackageUI API is now called even if Glare is used
+* Updated from global requirements
+* Correct check for artifact package visibility
+* Move OpenStack client to test-requirements
+* Make use of version passed to glare artifacts_client
+* Fix displaying packages in category-show subcommand
+* Improve dictionary representation of package from Glare
+* Set "glare" as valid choice for "--murano-packages-service" option
+* Refactor request methods in HTTP/SessionClient classes
+* Fix authentication in glare-api via keystone
+* Adds improvements for verification of values from created and listed package
+* Fix env-template-add-app command failed
+* Do not log contents of the download request
+* Updated from global requirements
+* Add test to check error message for bundle-import with invalid file format
+* Add test to check delete environment by environment ID
+* Add test to check error message for bundle-import with non-existing name
+* Add Category support for openstack CLI
+* Add environment create/delete to openstack CLI
+* Add ability to override MURANO_URL for murano OSC plugin
+* Add Environment support for openstack CLI
+* Update reno for stable/mitaka
+* Updated from global requirements
+* Add reauth if token is expired and username/password are available
+* Update dummy application for testing after changes in murano
+* Distinguish between glance and glare endpoints
+
+0.8.3
+-----
+
+* Remove unused pngmath Sphinx extension
+* Add test to check error message for category-create with long category name
+* Import bundle with a not regular-bundle json give no error
+* Add test to check error message for bundle-import with non-existed package
+* Add "Version" column in the package-list output
+* Add test to check error message for bundle-import without bundle name
+* Fix version in requests to GLARE
+* Updated from global requirements
+* Add test to check category-show error message
+* Add test to check category-delete error message
+
+0.8.2
+-----
+
+* Remove unexpected kwargs when authenticating using token
+* Updated from global requirements
+* Updated from global requirements
+* Deletes redundant line in shell.py file
+* Make CLI outputs consistent with other OpenStack clients
+* Rename the package-import version parameter
+* Fix reading of app template file when adding to env template
+* Fix inconsistent argument name/placeholder in EnvTemplateManager.delete_app
+* Add Status field_labels for environment list
+* Fix checks for Project/Tenant command line arguments
+* Improving python3 compatibility
+* Improve is-public argument in env-template-create
+* environment-action-get-result now calls correct get_result API
+* Adds region parameter to environment-create
+* Fixes incorrect endpoint_override handling
+* Fixes TypeError in Client constructor
+* Updated from global requirements
+* Fix first argument of murano env-template-add-app usage
+* Add filter for do_package_list
+* Fix spellings for some words
+* Fix package delete on update when using Glare
+* Update translation setup
+* Updated from global requirements
+* CLI shell can now properly interact with Glance Artifacts
+* Fixed visibility parameter for create package glare call
+* Fix module's import order
+* Add is-public for environment-template list
+* Add environment template clone
+* Initial commit for openstack-client support in python-muranoclient
+* Add the cover case for 'body' kwarg in http json_request
+* Updated from global requirements
+* Add python 3 support
+* Updated from global requirements
+
+0.8.1
+-----
+
+* Updated from global requirements
+* Delete unuse variable in shell.py
+* Repair package-update command
+* Remove unnecessary statements for default argument
+* Updated from global requirements
+* Updated from global requirements
+* use keystoneclient exceptions instead of oslo-incubator code
+* Add machinery for translations via babel
+* Remove argparse dependency from requirements.txt file
+* Put py34 first in the envlist order of tox
+* Change LOG.warn to LOG.warning
+* Updated from global requirements
+* Delete the special character in README.rst
+* Remove arguments "{}" and "[]" in function definitions
+* Add Type field_labels for package list
+* Make package-update help more clear
+* Let the SessionClient raw_request only return response
+* Delete the extra space in delete package print
+* Updated from global requirements
+* Use oslo_i18n instend of gettextutils
+* Updated from global requirements
+* Pass environment variables of proxy to tox
+* Change logging level in SessionClient
+* Fix Resource.__eq__ mismatch semantics of object equal
+* Update setup.cfg entries
+* Updated from global requirements
+
+0.8.0
+-----
+
+* Remove py26 support
+* Add limit param for package-list
+* Catch correct exceptions in shell
+* Add missing space to error message
+* Fixed an incorrect call to the artifacts client
+* Fixed a download method wrapper in glare adaptor
+* 'to_dict' method added to PackageWrapper class
+* Glare client now properly filters by class name
+* Updated from global requirements
+* Add reno for RElease NOtes
+* Replacing application_catalog with application-catalog
+* New operation env-template-create-env
+* Show detailed info about app
+* Add python 3 support
+* Updated from global requirements
+* Rename folder with CLI tests
+* Add keystone v3 support to client
+* Add CLI tests for environment redeploy
+* Add unit-tests for categories
+* Import images publicly when package is public
+* Add test for environment deployment using CLI
+* Updated from global requirements
+* Use standard formatters for environment-create-session output
+* Small refactoring of CLI tests for packages
+* Updated from global requirements
+* Improve README contents
+* Updated from global requirements
+* Add more tests for categories, env-templates and packages
+* Updated from global requirements
+* Add Active field_labels for package list
+* Updated from global requirements
+* Use non-absolute paths, to allow urljoin join them correctly
+* Hide token id in logs
+* Fix incorrect output after error in package-save
+* Add missing parameter 'acquired_by' to environment model in tests
+* Updated from global requirements
+* Fix archive name generation in package_create command
+
+0.7.1
+-----
+
+* Fix the common/utils typo
+* Fixed YAQL tag leakage to YAML loader
+* Check package-download for stdout redirection
+* Update the python-muranoclient docs
+* Update MURANO_REPO_URL
+* Output detail informations about murano --debug command
+* Updated from global requirements
+* Update path to subunit2html in post_test_hook and fix env-show test
+* Updated from global requirements
+* Enable F812 and H904 style check
+* Fix app-show command
+* Fix test for environment table structure
+* Delete the unused LOG code
+* Return detailed info when get environment by name
+
+0.7.0
+-----
+
+* Added the support of Glance Artifact Repository
+* Copy the code of Glance V3 (artifacts) client
+* Fixed issue with cacert parameter
+* Strip json and html from error messages
+* Update the git ingore
+* Fix the reversed incoming parameters of assertEqual
+* Add olso.log into muranoclient's requirements.txt
+* Updated from global requirements
+* Standardise help parameter of CLI commands
+* Fix some spelling mistakes of setup files
+
+0.6.3
+-----
+
+* Support for YAQL 1.0.0
+* Updated from global requirements
+* Generate ids in environment-apps-edit command
+* Allow editing packages with package-update command
+* Add parameter support to pagination-list
+* Add CLI command package-save
+* Add check for dashes in template name
+* Add environment-apps-edit command
+* Add environment-session-create command
+* Add action controlling commands
+* Add params to environment_show command
+* Updated from global requirements
+* Add environment-deploy command
+* Updated package-import help description
+* Add sanity tests for testing actions with environment CLI command
+* Add ability to filter from categories with unicode
+* Allow joining existing networks when creating environment
+* Switch to oslo_log in murano client
+* Add basic tests for Murano CLI client. Add CleanUp after tests
+* Add bundle-save CLI command
+* Place generated hot package to work directory
+* Updated from global requirements
+* Add description to CLI command category-show
+* Remove unused module cliutils and timeutils
+
+0.6.2
+-----
+
+* Rename all visible occurrences of 'services' name
+* Add docstring to service-show command
+* Fix the unit tests with wrong using of mock
+* Add passenv parameter for tox G.variables passthrough
+* Allows congress to fetch environments from all tenants
+* Remove all vim modelines
+* Edits the help-text for python-muranoclient
+* Add abandon parameter to delete method
+* Add --version parameter for murano python client
+* Update requirements.txt
+* Adding config-like auth configuration for functional tests
+
+0.6.0
+-----
+
+* Point default MURANO_REPO_URL to http://storage.apps.openstack.org
+* Support multiple filenames for package commands
+* Remove hash check during image upload
+* Make post_test_hook.sh executable
+* Add post_test_hook for functional tests
+* First pass at tempest_lib based functional testing
+* Add OS_TEST_PATH to testr
+* Move unit tests into unit test directory
+* Drop use of 'oslo' namespace package
+* Only delete 'owned' packages for --exists-action update
+* Updated YAQL requirement to >= 0.2.6
+* Update Readme
+* Limit parameter is no longer ignored for packages
+* Update .gitreview file to reflect repo rename
+* Better error logging for package/bundle import
+* Update package composing command
+* Tests for repository machinery
+* Bash completion script for murano
+* Add bash-completion subparser to shell client
+* Update from global requirements
+
+0.5.6
+-----
+
+* Use HTTPClient in package_create manager method
+* Removed default Content-Type HTTP request header
+* Improve image and bundle handling
+* Support local bundles
+* Fix service-show command
+* Fix category list CLI command
+* Enable Bundle.packages() to yield Package objects
+* Environment Template CLI
+* Handle duplicate packages during uploading via CLI
+* Add support for required images file
+* Client support for Require section in manifest
+* Allow importing bundles of packages
+* Allow importing packages name
+* Allow importing packages by url
+* Adds client support for action results
+* Use name or ID of environment for murano CLI commands
+* Enable category management support
+* Fixed pagination parameter to conform to API specs
+* Reverted "Add keystone v3 support to client"
+* Fixes pagination in "packages-list" command
+* Add keystone v3 support to client
+* Add 'verify' option to package.create
+* Do not parse empty body
+* Remove obsolete checks from tox.ini
+* Use pretty-tox for better test output
+* Update from global requirements
+* Use modules from oslo istead of openstack-common
+* Add opportunity to create public packages via shell
+* Revert "Add keystone v3 support to client"
+* Add keystone v3 support to client
+* Catch ConnectionError exception from requests
+* Updated from global requirements
+
+0.5.5
+-----
+
+* Log response when using requests library
+* Provide method for calling action in an environment
+* Bump hacking to 0.9.x series
+
+0.5.4
+-----
+
+* Fix some calls after switch to 'requests'
+
+0.5.3
+-----
+
+* Convert muranoclient to 'requests'
+* Fix exception names and CLI args
+* Adds toggle public functionality
+* Add LICENSE to muranoclient
+* Update package-import command
+* Add package-create command
+* Updated from global requirements
+* Allow deletion of multiple environments
+* Infrastructure update
+* Add ability to retrieve supplier logo for package
+* Correct muranoclient service_get function
+* Enable to set updating type for "Update package"
+* Extend package-show output with detailed information
+
+0.5.2
+-----
+
+* Improve logging in CLI client
+* Extend CLI functionality
+* Fix issue with python 3.3 gate job
+* Paginate packages list using 'next_marker' attribute
+* Run hacking in a right way
+* fixed several pep8 issues
+* Fixed Keystone endpoint query
+* Enable unpickling base.Resource objects
+
+0.5.1
+-----
+
+* for pkg list, make include_disabled default False
+* Return package object in packages.create method
+
+0.5.0
+-----
+
+* Remove version from setup.cfg
+* Added HTTP proxy support
+* Fix the issue with stats API call
+* Update requirements.txt due to changes in global-requirements.txt
+* InstanceStatistics updated for corresponding API change
+* Parse YAML in muranoclient with the loader of the given class
+* Refactor packages filter and list methods
+* Interface to get instance statistics added
+* Support package update, toggle_active and filter methods
+* Initial support of working with package definitions
+* Updated openstack-common
+* Calls to the v1 API are prefixed with the appropriate version prefix
+* Add Stats List method
+* Fixed issue with requirements
+* Update README with actual info
+* Update requirements to stable/havana
+* Update version in setup.cfg
+* Support passing networking info during environment create, not update
+* Support getting and updating network_info of environment
+* Cherry-picked changes from release-0.3
+* Support building wheels (PEP-427)
+* Update requirements to match havana's ones
+* Resolve issues with package setup.py
+* Cherry-pick following change-ids from release-0.2
+* Fix error from previous commit
+* Fix service creation failure
+* Fix http.py to initial
+* Resolved bug 746
+* Add SSL support to muranoclient
+* Modified client to support lastStatus fetching
+* Add CentOS setup shell script
+* setup.sh add
+* list deployments in client now properly returns a list, not dictionary
+* Fixed a couple of bugs in path resolution routine
+* Changes in client to work with deployment logs fetching
+* Added support for new API v0.2
+* fixed python setup workflow
+* Added tests for new services
+* Another changes within Service::Delete
+* Correct Service::Delete params
+* Murano Python Client support for IIS/ASP.NET web farms
+* Fix API according to New Sessions Handling design
+* python-muranoclient to support ASP.NET apps deployment API
+* Added .gitreview file
+* glazierclient -> muranoclient in tests
+* KEERO-320 - Fix all occurrences of old names (keero, glazier) in python client
+* Removed all projects except Glazier Api Client
+* Removed all projects except Glazier Api Client
+* Small fixes for unit tests
+* Fixed issue with length of new name
+* Fixed small issue
+* Fixed issue with names
+* Fixed issue with names
+* Fixed issue with names
+* Fixed issue with names
+* Fixed issue with names
+* Fixed issue with names
+* Fixed issue with names
+* Fixed small issue with new names
+* Fixed issue with horizon component installation
+* Fixed issue with horizon component installation
+* Fixed issue with horizon component installation
+* Finished converting API Specification
+* Fixed small issue with setup.py
+* Fixed issue with renaming of the tabula component
+* Fixed issue with renaming of the tabula component
+* Added part of API Specification
+* Tabula renamed to dashboard
+* Tabula renamed to dashboard
+* Finished documentation for API
+* Finished documentation for API
+* Renamed Portas to API
+* Renamed Portas to API
+* Added tox for webUI tests
+* Added license to documentation of Portas Client
+* Small fix
+* Fixed api interface names to environments
+* Fixed api interface names to environments
+* Renamed and licensed python-glazierclient
+* Fixed api interface names to environments
+* Fixed api interface names to environments
+* Renamed documentation project
+* Fixed licenses for tabula and tests. Fixed name of tabula project
+* Fixed licenses for tabula and tests. Fixed name of tabula project
+* Fixed a few small issues
+* Pass all RabbitMQ settings from conductor to Agent
+* Initialization of tox for conductor and portas. Add new webUI automated tests
+* Licenses added
+* A lot of changes were made
+* Issue with figures
+* Main Documentation Project
+* Fixed ignore file for python-portasclient
+* Documentation for UI
+* Documentation for Python PortasClient
+* Forgot man pages
+* Documentation for Portas Project
+* Send token when deleting environment
+* Fixed https://mirantis.jira.com/browse/KEERO-227
+* Fixed issue with sessions
+* Fixed issue with sessions
+* Experiments
+* Experiments
+* Experiments
+* Experiments
+* Experiments
+* Add logging to WebUI
+* Add initial files for unit tests
+* Fixed issues with sessions Added logging
+* Added unit tests for client. Coverage 66%
+* Rename RabbitMQ username field Removed use_ssl option from settings
+* Fix running install_venv.py
+* Updated python-portasclient
+* PEP8 compliance
+* Fixed unit tests
+* Added ability to add services to environment
+* bug fix
+* bug fix
+* Fixed index bug
+* Finalize UI
+* Finalize UI
+* Experiments
+* Experiments
+* Experiments
+* Experiments
+* Experiments
+* Experiments
+* Experiments
+* Experiments
+* Experiments
+* Experiments
+* Fix PEP8 errors
+* Experiments
+* Experiments
+* Experiments
+* Experiments
+* Experiments
+* Experiments
+* Experiments
+* Experiments
+* Fix issue with statuses
+* Experiments
+* Experiments
+* Experiments
+* Experiments
+* Experiments
+* Experiments
+* Experiments
+* Experiments
+* Experiments
+* Experiments
+* Experiments
+* Experiments
+* Fixed issue with sessions
+* Naming conventions: use name instead of id for instance names
+* Heat auto-discovery, keero-linux-keys -> keero-keys
+* Experiments with UI
+* typo
+* Scoped tokens
+* Experiments with UI
+* Experiments with UI
+* Experiments with UI
+* Experiments with UI
+* Experiments with UI
+* Experiments with UI
+* Experiments with UI
+* Fix issue for result of deleted environments
+* Fix merge issue
+* Merged
+* Fixed small issue
+* Fixed small issue
+* Fixed small issue
+* Fixed small issue
+* Fixed small issue
+* Fixed small issue
+* Fixed small issue
+* Fixed small issue
+* Fixed small issue
+* Fixed small issue
+* Fixed small issue
+* Fix name of the variable
+* Fixed small issue
+* Send token when deleting environment
+* Removed unneeded binding
+* Fixed small issue
+* Fixed small issue
+* Fixed small issue
+* Fixed small issue
+* Fixed small issue
+* Fixed small issue
+* Fixed small issue
+* Fixed small issue
+* Fixed small issue
+* Fixed small issue
+* Fixed small issue
+* Fixed small issue
+* Fixed small issue
+* Fixed small issue
+* Fixed small issue
+* Added tabs for services
+* forgotten file
+* Fixed issue with activeDirectory deletion
+* Add support for reports filtering
+* Added tabs for services
+* Fixed small issue
+* Fixed small issue
+* Fixed small issue
+* Fixed small issue
+* Fixed small issue
+* Fixed small issue
+* Added dropdown list with list of services
+* Added initial version of tabs for services
+* Added initial version of tabs for services
+* Added initial version of tabs for services
+* Fixed issues with templates
+* Fixed issue  with installation
+* Fixed issue  with installation
+* PEP-8
+* Fixed issue with incorrect import
+* logging and bug-fixes
+* fixed VM initialization script
+* Evironment/Units deletion, bug-fixes
+* Fixed UI issues
+* Remove service deletion button
+* Finished installable UI
+* Removed old code
+* Naming conventions changed
+* Updated OpenStack Common (Fixed issue with notifier package)
+* Use Heat REST API instead of command-line
+* Added support for setup.py Added localization and documentation skeletons PEP8 Fixes, optimized imports
+* #KEERO-222 Remove random part of unit name
+* Send Env to Conductor for deletion
+* Hot fix for WebUI tests
+* Fixed WebUI tests. Added new tests
+* #KEERO-220 Send X-Auth-Token to Conductor
+* Added initial unit tests for RestAPI service
+* Fixed all pep8
+* Fixed automated tests for web UI
+* Fixed automated tests for WebUI. Added class Page with simple objects
+* Code to start\stop keero components using devstack functions
+* Fixed: changed the run mode for install venv script
+* Added deployment script for automated tests
+* All Cloudbase-Init plugins disabled except UserDataPlugin
+* Userdata script updated to support computer renaming functionality
+* Entry point script renamed 2d27f4f5054f34982ed67da2bf4b35c8ac1558d3
+* Issues #195 and #199
+* README and guide for conductor
+* Fix and unit test for issue: https://mirantis.jira.com/browse/KEERO-219
+* Added unit tests for REST API client. Fixed pep8
+* New devstack scripts added
+* Old devstack scripts removed
+* Write-Host replaced by Write-Log
+* Fixed typo
+* Sync
+* Sync
+* Sync
+* Cloned horizon and added our dashboard
+* Removed obsolete code Removed projects: [windc, windcclient]
+* Added tests for REST API. Fixed issues with Web UI
+* Added tests for REST API. Fixed issues with Web UI
+* Merged iteration3 branch to master. Fixed pep8
+* Fixed small issues with UI
+* Added lst fixes for demo
+* Fix another issue with environments list
+* Fix another issue with services
+* Fix issue with getting list of environments
+* Added progress bars for services. Fixed few issues for demo
+* Fix issue with ack on results
+* Add part of service id to unit name
+* Add ability to get status for Environments and Sessions
+* Added password-secure checks for UI, fix usability issues for demo
+* ExecutionPlanGenerator DSL processor
+* Updated workflow elements to reflect new name changes and to fix typos
+* ExecutionPlanGenerator DSL processor
+* Updated workflow elements to reflect new name changes and to fix typos
+* Another Issue with sessions
+* Added progress bar to Web UI. Fixed pep8 errors
+* Change behaviour of viewing services
+* Issue with session
+* No ack is needed when auto_ack set to True
+* Resolved issue with reports from orchestration engine
+* FIx issue with fields created & updated
+* Fixed issue with logging
+* Added deploy button for data centers in UI. Fixed templates for services
+* Queues should be durable
+* Add debug logging for controllers
+* Sync before tag
+* Fixed issue with empty services list
+* Added new API for Web UI
+* typos
+* Fixed length of names
+* Fixed instance namings
+* Added WebServer and AD
+* Workflows, ExecutionPlanGenerator, Reporting, UserData, conductor improvements
+* Removed obsolete file
+* Bug with Session
+* Added Session operations
+* Added Environments CRUD operations
+* Issue with deleting Environment
+* Removed obsolete files
+* Added initial version for python-portasclient
+* Issue with port for RabbitMQ
+* Function updated to return IPv4 addresses only
+* Typo
+* Explicit import of module DnsServer added
+* Function to install IIS added
+* Code to return DNS listening IPs from DC added
+* WebServer API Added WebServer API Small refactoring
+* Fix issues with queues
+* Added units name generation
+* Write results from orchestration engine
+* Active Directory API
+* Remove obsolete service table
+* Enable session deployment
+* Reports from orchestration engine Added ability to store and expose reports from orchestration engine
+* Cleaned up API
+* Added support for reading messages from RabbitMQ asynchronously
+* Typo
+* userdata.py fixed
+* Finished Task KEERO-111. Added base UI tests
+* Hot fix: Fixed pep8 for Dashboard
+* Finished Task: KEERO-117. Added new UI wizard for Create Services Action
+* Userdata plugin with minimal MIME support added
+* User data sample file added
+* Extra functions moved to NotCoreFunctions.ps1 file in order to remove them in the future
+* Functions to work with Base64 strings added
+* Functions to work with Zip files added
+* Modified files from cloudbase-init added
+* Fixed pep8. Fixed deployment script
+* Added support for session checking
+* Most part of Session API
+* Removed obsolete code
+* Added new Session model and migration Fixed issues with previous models
+* Initial conductor implementation
+* Added deployment script and automated tests
+* Small PEP8 fixes
+* Fixed small issues with parameters. It is required fix
+* Added remove method for environments Also slightly updated routes table
+* Finished environments api
+* Only environments from same tenant as users should be shown
+* Remove unnecessary blocks of code
+* When new DC is adding tenant_id is added as param
+* Fix issues with context
+* Moved utils.py from WindDC
+* Small changes to .gitignore Removed global .gitignore Added .gitignore to WindowsAgent project
+* Update added files
+* Added support for keystone-auth
+* Updated initial version of portas-api
+* Initial version of portas-api
+* Simple function to update agent config added
+* Simple function for working with templates added
+* Function to retrieve meta data opject from config drive added
+* localrc updated
+* Files to automate devstack installation added
+* Fixed small issues with WebUI
+* asd
+* test.commit
+* test.commit
+* Log functions updated
+* Stop-Execution modified
+* Removed obsole line
+* Removed obsolete file Added .gitignore file
+* Added reference JSON for Active Directory
+* Fixed urls for dashboard
+* Fixed Web UI for demo
+* Files removed
+* Windows PowerShell module added
+* Unattended installation files added
+* Execution plan files added
+* windc iteration2
+* Added WebUI for correct configuration of new service AD
+* Resolved issue with datacenter id
+* Resolved issue with datacenter id
+* Fixed many small issues
+* Fixed typo
+* Fixed KEERO-89
+* Fixed issue with data centers
+* Added services functions to client. Need to be tested
+* [KEERO-83] Windows Agent: Ability to reboot machine after execution plan is executed
+* [KEERO-83] Windows Agent: Typo fixes + sample values in config
+* [KEERO-83] Windows Agent initial implementation
+* Added operations for chef. They might be remove if we decide to not use chef
+* Fixed small issues
+* Fixed KEERO-85
+* Fixed issue with virtual environment SQLAlchemy library
+* Added library libsqlite3-dev to virtual environment for windc client
+* Added new functional to dashboard, fixed small issues
+* Added windc API client, sync repo with dev box
+* Added new files
+* Updated design. Removed extra code
+* 1. Added support of CloudFormation templates. Made a simple interface to build template. Stan can work here to redesign template.py 2. Added calls of drivers. Now heat is called from cmd instead of client. Should be rewritten. 3. ActiveDirectory makes a static template. Need to rewrite this with working with actual parameters
+* Added additional fields for Domain Controller
+* Added simple form for configuration Domen Controllers and IIS Servers
+* Fixed small problems with links and titles on pages
+* Fixed small problems with links and titles on pages
+* Added initial project for horizon dashboard
+* 1. Added builders support. Each builder is a class dynamically loaded from ./windc/core/builders folder. The class name should be the same as module file name. 2. Updated core/api.py to support datacenter and service creation with extra parameters which are not defined by model explicitly. 3. Added event based approach for the windows environment change. Now when user submits a request to API the core updates database and initiates a new event which defined scope (datacenter, service, VM) and action (add, modify, delete). This event and data will be iterated over all registered builders. Each builder can use this event and data to plan some modification
+* 1. Fixed issue with main file start ./bin/windc-api 2. Added router to Route /datacenters/ and /services/ URLs 3. Added stubs for windc/core/api. 4. Fixed start-up process for service ------------------------------------------------- Now it is working service which will reply for curl http://localhost:8181/tenant_id/datacenters/ curl http://localhost:8181/tenant_id/datacenters/dc_id/services curl http://localhost:8181/tenant_id/datacenters/dc_id/services/service_id
+* Initial version of the Windows DataCenter project. It is openstak-skeleton based
+* Unattended files added
+* Initial empty repository

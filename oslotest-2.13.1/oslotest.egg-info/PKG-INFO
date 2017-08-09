@@ -1,0 +1,42 @@
+Metadata-Version: 1.1
+Name: oslotest
+Version: 2.13.1
+Summary: Oslo test framework
+Home-page: http://docs.openstack.org/developer/oslotest
+Author: OpenStack
+Author-email: openstack-dev@lists.openstack.org
+License: UNKNOWN
+Description: ========================
+        Team and repository tags
+        ========================
+        
+        .. image:: http://governance.openstack.org/badges/oslotest.svg
+            :target: http://governance.openstack.org/reference/tags/index.html
+        
+        .. Change things from this point on
+        
+        =======================================================
+         oslotest -- OpenStack Testing Framework and Utilities
+        =======================================================
+        
+        The Oslo Test framework provides common fixtures, support for debugging, and
+        better support for mocking results.
+        
+        * Free software: Apache license
+        * Documentation: http://docs.openstack.org/developer/oslotest
+        * Source: http://git.openstack.org/cgit/openstack/oslotest
+        * Bugs: http://bugs.launchpad.net/oslotest
+        
+        
+Platform: UNKNOWN
+Classifier: Environment :: OpenStack
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5

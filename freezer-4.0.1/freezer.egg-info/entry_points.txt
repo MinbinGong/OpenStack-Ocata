@@ -1,0 +1,11 @@
+[console_scripts]
+freezer-agent = freezer.main:main
+freezer-scheduler = freezer.scheduler.freezer_scheduler:main
+
+[oslo.config.opts]
+freezer = freezer.common.config:list_opts
+scheduler = freezer.scheduler.arguments:list_opts
+
+[tempest.test_plugins]
+freezer_tempest_tests = freezer.tests.freezer_tempest_plugin.plugin:FreezerTempestPlugin
+

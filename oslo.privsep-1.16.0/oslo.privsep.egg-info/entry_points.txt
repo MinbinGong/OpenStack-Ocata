@@ -1,0 +1,3 @@
+[console_scripts]
+privsep-helper = oslo_privsep.daemon:helper_main
+

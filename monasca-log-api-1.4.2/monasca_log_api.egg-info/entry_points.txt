@@ -1,0 +1,6 @@
+[console_scripts]
+monasca-log-api = monasca_log_api.server:launch
+
+[tempest.test_plugins]
+monasca_log_api_tests = monasca_log_api_tempest.plugin:MonascaLogApiTempestPlugin
+

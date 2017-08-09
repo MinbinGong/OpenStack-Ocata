@@ -1,0 +1,208 @@
+CHANGES
+=======
+
+0.9.0
+-----
+
+* Add release notes for Ocata
+* Deprecate direct YAML input in tackerclient
+* Support VNF creation from inline VNF template
+* Adds vnfd_id coloumn in vnf-list
+* Remove unwanted 'required' parameters
+* Remove support for legacy VNFD templates
+* Improve help text for events-list command options
+* Fix invalid unit test code in python-tackerclient
+
+0.8.0
+-----
+
+* Implement client support for NSD
+* Replaced e.message with str(e)
+* Support parameter input for vnffg template
+* Add Constraints support
+* Remove passing infra and mgmt driver from client
+* Fix oslo.i18n problems in python-tackerclient
+* Changed the help message of --config-file parameter
+* Updated from global requirements
+* Show team and repo badges on README
+* Updated from global requirements
+* Add __ne__ built-in function
+* Usability improvements of vim-update options
+* Updated from global requirements
+* Updated from global requirements
+* Add stevedore to requirements
+* Updated from global requirements
+* Revert "Remove unused import library"
+* make python34 CI job to pass
+* mox to mock refactor
+* Remove unused cliff tablib from test requirements
+* rename vm into vnfm
+* Enable release notes translation
+* Updated home-page info with the developer documentation
+* Updated from global requirements
+* Using assertIsInstance() instead of assertEqual(True, isinstance())
+* Remove commented out code in test_shell.py
+* Updated from global requirements
+* Updated from global requirements
+* Fix cString ImportError for py34
+* Updated from global requirements
+* Updated from global requirements
+* Body can not be None while creating vnfd
+* Add support for multi delete
+* Update reno for stable/newton
+* Remove "else" branch in "create_vnfd" function
+* Allow auth url without port for vim registration
+
+0.7.0
+-----
+
+* Moving test files to vm directory
+* Updated from global requirements
+* Modify MyURLComparator to handle deep match on URL
+* Deprecate infra_driver and mgmt_driver
+* Remove list_vnf_resource_pagination unit test
+* Removing test cases for already removed methods
+* Add client support for VNFFG in NFVO
+* cli: modify vnfd, param & config attr. to dict obj
+* Adds client commands for listing a VNF resources
+* Revert "Creates details API to fetch VNF detials"
+* Creates details API to fetch VNF detials
+
+0.6.0
+-----
+
+* Adds audit support in client
+* Remove '--config' option when create/update a vim
+* Updated from global requirements
+* Add "Description" parameter while creating VNF with CLI
+* VNF scaling: CLI and python client
+* VNFD legacy template deprecation warning
+* Updated from global requirements
+
+0.5.0
+-----
+
+* Add domain information into auth cred
+* Unified formats of log_xxx function
+* Make VNFD/VNF/VIM Name Mandatory in Tacker CLI
+* Remove the mask password logic in vim list and vim show
+* Remove discover from test-requirements
+* Transition default VIM to API and DB operation
+* Remove unused import library
+* remove unused LOG
+* Updated from global requirements
+* Add .idea/ to python-tackerclient .gitignore
+* Fix ext-show command error
+* Updated from global requirements
+* Updated from global requirements
+
+0.4.0
+-----
+
+* Change the initial letter to capitals in Tacker CLI help texts
+* Updated from global requirements
+* Add client side support for error_reason
+* Change bind_port to 9890
+* Add reno support to python-tackerclient
+* Updated from global requirements
+* Updated from global requirements
+* Fix incompatible code with python3 for tox pep8 test
+* Capitalize help descriptions
+* Updated from global requirements
+* Updated from global requirements
+* Display Health status of VIM
+* Updated from global requirements
+* Updated from global requirements
+* py3.x: Use six.iteritems for Iterable dict items
+* Fix deprecation warning in tackerclient
+* Do not display password in VIM command outputs
+* Clean device from help message
+* Updated from global requirements
+* Updated from global requirements
+* Clean unused code
+* Cleanup copyright header
+* Updated from global requirements
+* Cleanup vim settings
+
+0.3.0
+-----
+
+* Fix attr for vim update
+* Implement client support for multisite VIM
+* Cleanup Oslo Incubator code
+* Help message correction
+* Clean device related unused path
+* Clean up references to neutron
+* Code clean-up in client.py
+* Updated from global requirements
+* Removing "device" CLI from master branch
+* Fix summary and author in setup.cfg
+* Updated from global requirements
+* Updated from global requirements
+* Clean up flake8 ignore list
+* Code correction while calling base class method
+* Updated from global requirements
+* Remove argparse from requirements
+* Renamed 'servicevm' in python-tackerclient
+* Fix H238 errors in tackerclient code
+* use keystoneclient exceptions instead of oslo-incubator code
+* Fix H405 errors in tackerclient code
+* Put py34 first in the env order of tox
+* Fix H105 errors in tackerclient code
+* Fix E265, E129, E113 errors in tackerclient code
+* Updated from global requirements
+* Drop py33 support
+* Remove service instance related stuff and fix unittests
+* Deprecated tox -downloadcache option removed
+* Updated from global requirements
+* Remove py26 support
+* Update requirements according to global requirements
+* Added command to display VNFD's template
+* delete interface attach/detach commands
+
+0.2.0
+-----
+
+* Fix for vnfd-delete with vnfd-name as arg
+* Escape yaml string to configure VDU
+* Update .gitreview for new namespace
+* Limit description length in vnfd-list
+* Implement Tacker MANO API client changes
+* Change ignore-errors to ignore_errors
+* Fix drop of config values supplied by end user
+* Added validation for vnfd-create
+* Parameterization support added for VNFD templates
+* Support Tacker client in master branch
+* The vnf-create and vnfd-create output is hard to read
+* Add instructions to tackerclient
+* Add --vnfd-name option to vnf-create command
+* Clean up list output for device, vnf and vnfd
+* call _super method for _XtachInterface parent class
+* update_vnf: support config as yaml file
+* vnfd: name and description was not supported
+* device, vnf: name column support
+* vnf-create: key error by tenant_id
+* tackerclient: api for vnfd, vnd
+* vnfd, vnf: command options
+* teach vnf-create config
+* add vnf related command
+* add vnfd commends
+* remove commands for service
+* command: device-template and device
+* Revert "service instance: drop command related to service instance"
+* XML_NS_V20 -> XML_NS_V10
+* catch up neutronclient change
+* use servicevm as service type for openstack client
+* rename --kwargs to --attributes
+* attach/detach interface command
+* service instance: drop command related to service instance
+* correct repo in .gitreview
+* Work toward Python 3.4 support and testing
+* implement servicevm related command
+* rename neutron to tacker
+* rename neutron to tacker
+* remove unnecessary neutronclient files
+* remove unnecessary neutron file under neutronclient/tests
+* setup logger name of NeutronCommand automatically
+* import python-neutronclient of 1bce6e437e2dd1fa5de6fc2ccdd0ee8ac3f44d18
+* Added .gitreview

@@ -1,0 +1,2108 @@
+CHANGES
+=======
+
+7.0.0
+-----
+
+* fix requirements file branching for trove guests
+* Update UPPER_CONSTRAINTS_FILE for stable/ocata
+* Update .gitreview for stable/ocata
+
+7.0.0.0rc1
+----------
+
+* insulate TroveContext from possible changes in oslo.context
+* Prepare for using standard python tests
+* unwedge the gate
+* Add translation_checks for i18n
+* Add i18n tranlastion to guestagent datastore 2/5
+* Add i18n translation to guestagent datastore 1/5
+* Add i18n translation to others 3/3
+* Add i18n translation to extensions 3/3
+
+7.0.0.0b3
+---------
+
+* Updated from global requirements
+* Add configuration support for clusters
+* [gate fix] Handle case where hostname ends in .1
+* [gate fix] Run resize-* for MySQL only
+* flake8 to ignore releasenotes directory
+* backoff in poll_until
+* [fix gate] Change size of MySQL flavors
+* Test to figure out why CONTROLLER_IP is blank
+* Disable wait for force-delete
+* Display boolean module values
+* Add support for cluster restart
+* secure oslo_messaging.rpc
+* Add i18n translation to guestagent datastore 3/5
+* Add i18n translation to guestagent 3/5
+* Add i18n translation to guestagent 4/5
+* Add i18n translation to extensions 2/3
+* Enable Redis configuration tests
+* Fix trovestack clean to remove nova instances
+* Remove negative backup tests
+* Have scenario tests retrive guest log on error
+* Updated from global requirements
+* Move try-again loop around all data methods
+* Remove netifaces useless requirement
+* Skip redis clustering tests
+* Update method cfg.set_defaults
+* Add support for module ordering on apply
+* Updated from global requirements
+* Fix Redis cluster grow scenario tests
+* Replace pexpect with processutils in volume.py
+* Restrict negative backup tests to Redis only
+* Updated from global requirements
+* get rid of a couple of old oslo-incubator object references
+* Add missing LOG mocks to unittests
+* Remove negative backup tests from api run
+* Trivial: Remove vim header from source files
+* Print error on resize failure
+* formalizing configure_nova_kvm
+* Add i18n translation to others 2/3
+* Add i18n translation to guestagent 2/5
+* Add i18n translation common 5/5
+* Fix i18n translation in common 1/5
+* Add i18n tranlastion to common 3/5
+* Add i18n translation to common 2/5
+* Add i18n translation to guestagent 1/5
+* Add i18n translation to others 1/3
+* Add i18n translation to guestagent 5/5
+* Add i18n tranlation to common 4/5
+* Add i18n translation to guestagent datastore 4/5
+* Add i18n translation to extenstions 1/3
+* Add i18n translation to guestagent datastore 5/5
+* Fix Trove tempest plugin
+* allow unauthenticated packages to be installed
+* Avoid double-check when waiting for test states
+* trove pylint cleanup(s)
+* Tweak trove devstack plugin
+* Have inst-error delete before inst-create-wait
+* (fix gate) Remove liberty from the releasenotes
+* Debug code to dump env
+* Fix Gate: Force pip2 instead of pip
+* Fix backup of mysql variants on Centos
+* Add support for nic and az in cluster grow
+
+7.0.0.0b2
+---------
+
+* Clean up trovestack utility (fix kick-start)
+* Stop caching client to fix long-running test fails
+* Add Xenial support for MariaDB
+* Add DeprecationWarning in test environments
+* Removing reference to trove-integration in doc index
+* Add support for Oslo Policies to Trove
+* Tests skip adding data if instance not exists
+* Fix a typo
+* (fix troveclient gate) Use alt-demo network
+* Show team and repo badges on README
+* Updated from global requirements
+* Fix slow nodes causing guest_log to fail
+* (fix gate) Don't source openrc in gate run
+* Initial work to support Xenial
+* Various post-upgrade fixes
+* Fix mountpoint detection
+* Create net/subnet for alt_demo tenant
+* Add compute instance ID and volume ID to trove show output
+* Scenario tests wait on helper user creation
+* Have api tests use IPv4
+* Updated from global requirements
+* Allow splitting test groups into sub groups
+* Removed check for KEYSTONE_CATALOG_BACKEND from trove plugin
+* Fix Galera_common.grow/shrink to propogate exceptions
+* trovestack: Better error message for missing arg
+* Updated from global requirements
+* Fix log-generator-user-by-row test
+* Fix race condition in cluster-show
+* clean up references to trove-integration and redstack
+* Have cluster-show list all ips
+* Fix module apply
+* Have scenario tests use ipv4
+* Enable hacking extensions framework
+* Fix error case where server.fault is missing
+* Delete description of the disk
+* Fail on deleting non-existing database
+
+7.0.0.0b1
+---------
+
+* Install Couchbase SDK for scenario test client
+* when pylint has an error loading the config, it should fail
+* Files with no code must be left completely empty
+* Updated from global requirements
+* Add pycrypto to the requirements file
+* Multi-Region Support
+* trovestack clean doesn't delete secgroups
+* Updated from global requirements
+* Change the way trovestack figures the default network
+* Add reference to OpenStack documentation
+* add section on code review priority
+* Updated from global requirements
+* Remove blacklist test volume
+* Update the Signing Key for Percona Debian and Ubuntu Packages
+* Update some information
+* Fix a typo in previous commit; missed $
+* Remove nic handling in galera cluster grow
+* Fix incorrect version and release details
+* Make trovestack able to run in the gate context
+* Fix scenario tests
+* Updated from global requirements
+* allow PATH_TROVE to be specified by gate or defaulted by trovestack
+* Issue deprecation warning for the use of heat templates in Trove
+* PostgreSQL guest_log test fails intermittently
+* Fix Postgresql pg_rewind call
+* Updated from global requirements
+* Drop MANIFEST.in - it's not needed by pbr
+* Improve guestagent datastore models
+* Updated from global requirements
+* beginning to change trove-integration
+* Fix RPC Versioning
+* Remove downgrade
+* Enable release notes translation
+* Extract RPMPackagerMixin
+* Removed H237 from tox.ini
+* Delete unnessary i18n
+* Fix some typos in doc and comments
+* Cluster Upgrade
+* Fix typos in description
+* Fix SafeConfigParser DeprecationWarning in Python 3.2
+* Updated from global requirements
+* Fix Old style classes are deprecated and no longer available in Python 3
+* Fix a typo in service.py and trove_testtools.py
+* Use more specific asserts in tests
+* Add Apache 2.0 license to source file
+* Modify parameters of spelling mistakes
+* Updated from global requirements
+* [api-ref] configure LogABug feature
+* Delete openstack in flake8
+* Taskmgr & guestagent use inconsistent topics
+* Make parameter consistent in devstack plugin
+* Fixing trove config group request
+* Remove cfg and logging import unused
+* Concentrated test_validate_xx_configuration to a new method
+* Add max_prepared_stmt_count to validation rules
+* update contributing.rst to reflect release notes and bugs
+* Use common methods for cluster validation
+* Remove unused variables
+* Fixup indentation errors
+* Updated from global requirements
+* Skip 'eject valid master' replication test
+* Fix the Manager module path in documentation
+* Fix Postgresql configuration test and guest-log
+* Perfect the mysql test
+* Repeat definition blacklist
+* Fix typos in validation-rules.json & service.py
+* Delete unused method verify_errors
+* improve pylint; generate errors and config in sorted order
+* Fix pylint Error:PGSQL_RECOVERY_CONFIG
+* Fix call to to_mb
+* Missing logging import
+* Display flavor-ephemeral in trove flavor-list command
+* Updated from global requirements
+* Fix error: option --no-parallel not recognized
+* Update reno for stable/newton
+
+6.0.0.0rc1
+----------
+
+* Handle the exceptions and errors correctly for DB2
+* initial chkin of pylint
+* Cluster code looks for wrong field in request for volume type
+* Allow for invalid packet sequence in keepalive
+* Implement full online backups for DB2
+* Add command to delete BUILD instances and clusters
+* Use assertIn instead of assertTrue(A in B)
+* Update #noqa for out 79 character
+* Fix race in Postgres user-list
+* Postgresql Streaming Replication
+* Skip 'eject valid master' replication test
+* Updated from global requirements
+* Remove hardcoded timeout in MongoDB clusters
+* Add os_admin to the ignored_dbs for PostgreSQL
+* Update api-ref documentation
+* Separate database and user create in prepare
+* Update some installation instructions
+* [fix gate] Cluster grow not showing locality
+* standardize release note page ordering
+* Add support for modules in cluster create/grow
+* document configure and verify steps
+* Insulate TroveContext from oslo.context changes
+* Implement Instance Upgrade
+* To simplify the setUp
+* Implement configuration management for DB2
+* Update release note page ordering
+* Reference to unknown CONF in fakemode.py
+* Stop adding ServiceAvailable group option
+* Remove unuse flavor test
+* [api-ref] Remove temporary block
+* Fix a small typo
+* Add missing '_LE' import in trove/cmd/guest.py
+* Add --incremental flag to backup-create
+* Remove unused parameters
+* In fakemode.py, add the import os
+* Quota Management
+* Updated from global requirements
+
+6.0.0.0b3
+---------
+
+* Port pagination on Python 3
+* Call GuestError with proper options
+* Correct incorrect i18n of some messages
+* Recent changes to api examples
+* Config logABug feature for Trove api-ref
+* Fix assert root connection on Couchbase
+* Cleanup trove's tox.ini and .gitignore
+* Display more flavor information in trove flavor-list command
+* Updated from global requirements
+* Tests verify cluster data via every node
+* Updated from global requirements
+* Trove workbook for scheduled backups
+* Increase cluster_complete timeouts
+* Updated from global requirements
+* Add tox entry for py35 tests
+* Remove openstack-doc-tools
+* Extend guest agent call timeouts
+* Updated from global requirements
+* Get ready for os-api-ref sphinx theme change
+* Cassandra fix lost keyspace(s) after cluster grow
+* Fix reading files that are symlinks
+* Adds the api-ref migrated RST + YAML files
+* Couchbase run backup as root
+* Turn off test_create_too_many_instances
+* tempest/test_flavors: vcpus is in db
+* Deprecate 'guest_log_long_query_time'
+* Add missing ICMP option for pxc & mariadb
+* Module re-apply does not reflect updated values
+* Add log retrieval to Cassandra
+* About update setup.cfg homepage
+* Updated from global requirements
+* Constraints are ready to be used for tox.ini
+* Pass 'guest_log_expiry' as a string
+* Replace some of assertEqual
+* Add trove-guestagnet.conf sample for log rotation
+* Updated from global requirements
+* guest_id missing err, switch config_drive default
+* Introduce "icmp" option for security group rule
+* Updated from global requirements
+* Use http_proxy_to_wsgi middleware
+* Fix for tcp_ports configuration in devstack
+* Fix some typo in the files
+* Replace assertEqual(None,...)
+* Update CONTRIBUTING.rst
+* Fix xtrabackup-binlog file GTID parsing
+* Fix MySql replication start from incr backup
+* Break out error instance create
+* Updated from global requirements
+* Replace OpenStack LLC with OpenStack Foundation
+* Add port 22 to tcp_ports in devstack
+* MySQL do not retrieve Password in get user
+* Define safe pid-file and socket paths in config
+* py3: Enable test_backup_models and test_datastores
+* Port guestagent test_dbaas to Python 3
+* Remove times.dbm file for each tox run
+* Backup tests verify restored databases
+* Fix config registration for Trove tempest plugin
+* Updated from global requirements
+* Imported Translations from Zanata
+* Cluster tests get the instance flavor
+* Serialize py34 tests
+* Use proper queries to update user properties
+* Add missing LOG variable to fix scenario tests
+* Preserve data type when parsing MySQL configs
+* Use constraints for coverage job
+* Improve Config Validation
+* Move cluster tests to the end of the scenario run
+* Clarify unittest documentation
+* Fix concurrency issue with Python 3.4 test
+* Replace assertEqual(None, *) with assertIsNone in tests
+* Support flavor ids with leading '0'
+* Support newer mysql in tests
+* Cleanup i18n marker functions to match Oslo usage
+* Removed unreachable statement
+* Updated from global requirements
+* Add vCPUs to flavor-list
+* Correct reraising of exception
+* Locality support for clusters
+* Fix secure method to work with PXC
+
+6.0.0.0b2
+---------
+
+* Fixing misstypos
+* Updated from global requirements
+* Persist error messages and display on 'show'
+* Updated from global requirements
+* Fix user/database scenarios to run without helper
+* Repl tests retrieve configs via test_helper
+* Ophaned Volume Not Removed on Instance Delete
+* Fix tempest base: add missing imports
+* Switch from MySQL-python to PyMySQL
+* Improve coverage in guestagent and backup models
+* Port galera and redis cluster tests to Python 3
+* Port test_pagination on Python 3
+* Add trove tempest plugin
+* Trivial Fix: Fix typo
+* Reorganize scenario test order to speed up run
+* Install Guide: Set bug project
+* Updated from global requirements
+* Document house rules for approving changes
+* Run Python 3 unit tests in parallel
+* Port more guestagent unit tests to Python 3
+* Replace print statment with print function
+* Use correct message for missing default datastore
+* Updated from global requirements
+* Port backup test_storage to Python 3
+* Move the rabbit/rpc options to its own section
+* Minor cleanup for Install Guide
+* Imported Translations from Zanata
+* fix wrong id for render default config param 'server_id'
+* Break apart backup scenario tests
+* Break apart database scenario tests
+* Break apart user scenario tests
+* Break apart module scenario tests
+* Break apart root scenario tests
+* Break apart instance create/actions scenario tests
+* Break apart replication scenario tests
+* Locality support for replication
+* Trivial Fix: Fix typo
+* Delete with fail nova instance tries to stop DB
+* Break apart configuration group scenario tests
+* Have Trove plugin install dashboard
+* Add Install Guide
+* pkg: replace commands module with subprocess
+* Mock detector run only once for each testcase
+* Postgresql Incremental Backup and Restore
+* Fix user & database pagination in guests
+* Rename called_once_with methods correctly
+* Updated from global requirements
+* Imported Translations from Zanata
+* Add New Relic License module driver
+* Switch test config file to use os_region_name
+* Cleanup guestagent models
+* Change service candidates list for MariaDB
+* Updated from global requirements
+* Updated from global requirements
+* Port more unit tests to Python 3
+* Catch exceptions from backup runner
+* Unittests patch 'CONF.datastore_manager'
+* Correct spelling mistake
+* Updated from global requirements
+* Fix troveclient to support Mistral
+* remove verbose option in Trove config files
+* Correct typo in debug message
+* Fix MariaDB scenario replication test
+* Fix Percona configuration test
+* spelling mistake in release description for cassandra
+* Fixed PXC configuration detach does not work
+* Updated from global requirements
+* Updated from global requirements
+* Increase 'state_change_wait_time' in devstack
+* Replica report DETACH status when detaching
+* Updated from global requirements
+* Add utf8mb4 encoding option to mysql
+* Updated from global requirements
+* Updated from global requirements
+* Fix MariaDB clusters failing with TypeError
+* Add bandit security config
+* Fixed module-apply on removed module
+* Add db-models and RootController for Postgres
+* User and database tests wait for casted actions
+* Reuse Cassandra connections
+* Update 'myisam-recover-options' config template
+* Trove's tox tests should respect upper-constraints
+* Improve mock detector performance
+* Change recursion depth to '1' for mock detection
+* Updated from global requirements
+* Unsupported module driver not logged correctly
+* Fix grammatical mistakes, "it's" to "its"
+* Notification exceptions not sent back correctly
+* Correct some issues with devstack plugin for trove
+* Update Trove's README
+* Add 'redis' as a valid service candidate
+* Enable more unit tests on Python 3
+* Port instance unit tests to Python 3
+* Port more API unit tests to Python 3
+* Port designate code to Python 3
+* Backup to swift using wrong large object type
+* Fixed error message logging
+* Updated from global requirements
+* Remove unused 'override.config.template'
+* [Trivial] Remove unnecessary executable flag for files
+* Schema migrations fail for postgresql backend
+* Refactor scenario tests to facilitate multi-group
+* Trivial: Remove unused logging import
+* Add variables for quota configuration
+* Make 'default_password_length' datastore-specific
+* Mysql GTID replication fails when data inserted
+* Updated from global requirements
+* Simplify guestagent.pkg: don't use metaclass
+* Python 3: avoid sets.Set and string.letters
+* pep8: exclude .git/ subdirectory
+* Python 3: fix relative imports
+* Port crypto_utils to Python 3
+* Python3: Add support for raise and ConfigParser
+* Mysql replicas need to set binlog_format
+* Python3: Add support for unicode, basestring, long
+* Imported Translations from Zanata
+* Update the root scenario tests
+* Imported Translations from Zanata
+* Fixed kwargs being defaulted to CONF values
+* Fix MariaDB config groups
+* Enhance mongod pid find for multiple distros
+* Do not remove root user on disable
+* blacklist_regex is not an option
+* Cleanup Mysql replication test on completion
+* Updated from global requirements
+* Updated from global requirements
+* Port more common unit tests to Python 3
+* Port test_template unit test to Python 3
+* Updated from global requirements
+* Tests verify applied configuration values
+* Updated from global requirements
+* Add missing args to configuration inst test
+* Revert the legacy_compute v2 api for nova
+* Python3: Add support for iteritems and iterkeys
+* Updated from global requirements
+* encrypt_data(): don't encode IV to base64
+
+5.0.0
+-----
+
+* Trove's tox tests should respect upper-constraints.txt
+* Fixes migrations for MySQL 5.6.* and MariaDB 10.1.*
+* Trove's tox tests should respect upper-constraints.txt
+* Address change in Route v2.3
+* Address change in Route v2.3
+* Pass optional timeout to service commands
+* Removing some redundant words
+* Add user access scenario tests
+* PG test-helper create matching db for test user
+* Add a minimal py34 test environment
+* clean up errors shown on galera cluster unittests
+* Unhandled messages logged in tox tests
+* Fix some unexpected tracebacks while running tox tests
+* Removes redundant "of"
+* Fix replication scenario tests
+* Cap test_log_generator_user_by_row to 100
+* Update reno for stable/mitaka
+* Update .gitreview for stable/mitaka
+
+5.0.0.0rc1
+----------
+
+* updating the release notes from mitaka commits
+* Fix incorrect innobackupex args (fixed gate)
+* Implementation of couchdb user and database functions
+* Secure mongodb instances and clusters by default
+* Fix pagination function
+* Add better validation to cluster shrink
+* Do not reset password of user-root accounts
+* Vertica configuration groups
+* Implement Backup and Restore for CouchDB
+* Server support for instance module feature
+* Addition of DB2 backup & restore functionality
+* Moved CORS middleware configuration into set_defaults
+* Updated from global requirements
+* Update db2 settings to reflect correct hostname
+* Replace deprecated LOG.warn with LOG.warning
+* Revert "Time to get rid of most vestiges of slave_of"
+* Add MongoDB config server port to cfg
+* Add MongoDB cluster root-enable support
+* Block pymongo version 3.1
+* Updated from global requirements
+* Updated from global requirements
+
+5.0.0.0b3
+---------
+
+* Implement Cassandra clustering
+* Vertica Cluster Grow and Shrink
+* Implement MariaDB Clustering
+* Fixed wrongly used assertEqual
+* Use assertEqual instead of assertTrue
+* Add support for root functions to Cassandra
+* Implement DBaaS Ceilometer Notifications
+* Updated from global requirements
+* Server side of module maintenance commands
+* Excessive messages logged during unit tests
+* Fix test order and region in guest_log scenario
+* Pass datastore details when required (again)
+* Update setup.cfg entry points for oslo namespace-less import paths
+* Remove usage of WritableLogger from oslo_log
+* Updated from global requirements
+* root enable for pxc clustered datastore
+* Enable cluster tests for Redis
+* Updated from global requirements
+* Add backup & restore for Cassandra
+* Implement Cassandra Configuration Groups
+* Disable unsupported root-disable tests
+* Fix MySQL user list pagination
+* Implement user functions for Cassandra datastore
+* Fixed test_prepare_mysql_with_snapshot failure on rhel 7.2
+* Malformed user access sql for postgres guest agent
+* Code cleanup - commented code
+* Move 'enable root on prepare' to the base
+* Handle bad Swift endpoint in guest_log
+* pxc grow/shrink cluster implementation
+* Fix Percona XtraDB Cluster guest to work with v5.6
+* Use uppercase 'S' in word "OpenStack"
+* Add root-actions int-tests
+* Use OSprofiler options consolidated in lib itself
+* Use correct depends_on decorator for log tests
+* Add support for root-disable
+* Updated from global requirements
+* Unittests use trove_testtools
+* Redis should perform backup using BGSAVE not SAVE
+* Remove slave_of reference from scenario tests
+* Python3: Add support for httplib, urlparse
+* Python3: Add support for iter.next
+* Fix issue of mismatched test-requirements.txt file
+* Add support for configuration groups in int-tests
+* Updated from global requirements
+* Enable Vertica load via curl
+* Fix apply configuration on prepare
+* Fix leaked mocks in 'test_dbaas'
+* Implement Guest Log File Retrieval
+* Fixed a typo in log message
+* Make scenario-tests work with all datastores
+* Updated from global requirements
+* Add missing sudo for systemctl command
+* MariaDB GTID Replication
+* py3: Replaces xrange() with range()
+* Imported Translations from Zanata
+* Make Trove exists events notifs be emitted in current audit period
+
+5.0.0.0b2
+---------
+
+* Updated from global requirements
+* Update requirements.txt
+* Drop python 2.6 support
+* Updated from global requirements
+* Revert Skiptest from change set 245845
+* Use built-in function setattr() directly
+* Time to get rid of most vestiges of slave_of
+* Cleanup trove debug and info logging messages
+* Fix indexing of dict.keys() in python3
+* Replaces itertools.izip with six.moves.zip
+* Updated from global requirements
+* Sometimes prepare messages are delayed
+* Add debug testenv in tox
+* Test: make enforce_type=True in CONF.set_override
+* Code refactoring for couchdb
+* Added Keystone and RequestID headers to CORS middleware
+* MongoDB cluster grow failing in get_admin_password
+* Marking downgrade as deprecated
+* Mongo cluster grow - use az and nic values
+* Updated from global requirements
+* Register additional datastores for int-tests
+* PostgreSQL configuration groups
+* Fixed 'client connection lost' bug in test_helper
+* Use assertTrue/False instead of assertEqual(T/F)
+* Fix to_gb & to_mb conversion function rounding issue
+* Trivial: Remove meaningless default value in __get__()
+* Trivial: replace deprecated _impl_messaging
+* Change assertTrue(isinstance()) by optimal assert
+* Fix missing value types for log message
+* Fix 'cannot access' error with Redis restore
+* Updated from global requirements
+* Using LOG.warning replace LOG.warn
+* Trivial: Remove vim header from source files
+* Keep py3.X compatibility for urllib
+* Define 'device_path' for Redis
+* Experimental datastores use new service commands
+* Finish cluster int-tests
+* Add MySQL int-test helper client
+* Move rabbit conf settings to separate section
+* Remove updateuser test
+* Replace assertEqual(None, *) with assertIsNone in tests
+* Modifying Vertica clusters to have a master node
+* mock out the guestagent write_file call
+* Use a specific network for the test
+* Move to oslo_db
+* Deprecated tox -downloadcache option removed
+* Move storage strategy code from guestagent to common
+* Catch all errors in Mock detector
+* Updated from global requirements
+* Use configured datastore on instance creation
+* Mongodb's "security.authorization" wrong type
+* Remove version per M-1 release instructions
+
+5.0.0.0b1
+---------
+
+* updating with other reno changes
+* Change reporting of unhandled logging
+* Updated from global requirements
+* Fix race condition in replication backup delete
+* Update Trove Installation guide
+* Add better input checking for MongoDB
+* fix mongo create database
+* Fix PostgreSQL root functions
+* Port run_tests.py to Python 3
+* Fix configuration lookup failure
+* Do not use api-paste.ini osprofiler options
+* Delete python bytecode before every test run
+* Add 'volume_type' parameter to instance create
+* Refactor the datastore manager classes (more)
+* Updated from global requirements
+* Update internal status when waiting for a change
+* Move MongoDB mongos upstart script to elements
+* Remove kombu as a dependency for Trove
+* Correct the computation of elapsed time while waiting for state change
+* Fix tox py27 error
+* Guestagent configuration tests mock chown/chmod
+* Correct errors resulting in "No handlers ..." error message
+* Added CORS middleware to Trove
+* Updated from global requirements
+* Move ignore_dbs and ignore_users out of DEFAULT
+* Redis 'hz' conf parameter using wrong MIN value
+* Add reno for release notes management
+* fix the version info of trove to use pbr
+* Defer revision dir initialization in GA
+* Imported Translations from Zanata
+* this should fix the failing gate
+* Address issues with Trove eventlet monkey-patching
+* Refactor the datastore manager classes
+* Replace assertEqual(None, *) with assertIsNone in tests
+* Incorrect usage of python-novaclient
+* Use oslo_config new type PortOpt for port options
+* Updated from global requirements
+* Changes names of some quota values
+* The verbose option in section [DEFAULT] has been deprecated
+* root_on_create for Couchbase should be false
+* Pagination limit code refactor
+* Fix example value for notification_topics
+* oslo.utils 2.6.0 causing tox test to hang
+* Add .eggs/ to .gitignore
+* Adding more doc strings to event simulator
+* Fix the bug of "Error spelling of 'AMPQ'"
+* Corrected error message for unsupported datastore flavors
+* Add unspecified options to backup unittests
+* Fix redis cluster unit test for assertRaisesRegexp
+* Unused variable backup_cmd removed
+* Add instance create int-tests
+
+4.0.0
+-----
+
+* Fix promote for Redis datastore
+* Fix publish_exists_event authentication exception
+* Fix publish_exists_event authentication exception
+* Imported Translations from Zanata
+* Fix the bug of "Fix spelling typo in trove"
+* Use IPOpt to validate IPAddress
+* Use stevedore directive to document plugins
+* Cleanup of Translations
+
+4.0.0.0rc1
+----------
+
+* Allow more instances than cluster_member_count for pxc
+* Open Mitaka Development
+* Updated from global requirements
+* Fix promote for Redis datastore
+* Fix Mongo report_root call to have correct args
+* Enable deploying Trove instances into single tenant
+* Add support for extended_properties for clusters
+* Fix Postgres services management
+* Couchbase cluster-init command needs credentials
+* Properly patch _init_overrides_dir in MongoDB
+* Fix get_flavors test by sorting json output
+* use the legacy_compute v2 api for nova instead of v2.1 for now
+* Updated from global requirements
+* Fix typos (from "UPD" to "UDP")
+* Root enablement for Vertica clusters/instances
+* Disable MongoDB cluster security
+* Add user and database actions int-tests
+* Mongodb Cluster Scaling
+* Fixes the mgmt.test_datastores errors
+* Percona Xtradb Cluster implementation
+* Add support for Redis replication
+* Redis Cluster Initial Implementation
+* Expect ValidationError on an empty user update
+* Revert change set 217881
+* Add support for MariaDB datastore in Trove
+* Test instance name can not have special charactrers in it now
+* Add Redis backup/restore functionality
+* Fixed redeclared CONF = cfg.CONF
+
+4.0.0.0b3
+---------
+
+* Fix instance from alternating status on create
+* MongoDB backup uses "nogroup" which is OS specific
+* MySQL Manager Refactor
+* Removing unused dependency: discover
+* Increase test timeout for instance creation
+* Enable all trove services by default
+* Add generic int-test classes
+* Initialize directory for Mongo's runtime files
+* Fix not to output confusing message in tr-tmgr.log
+* Word spellings have been corrected
+* Update ignore_dbs for MySQL 5.6
+* Implements Datastore Registration API
+* Fix description for "Inapt spelling of a word"
+* Fix race conditions in config overrides tasks
+* MongoDB create_admin_user not authorized
+* Mongodb storing config overrides in /var/run
+* Updated from global requirements
+* Updated from global requirements
+* Associate flavor types with datastore versions
+* Fix a few typos in log messages and comments
+* provide default port for pydev_debug_port
+* Updated from global requirements
+* Configuration Groups for MongoDB
+* Adds the PATCH method to extensions
+* Imported Translations from Transifex
+* Use oslo.log library instead of system logging module
+* Updated from global requirements
+* add a missing i18n import for backup strategy
+* MongoDB databases and users not created on create
+* MongoDB user management - access grant/revoke/show
+* Imported Translations from Transifex
+* User name_string schema limited to 16 chars
+* Have devstack plugin install Trove client
+* Notifications for exists events need nova remote admin url set
+* MongoDB database management features
+* Improve the guestagent configuration manager
+* Updated from global requirements
+* Adds lower_case_table_names support for MySQL
+* MongoDB cluster instances missing 'key'
+* Cluster instances could falsely report 'ready'
+* MongoDB user management - root enable/show
+
+4.0.0.0b2
+---------
+
+* Imported Translations from Transifex
+* Remove openstack.common package
+* Switch to the oslo_log library
+* Updated from global requirements
+* Switch to the oslo.serialization library
+* Switch to the oslo.context library
+* MongoDB cluster taskmanager's add_shard not called
+* MongoDB prepare needs to wait for Mongo to start
+* MongoDB cluster strategy missing create_admin_user
+* Configuration Groups for Redis
+* Switch to oslo.service
+* Which interfaces trove starts up on should be logged
+* Updated from global requirements
+* MongoDB user management - create/list/show/delete
+* correct some grammar
+* Remove H305,H307,H402,H407,H904
+* Updated from global requirements
+* Support authentication in the MongoDB guest agent
+* Imported Translations from Transifex
+* Allow int tests to run in SSL environment
+* Fix unit test mocks for new mock release
+* default for percona in notification_service_id
+* Updated from global requirements
+* Updated from global requirements
+* Added replica_of attribute to test_index_list
+* Fake mode service does not start after the changes to the oslo service package changes
+* Support nics and AZ for MongoDB clusters
+* Removed the non-existent method call
+* Fixes the tests in test_configuration.py
+* Updated from global requirements
+* Fix ssl.PROTOCOL_SSLv3 not supported by Python 2.7.9
+* Provide option to read SSH credentials from test env
+* Fixed the tests in test_models.py
+* Make test_ensure_mysql_is_running more robust
+* Fixes the failing unit-tests
+* Implement guestagent Configuration Manager
+* Move mysql datadir to a sub-directory on mounted volume
+* Fixes the method update_datastore
+
+4.0.0.0b1
+---------
+
+* Update version for Liberty
+
+4.0.0a0
+-------
+
+* correct the annotation of param
+* Fixed API string references to MySql
+* Fixes the failing tests in mgmt/test_models.py
+* Remove nova_proxy_admin_user from trove guest
+* PostgreSQL guest agent can't remove temp file
+* Notification serialization of context
+* Implements integration tests for Vertica
+* Updated from global requirements
+* MongoDB single instance backup and restore
+* Sent in the topic when taskmanager setup
+* Decrease replication slave retry wait time
+* Adds the missing import to manage.py
+* Fixes db_upgrade and db_downgrade methods
+* Updated from global requirements
+* Added dangling mock detection to 'guestagent'
+* Remove rsdns directory
+* Fix leaked mocks in the 'MockMgmtInstanceTest'
+* Update devstack to handle Trove/Neutron setups
+* Fix leaked mocks in the 'LimitsControllerTest'
+* correct api schema for instance patch
+* Fixes a broken debug message in schema matching
+* Updated from global requirements
+* Fix create Vertica cluster or instance to show ERROR on failure
+* Fixes hacking rules
+* Move guestagent settings to default section
+* Fixes the unsafe global mocks
+* Fix leaked mocks in the 'guestagent/test_api' module
+* Improving manual install docs
+* Error message missing tenant id
+* Fix gate failure on gate-trove-pep8
+* Added more unit-tests to Vertica-Cluster-Strategy
+* accepting network and availability zone for instances in cluster
+* Fixed the unmocked entry in taskmanager unit-tests
+* Update modules to turn on dangling mock detection
+* Updated glance API for creating public image
+* Updated from global requirements
+* Added more unit-tests to taskmanager
+* Added unit-tests for mgmt-cluster-service
+* Updated from global requirements
+* Added dangling mock detection to 'mgmt' module
+* Added dangling mock detection to 'conductor'
+* Added dangling mock detection to 'taskmanager'
+* Added dangling mock detection to 'secgroups'
+* Fix leaked mocks in the 'upgrade' module if any
+* Added dangling mock detection to 'backup' module
+* Added dangling mock detection to 'dns' module
+* Added dangling mock detection to 'cluster' module
+* Drop use of 'oslo' namespace package
+* Fix leaked mocks in the 'common' module if any
+* Implement dangling mock detector for unittests
+* Imported Translations from Transifex
+* Fixes the unsafe mocking in test_dbaas
+* Abstract 'mkdir' shell commands in guestagent
+* Added more unit-tests to guestagent
+* Corrects order of parameters to assertEqual
+* Fix process attribute check in BackupRunner
+* Fix Mongo status check to work for Mongo 3.0
+* Updated from global requirements
+
+2015.1.0
+--------
+
+* Remove [Service] section from mongo config tmpl
+* Remove [Service] section from mongo config tmpl
+* Add unix_socket_directories setting for pgsql
+* Support testing on 32 bit systems
+* Fixes unit-tests in test_dbaas.py
+* Release Import of Translations from Transifex
+* Fixes mocking of operating_system.service_discovery
+* Added more unit-tests to Vertica
+* update .gitreview for stable/kilo
+* Abstract 'mv'/'cp' shell commands in guestagent
+* Abstract rm/chmod shell commands in guestagent
+* Updated from global requirements
+* Fixes the rollback of flavor resize for couchdb, db2 & vertica
+
+2015.1.0rc1
+-----------
+
+* Update openstack-common reference in openstack/common/README
+* Update redis system.py paths for current RHEL/CentOS/Fedora
+* Open Liberty development
+* add devstack plugin
+* Fixes config templates for mysql & percona
+* Remove ordereddict from requirements.txt
+* Make integration-tests run quicker
+* Adds rpc_ping method to new datastores
+* Use UTC to compute heartbeat age in eject-replica-source
+* Avoid unnecessary restart of replication master
+* Fixed NotificationTransformer to handle missing InstanceServiceStatus
+* Moves taskmanager-common-code for clusters
+* Fixes the resize APIs for Vertica-guest
+* Use oslo util to determine network interface
+* Update Trove to use novaclient v2
+* Fix DB2 unit test to properly mock restart
+* Rewrites the ClusterView.build_instances
+* Eject-replica-source chooses most recent slave
+* Add short document on building guest images
+* Fix replica source state validation
+* Add support for DB2 datastore in Trove
+* Reject negative volume size in API
+* Updating Flavor Resize Restrictions
+* Fix CouchDB unit test to properly mock restart
+* Fix common misspellings
+* Implement clustering for Vertica datastore
+* Corrects list_database query for MySQL
+* Includes snapshot parameter to vertica & couchdb
+* Move sql_xx params to [database] conf section
+* Corrects my.cnf location in RHEL based distros
+* Fix the mocking in test_dbaas.py
+* Updated from global requirements
+* Remove flaky assert from TestMgmtInstanceDeleted test
+
+2015.1.0b3
+----------
+
+* Add support for HP Vertica datastore in Trove
+* Replication V2
+* Add Mgmt API For Testing RPC Connectivity
+* Enhance Mgmt-Show To Support Deleted Instances
+* Add support for CouchDB datastore in Trove
+* Update config-detach to not remove default config
+* bypass_url required in nova admin client
+* Change nova_proxy_admin_tenant_name to id
+* Imported Translations from Transifex
+* Cleaned up redundancy between instance update() and edit()
+* Inject guest conf files to configurable location
+* Updated from global requirements
+* Updated from global requirements
+* Introduce a classification of datastores and strategies
+* Remove now obsolete tox targets
+* Updated from global requirements
+* convert the max and min values to int instead of string
+* Fixes package configuration method in pkg.py
+* Delete mysql error log file as root on restore
+* Changed error message for datastore parameter for configuration-create
+* Correct a test and order of parameters to assertEqual
+* Do not use '/tmp' as default guestagent log location
+* Updated from global requirements
+* Fix PostgreSQL volume definitions
+* Create docs test target
+* Integrate OSprofiler and Trove
+* Provide more readable error message when swift is not installed
+* Updated from global requirements
+* Use canonical MySQL root pwd reset procedure
+* Deletes volume on instance delete after resize
+* Imported Translations from Transifex
+* Update cassandra.yaml ownership after write_config operation
+* Updated from global requirements
+* Update CONTRIBUTING.RST file
+* resync oslo-incubator code
+* Updated validation_rules.json due to MySQL doc
+
+2015.1.0b2
+----------
+
+* Added 'redis' test group to int-tests
+* Changed hardcoded Mongodb username to variable
+* Fix backup state check while restoring an instance
+* Updated from global requirements
+* Add limit stanzas for mongos
+* Update DatastoreNotFound status code to 404
+* Move cluster strategies to strategies/cluster
+* MySQL restore wait for shutdown before killing
+* Updated from global requirements
+* Correct calls to mask_password() which no longer work
+* Spelling errors fixed
+* Eliminate redundant modules from oslo-incubator
+* Address predictable temp file vulnerability
+* Imported Translations from Transifex
+* Fix trove-tox-doc-publish-checkbuild failures
+* Quote Postgres names to avoid implicit conversion
+* Trove create with --backup fails for postgresql
+* Obsolete oslo-incubator modules - processutils
+* Use dict comprehensions instead of dict constructor
+* Fix MongoDB guest strategy implementation
+* Using consistent control_exchange option for rpc
+* Obsolete oslo-incubator modules - wsgi
+* Obsolete oslo-incubator modules - exception
+* Integration with oslo.messaging library
+* Obsolete oslo-incubator modules - gettextutils (now oslo.i18n)
+* Support string flavor IDs
+* Adds negative unittests to test_backup_controller.py
+* Use unit file to enable systemd service
+* Obsolete oslo-incubator modules - jsonutils (now oslo.serialization)
+* Obsolete oslo-incubator modules - timeutils
+
+2015.1.0b1
+----------
+
+* Updated from global requirements
+* Adds negative test to test_instance_controller.py
+* Enable volume resize tests
+* Assign os_region_name a default value
+* Fix trove resize-volume resize2fs error
+* Obsolete oslo-incubator modules - unused modules
+* Updated from global requirements
+* Clean up github references from docs
+* Fix timeout in test_slave_user_removed int-test
+* Workflow documentation is now in infra-manual
+* Obsolete oslo-incubator modules - importutils
+* Eliminate duplicated LoopingCall and LoopingCallDone code
+* Forbid replica provisioning from replica site
+* Legacy MySQL datastore is shown on datastore-list
+* Add missing api example for incremental backups
+* Config Group Load Fails If DS Version Inactive
+* Remove Python 2.6 classifier
+* Rename attrs_exist() to contains_allowed_attrs()
+* Add few audit log messages to guestagent module
+* Ensure Replication Tests do not use a stale token
+* Fix broken instance provisioning with disabled volume support
+* Updated from global requirements
+* Poll for replica read_only status in test
+* Updated from global requirements
+* Create example generator
+* Rename generic variable named with mysql specific name
+* Deleting failed replication backup can hide error
+* Increase instances.task_description column size
+* Fix exception handling in get_replication_snapshot
+* Update and correct documentation snippets
+* Updated from global requirements
+* remove keystonemiddleware settings from api-paste.ini
+* configuration parameters payload changed
+* Eliminate use of sudo for two things that don't need it
+* making service catalog for endpoints more configurable
+* Added regression test for config with long value
+* Imported Translations from Transifex
+* Couchbase backup failing
+* Added Replication templates for Percona
+* Updated from global requirements
+* Updated from global requirements
+* Check for server attributes before using them
+* Validate backup size during restore
+* Couchbase Root Password Can Go Out Of Sync
+* Document that H301 and H306 are ignored on purpose
+* Instance-Delete Should Stop the Database First
+* Configuration group checking 0 validation rules
+* Update some log calls for translation and lazyness
+* Yum install should get a list of packages as a string
+* Imported Translations from Transifex
+* Allow users the ability to update an instance name
+* Updated from global requirements
+* Logging audit for guestagent/redis
+* Miscellaneous Cluster Fixes
+* Update config.template for Cassandra 2.1.0
+* Increase test rate limit to avoid rate limit error
+* add back the deleted parameter in the configuration group tests
+
+2014.2
+------
+
+* Logging audit for guestagent/mongodb
+* Cluster Error On Missing Volume Sizes Unoptimal
+* cluster_config argument missing in prepare()
+* restart_required cfg-param is bool and not string
+* Update contributing.rst to include guidelines on Code Review
+* cluster_config argument missing in prepare()
+* restart_required cfg-param is bool and not string
+
+2014.2.rc2
+----------
+
+* convert restart_required to 'true' or 'false' string
+* fixing the flags for guest on resize volume
+* convert restart_required to 'true' or 'false' string
+* Refreshed translations
+* Mark strings for translation
+* Imported Translations from Transifex
+* Removing dependency on trove models in the guest agent
+* Mgmt Reboot allowed if datastore in crashed state
+* Docs: Fix Sphinx warnings
+
+2014.2.rc1
+----------
+
+* Use unique passwords for replication user
+* Add templates for replica and replica source
+* Open Kilo development
+* Mandate detach replicas before deleting replica source
+* Event simulator II
+* Complete mocking for test_extensions
+* Make the replication snapshot timeout configurable
+* Use different timeouts for create and restore
+* Partially address concerns in Couchbase restore strategy
+* Updated from global requirements
+* Discover config file for mongodb
+* Isolate unit tests from integration tests data
+* Deprecate unused entries in cfg.py
+* Sync latest process and str utils from oslo
+* Mark trove as being a universal wheel
+* Document Trove configuration options
+* Add postgresql to notification_service_id option
+* loading configuration parameters from trove-manage better
+* Fixed database migration script issues
+* Updated from global requirements
+* Fix config parameters test for fake mode
+* Delete backup created during replication
+* Make --repo-path an optional argument for db_recreate
+* Imported Translations from Transifex
+* Stop using intersphinx
+* Fix NoSuchOptError on Couchbase create
+* Strengthens the regex for mongodb json functions
+* Add SUSE support in mysql datastore
+* Add support to detect SUSE
+* Register postgres_group in trove config
+* Marks mysql slave read-only
+* Fix issue with intermittent test failures in test_pkg.py
+* Updated from global requirements
+
+2014.2.b3
+---------
+
+* Datastore Configuration Parameters stored in db
+* In some cases, guest agents may leave temporary config files
+* Add detach-replica support
+* make backup_incremental_strategy a datastore specific option
+* Use 'replica' instead of 'slave'
+* Fix unit tests to work with random PYTHONHASHSEED
+* Updated from global requirements
+* Clusters Guest Implementation
+* Clusters TaskManager Implementation
+* Clusters API Implementation
+* Avoid leaking mocks across unit tests
+* Fixed restore to work correctly with pexpect
+* Add PostgreSQL support
+* Cleaned up sample trove-guestagent.conf
+* Imported Translations from Transifex
+* Removing the XML info from the docs
+* Add replication slave info to instance show
+* Look up trove instance by ID instead of name
+* Snapshot component for replication
+* handle repeating mysqld options containing equals
+* Set the python hash seed that tox uses to 0
+* Use netifaces to lookup IP address on guest agent
+* Added the bind_host configuration option when launching the API
+* Move usage_timeout out of guest options
+* Add new checklinks tox environment
+* show stdout/err from failed command execution
+* Mysql guest agent functionality for replication
+* Adjusted audit logging for trove.instance module
+* Unit Tests for Mysql replication functionality
+* Load trove API extensions using stevedore
+* allow both ipv4 and ipv6 hostnames by default
+* Update 'list_users' call to use AGENT_HIGH_TIMEOUT
+* Adjusted audit logging for taskmanager module
+* Correct monkey patching in GuestAgentBackupTest
+* guestagent/mysql: Remove unused function
+* recent audit log change broke this LOG.debug message
+* Mocks utils.execute_with_timeout for mongodb tests
+* Imported Translations from Transifex
+* guestagent/test_volume.py leaves a file in /tmp
+* Imported Translations from Transifex
+* Per datastore volume support
+* Logging audit for trove/mysql module
+* Sync service.py from oslo-incubator with deps
+* Updated from global requirements
+* Remove accounts use of non-existent Nova extension
+* Logging audit for trove/guestagent/datastore module
+* Logging audit for guestagent/couchbase
+* Logging audit for trove/guestagent module
+* fix pexpect.spawn.match AttributeError
+* Logging audit for guestagent/cassandra
+* Make configuration tests configurable by datastore
+* Handle error from execute() when deleting non-existant file
+* document running a small set of tests
+* guestagent/volume: Remove not necessary sudo call
+
+2014.2.b2
+---------
+
+* Logging audit for guestagent/strategies module
+* Add neutron support
+* Imported Translations from Transifex
+* Logging audit for trove/guestagent/backup module
+* Use auth_token from keystonemiddleware
+* guestagent contract for packages should be a list
+* Make default extension path relative to pybasedir
+* Refactored datastores to use common chown function
+* Handle exception from pexpect child.close
+* Moved core int-test groups from trove-int to trove
+* Add Backup/Restore support for Couchbase
+* Manual install page needed swift info
+* Restrict backup-list on instance to tenant
+* Enhance trove-manage help
+* Imported Translations from Transifex
+* Fixes redundant get call in a few places
+* Remove setuptools_git requirement
+* Fix backup execution workflow
+* Add datatore/version name into configurations response
+* Imported Translations from Transifex
+* Stop cassandra during configuration and volume migration
+* Enable usage of config-drive for file injection
+* Enable trove to specify cinder volume_type when creating a volume
+* Change default for update_status_on_fail
+* Add instance IP to /instances
+* Fix updated timestamp for SecurityGroup model
+* Updated from global requirements
+* Use (# of CPUs) api/conductor workers by default
+* Imported Translations from Transifex
+* Fixed '--version' for trove processes/utilities
+* Logging audit for trove/common module
+* Imported Translations from Transifex
+* Fix tracking of SG's provisioned by Heat
+* Add CONTRIBUTING.rst
+* Imported Translations from Transifex
+* Updated from global requirements
+* Logging audit for trove/db module
+* Remove redundant heat templates from codebase
+* Imported Translations from Transifex
+* Imported Translations from Transifex
+* Sync processutils from oslo with deps
+* Sync jsonutils (and dependencies) from oslo-incubator
+* Add timestamps and instance count to config groups
+* Expose trove conductor manager class as conf property
+* Updated from global requirements
+* Deleting incremental backup metadata after restore
+* Fix data too long for column 'task_description'
+* Logging audit for trove/backup module
+* Corrects typo in instance models and service
+* Logging audit for trove/configuration module
+* Add guestagent API calls for replication
+* Imported Translations from Transifex
+* Fix typos in trove/instance/models.py
+* Imported Translations from Transifex
+* Added route for Admin API to support guest upgrade
+* Add sample admin_{user,tenant_name,password}
+* Delete undeclared variable in guest-agent API class
+* Fix enable on boot when working with systemd and symlinked units
+* Add slave_of_id to instance model
+* Updates developer install doc to use trove cli
+* Imported Translations from Transifex
+* Reverting deleted tests
+* Add datastore version to backups
+* Fix inheritance for ConfigurationParameterDeleted
+* Add warnings when a path for api_extensions_path does not exist
+
+2014.2.b1
+---------
+
+* Add a new column and indexes to agent_heartbeats
+* Ensure routing key is specified in the address for a direct producer
+* Added an int-test for user-update-attributes
+* Adds exception handling around heat stack creation
+* Make default extension path relative to pybasedir
+* Increase time_out to 30 sec for failing int-tests
+* Use tcp/udp ports from config for heat templates
+* Fix calls for proboscis methods
+* Apply six for metaclass
+* Increased stop timeout for cassandra
+* Wait for Couchbase to be ready before node-init
+* Enabled H402 flake8 rule
+* Fix log reporting for DNS creation process
+* pep8: Ignore locale files
+* switch from mox to mox3
+* Include datastore version details in datastore calls
+* Adds the foundation for datastore capabilities
+* Remove unused xml config file
+* Reports enabled-root for restored instance
+* Clean up openstack-common.conf
+* Corrects the class name "ExtensionManager"
+* Corrects mgmt-taskmanager startup method
+* Remove admin_token from configs
+* Cleans up ServiceUser.__str__ method
+* Imported Translations from Transifex
+* Update database-api to follow OpenStack conventions
+* Remove all mostly untranslated PO files
+* Updated from global requirements
+* Consider datastore version when generating configs
+* Fix heat template for cassandra
+* debug level logs should not be translated
+* Imported Translations from Transifex
+* Specify correct constraint name for postgresql
+* Get service endpoints from catalog
+* Added support of resize-flavor to Redis datastore
+* Fix prepare call for redis guest agent
+* Migrate v20 not handling exception
+* Datastore_versions.name shouldn't be unique
+* Pretty print JSON sample files
+* Added fix to support Couchbase resize-flavor
+* Imported Translations from Transifex
+* Fix datastore tests so that they pass in live mode
+* Add support for 'trove root-enable' in Couchbase
+* Fix missing use of test config datastore version in tests
+* Use six.StringIO/BytesIO instead of StringIO.StringIO
+* Resolves volume resize issue
+* Fail a test if time.sleep called for no reason
+* Improve help for backup_incremental_strategy
+* Updated from global requirements
+* Imported Translations from Transifex
+* Unmounting ephemeral if it has already been mounted
+* Corrected the assert message in test_dbaas.py
+* Improve help strings
+* Imported Translations from Transifex
+* Remove usages of deprecated name LoopingCall in rpc
+* Check that all po/pot files are valid
+* Correct inconsistent state issues with config
+* Mocks out file.open to not rely on OS dependent files
+* Make sure eventlet starts correctly
+* Moved the apidocs from openstack/database-api
+* Bind to all interfaces for MongoDB
+* Added separate rate limit setting for mgmt POST
+* Fix Couchbase Kill Command
+* Updated from global requirements
+* changing conductor logging levels
+* Trove doesn't use extras
+* Correct the command to stop cassandra server
+* Remove dependencies on pep8, pyflakes and flake8
+* Fix internal error generated from config-detach
+* Collapse mysql OptGroup Sections
+* Changed assert statement of test_volume_found
+
+2014.1
+------
+
+* Open Juno development
+* Fixed unit test to not actually run backup command
+* Fix create call for security group rules
+* Updated from global requirements
+* Remove mockito, and replace with mock
+* Add heat.template for Redis datastore
+* Don't specify admin_token in paste config
+* Changes Volume Prefix From mysql To datastore
+* Tox tests should not require errors in rigid order
+* Start using oslosphinx theme for docs
+* Imported Translations from Transifex
+* Pop instead of get for timeout kwarg
+* Change Cassandra to Service Start vs Bin
+* Setup trove for translation
+* Fixed unit test to not actually run backup command
+* Added Backup/Restore validations
+* Update sqlalchemy migrate scripts for postgres
+* Remove IDENTIFIED BY clause for MySQL REVOKE
+* fix default rabbitmq configuration values in sample cfgs
+* Fix Timestamp diff in Instance and Notification
+* Improve Datastore Not Implemented exceptions
+* Hide Datastores In List With No Active Versions
+* Removes volumes redefinition in fake nova_client
+* Add timeout on prepare call per datastore
+* Parses default configuration of an instance
+* Make hostnames in designate driver all lower case
+* Fixed Instance Status usage
+* Fixes insecure update of /etc/fstab file
+* Don't run main() on import
+* Fixed backup unittests to use mocked cmd
+* Removes extra initialization from config
+* Test restore full and restore incremental
+* rename and fix the db_wipe command
+* Remove Min/Max for Configuration Group Booleans
+* Root_on_create per datastore
+* Removes XML api from trove
+* Increases timeout for guest agent resize_fs
+* Update Oslo wiki link in README
+* Adding missing indexes for trove db
+* Improve readme.rst
+
+2014.1.b3
+---------
+
+* Initial support for single instance MongoDB support
+* Fix inconsistent usage of mount_point
+* Adding percona secgroup config
+* the check for status.status should happen before trying to log it
+* simplify dns_ip_address code
+* Add security group rules for Couchbase
+* Remove unused variables
+* Fixes restore from incremental backups for Percona
+* Initial support for single instance Couchbase
+* Make backup/restore pluggable
+* Security groups workflow update
+* Remove extraneous vim configuration comments
+* Fixes get configuration defaults
+* Adding "version" to "datastore" field during list instances API call
+* Fixes a race condition in resize flavor for Percona
+* Raise max header size to accommodate large tokens
+* Call debug_utils.setup() in all entry points
+* Use six.moves.urllib.parse instead of urlparse
+* Use consistent timeouts for integration tests
+* Rename Openstack to OpenStack
+* Fix Redis After Configuration Group Merge
+* Initial support for single instance Cassandra Database
+* fix traceback when default_version is not in the database
+* Fixes a race condition in resize flavor
+* Raises BadRequest for grant_access on ignore_dbs
+* Corrects service URLs from "%s/%s/" to "%s/%s"
+* Remove unused admin_context from conductor manager
+* Improve help strings
+* Modifying tests to run with different configurations
+* Adding additional datastore tests
+* Adding Incremental Backups
+* Ignore outdated messages sent to conductor
+* Adding override.config.template for percona
+* adding configuration group support
+* Remove copyright and comments from empty files
+* Fixes resizes for volumes attached to active Nova servers
+* Add clearer help kwarg for max_volumes_per_user
+* Make test mysql connection code less confusing
+* Corrects matching of heat resources status
+* Migrating trove to entry points
+* Changing DNS to pass string to driver
+* Fix default_datastore migration script
+* Add Neutron support
+* Simplify swift storage load logic
+* Makes the backup tests less onerous
+* Corrects help messages in cfg.py
+* Fix Occasional test_one_network_label_exact Fail
+* Replaces local generate_uuid with common.utils
+* Disable redundant DB initialization on guesagent's start
+* RootReport through Taskmanager
+* Changes encoding from 'ascii' to 'utf-8'
+* Adds exception handling to heat code
+* make datastore_version_id required
+
+2014.1.b2
+---------
+
+* Mask database user's password in trove logs
+* Datastores improvements
+* changing the routes for the api to be clear
+* Edits on help strings
+* Validate databases for user grants
+* Spelling correction in taskmanager/models.py
+* Adds Missing _() for Exception Message Translation
+* Add Volume Resize filesystem size assertion
+* move datastore manager to the datastore version
+* Remove copyright from empty files
+* Replace oslo.uuidutils module with trove.utils
+* Updates oslo.context
+* Relocates generate_random_password to common.utils
+* Fixup indentation errors found by Pep8 1.4.6+
+* Fixed misspelled help message in cfg.py
+* Log service_status.status instead of service_status
+* Added Redis Crud Operations
+* Removes deprecated usage of BaseException.message
+* Enabled F403 flake8 rule
+* Update for datastore tests to support multiple datastore types
+* Make use of IP filtering when creating DNS records
+* Instance details view shows hostname (if it has it) or IP
+* Using base32 encoding to generate DNS records
+* Removes unused "server" from taskmanager
+* Add volume total to Mgmt Instance Get
+* Adds LOG in event_simulator.py
+* Removes BuiltInstanceTasks.get_volume_mountpoint
+* Adds tenant_id to guest_info in heat code
+* make the bin scripts called with main()
+* Removes directory creation prior to _tmp_mount
+* Cleans and improves heat code path
+* server identifier corrected
+* Corrects the help message for trove_volume_support
+* Adds non-volume-support to create server with heat
+* Adds missing dependency to the documentation
+* Removes privilege modification for MYSQL_BASE_DIR
+* Changes command to create the directory
+* Cleans the method init_engine
+* don't try to concatenate a string with a variable that can be None
+* Removes dead code from trove/tests/api/root.py
+* Acknowledge Nova VERIFY_RESIZE as RESIZE state
+* Properly mark a backup as FAILED if the process failed
+* Moving storage logic out of backup runner class
+* Paginate backup list api
+* Updates trove-guestagent.conf.sample
+* Enabling H403, H702 rules
+* Fix deleted_at timestamp in usage tests
+* Fix mysqldump backup and restore
+* check for invalid hostnames on update_attributes
+* Add -U to pip install command in tox.ini
+* use_stderr should be False for tox tests
+* Fixed typos in files in trove/guestagent
+* Updated from global requirements
+* Fixed PEP8/flake8 issues
+* Replace "tokenauth" by "authtoken" in configuration files
+* Update tox.ini to use new features
+* Removing IDE specific ignores
+* Extract suffix from req URL to avoid escaping dots
+* Unittest Case for get_user
+* Added ability to pass custom command-line options to backup runner
+* Updates tox.ini to remove suppressed H401
+* Conductor Does Not Default to Verbose/Debug Logs
+* Fixed misspellings of common words
+
+2014.1.b1
+---------
+
+* Removes unused import statements
+* db: make compatible with SQLAlchemy 0.8
+* Removes security_groups from _create_server_volume_heat signature
+* setting fake mode to print startup errors
+* Conductor proxies host db access for guests
+* Clean up zombie processes on backup failure
+* Corrects heat template for mysql
+* Adding designate dns support to trove
+* need to mock out of the clear_expired_passwords for tox
+* Remove radmin credentials from create_heat_client
+* Allow query logging
+* Fixing typos in _create_server_volume
+* Add default case for mysqld_bin
+* Add support of datastore types
+* User-Create Host Does Not Allow Wildcarded Octet
+* Externalization of heat template
+* Update openstack/common/lockutils
+* Added logging in taskmanager models && _() strings
+* Fix action_result check
+* Convert to a more modern form of openstack-common.conf
+* Update tests to work with the latest testtools
+* host response attribute should prefer 'host' instead of 'hostId'
+* Add a hook for backup processes to check if successful
+* Replace GUID with generated password
+* Add optional ip address filter for hiding ips
+* Fix checksum verification exception
+* Fix bug in Security Group association to Instance
+* Fixes trove-api daemon fake mode functionality
+* Add Backup/Restore Checksum Validation
+* Fix white_box mode for integration tests
+* Add tests for hosts mgmt commands
+* Security groups workflow update
+* Fix User ID in Context and Notifications
+* Fix service_type in instance creation using heat services
+* Simulates events so run_tests.py executes 10x faster
+* Moved create_instance DNS attempt to post-prepare
+* Provide service type management code structure
+* Fixes pagination with non-string markers types
+* Replace deprecated method aliases in tests
+* Quote and escape pagination markers
+* Update statuses on GA timeout
+* Fixing restart tests
+* Update trove-guestagent.conf.sample
+* Add GA related parameters to trove-taskmanager.conf.sample
+* Modifying tests to use the compat client
+* Task manager refactoring done
+* Fix Timestamps for Resize Usage Events
+* Service Registration using conf file
+* PEP8. E125, F811, F401, H703
+* Allow service_id per service_type for Usage Events
+* Fix quota issue where usages can drop to negative value
+* Fix the fake nova server implementation
+* Add tenant id to guest_info file
+* Remove Duplicate trove_auth_url Property
+* Adding location attribute to Fake Backup object
+* Correct the fake implementation of UsageVerifier
+* Extract generic part of GA code from MySQL specific modules
+* Allow early host % on validate
+* fixing symlink attack bug present in the application
+* Volume timeout is set too low
+* Update from global requirements
+* Added server_id to my.cnf template logic
+* Fixed method signature _create_server_volume_heat
+* PEP8. F841
+* Require oslo.config 1.2.0 final
+* Pydev remote debugging support added
+* Vote for channel logging
+* Duplicate Import Statement
+* User and Database List in Create Not Validated
+* Support Optional Super User in Instance Create
+* oslo-incubator rpc update
+* Replace OpenStack LLC with OpenStack Foundation
+* Allow optional availability_zone to be passed
+* Rename webtest to WebTest
+* Set sane defaults for required conf params in trove/common/cfg.py
+* PEP8 rules. H102,103,201
+* Adds instructions for manual Trove installation
+* Fix and enable gating on H702
+* Fixed Admin Auth Token in Notification
+* Fixed backups so that they no longer fail when backup size is > 2GB
+* Use LOG.exception in place of sys.exc_info
+* Fixed directory create exec
+* Move ServiceStatuses from trove.instance to trove.common
+* Open Icehouse development
+* Mark sensitive cfg options with secure flag
+* Modify User Attributes API - Fix
+* Made apischema a bit less restrictive
+* Enclose command args in with_venv.sh
+* Fix and enable gating on H703 - string localisation
+* Do not use locals() for string formatting
+
+2013.2.b3
+---------
+
+* service_statuses updated_at Field Not Set
+* Increased unit test coverage
+* Support Security Group Name Prefix Customization
+* Implement resize volume method
+* Adds includedir back to templates
+* Implementing heat as an optional provisioning system
+* Add and associate security group rule with group
+* jsonschema upgrade to v1.3.0(as minimal)
+* Trove - service_statuses status set to delete when instance deleted
+* Modify unit test to allow cli to merge
+* pep8 checking was added for bin folder
+* Update nova_volume_url to cinder_url in CONF files
+* Fixed use of word separators in Notification
+* Changed system commands depends on OS version
+* Fix admin extension gives 500 when listing instances
+* Adds init file for routes directory
+* Ensure safe format strings for TroveError
+* Reindenting a function call in taskman models
+* Guest config file injection
+* Update oslo.cfg to >= 1.2.0
+* Add instance cloudinit support
+* Fix resize volume stuck in "RESIZE" status
+* Add RPM class implementation
+* Use same Nova Client throughout Fresh Instance Task
+* Secure root password on restore from backup after root-enable
+* Fixing bug in Interrogator tests mocks
+* Fix bug with insecure instance on Prepare loss
+* Moves extension files to routes
+* Removing mycnf static files from contrib
+* allows a mgmt user to migrate an instance to a specific host
+* Configurable network labels used for showing IPs in instance details
+* Replace nova client with cinder client to use volume
+* Fix spelling of python
+* Adding volume size to the backup views/models
+* Modify User Attributes - name, host and password
+* Renamed secgroup description
+* Added docs and made template filename variable
+* Turns pkg.py into a system aware packager
+* Clear new or building backups on reset-task-status
+* Added param name to validation error messages
+* Fix drift in deleted timestamp for Notification and Database
+* Added developer documentation for Trove
+* Makes two tests wait for the instance to go ACTIVE
+
+2013.2.b2
+---------
+
+* Change the swift file deletion to use the manifest
+* Create templated config files
+* Add service_type to the instances table
+* Migrating the create/resize code to use flavor obj
+* Bump pbr to the version 0.5.16
+* Make Volume conditionally required attribute in Instance Create Schema
+* Wildcards in User Host
+* Update to latest Oslo rpc modules
+* Fixing the broken API contract for flavor_id
+* Restore should use pgrep instead of mysqladmin to check for mysql down
+* Python 3.x compatibility fixes
+* Adding instance id to the security group extension API
+* Enable disk usage view in instance detail view
+* API Validation for Trove API
+* Requirements: Remove factory_boy, allow SQLAlchemy 0.7.10
+* Fix Notifications
+* Update kombu library version requirement
+* GuestTimeout needed to be imported
+* Fixes my.cnf not reverting with a resize revert
+* Fix few missed issues with the reddwarf -> trove rename
+* Rename README to README.rst
+* Start using Hacking
+* Fix up trivial License Header mismatches
+* Package AUTHORS and ChangeLog file
+* Fixed backups GET and DELETE to restrict access to the owner of backup
+* Rename from reddwarf to trove
+* Add trove.egg* entry in .gitignore
+* Fix faulty 404 errors when requesting bad versions
+* Change server exceptions to show less details
+* Changed instances of the name reddwarf with trove in the README
+* Adding support for encrypted backups
+* Remove explicit depend on distribute
+* Renamed repos to trove
+* Fixed restore to wait for full mysqld shutdown before attempting restart
+* Fix quota bug where it raises exception when resources are deleted
+* Adding Exists Event Publishing
+* Allow remote implementations to be overridden
+* Fixed race condition in the Restore workflow
+* Adding delete restore instance tests
+* Integer Flavor Ids
+* chmod 755 bin/reddwarf-mgmt-taskmanager
+* Renaming security group URL API
+* Updated to use normal requirements names
+* Migrate to pbr
+* Don't require an admin user if there isn't a need
+* Fixing delete backup
+* Adding missing config value
+* Use database name validation only on listing and loading of databases
+* setting up the right percona pkg to be used - bug1185205
+* Adding a SERVICE_REGISTRY for percona - bug 1185138
+* Ephemeral volume support
+* Changes the conf files so redstack doesnt clobber them anymore
+* Fixed format string vulnerability in reddwarf call to OpenstackException handler
+* Added optional arg to launch child processes
+* Backup and Restore for reddwarf instances
+* Fixes some user and user-access call errors
+* Re-introduced support for rpc delete_queue
+* Refresh Oslo code - add support for ssl
+* Migrate to flake8
+* Add flavor API  support for ephemeral
+* Stop granting users GRANT OPTION by default
+* Adding the start of notifications
+* Controller and API changes for backups
+* Refreshed Oslo Code
+* added malformed json tests
+* Makes the guest work for more than just mysql
+* Quota tests
+* Adding ability to run XmlLint for each API call
+* s/OpenStack LLC/OpenStack Foundation/ in Copyright
+* Remove unused authutils
+* Add Apache 2.0 LICENSE file
+* fixing taskmanager exception after migration is complete
+* Fixes test in response to optional hostname fix
+* Updating tests to use altered quotas show method
+* fixing the flavor tests
+* Addresses xml issues for quota unit tests
+* Adding a running method to the Backup Model
+* Stop the deprecated use of Exception.message to please Python
+* Adding checks when updating a quota
+* Added support for Security Groups via a new extension
+* Add snapshot ORM to reddwarf
+* Adds optional hostname to calls involving users
+* Addresses failing quota int-tests
+* Fixing the signing dir and cleaning up the paste config
+* fix coverage for jenkins - temp fix
+* Fix for missing quota property for int tests part1
+* Adding instance ID to DNS error message
+* Adds absolute limits to limit API call
+* update MANIFEST.in to include specific scripts in etc/reddwarf
+* Ensure to_dict() returns auth_tok
+* Pinning proboscis to a specific version
+* Test no accept headers
+* Update test-requires to point to rd cli tarball
+* Restoring the ability to run fake mode locally
+* Added tests for Modify User Call
+* Add python-keystoneclient to deployment dependency for reddwarf
+* Tests the API in XML mode
+* Refresh setup.py from Oslo
+* Rate limits implementation
+* percona image for reddwarf
+* Quota feature
+* Store the context in the local.store
+* Use tarball for python-reddwarfclient dependency
+* Fixes data type bug in get-user call
+* Joins oslo dict values with reddwarf values
+* Fixing run_tests.py so it emits an error upon failure
+* remove the namespace_packages from setup.py
+* Implement alternate root privileges
+* Change default service_type in tests to 'database'
+* Modify-user features
+* Added the cover directory to .gitignore
+* Specify Python 2.7 for cover environment in Tox
+* Ignore .testrepository directory
+* Prevent Upstart from restarting guest in Restart tests
+* Adds reset-task-status mgmt api instance action
+* Add missing Import
+* Fixing the coverage reports for the unittests and adding support for TestR
+* Adding a config option for running XML client
+* Add more unittests to guest agent
+* Negative Taskmanager Resize/Migration fixes
+* Add unit tests for guestagent.db.models.py
+* Fixing race condition during instance deletion
+* testr unit tests for versions api
+* Add unit tests for guestagent.api.py
+* Add unit tests for guestagent.volume.py
+* Checks guest status during migration
+* create a test adapter for entering an instance and executing a cmd
+* Adding flags to ssh cmd to bypass host checking
+* More changes to facilitate oslo
+* Fix for bug where returned instance status in UnprocessableEntity exception is an empty dictionary
+* Consolidating multiple volume flags into a single flag
+* Adding guest agent pkg unit tests and running them with testr
+* Add unit tests for guestagent.models.py Delete guestagent.utils.py since it is no longer invoked anywhere
+* fix int-tests running with out volume
+* Fixing property for pid_file from "mysqladmin --print-defaults"
+* Add unit test for guestagent.service.py and query.py
+* ADD unit tests for guestagent/manager.py
+* add back the mysql_base_dir variable to the guest
+* Check for 'reddwarf_can_have_volume'
+* - switch to testtools - remove pep8 warnings - more unit tests for dbaas.py, covers create_user, enable_root - refactoring
+* Update oslo codebase within reddwarf
+* Avoid null pointer. Fix pep8 mystery problems
+* Fixed bug 1091927: Pep8 tests are broken for reddwarf
+* Adding some dbaas.py unittests
+* Avoids using guest mgmt API functions
+* Part 1: Create group for simple unit tests
+* Correcting a log message in resize code
+* Better defaults that fix volume support
+* After migration, don't null the instance flavor
+* Fixing DNS issues related ot changing db_api
+* Updates tests to run in other configurations
+* Fixing the constant for mysql server validation in apt
+* Change validation to require non-blank name for instances
+* Fixes another fake mode eventlet bug
+* Always call 'spawn_after' for eventlet in fake mode
+* specify rpc version for guestagent manager fix bug # 1078976
+* Update tools/install_venv.py to work w/ latest pip
+* No longer import db_api while parsing db __init__
+* Updated the README
+* Adding test for volume used attribute for management api
+* Use reddwarf instead of reddwarf_lite
+* Add volume usage information to the management api detailed view
+* Adding tests to Reddwarf
+* For bug 1079863, fake commit
+* dummy changes
+* This is to fix bug 1079827. Please work
+* remove double colons
+* Removed TODO:
+* Removed unused import. Fixes bug #1078522
+* Uses the view to circumvent an error related to the assumption that instance.server is present
+* Add vim formatting line
+* Do not update flavor if timeout occurs in resize
+* added a TODO:
+* Remove tabs in sample my.cnf
+* checks before deleting kwargs from the context
+* Removes the vestigial tests
+* Fix type in test-requires
+* Aligned tox file with project
+* Added .gitreview file
+* Get-host-by-name now uses RD instance status, not vm status, in instance list
+* Fix some PEP8 violations
+* Adding the ability to rescan server volumes to fake mode
+* Mgmt migrate instance call for reddwarf
+* Get rid of one-character-per-entry traceback logging
+* Require admin_context on host and volume calls
+* Fixes reference to host in instance views
+* Any() and All() don't short-circuit
+* Moved the agent heart beat check to inside the guest api class
+* Indentaion fixes all over the place
+* Removing the "fake-mode" tox env in favor of specifically using 2.6
+* Added PEP8 to tox and repaired a hasty syntax error
+* PEP8 fixes, mostly whitespace and line-length changes
+* Adding the mgmt taskmanager
+* Improved ability to run fake mode in CI environments
+* Since the comparison inside is <=, the message ought to reflect that
+* Revamped the mgmt instance call
+* Added code to declare a topic consumer
+* mgmt call to get hardware info (cpu and memory) from an instance
+* Adds filtering for deleted instances in the mgmt instance lists. Fixes deleted and deleted_at fields
+* Fixed fake mode, which didn't work with our new changes
+* mgmt status call should allow for deleted instances and show them as shutdown
+* add exception handling for trying to update bad instances
+* Fixing bad import to reflect openstack common RPC
+* fake mode working with new novaclient create_server_volume method
+* Removed fault guest queue delete code since it's already in delete_async
+* Fixed small bug in fake mode
+* Updated metadata to support XML in the mgmt api
+* Removing unnnecessary line of code, which was causing mgmt/instances to not load correctly
+* Host list detail now includes the tenant id of each instance
+* Adding task_description to mgmt instance model. Wrapped a 404-happy server load to fix mgmt instance list for busted instances
+* Adding task_description to mgmt instance model
+* management api call to list all accounts with non-deleted instances
+* Allowed us to grab a mgmt instance that lacks a backing server
+* adding mgmt action to reboot an instance
+* Fixing xml serialization for accounts
+* Pruning one more tree() from the codebase
+* Removes defaultdict references from mgmt account and instance views
+* Added an admin task-manager
+* adding management host update action
+* Allowing resizes to be performed when MySQL is down
+* Moved mgmt instances into its own directory
+* Adding the deleted filter for account instances
+* Mgmt storage device details
+* fixing diagnostics tests for fake mode
+* Added attributes for management instance get
+* Mgmt instances
+* Adding MGMT hosts call
+* Adding a accounts management api extension Adding fake tests for mgmt accounts
+* Updated RPC code
+* admin users should use their correct tenant id as well
+* add updated attribute to list all versions, add ability to list individual versions
+* Adding support to use the nova create server with volume
+* Adds ignore_dbs to configs, and makes the models respect it
+* Add reset-password action and return Not Implemented
+* Adds root to the ignore_users list and forces user list to obey it
+* Fixed XML serializer to work with pagination
+* Trimming spaces when reading from the config as a list of comma separated values
+* Changing the Config get to always use a default value
+* Adding the ability to get types other than strings to the Config class
+* Fixed a syntax error
+* adding logging to the service conf files
+* Delete can now delete errored instances
+* Adding tox support to Reddwarf
+* password check shouldn't look in ignore_users
+* added an ignore users option, e.g. prevents such users from being deleted, also only get is root enabled info by checking the db
+* Changing the max_instances_per_user to 55 in the test config file
+* change usage table to usage_events
+* Adding fake mode support to the delete_queue function
+* adding usage table
+* Task manager will now detect some creation errors and mark the instances
+* Delete the guest queue when deleting an instance
+* don't raise an exception if there is an error, allow it to poll until timeout
+* Allowing resizes to be performed when MySQL is down
+* Moved functionality into wsgi.Controller
+* Give the nova instance the real hostname if we've got it
+* Adding a fault wrapper to catch and wrap exceptions that are thrown as plain text
+* Fixing delete polling in the taskmanager
+* Simple per-user instance quota checking in the create call. PEP8 fixes
+* Forcing HTTPS in pagination next links
+* Getting rid of our hack to simulate 404's for instance GETs
+* Polling until the server is deleted
+* Adding the create users and create databases to the fake mode prepare
+* Adds deleted and deleted_at fields to the instance table
+* Fixing DNS hostname code to save info to DB in taskmanager
+* Adding default for users
+* modify prepare call to create the users given on a create instance
+* Refactoring the instance load method Adding back the volume used parameter. Added timeouts for all guest sync calls. Refactored the instance models
+* Adding custom taskmanager q
+* Disabling local-infile in my.cnf Adding max_user_connections and updating max_connections to +10 of user_connections
+* Reversing the order of the dns save
+* Removing hostname from list instances
+* Farvel /flavors/detail. Also consolidating the API() into a common class
+* Checks for an empty body in action requests and bottoms out appropriately
+* Fixing no newline spaces in xml
+* Actually fixing the regex this time
+* Au revoir /instances/detail
+* Fixing the whitespace&newlines in xml
+* Preserves our contracted error response names by mapping webob exceptions to our named errors. Also repairs references to rd_exceptions that were missed in a refactor
+* hacks to get the example generator up and running again
+* Fixing xml serialization/deserialization * Adding custom metadata to properly serialize xml for our needs * Fixing the deserialization of xml objects as plurals * Adding XMLNS * Fixing the resize funk
+* Changes defaults to None in the Query constructor
+* Adding a admin context check used for the management calls
+* Query class now makes use of GROUP BY. This fixes a bug with list_users
+* Adding the user to the context
+* Fixed resize flavor code to correctly fetch new info
+* Fixing the way the common exceptions work with our webob objects
+* Took vcpus out of flavors view
+* Changed link generation code
+* Changing volume_size to an integer
+* Fixes an error in update_db
+* Reverting migration 007 to as it was and creating 008
+* No longer call to Nova to grab server or volume info for majority of instance calls
+* Adding taskmanager to setup
+* Making db instance restart async
+* Async instance create operation
+* Fixing the 200vs202
+* Async operation for instance resize/delete
+* Raise exceptions on user or database if a resource with the same name is found
+* Fixing validation to not force public RDL users to have a volume
+* volume list should return a list of dict and not objects
+* Resize live volumes attached to an instance
+* No longer make N calls to the volume API when listing instances + list bug fix
+* Minor fix for poll_until
+* Fixed infinite loop polling for ip address
+* Serialize XML correctly if instance isn't found
+* Resurrecting poll_until
+* Changing version in reddwarf.conf.sample
+* Adds pagination to instances, databases, and users. PEP8 fixes
+* Fixing validation for volume size
+* First beginnings of pagination
+* Reinstantiating the Task Manager aka Reddwarf Manager
+* Adding config for device mapping
+* Added some additional assertions to the resize flavor code
+* Dns bug fixes related to usernet ip
+* Optional hostname in view
+* Fixing the version
+* Fixing the returns for no-body calls
+* Fixed typo
+* Issue 500 if the volume fails to prov
+* Default hostname and minor comment
+* Changing rsdns_records table name to be rax independent
+* DNS Support for Instance IP
+* Updating the port in reddwarf-api
+* Updating reddwarf-server to use the config for ports, instead of defaulting at the command line args
+* Adding image_update call to reddwarf-manage
+* Adding fields to get better feedback from the agents
+* updating the volume service endpoint to version 1 instead of v2
+* Added another flavor to what gets returned in fake mode
+* Bypassing auth/svccatalog in novaclient
+* Fixes a problem when an instance exists, but the root history doesn't. Properly returns Never/Nobody now
+* Moved root history out of instance details and into standalone mgmt call. PEP8 fixes
+* No longer require a volume
+* Fixed things suggested in the pull request
+* Made resize work in fake mode
+* Made resize almost work
+* Continued work on resize_flavor
+* Adding manifest
+* pep8 fixes and resolve a few other rebase issues
+* clean up and change the volume desription to have the instance id
+* Allowing a user to add a volume to the instance on create api call
+* Fixing the setup.py to have the new reddwarf api
+* Adding a reddwarf-api binscript
+* Fixed a fake guestagent call so the tests pass in fake mode, too
+* Moved X-User call to WSGI middleware
+* PEP8 on a comment and removed a log debug line
+* Fixed a comment and added InstanceStatus.ERROR since it seemed to be missing
+* Extending mgmt api from core instancce api
+* Added root history to instance details. Still need to move the root history over to mysql/extensions, but the int tests work right now
+* Started the mgmt framework
+* Fixed root history schema; skeleton of root history model
+* Making the guest more extensible for services
+* More work on the restart action
+* Fixed a few simple issues with the restart code
+* Continued to work on restart API
+* Added API code for actions
+* Making instance creation a bit more extensible
+* Added fakery to the various database operations
+* Renaming database to mysql
+* Syntax errors
+* Adding multiple addresses instead of just one
+* PEP8
+* Adding initial dbs to the prepare call
+* Removed some overzealous wrapping
+* Removed some more wrappers around some exceptions
+* Fixed some RPC casts and context problems that happened during a rebase
+* Fixed some of the overzealous _() wrapping to exclude the parameters being handed to the format strings
+* Every time I see a LOG.something(, I've wrapped _() around its contents
+* Show ips based on a flag value
+* Fixing the mysql list calls
+* Created test fakes for Nova and the Guest. With these you can run the server with no external dependencies!
+* Forcing https
+* Removed some vestigial CONFIG and LOG lines
+* Moved build_links and req into the view, cut out some redundant exceptions
+* Used new style of context and moved the req to the constructor in the views
+* Fixed the discrepancy between detail and plain view; fixed links in models
+* Fixed the Flavors API so the URLs returned are correct and all tests are passed
+* Adding Flavors API: models, views, and service
+* Removing the link from webob in exceptions
+* Made the constant proper cased
+* Making the exception_map work for extensions
+* Fixing up the internal_message
+* Updated the context object in all services
+* Fixed the instance list operations
+* Changing 201 to 200
+* Added validation to the users/databases/root calls
+* Adding validation to user/schema
+* Adding root enabled
+* Fixed the instance status returned during instance deletion
+* Fixing the queues to use uuid
+* Fixing the extensions to behave like existing reddwarf
+* Added schema calls for list/create/delete
+* Added the delete user call
+* Built out create_user call
+* Fixed a small bug, added error msg as suggested by cp16net
+* Adding list_users for mysql users
+* Fixed bug in status property, added message to UnprocessableEntity error
+* Added status code, return 422 when trying to delete a busy instance
+* Adding the guest conf.d writing
+* Now returning the correct status strings
+* Adding validation of the api body
+* Simple change to delete instance call
+* Getting the guest status update working
+* Fixing the server load call and amqp cast_with_consumer
+* Minor tweaks while trying to get Instance.load to work
+* Fixed our keystone hack
+* Changing instance from a subclass of Compute instance into its own object
+* Adding dbaas-mycnf to the contrib folder
+* Furthering the guest agent prepare call
+* Adding the guestagent
+* Adding getattr and setattr back to fix the bug I just added
+* Fixes pep8 and circular import issues
+* Changed the proxy_tenant_id to "reddwarf" since this is what KeyStone expects
+* Fixing up the instance creation issues
+* Fixed auth to work with keystone
+* Adding more tests
+* Changed the version name attribute to id
+* Adding database instance details for show/create/delete/list
+* Creating a model unit test to test the data() functionality
+* Adding basic skeleton for testing controllers. (stole from melange)
+* Fixing the assignment issue
+* Added the use of context instead of passing just the token
+* removing the reddwarf_tenant_id
+* fix the config
+* fixing pep8 things
+* updates to get create working
+* Added gitignore and re-fixed pep8 violations
+* Removed API folder
+* Fixed Pep8 errors
+* adding some buggy bugs and updates from keystone/novaclient
+* Added in the guest manager code * Added the bin script for the guest agent * Added a sample config file for guest * Migrated guest-agent to guestagent * Added a manager and service for the guest
+* Got the unit test venv environment working
+* keystone made some changes
+* Adding some basic service code from nova. * Adding the proper taskmanager bin script * Adding a taskmanager impl (needs to be a proper baseclass) * Adding novas LoopingCall to utils * Updating dummy rpc cast in the database service so it sends to the task manager
+* Added the taskmanager class with some testing rpc code * Fixed a bug in rpc kombu w/ a bad durable declaration * Fixed the name of the queue exchange * Added a bit of rpc code to the taskmanager service for consuming * * This is mostly experimental at this point!!! * * This should be refactored into something common!!!
+* Initial checkin of rpc code * Stole most of the code from nova rpc * Updated the rpc and kombu code so it works with reddwarf * Import of openstack-common, added the context from common * Extended the common context
+* Fleshed out the basics for the guest-agent scp firstboot. * Copying ssh keys from the host to the image * Added a bootstrap_init.sh which does the scp work to the instance * Finished the bootstrap.sh so it will upload to glance * Added a service images table for identifing the current image on create * Added some dummy guest-agent code for testing purposes * Added a delete method, which is not finished
+* First pass attempt at a service_image registry in the db * Added some finder logic to the base models * Added service_image to models * No longer passing in the image name in the database create call * Misc mapper stuff w/ adding the table
+* Adding next_steps.txt so everyone can see my thoughts
+* Moving the old bootstrap in anticipation of nuking it
+* Figured out how to create/add qcow ubuntu images * new bootstrap/bootstrap.sh shows the proper way to create a image * modified the funkybugs cuz i squashed one in nova proper * added apt-cacher-ng and such to the old bootstrap (dont use it yet)
+* Adding the beginnings of ubuntu bootstrap
+* Adding the venv/unit test framework stuff * run_tests stuff * gerrit stuff * test-requires for pip
+* Adding the missing reddwarf-manage binscript
+* Getting hooked up w/ the db. * connection db and all that jazz * migrations are working * local DB models are working (only save)
+* Making a data/view model based on remote objects * removing the novaclient from the actual service
+* Adding extensions to the app, and shell extensions for users & schema
+* Adding a bit of code to get novaclient working via proxy token
+* A bit more cleanup to remove melange code, and making the auth code work again
+* Making the API look more like melange. this made the api a TON cleaner than modeling it after the existing nova code. * now uses no nova imports and still has things like extensions, versions, etc. * created a new server binscript * made a new common folder with all the non openstack-common wsgi, exception, extensions etc... * using openstack-common extensively * changing the version to use v0.1 * stole some code from melange to make all this possible <3 melange team
+* Experimental changes to create instance. this is untested
+* Adding idea project folder
+* Getting the delete call and refactoring the req/proxy_token a bit
+* Got the basics of the viewbuilder working for list instances
+* Got a nice API shell working * uses devstacks install for nova/keystone/et al * talks to nova via novaclient. * adds a few extensions to show how its done * has a single call to list instances * found a few minor bugs to discuss w/ nova crew ** Note in order to run this you have to mod the code downloaded by devstack     or have local symlinks to nova & novaclient in your src tree running trunk     This will get dealt with soon (it is a weekend!)
+* Adding a gitignore
+* Adding a script for getting the environment up and running
+* Folder structure layout stuff
+* Initial commit

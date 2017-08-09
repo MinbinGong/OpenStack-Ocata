@@ -1,0 +1,114 @@
+CHANGES
+=======
+
+1.4.1
+-----
+
+* Sync pbr with latest from global-requirements in stable/ocata
+* vif_plug_ovs: Skip setting MTU on Windows when plugging devices
+* Update .gitreview for stable/ocata
+
+1.4.0
+-----
+
+* introduces MTU support for vhost-user
+* vif_plug_ovs: Always set MTU when plugging devices
+* os-vif: add new port profiles to enable fast path vhostuser
+* add support for vhost-user reconnect
+* os-vif: add vif_name to VIFVHostUser class
+* Changed the home-page link
+* Drop MANIFEST.in - it's not needed by pbr
+* remove use of contextlib and with nested
+* host_info: add ability to filter list of supported vifs
+* host_info: fix get_common_version method on HostVIFInfo
+* host_info: fix has_vif/get_vif methods on HostPluginInfo
+* Updated from global requirements
+* host_info: fix has_plugin/get_plugin methods on HostInfo
+
+1.3.0
+-----
+
+* Enable release notes translation
+* os-vif: add initial documentation about object model
+* Add oslo.concurrency to requirements
+* Make plugin loading more consistent with logging guidelines
+* Updated from global requirements
+* vif: stop VIFOpenVSwitch inheriting VIFBridge
+* Updated from global requirements
+* Add MTU to Network model and use it in plugging
+* Update reno for stable/newton
+* Adds Windows support for OvsPlugin
+* Check for concurrent bridge creation in bridge add
+
+1.2.0
+-----
+
+* Add a reminder to remove Route.interface field
+* Updated from global requirements
+* Disable IPv6 on bridge devices in linux bridge code
+* Trivial: clean up oslo-incubator related stuff
+* Fix logging calls
+* Remove discover from test-requirements
+
+1.1.0
+-----
+
+* Simplified if statement
+* Updated from global requirements
+* revert removal of create_ovs_vif_port timeout
+* Ensure the OVS bridge exists when plugging
+* Don't create extraneous linux bridge/veth pair for VIFOpenVSwitch
+* Updated from global requirements
+* mtu: don't attempt to set link mtu if it's invalid
+* ovs: Avoids setting MTU if MTU is None or 0
+* os_vif: fix logging of exceptions during plug/unplug
+* vif_plug_ovs: clarify that the plugin was not in fact renamed
+* os_vif: add logging for each plugin that is loaded
+* os_vif: register objects before loading plugins
+* Add support for vhost-user
+* This change renames the ovs plugin
+* Updated from global requirements
+* remove unused entrypoints
+
+1.0.0
+-----
+
+* Start using reno for release notes
+* vif_plug_ovs: merge both plugins into one
+* ovs: convert over to use privsep module
+* ovs: move code from plugin into linux_net helper
+* linux_bridge: convert over to use privsep module
+* test: use real UUID in all UUID fields
+* test: add workaround for non-deterministic ovo object comparison
+* os-vif: introduce a ComputeInfo object to represent compute info
+* linux_bridge: actually apply the iptables rules
+* Fix calls to create_ovs_vif_port
+* Remove vlan from hostdev and direct vif
+* Change network vlan to integer
+* VIFDirect: replace dev_name with dev_address
+* Use names() method of ExtensionManager insted of keys()
+* Remove obsolete obj_relationships attribute
+* os-vif: add test for versioned object fingerprints
+* os_vif: ensure objects are in an 'os_vif' namespace
+* vif_plug_ovs: Disable IPv6 on bridge devices
+* import openvswitch plugin implementation
+* import linux bridge plugin implementation
+* Provide plugins an oslo_config group for their setup
+* Adding dev_type field to VIFHostDevice
+* Fix PciAddress regex
+* Update the test_os_vif.test_initialize documentation
+* tox: ignore E126, E127, E128 indentation checks
+* Fix logic getting access to stevedore loaded plugin instance
+* plugin: fix typo in method annotation
+* Pass InstanceInfo to the plug/unplug methods
+* Fix definition of subnet object to not be untyped strings
+* Add formal classes for each of the types of VIF backend config
+* don't catch ProcessExecutionError exception as special case
+* remove dependancy on nova object model
+* actually register the various objects we define
+* remove obsolete requirements
+* Remove raise NotImplementedError from abstractmethods
+* remove python 2.6 trove classifier
+* reorder tox envlist to run python 3.4 before 2.7
+* Import of code from https://github.com/jaypipes/os_vif
+* Added .gitreview

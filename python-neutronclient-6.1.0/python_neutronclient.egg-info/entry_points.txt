@@ -1,0 +1,35 @@
+[console_scripts]
+neutron = neutronclient.shell:main
+
+[openstack.cli.extension]
+neutronclient = neutronclient.osc.plugin
+
+[openstack.neutronclient.v2]
+firewall_group_create = neutronclient.osc.v2.fwaas.firewallgroup:CreateFirewallGroup
+firewall_group_delete = neutronclient.osc.v2.fwaas.firewallgroup:DeleteFirewallGroup
+firewall_group_list = neutronclient.osc.v2.fwaas.firewallgroup:ListFirewallGroup
+firewall_group_policy_add_rule = neutronclient.osc.v2.fwaas.firewallpolicy:FirewallPolicyInsertRule
+firewall_group_policy_create = neutronclient.osc.v2.fwaas.firewallpolicy:CreateFirewallPolicy
+firewall_group_policy_delete = neutronclient.osc.v2.fwaas.firewallpolicy:DeleteFirewallPolicy
+firewall_group_policy_list = neutronclient.osc.v2.fwaas.firewallpolicy:ListFirewallPolicy
+firewall_group_policy_remove_rule = neutronclient.osc.v2.fwaas.firewallpolicy:FirewallPolicyRemoveRule
+firewall_group_policy_set = neutronclient.osc.v2.fwaas.firewallpolicy:SetFirewallPolicy
+firewall_group_policy_show = neutronclient.osc.v2.fwaas.firewallpolicy:ShowFirewallPolicy
+firewall_group_policy_unset = neutronclient.osc.v2.fwaas.firewallpolicy:UnsetFirewallPolicy
+firewall_group_rule_create = neutronclient.osc.v2.fwaas.firewallrule:CreateFirewallRule
+firewall_group_rule_delete = neutronclient.osc.v2.fwaas.firewallrule:DeleteFirewallRule
+firewall_group_rule_list = neutronclient.osc.v2.fwaas.firewallrule:ListFirewallRule
+firewall_group_rule_set = neutronclient.osc.v2.fwaas.firewallrule:SetFirewallRule
+firewall_group_rule_show = neutronclient.osc.v2.fwaas.firewallrule:ShowFirewallRule
+firewall_group_rule_unset = neutronclient.osc.v2.fwaas.firewallrule:UnsetFirewallRule
+firewall_group_set = neutronclient.osc.v2.fwaas.firewallgroup:SetFirewallGroup
+firewall_group_show = neutronclient.osc.v2.fwaas.firewallgroup:ShowFirewallGroup
+firewall_group_unset = neutronclient.osc.v2.fwaas.firewallgroup:UnsetFirewallGroup
+network_subport_list = neutronclient.osc.v2.trunk.network_trunk:ListNetworkSubport
+network_trunk_create = neutronclient.osc.v2.trunk.network_trunk:CreateNetworkTrunk
+network_trunk_delete = neutronclient.osc.v2.trunk.network_trunk:DeleteNetworkTrunk
+network_trunk_list = neutronclient.osc.v2.trunk.network_trunk:ListNetworkTrunk
+network_trunk_set = neutronclient.osc.v2.trunk.network_trunk:SetNetworkTrunk
+network_trunk_show = neutronclient.osc.v2.trunk.network_trunk:ShowNetworkTrunk
+network_trunk_unset = neutronclient.osc.v2.trunk.network_trunk:UnsetNetworkTrunk
+

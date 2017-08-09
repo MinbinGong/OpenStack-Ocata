@@ -1,0 +1,443 @@
+CHANGES
+=======
+
+4.2.0
+-----
+
+* Updated from global requirements
+* Skip order with 'None' payload content type
+* Remove invalid smoke test that is failing in the gate
+* Updated from global requirements
+* Remove discover from test-requirements
+* Accept 'pass_phrase' for AsymmetricOrder constructor
+* Updated from global requirements
+* Add missing param to certificate order initialization
+* Fix error in doc
+* Removed openstack/common from tox.in
+* Updated from global requirements
+* Updated from global requirements
+* Add Python 3.5 classifier and venv
+* Updated from global requirements
+* Use keystoneauth
+* Fix bug when uploading secret using unified CLI
+* Fix order of arguments in assertEqual
+* Add plug-in summary for osc doc
+* Support upper-constraints in tox.ini
+* Updated from global requirements
+* Use 'code-block' for pieces of code
+* Remove redundant space in docstring
+* Using assertTrue/False() instead of assertEqual(True/False)
+* Using assertEqual instead of assertEquals
+* Remove imported but unused
+* Add oslo.config to requirements
+* Handle container list command correctly
+* Fix CLI message in CA module
+* Replaced bare except
+* Cast sets to lists in acl functional tests
+* Validate key order meta fields
+* Use international logging message
+
+4.1.0
+-----
+
+* Updated from global requirements
+* Fix jenkins failing on coverage report
+* Do not write except:, use except Exception instead
+* Fix argument order for assertEqual to (expected, observed)
+* Fixed python-barbicanclient functional tests
+* Updated from global requirements
+* Remove unused import
+* Updated from global requirements
+* Update mailmap for Douglas Mendizábal
+* Update the home-page with developer documentation link
+* Issue deprecation message for the barbican CLI
+* Fixed python-barbicanclient functional tests
+* Censoring secrets payload value from debug log
+* Fix argument order for assertEqual to (exp, obs)
+* Fixed barbican client order list
+* Display error description
+* Updated from global requirements
+
+4.0.0
+-----
+
+* Replace assertEqual(None, *) with assertIsNone in tests
+* Updated from global requirements
+* Use six.moves.urllib.parse to replace urlparse
+* Updated from global requirements
+* Remove argparse from requirements
+* Updated from global requirements
+* Updated from global requirements
+* Replace deprecated keystoneclient...exceptions
+* Update typos
+* Remove unused import logging
+* Update Order Create Type Help Dialog
+* Removes MANIFEST.in as it is not needed explicitely by PBR
+* Deprecated tox -downloadcache option removed
+* Remove py26 support
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* Make Client test documentation similar to Barbican
+* Updated from global requirements
+* Update Readme to include new/updated CLI commands
+* Allow tox to be able to run independent functional tests
+* Make CLI Order's type field a required argument
+* Remove invalid skipping of tests
+* Fix Secrets Filter
+* Updated from global requirements
+* Updated from global requirements
+* README.rst devstack link not properly displayed
+* improve readme contents
+* Updated from global requirements
+* Add to_dict method to EntityFormatter
+* Updated from global requirements
+* Part 3: Adding ACL functional tests
+* Updated from global requirements
+* Initialize optional attributes in CA object
+* Fix keystone version selection
+* Part 2: Adding ACL support for CLI commands and docs
+* Fix incorrect error when performing Barbican Secret Update
+* Part 1: Adding ACL support for Client API
+* Fix error where barbican order create returns invalid error
+* Create Openstack CLI plugin for Barbican
+* Fix OS_PROJECT_ID not getting read by client
+* Remove Client V1 Behaviors
+* enable barbican help without authentication
+* Fix barbican-client README.rst
+* Add functional test for updating a Secret
+* Remove test behaviors abstraction for containers smoke tests
+* Remove test behaviors abstraction for orders smoke tests
+* Remove test behaviors abstraction for secrets smoke tests
+* Remove test behaviors abstraction for containers
+* Remove test behaviors abstraction for orders
+* Remove test behaviors abstraction for secrets
+* Create Common functions used for cleaning up items used for testing
+* Add epilog to parser
+* Add Unit Tests for Store and Update Payload when Payload is zero
+* Allow Barbican Client Secret Update Functionality
+
+3.3.0
+-----
+
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* Add ability to add and list CAs
+* Remove unneeded dependency in tox.ini
+* Adding Documentation for running Functional Tests on the Python-Barbican Client
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* Added secret type command line option
+* Updated from global requirements
+* New mock release(1.1.0) broke unit/function tests
+* Enable endpoint filter parameters for the CLI
+* Updated from global requirements
+* Use keystone discovery instead of endpoint_override
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+
+3.2.0
+-----
+
+* Drop incubating theme from docs
+* Remove tempest config dependency in functional tests
+* Add capability of specifying Barbican version to client
+* Remove instances of _base_url
+* Re-merge CLI test update for auth URL and version
+* Add CLI smoke functional tests for containers
+* Create behaviors for secrets
+* Pass in keystone version and correct v2 URL to CLI
+* Add support for certificate order
+* Updated from global requirements
+* Adding new tests to cover failure scenarios
+* Drop use of 'oslo' namespace package
+
+3.1.1
+-----
+
+* Updated from global requirements
+* Add Secret CLI smoke tests
+* Fix bug in CLI authentication
+* Updated from global requirements
+* Refactored barbican.py for better testability
+* Update stdout and stderr capture in functional tests
+* Use keystoneclient to get endpoint if it's empty
+* Initial setup for command line tests
+* Fixing misspelling in client docstring
+* Adding support for token based authentication
+* Cleaning up validate_ref()
+* Update README to work with release tools
+* Cleaning up Keystone auth tests
+
+3.1.0
+-----
+
+* Excluding tests from coverage report
+* Fix the clientrc file to match defaults and add docs
+* Updating client and client docs for accuracy
+* Porting over more documentation to RST from cli wiki
+* Uncap library requirements for liberty
+* Adding payload flag to get secret
+* Raising errors from the client instead of ksclient
+* Fix order listing on the command line
+* Fixing the broken functional tests
+* Use the ksc Adapter instead of custom HTTPClient
+
+3.0.3
+-----
+
+* Fix --decrypt command line option
+* Fix order creation on the command line
+* Don't ignore payload_content_encoding if set
+* Consolidate Payload Exceptions
+* Negative tests for orders
+* Container negative tests
+* Updated from global requirements
+* Second set of negative secrets tests
+* First set of negative functional test for secrets
+* Fix smoke test for client with bad data set
+* Fixed deprecated type and encoding test and encoding bug
+* Removing assertItemsEqual workaround, fixed upstream
+* Fixes tests on invalid payload secret creation and adds new exception
+* Ensuring secret ref is not none with payload
+* Added new exception, renamed test, and adjusted test
+* Fixed max payload size error
+* Fix secret-store empty-key filtering bug
+* Enable usage of 'payload' path to fetch decrypted secrets
+* Don't use tempest log
+* Deprecate setting the payload type and encoding
+* Use functional_test.conf for devstack gate
+* Fix when submitting with empty string, none and zero
+* Fix delete a secret that does not exist
+* Refactor test modules
+* Pass correct api object to Container constructor
+* Moved parameterized test from smoke to functional
+* Add default max payload to functional test conf registry
+* Adds positive orders functional tests
+* Updated functional tests to use both identity v2 and v3
+* Do not filter empty strings
+* Add secret_type to Secret constructor
+* Update functionaltests to be able to run tox -e functional
+* Additional requests-mock testing
+* Remove cyclical dependency
+* Convert CRUD tests to requests-mock
+* Adds orders behaviors and smoke tests
+* Run client functional tests
+* Updated from global requirements
+* Adds positive container functional tests
+* Add hooks for devstack testing
+* update tox.ini files to run functional tests
+* Fix serialization of datetime objects
+* Remove py33 tox environment
+* Updated from global requirements
+* All of the containers behaviors and container smoke tests
+* Update documentation
+* Adds positive secrets functional tests
+* Update documentation
+* Change usage example to show plain/text secret
+* Adds base behaviors, secret behaviors and the secret smoke tests
+* Initial directory changes and files for python-babricanclient functional tests
+* Drop old namespace for some oslo libraries
+
+3.0.2
+-----
+
+* Updated from global requirements
+* Replace httpretty with requests_mock
+* Enable usage of oslo_debug_helper from tox
+* Updated from global requirements
+* Updated from global requirements
+* Enable passing test regex to testr from tox
+* Updated from global requirements
+* Replace trivial docstring instances of tenant
+* Workflow documentation is now in infra-manual
+* Correctly set pbr version name
+* Trivial change to docs
+* Defer loading Secret meta-data until requested
+* Updated from global requirements
+* Updated from global requirements
+* Add Usage documentation
+* Updated from global requirements
+* Add Python 3 classifiers
+* Updated from global requirements
+
+3.0.1
+-----
+
+* Sync with global requirements
+* update cliff requirement to >=1.7.0
+
+3.0.0
+-----
+
+* Remove unnecessary try/except in container delete
+* Update Order models
+* Add sphinx docs
+* Refactored Client to use Keystone Sessions
+* Remove outdated examples
+* Fix consistency between Order/Secret/Container
+* Remove code from oslo-incubator
+* Change object __str__() to use pretty formatting
+* Add Containers to python-barbicanclient
+* Work toward Python 3.4 support and testing
+* Refactor client models in python-barbicanclient
+* Remove hardcoded version
+* remove tenant-id from uri
+* Introduce cliff for cli framework
+
+2.2.1
+-----
+
+* Update tox.ini to match rest of project
+
+2.2.0
+-----
+
+* Fix Testing Failure due to Argparse
+* Move docstring inside relevant class
+* Fixed typos in the example files
+* Add Keystone V3 compliant session/auth plugin support
+* Added PyPy env to tox.ini
+* Updating documentation from stackforge to openstack
+* Added py33 to tox
+* Fix the gitreview
+* Remove unnecessary coding line
+* debug level logs should not be translated
+* Metaclass Python 3.x Compatibility
+* Remove Tox from test-requirements.txt
+* python 3 support
+* port tests to testtools, add branch coverage, omit openstack common
+* sync oslo
+* Remove OpenStack log in favor of native logging
+* Conditionally validate KeystoneAuthV2 credentials
+* Add missing tenant_id to Keystone init
+* Add version to setup.cfg
+
+2.1.0
+-----
+
+* Drop version requirement for argparse
+
+2.0.0
+-----
+
+* Remove version from setup.cfg
+* Use summary not description for the short summary
+* Switch README.md to README.rst
+* Migrate to pbr
+* Rename the command line client to barbican
+* Add auth plugin for Rackspace Identity
+* Removing conditional around client status code check
+* Add filtering CLI options to 'secrets list' sub command
+* secrets.get should verify that the request is for a single secret
+* Add .gitreview file for StackForge
+* Version bump for Icehouse M1
+* Add mailmap file
+* Remove extra header (H2) in the readme
+* Update README.md to mention the pypi location, and to add verification information
+* Client should use endpoint from command line if it is not found in the auth catalog
+* Add mods per peer review; Added new testing log files to gitignore file;
+* Remove unused utils file
+* Fix merge conflicts
+* Add remaining verification unit test and keep files/mods
+* Rework logging to support importing externally
+* Revamped unit tests to remove redundant testing, added some tests for the verification service
+* Add unit tests for secrets
+* Add verifications resource
+* Adding the --insecure cli argument
+* Fixing typo in exception message
+* Fixed typo in keep Client initialization
+* Version bump
+* Fix a couple of bugs caused by typos
+* Version bump
+* Remove unused exception
+* Update unit tests for Client
+* Add total() to both secrets and orders
+* pep-8 fixes
+* Update README.md
+* Rename KeystoneAuth to KeystoneAuthV2
+* Update keep to use URIs instead of UUIDs
+* Last of the changes to Client
+* Update Client to use hrefs instead of parsing IDs
+* Raise exceptions for error responses from the server
+* Update README.md
+* Clean up imports and update requirements
+* Add store command to keep.  Rename options to match other openstack clients
+* Update keep to use refactored client
+* Client.py cleanup
+* Moved order crud to order manager
+* Move raw secret get to secret manager
+* Added get and delete to secret manager
+* Moved secret create and list into secret manager
+* Use KeystoneAuth in authenticate method
+* Added KeystoneAuth class for auth stuff
+* Added auth param to Client
+* Rename Connection to Client
+* Update tox to run pep8 by default
+* Move tests inside main package
+* PEP 8/Pyflakes fixes
+* Change the lookup method for Secret dict fields
+* Remove payload_content_encoding from orders
+* Modify default behaviors and the create_order signature
+* Modifications to reflect payload_content_encoding being required for order creation
+* Make payload_content_type in keep default to 'text/plain' for secrets and 'application/octet-stream' for orders, and stop constraining the content options
+* Modify client library to comply with MIME revamp
+* Update keep to comply with the MIME type revamp
+* Add the option to provide a secret expiration date when creating orders
+* Change setup.py so that it reads the version from version.py
+* Bump client version to 0.2.1
+* Add the skeleton for keep_test, and make a small change to client_test
+* Fixed a bug involving secret expiration dates
+* Bump client version to 0.2.0
+* Change the SERVICE_TOKEN env variable to AUTH_TOKEN
+* Add an option to provide arguments through kwargs for testing
+* Move keep script into barbicanclient module
+* Change the SERVICE_ENDPOINT env variable to BARBICAN_ENDPOINT
+* Delete and stop tracking an OSX metadata file
+* Complete docstrings in the client library and make them uniform
+* Stop overriding the endpoint when it's provided without a token
+* Stop overriding the endpoint when it's provided without a token
+* Fix authentication and service endpoint fetching
+* Add docstrings to the client library along with a couple minor changes
+* In keep, make environment variables the defaults of several args
+* In keep, modify 'get' and 'delete' to use UUIDS
+* Add complete functionality to the command line tool
+* Implement secret and order list paging
+* Add the intial version of the client command line tool Currently the only implemented action is 'create'
+* Add a method to the client unit test that checks for equivalence and remove the __eq__() and __ne__() methods of secrets and orders
+* Split several unit tests into separate tests
+* Add more unittests for client.py
+* Make create_secret() and create_order() return objects rather than dicts and get metadata before returning
+* Minor fixes and adjustments
+* Add a test file, a configuration file, and various generated files
+* Add logging
+* remove last marconi refs
+* get rid of a stray debug print
+* First stab at packaging
+* modified get/delete methods on order and secrets and renamed dicts
+* change string formatting to use .format()
+* updated property on orders should default to none
+* orders & secrets now use __str__ instead of __repr__ + example fixes
+* collapsed __repr__ methods to one line per jarret's comments
+* add get order and get secret metadata functionality
+* create, delete, get secret
+* expand exception text to return text reason from endpoint
+* added generic .venv dirs to the gitignore
+* New objects and methods for create/read/delete
+* pep8 fixes
+* List Secrets
+* WIP: Architecture
+* pip requirements
+* Copied auth.py and tests from python-reddwarf client
+* Initial copy of oslo commons code
+* Placeholder for v1 of api
+* Openstack Common init
+* Initial setup.py configuration
+* Adding tox configuration
+* Adding Apache license
+* Updating .gitignore to ignore PyCharm files
+* Initial commit

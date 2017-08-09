@@ -1,0 +1,668 @@
+CHANGES
+=======
+
+1.2.0
+-----
+
+* Release note for python-senlinclient 1.2.0
+* Fix senlin cluster-policy-detach cannot disable
+* Fix cluster_collect interface
+* Updated from global requirements
+* Add deprecation of cluster-run cli
+* Updated from global requirements
+* Add missing requirements
+* Updated from global requirements
+* Remove unnecessary coding format in the head of files
+* Trivial: Modify the description of policy validate
+* Updated from global requirements
+* Trivial: Modify the description of profile validate
+* Revert "Revert "Revert "Fix `openstack  cluster profile validate` bug"""
+* Fix `openstack  cluster policy show` bug
+* Fix `openstack  cluster policy vaildate` bug
+* Revert "Revert "Fix `openstack  cluster profile validate` bug""
+* Revert "Revert "Get project_id and user_id when show profile""
+* Add Constraints support
+* Revert "Fix `openstack  cluster profile validate` bug"
+* Revise help string profile list
+* Revert "Get project_id and user_id when show profile"
+* Enhance the parameter check for "path" in cluster collect
+* Fix `openstack  cluster profile validate` bug
+* Client support for node replace
+* Get project_id and user_id when show profile
+* Updated from global requirements
+* Add metadata clean help
+* Delete pbr generated files
+* Fix import method to follow community guideline
+
+1.1.0
+-----
+
+* Release note for python-senlinclient 1.1.0
+* Fix resource update issues
+* Correct deprecation of scale-in and scale-out cli
+* Show team and repo badges on README
+* Fix error in policy-show
+* Updated from global requirements
+* Fix project_id show in 'senlin xyz_list -g'
+* Delete python bytecode file
+* Trivial: Fix a typo in cluster-run's error message
+* Fix error in cluster collect
+* Point out valid filter keys in `openstack cluster member list`
+* Fix cluster_id field when listing events
+* key=value should be key2=value2
+* Revise the help message of cluster-collect
+* Revise the help info of cluster collect
+* Revise key1=value to key1=value1
+* Support  "global_project" arguments for action-list
+* Point out valid sort keys in `openstack cluster member list`
+* Revise 'openstack cluster node members list'
+* The output of action list filtered by "target" returns empty
+* The output of event-list by filter "cluster_id" return empty
+* Modify development doc url in CONTRIBUTING.rst
+* Updated from global requirements
+* Revise the help message of policy binding list
+* Add "cluster_id" column to  `openstack cluster event list`
+* Add sort key "oid" in event list
+* Remove unsupported sort key "user"
+* Updated from global requirements
+* Revise "enabled" related code in ClusterPolicyUpdate
+* cluster policy attach cannot work
+* policy binding update cannot work
+* Policy binding attach cannot work
+* Support xyz_update purging metadata
+* Add filters "policy_type" and "policy_name" for policy binding list
+* Rework do_action_list function's "full_id" handling
+* Updated from global requirements
+* Fix target ID display when listing actions
+* Add filter "is_enabled" for policy binding list
+* Updated from global requirements
+* Show project_id field when xyz-list with global-project
+* Add AUTHORS and ChangeLog into gitignore
+* All dictionary options need be a string
+* profile's name also can be use in some commands
+* Add receiver type instruction
+* Updated from global requirements
+* Rework take_action function in class ListAction
+* Fix error in "action list"
+* Modify several marker's help
+* Change osprofiler option "--profile" to "--os-profile"
+* Add plug-in summary for osc doc
+* action-list's given id not event id
+* Change the type of the parameter "enabled" to boolean
+* event-list cannot display correctly according to the sort option
+* Fix the incorrect version and release details
+* Enable release notes translation
+* Changed the link to home-page
+* Fix list of event with timestamp field
+* Updated from global requirements
+* Fix doc build if git is absent
+* `openstack cluster event list --help` bug
+* revise the "cluster-policy-attach"
+* Fix help msg of node-check and node-recover
+* Updated from global requirements
+* Replace 'MagicMock' with 'Mock'
+* Fix error in build-info
+* Fix error in action list
+* Fix 'type_name' in `openstack cluster profile list`
+* Fix profile list
+* Fix `openstack cluster event list` bug
+* Fix `openstack cluster action list` bug
+* Fix error in do_profile_type_list
+* Profile list can not display the "type" column
+* Make shell main() specify return value in exit code
+* fix indentation of reno toctree
+* Remove six.moves module
+* Show 'dependents' property in node details
+* Fix receiver list
+* Updated from global requirements
+* Update reno for stable/newton
+* senlin profile-create has no argument -t
+
+1.0.0
+-----
+
+* Release notes for newton-3 milestone
+* Clarify senlin CLI deprecation message
+* Fix output from cluster/node delete
+* Revise params of 'receiver create' command
+* Remove *openstack/common* from flake8 excclude list in tox.ini
+* OSC plugin command for cluster-run
+* Updated from global requirements
+* Fix "openstack cluster policy binding list <cluster>"
+* Fix cluster-policy-list
+* Add 'cluster-run' command
+* Updated from global requirements
+* Updated from global requirements
+* Fix get_node
+* Fix _show_node error
+* Remove mox3 in test-requirement.txt of senlinclient
+* py3:Rmove six.iteritems/iterkeys in python-senlinclient
+* Imported Translations from Zanata
+* Add policy validate operation to senlinclient
+* Add profile validate operation to senlinclient
+* Imported Translations from Zanata
+* Reorder required parameters
+* Remove 'ProfileAction' and related arguments
+* Remove local cached version of Resource class
+* Add cluster_collect support
+* Add support to micro-version
+* Updated from global requirements
+* Remove discover from test-requirements
+* Fix typo
+* Fix nodes display in cluster-show
+* Update senlinclient for new sdk version
+* Updated from global requirements
+* Updated from global requirements
+* Add Python 3.5 classifier and venv
+* Updated from global requirements
+* Prints  '-' instead of 'None' when data is None
+* Updated from global requirements
+* Updated from global requirements
+* Imported Translations from Zanata
+* Delete extra space
+* Use osc_lib instead of cliff
+* Updated from global requirements
+* Use osc-lib instead of openstackclient
+* Enhance message related to OS_PROJECT_DOMAIN_NAME
+* Imported Translations from Zanata
+* Imported Translations from Zanata
+* Fix openstack cluster resize
+* Remove unused POT file
+
+0.5.0
+-----
+
+* Added release notes for a new release
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* Add reno for release notes management
+* Trival fix: Update README
+* Updated from global requirements
+* Updated from global requirements
+* Correct some typos
+* Updated from global requirements
+* Pramater doesn't align to comments
+* Removed the invalid link for Module Index
+* Add link to API doc in client module
+* Revert "Remove senlin CLI commands"
+* Support more parameters for senlinclient creation
+* Rename cluster scaling command
+* Remove senlin CLI commands
+* Refactor osc support
+* Add deprecation warnings for senlin commands
+* Add OSC command for senlin node-check/recover
+* Spelling mistakes on 'Clustering service command-line client' page
+
+0.4.1
+-----
+
+* Fix event list sorting
+* Add OSC command and enable more than one arguements
+* Add cluster check and recover into CLI
+* Updated from global requirements
+
+0.4.0
+-----
+
+* Fix node update receive a assertion error
+* Sort resource show columns
+* Update OSC metavars
+* Add OSC plugin for openstack cluster build info
+* Add OSC plugin for openstack cluster action show
+* Add OSC plugin for openstack cluster action list
+* Add OSC plugin for openstack cluster event show
+* Add OSC plugin for openstack cluster event list
+* Add OSC plugin for openstack cluster receiver delete
+* Add OSC plugin for openstack cluster receiver create
+* Add OSC plugin for openstack cluster receiver show
+* Add OpenstackClient plugin for cluster members del
+* Add OpenstackClient plugin for cluster members add
+* Add OpenstackClient plugin for cluster members list
+* Add OpenstackClient plugin for cluster policy binding update
+* Add OpenstackClient plugin for cluster policy binding show
+* Add OpenstackClient plugin for cluster policy binding list
+* Add OSC plugin for openstack cluster policy detach
+* Add OSC plugin for openstack cluster policy attach
+* Add OSC plugin for openstack cluster scale out
+* Add OSC plugin for openstack cluster scale in
+* Add OSC plugin for openstack cluster resize
+* Add OSC plugin for openstack cluster delete
+* Add OSC plugin for openstack cluster receiver list
+* Fix senlin help receiver-list
+* Fix SDK exception parsing
+* Add OSC plugin for openstack cluster update
+* Add OSC plugin for cluster policy type show
+* OSC plugin for openstack cluster policy type list
+* Add OSC plugin for openstack cluster create
+* Add OSC plugin for openstack cluster show
+* Add OpenstackClient plugin for cluster policy delete
+* Add OpenstackClient plugin for cluster policy update
+* Add OpenstackClient plugin for cluster policy create
+* Add OpenstackClient plugin for cluster policy show
+* OSC plugin for openstack cluster list
+* Add "--filter" for command openstack cluster profile list
+* Add OpenstackClient plugin for cluster policy list
+* Add filters option to policy-list command
+* Fix translation setup
+* Ensure cluster is specified when creating receivers
+* Updated from global requirements
+* Add OpenstackClient plugin for cluster node delete
+* Add OpenstackClient plugin for cluster node update
+* Add OpenstackClient plugin for cluster node create
+* Add OpenstackClient plugin for cluster node show
+* Remove profile permission
+* Add OpenstackClient plugin for cluster profile update
+* Add OpenstackClient plugin for cluster node list
+* Add OpenstackClient plugin for cluster profile create
+* Add OpenstackClient plugin for cluster profile type show
+* Add OpenstackClient plugin for cluster profile delete
+* Add filters option to profile-list command
+* Add JsonFormat display option
+* Add OpenstackClient plugin for cluster profile type list
+* Add OpenstackClient plugin for cluster profile list
+* Updated from global requirements
+* Add OpenstackClient plugin for cluster profile show
+* Add node check and recover into CLI
+* Add the unit test for utils module
+* Apply list_formatter on two properties
+* Handle ResourceNotFound when resource is not found
+* Make ignore_missing False when deleting resource
+* Parse exceptions from openstacksdk
+* Updated from global requirements
+* Fix cluster_update_policy parameter passing error
+* Remove nested cluster support
+* Updated from global requirements
+* Change 'status_code' to 'http_status' to parse SDK's exception
+
+0.3
+---
+
+* Remove argparse from requirements
+* Updated from global requirements
+* Update the word 'Senin' to 'Senlin'
+* Add back show_details for node-show
+* Unit test for v1 client
+* The param endpoint in doc string is deprecated
+* Updated from global requirements
+* Fix update_policy parameter passing error
+* Remove cluster-policy-enable/disable
+* Fix meta var problem in cluster-policy-list
+* Remove node join/leave from senlinclient
+* Remove 'permission' from senlin client
+* Remove 'level', 'cooldown' and 'priority' properties in client
+* Replace deprecated library function os.popen() with subprocess
+* Revise client to support new sorting option
+* Remove references to oslo incubator modules
+* Add test case for common/utils
+* Remove usless models.py module
+
+0.2.1
+-----
+
+* Make sort keys work for node-list and action-list
+* Fix cluster-policy-list command
+* Switch to use SDK calls in client
+* Put 'policy' out of params for do_cluster_policy_attach
+* Rename timestamp fields according to server change
+* Remove 'show-deleted' from command line options
+* Make cluster action calls use SDK interface
+* Fix redundent paginated in senlinclient
+* Fix formatters used for listing actions
+* Fix shell message for action list
+* Make cluster CRUD calls invoke SDK
+* Directly use SDK calls in client (1)
+* Use SDK calls when possible
+* Unit test for /v1/shell.py part3
+* Client support to receivers
+* Make event-list sort_keys all workable
+* Replace inner methods with lambda function
+* Remove MANIFEST.in
+* Updated from global requirements
+* Don't show show_deleted column in node-list when not needed
+* Deprecated tox -downloadcache option removed
+* Updated from global requirements
+* Make cluster-policy-update help message clear
+* Add test case for v1/shell.py part2
+* Fix pep8 error about D300
+* Try to show policy after policy created
+* Cluster's timeout is in seconds not minutes
+* Make desired_capacity default to min_size if min_size specified
+* Add py34 to tox.ini
+* Add choices to -F argument
+* Fix profile/policy schema calls
+* Remove ClusterNode model from client side
+* Specify keystoneauth1 exception more
+* Fix nit in the help msg of cluster-node-del
+* Remove py26 support
+* Fix profile update parameters passing error
+* Fix help message error for node_create
+* Updated from global requirements
+* Fix action api calls
+* Fix some wrong help messages
+* Add short id support to cluster-policy-list
+* Updated from global requirements
+* Fix parse_exception to handle exception from keystoneauth1
+* Remove Trigger related sources in client side
+
+0.1.8
+-----
+
+* Fix 'action' call on cluster/node objects
+* Make '_short_id' method a public method
+
+0.1.7
+-----
+
+* Fix 'endpoint missing' error caused by SDK's change
+
+0.1.6
+-----
+
+* Fix bug introduced by openstacksdk
+* Add 'global_project' option for cluster-list
+* Add test case for v1/shell module - part 1
+* Updated from global requirements
+* Updated from global requirements
+* Remove spec file profile-update command
+* Fix typo s/beteen/between/
+* Delete .pyc files before running test
+* Sync with oslo-incubator
+
+0.1.5
+-----
+
+* Remove unused methods in client module
+* Revised client interface
+* Adapt resource path to server revision
+* Update gitignore file
+* Updated from global requirements
+* Delete deprecated 'policy' option for webhook create
+* Update .gitreview for new namespace
+* Strips off the quotes when showing nested table
+* Updated from global requirements
+* Fix help message for cluster_scale_in/out
+* Updated from global requirements
+
+0.1.4
+-----
+
+* Fix client constructor for ease of use
+* Format list fields in action list
+* Remove default value when attaching a policy
+
+0.1.3
+-----
+
+* Remove unused requirements
+* Update requirement of python-openstacksdk to openstacksdk
+
+0.1.2
+-----
+
+* Fix misc errors in setup.cfg
+
+0.1.1
+-----
+
+* Revise client constructor
+* Fix the sphinx build path in .gitignore file
+* Word error in the help info of cluster-create -m
+* Handle None value in formatter
+* Updated from global requirements
+* Add test case for shell(part2)
+* Fix a bug in do_action_show
+* Fix node-update behavior
+* Add resource_key to event models
+* Shell unit test (1)
+
+0.2
+---
+
+* v0.2 branch
+
+0.1.0
+-----
+
+* Revise support to profile-create/show
+* Add short Id support to event list
+* Remove 'type' parameter for policy creation
+* Add resource_key for Action resource
+* Initial support to triggers
+* Updated from global requirements
+* Add deleted_time to webhook_list
+* Avoid deleting metadata incorrectly when doing profile_update
+* Fix crendential type problem in webhook operations in client side
+* Credential option should not be 'required' when creating webhook
+* Fix TypeError when doing cluster-scale-in
+* Sync ProfileAction implementation with latest SDK code
+* Updated from global requirements
+* Add unit test cases for sdk module
+* Unit test for client module
+* Unit test for cliargs module
+* Updated from global requirements
+* Remove private copy of clustering_service
+* Fix filters param passing
+* Preparation for senlinclient test cases
+* Revise parse_exception in the client side
+* Updated from global requirements
+* Use correct default domain name in senlinrc
+* Fix cluster-resize operation param checking
+* Updated from global requirements
+* Fix resource listing error
+* Fix profile name update error
+* Use PATCH method to update resources
+* Updated from global requirements
+* Parse exception from SDK
+* Fix list operation based on sdk interface
+* Updated from global requirements
+* Remove thin methods which is not used
+* Updated from global requirements
+* Updated from global requirements
+* Fix arg name for sort-dir
+* Replace 'start_time' with 'created_time' for sorting
+* Fix list sorting in command line
+* Fix some cluster-list option bugs
+* Make "--metadata" option "-M" instead of "-d"
+* Make --show-deleted and --sort-dir option names consistent
+* Fix minor error in node-list command
+* Remove profile-type-show command
+* Remove 'permission' from cli output
+* Fix senlinrc to support keystone v2 and v3 on the client side
+* Support keystone v2 and v3
+* Updated from global requirements
+* Disable rollback by default
+* Updated from global requirements
+* Bump oslo.utils version to 1.6.0
+* Handle AttributeError when creating a profile
+* Change max_size's default value to -1 when creating a cluster
+* Revise webhook-create support in client
+* Sync with global requirements
+* Revise comment format in doc to pass pep8 check
+* Delete some dead code from client model
+* Replace sdk user_reference module with profile
+* Try please flake8 for imports grouping
+* Resize operation support from client
+* Fixed an error in webhook_show
+* Updated pot file
+* Rename 'tags' to 'metadata'
+* Add docs generated to version control
+* Sync package version requirements
+* Add min_size and max_size properties to Cluster
+* Replace cluster size with new property desired_capacity
+* Remove '...' from short-id style listing
+* Add --details argument to node-show
+* Add webhook support
+* Add options for tennat_id/tenant_name
+* Fix initial gate errors
+* add context support for profile
+* Make update always do a node retrieval first
+* Added support to OS_TRUST_ID
+* Added support to list nodes with global tenant
+* Added support to cluster-policy-show operation
+* Make ; parsing optional
+* Revised cluster-policy-list operation
+* Fixed cluster_update operation error
+* Ignore return value from update()
+* Revised cluster-update operation support
+* Added support to policy-update operation
+* Added support to profile-update operation
+* Allow profile to be updated
+* Fixed profile creation errors
+* Added support to project field in node objects
+* Revised event list/show support
+* Fixed PEP8 error
+* Improved Event object model
+* Removed support to profile/policy type template
+* Fix user name argument parsing
+* Bump six version to 1.9.0
+* Always use block for YAML dumping
+* Added policy schema show support
+* Initial support to profile-type-schema
+* Make scale-out argument count optional
+* Added format_output method
+* Make node-list ordered by created_time by default
+* Added support to other useful fields when listing policies
+* Reworkd policy operations
+* Revised cluster model and clusterpolicy model
+* Cluster policy listing support
+* Initial support to policy operations
+* Initial support to node-join/leave operations
+* Added required constraints to some operations
+* Added del_nodes support
+* Added one TODO item
+* Make profile a required argument
+* Support to cluster-node-add operation
+* Added formatter for ID fields
+* Make node_create/node_show work with new API design
+* Revised cluster-create and cluster-show commands
+* Make at least profile-create API work
+* Support profile resource_key when do profile-show
+* Tolerate empty dict in print_dict
+* Define UNVERSIONED=None in clustering_service.py
+* Added short ID support for node-list
+* Enable client module to handle any exception
+* Remove unused imports
+* Make list_short capable of handling other exceptions
+* Handle requests exception
+* Make deleted_time show conditional
+* assign alias to client module
+* Remove init_time from list show
+* Added cluster deletion support
+* Fixed one PEP8 error
+* Fixed cluster list column name error
+* Make error message more clear when username is assigned
+* Fixed object listing logic
+* Simplified exception translation
+* Basic support for cluster show
+* Added dict dump method for clusters
+* Added formatter for list in the context of a dict
+* Added feature to show IDs in short-form
+* Move senlinrc into tools subdir
+* Initial support to cluster create
+* Added trust-based authentication as TODO
+* New item about setting up senlin connection
+* Removed some items that were completed
+* Fixed flake8 errors
+* Major revision to shell main module
+* Revised listing functions to take advantage of exception handling
+* Implement exception handling for client module
+* Override print_list function for exception catching
+* Added function to create connection via SDK
+* Major revision to client side exception handling
+* Added action-list and action-show support
+* Added node show support
+* Added node list command and fixed related errors
+* Fixed list() method errors
+* Added customization of create() method
+* Added exception support (WIP)
+* Bump oslo.i18n version requirement
+* Added support to bash completion
+* Add support to profile show
+* Add conversion to dict for profile
+* Added capabiity to print nested table
+* Revised profile list implementation
+* Introduce HTTP exception into common
+* Fixed typo in dictionary key
+* Removed non-existant fields from Profile
+* Fixed common client to return object from create
+* Fixed help message for API VERSION option
+* Make v3 the default backend for authentication
+* Added profile_create and profile_list operation
+* Remove dict translation for list operation
+* Remove dict translation for create action
+* Clarified help message
+* Added version information
+* Added support to both v2.0 and v3 authentication
+* Revised requirements file
+* Added utility functions to process spec files
+* Added FileFormatError exception
+* Fixed pbr version string error
+* Remove old client module
+* Added keystone V3 support
+* Fix oslo.i18n namespace error
+* Add heatclient to requirements.txt
+* Revised error message for project_id validation
+* Added build info alike dictionary retrieval support
+* Senlin RC file initial version
+* Initial version of V1 client
+* New version of V1 shell
+* Fix error in service name imported
+* Top priority task: create os.senlin.stack profile
+* Reimplemented client shell
+* Added Versions to the client-side models
+* Initial version of command line argument parser
+* Added new item about checking identity arguments
+* Fix oslo namespace errors
+* Revised sdk interface
+* Revised common client to use session
+* Added TODO item about support to HTTPS
+* Revised TODO list
+* Remove http.py since we don't use this client
+* Modify i18n import
+* Clustering service module for openstacksdk
+* Fix import errors in cliutils
+* Remove deprecating apiclient module
+* Rename old client.py to old_client.py
+* New object models for interacting with server
+* Remove old-style object models
+* Added sort_keys and sort_dirs support
+* Fixed error in original reference
+* New clusters file, replacing old ones
+* Remove clusters file, to be replaced
+* Placeholder for openstacksdk interface
+* Add openstacksdk to the dependency list
+* Revised TODO list
+* Bump oslo.utils to 1.2.0
+* Added todos for apiclient migration
+* Removed httpretty as suggested in other projects
+* New item for unit tests
+* Remove node_join and node_leave operations
+* Replace enable/disable with policy_update
+* Remove list_nodes method from cluster
+* Removed enable/disable cluster policy operations
+* Added supported_formats
+* Move exc module to common subdir
+* Added more operations to clusters
+* Added several TODO items
+* More operations added
+* Remove profile method, not needed now
+* Move exception file
+* Fix typo error
+* Initial version
+* Initial version
+* Initial version
+* Initial version
+* Initial version
+* Fixed left error
+* Initial version
+* Initial version
+* Initial version
+* Initial version
+* Initial version
+* Initial version
+* Initial commit

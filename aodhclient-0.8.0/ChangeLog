@@ -1,0 +1,215 @@
+CHANGES
+=======
+
+0.8.0
+-----
+
+* Extras usage for test requirements + basic auth against Gnocch
+* Modified the help info
+* Enable coverage report in console output
+* [doc] Note lack of constraints is a choice
+* Replaces uuid.uuid4 with uuidutils.generate_uuid()
+* Bump hacking to 0.12
+* Add plug-in summary for osc doc
+* Enable release notes translation
+* Add missing pyparsing to requirements.txt
+* Clean imports in code
+* Update reno for stable/newton
+* Remove 'MANIFEST.in'
+
+0.7.0
+-----
+
+* Use osc-lib instead of openstackclient
+* Trival: Remove unused logging import
+* Fix incorrect string format mapping
+* Remove discover from test-requirements
+
+0.6.0
+-----
+
+* Add Python 3.5 classifier and venv
+* Add event_id for alarm-history display
+* Add pagination support in Aodhclient
+* Split alarm query and alarm list in SDK layer
+* Support get/set alarm state interfaces
+* Add releasenotes for Newton updates
+* add default value for http_status in ClientException
+* fix help text for option --composite-rule
+* improve threshold & event alarm query formatting
+* Add explanation for how to get meter name
+* Add unit test to validate composite alarm args
+* exceptions: make error code be implicit
+* Update the home-page with developer documentation
+* remove tempest test for alarm name unique constraint
+* Only install hacking in pep8
+* shell: treat alarm id as name if it is not uuid like
+* Bump hacking to 0.11
+
+0.5.0
+-----
+
+* add valid choice for alarm type help text
+* shell: fix meter help string
+* Allow to start Aodh command with OSC
+* Prepare compatibility with OSC
+* fix KeyError when credential is invalid
+* remove unnecessary slashes
+* Enable releasenotes documentation
+* [Trivial] Remove executable privilege of doc/source/conf.py
+* add mock to test requirement list
+* refactor code of adding alarm id and name arguments
+* Switch from deprecated tempest-lib to tempest
+
+0.4.0
+-----
+
+* Remove keystonemiddleware dependency
+* Use pifpaf to setup tests
+* Remove Babel dependency
+* format the output of time_constraints
+* Add --filter to "alarm list"
+* Remove unused mailmap file
+* Support easier query usage for alarm history search
+* Add name support for show, update and delete
+* Correct and add examples in docs of CLI
+* Add --query to alarm list
+* Clean flake8 paths and unused config options
+* Don't support "alarm search" and mandatory --type in "alarm list"
+* tox: remove useless install_command
+* Use overtest to run Gnocchi in tests
+* Trival fix a typo
+* Fix aodh client fails when command with the arg --time-constraint
+* Fix the -q/--query in threshold alarm creation
+* Use assert_called_once_with() in test_alarm_cli.py
+* Fix the wrong error info of parameter resource-type
+* Fix a minor doc error
+* Remove unused package requirement of "futurist"
+
+0.3.0
+-----
+
+* Use cli.base.execute of tempest-lib
+* Add composite rule alarm support in aodhclient
+* Make the alarm list output more concise
+
+0.2.0
+-----
+
+* Skip the version 1.16.0 of cliff
+* Remove unused method
+* Add abbreviation of --meter-name hint in threshold alarm creation
+* Return the error message of API request failure
+* Add some unit test cases
+* Add gnocchi alarm rules
+* cleanup existing tests
+* add alarm history unit test
+* check the alarm type when list alarm
+
+0.1.0
+-----
+
+* add alarm-history interface
+* clean up docs
+* add event alarm support
+* Clean flake8 ignore
+* support alarm type param
+* add alarm interface
+* fix test debug
+* fix functional tests
+* drop remaining gnocchi specific code and fix pep8
+* remove gnocchi specific tests
+* remove gnocchi specific commands and set to v2
+* more gnocchi to aodh rename cleanup
+* rename gnocchi to aodh
+* Make the wheel universal
+* Allow to set resource type for aggregation
+* Examples in doc should be workable
+* Handle rename from dbsync to upgrade
+* Fixed history parameter having no effect on search
+* tests: update setup script to use Paste
+* Add some help messages of Gnocchi commands
+* metric: fix measures --stop argument
+* Creates better exceptions for http code 409
+* resource: fix help string
+* tests: do not create a archive policy on setup
+* resource: define several option for all metric action
+* benchmark: Add more measurements stats
+* benchmark: add measures show
+* metric: rename metric get to show
+* Set x-roles when noauth is used
+* Convert keystoneauth exceptions by ours
+* Fix some spelling typo in manual and help output
+* Always make resource_id positional
+* cli: make resource type non positional
+* benchmark: use processes rather than threads
+* benchmark: add support for measures add
+* metric: change all resource_id options to -r
+* benchmark: add get metric
+* benchmark: rename argument to `count'
+* benchmark: add metric create
+* get gnocchi api version from args/env
+* noauth: simplify class reference
+* Add support for /v1/status
+* shell: remove unused LOG
+* shell: remove dead code
+* shell: move command definition to the class using it
+* metric: change delete to allow deleting several metric at once
+* Add capabilities support to cli
+* Remove upper cap on Sphinx
+* Remove Python 3.3 support
+* Name the package `gnocchiclient'
+* metric: allow to create metric with name and no resource_id
+* shell: improve error info
+* Add six in requirements
+* shell: fix exception catching on cleanup
+* Replaces 'archive policy' by 'archive-policy'
+* Change ignore-errors to ignore_errors
+* Remove entry_points
+* Don't always load client
+* Remove now useless build_url method
+* Replace keystoneclient by keystoneauth1
+* Fix help typo
+* tox: Allow to pass some OS_* variables
+* Support aggregation accross metrics and resources
+* Allow CRUD measurements
+* Allow CRUD metric with an resource_id and an name
+* Support CRUD for metric
+* resource: remove -q for --query it conflicts with --quiet
+* Allow quoted string with ' in query parser
+* cli: fix archive policy create output
+* docs: fix archive policy rule name doc
+* docs: enhance reference title
+* docs: delete previous build
+* Use 'archive policy' instead of 'archivepolicy'
+* Fix archive policy rule list
+* ap rule: Use named attributes
+* Fix archivepolicy list
+* ap: allows multiple definition and name attributes
+* test: remove duplicated code
+* Add archive policy rule commands to cli
+* Add archive policy commands to cli
+* Fix py34 tests
+* doc: fix typo in shell.rst
+* functional tests: don't require devstack
+* fixes noauth
+* doc: fix typo
+* Allow to disable the authentification layer
+* doc: Fixing a shell parameter
+* Allow limit/sort/marker for resource listing
+* Fixes logging
+* Allow resource history
+* Write the base of the documentation
+* Allow to pass the gnocchi enpoint via cli
+* Update documentation
+* Allow search for resource
+* Allow add/delete metrics with resource
+* Add ssl/region/timeout/interface parameters
+* Add functional test for crud resource
+* Hide useless logging
+* Add 'delete resource'
+* Adding resource update
+* Allow to create resources
+* Fixes "resource show"
+* Initial client code
+* Initial Cookiecutter Commit

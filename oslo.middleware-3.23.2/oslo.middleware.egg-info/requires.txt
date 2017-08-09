@@ -1,0 +1,11 @@
+pbr>=1.8
+Jinja2!=2.9.0,!=2.9.1,!=2.9.2,!=2.9.3,!=2.9.4,>=2.8
+oslo.config!=3.18.0,>=3.14.0
+oslo.context>=2.9.0
+oslo.i18n>=2.1.0
+oslo.utils>=3.18.0
+six>=1.9.0
+stevedore>=1.17.1
+WebOb>=1.6.0
+debtcollector>=1.2.0
+statsd>=3.2.1

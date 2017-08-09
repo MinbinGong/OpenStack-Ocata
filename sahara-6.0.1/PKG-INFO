@@ -1,0 +1,53 @@
+Metadata-Version: 1.1
+Name: sahara
+Version: 6.0.1
+Summary: Sahara project
+Home-page: http://docs.openstack.org/developer/sahara/
+Author: OpenStack
+Author-email: openstack-dev@lists.openstack.org
+License: Apache Software License
+Description: ========================
+        Team and repository tags
+        ========================
+        
+        .. image:: http://governance.openstack.org/badges/sahara.svg
+            :target: http://governance.openstack.org/reference/tags/index.html
+        
+        .. Change things from this point on
+        
+        OpenStack Data Processing ("Sahara") project
+        ============================================
+        
+        Sahara at wiki.openstack.org: https://wiki.openstack.org/wiki/Sahara
+        
+        Launchpad project: https://launchpad.net/sahara
+        
+        Sahara docs site: http://docs.openstack.org/developer/sahara
+        
+        Roadmap: https://wiki.openstack.org/wiki/Sahara/Roadmap
+        
+        Quickstart guide: http://docs.openstack.org/developer/sahara/devref/quickstart.html
+        
+        How to participate: http://docs.openstack.org/developer/sahara/devref/how_to_participate.html
+        
+        Source: http://git.openstack.org/cgit/openstack/sahara
+        
+        
+        License
+        -------
+        
+        Apache License Version 2.0 http://www.apache.org/licenses/LICENSE-2.0
+        
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Environment :: OpenStack
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: POSIX :: Linux

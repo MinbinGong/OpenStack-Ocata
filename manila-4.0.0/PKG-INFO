@@ -1,0 +1,55 @@
+Metadata-Version: 1.1
+Name: manila
+Version: 4.0.0
+Summary: Shared Storage for OpenStack
+Home-page: http://docs.openstack.org/developer/manila/
+Author: OpenStack
+Author-email: openstack-dev@lists.openstack.org
+License: UNKNOWN
+Description: ========================
+        Team and repository tags
+        ========================
+        
+        .. image:: http://governance.openstack.org/badges/manila.svg
+            :target: http://governance.openstack.org/reference/tags/index.html
+        
+        .. Change things from this point on
+        
+        ======
+        MANILA
+        ======
+        
+        You have come across an OpenStack shared file system service.  It has
+        identified itself as "Manila."  It was abstracted from the Cinder
+        project.
+        
+        * Wiki: https://wiki.openstack.org/Manila
+        * Developer docs: http://docs.openstack.org/developer/manila
+        
+        Getting Started
+        ---------------
+        
+        If you'd like to run from the master branch, you can clone the git repo:
+        
+            git clone https://github.com/openstack/manila.git
+        
+        For developer information please see
+        `HACKING.rst <https://github.com/openstack/manila/blob/master/HACKING.rst>`_
+        
+        You can raise bugs here http://bugs.launchpad.net/manila
+        
+        Python client
+        -------------
+        
+        https://github.com/openstack/python-manilaclient.git
+        
+        
+Platform: UNKNOWN
+Classifier: Environment :: OpenStack
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7

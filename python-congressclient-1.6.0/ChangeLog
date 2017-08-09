@@ -1,0 +1,182 @@
+CHANGES
+=======
+
+1.6.0
+-----
+
+* Fall back to UUID when delete by name fails
+* Updated from global requirements
+* Add method to show datasource
+* Updated from global requirements
+* Add Constraints support
+* Updated from global requirements
+* Change home-page and documentation link
+* Remove unnecessary utf coding
+* Remove unnecessary db calls to list_datasources
+* Updated from global requirements
+* Show team and repo badges on README
+* Updated from global requirements
+* no longer use oslo-incubator code
+* Updated from global requirements
+* Updated from global requirements
+* Minor edit of misleading message
+* Updated from global requirements
+* Updated from global requirements
+* Add plug-in summary for osc doc
+* Updated from global requirements
+* Updated from global requirements
+* Remove oslo.i18n from requirements
+* Updated from global requirements
+
+1.5.0
+-----
+
+* Add release notes
+* Support push rows to datasources
+* Updated from global requirements
+* Updated from global requirements
+* Add missing makefile so HTML docs can be generated
+* Remove discover from test-requirements
+* Remove python-keystoneclient dependency
+* Add __ne__ built-in function
+
+1.4.0
+-----
+
+* Updated from global requirements
+* Remove white space between print and ()
+* Updated from global requirements
+* Replace keystoneclient with keystoneauth1
+* Updated from global requirements
+* Updated from global requirements
+
+1.3.0
+-----
+
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* Allows DataSource's config field to have not dict type obj
+* Updated from global requirements
+* Display driver field while listing datasources
+
+1.2.3
+-----
+
+* Updated from global requirements
+* Update help message for datasource CLI
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+
+1.2.2
+-----
+
+* Updated from global requirements
+* Updated from global requirements
+* Move to oslo libraries for common code
+* use keystoneclient exceptions instead of oslo-incubator code
+* Replace assertEqual(None, *) with assertIsNone in tests
+* Updated from global requirements
+* Drop MANIFEST.in - it's not needed with PBR
+* Drop py26 and py33 support
+* tox: rm all pyc before doing unit test
+
+1.2.1
+-----
+
+* Add help infomation for policy abbreviation
+* Remove unicode prefix from output of datasource-list
+* Change ignore-errors to ignore_errors
+* Update tox.ini and fix py34 issue
+
+1.2.0
+-----
+
+* Add actions listing command
+* Updated from global requirements
+* Updated from global requirements
+* Fix constant name
+* Support version list API in client
+* Adding a test of datasource table show CLI
+* Favor the use of importlib over Python internal __import__ statement
+* Updated from global requirements
+* Replace stackforge with openstack in README.rst
+
+2015.1.0
+--------
+
+* Add client datasource action API for action-execution-interface
+* Update .gitreview file to reflect repo rename
+* Fix bug in "datasource table schema show"
+* Use correct URI in show schema for datasource table command
+* Add api bindings for datasource request-request trigger
+* Update news with 1.0.3 release info
+* Update README with CLI commands
+
+1.0.3
+-----
+
+* Updated from global requirements
+* Add --comment argument to policy creation command
+* Fix indent to make it look better with restview
+* Script to execute CLI cmds to standalone Congress
+* Allow name to be used with datasource table list <name|id>
+* Refactor datasource.py
+* Adds CLI command for show policy
+* Remove openstackclient from requirements.txt
+* Updated from global requirements
+* Use osc session management
+* Make datasource row list work with name or id
+* Improve status API
+* Modify datasource api and add datasource-driver api bindings
+* Implement bindings for datasource crud operations
+* Add read policy and datasource table properties
+* Updated from global requirements
+* CLI changes for adding --name argument to policy rule
+* Enable E123,E125,H803
+* restructure get_status api return
+* Update NEWS file for release 1.0.2
+
+1.0.2
+-----
+
+* Restructure simulate api to avoid passing query in uri
+* Add policy create/delete endpoints
+* Update NEWS file with date that 1.0.1 was released
+
+1.0.1
+-----
+
+* Fix version issue
+* Workflow documentation is now in infra-manual
+* Updated from global requirements
+* Updated from global requirements
+* Used schema to compute columns for datasource rows
+* Added datasource schema
+* Added datasource status command
+* Add news file about what was added in each release
+* Make client work with python34
+* Use a more simple policy rule for test
+* Adding missing CLI command congress policy rule show
+* Updated from global requirements
+* Added command for policy engine's simulation functionality
+
+1.0.0
+-----
+
+* Add doc string with example to help users
+* Add python-openstackclient to requirements
+* Added pretty-print for rules
+* Fixed up row table printing by giving column names
+* Added missing API end points to the client
+* Updated from global requirements
+* Client modifications to support versioned api
+* Initial congressclient
+* Add OpenStack oslo-incubator files
+* Work toward Python 3.4 support and testing
+* Fixup gitignore
+* Updated from global requirements
+* create python-congressclient project with cookiecutter
+* Added .gitreview

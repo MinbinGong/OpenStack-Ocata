@@ -1,0 +1,191 @@
+CHANGES
+=======
+
+6.1.0
+-----
+
+* Update .gitreview for stable/ocata
+
+6.0.0
+-----
+
+* Updated from global requirements
+* Replaced e.message with str(e)
+* Fix test-requirements
+* modify some assert info
+* Add changes for dib feature/v2 branch
+* Changed author and author-email
+* Show team and repo badges on README
+* Fix "wrap functions with 2 blank lines" pep8 check
+* Don't include openstack/common in flake8 exclude list
+* Replace 'assertTrue(a in b)' with 'assertIn(a, b)'
+* Remove discover from test-requirements
+
+5.0.0
+-----
+
+* Correct example url in README
+* Update $IMAGE\_ELEMENT after excluding elements
+* Remove Py33 support
+* remove python 2.6 trove classifier
+
+0.0.8
+-----
+
+* Dont error on duplicate elements
+* Update gitreview
+* Fix up unit tests
+* Bump version requirment for pbr
+* Bump version requirment for pbr
+
+0.0.7
+-----
+
+* agroup -> rdo-management
+* Import errno
+* Add file handler to logging
+* Add .gitreview
+* Set \$DIB\_DEFAULT\_INSTALLTYPE to package if not already set
+* Bump hacking to 0.9.x series
+
+0.0.6
+-----
+
+* Remove unused rel-eng dir
+* Set $DIB\_IMAGE\_CACHE environment variable
+* Remove the spec file, it's now maintained in dist-git exclusively
+* Release 0.0.5
+* Update Releasing.md
+* Environment updates for latest DIB changes
+* Add Releasing.md
+* Update README.md
+* Add releasers.conf
+
+0.0.4
+-----
+
+* Automatic commit of package [instack] release [0.0.4-2]
+* Fixup spec file
+* Fixup spec file
+* Automatic commit of package [instack] release [0.0.4-1]
+* whitespace cleanup
+* Fix tito tag
+* Reset version in spec
+* Remove option to call os-refresh-config
+* Update spec
+* Automatic commit of package [instack] release [0.0.3.6.ge72276e-2]
+* Add spec file
+* Initialized to use tito
+* Update .gitignore
+* Remove log file
+* Add arg to call os-refresh-config
+* Logging updates
+* Set \_LIB in os.environ
+* Cleanup tmp\_dir
+* Fix dry\_run
+* Add a cleanup method
+* Update README.md
+* Update README.md
+* Update README.md
+* Update README.md
+* Update README.md
+* Update README.md
+* Update README.md
+
+0.0.3
+-----
+
+* Set  as well
+* Use a true temporary directory symlinked to / for . This makes instack more like dib and fixes an issue with writhing the GIT\_MANIFEST from source-repositories
+
+0.0.2
+-----
+
+* Add cookiecutter code for OpenStack project
+* Fix tests
+* Add link to instack-undercloud
+* Update README
+* Split repo into instack vs undercloud specifics
+* Update image links
+* need quotes here
+* Generate ssh key in install-undercloud
+* Fix path
+* Use branch of dib for now
+* sync with changes from master
+* add step to restart xinetd
+* Add notes about using Overcloud
+* add ssh key generation
+* rename script
+* ok to leave NetworkManager around
+* don't install dhcp-all-interfaces
+* add script to deploy overcloud in dev env
+* add script to deploy overcloud in dev env
+* blacklist root partition rename
+* cleanup needs to run before source-repositories
+* fix bad copy/paste
+* add new element path
+* still need to install pip
+* Move a lot of install steps into a new element
+* erase NetworkManager
+* enable ssh and add quotes around
+* Fix README formatting
+* sudo needed here
+* erase firewalld
+* more docs
+* Make it obvious when the installation has succeeded
+* add docs
+* install keystone from package for now
+* better defaults
+* make more parameters templatable
+* Make sure iptables-services is installed
+* Run os-refresh-config at the end
+* Update to build from tarballs
+* Fix directory check
+* Fix default dnsmasq range values
+* Add answers file support
+* Use install instead of update
+* Actually call sed
+* Add tripleo-incubator/scripts to /home/jslagle/bin:/usr/lib64/qt-3.3/bin:/usr/libexec/lightdm:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/home/jslagle/.local/bin:/home/jslagle/bin
+* Don't install ironicclient for now
+* install-undercloud improvements
+* install-undercloud improvements
+* install-undercloud improvements
+* install-undercloud improvements
+* update README
+* better handling of stdout
+* Add support for --json-file to drive a run of instack
+* Add top level script and json config file for undercloud install
+* Fix other unit tests
+* Rename to instack
+* Rename to instack
+* Specify full path to sudo
+* Fix adding to PATH
+* Revert "Check for existence of path first"
+* Check for existence of path first
+* use symlink, not hard link
+* expose /tmp/in\_target.d as a symlink to TMP\_HOOKS\_PATH
+* Make it such that the prompt shows up in case output is being redirected via tee
+* Add an element that errors for testing
+* Add interactive option
+* Add debug option and update logging
+* Check return code and log error if a script fails
+* add license
+* add reminder about dib-run-parts
+* More docs
+* run elements directly from tmp dir
+* doc updates
+* copy elements after loading deps
+* fix setting $ARCH
+* set  in the env
+* setup environment; more test elements
+* setup environment; more test elements
+* just send all output to stdout/stderr for now, easier to debug
+* add hook argument
+* Only load scripts that start with an int
+* add dry run option
+* Only pass specified elements to expand\_dependencies
+* hook path needs to be absolute
+* hook path needs to be absolute
+* Add code
+* Initial commit
+* Initial commit

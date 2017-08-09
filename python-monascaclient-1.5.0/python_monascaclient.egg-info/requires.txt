@@ -1,0 +1,16 @@
+oslo.config!=3.18.0,>=3.14.0
+oslo.concurrency>=3.8.0
+oslo.i18n>=2.1.0
+oslo.log>=3.11.0
+oslo.middleware>=3.0.0
+oslo.serialization>=1.10.0
+oslo.service>=1.10.0
+oslo.utils>=3.18.0
+python-keystoneclient>=3.8.0
+Babel>=2.3.4
+iso8601>=0.1.11
+pbr>=1.8
+PrettyTable<0.8,>=0.7.1
+PyYAML>=3.10.0
+requests!=2.12.2,>=2.10.0
+six>=1.9.0

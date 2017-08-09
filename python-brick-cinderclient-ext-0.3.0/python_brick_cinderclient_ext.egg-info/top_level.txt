@@ -1,0 +1,2 @@
+brick_cinderclient_ext
+brick_python_cinderclient_ext

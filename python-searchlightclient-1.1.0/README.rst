@@ -1,0 +1,150 @@
+========================
+Team and repository tags
+========================
+
+.. image:: http://governance.openstack.org/badges/python-searchlightclient.svg
+    :target: http://governance.openstack.org/reference/tags/index.html
+
+.. Change things from this point on
+
+========================
+python-searchlightclient
+========================
+
+OpenStack Indexing and Search API Client Library
+
+This is a client library for Searchlight built on the Searchlight API. It
+provides a Python API (the ``searchlightclient`` module) and a command-line
+tool (``searchlight``).
+
+The project is hosted on `Launchpad`_, where bugs can be filed. The code is
+hosted on `Github`_. Patches must be submitted using `Gerrit`_, *not* Github
+pull requests.
+
+.. _Github: https://github.com/openstack/python-searchlightclient
+.. _Launchpad: https://launchpad.net/python-searchlightclient
+.. _Gerrit: http://docs.openstack.org/infra/manual/developers.html#development-workflow
+
+python-searchlightclient is licensed under the Apache License like the rest of
+OpenStack.
+
+.. contents:: Contents:
+   :local:
+
+Install the client from PyPI
+----------------------------
+The :program:`python-searchlightclient` package is published on `PyPI`_ and
+so can be installed using the pip tool, which will manage installing all
+python dependencies::
+
+   $ pip install python-searchlightclient
+
+.. note::
+   The packages on PyPI may lag behind the git repo in functionality.
+
+.. _PyPI: https://pypi.python.org/pypi/python-searchlightclient/
+
+Setup the client from source
+----------------------------
+
+* Clone repository for python-searchlightclient::
+
+    $ git clone https://github.com/openstack/python-searchlightclient.git
+    $ cd python-searchlightclient
+
+* Setup a virtualenv
+
+.. note::
+   This is an optional step, but will allow Searchlightclient's dependencies
+   to be installed in a contained environment that can be easily deleted
+   if you choose to start over or uninstall Searchlightclient.
+
+::
+
+    $ tox -evenv --notest
+
+Activate the virtual environment whenever you want to work in it.
+All further commands in this section should be run with the venv active:
+
+::
+
+    $ source .tox/venv/bin/activate
+
+.. note::
+   When ALL steps are complete, deactivate the virtualenv: $ deactivate
+
+* Install Searchlightclient and its dependencies::
+
+    (venv) $ python setup.py develop
+
+Command-line API
+----------------
+
+Set Keystone environment variables to execute CLI commands against searchlight.
+
+* To execute CLI commands::
+
+    $ export OS_USERNAME=<user>
+    $ export OS_PASSWORD=<password>
+    $ export OS_TENANT_NAME=<project>
+    $ export OS_AUTH_URL='http://localhost:5000/v2.0/'
+
+.. note::
+   With devstack you just need to $ source openrc <user> <project>. And you can
+   work with a local installation by passing --os-token <TOKEN> and --os-url
+   http://localhost:9393. You can also set up a `Openstackclient`_ config file
+   to work with the CLI.
+
+.. _Openstackclient: http://docs.openstack.org/developer/python-openstackclient/configuration.html#clouds-yaml
+
+::
+
+    $ openstack
+    (openstack) search resource type list
+    +--------------------------+--------------------------+
+    | Name                     | Type                     |
+    +--------------------------+--------------------------+
+    | OS::Designate::RecordSet | OS::Designate::RecordSet |
+    | OS::Designate::Zone      | OS::Designate::Zone      |
+    | OS::Glance::Image        | OS::Glance::Image        |
+    | OS::Glance::Metadef      | OS::Glance::Metadef      |
+    | OS::Nova::Server         | OS::Nova::Server         |
+    +--------------------------+--------------------------+
+
+Here are the full list of subcommands, Use -h to see options:
+
+    ============================= =======================================
+    Subcommand                    Description
+    ============================= =======================================
+    search facet list             List Searchlight Facet
+    search resource type list     List Searchlight Resource Type (Plugin)
+    search query                  Search Searchlight resource
+    ============================= =======================================
+
+Python API
+----------
+
+To use with keystone as the authentication system::
+
+    >>> from keystoneclient.auth.identity import generic
+    >>> from keystoneclient import session
+    >>> from searchlightclient import client
+    >>> auth = generic.Password(auth_url=OS_AUTH_URL, username=OS_USERNAME, password=OS_PASSWORD, tenant_name=OS_TENANT_NAME)
+    >>> keystone_session = session.Session(auth=auth)
+    >>> sc = client.Client('1', session=keystone_session)
+    >>> sc.resource_types.list()
+    [...]
+
+
+* License: Apache License, Version 2.0
+* Documentation: http://docs.openstack.org/developer/python-searchlightclient
+* Source: http://git.openstack.org/cgit/openstack/python-searchlightclient
+* Bugs: http://bugs.launchpad.net/python-searchlightclient
+
+Testing
+-------
+
+There are multiple test targets that can be run to validate the code.
+
+* tox -e pep8 - style guidelines enforcement
+* tox -e py27 - traditional unit testing

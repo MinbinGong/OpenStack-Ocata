@@ -1,0 +1,154 @@
+CHANGES
+=======
+
+1.16.0
+------
+
+* Add Constraints support
+* Show team and repo badges on README
+
+1.15.0
+------
+
+* Updated from global requirements
+* Don't use deprecated method logger.warn
+* Updated from global requirements
+* Imported Translations from Zanata
+* Updated from global requirements
+
+1.14.0
+------
+
+* Enable release notes translation
+* Updated from global requirements
+* Updated from global requirements
+* modify the home-page info with the developer documentation
+* Ignore timeout error when receiving message from sockect
+* Update reno for stable/newton
+* Deal with CONF.config_dir correctly
+
+1.13.0
+------
+
+* Report underlying integer for unknown capabilities
+* Updated from global requirements
+
+1.12.0
+------
+
+* Add Python 3.5 classifier and venv
+* Fixes unit tests on Windows
+* More sophisticated logging on privileged side
+
+1.11.0
+------
+
+* Updated from global requirements
+* Use default value for undefined caps in fmt_caps
+
+1.10.0
+------
+
+* Updated from global requirements
+* Add reno for release notes management
+* Updated from global requirements
+* Updated from global requirements
+
+1.9.0
+-----
+
+* Provide way to "initialise" oslo.privsep
+* PrivContext: Sets client_mode to False on Windows
+* Imported Translations from Zanata
+
+1.8.0
+-----
+
+* Updated from global requirements
+* Drop python3.3 support in classifier
+
+1.7.0
+-----
+
+
+1.6.0
+-----
+
+* Imported Translations from Zanata
+* Remove unused py27 socketpair/makefile workaround
+* Remove direct dependency on babel
+* Updated from global requirements
+
+1.5.0
+-----
+
+* Updated from global requirements
+* Updated from global requirements
+* Switch to msgpack for serialization
+* Updated from global requirements
+
+1.3.0
+-----
+
+* Updated from global requirements
+
+1.2.0
+-----
+
+* Updated from global requirements
+* fdopen: Use better "is using eventlet" test
+* Ensure fdopen uses greenio object under eventlet
+
+1.1.0
+-----
+
+* UnprivilegedPrivsepFixture: Clear capabilities config
+* Change name of privsep_helper to match code
+
+1.0.0
+-----
+
+* Ignore --config-dir when value is None
+* Add version and download badges to README
+* Update translation setup
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* Imported Translations from Zanata
+* Updated from global requirements
+* Update/make better the README.rst long description
+
+0.3.0
+-----
+
+* Improve `helper_command' config default
+* Updated from global requirements
+* Replace deprecated LOG.warn with LOG.warning
+* Updated from global requirements
+* Use logging intead of oslo_log
+* Remove unused file openstack-common.conf
+* remove python 2.6 trove classifier
+
+0.2.0
+-----
+
+* Updated from global requirements
+* Updated from global requirements
+* Removes MANIFEST.in as it is not needed explicitely by PBR
+* Remove python 2.6 and tox.ini cleanup
+* Don't fail badly on windows
+
+0.1.0
+-----
+
+* Updated from global requirements
+* Updated from global requirements
+* Imported Translations from Zanata
+* Add support for Linux capabilities
+* Enable translations
+* Initial basic privsep functionality
+* Tell git to ignore /.eggs dir too
+* Updated from global requirements
+* oslo.i18n boilerplate
+* Initial cookiecutter project
+* Added .gitreview

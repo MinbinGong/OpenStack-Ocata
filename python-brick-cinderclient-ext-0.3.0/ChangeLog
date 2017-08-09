@@ -1,0 +1,64 @@
+CHANGES
+=======
+
+0.3.0
+-----
+
+* Remove support for py33
+* Removes unnecessary utf-8 encoding
+* Retrieve storage_protocol from storage backend capabilities
+* Show team and repo badges on README
+* Fix typo in root permissions message
+* Updated from global requirements
+* Updated from global requirements
+* Enable release notes translation
+* Replace 'MagicMock' with 'Mock'
+* Drop directory openstack/common in flake8 exclude list
+* Updated from global requirements
+* Add oslo.concurrency to requirements
+* Drop MANIFEST.in
+* Fixes typo while loading json data
+* Fix the version name
+* Update flake8 ignore list
+* TrivialFix: Remove logging import unused
+* update release notes for newton
+* Updated from global requirements
+
+0.2.0
+-----
+
+* Updated from global requirements
+* Added release notes for attach/detach features
+* Require root permissions for local-attach and local-detach CLI
+* Cleanup tox.ini, use constraints
+* Add support of 'local-attach' feature for RBD volumes
+* Update homepage with developer documentation page
+* Drop openstack/common in flake8  exclusive list in file tox.ini
+* Updated from global requirements
+* Add fast8 ability to tox
+* Add reno for release notes management
+* Updated from global requirements
+* Attach/detach features implementation
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* Require root permissions for CLI operations
+* Query volume paths implementation
+* Updated from global requirements
+* Introduce functional tests for python-brick-cinderclient-ext
+
+0.1.0
+-----
+
+* Fix extension name to brick_local_volume_management
+* Update typos
+* Use git.openstack.org
+* Fix broken .gitreview
+* Update 'requirements' section in README
+* Add backward compatibility with python-cinderclient<=1.5.0
+* Update project description
+* Change package name to common pattern
+* Update package description
+* Initial documenation
+* Add manager_class attribute for extenstion
+* Initial Commit

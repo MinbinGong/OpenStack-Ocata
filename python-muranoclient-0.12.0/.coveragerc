@@ -1,0 +1,8 @@
+[run]
+source = muranoclient
+omit =
+ .tox/*
+ muranoclient/tests/*
+
+[report]
+ignore_errors = True

@@ -1,0 +1,2158 @@
+CHANGES
+=======
+
+4.1.2
+-----
+
+* Remove reliance on osprofiler configuration section
+* Fix rexray systemd unit
+* Enable custom keystone endpoint_type in templates
+* Use 'virt_type=kvm' in devstack vm if supported
+* Fix keystone auth_uri and auth_url
+* Pass 'client', 'message' param to AuthorizationFailure Exception
+* Fix usage of the trustee user in K8S Cinder plugin
+* Set clustertemplate:publish to admin only
+* Add net creating in install-guide
+* Fix config type of copy_logs from string to Boolean
+
+4.1.1
+-----
+
+* Update Fedora images
+* Install client in install guide instructions
+* Add reno for cluster_user_trust option
+* Pass 'context' to create_client_files method
+* Pin images for ocata
+* Missing root-ca-file parameter for proper service account support
+* Fix mesos gate
+* Fix CVE-2016-7404
+* Update UPPER_CONSTRAINTS_FILE for stable/ocata
+* Update .gitreview for stable/ocata
+
+4.1.0
+-----
+
+* Fix some typos
+* Fix for cluster-update rollback issue
+* Add keypair to api-ref cluster create
+* Fix quotas API pagination
+* [doc] install 'curl' as a prerequisite
+* Use variables for hyperkube and kube version
+* Switch to kubernetes upstream python client
+* Updated from global requirements
+* Add reno: bp secure-etcd-cluster-coe
+* Updated from global requirements
+* Remove $myip when unnecessary and use KUBE_NODE_IP
+* Make KUBE_ALLOW_PRIV used for api server
+* Add microversion and release notes for quotas API
+* Don't enforce microversion for stats API
+* Remove heat-params sourcing
+* Improve consistency for SSL PATH accross template
+* Remove support for py34
+* Don't enforce microversion for rotate CA cert API
+* Remove carriage return when getting user token
+* Use https instead of http for git.openstack.org
+* [mesos] Use latest build for mesos image
+* Don't create clusters of an unsupported type
+* Fix missing $ in CoreOS proxy conf
+* Use heat-params in systemd unit
+* Trivial: Fix typo in exception message
+* K8S: Allows to specify admission control plugins to enable
+* Use right no proxy settings for swarm master and agent
+* Remove unused enforce_cluster_types decorator
+* [k8s] Get logs of controller-manager and scheduler
+
+4.0.0
+-----
+
+* Pass OpenStack-API-Version header in make-cert scripts
+* Make Kubernetes pods' health checks configurable
+* Upgrade to Fedora 25
+* Updated from global requirements
+* Resource Quota - API documentation
+* Resource Quota - Limit clusters per project
+* Add release note for BP OSProfiler in Magnum
+* Fix: Pass external_network to kube-minion
+* Updated from global requirements
+* Update MY_IP to use curl and metadata instead of cut
+* Fix getting capacity in k8s_monitor
+* Add an API to rotate a cluster CA certificate
+* Integrate OSProfiler in Magnum
+* Fix Ironic driver
+* Resource Quota - Adding quota API
+* Resource Quota - DB layer changes
+* Resource Quota - Add config option to limit clusters
+* Move scale managers at driver level
+* Move monitors at driver level
+* Fix LB heat template parameter name
+* [Doc] Update User Guide: User Examples
+* Updated from global requirements
+* Fix compatibility with novaclient 7.0.0
+* Add debug-py34 to tox.ini
+* [k8s_ironic] Move software configs out of minion
+* Magnum stats API documentation
+* [Mesos]Move software configs out of resource group
+* [Mesos]Move wait condition out of resource group
+* [k8s_ironic] Move wc out of master resource group
+* [k8s_ironic] Move wc out of minion resource group
+* Magnum stats API
+* [devstack] Copy bash_completion script during magnum installation
+* Remove extra spaces
+* [Doc] Update quickstart Guide: Using a Kubernetes Cluster
+* Updated from global requirements
+* [swarm] Fix cert filename in swarm-agent service
+* Remove unused context variable in db api
+* [swarm] Enable TLS in Etcd cluster
+* CI: Set storage driver to overlay
+* CI: Increase master-flavor size
+* [suse] Update security group for kube_masters
+* [suse] Add min and max to flannel_network_subnet option
+* Make private network optional
+* Support magnum-api multiple process workers
+* Fix the incorrect initialization of context roles
+* used openstack cli in magnum devstack plugin
+* Use Kubernetes config to launch services pods
+* Fully clean up requirement.txt dependencies
+* [suse] Update k8s_opensuse_v1 driver
+* Remove the usage of MagnumObjectDictCompat from magnum_service
+* [suse] Tune default value for docker_volume_size
+* Fix gate: caused by tempest(removal of "service" param)
+* Remove PrettyTable useless requirement
+* Modify variable's using method in Log Messages
+* [suse] Setting correct permissions for Kubernetes files
+* Updated from global requirements
+* Remove provision_state parameters(specific to ironic)
+* Add cluster record to db right after API request
+* [k8s_coreos] Enable TLS in Etcd cluster
+* [k8s_coreos] Remove podmaster
+* Updated from global requirements
+* Removes unnecessary utf-8 encoding
+* Use correct context synching status
+* Make Docker proxy configuration consistent across template
+* Remove the usage of MagnumObjectDictCompat from certificate
+* Fix multiple typos in unit tests names
+* List all the possibilities of cluster's name through a list
+* Specification for Magnum stats API
+* Remove the usage of MagnumObjectDictCompat from x509keypair
+* Import magnum.i18n._ in driver/heat/driver.py
+* Updated from global requirements
+* Use UUID instead of "00000" for UniqueId
+* Update Swarm version to 1.2.5
+* cors: update default configuration
+* Updated from global requirements
+* [suse] Allow k8s cluster without floating ip
+* [suse] add support of LBaaS v2
+* [suse] Add proxy config
+* [suse] Fix template descriptions
+* Change gate Fedora Atomic image to the automated f24 build
+* Add docker-d options in sysconfig/docker
+* [install] Fix endpoint creation
+* Disable horizon, ceilomter and swift in gate hook
+* Consolidate heat network resources
+* Updated from global requirements
+* Missing lines in lb refactor for CoreOS driver
+* [k8s_fedora_atomic] Enable TLS in Etcd cluster
+* Remove docker_volume_size from functional-test
+* Disable horizon, swift and ceilometer
+* Move cluster status notifications out of driver
+* Add bashate checks to pep8 step
+* Add a SELinux policy to relabel files in /usr/local/bin as bin_t
+* [doc|install_guide] Fix 'host' config param in [api] section
+* Updated from global requirements
+* Factorize load balancer code into its own template
+* [ironic][doc] Updated ironic image build doc
+* [k8s_fedora_atomic] Remove podmaster
+* functional: don't create flavors if ironic testing
+* DIB elements to support dcos for magnum
+* Use keystone v3 for functional tests
+* [mesos]remove redundant security group
+* Disable lbaas from ci tests
+* func-test-docs: Use iniget and set concurrecy 1
+* Move cluster status updates into driver
+* Refactor driver interface (pt 1)
+* k8s_ironic: fix minion template
+* Add RESUME_FAILED to cluster's status field
+* Remove underscores from Nova server names
+* Doc: update server type in userguide
+* Show team and repo badges on README
+* Updated from global requirements
+* Improve security for swarm
+* Remove KEYSTONE_CATALOG_BACKEND from magnum plugin
+* [trivial] Fix DIB element path in Readme
+* [suse] Add hidden attr to password in the Heat Template
+* Revert "devstack: Fix neutron configuration to run in OSIC"
+* Fix few typos in documents
+* Reduce security groups # for k8s coreos cluster
+* Use 'code-block' for pieces of code
+* Fix a typo
+* Updated from global requirements
+* Add Flatten Attributes Specification
+* Fix typo in cover.sh
+* Drop id suffix in launch-an-instance guide
+* [docs]Update quickstart guide to use cluster-config command
+* Set config param [DEFAULT]/host to hostname
+* Combine master security groups in k8s driver
+* Remove out-dated method for installing in Devstack
+* [install] Update rabbitmq configuration
+* Updates Documentation for non-ID Params
+* Make cinder volume optional
+* Add insecure option in functional tests for SSL endpoints
+* remove extra bracket from script in docs
+* typo: Fix in docker storage configuration
+* Updated from global requirements
+* Restart swarm infra containers if deleted
+* Remove unused configure-flannel.sh
+* Fix: InvalidParameterValue Exception not raised correctly
+* Updated from global requirements
+* Add use of label 'swarm_strategy' in userguide
+* Support scheduler strategy for swarm cluster
+* Updated from global requirements
+* Updated from global requirements
+* Add user-domain in role creation
+* [instll] Update a more simple rabbitmq configuration
+* Add http_proxy_to_wsgi to api-paste
+* Enable DeprecationWarning in test environments
+* [suse] configure flanneld on master node
+* [suse] Update copyright/ownership information
+* Fix magnum cluster-update error
+* Added reno for stable/mitaka and stable/liberty
+* [suse] Sync with cluster drivers
+* Use function is_valid_mac from oslo.utils
+* fix cover.sh to allow db version changes without ut
+* [Trivial] Fix two typos in magnum
+* add some tests for db
+* add some tests for cluster and clustertemplate api
+* Remove pod/svc/container object reference from doc
+* Move cluster delete method to driver
+* Replace naked exceptions in barbican_cert_manager
+* corrected hyperlink typo fix
+* Updated from global requirements
+* add cluster and clustertemplate to fake_policy.py
+* Enable release notes translation
+* Fix magnum-template-manage
+* Add docker daemon systemd proxy variables
+* Remove unnecessary fingerprint of MyObj object
+* Fix typo: clustser-->cluster in python_client_base.py
+* Make k8s cloud config consistent
+* Centralize config option: docker_registry section
+* Centralize config option: urlfetch and periodic
+* Clean rc from unit tests
+* Fix the config args of kubernetes service
+* Fix PEP8 issues, OpenStack Licencing and Version details
+* Remove rc from policy.json
+* Disable cert checks while talking to endpoints
+* Allow keypair to be added during cluster create
+* Cluster Drivers
+* Updated from global requirements
+* [api-ref] configure LogABug feature
+* Remove fixed_network from functional tests
+* devstack: Fix neutron configuration to run in OSIC
+* [coreos] Allow k8s cluster without floating ip
+* [api-ref] Remove temporary block in conf.py
+* Add dns server access confirmation
+* Revises 'json' to 'JSON' and 'yaml' to 'YAML'
+* Remove not really translated file
+* Implement mesos cluster smart scale down
+* Fix failure of systemd service kube-ui
+* [k8s_common]Remove enable-etcd.sh
+* Fix typo 'mesoscluster' to 'mesos-cluster'
+* Fix K8s load balancer with LBaaS v1
+* [mesos]Fix output param: mesos_slaves_private
+* Remove safe_utils.py
+* Remove yamlutils.py
+* Remove k8s_manifest.py
+* Remove Exceptions for Container/Pod/Service
+* [mesos] Make dib scipts executable
+* Remove unnecessary use of sudo in k8s scripts
+* Using sys.exit(main()) instead of main()
+* Change several RabbitMQ config settings
+* Updated from global requirements
+* Remove default=None when set value in Config
+* Fix quickstart guide URL
+* Fix typo 'duplcate' to 'duplicate' in status.yaml
+* Update Fedora Atomic element from 23 to 24
+* Centralize config option: x509 section
+* Centralize config option: keystone_auth section
+* Centralize config option: trust section
+* Centralize config option: certificates section
+* Centralize config option: docker section
+* Centralize config option: service section
+* Centralize config option: rpc periodic section
+* Centralize config option: utils section
+* Centralize config option: database section
+* Centralize config option: paths section
+* Centralize config option: cluster_heat section
+* Centralize config option: cluster_template section
+* Fix k8s_fedora to work with cinder volume driver
+* Centralize config option: conductor section
+* Centralize config option: cluster section
+* Centralize config option: all clients section
+* Centralize config option: api section
+* Add Horizon and Native Clients to user guide
+* Update name of ubuntu-mesos image
+* Split swarm atomic template
+* Updated from global requirements
+* Register master node but make it non schedulable
+* Remove duplicate AUTH_URL parameter
+* Remove unnecessary setUp and tearDown
+* Init magnum centralize config
+* Update reno for stable/newton
+* Delete coreos driver elements directory
+
+3.1.0
+-----
+
+* Updates Ubuntu Mesos build
+* [install] Fix keystone_authtoken and trust sections
+* Add optional magnum-ui in quickstart
+* Restrict server type only to vm/bm
+* delete python bytecode including pyo before every test run
+* Updated from global requirements
+* [install] Fix the cli install instructions
+* [install] Fix optional services bullet-list
+* Fix the order of enabling devstack plugin
+* Update kubernetes external load balancer dev guide
+* [suse] Fix OS::stack_id in kubeminion
+* Use heat devstack plugin
+* [install] Add cli install in IT
+* [install] Add launch an instance section
+* [install] Update required services and remove bay
+* Add exceptions to cluster db to show failures
+* [suse] Sync heat template version with other drivers
+* [suse] Rename bay to cluster
+* TrivialFix: Remove logging import unused
+* Change the type of flannel_network_subnetlen to 'number'
+* Create sysconfig mount for kubernetes controller mgr
+* Import environment variables from testenv
+* Updated from global requirements
+* Split k8s atomic vm and ironic drivers
+* Create bay/cluster api reference
+* Disable lbaas on k8s-ironic job
+* Create baymodel/cluster template api reference
+* Add Scaling section to User Guide
+* Add Support of LBaaS v2 API
+* Rename Bay DB, Object, and internal usage to Cluster
+* Fix swarm functional tests
+* Add support for overlay networks in Swarm
+* Fixed fetching api_server address
+* Update fedora image for ironic driver
+* Improve unit test coverage for cmd/db_manage.py
+* Make magnum manage_template read config file and increase coverage
+* Remove magnum service Dockerfile
+* Factor out common k8s definitions and mappings
+* Consolidate enable docker registery fragments
+* Clean imports in code
+* Add rexray volume driver to Swarm
+* Fix typo in quickstart guide
+* Update documentation with bay/cluster version info
+* Add python-dev and kpartx to mesos img build
+* Fix mesos image dockerfile elements location
+* Fix dev quickstart pointer to mesos img build
+* Consolidate configure docker storage fragments
+* Fix release note
+* Updates drivers from BayModel to ClusterTemplate
+* Rename BayModel DB, Object, and internal usage to ClusterTemplate
+* Rename bay to cluster in certificate object and references
+* Correctly raising MagnumServiceNotFound exception
+* Update service-list output in quickstart
+* Use cls in class method and remove unused CONF
+* Add missing release notes
+* Updates CONF usage from bay to cluster
+
+3.0.0
+-----
+
+* Rename Bay to Cluster in functional tests
+* Include version info in bay/cluster show operation
+* Install Guide: Set bug project
+* Fix bay status: after bay-delete status is not DELETE_IN_PROGRESS
+* Correction in quickstart
+* Fix incorrect reference to bay-template-example.html
+* Revert "Update mesos slave to mesos agent"
+* Create certificates api reference
+* Create mservices api reference
+* Create version api reference
+* Updated from global requirements
+* Init api-ref structure and requirements
+* Compare test coverage with the master branch
+* Cleanup coverage configuration
+* Removed not required style.css file
+* To use cinder with rexray downgrade to version: 0.3.3
+* Rename Bay to Cluster in docs
+* Add cluster to cert commands
+* Add history for API versions supported by magnum
+* Use werkzeug to run Magnum API with SSL
+* Make templates env path be const variable
+* Allow k8s cluster without Floating IP
+* Bay to Cluster api cleanup
+* Openvswitch image build
+* Get mandatory patch attrs from WSME properties
+* Clean up docstrings in BayModel
+* Simplify test_create_list_sign_delete_clusters() tempest test
+* Restrict magnum service name
+* Updated from global requirements
+* Revert "Use symlinks for common template files"
+* Add Mesos labels and summary for labels
+* Rename Bay to Cluster in api
+* Updates k8s example rc to use correct label
+* Remove reference: 'modindex'  from releasenotes documentation
+* Use upper constraints for all jobs in tox.ini
+* Add floating_ip_enabled field to baymodel
+* Increase in UT coverage
+* Fix tempest.conf generation
+* Align k8s CoreOS with atomic: add proxy config
+* Update to User Guide
+* Rollback bay on update failure
+* Set bay status: DELETE_IN_PROGRESS before updated by poll
+* Add i18n translation for Log messages
+* Increase test coverage
+* Fix an issue on kube-proxy in CoreOS bay
+* Fix the CoreOS fragment write-kubeconfig.yaml
+* Correct the get_file patch in CoreOS template
+* Increased UT of magnum/api/app.py
+* Updated from global requirements
+* Add test for update baymodel public
+* Improve unit test coverage for cmd/conductor.py
+* Improve unit test coverage for cmd/api.py
+* Improve unit test coverage for common/service.py
+* Change stacks:global_index heat policy to context_is_admin
+* Support for async bay operations
+* Fix indentation and if expressions in make-cert
+* Use memory mode for sqlite in db test
+* Functional: validate OpenStack resources
+* Use symlinks for common template files
+* Remove ReplicationController object
+* Add openSUSE driver support to Magnum
+* Increased test coverage
+* Remove Invalid README.md for mesos
+* Remove Invalid README.md for k8s
+* Makes config file generation reproducible
+* Add functional test for k8s ironic
+* Fix ironic template
+* Re: Remove dependency of metadata service
+* Support HA for k8s coreos bay
+* Pass missing variables to heat-params
+* Updated from global requirements
+* Use kubelet-wrapper provided by CoreOS
+* Remove kube-user.yaml
+* Fix copying logs from nodes
+* Fix for enum type docker_storage_driver
+* Updated from global requirements
+* Add microversioning support for methods
+* Correct hyperlink syntax in userguide
+* Restricted Magnum service state to 'up' and 'down'
+* Add support for master elected component
+* Drop MANIFEST.in - it's not needed by pbr
+* API: restrict length of bay's name to 242
+* Updated from global requirements
+* Remove container object
+* Add TLS section to User Guide
+* Add functional test for public baymodel
+* Add hacking rule for explicit import of _ function
+* modify the home-page info with the developer documentation
+* Add functional test for image/flavor validation
+* Create a base class for tempest tests
+* Add Bay section to User Guide
+* Remove unnecessary code
+* Consolidate heat fragments
+* Fix some simple mistake
+* Bay name must start with alphabets only
+* k8s_coreos_driver: cleanup file naming
+* Fix global stack list in periodic task
+* De-duplicate the decouple-LBaaS-related files
+* Corrected import module in gmr.rst
+* k8s: Remove unused volume mount for kube-proxy
+* Added hacking check to ensure LOG.warn is not used
+* Fix typo in baymodel param
+* Move common/fragments into templates directory
+* Pass private ip address to scale manager
+* Updated from global requirements
+* fix bug for configure-kubernetes-minion.sh
+* Fix the permission of these files  -rwxr-xr-x
+* Add Mesos section to User Guide
+* Set swarm api_address protocol to tcp on all cases
+* Correction in heat template description
+* Add check on docker_volume_size
+* [install] Add debian and ubunutu IGs
+* [install] Refactor configuration in IG
+* Updated from global requirements
+* Removed unwanted files
+* add hacking for assertIsNotNone
+* Fix wrong COE name in template
+* modify test_assert_is_not_none
+* Formatting userguide
+* Remove  repeated WaitConditionHandle resource
+* Update mesos slave to mesos agent
+* Updated from global requirements
+* Add i18n support for some ERROR message
+* Replace "LOG.info(_" with "LOG.info(_LI"
+* Fix for k8s bay creation stall
+* Allow swarm cluster without LBaaS
+* Fix bug for write-kube-os-config.sh
+* Support the OpenStack-API-Version header
+* Updated from global requirements
+* Allow mesos cluster without LBaaS
+* Replace assertEqual(None, *) with assertIsNone in tests
+* Correction in kube-ui-service.sh script
+* Fix OS::stack_id is set as stack id instead of private ip
+* Remove unused LOG to keep code clean
+* Nit documentation formatting
+* Add Python 3.5 classifier and venv
+* Update default version of heat template
+* Correct the rest of the reraising of exception
+* k8s coreos bay driver
+* Bay driver: k8s Fedora Atomic
+* Add "WAIT_CURL" parameter to the template of swarm
+* tempest: Allow the old-style name project name
+* Nit document formatted
+* Updates microversion root and error messages
+* Remove dependency of metadata service
+* Add description to the output_key of stack
+* Correct reraising of exception
+* Move common bay drivers fragments in common dir
+* tempest: Don't hardcode external network id
+* Fix string declaration in periodic.py
+* Misspelled text corresponding to method 'get_template_definition' is commited
+* Change the type of flannel_network_subnetlen to 'number'
+* Delete unused discovery_url for swarm
+* Allow k8s cluster without LBaaS
+* Mesos-Ubuntu bay driver implementation
+* Bay driver implementation
+* Move Initialization of variables inside if/else
+* Improve validation for the external network parameter
+* Add a explanatory text when flavor is None
+* Bay_create_timeout should be set to 60 default
+* Fix typos for Magnum
+* Fixed typo for Availability
+* Fix typos in resource-quotas.rst
+* Add Bay Drivers section in user guide
+* Updated from global requirements
+* Change service name from "magnum" to "container-infra"
+* Delete certs when deleting bay
+* Add fixed_subnet field to baymodel
+* Improve unit test coverage
+* Validate discovery url when create a bay
+* Fix typo in create-trustee-user-for-each-bay.rst
+* Fix typo in async-container-operation.rst
+* Add Baymodel section to User Guide
+* [install] Add obs install-guide
+* Fix file permission in dib elements
+* Add master_lb_enabled field to baymodel
+* Allow Bay templates to include Heat environments
+* Pass some common cert related arguments to clients
+* Fix DIB dependencies for >= Fedora 22
+* Fix docker storage drivers configuration
+* Updated from global requirements
+* Delete unused cert_group variable
+* Modify mesos template to support removal policy
+* Add x509keypair_cert_manager to store certs in DB
+* [install] Add install guide from template for rdo
+* Add Swarm section to User Guide
+* Remove K8sResourceBase
+* Updated from global requirements
+* Make 'signing csr' accept Unicode CA Private key
+* Updated from global requirements
+* Modify the manual-devstack document for copying api-paste.ini
+* Wrong parameter in InvalidName exception message
+* Auto generate Bay/BayModel name
+* Use kojipkgs for diskimage-builder
+* Moving feroda atomic image to the bay driver folder
+* Fix typo in open-dcos.rst file
+* Load heat-params before setting nounset
+* Updated from global requirements
+* Remove unused POT files
+* Add Kubernetes section to User Guide
+* Gate: fix the credential object type error
+* Change here doc limit strings to fix EOF in EOF
+* Fix cli usage to get ca.crt and client.crt
+* Set 'nested_depth=2' when calling heat.resources.list
+* Updated from global requirements
+* Run the unit tests to test magnum objects
+* First check whether output_value is None
+* Duplicated parameter definition in template
+* Put fault info of bay resources into bay-show outputs
+* Delete duplicate statement
+* Support trustee_domain_name in config file
+* Fix get_coe_valodator() clear unused Validator
+* Fix indentation in install-guide
+* Updated from global requirements
+* [install] Add install guide from source
+* Update microversion header to include service type magnum
+* Fix string format in cmd/conductor
+* Remove service object
+* Spec for Open DC/OS and Magnum Integration
+* Add docker-storage-driver attribute to baymodel
+* Update swarm templates to use Heat resources
+* Fix Kubernetes-related deprecation in quickstart
+* Update for Swarm Bay quickstart docs
+* Add Bay Drivers specification
+* Updated from global requirements
+* X509keypair cleanup
+* Delete unused _admin_client variable
+* Updated from global requirements
+* Support using insecure registry for k8s COE
+* Fix an EndpointNotFound error
+* Updated from global requirements
+* Use fixtures.TempDir in unit tests
+* Remove pod object
+* Remove redundant utils code
+* devstack: fix magnum service name in is_magnum_enabled
+* Fix spelling error on get_docker_quantity method
+* Use oslo_utils.is_int_like support
+* Use oslo_utils.uuidutils support
+* Remove redundant exceptions code
+* Add accidentally deleted test_hooks.py
+* Gate: fix tempest config error
+* Update Magnum service name and description
+* Updated from global requirements
+* Document usage of notifications
+* Add insecure_registry column to baymoddel
+* Remove k8s APIs pod, rcs, svc and container API
+* Register k8s node but make it unschedulable
+* Add mesos_slave_executor_env_variables validate
+* Fix the swarm test for gate
+* Add Storage section in user guide
+* Updated from global requirements
+* Emit notifications when bay operations get executed
+* Fix two issues on k8s bay
+* Update Image section in user guide
+* Added "Choosing a COE" to user guide
+* Move k8s specific terms to k8s section
+* Code refactoring in conductor/k8s_api.py
+* Honor insecure and cafile options in a trustee session
+* Updated from global requirements
+* Fix the quickstart guide for using kubectl
+* Updated from global requirements
+* Correct attribute name in TestListBayModel
+* Update documentation to use native APIs
+* Updated from global requirements
+* Cleanup in Mesos template
+* Add troubleshooting steps for trustee creation
+* Always expand Baymodel fields
+* Correct parameter order for assertEqual() method
+* Add mesos_slave_image_providers validate
+* Corrected spelling mistake in quickstart.rst
+* Revert "Remove KUBE_API_PUBLIC_ADDRESS"
+* Updated from global requirements
+* Enable TLS support for k8s CoreOS
+* Use the latest atomic image name
+* Start using fedora atomic images that live in our mirrors
+* Add mesos_slave_isolation validate
+* Add tox test for k8s coreos bay
+* Updated from global requirements
+* Fix parameter mismatch in CoreOS templates
+* Copy logs if test failed and bay nodes existed
+* Remove KUBE_API_PUBLIC_ADDRESS
+* Update docs to use the latest image link
+* Replace tempest-lib with tempest.lib
+* Add docker registry support for swarm
+* Updated from global requirements
+* [Trivial] Remove executable privilege of doc/source/conf.py
+* Updated from global requirements
+* Functional: Add prefix when copy logs on failure
+* Update outdated doc index file
+* Cleanup some validation functions
+* Healthcheck Middleware
+* Add script to validate fedora atomic images
+* Heat params are different in swarm master and swarm node
+* Grab heat-params for debugging
+* Updated from global requirements
+* Enable Mesos Bay export more slave flags
+* Log copy for failed functional tests cannot be disabled
+* devstack: Use magnum-api and magnum-cond for services
+* Fix container-create memory not passed
+* Imported Translations from Zanata
+* Fix specs reference rst format
+* Remove constraints envs from tox.ini
+* Fix post jobs
+* Imported Translations from Zanata
+* Use k8sclient library
+* Gate: Remove neutron-lbaas devstack plugin
+* Functional tests should support DNS nameserver config
+* Fix bashisms in k8s conf minion template fragment
+* Fix bashisms in k8s os config template fragment
+* Docs: switch to neutron-lbaas plugin
+* Move project-configs to gate hook
+* Updated from global requirements
+* Fix bashisms found in swarm template fragments
+* Config docker registry in devstack
+* Add support for docker registry
+* Updated from global requirements
+* Fix the rst url format
+* Add subjectAltName back to CSR config
+* Fix bashisms found in shell scripts
+* Fix uuid cases with real UUID
+* replace wsexpose by magnum.api.expose.expose
+* Add script to install image build dependencies
+* Fix doc for certificate
+* Format template
+* update doc for ca-show and ca-sign
+* Notify Heat only if kube-apiserver is running
+* Update Kube version for latest image
+* Fix two issues that broke the gate
+* Updated from global requirements
+* Doc: fix flannel etcd key
+* Fix wrong parameter while creating bay
+* Use fedorapeople for getting fedora image
+* Fix an incorrect key path on copying logs
+* Bay can not be deleted by other users in the same project
+* Use trust for tls cert generation in swarm
+* Add cpu util to K8sMonitor
+* Add reno to Magnum
+* Updated from global requirements
+* Magnum's tox test should respect upper-constraints
+* Switch to Atomic 23
+* Revert "Gate: fix AttributeError: load_pem_x509_csr"
+* Update Using Container Volume Integration Feature doc
+* Add Container Volume Model into Kubernetes Heat Templates
+* Add cpu util to MesosMonitor
+* Generate fedora-atomic images using dib
+* Fix config error
+* Fix typos in Magnum files
+* Cleanup duplicated auth_url in k8scluster/master template
+* Remove the "Patch" function
+* Use trust for tls generation
+* Fix usage of registering magnum endpoint
+* Fix bashisms in enable-kube scripts
+* Refactor Keystone client with keystoneauth
+* Remove unnecessary blank at command line usage
+* cleanup usage of LOG.debug in magnum
+* Add hacking check to ensure not use xrange()
+* Allow update baymodel's public field even if referenced
+* Cleanup container client api rewrite function
+* Release certs/trust when creating bay is failed
+* Allow show public baymodel
+* Use bay to init K8sAPI instead of bay_uuid
+* Allow to parameterize image name in tests
+* Make kubernetes image version united into a variable
+* Gate: fix AttributeError: load_pem_x509_csr
+* Raise OperationInProgres(400) when deleting bay conflict
+
+2.0.0
+-----
+
+* Add flannel's host-gw backend option
+* Add the container volume integration document
+* The type of node_count is number
+* Fix config parser error magnum-template-manage list-templates
+* Replace hardcoded eth0 interface in scripts
+* Cleanup dict usage in bay_conductor
+* Pass host_config if docker api version >=1.19
+* Add Image Management section in User Guide
+* Add tests for container action policy
+* Functional: Remove unused log copying
+* Refactor bay_conductor to split trust methods
+* Rename flavor name used in gate tests
+* register the config generator default hook with the right name
+* Fix baymodel with invalid parameter can updated
+* Replace deprecated LOG.warn with LOG.warning
+* devstack: Comment out some environment dependent neutron settings
+* devstack: Add python3.4-dev to quickstart prereqs
+* Remove the redundant code
+* Moved CORS middleware configuration into oslo-config-generator
+* Remove bandit.yaml in favor of defaults
+* Mark trustee_domain_admin_password secret
+* Pass target in enforce
+* Bay status returns None initially after create
+* Spec for asynchronous container operations
+* Enable SELinux in swarm bay
+* Add setup methods for trust config in dev document
+* Add missing cinder_client config
+* Functional test for flavor validation in bay creation
+* remove devstack/create_magnum_conf_magnum_network
+* Functional: Wait for swarm bay creation
+* Remove method which has no rpc calls
+* Load wsgi app(api) with paste.deploy
+* Revert "Turn selinux back on after cloud-init"
+* Fix log message error when create trustee failed
+* Functional: Set private key outside of remote_exec
+* Updated from global requirements
+* Remove minion dependency on master
+* Add external_network unit test for post baymodel
+* Add flavor_id unit test for post baymodel
+* Add auth_url
+* Magnum api show wrong bookmark link for baymodels
+* limit access to certificate and container:create
+* Fix baymodel with invalid parameter can created
+* Adds standardised error messages
+* Add Container Volume Model into Mesos Heat Templates
+* Fix Definitions part for container-networking-model.rst
+* Use obj_attr_is_set to check whether an attr is set in oslo_versionedobject
+* handle bytes list in api middleware
+* Correctly compare utf8 strings
+* Fix x509 cert generation python3 compability
+* Use str() to generate IOError exception message
+* Fix the jenkins run script
+* Ignore the generated config file
+* Add py34 to tox envlist
+* Copy logs on test failure
+* Add trust info
+* Add hidden attr to password in the Heat Templete
+* Use exception.faultstring instead of exception.message
+* Do not use translate to delete chars
+* Convert bytes to string in get_id for python3 compatibility
+* Encode string before hash it
+* Use specific key to sort list of dicts
+* Use six.moves.reload_module instead of builltin reload
+* Avoid compare None type using min()
+* Return correct object type
+* Fix api access with public acl routes
+* Get region_name that volume_driver rexray region_name needs
+* Initial command-line interface documentation
+* Improved tests for updating bay properties
+* Remove unused attribute "ssh_authorized_key"
+* Add skipped RST files to toctree
+* Resource Quota - Introduce Quota Table
+* certificate sign with a non-existing cert should throw HTTP 400
+* Remove redundant password when create create_trustee
+* Remove duplicate X-Roles
+* Rename get_rpc_resource to get_resource
+* Updated from global requirements
+* Added documentation to BayModel attrs
+* Add etcd troubleshooting
+* Add Flannel troubleshooting
+* Init oslo_context before magnum context init
+* Updated from global requirements
+* Fix gate for client and devstack
+* Rename network driver name in Validator class
+* Avoid to create $SCREEN_LOGDIR
+* Add trust info into heat params
+* Replace string format arguments with function parameters
+* Add master_flavor_id to baymodel data funtion test
+* Updated from global requirements
+* Add tempest logging to bay_client and test_bay helper methods
+* devstack: Comment out logging configuration
+* Add `q-lbaas` to manual-devstack.rst
+* Add missing test-requirements
+* Create a trustee user for each bay
+* Fix misleading M310 unit test outputs
+* Updated from global requirements
+* Fix string formatting bug
+* Cleanup unused conf variables
+* Updated from global requirements
+* Add magnum certificate api tests
+* Bay test cleanup
+* Reduce memory consumption of gate tests
+* Make bandit job voting
+* Turn selinux back on after cloud-init
+* Enable swift services
+* Fix invalid import order
+* Updated from global requirements
+* Fix gate issues with functional-api job
+* API: Move validate_properties to REST API layer
+* Change BayModel#coe type to wtypes.Enum
+* Change Bay#status type to wtypes.Enum
+* Updated from global requirements
+* Remove node object from Magnum
+* Enable Tempest without devstack
+* Minor tweak to simplify api validator code
+* Correct internal links syntax error
+* Add more types of status to Bay's status
+* Revert "Fix socket descriptor leak"
+* Update functional test docs
+* Propose Magnum Resource Quota
+* Add Pod, Service, Replication Controller terms
+* Fixed a DBerror on reducing node_count on bay
+* Update the spec for container network attributes
+* Troubleshooting Kubernetes networking
+* Add func test to validate baymodel-update referenced by bay
+* Removed unused config coreos_discovery_token_url
+* Networking user guide
+* Replace logging with oslo_log
+* Use keystone v2.0 in gates
+* Cleanup MagnumService Object usage
+* Add introduce doc how to generate magnum.conf.sample
+* Remove unused hacking rule from HACKING.rst
+* Add python 3 support
+* Validates baymodel volume_driver patch requests
+* Validates baymodel volume_driver requests
+* Fixed an issue that prevent kube-proxy to start
+* Add initial terminology definitions
+* Document how to create a CoreOS bay
+* Spec for trust
+* Use magnum-config-generator.conf to generate Magnum config sample file
+* Updated from global requirements
+* Remove dev prefix in magnum/doc/source/dev
+* Adds volume_driver in db api
+* Fix typo in comment of several files
+* UT: cleanup in API test cases for response attr verification
+* Fixing typo in comment of several files
+* Revert "fixed_network should be fixed_network_cidr"
+* Updated from global requirements
+* Improve Tempest credential provider usage
+* Fix the network_driver update invalid parameter can be update
+* Add troubleshooting for network
+* Updated from global requirements
+* Add volume to Kub master
+* properly sign a certificate without bay name
+* Fix the CoreOS template definition
+* Remove redundant checks
+* Updated from global requirements
+* "notification_driver" from group "DEFAULT" is deprecated
+* Fix the CoreOS Heat templates
+* Add initial documentation for troubleshooting gate
+* Imported Translations from Zanata
+* Change 404 to 400 when resource not found exception raises
+* Add debug testenv in tox
+* Updated from global requirements
+* Revert "Pass environment variables of proxy to tox"
+* Gate: Fixed an Unauthorized error on api tests
+* Add bay status attr value list for API consumer
+* Use oslo.i18n in magnum/api/controllers/v1/service.py
+* Enable test_magnum_service_list_needs_admin
+* Do not use inner class of glanceclient
+* Do not use inner class of heatclient
+* Do not use inner class of novaclient
+* Fix ignored E711 rule and remove this exception
+* Proxy support for Mesos cluster
+* Remove unnecessary setting of default node_count
+* Use bay name as Mesos cluster name
+* Delete negative case of create bay without name
+* Add the k8s and mesos proxy doc
+* Highlighted NOTE in dev document
+* Disallow updating baymodel when it is referenced
+* Fix doc comment for default value
+* Fix doc comment for `baymodel_id` attr
+* A bay without name should be successfully created
+* Updated from global requirements
+* Add magnum bay api tempest tests
+* Propose Magnum Volume Integration Model
+* Add mandatory_attrs to BayModelPatchType
+* Highlighted NOTE in magnum-proxy.rst
+* Added Keystone and RequestID headers to CORS middleware
+* Don't add exception in msg when using LOG.exception
+* Increase size of Docker volume size
+* Add policy enforcement unittest to magnum_service
+* Add copying tempest.conf instructions to guide
+* Fix Docker storage configuration for Swarm
+* Update kube-ui to v4
+* Updated from global requirements
+* Skeleton for User Guide
+* Fix the content of 'discovery_endpoint' not show up in exception
+* Add proxy for mesos
+* Skeleton for Troubleshooting Guide
+* Add the lost M338 in Hacking
+* Fix socket descriptor leak
+* Swithc to using dynamic credentials in tempest tests
+* oslo_messaging requires stop() before wait()
+* (Quick-Fix) Adds back tempest identity back to gate
+* Functional: Fix mesos baymodel creation case
+* Fixed the incorrect policy enforcement
+* WSGI enfore fails should return 403 instead of 500
+* Updated from global requirements
+* Remove redudant code
+* HTTP 400 instead of 500 when Unicode Bay name
+* Correct wrong parameter passing when create k8s_api in  k8s monitor
+* Functional: Add mesos functional bay creation basic testing frame work
+* Do not use __builtin__ in python3
+* Trivial: Remove vim header in source files
+* Use six.moves.reload_module instead of builtin reload
+* Devstack: Fix typo of MANGUM_GUEST_IMAGE_URL
+* Python 3 deprecated the logger.warn method in favor of warning
+* Raise exception when failed to get discovery_url
+* Trival: Remove unused logging import
+* Devstack: support download ubuntu image
+* bay-show doesn't return stack_id
+* Remove oslo-incubator code from Magnum
+* Use cliff instead of cliutils
+* Keep py3.X compatibility for urllib
+* SIGUSR1 is deprecated in Guru mediation
+* Migration to utilize tempest plugin
+* "lock_path" from group "DEFAULT" is deprecated
+* Replace dict.iteritems() with dict.items()
+* Separate flavor between master and agent node
+* Gate: Fix docker swarm disconnect issue
+* Move swarm-agent out of swarm master node
+* Updated from global requirements
+* Make kubernetes API client generic
+* Gate: Attempt to fix a memory allocation error
+* Clean up baymodel query of usage from a bay
+* Object: Add BayModel as an ObjectField to Bay object
+* Errors in docker registry configuration
+* Enable docker registry in heat template
+* Gate: Fixed an empty service catalog error
+* Move Kubernetes proxy to the container
+* Remove baylock
+* API: enforce bay type when do rc/service/pod api actions
+* Update dev-quickstart.rst
+* Improve tox to show coverage results
+* Updated from global requirements
+* Change $LOGFILE path in configuration devstack
+* API: add filters when try to list containers
+* Object: Add filters to contianer list
+* Create trust_id for bay
+* Handle the case that stack has no "outputs"
+* Always log if disconnect from docker swarm
+* Copy Docker containers configs/logs
+* Updated from global requirements
+* Add retrieve_bay_uuid in conductor_utils
+* The type of number_of_masters should be int not string
+* Updated from global requirements
+* use wild card for passing env variables
+* Refactor image check in Baymodel
+* Validate image when create a Bay
+* Avoid to use common.cert_manager directly
+* Swarm: Cleanup of swarm heat template
+* Avoid to use keystone CLI in doc
+* Fix mesos monitor for handling multiple masters
+* Make consistent usage of mock.patch decorators
+* Refactor keypair existence check in Baymodel
+* Consolidate code for docker conductor tests
+* Enable HA mode for mesos bay in Magnum
+* Enable HA mode for mesos bay in Heat templates
+* Fix wrong exception messages
+* Add Kubernetes podmaster
+* Add Kubernetes UI
+* Share get_discovery_url in templates
+* Performance: leverage dict comprehension in PEP-0274
+* Remove Python 2.6 classifier
+* Functional: only copy logs on exception
+* Objects from Bay - Pods
+* Add missing bay_create_timeout to bay object
+* Wait more time after swarm bay creation before doing functional testing
+* Hide user credentials
+* Register neutron client option
+* Functional: Raise Exception if bay created failed
+* Remove circle reference
+* Swarm: Add swarm master HA support
+* Document how to download the mesos image
+* Objects from Bay - Services
+* Decoupling magnum service from periodic task
+* Optimize "open" method with context manager
+* Validate keypair when create a bay
+* Fix typo in db api doc string
+* Fixes for magnum objects doc string
+* Add support to set env to a container
+* Validate external network when create a bay
+* Updated from global requirements
+* Functional: Use Magnum client to test container actions on Swarm bay
+* Swarm: Split swarm.yaml to swarmcluster.yaml and swarmmaster.yaml
+* add neutron client support
+* Remove hardcoded default docker client setting
+* Docs: specify --docker-volume-size for swarm bay
+* add unittest testcase for Openstack Nova client
+* Validate baymodel's flavor when create a bay
+* Fixed typo in the dev guide for Mesos
+* Remove temp fix for new oslo.versionedobjects
+* Add a global var to maintain swarm version
+* Improve yml template test case
+* Chmod enable-etcd.sh
+
+1.1.0
+-----
+
+* Record diagnostic info from bay nodes
+* Swarm: add proxy for etcd service
+* Remove typo in magnum-proxy.rst
+* Functional: Add container creation/deletion on swarm bay
+* Adding dev-notes for try-catch block in periodic task
+* Cleanup baymodel operations in conductor api
+* Updated from global requirements
+* Refactor Mesos templates
+* Adds Magnum Container Network Model to Swarm
+* Changes Swarm Bootstrapping from Public to Etcd
+* Pin oslo.versionedobjects version
+* Add support for different disk bus
+* Updated from global requirements
+* Import option before using it
+* Bay: Update node's ip addresses even bay creation failed
+* Updates Swarm Heat Templates to Support Container Network Model
+* API: use baymodel_ident to update a baymodel
+* Make bandit included in test-requirements.txt
+* Updated from global requirements
+* Add mising requirements
+* Adds Cinder Volume Support to Swarm Bay Type
+* Objects from Bay - Replication Controller
+* Delete kube-register
+* API: Add debug message for every API call
+* Save functional testing files after testing done
+* Fix typos
+* Add the description of the output parameters to the Mesos
+* Remove unused opts
+* Monitor driver for mesos bay type
+* Updated from global requirements
+* Add functional test cases for swarm baymodel/bay
+* Add Magnum config for default network driver per COE
+* Make server.key/client.key as private in k8s node
+* always use constraints
+* Add -constraints sections for CI jobs
+* Swarm: Add TimeoutStartSec=300 to docker service
+* Updated from global requirements
+* Add iptables rule to listen m-api
+* Create BayModel with provided(VM/BM) server type
+* Rename heat-kubernetes, heat-mesos, docker-swarm
+* Generate missing baymodel sample configs
+* Update deprecated option for docker
+* Functional: Add testcase of tls_enabled bay creation case
+* Update functional testing doc
+* Swarm: Add description for Heat Template output
+* Removed old k8s python client
+* Update usage of glance client
+* Swarm: Map master address to api_address based on TLS
+* Added 'master_addresses' to Bay in API
+* Removed personal SSH key name and assigned value as testkey
+* Unify common output keys across Heat templates
+* Minor fixes for the functional test guide
+* split out k8s and api functional testing
+* Object: refacor of x509keypair.py
+* Replace oslo_utils.timeutils.isotime
+* Devstack: Use HOST_IP to set MAGNUM_SERVICE_HOST
+* Revert "Fix the neutron-lbaas agent config"
+* Update functional test document
+* Fix typo error
+* Enable network services at Kub master
+* remove default=None for config options
+* Add support for allowable network drivers configuration
+* Use oslo_config PortOpt type for port options
+* use importutils in monitors.py to avoid cyclic imports
+* Document how to run functional test locally
+* Monitor driver for k8s bay type
+* timeutils.utcnow should be used instead of datetime.datetime.utcnow
+* Imported Translations from Zanata
+* Fix the neutron-lbaas agent config
+* Use _assert_has_(no)_errors() in hacking tests
+* Added CORS support to Magnum
+* Improve tox.ini to easy developer's life
+* Raise exception when adding an existed attribute while update bay
+* Use assertIn and assertNotIn
+* Improving comment in monitors.py
+* Use assertIsInstance instead of assertTrue(isinstance(a, b))
+* Avoid JsonPatch twice
+* Use assertIsNotNone instead of assertEqual(** is not None)
+* Use assertTrue/False instead of assertEqual(T/F)
+* Updated from global requirements
+* Use assertIsNone instead of assertEqual(None, ***)
+* Add bay filter to container
+* Upgrade to Swarm 1.0.0 (production ready release)
+* Fix argument order in assertEqual to (expect, obs)
+* Use oslo_config IPOpt support
+* Update devstack doc to cover the latest atomic image
+* Remove unnecessary parameter
+* Fix the failure to scale-down k8s cluster
+* Fix exception when create bay failed
+* The default of filters should be an empty dict
+* Fix k8s CLI to work with Bay name
+* Kubectl configuration for certificates
+* Refactor MagnumException to reduce complexity
+* Refactor config setup to reduce complexity
+* Refactor periodic task sync_bay_status
+* Reduce complexity of poll_and_check method
+* Add functional_creds.conf to .gitignore
+* Add doc8 to pep8 job
+* Some improvement in swarm cluster add-proxy.sh
+* Fix docker proxy config file not correctly seting on k8s master
+* Cleanup template formatting
+* Add proxy for k8s
+
+1.0.0.0b1
+---------
+
+* Some fixes or improvements of quickstart guide
+* Several fixes for the TLS guide
+* Fix incorrect usage of CertManager in k8s_api
+* Split test_bay_conductor tests
+* Fix a 409 failure on bay-update
+* Open port 6443 in security group for k8s bay
+* Fix bay-create failure without "name"
+* Fix registration failure caused by TLS support
+* Document how to enable barbican in devstack
+* Fix command line in document example
+* Fix swarm monitor exception
+* Read auth_uri from config file and remove is_public_api
+* Move security group setting to kubecluster.yaml
+* Upgrade to Swarm 0.4.0 (latest)
+* Update Kubernetes examples
+* Added a guide to explain how to use secure Kubernetes API
+* Fix wrong doc output
+* Adding new test case to do heat yaml file validation
+* Fix mesos build image error
+* Fix order of arguments in assertEqual
+* Fix order of arguments in assertEqual
+* Fix order of arguments in assertEqual
+* Fix order of arguments in assertEqual
+* Fix order of arguments in assertEqual
+* Functional tests for magnum service
+* Modify admin_api policy rule
+* Baymodel create should allow no network_driver specified
+* Fix an occasional 400 error on functional gate
+* Pull metrics by using TLS enabled client
+* Update and clarify redis examples in quickstart
+* Make Kubernetes API call secure
+* Fix typos in document
+* Add TLS support in heat kubernetes
+* Fix comment container delete should accept both uuid/name
+* Move 'docker_for_container' to a common module
+* Move k8s resources test to TestKubernetesAPIs
+* Fix swarm bay failure reporting
+* Enabled ceilometer using plugin model
+* Update Dev Quick-Start links to officail docs
+* Fix D001 Line too long error
+* Allow container memory size to be specified
+* Fix double-wrapping of exception in conductor
+* Fix TypeError at magnum API for service-list
+* Minor documentation correction
+* Add TLS support to container handler
+* Adding support for public baymodels
+* Remove unnecessary util method temporary_mutation
+* Add versioned objects to docs.openstack.org
+* Adding Documentation for use of proxies in magnum
+* Remove name from test token
+* Set up temp files containing client TLS certs
+* Use dockerpy logs operation instead of attach
+* Reduce complexity of filter methods
+* Rename "insecure" to "tls_disabled"
+* Swarm: Set to CREATE_FAILED status if swarm services not started
+* Swarm: Fix NODE_SERVICES in template
+* Remove unused DB API get_rcs_by_bay_uuid
+* Documentation update for 'magnum service-list'
+* Configure Ironic for Kubernetes load balancer feature
+* Configure CoreOS for Kubernetes load balancer feature
+* Configure Fedora Atomic for Kubernetes load balancer feature
+* Remove unused DB API and Service object API
+* Fixes Neutron security groups for Swarm Bay type
+* Removes --tls flag from docker and swarm-manager daemons
+* Adding API support for magnum service
+* Implement bay monitoring and notifications
+* Fix E251 unnecessarily ignored pep8 rule
+* Add details to developer quick-start Mesos section
+* Add heat template plugins to documentation
+* Create master tmptls for k8s ironic/coreos bay
+* Make network-driver check based on COE type
+* Add bay_uuid to RC Read/Write API's
+* Add bay_uuid to Service Read/Write API's
+* Add bay_uuid to Pod Read/Write API's
+* Introduce BayType that declares valid COEs
+* Backend support for magnum service
+* Migrate to Kubernetes Release 1 (docs)
+* Update Developer Quick-Start to Kubernetes 1.0
+* User guide for Kubernetes external load balancer
+* Adds client test for labels
+* Fixes Kubernetes Pod and Service Manifest Examples
+* Fix container status when showing a paused containers
+* Functional: Split python client functional testing case
+* Swarm: move write-docker-service.sh before other configure scripts
+* Move the code for local cert to the right place
+* Remove unused DB API and Pod object API
+* Swarm: Add configure-swarm.sh to configure docker-storage
+* TLS integration for latest pythonk8sclient
+* Add TLS to Docker-Swarm Template
+* Eggnore the .egg directory
+* Remove ERROR_ON_CLONE references
+* Enable barbican cert manager in devstack
+* Use api version 1 to set image property
+* Add TLS support in Magnum
+* Use --max-complexity flake8 rule
+* Fix H405 and E131 ignored pep8 rules
+* Unwedge the gate by only enabling barbican once
+* Fix container action debug log not accurate
+* Docs update for new fedora atomic 1.0.4
+* Fix funtional gate: specify missing network_driver
+* Sync the description with Kubernetes Release 1 version
+* Code refactor for keystoneclient
+* Add registry to template
+* Functional tests with Tempest - BayModel CRUD
+* Validates baymodel network_driver requests
+* Change ignore-errors to ignore_errors
+* Migrate to Kubernetes Release 1
+* Enabled ceilometer services using new model
+* Adds labels support to baymodels
+* Fix naming of variables/classes in tests
+* Updated from global requirements
+* Adds network_driver Support of Container Network Model
+* Refactors Heat templates for Container Networking Model
+* doc8 all documentation and fix doc style
+* Add registry_enabled to api and db
+* Readme : Change swarm_manager to swarm_master
+* Temporarily remove dependency on package certifi
+* Change swarm_manager to swarm_master
+* Allow unicode text as CSR
+* If headerParams = None, don't use it to .update()
+* Fix calling parameter at get_cert/delete_cert
+* Add a link versioned object document
+* Update documentation for generating k8s v1 client
+* Avoid to use eval in pythonk8sclient
+* Fix missing value types for log message
+* Check file existence in local cert manager
+* Add test to local_cert_manager
+* Update swarm discovery url
+* Delete certs while deleting bay
+* Enable Barbican in devstack
+* DB Migration does not work for SQLite backend
+* Add version hashes to enforce version updates
+* Swarm agent to get templated proxy values
+* Porting function_exists to post_test_hook.sh
+* Cleanup Baymodel correctly when Teardown TestKubernetesAPIs
+* "keypair_id" should be existent when creating a baymodel
+* Checkout generated k8s client
+* Add documentation for testing objects
+* Fix typo in magnum/common/x509/config.py
+* Fix wrong parameter passed to heat-params
+* Conductor: Remove _update_stack_outputs from bay_conductor
+* Fix heat-mesos README
+* Fix retrieving ca_cert
+* Change instructions to use get-pip
+* Modify log message
+* tox: rm all pyc before doing unit test
+* Code refactor for ConfFixture
+* Add Certificate controller for TLS support
+* Generate certs while creating bay
+* Add a tool to manage x509 objects
+* Add CertManager to store CA and client certificate
+* Fix keystone client usage in barbican client
+* Enhanced error checking in get_discovery_url
+* Updates the node count key for all types of bay
+* Updated from global requirements
+* Remove retrieving external-network-id
+* Introduce unit test for genconfig
+* Fix missing sql_opts
+* Fix the hard-coded etcd cluster size
+* Fix jenkins failure for image not found
+* Change manager to master in docker-swarm
+* Indirection API implementation
+* Fix the link for Docker Remote API
+* Change bay.*_cert_uuid to bay.*_cert_ref
+* Fix the representation of REST
+* Change grep option dev-build-atomic-image.rst
+* Fix method and parameter descriptions
+* tools/colorizer.py is not used anywhere
+* Add explicit requirement for decorator module
+* Add field for container status
+* Add UNKNOWN constant to container statuses
+* Removing unused dependency: discover
+* Sync bay status reason in periodic task
+* Move 'all_tenants' options to context
+* Enable Magnum to send notifications via RPC
+* Correct exception raised in few db APIs
+* Use oslo.versionedobjects enums instead of status strings
+* Add cert_uuid attributes to Bay in db
+* Updated from global requirements
+* Add port type on port option
+* Doc update for 'magnum coe-service-*'
+* Updated from global requirements
+* Unify using of migration tools
+* Set project_id and user_id from context directly
+* Enable barbican in devstack
+* Gate failure due to introduction of new WSME 0.8.0
+* proxy-blue print for docker swarm
+* Fix unit test for replication controller
+* documentation: fix formatting
+* Remove retrieving external-network-id
+* Updated from global requirements
+* Remove deprecated config 'verbose'
+* Add roles to context
+* Remove hardcoded config file in error message
+* X-User is deprecated and X-Storage-Token is useless
+* Add default for node_count and bay_create_timeout
+* Fix wrong usage of filters in periodic task
+* Add 'master_addresses' attribute to bay
+* Add required packages to Developer Quick-Start guide
+* Updated from global requirements
+* Fix replication controller unit test sample record
+* Rename wraper to wrapper
+* Fix race condition in bay_update
+* Adding more information in dev-quickstart.rst
+* Remove unsed file magnum/config.py
+* Added gcc in OS-specific prerequisites
+* Enable ceilometer in devstack
+* Updated from global requirements
+* Check before _update_stack
+* Add X509KeyPair controller and conductor
+* Sets FLANNEL_ETCD to 127.0.0.1:2379
+* Provides correct master IP address for kube-proxy
+* Updated from global requirements
+* Use magnum specific flavor
+* Fix typo in dev-build-atmoic-image.rst
+* Updated from global requirements
+* Magnum Container Networking Spec
+* Switched to Ubuntu 14.04 LTS (Trusty) base image
+* Fix race condition when syncing bay status across conductors
+* Make simultaneous bay deletion workable
+* Updated from global requirements
+* Add docker method for building mesos image
+* Add a new field 'master_count' to bay in API
+* Updated from global requirements
+* Unify templating style between templates
+* Added X509KeyPair object and data model
+* Remove redundant code about fake_policy
+* Use new docker apt repos
+* Add barbicanclient support in Magnum
+* Make doc use automatic install and consistent url
+* Update test cases for test_bay.py and test_baymodel.py
+* API: Handler exception when doing container-list
+* Updated from global requirements
+* Fix the string type in k8s templates
+* Set default node_count to 1
+* Remove coding:utf-8
+* Correct the usage of decorator.decorator
+* Remove XML parsing code from magnum
+* Add test cases for pagination marker
+* Instruction for building Fedora Atomic image
+* update comments in k8s template
+* Add a new field 'master_count' to bay in DB
+* Put kube_master into a resource group
+* Bootstrap etcd cluster by discovery_url
+* Configure IP tables in devstack plugin
+* Remove __name__ attribute in UserType
+* Remove redundant argument in container_create api
+* Updated from global requirements
+* Add magnum_url method to clients module
+* Replace etcd ports by its offical ports
+* Split TemplateDefinitionTestCase to different test case
+* Some parameter in heat template should be string
+* Remove incorrect variable in etcd.conf
+* Add tests for rpcapi container methods
+* Register kube minions through load balancers
+* Make k8sclient use the load balancer address
+* Add test_policy_disallow_detail case for bay/baymodel/node/pod
+* policy check for container
+* policy check for service
+* policy check for rc
+* Register glance client and other options
+* Change ca to ca-cert for consistency in k8sclient
+* Updated from global requirements
+* Correction for the container-name
+* Port upstream commit "keep chasing etcd"
+* Clean up miscellaneous help strings
+* Add context to TemplateDefinition.extract_definition
+* Fix permission error on running periodic task
+* Update manual guide to not harcode br-ex
+* Disable expansion for cat commands work as expected
+* Add guru meditation report for magnum
+* Do not inspect contianer doesn't exist
+* Set default of number_of_minions to 1 in comments
+* Contextlib.nested is deprecated
+* Remove redundant codes
+* Remove redundant code from FunctionalTest class
+* Updated from global requirements
+* Rename "k8s_master_url" to a better name
+* Remove unused oslo-incubator modules
+* Fix error related policy.json file
+* Updated from global requirements
+* Fix the wrong platform usage
+* Derive the public interface
+* Remove redundant section about setting up venv from quick-start
+* Remove redundant code from magnum.test.utils
+* Replace tearDown with addCleanup in magnum unit tests
+* Remove duplicate app loading
+* Remove H302, H803, H904
+* Add periodic task to sync up bay status
+* Use a simple way to determine whether a wsme type is null
+* Add load balancers in front of kube-master node
+* Updated from global requirements
+* Rename PeriodictTestCase to PeriodicTestCase
+* Add template definition of Mesos bay
+* Updated from global requirements
+* policy check for pod
+* Add manual links into dev-quickstart.rst
+* Remove redundant FunctionalTest class
+* Remove a redundant file
+* Remove redundant commas
+* Updated from global requirements
+* Code refactor for tests/unit/db/test_baymodel.py
+* Remove unused file in heat-kubernetes template
+* Remind the user when sort_key is invalid
+* Remove setUp function
+* Fix setup of tests to remove intermittent failure
+* The nullable parameter is not necessary
+* Updated from global requirements
+* Add return value to mocks to allow serialisation
+* Clean up getting started docs
+* Updated Magnum documentation
+* Add `sudo` before `docker` command on dev docs
+* Use constraints
+* Remove unnecessary codes
+* Drop XML support in Magnum
+* Remove redundant Copyright text from heat-mesos
+* Override _setUp instead setUp when we use fixtures.Fixture
+* Enable Load-Balancing-as-a-Service in devstack
+* Temporary work around of functional test failure
+* Use the pythonic way to catch exceptions
+* Add .DS_Store to .gitignore
+* Eliminate mutable default arguments
+* Fix unit test failure
+* Add documentation for smart scale down feature
+* Implement bay smart scale down
+* Fix old network_id usage
+* Code refactor for prepare_service
+* add .idea to .gitignore
+* Make ironic templates working
+* 'nose' is no longer required for testing Magnum
+* Validate bay type on creating resources
+* Remove unreachable code in API utils
+* Check for Python 2 when using unicode builtin
+* Fix minion registration failure
+* Docker container-create fails with Unicode is not supported
+* Modify k8s template to support removal policy
+* Fix the function "wrap_exception"
+* Remove duplicated definition of class "APIBase"
+* Fix sample link in magnum/api/controllers/link.py
+* Remove unused fields "from_*" from API controller
+* Upgrade code to be python 3 compatible
+* use bdict instead of cdict for baymodel testcase
+* pass baymodel date instead of bay data for baymodel create request
+* Fix os-distro property name to os_distro
+* Move conductor common implementations into module
+* Backport "docker_volume_size should be numeric"
+* Backport "tie minion registration to kubelet activation"
+* Update heat policy.json
+* Add periodic task framework
+* Swith auth_uri to use v2.0
+* Updated from global requirements
+* policy check for node
+* Updated from global requirements
+* Adding functional test cases for Kubernetes APIs
+* Devstack: Add admin creds in magnum.conf
+* port to oslo.service
+* Make swarm work with atomic image
+* remove duplicate option settings
+* Add elements for building a Mesos bay node image
+* Add 'host' field to Pod object
+* Replace dict.iteritems() with dict.items()
+* Adds TLS support in pythonk8sclient
+* Add Bay.list_all method to allow admin context to query all tenants bay
+* Fix unit test case error
+* Updated from global requirements
+* Backport "configure docker storage correctly"
+* Backport "docker group is no longer used"
+* Backport "docker.socket is no longer used"
+* Fix the wrong number for minion node
+* Support use admin creds in KeystoneClientV3
+* Add make_admin_context to Magnum context
+* Not need to use bay uuid
+* DB: Support filter_by status in get_bay_list
+* Create new k8s_api instance on every calls
+* Rename image_id to image in container object
+* Object: pass filter to bay list
+* Updated from global requirements
+* Unknown type 'any' in pythonk8sclient removed
+* Updated from global requirements
+* Attempt to fix functional gate test
+* Web Interface for Magnum in Horizon
+* policy check for baymodel
+* Add documentation for how to scale a bay
+* Backport "doc update -- this is no longer tied to Fedora 20"
+* Handle Interrupt in conductor service
+* Update changes in container-create command in quickstart
+* Correct Hacking rule code
+* Update config example
+* Fix the kubernetes opts
+* Add oslo.policy namespace
+* Add hacking rule framework for magnum
+* Updated from global requirements
+* Add test case for bay policy check
+* Eliminate eval from swagger.py in k8sclient
+* Make quickstart more consistent
+* Modify magnum api context to use user_name and project_name
+* first policy check for bay
+* enhancement for the common policy enforce
+* Backport multiple template fixes
+* Backport "Cleanup the templates"
+* Backport "Avoid usage of deprecated properties"
+* Pass environment variables of proxy to tox
+* Consolidate repeated codes in test_bay_conductor
+* Minor improvement of the quickstart guide
+* Fix an error on generating configs
+* Initial Heat template for Mesos
+* Update quickstart to point to kubernetes 0.15 and v1beta3 manifest
+* Fix the KeyError and change type 'any' in k8s client code
+* Return proper response object in Kubernetes APIs
+* Add test to API Version object
+* Unify the conductor file and class naming style
+* Remove major version checking
+* Cloud driver is not needed
+* Refactor magnum functional test to add Kubernetes API test
+* Updated from global requirements
+* Changes container_execute to container_exec
+* cleanup openstack-common.conf and sync updated files
+* Updated from global requirements
+* Remove unused PodFactory class and add parent class for Pod
+* NotAcceptable exception should be  406
+* Fix ignored E121 to E125 pep 8 rules
+* Add support for API microversions
+* Add netaddr to requirements
+* Fix RequestContext's to_dict method
+* Remove unused files that used kubectl
+* Improve unit test code coverage of test_utils
+* Updated from global requirements
+* Add different version support for docker-py
+* Updated from global requirements
+* Add license header to swagger.py
+* Remove IPv4AddressType validate function in magnum
+* Updated from global requirements
+* Fix the i18n import
+* Fix return IPv4 address after validation
+* Remove old hack for requirements
+* Fix method signatures unmatching in db api
+* introduce policy for magnum
+* Added kube_register file which required by configure-kubernetes-minion.sh
+* Add status_reason field to bay
+* Passing posargs to flake8
+* Change value for logging_context_format_string option
+* Fix continuation line under/over indented problems
+* Use oslo.log instead of oslo.incubator log module
+* Fixing import error in kubernetes client code
+* Use new docker exec call
+* Backport "added required id: top-level key"
+* Backport "Replace CFN resources with heat native"
+* Semi-Backport "successfully add new minions via stack-update"
+* Manually import all pot files
+* Improve dev-quickstart documentation
+* Improving Unit Test coverage of k8s_manifest
+* Use the status defined in bay object Status class
+* Only define RequestContextSerializer once
+* Rename bay_k8s_heat to more general name
+* Backport "fixup! added script for dynamically registering a minion"
+* Backport "added script for dynamically registering a minion"
+* Backport "minor updates to README"
+* Backport "added some output descriptions"
+* remove allow_logical_names check
+* Reorder requirements into ascii-betical order
+* Correct the wrong parameter pass
+* Fix the doc format
+* Catch common Exception in container conductor
+* Backport "kubenode -> kubeminion"
+* Setup for translation
+* Add missing dependencies (from pip-missing-reqs)
+* Add more note when play magnum with devstack
+* Add wait condition on swarm services in swarm bay
+* Remove unused methods and functions
+* Make functional test work with new tox env
+* Fix the docker build image issue
+* Avoid hard-coded UUID in quickstart guide
+* Fix the ipaddress validate issue
+* Fix doc according to devstack support
+* Update docs and some files to remove kubectl
+* Updated from global requirements
+* Create container json file under home directory
+* Remove unused parameter
+* Added support of Kubernetes API in magnum
+* Correct a spelling error in quickstart guide
+* Remove dependency on python-kubernetes
+* Keypair_id should be a required option when creating a baymodel
+* Image_id should be a required option when creating a baymodel
+* Add support for container status
+* Make docker volume config more resilient
+* Allow container name as identifier in API calls
+* Move VersionedObject registration to the new scheme
+* Use oslo.versionedobjects remotable decorators
+* Make MagnumObject a subclass of Oslo VersionedObject
+* Fix the container delete uuid issue
+* Update quickstart guide to v1beta3 manifests
+* Update service manifest parsing according to v1beta3
+* Configure minions properly
+* Removing unused code in docker_client
+* Make Docker client timeout configurable
+* Move our ObjectSerializer to subclass from the Oslo one
+* Add local.sh to dev guides
+* Remove oslo config warnings
+* Remove trailing spaces in container-service.rst
+* Update rc manifest parsing according to v1beta3
+* Update rc support a manifest change
+* Update service support a manifest change
+* Delete swarm bay also delete related containers
+* Improve validation on baymodel api calls
+* Add unique column constraints to db
+
+2015.1.0
+--------
+
+* Add image name support when create a baymodel
+* Functional tests for listing resources and templates
+* Remove cluster_coe from magnum conf
+* Add string length validation to names in APIs
+* fixed_network should be fixed_network_cidr
+* Remove cluster_type from conf and Update conf example for opts changes
+* Add full name of coe to README
+* Image distro not updated when magnum configured with devstack
+* Print right message when OSDistroFieldNotFound exception raised
+* Update Kubernetes version for supporting v1beta3
+* Update pod manifest parsing according to v1beta3
+* Bay show return api address and node addresses
+* Add coe attribute to BayModel
+* Fix the genconfig issue
+* Fix keyerror issue when create baymodel
+* Exit the poll loop when bay update failed
+* Fix bay_create_timeout not specify issue
+* Change from kubernetes 0.11 to 0.15
+* Invalid JSON in dynamic registration of minion
+* Log the reason when bay create or delete failed
+* Add http:// prefix to kubelet api server
+* Add etcd 2.0 config file support
+* Implementation of Cluster distro for baymodel
+* Fix the versionedobject version issue
+* Add timeout parameter to bay create
+* Use container's bay for docker endpoint
+* Use proper rpcapi in Containers API
+* Correct spelling mistake in dev-quickstart
+* Add bay_uuid attribute to Container model
+* Remove duplicate replacePod API
+* Update requirement to fix gate error
+* Allow rc-update with rc name also
+* Allow service-update with service name also
+* Allow pod-update with pod name also
+* Add command field for container
+* Add Swarm TemplateDefinition
+* Move our ObjectListBase to subclass from the Oslo one
+* Start the conversion to oslo.versionedobjects
+* Load definitions without requirement checking
+* Update swarm template for latest atomic image
+* Add return vlaue judge
+* Add return response in some of Kubernetes APIs
+* Correct ImportError in python-k8sclient code
+* Fix the doc wrong refer marker
+* New docker-py needs a later version of requests library
+* Enable Kubernetes v1beta3 API
+* Update pod support a manifest change
+* Fix typos and add Glance need
+* Fix requirements to fit for gate test
+* Update conf example file
+* Update dev quick start
+* Add template test for gate job
+* Not call dockerclient-api del none exist container
+* Remove exit from conductor
+* Implement baylock in conductor for horizontal-scale
+* Enabld conductor check new template path
+* Implement listener API for conductor horizontal-scale
+* Sync heat status to magnum when max_attempts exceeds
+* Validate scheme used in urlopen
+* Remove unsafe usage of eval
+* Use yaml.safe_loader instead of yaml.loader
+* Implements: Fix bug 1442496, add more info in logs
+* Objects changes for horizontal-scale support
+* Database changes for conductor horizontal scale
+* Implements: Fix typos in containers-service.rst
+* Update bandit for new usage requirement
+* Use new location for atomic images
+* Add Template Definitions
+* DRY Up The Exception Module Tests
+* Fix the localrc issue
+* Adding support of python-k8client
+* Remove contrib directory for devstack
+* Add Bandit security lint checking via tox
+* Add a few more operations in post_test_hook.sh
+* Update dev-quickstart doc to match new devstack model
+* Add glance support in magnum
+* Add heat for manual steps
+* Enable Heat services in Devstack settings
+* Adding a functional test that uses python-magnumclient
+* Disable test on non-supported environment
+* Raise more generic exception in bay_update API
+* Allow bay-update with bay name also
+* Add tox functional target
+* Remove useless exception
+* Destroy the related resources when delete a bay
+* Sync heat stack status when delete bay
+* Add tests for docker conductor
+* Compare to the right heat status when bay CREATE_FAILED
+* Convert to new DevStack plugin model for functional testing
+* Make room for functional tests
+* Add tests for docker container
+* Fix some typos in magnum document
+* Fix pod tests in kube handler
+* Rename bay's minions_address to node_addresses
+* Add service test for kube handler
+* Add more tests for kube handler
+* Fix the parameters mismatch
+* Specify region while creating magnum endpoint
+* Remove unused code in kube handler
+* Update magnum document to use openstack as namespace
+* Remove downgrade from existing migrations
+* Update .gitreview for project rename
+* WaitCondition timeout attribute should be a number
+* Reflect client change which is name based management
+* Add kube pod tests in kubeutils
+* Add kube service tests in kubeutils
+* Add kube rc tests in kubeutils
+* Support keystone regions
+* Add tests for kubeutils rc
+* Add tests for kubeutils service
+* Remove unused code
+* Rename bay's master_address to api_address
+* Add a spce between the words of feature and set in the spec file
+* Add os support
+* Update pod_delete call for new log message
+* Modify documentation to point to kubernetes-0.11 atomic image
+* Handle heat exception in create_stack
+* Fix a small architectural error
+* Removing duplicate service definition
+* Sync with latest oslo-incubator
+* Fix an issue on updating bay's node_count on DB
+* Fix typo in magnum/magnum/common/rpc?service.py
+* Allow baymodel name when bay is created
+* Update quickstart doc
+* Changed kubectl command to delete rc in magnum
+* Adjust Gerrit workflow Link
+* Allow baymodel resource management by "name"
+* Allow rc resource management by "name"
+* Allow pod resource management by "name"
+* Allow service resource management by "name"
+* Fix typo in magnum/doc/source/dev/dev-manual-quickstart.rst
+* Fix typos in magnum/specs/containers-service.rst
+* Remove non-ascii characters in magnum/doc/source/dev/dev-quickstart.rst
+* Fix the wrong path in the dev-quickstart.rst
+* Assign docker-volume-size to baymodel in document
+* Fix the wrong image name
+* Allow bay resource management by "name"
+* Fix the token in stack creation issue
+* Remove beaker.yaml
+* When polling heat set bay status
+* Fixed path in Devstack plugin README
+* Add docker_volume_size in the kubecluster-coreos.yaml template
+* Allow specification of ssh authorized key and token url for coreos
+* Add devstack module to contrib
+* Make resource creation fail when no 'id' in manifest
+* Make resource creation return 400 with empty manifest
+
+2015.1.0b2
+----------
+
+* Make service_create return 400 with invalid json manifest
+* Make rc_create return 400 with invalid json manifest
+* Make pod_create return 400 with invalid json manifest
+* Add Heat tasks
+* Pull updates from larsks heat-kubernetes repo
+* Fix doc typo and make style consistent
+* Fix an error on cloning kubenetes repo
+* Make service_create return 400 status on empty manifest
+* Requirements List Updates
+* Update dev-quickstart.rst
+* Change default path of kubecluster.yaml to absolute one
+* Fix the missing magnum dir creation
+* Remove unused ironic handler
+* Correctly delete replica controller
+* Improve logging in kube handler
+* Move folder heat-kubernetes to magnum/templates
+* Correct doc format
+* Add master flavor
+* Added requests in requirements
+* Introduce a coreos for heat-kubernetes in magnum
+* Support i18n log format for error in magnum
+* Allow specification of fixed_network
+* Patch timeutils from oslo_utils
+* Support i18n log format for warning in magnum
+* Support i18n in magnum
+* Register all magnum exceptions in allow_remote_exmods
+* Allow specification of docker volume size
+* Implement a Heat k8s template for Ironic
+* Catch PodNotFound during pod_delete and continue
+* Fix BayNotFound error on deleting replica controller
+* Change link of quick start to git.openstack.org
+* Create heat template for docker-swarm bay
+* Allow pod delete to succeed when not found on bay
+* Fix typo in openstack-common
+* Fix MagnumException for parsing custom message
+* Allow Json patch to take an integer value
+* Fix docker client server mismatch
+* Fix the wrong parameter
+* Disallow bay-create with non-positive integer
+* Do not call get_json() in TestPost
+* Update requirement
+* Fix the wrong number
+* Remove # -*- encoding: utf-8 -*- from some python files
+* Remove get_xxxinfo_list from magnum
+* Move bay defintion extraction code
+* Implement update bay node_count
+* Add status attribute to bay
+* Pull in updates from larsks heat template repo
+* Change replicas to 2 in dev quick start
+* Move variable attempts_count to local scope
+* Change ctxt to context to for consistency
+* Container logs should use HTTP GET other actions use PUT
+* Refactor bay_create at k8s conductor
+* Remove imports from oslo namespaces
+* Change ctxt to context to for consistency
+* Freshen up the magnum conf file
+* Tech Debt: Fixed code alignment issues
+* Change command for creating a virtualenv
+* Cleanup code and remove newly ignored hack rules
+* Keep up with the global requirements
+* Adding python-kubernetes to requirements
+* Update quickstart-dev guide
+* Add tests for Node Rest API
+* Add tests for Replication Controller Rest API
+* Remove API get() for some magnum objects
+* Enable multi tenant for k8s resource get_xx_by_id
+* Enable multi tenant for k8s resource get_xxx_list
+* Enable multi tenant for two k8s resource operation APIs
+* Removed container_id from container api
+* Add tests for Service Rest API
+* Enable multi tenant for get_pod_by_uuid
+* Fix and clean up Container api
+* Add project_id and user_id to service and rc
+* Add project_id and user_id to pod
+* Clean up codes in node API
+* Consolidate codes for k8s resources api
+* Fix and clean up Container api
+* Enable multi tenant for get_xxx_by_id
+* Enable multi tenant for get_xxx_list
+* Enable multi tenant for get_xx_by_uuid
+* Don't use deprecated auth header
+* Add tests for Pod api
+* Correct typo for function name
+* Remove redundant query from get_bay_by_uuid
+* Pull RequestContext Patching Into Test Base
+* Use real context for db test
+* Update doc string for api base.py
+* Ensure auth_token_info present on RequestContext
+* Enable bay delete support multi tenant
+* Persist project_id and user_id for baymodel object
+* Add tests for Bay API
+* Persist project_id and user_id
+* Fix manifest url doesn't work
+* Fix and clean up ReplicationController api
+* Fix and clean up codes at service api
+* Fix and clean up codes at Pod api
+* Add project_id and user_id to db query filter
+* Fix the stamp parameter in db-manage
+* Make db-manage instructions same as usage
+* Rename test_baymodels.py to test_baymodel.py for db test
+* Fix and clean up BayModel and Bay api
+* Point to proper quickstart guide in index.rst
+* Fix documentation to display on git hub correctly
+* Add a DB management README
+* Add project_id and user_id to magnum objects
+* Rest back objects for test_objects
+* Update the conf sample file
+* Fixed typos
+* Fix the miss opts in genconfig
+* Devstack is broken with heat/juno branch
+* Reduce resources required to launch example
+* Add documentation about installing kubectl
+* Make sure no duplicate stack name when creating k8s bay
+* Improve the quickstart guide
+* Claim tested OS/version on quickstart guide
+* Neutron is required by Magnum not Ironic
+* Add more tests for test_objects.py
+* Add devstack neutron configuration link to quick start
+* Make the quickstart guide to work
+* Add a link for "Getting Started Guides"
+* Allow deletion of rc/service/pod if stack has been deleted
+* Delete bay independent of presence of heat stack
+* Rename "ackend" to "conductor"
+* Remove automatic deletion of failed stacks
+* Remove redundant information
+* Log error and exit if templates are not installed
+* Add note about heat finishing the job before continuing
+* Port NoExceptionTracebackHook from Ironic
+* Get rid of = and replace with space
+* Change Service name to magnum
+* Use sudo in installation of templates
+* Port parsable error middleware from Ironic
+* Fix _retrive_k8s_master_url
+* Rename `resource`_data/url attributes to manifest/manifest_url
+* Make replication controller delete working
+* Fix the typo in specs
+* Fix deprecated warning for oslo.serialization
+* Set replication controller name from rc manifest
+* Update developer quickstart
+* Implement bay deletion on api
+* Sync from oslo requirements
+* Add rc_data support for magnum replication controller
+* Implement service deletion
+* Set service name from service manifest
+* Enable kube.py get k8s api server port from baymodel
+* Implement pod deletion
+* Set pod name from pod manifest
+* Add parser for k8s manifest
+* Parse stack output value for bay
+* Remove apiserver_port attribute from bay_definition
+* Add tests for baymodel rest api
+* Fix the list of unset fields in baymodel
+* Add max_limit to sample config
+* Update the sequence for master_address and minion_addresses
+* Correct the typo in dev-quickstart.rst
+* Add tests for objects
+* Add apiserver_port to BayModel
+* Add some test for magnum objects
+* Remove inappropriate exceptions and their usages
+* Add use case: Permit use of native ReST APIs
+* Implement service creation
+* Implement pod creation
+* Fix dbapi method _add_baymodels_filters
+* Raise on deleting a referenced baymodel
+* Update README.rst
+* Docker: Pull Image Before Container Create
+* Adjusted README to add ReplicationController
+* Implements k8s resource creation/updating with data
+* Add some comments for delete logic in bay_create
+* Add master endpoint support to kube_utils.py
+* Add unit tests for dbapi of Node and Container
+* Add more unit test for replication controller
+* Add unit tests for the conductor AMQP API
+* Remove usage of BayLocked
+* Add missing Exceptions
+* Add bay_uuid for replication controller
+* Fix the opts in genconfig issue
+* Add test and refactoring on bay_create
+* Remove ctxt from RPC API
+* Remove ctxt from rpcapi for pod create
+* bay-create does not need ctxt on the rpcapi side
+* Add oslo concurrency namespace
+* Add tests for Pod and Service on dbapi
+* Add DB unit test for JSONEncodedDict and JSONEncodedList
+* Make bay, service and pod show call db directly
+* Make baymodel operations working
+* Add ctxt for all conductor APIs
+* Prune DB API
+* Add k8s replication support for magnum
+* Added multi-region/multi-cloud use case to specs
+* Added container network use case to specs
+* execute and logs API response should be JSON
+* Add tests for Bay dbapi and make them pass
+* Move out docker client logic from docker conductor
+* get container-execute to work
+* Get pause and unpause working
+* Remove type from bay object
+* Add tests for baymodel dbapi and make them pass
+* change old oslo.concurrency to oslo_concurrency
+* Add service_update for k8s
+* Service create need filename as parameter
+* Enable pod update using pod_defintion_url
+* Relocate and rename kubecli.py
+* Add replication controller to magnum db
+* Add bay_delete support for bay handler
+* Add bay_show support for bay handler
+* Remove get_service_by_instance
+* Add BayModel to magnum README
+* Update description for magnum service
+* Implement creating Bay using heat
+* Fix and cleanup baymodel dbapi
+* Fix keystoneclient and heatclient incompatibility
+* Fix context is not set correctly
+* Catch Docker API errors
+* Pod create need filename as parameter
+* Add hooks to obtain conductor api
+* Split up extracting auth.py file
+* Add more fields for service
+* Add more test for magnum API
+* Add more fields for Pod
+* container_delete should call docker.remove_container
+* Get container-list REST API working
+* Container Controller gets container uuid not name
+* Add more tests for magnum/common
+* Add some tests for app and auth
+* Remove objects.registry.py
+* Split test_all_objects.py to different files
+* Implement "docker execute" for magnum
+* Update container operation parameter to name
+* Fix RequestContext attributes
+* Flesh out some more docker container methods
+* Remove redundant version info for magnum objects
+* fix the wrong order of steps and missing password in db connection
+* Implement docker backend for magnum service
+* Implement container_list
+* Remove bay_list from bay_ironic.py and bay_k8s_heat.py
+* Implement bay_ironic.py
+* Add a hyper-link for quick start
+* Add a new API of get_by_pod_name for pod object
+* Update log message for kubecli.py
+* Update log message and some functions in kube.py
+* Fix external_network_id
+* Fix authentication
+* Fix auth_url type
+* Remove type and image_id replace with baymodel_id
+* Add a baymodel object
+* Add bay kubernetes_heat type WIP
+* Migrate to oslo.context
+* Reference proper file in cmd.conductor
+* Knitting Pod and Service object flow for Kubernetes backend
+* Update migration files to reflect new schema
+* Implement Service object Rest APIs
+* Add heat client
+* Add keystone client
+* Fix failing creation of MagnumException subclasses
+* Rename backend to conductor
+* Remove conductor
+* Rename the test_functional.py to the api
+* Add RPC backend service
+* Add bay uuid to Service Objects
+* Add documentation for a developer quickstart guide
+* Add a node object
+* Update db migration for pod
+* Add image_id and node_count to bay
+* Copy ironic/common files to magnum/common for RPC server
+* Remove common/rpc directory
+* Add dependencies from oslo-incubator for RPC services
+* Update openstack.common from oslo-incubator
+* Add bay uuid to pod model objects
+* Remove stray print which caused magnum-db-manage to fail
+* Workflow documentation is now in infra-manual
+* Add stubs for the container actions
+* removed unused file for root controller
+* Fix REST API and test case for Containers
+* Implement python interface to execute k8s CLI services
+* Remove crud in magnum/objects/sqlalchemy
+* Get the Pod REST API and tests working
+* Add missing exceptions in code borrowed from Ironic
+* Get HTTP Patch test working with Bay REST API
+* Look for tests only under magnum/tests directory
+* Remove cruft in api tree
+* Use versioned objects for Container objects
+* Use versioned objects for bays
+* Add object.service
+* Add object.pod
+* Add an object.container
+* Modify the object registry to support ver objects
+* Remove unnecessary model init call
+* Set max limit as required by versioned objects
+* Add objects/utils.py copied from Ironic
+* Copy Ironic's database model codebase
+* Add some common code copied from Ironic
+* Add versioned object dependency modules
+* Add versionutils from oslo-incubator
+* Add sqlalchemy subclass for Bay
+* Switch to keystonemiddleware
+* Fix dockerfile comment containing unrecognized argument 'host'
+* Split up Base and Query class
+* Add sqlalchemy subclass for Container
+* Update README for magnum
+* Add base files for sqlalchemy implementation
+* Replaces Solum with Magnum
+* Fix arguments to bay_create in AMQP
+* Change backends references to backend
+* Remove client installation from "Run" section
+* Call proper bay_create backend
+* Add Functional tests for bays and pods
+* fix awkward use of __len__()
+* Flesh out the Container REST API
+* Fix returning bad variable
+* Standardize on id in the REST API
+* Make pod in sync with bay
+* Avoid apt-get update getting cached in Dockerfile
+* Add simple objects interface and registry
+* Fix docker container
+* Fully implement bay object in ReST API
+* Fix python-pip package not found in Dockerfile
+* Fix README.rst code block
+* Add Heat and Ironic Bay placeholder Handlers
+* Authenticate all API calls
+* REST API for container actions
+* Add getting started guide to README.rst
+* Flesh out the container REST API a tiny bit
+* Get the root version and v1 REST API working
+* Tidy up the ReST API
+* Enable automatic sample config generation
+* Added Magnum Configuration file
+* Added doc string & solved pep8 issue
+* Add backend processor for AMQP
+* Update README.rst
+* Add exception.py
+* Add safe_utils to the source base
+* Initial import of prototyped interfaces
+* Add initial conductor API and service
+* Add RPC server code
+* Small Dockerfile changes
+* Dockerfile Improvements
+* Containers Service Spec
+* Add DockerFile to run magnum-api service
+* Modify gitignore to ignore cover
+* Do not say we support py3
+* Add Keystone authentication to rest API
+* Replaces Solum with Magnum. Added doc string for the Magnum API
+* Add context base module from oslo-incubator
+* Create a ReST API entrypoint
+* Add H302 to the ignored hacking rules list
+* Import oslo-incubator's logging library
+* Incorporate feedback from the Initial commit review
+* Initial commit from github (squashed)
+* Added .gitreview

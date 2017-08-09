@@ -1,0 +1,1658 @@
+CHANGES
+=======
+
+5.17.2
+------
+
+* rabbit: restore synchronous ack/requeue
+* Revert "rabbit: restore synchronous ack/requeue"
+* rabbit: restore synchronous ack/requeue
+* Updated from global requirements
+* tests: fix MultiStrOpt value
+* Updated from global requirements
+* rabbit: make ack/requeue thread-safe
+* Updated from global requirements
+* pbr.version.VersionInfo needs package name (oslo.xyz and not oslo_xyz)
+
+5.17.1
+------
+
+* Return list of addresses for IPV4 and IPV6
+* [zmq] Failure of dynamic connections fanout
+* Update UPPER_CONSTRAINTS_FILE for stable/ocata
+* Update .gitreview for stable/ocata
+
+5.17.0
+------
+
+* [zmq] Dynamic connections failover
+* [zmq] Fix py35 gate
+* [zmq] Use more stable configuration in voting job
+* Remove references to Python 3.4
+* [AMQP 1.0] Fix SSL client authentication
+* [zmq] Support py35 testenv
+* [zmq] Distinguish Round-Robin/Fanout socket sending mode
+* tests: cleanup monkey path
+* [AMQP 1.0] Resend messages that are released or modified
+* gate: Remove useless files
+* [zmq] Redis TTL for values
+* eventlet is no more a hard dependency
+* [AMQP 1.0] Propagate authentication errors to caller
+* ensure we set channel in lock
+* tox: use already installed kafka if present
+* kafka: remove no really implemented feature
+* kafka: return to poller when timeout is reach
+* kafka: Don't hide unpack/unserialize exception
+* kafka: timeout is in milliseconds
+* kafka: disable batch for functional tests
+* kafka: Remove Producer singleton
+* Moving driver to new kafka-python version
+* tox: rename zeromq target
+* tests: make rabbit failover failure more helpful
+* [zmq] Refactor make `zmq_address.target_to_key` a universal method
+* Updated from global requirements
+* [zmq] Restore static direct connections
+* reject when skipping failed messages
+* fix one typo
+* [AMQP 1.0] Setup the amqp1 test environment on ubuntu
+* test_rabbitmq: remove dead code
+
+5.16.0
+------
+
+* Updated from global requirements
+* Replace mox with mock
+* tests: fix test-setup.sh
+* tests: remove useless debug
+* [rabbit] Log correct topic on cast/call
+
+5.15.0
+------
+
+* Updated from global requirements
+* kafka separate unit/functionnal tests
+* Add bindep.txt/test-setup.sh to prepare the system
+* [zmq] Matchmaker redis available time
+
+5.14.0
+------
+
+* [AMQP 1.0] Simplify the I/O event loop code
+* [zmq] Support message versions for rolling upgrades
+* [zmq] Fix non voting gate jobs
+* Fix transport url with empty port
+* Remove ordering assumption from functional test
+* Periodically purge sender link cache
+
+5.13.0
+------
+
+* Remove small job timeout
+* Register opts if we're going to check conf.transport_url in parse()
+* [doc] Fix three typos
+* [zmq] Fix zmq-specific f-tests from periodic hangs
+* [zmq] Fix functional gates proxy/pub-sub
+* Show team and repo badges on README
+* [zmq] Send fanouts without pub/sub in background
+* Use assertGreater(len(x), 0) instead of assertTrue(len(x) > 0)
+* Add Constraints support
+* Replace six.iteritems() with .items()
+* [zmq] Fix configuration for functional gate job
+* Document the transport backend driver interface
+* Fix a docstring typo in impl_pika.py
+* [sentinel] Move master/slave discovering from __init__
+* rabbit: on reconnect set socket timeout after channel is set
+* Updated from global requirements
+* [zmq] Don't create real matchmaker in unit tests
+* update srouce doc pika_driver.rst the charactor then to than
+* Remove useless logging import statements
+* rabbit: Avoid busy loop on epoll_wait with heartbeat+eventlet
+* [zmq] Refactor receivers
+* [zmq] Cleanup changes to zmq-specific f-tests
+* Updated from global requirements
+* This patch cleans up the 'notification_listener.rst' documetion by removing some class which don't exist and adding some function which exist in current source
+* Remove nonexistent functions from documentation
+* Replace retrying with tenacity
+
+5.12.0
+------
+
+* Updated from global requirements
+* Updated from global requirements
+* Remove the temporary hack in code
+* Using assertIsNone() instead of assertEqual(None)
+* Change assertTrue(isinstance()) by optimal assert
+* [zmq] Don't fallback to topic if wrong server specified
+* [TrivialFix] Replace old style assertions with new style assertions
+* [TrivialFix] Fix typo in oslo.messaging
+* [simulator] Fix transport_url usage
+* [simulator] Fix a message length generator usage
+* Update .coveragerc after the removal of respective directory
+* [sentinels] Fix hosts extracting and slaves usage
+* [zmq] SUB-PUB local proxy
+
+5.11.0
+------
+
+* Fix typos in addressing.py and setup.cfg
+* Updated from global requirements
+* Record length of queues for ReplyWaiters
+* rabbit: Don't prefetch when batch_size is set
+* [AMQP 1.0] Avoid unnecessary thread switch on ack
+* [zmq] Fix issues with broken messages on proxies
+* [zmq] Maintain several redis hosts
+* Removed redundant 'the'
+* Fix a typo in server.py
+* [document] The example which is written in the developer guide of 'Notification Listener' doesn't work
+* Enable release notes translation
+* cast() and RPC replies should not block waiting for endpoint to ack
+* [simulator] Automatic stopping of rpc-servers
+* Fix whitespace formatting issue
+* Properly deserializes built-in exceptions
+* [zmq] Fix send_cast in AckManager
+* Remove debug logs from fast path
+* [zmq] Routing table refactoring, dynamic direct connections
+* Fix simulator bool command line args
+* Replace 'the' with 'to' in docstring
+* Remove default=None when set value in Config
+* [zmq] Add acks from proxy for PUB/SUB messages
+* [zmq] Refactor consumers and incoming messages
+* [zmq] Make second ROUTER socket optional for proxy
+* Use method fetch_current_thread_functor from oslo.utils
+* [zmq] Fix ZmqSocket.send_string
+* [zmq] Remove unused methods from executors
+* [zmq] Added a processing to handle ImportError in Redis plugin of Matchmaker
+* modify the home-page info with the developer documentation
+* Set the valid choices for the rabbit login methods
+* [zmq] Unify delimeters
+* [zmq] Fix fanout without PUB/SUB
+* [zmq] Send immediate ack after message receiving
+* Corrects documentation typo
+* [zmq] Remove unnecessary subscriptions from SubConsumer
+* Fixups to the inline documentation
+* Fix consuming from unbound reply queue
+* Add configurable serialization to pika
+* [zmq] Remove ZmqSocket.close_linger attribute
+* [zmq] Make ZMQ TCP keepalive options configurable
+* [zmq] Fix TestZmqAckManager periodic failure
+* [zmq] Make ThreadingPoller work with ZmqSocket
+* Fix notify filter when data item is None
+* [zmq] Rename rpc_cast_timeout option
+* [AMQP 1.0] Update setup test environment dispatch router backend
+* Allow dispatcher to restrict endpoint methods
+* [AMQP 1.0] Add Acknowledgement and Batch Notification Topics
+* Update reno for stable/newton
+* [kafka] invoke TypeError exception when 'listen()' method of KafkaDriver is called
+* [zmq] Proxy has to skip broken multi-part message
+* Add Documentation String for PikaDriver
+* [zmq] Implement retries for unacknowledged CALLs
+
+5.10.0
+------
+
+* [AMQP 1.0] Make the default settlement behavior configurable
+* [zmq] Eliminate GreenPool from GreenPoller
+* Avoid sending cast after server shutdown in functional test
+* [zmq] Update ZMQ-driver documentation
+* Updated from global requirements
+
+5.9.0
+-----
+
+* [zmq] Add --log-file option to zmq-proxy
+* Updated from global requirements
+* [zmq] Host name and target in socket identity
+
+5.8.0
+-----
+
+* [zmq] Make zmq_immediate configurable
+* Fix calculating of duration in simulator.py
+* [zmq] Redis unavailability is not critical
+* [zmq] Discover new publisher proxy
+* Clean outdated docstring and comment
+* [AMQP 1.0] small fixes to improve timer scalability
+* Add docstring for get_notification_transport
+* Add warning when credential is not specified for each host
+* Updated from global requirements
+* [zmq] Implement retries for unacknowledged CASTs
+* Fix the help info format
+
+5.7.0
+-----
+
+* Move zmq driver options into its own group
+* Log a warning when connected to a routable message bus
+* Updated from global requirements
+* [AMQP 1.0] Add link credit configuration options
+* Updated from global requirements
+* [AMQP 1.0] AMQP 1.0 Driver User Guide Document update
+* AMQP 1.0 Driver Architecture Overview Document
+* Remove the max_send_retries option
+
+5.6.0
+-----
+
+* Fix pika functional tests
+* [zmq] Use zmq.IMMEDIATE option for round-robin
+* fix a typo in impl_rabbit.py
+* Updated from global requirements
+* [AMQP 1.0] Cancel response treatment for detached link
+* Fix syntax error on notification listener docs
+* Delete fanout queues on gracefully shutdown
+* Set the default link property to allow message acks
+* Properly cleanup listener and driver on simulator exit
+* Fix a timer leak in the AMQP 1.0 driver
+* [zmq] Let proxy serve on a static port numbers
+* Introduce TTL for idle connections
+* Fix parameters of assertEqual are misplaced
+* Fix misstyping issue
+* Updated from global requirements
+* Updated from global requirements
+* notify: add a CLI tool to manually send notifications
+* Add deprecated relnote for max_retries rabbit configuration option
+* [zmq] Add py34 configuration for functional tests
+* [zmq] Merge publishers
+* Add Python 3.5 classifier and venv
+* Replace assertEqual(None, *) with assertIsNone in tests
+* Updated from global requirements
+* [zmq] Use json/msgpack instead of pickle
+* [AMQP 1.0] Add configuration parameters for send message deadline
+* [zmq] Refactor publishers
+* Re-factor the AMQP 1.0 addressing semantics
+* Add Python 3.4 functional tests for AMQP 1.0 driver
+* tests: allow to override the functionnal tests suite args
+* [zmq] Additional configurations for f-tests
+* Remove discover from test-requirements
+* tests: rabbitmq failover tests
+* [AMQP 1.0] Add acknowledge and requeue handling for incoming message
+* Imported Translations from Zanata
+* Updated from global requirements
+* Remove rabbitmq max_retries
+* Config: no need to set default=None
+
+5.5.0
+-----
+
+* [zmq] Fix message sending when using proxy and not using PUB/SUB
+* AMQP 1.0 - create only one Cyrus SASL configuration for the tests
+* Updated from global requirements
+* Refactor AMQP 1.0 command task to support timers
+* [zmq] Remove redundant Envelope class
+* [zmq] Properly stop ZmqServer
+* Refactor link management to support link recovery
+* [Trival] fix a typo nit
+* [zmq] Fix backend router port for proxy
+
+5.4.0
+-----
+
+* [zmq] Remove unused Request.close method
+* Add query paramereters to TransportURL
+* Fix temporary problems with pika unit tests
+* [zmq] Periodic updates of endpoints connections
+
+5.3.0
+-----
+
+* Improve the impl_rabbit logging
+* Modify info of default_notification_exchange
+* Imported Translations from Zanata
+* [zmq] Remove rpc_zmq_concurrency option
+* [zmq] Fix timeout in ThreadingPoller.poll
+* Fix typo: 'olso' to 'oslo'
+* Updated from global requirements
+* [zmq] Don't skip non-direct message types
+* [zmq] Refactoring of zmq client
+* [impl_rabbit] Remove deprecated get_expiration method
+
+5.2.0
+-----
+
+* Updated from global requirements
+* [AMQP 1.0] Randomize host list connection attempts
+* Modify the TransportURL's docstrings
+* Fix problems after refactoring RPC client
+* deprecate usage of transport aliases
+* Documents recommended executor
+* kafka: Deprecates host, port options
+* Updated from global requirements
+* Add reno for releasenotes management
+* Remove logging from serialize_remote_exception
+* [kafka] Add several bootstrap servers support
+* Add the proper branch back to .gitreview
+* Fix consuming from missing queues
+* Fix bug with version_cap and target.version in RPCClient
+* Make TransportURL.parse aware of transport_url
+* rabbit: Deprecates host, port, auth options
+* Remove deprecated localcontext
+* zeromq: Deprecates host, port options
+* Reorganize the AMQP 1.0 driver source files
+* Implements configurable connection factory
+* The need to wait for a given time is no longer valid in 3.2+
+* [zmq] Reduce object serialization on router proxy
+* Updated from global requirements
+* [zmq] Add backend ROUTER to increase bandwidth
+* [zmq] Add Sentinel instructions to deployment guide
+* Rabbit driver: failure of rpc-calls with float timeout
+
+5.1.0
+-----
+
+* Use eventletutils to check is_monkey_patched
+* remove feature branch from master .gitreview
+* [zmq] Second router proxy doesn't dispatch messages properly
+* Add parse.unquote to transport_url
+* Fix simulator stat printing
+* Use single producer and to avoid an exchange redeclaration
+* [zmq] Redesign router proxy
+* Add feature branch to .gitreview file
+* Remove Beta development status from classifiers
+
+5.0.0
+-----
+
+* Updated from global requirements
+* Fixes sumulator.py signal_handler logic
+* Refactor RPC client
+* Send notify if notify=True passed
+* Improves exception handling and logging
+* Implements pika thread safe connection
+* Fix incorrect parameters order in assertIn call
+* Update the RPC cast() documentation
+* Fix unstable work of cast func tests
+* [zmq] Reduce threading from python proxy
+* Imported Translations from Zanata
+* use thread safe fnmatch
+* Refactor base interfaces
+* Gracefully handle missing TCP_USER_TIMEOUT
+* Simulator: handle SIGINT and SIGTERM signals
+* Updated from global requirements
+* Log the unique_id in listener than msg_id
+* serializer: deprecate RequestContextSerializer
+* Don't set html_last_updated_fmt without git
+* Amqp driver send method temporary work-around
+* Updated from global requirements
+* Updated from global requirements
+* Allow simulator to be launched from arbitrary directory
+* [zmq] Fix cast message loss in simulator
+* Make transport_url config option secret
+* Fix oslo.messaging for Mac OS X
+* Refactor driver's listener interface
+* [kafka] Do not remove kafka_client during reset
+* Updated from global requirements
+* Replace expriration_time by timer
+* [zmq] Reduce number of connections
+* Move server related logic from dispatchers
+* Fix typos in Oslo.messaging files
+* Fix Break in Windows platforms
+* [py34] replace file() with open()
+* Claim python3 compatability for Newton onwards
+* Simulator: collect error stats
+* Simulator: make parameter wait_after_msg float
+* Update CheckForLoggingIssues hacking rule from keystone
+* Simulator: align stats to whole seconds
+* Support python3 in simulator.py
+* Fix typo passend should be passenv
+* Always set all socket timeouts
+* Add a py34 functional test for rabbit
+* Small fixes
+* Use only unique topics for the Kafka driver
+* [zmq] Refactoring consumer side
+* [Kafka] Ensure a topics before consume messages
+* Fix problems during unstable network
+* Missing version parameter in can_send_version()
+* Bump rabbit_transient_queues_ttl to 30 mins
+* Explicitly exclude tests from bandit scan
+* Fix Notification listener blocking behavior
+* Pika: fix sending fanout messages
+* Revert "Ensure the json result type is bytes on Python 3"
+* Replace deprecated LOG.warn with LOG.warning
+* Simulator: store results in JSON format
+* Simulator: calculate message latency statistics
+* Fix the driver shutdown/failover logic
+* Always delete exc_info tuple, even if reply fails
+* Do not leak Listeners on failover
+* Simulator: always use random messages for time-bound tests
+* Fallback if git is absent
+* Simulator: implement own random generator instead of scipy
+* Simulator: fix batch-notify-server command
+* Work with kombu from upstream
+* Fail quickly if there on bad password
+* [zmq] Dynamic port range is ignored
+* [zmq] Implement Response and Envelope classes
+* [kafka] Use notification priority
+* Make simulator more asynchronous
+* Adds exhange declaration on sender's side
+* Updated from global requirements
+
+4.5.0
+-----
+
+* amqp: log time elapsed between receiving a message and replying
+* [zmq] Matchmaker redis set instead of list
+* Allow Notifier to have multiple topics
+* Fix a minor syntax error in a log statement
+* Use PortOpt on kafka_default_port
+* Added duration to notify server/client
+* Ensure the json result type is bytes on Python 3
+* Improves logging
+* Use more efficient mask_dict_password to mask password
+* Improves poller's stop logic
+* Typos of 'recieve' instead of 'receive'
+* [zmq] Support transport URL
+* Get kafka notifications to work with kafka-python 0.9.5
+* Move server's logic from executors
+* Avoid hardcoding the notification topic and specify driver
+* [zmq] Fix cinder create volume hangs
+* Py3: Replace filter()/map() if a list is needed
+* Py3: Switch json to oslo_serialization
+* Updated from global requirements
+
+4.4.0
+-----
+
+* Updated from global requirements
+* Option rpc_response_timeout should not be used in zmq driver
+* Remove duplicate requirements
+* Reduce number of rabbitmq consumer tag used
+* Documents the mirror queue policy of RabbitMQ 3.0
+* fix override_pool_size
+* Remove executor callback
+* Log format change in simulator.py
+* Fix kombu accept different TTL since version 3.0.25
+* .testr.conf: revert workaround of testtools bug
+* Remove aioeventlet executor
+
+4.3.0
+-----
+
+* simulator.py improvements
+* rabbit: improvements to QoS
+* Updated from global requirements
+* Remove server queue creating if target's server is empty
+* Updated from global requirements
+* Correctly set socket timeout for publishing
+* Updated from global requirements
+* Use more secure yaml.safe_load() instead of yaml.load()
+* [kombu] Implement experimental message compression
+* [zmq] Multithreading access to zmq sockets
+* [zmq] ZMQ_LINGER default value
+* Remove matchmaker_redis configs from [DEFAULT]
+* Refactors base classes
+
+4.2.0
+-----
+
+* Switches pika driver to eager connection to RabbitMQ
+* Remove bandit.yaml in favor of defaults
+* [zmq] Use PUSH/PULL for direct CAST
+* Updated from global requirements
+* support ability to set thread pool size per listener
+* Fix misspellings
+* [zmq] RPC timeout for CAST
+* Enable pep8 on oslo_messaging/tests
+
+4.1.0
+-----
+
+* [zmq] Fix slow down
+* Update translation setup
+* Let PikaDriver inherit base.BaseDriver
+* Improve simulator.py
+* Fixed some warnings about imports and variable
+* test: Don't test message's reply timeout
+* Updated from global requirements
+* Adds document and configuration guide
+* [zmq] Support KeyboardInterrupt for broker
+* [zmq] Reduce proxy for direct messaging
+* Fixed a couple of pep8 errors/warnings
+* assertEquals is deprecated, use assertEqual
+* Updated from global requirements
+* Updated from global requirements
+* Trivial: Remove unused logging import
+* replace string format arguments with function parameters
+* Adds params field to BlockingConnection object
+* Python 3 deprecated the logger.warn method in favor of warning
+* Fix URL in warning message
+* [zmq] Implement background redis polling from the client-side
+* rabbit: Add option to configure QoS prefetch count
+* rabbit: making interval_max configurable
+* Imported Translations from Zanata
+* Updated from global requirements
+* Logging rpc client/server targets
+* Updated from global requirements
+* Topic/server arguments changed in simulator.py
+* [zmq] Update zmq-guide with new options
+* [zmq] Listeners management cleanup
+* Drop H237,H402,H904 in flake8 ignore list
+* Replace deprecated library function os.popen() with subprocess
+* py3: Replaces xrange() with six.moves.range()
+* Kombu: make reply and fanout queues expire instead of auto-delete
+* fix .gitreview - bad merge from pika branch
+* Explicitly add pika dependencies
+* Add duration option to simulator.py
+* [zmq] Added redis sentinel HA implementation to zmq driver
+* rabbit: set interval max for auto retry
+* [zmq] Add TTL to redis records
+* Updated from global requirements
+* make enforce_type=True in CONF.set_override
+* Use assertTrue/False instead of assertEqual(T/F)
+* Improvement of logging acorrding to oslo.i18n guideline
+* Updated from global requirements
+* rabbit: fix unit conversion error of expiration
+* list_opts: update the notification options group
+* rabbit: Missing to pass parameter timeout to next
+* Fix formatting of code blocks in zmq docs
+* Adds unit tests for pika_poll module
+* Updated from global requirements
+* [zmq] Switch notifications to PUB/SUB pattern
+* Optimize sending of a reply in RPC server
+* Optimize simulator.py for better throughput
+* Remove stale directory synced from oslo-incubator
+* Fix wrong bugs report URL in CONTRIBUTING
+* zmq: Don't log error when can't import zmq module
+
+4.0.0
+-----
+
+* assertIsNone(val) instead of assertEqual(None,val)
+* Adds tests for pika_message.py
+* [zmq] PUB-SUB pipeline
+* Updated from global requirements
+* Fixes conflicts after merging master
+* Updated from global requirements
+* Move to debug a too verbose log
+* Cleanup parameter docstrings
+* Removes MANIFEST.in as it is not needed explicitely by PBR
+* Revert "default of kombu_missing_consumer_retry_timeout"
+* Don't trigger error_callback for known exc
+* Adds comment for pika_pooler.py
+* Improves comment
+* Fix reconnection when heartbeat is missed
+* Revert "serializer: deprecate RequestContextSerializer"
+* Fix notifier options registration
+* notif: Check the driver features in dispatcher
+* batch notification listener
+* Updated from global requirements
+* Adds comment, updates pika-pool version
+* Preparations for configurable serialization
+* creates a dispatcher abstraction
+* Remove unnecessary quote
+* Fix multiline strings with missing spaces
+* Properly skip zmq tests without ZeroMQ being installed
+* kombu: remove compat of folsom reply format
+* Follow the plan about the single reply message
+
+3.1.0
+-----
+
+* default of kombu_missing_consumer_retry_timeout
+* rename kombu_reconnect_timeout option
+* Skip Cyrus SASL tests if proton does not support Cyrus SASL
+* setUp/tearDown decorator for set/clear override
+* Adds comments and small fixes
+* Support older notifications set_override keys
+* Don't hold the connection when reply fail
+* doc: explain rpc call/cast expection
+* Add a driver for Apache Kafka
+* Option group for notifications
+* Move ConnectionPool and ConnectionContext outside amqp.py
+* Use round robin failover strategy for Kombu driver
+* Revert "serializer: remove deprecated RequestContextSerializer"
+* Updated from global requirements
+* [zmq] Random failure with ZmqPortRangeExceededException
+* [zmq] Driver optimizations for CALL
+* Updated from global requirements
+* Use oslo_config new type PortOpt for port options
+* serializer: remove deprecated RequestContextSerializer
+* Add log info for AMQP client
+* Updated from global requirements
+* Provide missing parts of error messages
+* Add Warning when we cannot notify
+* ignore .eggs directory
+* serializer: deprecate RequestContextSerializer
+* middleware: remove oslo.context usage
+* Removes additional select module patching
+* Fix delay before host reconnecting
+
+3.0.0
+-----
+
+* Remove qpidd's driver from the tree
+* Provide alias to oslo_messaging.notify._impl_messaging
+* make pep8 faster
+* Updated from global requirements
+* Robustify locking in MessageHandlingServer
+* Updated from global requirements
+* cleanup tox.ini
+
+2.9.0
+-----
+
+* [zmq] Add config options to specify dynamic ports range
+* [zmq] Make bind address configurable
+* [zmq][matchmaker] Distinguish targets by listener types
+* [zmq] Update zmq-deployment guide according to the new driver
+* Implements more smart retrying
+* Make "Connect(ing|ed) to AMQP server" log messages DEBUG level
+* Updated from global requirements
+* Decouple transport for RPC and Notification
+* Fixing the server example code Added server.stop() before server.wait()
+
+2.8.1
+-----
+
+* Revert "Robustify locking in MessageHandlingServer"
+* Splits pika driver into several files
+* Fixes and improvements after testing on RabbitMQ cluster:
+* Move supported messaging drivers in-tree
+
+2.8.0
+-----
+
+* Add a "bandit" target to tox.ini
+* Fix fanout exchange name pattern
+* Updated from global requirements
+* Remove a useless statement
+* Robustify locking in MessageHandlingServer
+* Use "secret=True" for password-related options
+* Imported Translations from Zanata
+* Modify simulator.py tool
+* Fix target resolution mismatch in neutron, nova, heat
+* Use yaml.safe_load instead of yaml.load
+* Trivial locking cleanup in test_listener
+* Remove unused event in ServerThreadHelper
+* Fix a race calling blocking MessageHandlingServer.start()
+* Fix assumptions in test_server_wait_method
+* Rename MessageHandlingServer._executor for readability
+* Implements rabbit-pika driver
+* bootstrap branch
+* Updated from global requirements
+
+2.7.0
+-----
+
+* Updated from global requirements
+* Some executors are not async so update docstring to reflect that
+* Updated from global requirements
+* Updated from global requirements
+* Small grammar messaging fix
+* Use a condition (and/or a dummy one) instead of a lock
+* Updated from global requirements
+
+2.6.1
+-----
+
+* Fix failures when zmq is not available
+
+2.6.0
+-----
+
+* AMQP1.0: Turn off debug tracing when running tox
+* Fix typo in rpc/server.py and notify/listener.py
+* Fix a typo in server.py
+* Use the hostname from the Transport for GSSAPI Authentication
+* Adapt functional tests to pika-driver
+* ConfFixture should work even when zmq/redis is not present
+* Added matchmaker timeouts and retries
+* AMQP 1.0: Properly initialize AMQP 1.0 configuration options
+* Updated from global requirements
+* Workaround test stream corruption issue
+* Skip Redis specific tests when it is not installed
+* Port the AMQP 1.0 driver to Python 3
+* rabbit: shuffle hosts before building kombu URL
+* Updated from global requirements
+* Remove unnecessary rpc_zmq_port option
+* Non-blocking outgoing queue was implemented
+* Allow custom notification drivers
+* Fix the home-page value with Oslo wikipage
+* Include changelog/history in docs
+* Fix spelling typo in output
+* Change ignore-errors to ignore_errors
+* Unsubscribe target listener when leaving
+* Add SASL configuration options for AMQP 1.0 driver
+* Updated from global requirements
+* Fix a few leaks in the AMQP 1.0 driver
+* Disable ACL if authentication cannot be performed
+* Imported Translations from Zanata
+* Enhance start/stop concurrency race condition fix
+* Updated from global requirements
+* Extend logging in amqpdriver
+* Remove useless additional requirement file
+* Fix AMQP 1.0 functional and unit test failures
+* Provide the executor 'wait' function a timeout and use it
+
+2.5.0
+-----
+
+* Imported Translations from Transifex
+* Update path to subunit2html in post_test_hook
+* Fix typos in a document and a comment
+* Updated from global requirements
+* Imported Translations from Transifex
+* Updated from global requirements
+* Port the AMQP1 driver to new Pyngus SASL API
+* Updated from global requirements
+* Imported Translations from Transifex
+* Updated from global requirements
+* Add config options to the documentation
+* Updated from global requirements
+
+2.4.0
+-----
+
+* Mask passwords when logging messages
+* Updated from global requirements
+* Use proper translating helper for logging
+* Improve simulator.py
+
+2.3.0
+-----
+
+* Imported Translations from Transifex
+* Added trace logging for debuggability
+* Log warning instead of raising RuntimeError
+* Use pickle instead of jsonutils for serialization
+* Updated from global requirements
+* Acknowledgements implementation
+* Replace 'M' with 'Mitaka'
+* Add if condition for random.shuffle
+* Fix message missing after duplicated message error
+* Fix fork-related issues
+* FIx CPU time consuming in green_poller poll()
+* Documenting main driver classes
+* Notifier implementation
+* Imported Translations from Transifex
+* Fix BaseDriver.listen_for_notifications() signature
+* ZMQ: Minor matchmaker improvement
+* Imported Translations from Transifex
+* Updated from global requirements
+* Add unit tests for zmq_async
+
+2.2.0
+-----
+
+* Imported Translations from Transifex
+* ZMQ: `Lazify` driver code
+* Ensures that some assumptions are true
+* Remove oslo namespace package
+* Register matchmaker_redis_opts in RedisMatchMaker
+* Imported Translations from Transifex
+* Updated from global requirements
+* ZMQ: Removed unused code and tests
+* ZMQ: Run more functional tests
+* Get rid of proxy process in zmq
+* Fully use futurist code-base to abstract concurrent.futures away
+
+2.1.0
+-----
+
+* Imported Translations from Transifex
+* Updated from global requirements
+* Close sockets properly
+* add plugin documentation for executors and notifiers
+* Allows to change defaults opts
+* Target direct usage
+* Move zmq tests into a subdirectory
+
+2.0.0
+-----
+
+* Allow a forward slash as a part of the user/password
+* Update 'impl_eventlet' docstring to reflect actual impl
+* Updated from global requirements
+* tests: adjusts an expected time for gate
+* Updated from global requirements
+* Ensure callback variable capture + cleanup is done correctly
+* Remove oslo namespace package
+* ZMQ: Initial matchmaker implementation
+* Updated from global requirements
+* Fix threading zmq poller and proxy
+* Don't install pyngus on Python 3
+* Fix amqp connection pool leak in ConnectionContext
+* Executor docstring & attribute tweaks
+
+1.17.1
+------
+
+* Use the warn_eventlet_not_patched util function
+* Drop use of 'oslo' namespace package
+
+1.17.0
+------
+
+* Updated from global requirements
+* Add unit tests for zmq_serializer
+* Updated from global requirements
+* Fix work with timeout in CallRequest.receive_reply()
+* Fix mock use for mock 1.1.0
+* Make heartbeat the default
+* ZMQ: Allow to raise remote exception
+* Local Fanout implementation
+* Drop use of 'oslo' namespace package
+* Use oslo.log in the zmq receiver
+* Imported Translations from Transifex
+* Remove usage of contentmanager for executors
+* Verify that version in 'prepare' is valid
+
+1.16.0
+------
+
+* Fix qpid's functional gate
+* Don't reply when we known that client is gone
+* Remove py26 artefacts from oslo.messaging code
+* Remove 2.6 classifier
+* Imported Translations from Transifex
+* Add WebOb and greenlet to requirements
+* Use ServiceBase from oslo.service as a parent class
+* Manual update the requirements
+* Deprecated impl_qpid
+* Add a missed `raise` statement
+* Remove qpid-config call
+* Initial commit for new zmq driver implementation
+* Add tox target to find missing requirements
+* Fix qpid's functional gate
+* Imported Translations from Transifex
+* fix typo
+* Correct RPCVersionCapError message
+
+1.15.0
+------
+
+* Drop use of 'oslo' namespace package
+* Update .gitreview for feature/zmq
+* Use `inferred=True` by default
+* Enable amqp's protocol unit tests everywhere
+* Switch badges from 'pypip.in' to 'shields.io'
+* Don't use devstack to setup our functional env
+* Switch to warnings module instead of versionutils
+* Updated from global requirements
+* Get mox from mox3, not from six.moves
+* rabbit: Add logging on blocked connection
+* Provide better detection of failures during message send
+
+1.14.0
+------
+
+* Reduce `magic` conf attribute usage
+* Imported Translations from Transifex
+* Remove leftover oslo.config reference
+* replace rpc_response_timeout use in rabbit driver
+* Enable `fanout_target` scenarios in test_impl_rabbit
+* Add drivers to the documentation
+
+1.13.0
+------
+
+* Ensure rpc_response_timeout is registered before using it
+* rabbit: test for new reply behavior
+
+1.12.0
+------
+
+* Fix condition in _publish_and_retry_on_missing_exchange()
+* Set places to 0 in self.assertAlmostEqual()
+* Allow to remove second _send_reply() call
+* Don't create a new channel in RabbitMQ Connection.reset()
+* Imported Translations from Transifex
+* Adding Publisher Acknowledgements/confirms
+* Fix deprecated_group of rpc_conn_pool_size
+* Refactor processing reply in ReplyWaiter
+* rabbit: doc fixes
+* consumer connections not closed properly
+
+1.11.0
+------
+
+* rabbit: smart timeout on missing exchange
+* rabbit: Fix message ttl not work
+* rabbit: remove publisher classes
+* rabbit: Set timeout on the underlying socket
+* Remove stale copy of context.py
+* Add one more functional test for MessagingTimeout
+* Fix list_opts test to not check all deps
+* make it possible to import amqp driver without dependencies
+* Remove outdated release notes
+* rabbit: smarter declaration of the notif. queue
+* rabbit: redeclare consumers when ack/requeue fail
+* Bump kombu and amqp requirements
+* Updated from global requirements
+* rabbit: fix exception path in queue redeclaration
+* rabbit: fix consumers declaration
+* rabbit: remove unused consumer interfaces
+* rabbit: remove unused code
+* rabbit: Remove unused stuffs from publisher
+* Remove support for Python 3.3
+* Updated from global requirements
+* Add RequestContextSerializer
+* Updated from global requirements
+* rabbit: fixes a logging issue
+* rabbit/qpid: simplify the consumer loop
+* Updated from global requirements
+* Imported Translations from Transifex
+* Fix missing space in help text
+* zmq: Add support for ZmqClient pooling
+* Enable eventlet dependency on Python 3
+* Add JsonPayloadSerializer serializer
+* Fix test_matchmaker_redis on Python 3
+* Disable and mark heartbeat as experimental
+
+1.10.0
+------
+
+* Uncap library requirements for liberty
+* Port ZMQ driver to Python 3
+* Use unittest.mock on Python 3
+* Enable redis test dependency on Python 3
+* Remove amqp driver 'unpacked content' logging
+* Updated from global requirements
+* Add pypi download + version badges
+* Fix TypeError caused by err_msg formatting
+* Fix typo in oslo_messaging/_drivers/protocols/amqp/opts.py
+* Document notification_driver possible values
+* Do not skip functional test for amqp driver
+* Add functional test for notify.logger
+* Properly deserialize received AMQP 1.0 messages
+* Make notify driver messaging play well with publish_errors
+* Imported Translations from Transifex
+
+1.9.0
+-----
+
+* Use the oslo_utils stop watch in decaying timer
+* Updated from global requirements
+* Remove 'UNIQUE_ID is %s' logging
+* Sync with latest oslo-incubator
+* rabbit: fix ipv6 support
+* Create a unique transport for each server in the functional tests
+* Publish tracebacks only on debug level
+* Add pluggability for matchmakers
+* Make option [DEFAULT]amqp_durable_queues work
+* Reconnect on connection lost in heartbeat thread
+* Don't raise Timeout on no-matchmaker results
+* Imported Translations from Transifex
+* cleanup connection pool return
+* rabbit: Improves logging
+* fix up verb tense in log message
+* rabbit: heartbeat implementation
+* Fix changing keys during iteration in matchmaker heartbeat
+* Minor improvement
+* ZeroMQ deployment guide
+* Fix a couple typos to make it easier to read
+* Tiny problem with notify-server in simulator
+* Fix coverage report generation
+* Add support for multiple namespaces in Targets
+* tools: add simulator script
+* Deprecates the localcontext API
+* Update to oslo.context
+* Remove obsolete cross tests script
+* Fix the bug redis do not delete the expired keys
+
+1.8.0
+-----
+
+* Updated from global requirements
+* NotifyPublisher need handle amqp_auto_delete
+* Fix matchmaker_redis ack_alive fails with KeyError
+* Properly distinguish between server index zero and no server
+
+1.7.0
+-----
+
+* Add FAQ entry for notifier configuration
+* rabbit: Fix behavior of rabbit_use_ssl
+* amqp1: fix functional tests deps
+* Skip functional tests that fail due to a qpidd bug
+* Use import of zmq package for test skip
+* Remove unnecessary log messages from amqp1 unit tests
+* Include missing parameter in call to listen_for_notifications
+* Fix the import of the driver by the unit test
+* Add a new aioeventlet executor
+* Add missing unit test for a recent commit
+* Add the threading executor setup.cfg entrypoint
+* Move each drivers options into its own group
+* Refactor the replies waiter code
+* Imported Translations from Transifex
+* Fix notifications broken with ZMQ driver
+* Gate functionnal testing improvements
+* Treat sphinx warnings as errors
+* Move gate hooks to the oslo.messaging tree
+* Set the password used in gate
+* Update README.rst format to match expectations
+
+1.6.0
+-----
+
+* Declare DirectPublisher exchanges with passive=True
+* Updated from global requirements
+* Expose _impl_test for designate
+* Update Oslo imports to remove namespace package
+* Speedup the rabbit tests
+* Fix functionnal tests
+* kombu: fix driver loading with kombu+qpid scheme
+* Fixed docstring for Notifier
+* zmq: Refactor test case shared code
+* Add more private symbols to the old namespace package
+* Updated from global requirements
+* Adjust tests for the new namespace
+* Fixes test_two_pools_three_listener
+* Add TimerTestCase missing tests case
+* Ensure kombu channels are closed
+* fix qpid test issue with eventlet monkey patching
+* Make setup.cfg packages include oslo.messaging
+* Upgrade to hacking 0.10
+* Implements notification-dispatcher-filter
+* Add oslo.messaging._drivers.common for heat tests
+* Port zmq driver to Python 3
+* Make sure zmq can work with redis
+* fix qpid test issue with eventlet monkey patching
+* Move files out of the namespace package
+* Add a info log when a reconnection occurs
+* rabbit: fix timeout timer when duration is None
+* Don't log each received messages
+* Fix some comments in a backporting review session
+* Enable IPv6-support in libzmq by default
+* Add a thread + futures executor based executor
+* safe_log Sanitize Passwords in List of Dicts
+* Updated from global requirements
+* rabbit: add some tests when rpc_backend is set
+* Warns user if thread monkeypatch is not done
+* Add functional and unit 0mq driver tests
+* The executor doesn't need to set the timeout
+* qpid: honor iterconsume timeout
+* rabbit: more precise iterconsume timeout
+* Workflow documentation is now in infra-manual
+* Touch up grammar in warning messages
+
+1.5.1
+-----
+
+* Reintroduces fake_rabbit config option
+* Make the RPCVersionCapError message clearer
+* Doc: 'wait' releases driver connection, not 'stop'
+* Don't allow call with fanout target
+* Imported Translations from Transifex
+* Add an optional executor callback to dispatcher
+
+1.5.0
+-----
+
+* Rabbit: Fixes debug message format
+* Rabbit: iterconsume must honor timeout
+* Don't use oslo.cfg to set kombu in-memory driver
+* Don't share connection pool between driver object
+* Show what the threshold is being increased to
+* Wait for expected messages in listener pool test
+* Dispath messages in all listeners in a pool
+* Reduces the unit tests run times
+* Set correctly the messaging driver to use in tests
+* Always use a poll timeout in the executor
+* Have the timeout decrement inside the wait() method
+* Warn user if needed when the process is forked
+* Renamed PublishErrorsHandler
+* Fix reconnect race condition with RabbitMQ cluster
+* Create a new connection when a process fork has been detected
+* Add more TLS protocols to rabbit impl
+* Remove the use of PROTOCOL_SSLv3
+* Add qpid and amqp 1.0 tox targets
+* Updated from global requirements
+* Imported Translations from Transifex
+* rabbit: uses kombu instead of builtin stuffs
+* Allows to overriding oslotest environ var
+* Create ZeroMQ Context per socket
+* Remove unuseful param of the ConnectionContext
+* Updated from global requirements
+* Add basic tests for 0mq matchmakers
+* Notification listener pools
+* Updated from global requirements
+* Fix tiny typo in server.py
+* Switch to oslo.middleware
+* Updated from global requirements
+* Activate pep8 check that _ is imported
+* Enable user authentication in the AMQP 1.0 driver
+* Documentation anomaly in TransportURL parse classmethod
+* Don't put the message payload into warning log
+* Updated from global requirements
+* Fix incorrect attribute name in matchmaker_redis
+* Add pbr to installation requirements
+* Updated from global requirements
+* Add driver independent functional tests
+* Imported Translations from Transifex
+* zmq: Remove dead code
+* Updated from global requirements
+* Finish transition to oslo.i18n
+* Imported Translations from Transifex
+* Imported Translations from Transifex
+* qpid: Always auto-delete queue of DirectConsumer
+* Updated from global requirements
+* Imported Translations from Transifex
+* Enable oslo.i18n for oslo.messaging
+* Switch to oslo.serialization
+* Cleanup listener after stopping rpc server
+* Updated from global requirements
+* Track the attempted method when raising UnsupportedVersion
+* fix memory leak for function _safe_log
+* Stop using importutils from oslo-incubator
+* Add missing deprecated group amqp1
+* Updated from global requirements
+* Stop using intersphinx
+* Add documentation explaining how to use the AMQP 1.0 driver
+* Imported Translations from Transifex
+* Construct ZmqListener with correct arguments
+* Message was send to wrong node with use zmq as rpc_backend
+* Work toward Python 3.4 support and testing
+* Ensure the amqp options are present in config file
+* Add contributing page to docs
+* Import notifier middleware from oslo-incubator
+* Let oslotest manage the six.move setting for mox
+
+1.4.1
+-----
+
+* Imported Translations from Transifex
+* Add square brackets for ipv6 based hosts
+* An initial implementation of an AMQP 1.0 based messaging driver
+* warn against sorting requirements
+* Improve help strings
+* Switch to oslo.utils
+* Fix Python 3 testing
+* Import oslo-incubator context module
+* Import oslo-incubator/middleware/base
+* Should not send replies for cast messages
+* Port to Python 3
+* Sync jsonutils from oslo-incubator
+* Add parameter to customize Qpid receiver capacity
+* Make tests pass with random python hashseed
+* Set sample_default for rpc_zmq_host
+* Enable PEP8 check E714
+* Enable PEP8 check E265
+* Enable PEP8 check E241
+* Fix error in example of an RPC server
+* Replace lambda method _
+* Enable check for E226
+* Updated from global requirements
+* Add release notes for 1.4.0.0a4
+* Add release notes for stable/icehouse 1.3.1 release
+
+1.4.0.0a4
+---------
+
+* Enabled hacking checks H305 and H307
+* Bump hacking to version 0.9.2
+* Fixes incorrect exchange lock in fake driver
+* Imported Translations from Transifex
+
+1.4.0.0a3
+---------
+
+* Add release notes for 1.4.0.0a2/a3
+* Fix AMQPListener for polling with timeout
+* Replaced 'e.g.' with 'for example'
+* Use assertEqual instead of assertIs for strings
+
+1.4.0.0a2
+---------
+
+* Fix structure of unit tests in oslo.messaging (part 3 last)
+* Fix structure of unit tests in oslo.messaging (part 2)
+* Fix slow notification listener tests
+* encoding error in file
+* Fix info method of ListenerSetupMixin
+
+1.4.0.0a1
+---------
+
+* Add release notes for 1.4.0.0a1
+* Fix formatting of TransportURL.parse() docs
+* Remove duplicate docs for MessageHandlingServer
+* Add missing docs for list_opts()
+* Add 'docs' tox environment
+* Replace usage of str() with six.text_type
+* Fix structure of unit tests in oslo.messaging (part 1)
+* Synced jsonutils and its dependencies from oslo-incubator
+* Ensures listener queues exist in fake driver
+* RPC server doc: use the blocking executor
+* Fix the notifier example
+* Removes the use of mutables as default args
+* Set correct group for matchmaker_redis options
+* replace string format arguments with function parameters
+* Removes contextlib.nested
+* Transport reconnection retries for notification
+* Disable connection pool in qpid interfaces tests
+* Updated from global requirements
+* Add check credentials to log message if rabbmitmq closes socket
+* Fix the notify method of the routing notifier
+* Handle unused allowed_remote_exmods in _multi_send
+* rabbit/qpid: remove the args/kwargs from ensure()
+* Add an example usage of RPCClient retry parameter
+* Add transport reconnection retries
+* Add an optional timeout parameter to Listener.poll
+* Bump hacking to 0.9.x series
+* Removes unused config option
+* fixed pep8 issue E265
+* Setup for translation
+* Updated from global requirements
+* Remove amqp default exchange hack
+* remove default=None for config options
+* Cleaned up references to executor specific RPCServer types
+* Make the TransportUrl hashable
+* debug level logs should not be translated
+* Explicitly name subscription queue for responses
+* Fix passing envelope variable as timeout
+* Updated from global requirements
+* Synced jsonutils from oslo-incubator
+* Remove str() from LOG.* and exceptions
+* Remove dependent module py3kcompat
+* Enable log messages to handle exceptions containing unicode
+* Updated from global requirements
+* Fix typo in docstring of notify/notifier
+* Full support of multiple hosts in transport url
+* Logical error in blockless fanout of zmq
+* Select AMQP message broker at random
+* Use a for loop to set the defaults for __call__ params
+* Update ensure()/reconnect() to catch MessagingError
+* Remove old drivers dead code
+* Import run_cross_tests.sh from oslo-incubator
+* Remove rendundant parentheses of cfg help strings
+* zmq: switch back to not using message envelopes
+* Trival:Fix assertEqual arguments order
+* Oslo-messaging-zmq-receiver cannot recive any messages
+
+1.3.0
+-----
+
+* Add release notes for 1.3.0
+* Ensure routing key is specified in the address for a direct producer
+* Fix wrong parameter description in docstring
+* Fixed inconsistent EventletContextManagerSpawnTest failures
+* Use messaging_conf fixture configuration by default
+* Fixed possible pep8 failure due to pyflakes bug
+* Refactor AMQP message broker selection
+* Add unit test to check the order of Qpid hosts on reconnect
+* Fixed the issue for pop exception
+* Clean up for qpid tests
+* Add kombu driver library to requirements.txt
+* Use driver's notify_send() method again
+* Remove vim header
+* Updated from global requirements
+* Fixed spelling error - runnung to running
+* Build log_handler documentation
+* Add release notes up to 1.3.0a9
+
+1.3.0a9
+-------
+
+* Remove use of sslutils
+
+1.3.0a8
+-------
+
+* Expose PublishErrorsHandler through oslo.messaging
+* Use mock's call assert methods over call_args_list
+* notify listener: document the metadata callback parameter
+* Add missing data into the notif. endpoint callback
+* notification listener: add allow_requeue param
+* Adds unit test cases to impl_qpid
+* Do not leak _unique_id out of amqp drivers
+* Add multiple exchange per listerner in fake driver
+* Allow to requeue the notification message
+* Slow down Kombu reconnect attempts
+* Don't run python 3 tests by default
+* Gracefully handle consumer cancel notifications
+* Updated from global requirements
+* Convert to oslo.test
+* Add log_handler to oslo.messaging
+* Add a link to the docs from the README
+* Pass the session to QpidMessage constructor
+* User a more accurate max_delay for reconnects
+* Make the dispatcher responsible of the message ack
+* Don't reply to notification message
+* Abstract the acknowledge layer of a message
+* Implements notification listener and dispatcher
+* Switch over to oslosphinx
+* Improve help strings
+* Update ExpectedException handling
+* Ignore any egg and egg-info directories
+* Qpid: advance thru the list of brokers on reconnect
+* RabbitMQ: advance thru the list of brokers on reconnect
+
+1.3.0a7
+-------
+
+* Make the dispatcher responsible to listen()
+* Allow fake driver to consume multiple topics
+* Allow different login methods to be used with kombu connections
+
+1.3.0a6
+-------
+
+* Use stevedore's make_test_instance
+* Expose an entry point to list all config options
+* Fix test case name typo
+* Fix UnboundLocalError error
+
+1.3.0a5
+-------
+
+* Fix help strings
+* Add release notes for 1.3.0a3
+* python3: Switch to mox3 instead of mox
+* Remove dependencies on pep8, pyflakes and flake8
+* Routing notifier
+
+1.3.0a4
+-------
+
+* Removes use of timeutils.set_time_override
+* Fix spelling errors in comments
+* Fix test_notifier_logger for Python 3
+* Minor Python 3 fixes
+* Remove copyright from empty files
+* Fix duplicate topic messages for Qpid topology=2
+* Replace dict.iteritems() with six.iteritems()
+* Remove unused eventlet/greenlet from qpid/rabbit
+* fix test_rabbit for Python 3
+* Fix try/except syntax for Python 3
+* Fix exception deserialiation on Python 3
+* Add Sample priority
+* sysnchronize oslo-incubator modules
+* Remove eventlet related code in amqp driver
+* Fix syntax of relative imports for Python3
+* Updated from global requirements
+* Updated from global requirements
+* Unify different names between Python2 and Python3
+* Replace data structures' attribute with six module
+* Avoid creating qpid connection twice in initialization
+* Use six.moves.queue instead of Queue
+* Add transport aliases
+* Remove the partial implementation of ack_on_error
+* Fixed misspellings of common words
+* Add release notes for 1.3.0a2
+* Unify different names between Python2/3 with six.moves
+* Remove vim header
+* Ensure context type is handled when using to_dict
+* Refactors boolean returns
+
+1.3.0a2
+-------
+
+* Simplify common base exception prototype
+* Properly reconnect subscribing clients when QPID broker restarts
+* Remove useless global vars / import
+* Avoid storing configuration in notifier
+* Implement a log handler using notifier
+* notifier: add audit level
+* Add 'warning' as an alias to 'warn'
+* Decouple from Oslo uuidutils module
+* Supply missing argument to raise_invalid_topology_version()
+* Support a new qpid topology
+* Remove hosts as property in TransportURL
+* Remove property on virtual_host in TransportURL
+* Updated from global requirements
+* Fix some typos and adjust capitalization
+* Changes driver method for notifications
+
+1.3.0a1
+-------
+
+* Properly handle transport URL config on the client
+* Updated from global requirements
+* Updated from global requirements
+* Replace assertEquals with assertEqual
+* Properly handle transport:///vhost URL
+* Updated from global requirements
+* Make rpc_backend default to 'rabbit'
+* Apply six for metaclass
+* Add third element to RPC versions for backports
+* Fix rpc client docs
+* Updated from global requirements
+* Remove cruft from setup.cfg
+* Updated from global requirements
+* Fixes a typo in the address string syntax
+* Implement the server side of ZmqDriver
+* Add zmq-receiver
+* Implement the client side of ZmqDriver
+* Import zmq driver code with minimal modifications
+
+1.2.0a11
+--------
+
+* Fix race-condition in rabbit reply processing
+* Fix error message if message handler fails
+* Don't include msg_id or reply_q in casts
+* Remove check_for_lock support in RPCClient
+
+1.2.0a10
+--------
+
+* Add a Notifier.prepare() method
+
+1.2.0a9
+-------
+
+* Fix dictionary changed size during iteration
+
+1.2.0a8
+-------
+
+* Fix transport URL parsing bug
+
+1.2.0a7
+-------
+
+* Fix rabbit driver handling of None, etc. replies
+
+1.2.0a6
+-------
+
+* Remove ConfFixture from toplevel public API
+* Fix fake driver handling of failure replies
+* Bumps hacking to 0.7.0
+* Fix transport URL ipv6 parsing support
+
+1.2.0a5
+-------
+
+* Fix handling of None, etc. replies
+
+1.2.0a4
+-------
+
+
+1.2.0a3
+-------
+
+* Add a unit testing configuration fixture
+* Add a TransportURL class to the public API
+
+1.2.0a2
+-------
+
+* Ensure namespace package is installed
+
+1.2.0a1
+-------
+
+* Add transport URL support to rabbit driver
+* Kill ability to specify exchange in transport URL
+* Fix capitalization, it's OpenStack
+* Fix handling expected exceptions in rabbit driver
+* Add thread-local store of request context
+* Add a context serialization hook
+* Removes a redundant version_is_compatible function
+* Document how call() handles remote exceptions
+* Add a per-transport allow_remote_exmods API
+* Expose RemoteError exception in the public API
+* Implement failure replies in the fake driver
+* Add API for expected endpoint exceptions
+* Add a driver method specifically for sending notifications
+* Enforce target preconditions outside of drivers
+* Add comments to ReplyWaiter.wait()
+* Remove some FIXMEs and debug logging
+* Remove unused IncomingMessage.done()
+* Implement wait_for_reply timeout in rabbit driver
+* Use testtools.TestCase assertion methods
+* Implement failure replies in rabbit driver
+* Add test with multiple waiting sender threads
+* Fix race condition in ReplyWaiters.wake_all()
+* Add rabbit unit test for sending and receiving replies
+* Add some docs on target version numbers
+* Add tests for rabbit driver wire protcol
+* Pop _unique_id when checking for duplicates
+* Add a transport cleanup() method
+* Remove my notes and test scripts
+* Add initial qpid driver
+* Move most new rabbit driver code into amqpdriver
+* Move rpc_conn_pool_size into amqp
+* Add simple rabbit driver unit test
+* Temporarily add eventlet to requirements
+* Add missing gettextutils
+* Add unit tests for object pool
+* Remove only_free param to Pool.get()
+* Connection pool bugfix
+* Remove unused file
+* Add exception serialization tests
+* Don't call consume() each time iterconsume() is called
+* Add test code for the rabbit driver
+* Remove use of gettextutils
+* Add initial rabbit driver
+* Remove use of openstack.common.local
+* Use stdlib logging
+* Don't register options with cfg.CONF at module import
+* Port away from some eventlet infrastructure
+* Adjust imports in rabbit/qpid drivers
+* Import some needed modules from oslo-incubator
+* Add oslo-incubator code unmodified
+* Make executor threads more robust
+* Allow use of hacking 0.6.0 and fix min version
+* Include docstrings in published docs
+* Use oslo.sphinx and remove local copy of doc theme
+* Add some notes
+* Unit tests for notifier
+* Make test notifier useful
+* Use lowercase priority in log notifier
+* Use lowercase priority in notifications topic
+* Handle case where no drivers configured
+* Fix buglet in v2 messaging notifier
+* Make LOG private in notifier
+* Require a transport to construct a Notifier
+* Add serializer support to notifier
+* Rename context to ctxt in serializer API
+* Rename context to ctxt in notify API
+* Make Notifier public at top-level
+* Docstrings for notifier API
+* Fix notify drivers namespace
+* Remove backwards compat entry point aliases
+* Simplify public symbol exports
+* Use assertEqual() rather than assertEquals()
+* Remove accidental use of messaging.rpc_server
+* Make exchange_from_url() use parse_url()
+* Unit tests for URL parsing code
+* Fix parse_urls() buglets
+* Move url utils into messaging._urls
+* Don't use common logging
+* Update example scripts for recent API changes
+* Fix fake driver with eventlet
+* Use log.warning() instead of log.warn()
+* Fix some pep8 issues
+* Don't translate exception messages
+* Knock off a few TODOs
+* Add can_send_version() to RPCClient
+* Check start() does nothing on a running server
+* Remove unused statements in base serializer
+* Fix thinko in exchange_from_url()
+* Call wait() in server tests
+* Add docstrings for base executor class
+* Remove a fixed fixme
+* Add a client call timeout test
+* Don't raise a driver-specific error on send
+* Add some docstrings to driver base
+* Test a bunch more RPC server scenarios
+* Make it possible to call prepare() on call context
+* Rework how queues get created in fake driver
+* Use testscenarios
+* Move files to new locations for oslo.messaging
+* Import stuff from oslo-incubator
+* Add oslo.messaging project infrastructure
+* Add some RPC server tests
+* More gracefully handle "no listeners" in fake driver
+* Better error handling in server.start()
+* Re-work server API to eliminate server subclasses
+* Add license header to _executors/__init__.py
+* Add RPCDispatcher tests
+* Check for return value in client serializer test
+* Add note about can_send_version()
+* More client unit tests
+* Make RPCClient.check_for_lock a callable
+* Apply version cap check when casting
+* Make RPCVersionCapError extend base exception
+* Remove a bogus param from client.prepare() docs
+* pep8 fixes for serializer code
+* Simple RPCClient test
+* Unit tests
+* Move some stuff into doc/
+* Implement Target.__eq__()
+* Fix bug in exchange_from_url()
+* pep8 fixes for fake driver
+* Make utils.parse_url() docstring pep8 compliant
+* Don't translate exceptions
+* Misc pep8 fixes
+* pep8 fixes for toplevel package
+* Some error handling improvements
+* Recommend wrapping the client class rather than subclassing
+* Document how to use RPCClient directly
+* Document the public RPC API
+* Fix defaults for client.prepare() args
+* Fix client.cast() typo
+* Fix version_cap typo
+* Allow all target attributes in client.prepare()
+* Expose Serializer from top-level namespace
+* Allow specifying a serializer when creating a server
+* Make endpoint.target optional
+* Dispatch methods in their own greenthreads
+* Make rpc.dispatcher private
+* Make the base RPCServer class private
+* Fix typo with the serializer work
+* Update use of stevedore
+* Require topics and target in notify driver constructors
+* Add generic serialization support
+* Support namespace in RPCClient.prepare()
+* Add parse_url to _utils
+* Remove entry point lists from the public API
+* Support capping message versions in the client
+* Fix RPCClient check_for_lock()
+* First cut at the notifier API
+* Add some notes
+* Add IncomingMessage abstraction
+* Pass a context dict
+* Fix docstring
+* Implement a fake driver
+* Adding reply infrastructure
+* Add some exceptions
+* Fix buglet with default timeout
+* Fix target/namespace target buglet
+* Fix rpc client buglets
+* Fix 'Blockinging' typos
+* Missing self parameter to server start()
+* Fix default_exchange typo
+* Add forgotten piece of eventlet executor
+* It's _executors not _executor
+* Make poll() just return the message
+* Make drivers list public again
+* Add top-level convenience aliases
+* Prefix the executors module with underscore
+* Prefix the messaging.server module with an underscore
+* Prefix the drivers module with an underscore
+* Make transport methods private
+* Fix little typo in server exception class name
+* Add missing utils module
+* Add convenience RPC server classes
+* Update changes.txt for recent API changes
+* Use : for loading classes in entry_points
+* Split the dispatcher from the executor and server
+* Make driver and transport methods public
+* Pass the driver instance to the listener instead of config
+* Try out replacing "executor" for "dispatcher"
+* Fix host vs server typo
+* Initial framework

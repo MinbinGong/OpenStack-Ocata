@@ -1,0 +1,285 @@
+CHANGES
+=======
+
+1.1.0
+-----
+
+* Rehome providernet api-def
+* Rehome portbindings api-def into neutron-lib
+* Rehome l3 API definitions into neutron-lib
+* api-ref: Fix api-ref for vpnaas
+* Rehome ServicePluginBase
+* api-ref: Fix descriptions of sec-grp parameters
+* Follow-up review comments
+* FWaaS v2 API reference
+* Migrate neutron-fwaas API definitions to neutron-lib
+* Capture wider list of extension aliases
+* Revisit exported policy module
+* Make neutron context available in neutron-lib
+* Add dummy API definitions for extension subresources
+* Expose/Improve callback notification interface
+* Add validators/converters needed by neutron-fwaas
+* Improve floatingip api-ref
+* api-ref: Fix api-ref for metering
+* Add fixture for plugin directory
+* Updated from global requirements
+* Removed incorrect docstring for Context
+* Add FQDN_FIELD_SIZE constant
+* api-ref: Adding request parameter for sec-grp-rule
+* Remove discover from test-requirements
+* Directory: fix concurreny issue
+* Removes unnecessary utf-8 encoding
+* Sync up bare minimum from neutron.db.api into lib
+* api-ref: project_id in req/resp body should be "body"
+* Fix the status parameters in api-ref
+* Modify API response information in API documents
+* [api-ref] Add max number of characters for tag
+* Migrate neutron agent extensions to neutron-lib
+* Add validator to check for IP or subnet or none
+* Use new checks in hacking 0.12
+* Correcting Floating IPs
+* Use constranits for api-ref target
+* Policy: reuse common code
+* Updated from global requirements
+* Separate hacking check factories
+* Provide dummy API definition for documentation purposes
+* Add converter to convert IPv6 addresses to canonical format
+* Sync latest neutron context into lib
+* Remove README from docs build
+* Explain how to use the latest neutron-lib dashboard
+* api-ref: Fix api-ref for fwaas
+* Add alembic branch constants
+* Typo in ExtensionDescriptor.get_request_extensions()
+* [doc]Add sha256, sha384 and sha512 auth algorithms
+* Show team and repo badges on README
+* Make the get_random_mac more versatile
+* Correcting Networking API v2.0 flavor extension
+* Revise status of VPNaaS in neutron
+* Update contributing doc
+* Updated from global requirements
+* Replace six.iteritems() with .items()
+* api-ref: Fix api-ref for lbaas-v2
+* Add is_bsd() to neutron-lib
+* Use api/attributes.py instead of api/utils.py
+* Doc olso config option approach
+* Revert "Move wait_until_true to neutron-lib"
+* Move wait_until_true to neutron-lib
+* api-ref: Fix api-ref for subnetpools
+* Sync latest neutron callbacks into lib
+* Move get_random_mac into neutron-lib
+* api-ref: Correcting Network v2.0 API extensions
+* Add missing is_loaded() method on directory's interface
+* TrivialFix: Perfect the unit test in test_utils
+* Fix typo for comparision => comparison
+* Updated from global requirements
+* Add section headings to Neutron API Reference
+
+1.0.0
+-----
+
+* Updates to API report tooling
+* Updated from global requirements
+* Add ExtensionDescriptor to neutron-lib
+* api-ref: Fix api-ref for subnets
+* Add release note for plugin directory
+* Introduce Plugin Directory for Neutron
+* Updated from global requirements
+* Fix doc build if git is absent
+* Updated from global requirements
+* Initial seed for neutron-lib release notes
+* Updated from global requirements
+* Revise coverage guidelines
+* Add release notes target
+* api-ref: Fix api-ref for service-providers
+* Enable fatal exceptions during tests
+* Introduce API definition for trunk/trunk_details extensions
+* Updated from global requirements
+* [doc] Allow creating loadbalancer with network_id
+* Change wording around router:external
+* Add segments to v2 API reference
+* Enhance valid_values to use __contains__
+* Add missing tenant_id/project_id request parameter
+* Add unit test for test_exceptions
+* [api-ref] Corrected the redirect URL to Openstack Identity Service
+* api-ref: Update to current state of Keystone V3 support
+* Rehome populate_project_info() from neutron
+* api-ref: remove notion of supported xml format
+* Add unit test for test_helpers
+* Simplify method convert_to_boolean with strutils.bool_from_string
+* Deprecate method ensure_dir
+* Trivial: Remove 'MANIFEST.in'
+* Config logABug feature for Neutron-lib api-ref
+* Fix typo: remove redundant 'the'
+* api-ref: Update local_id configuration
+* Updated from global requirements
+* Do not make project depends on Babel by default
+* Correct test_tenant_id_attribute
+* Updated from global requirements
+* Updated from global requirements
+* Add support for upper-constraints.txt for all tox targets
+* api-ref: Add Networking v2.0 API versions response parameters
+* Updated from global requirements
+* Add info about API method to get default quotas
+* [api-ref] Remove temporary block
+* Fix regression in validate_uuid_list()
+* Add  docstrings for api.validators
+* Fix confusion between Neutron and FWaaS versions
+* Add eventlet hacking check UT
+* api-ref: added a note to lbaasv1 about its removal in N+
+* Move valuable API info from neutron-specs repo
+* api-ref: introduced a stub sub-page to cover general info
+* Updated from global requirements
+
+0.4.0
+-----
+
+* Remove new checks from hacking factory()
+* Trivial DevRef Spelling corrections
+* Correcting information in configuration
+* api-ref: Correcting parameters type
+* Updated from global requirements
+* Add  docstrings for utils.net
+* Add  docstrings for utils.host
+* Add  docstrings for utils.helpers
+* Add  docstrings for utils.file
+* Add  docstrings for hacking.translation_checks
+* Add  docstrings for hacking.checks
+* Updated from global requirements
+* Add  docstrings for db.utils
+* Get ready for os-api-ref sphinx theme change
+* Add  docstrings for policy
+* Base DB: rehome model_base
+* Start migration of utility methods
+* Add  docstrings for exceptions
+* Add  docstrings for converters
+* Enhance pyir tooling CLI
+* Support copy() in Sentinel
+* Don't run api-report during pep8
+* Add a hacking rule for string interpolation at logging
+* Correcting 'extention' parameter on Networking API v2.0
+* Remove invalid depreaction warning
+* Generate API report tooling
+* Updated from global requirements
+* Add DeviceNotFoundError to neutron_lib exceptions
+* Revert "Update hacking check consumption"
+* Enable DeprecationWarning in test environments
+* Update the home-page in setup.cfg
+* Add Python 3.5 classifier and venv
+* Updated from global requirements
+* Don't pass argument sqlite_db in method set_defaults
+* api-ref: Fix api-ref for routers
+* Updated from global requirements
+* api-ref: Rename file names for consistency
+* api-ref: Move sample JSON files under v2 directory
+* api-ref: Merge v2 and v2-ext into one directory
+* Sync neutron callbacks into lib
+* Forbid eventlet hacking check
+* api-ref: Split LBaaS API reference into v1 and v2
+* Update hacking check consumption
+* translation_checks: Exclude rally plugins
+* Add Neutron context module and some policy methods
+* Updated from global requirements
+
+0.3.0
+-----
+
+* Add DEVICE_OWNER_BAREMETAL_PREFIX const
+* Remove discover from test-requirements
+* Add validator to test integers
+* Deprecate N523 check that forbids oslo.* imports
+* devref for public API docstring
+* Fix api-ref response code formatting
+* Migration report: validate that bc is installed
+* add tags to api-ref files for the content verification phase
+* Add tool to track migration to neutron-lib
+* Document release steps for neutron-lib
+* Expand the API reference Table of Content
+* Updated from global requirements
+* Fix simple typo
+* Tweak validation logic for subport validator
+* Updated from global requirements
+* Update documents to address some issues
+* Updated from global requirements
+* Rehome IPV6_MODES constants
+* Update validator accessors
+* Forbid eventlet based code
+* Make the constant Sentinel() class public
+* 100% unit test coverage for hacking/checks.py
+* Localized exception message hacking check
+* Updated from global requirements
+* WADL to RST migration
+* Add translation validations to the hacking policy
+* Updated from global requirements
+* Fix E128 hacking errors and enable it
+* TrivialFix: Fix a bad indentation in a doc file
+* Enable local hacking rule in neutron-lib
+* Hacking: update iteritems hacking message
+* Add Neutron L3 agent types
+* Fix exception for invalid type
+* Add subport validator for vlan-aware-vms
+* Updated from global requirements
+* Remove unused oslo.service requirement
+
+0.2.0
+-----
+
+* Updated from global requirements
+* Add IPv6_LLA_PREFIX constant
+* Remove ICMPV6_ALLOWED_TYPES
+* Maintain ATTR_NOT_SPECIFIED constant with deepcopy
+* Add constants for additional ICMPv6 types
+* Fixed type:dict validator passes unexpected keys
+* Define legacy ICMPv6 protocol name 'icmpv6' for backward compaty
+
+0.1.0
+-----
+
+* Updated from global requirements
+* Remove config module
+* Updated from global requirements
+* Revert "Add Collector Agent type string"
+* Remove fake_consume_in_threads dummy method
+* Updated from global requirements
+
+0.0.3
+-----
+
+* Add pagination helpers
+* New device owner flag for HA router interface
+* Fix 'import neutron' hacking check
+* Add in missing constants
+* Remove unused pngmath Sphinx extension
+
+0.0.2
+-----
+
+* Updated from global requirements
+* Callbacks: add precommit support
+* Add constants for macvtap agent
+* Callbacks: add in missing callback resources
+* Add Collector Agent type string
+* Add a hacking check against importing neutron
+* Lib specific hacking rules
+* Move some common test and framework goo into neutron-lib
+* Update translation setup
+* API validators and converters
+* Replace deprecated library function os.popen() with subprocess
+* Add popular IP protocols for security group
+
+0.0.1
+-----
+
+* Improvements to tox envs
+* Adding callback mechanism
+* Setup for translation
+* Add neutron/plugin/common/constants.py module to neutron-lib
+* Setup for devref documentation
+* Initial list of constants
+* Use assertRaises instead of try-except in unit tests
+* Initial shared exceptions
+* Remove pypy as tox env
+* Insert references to debtcollector in review guidelines
+* Cleanup .gitignore
+* Beginning of lib review guidelines
+* Initial cookiecutter commit
+* Added .gitreview

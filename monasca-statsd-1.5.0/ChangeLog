@@ -1,0 +1,78 @@
+CHANGES
+=======
+
+1.5.0
+-----
+
+* Updated from global requirements
+* Extend tox for monasca-statsd
+* Clean up client.py
+* Clean up connection.py
+* Clean up counter.py
+* Extract common update functions
+* Updated from global requirements
+* Switch to hacking 0.12.x
+* Make monasca-statsd PEP8 compatible
+
+1.4.0
+-----
+
+* Show team and repo badges on README
+* Fix setup.cfg
+* add a summary for the project to fix release announcements
+
+1.3.0
+-----
+
+* Clean up the licensing
+* Add python3 support
+* Clean imports in code
+* Allow easy configuration of host/port settings
+* Delete python bytecode file
+* Use constraints everywhere
+* Sync tools/tox_install.sh
+* Updated from global requirements
+* Fixing copyright
+* Remove reference to removed metric types
+* Removed H302
+* Updated from global requirements
+* Remove python-statsd from requirements.txt
+* Removing statsd-generator
+
+1.1.0
+-----
+
+* Make imports python 3 compatible
+* [monasca-statsd] Change tox to use https instead of git
+* [monasca-statsd] Constraint tox targets with upper-constraints
+
+1.0.4
+-----
+
+* Unused function removed
+* Split line
+
+1.0.3
+-----
+
+* Add in HPE Copyrights
+* Delete python bytecode before every test run
+
+2015.1
+------
+
+* Update .gitreview for new namespace
+* Add HP Copyright
+* Added a config file for documentation generation using Markdown and readthedocs.org
+
+1.0.2
+-----
+
+* Refactored statsd code to be modular
+* Fixing issues in generator, unit tests, and documentation
+
+1.0.1
+-----
+
+* Adding python client for statsd messages
+* Added .gitreview

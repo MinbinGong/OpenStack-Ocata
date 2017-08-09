@@ -1,0 +1,50 @@
+.. docbookrestapi
+
+============
+ V2 Web API
+============
+
+Capabilities
+============
+
+The Capabilities API allows you to directly discover which functions from the
+V2 API functionality, including the selectable aggregate functions, are
+supported by the currently configured storage driver. A capabilities query
+returns a flattened dictionary of properties with associated boolean values -
+a 'False' or absent value means that the corresponding feature is not
+available in the backend.
+
+.. rest-controller:: panko.api.controllers.v2.capabilities:CapabilitiesController
+   :webprefix: /v2/capabilities
+
+.. autotype:: panko.api.controllers.v2.capabilities.Capabilities
+   :members:
+
+Events and Traits
+=================
+
+.. rest-controller:: panko.api.controllers.v2.events:EventTypesController
+   :webprefix: /v2/event_types
+
+.. rest-controller:: panko.api.controllers.v2.events:TraitsController
+   :webprefix: /v2/event_types/(event_type)/traits
+
+.. rest-controller:: panko.api.controllers.v2.events:EventsController
+   :webprefix: /v2/events
+
+.. autotype:: panko.api.controllers.v2.events.Event
+   :members:
+
+.. autotype:: panko.api.controllers.v2.events.Trait
+   :members:
+
+.. autotype:: panko.api.controllers.v2.events.TraitDescription
+   :members:
+
+Filtering Queries
+=================
+
+See :ref:`api-queries` for how to query the API.
+
+.. autotype:: panko.api.controllers.v2.events.EventQuery
+   :members:

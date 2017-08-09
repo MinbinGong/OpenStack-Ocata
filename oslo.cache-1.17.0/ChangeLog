@@ -1,0 +1,292 @@
+CHANGES
+=======
+
+1.17.0
+------
+
+* Remove references to Python 3.4
+* Add Constraints support
+* Show team and repo badges on README
+
+1.16.0
+------
+
+* Updated from global requirements
+* Updated from global requirements
+* Imported Translations from Zanata
+* TrivialFix: Remove default=None when set value in Config
+* Changed the home-page link
+
+1.15.0
+------
+
+* Enable release notes translation
+* Updated from global requirements
+* Updated from global requirements
+* Update reno for stable/newton
+* Updated from global requirements
+
+1.14.0
+------
+
+* Add usage example to documentation
+* Fix docstring for get_memoization_decorator
+* Correct help text for backend option
+
+1.13.0
+------
+
+* Updated from global requirements
+
+1.12.0
+------
+
+* Updated from global requirements
+* Fix OpenStack capitalization
+* Add Python 3.5 classifier and venv
+* Imported Translations from Zanata
+* Updated from global requirements
+
+1.11.0
+------
+
+* Updated from global requirements
+
+1.10.0
+------
+
+* Handle empty memcache pool corner case
+* Updated from global requirements
+* Imported Translations from Zanata
+* Fixup intersphinx docs
+* Use entrypoints for backends
+
+1.9.0
+-----
+
+* Updated from global requirements
+* Add reno for releasenotes management
+
+1.8.0
+-----
+
+* Trivial: ignore openstack/common in flake8 exclude list
+
+1.7.0
+-----
+
+* Imported Translations from Zanata
+* Remove direct dependency on babel
+* Imported Translations from Zanata
+* Updated from global requirements
+* If caching is globally disabled force dogpile to use the null backend
+* Updated from global requirements
+* Updated from global requirements
+
+1.5.0
+-----
+
+* Updated from global requirements
+* Updated from global requirements
+
+1.4.0
+-----
+
+* Updated from global requirements
+
+1.3.0
+-----
+
+* Move some of these noisy logs to trace level
+* Revert "Use assertTrue/False instead of assertEqual(T/F)"
+* Update translation setup
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* Delete python bytecode before every test run
+
+1.2.0
+-----
+
+* Use assertTrue/False instead of assertEqual(T/F)
+* Updated from global requirements
+* Replace deprecated LOG.warn with LOG.warning
+* Updated from global requirements
+
+1.1.0
+-----
+
+* Updated from global requirements
+* Updated from global requirements
+* Trival: Remove 'MANIFEST.in'
+
+1.0.0
+-----
+
+* Updated from global requirements
+* Remove Python 2.6 classifier
+* Remove python 2.6 and cleanup tox.ini
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+
+0.9.0
+-----
+
+* Updated from global requirements
+* Export functions from __init__
+
+0.8.0
+-----
+
+* Make CacheIsolatingProxy public
+* Add shields.io version/downloads links/badges into README.rst
+* add auto-generated docs for config options
+* Change ignore-errors to ignore_errors
+* Updated from global requirements
+
+0.7.0
+-----
+
+* Updated from global requirements
+* Implement get/set/delete multiple keys for dictionary backend
+
+0.6.0
+-----
+
+* Move optional backend dependencies into setup.cfg [extras]
+* Ignore the .eggs/ directory
+* Remove remnants of noop backend registration
+* Updated from global requirements
+* Updated from global requirements
+* Setup translations
+* flake8 - remove unused rules and fix imports
+* Updated from global requirements
+
+0.5.0
+-----
+
+* Updated from global requirements
+* Updated from global requirements
+* Remove NoOp cache from oslo.cache
+
+0.4.0
+-----
+
+* Added NO_VALUE to core file
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* Fix some reminders of 'keystone' in oslo.cache
+* Updated from global requirements
+
+0.3.0
+-----
+
+* Updated from global requirements
+* Fixes up the API docs and module index
+* Region handling
+* Don't register backends on import
+* Changed some comments and docs in DictCacheBackend
+* Implemented DictCacheBackend
+* Fixed typos
+
+0.2.0
+-----
+
+* Usage docs
+* Document the backends
+* Remove unused _on_arguments
+* Fix up option help
+* Register backends in a cycle
+* Use "group" rather than "section"
+* swap the order of conf for a function
+* Don't use global conf
+* Make DebugProxy private
+* make REGION public
+* Fix docstring for configure_cache_region
+* Remove useless docs from private functions
+* Fix docs for get_memoization_decorator
+* Docs for configure()
+
+0.1.2
+-----
+
+* Make symbols private
+* Module docs
+* Cleanup exceptions
+* handle utf8 encoding properly
+* Expose list_opts entry points for oslo-config-generator
+* Remove unnecessary file
+* Add tests for _memcache_pool
+
+0.1.1
+-----
+
+* remove non-cache related options
+* Add oslo.i18n to requirements
+* Add tox target to find missing requirements
+* Update i18n domain to correct project name
+
+0.1.0
+-----
+
+* Enable all commented out tests
+* Updated from global requirements
+* Move files into the right spot and get tests working
+* fix branch name in .gitreview
+* Updated from global requirements
+* Updated from global requirements
+* Remove unnecessary openstack-common.conf
+* Remove empty script reference
+* Fix name of oslotest base test case
+* Get project basics configured
+* Fixes use of dict methods for Python3
+* Handles Python3 builtin changes
+* Make memcache client reusable across threads
+* Make memcache client reusable across threads
+* Work with pymongo 3.0
+* Initial commit from oslo cookiecutter template
+* Work with pymongo 3.0
+* Prefer . to setattr()/getattr()
+* Address nits for default cache time more explicit
+* Fix the wrong order of parameters when using assertEqual
+* Fixes minor whitespace issues
+* Make the default cache time more explicit in code
+* Use dict comprehensions instead of dict constructor
+* Consistently use oslo_config.cfg.CONF
+* Fix invalid super() usage in memcache pool
+* Use oslo.log instead of incubator
+* Move existing tests to unit
+* Change oslo.utils to oslo_utils
+* Memcache connection pool excess check
+* Adds missing log hints for level E/I/W
+* Remove nonexistant param from docstring
+* Use importutils from oslo.utils
+* Address some late comments for memcache clients
+* Add a pool of memcached clients
+* Use functions in oslo.utils
+* Introduce pragma no cover to asbtract classes
+* Use oslo.i18n
+* Do not support toggling key_manglers in cache layer
+* Adds hacking check for debug logging translations
+* remove a few backslash line continuations
+* Fixed some typos throughout the codebase
+* Fix cache configuration checks
+* Safer noqa handling
+* Uses explicit imports for _
+* Support for mongo as dogpile cache backend
+* Remove copyright from empty files
+* Remove vim header
+* Documentation cleanup
+* Style improvements to logging format strings
+* Handle unicode at the caching layer more elegantly
+* Implement basic caching around assignment CRUD
+* Implement caching for Tokens and Token Validation
+* Add Memory Isolating Cache Proxy
+* Implement Caching for Token Revocation List
+* Keystone Caching Layer for Manager Calls
+* initial
+* Initial
+* first commit

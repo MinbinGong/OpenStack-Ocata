@@ -1,0 +1,356 @@
+CHANGES
+=======
+
+1.4.0
+-----
+
+* Updated from global requirements
+* Set client module __version__
+* Enable release notes translation
+* Switch to oslo_log
+
+1.3.0
+-----
+
+* Remove unnecessary utf8 coding format in the head of files
+* Updated from global requirements
+* Add doc for subscription cli
+* Update release note doc
+* Add the releasenote detail
+* Add command guide for openstack ping&health CLI
+* Add command guide for openstack flavor CLI
+* Add command guide for openstack pool CLI
+* Add Constraints support
+* Fix typos in zaqarclient
+* Add releasenotes for client
+* Add command guide for openstack claim CLI
+* Add command guide for queue
+* update doc to Api v2.0
+* translate all command help strings
+* Remove the TODO for subscription ttl test
+* Remove version in README
+* Update author and home-page
+* Fix CI failure
+* Show team and repo badges on README
+* Delete deprecated directory openstack/common
+* Add plug-in summary for osc doc
+* Updated from global requirements
+* Fix the CI failure
+* Add profiling support to Zaqar client
+* Support keystone session when creating client
+* Add Python 3.5 classifier and venv
+* Files with no code must be left completely empty
+* Support SSL and Insecure
+* Change assertTrue(isinstance()) by optimal assert
+* Switch keystoneclient to keystoneauth
+* Remove unused openstack-doc-tools from test-requirements.txt
+* Using v2 interface in example
+
+1.2.0
+-----
+
+* Updated from global requirements
+* Remove discover from test-requirements
+* Clean imports in code
+* Update the functional test
+* Fix the attribute missing error
+* Create a websocket transport
+* Updated from global requirements
+* Add requests-mock to test-requirements.txt
+* Use osc_lib instead of cliff
+* Use osc-lib instead of openstackclient
+
+1.1.0
+-----
+
+* Add update queue function in v2
+* Fix the zaqar functional test job
+* Ensure the float value of api version could work
+* Updated from global requirements
+* Fix doc build if git is absent
+* Refactor queue create
+* Support /ping and /health for v2
+* Fix tests related to queue attributes in API V2
+* Use v2 as the default cli version
+* Remove pypy support
+
+1.0.0
+-----
+
+* Support PATCH of queue metadata
+* "pool_group" word should be used instead "pool"
+* Update pool on pool create if it exists
+* Update flavor on flavor create if it exists
+* Make TransportErrors more descriptive
+* Remove unused pngmath Sphinx extension
+* Raise ConflictError like other transport errors
+* Do not catch ConflictError on subscription create
+* Add subscriptions for queue object
+* Updated from global requirements
+* Support claims for v2
+* Fix wrong api version type
+* Improve subscription listing
+* Fix Subscription's queue_name variable being tuple
+* Add CLI support for signed URLs
+* Fix queue stats for v1.1 and above versions
+* Fix client not working on Python 3
+* Updated from global requirements
+* Clean up flavor test classes
+* Fix typo preventing queue list for v1
+* Add a way to create a signed URL from a queue
+* Use API version checking directly
+* Updated from global requirements
+* Fixing the deprecated library function
+* Add Support for subscription list v2
+* Add support for subscription show v2
+* Expose more CLI commands for v2
+* Add support for subscription delete v2
+* Add support for subscription update v2
+* Add support for subscription create v2
+* Claim release CLI support for v1
+* Claim renew CLI support for v1
+* Query claim CLI support for v1
+* Flavor list support for v2
+* Handle os_auth_token option in keystone config
+* Flavor create CLI support for v2
+* Updated from global requirements
+* Fix bad "pool list" api v2 entry point for CLI
+* Claim create CLI support for v1
+* Put py34 first in the env order of tox
+* Make sure queue create works for cli
+* Replace assertEqual(None, *) with assertIsNone in tests
+* Added support to claims
+* Updated from global requirements
+* Flavor update cli support for v2
+* Flavor show cli support for v2
+* Drop py33 support
+* Fix freeze of Claim object's age property
+* Deprecated tox -downloadcache option removed
+* Add cli support for flavor create v1
+* Updated from global requirements
+* Delete CLI for Get/SetQueueMetadata which is API-v1 only
+* Expose CLI commands for v2
+* Delete CLI for CheckQueueExistence which is <=v1.1 only
+* Refactor the test for v2 queues and messages
+* Add support for flavor list v1
+* Add cli support for flavor show v1
+* Updated from global requirements
+* Using clouds.yaml to get the credentials
+* Remove py26 support
+* delete python bytecode before every test run
+* Pool & flavor cli implementation for v2
+* Pool list cli support for v2
+* Pool delete cli support for v2
+* Add cli support for flavor update v1
+* Pool update support for v2
+* Added pool list support for v1
+* Fix unexpected output of pools()
+* Updated from global requirements
+* Add `pool` support for v2
+* Add `flavor` support for v2
+* Implement CLI support for pool delete
+* Added pool update support for v1
+* Attaching a default project_id
+* Pool show support for v2
+* Added pool show support to v1
+* Fix create pool error
+* Support creating signed url's in client
+* Fix client UnauthorizedError
+* Updated from global requirements
+
+0.3.0
+-----
+
+* Rename `flavor delete` command
+* Added cli implementation for v2
+* Remove periods of docstring
+* Added API_VERSION for v2
+* Added support to v2
+* improve readme contents
+* Fix order of arguments in assertEqual
+* Fix order of arguments in assertEqual
+* Fix order of arguments in assertEqual
+* Fix functional test of get_many_messages
+
+0.2.0
+-----
+
+* Release notes for 0.2.0
+* Using messaging instead of queueing
+* Updated from global requirements
+* Allow for authentication in functional tests
+* Don't pass `options` to pool creation
+* Don't reuse request and transport instances
+* Pass `group` in pool's functional tests
+* Send claims `limit` as a query param
+* v1.1 and v2 claims return document not list
+* Make sure the API version is passed down
+* Make v1.1 the default CLI version
+* Updated from global requirements
+* Updated from global requirements
+* Implement CLI support for flavor
+* Implements CLI for pool
+* Raises an error if the queue name is empty
+* Added support to pools and flavors
+* Removed deprecated 'shard' methods
+
+0.1.1
+-----
+
+* Relese notes for zaqarclient 0.1.1
+* Drop incubating theme from docs
+* Deleted unuseful line
+* Drop use of 'oslo' namespace package
+* Fix handling of 1.1 API
+* Update README to work with release tools
+* Gets 'flavor' data if the resource exists
+* Gets 'pool' data if the resource exists
+* Handling exception on 504 Error
+* Updated from global requirements
+* Added i18n support
+* Makes health return True or False
+* Remove unused openstack/common modules
+* Adds encapsulation control to the client
+* Updated from global requirements
+* Extend some docstrings with useful information
+* Add reference docs for latest recommended client
+* Add docs for `Client` instances
+* Setup developer docs for zaqarclient
+* Fix the client name typo
+* Updated from global requirements
+* fix KeystoneAuth doc string
+* Updated from global requirements
+* Updates API name
+
+0.1.0
+-----
+
+* Updated from global requirements
+* Add a read-only property for Queues
+* Cleanup technical debt
+* Always pass a project_id
+* Respect queue's lazy creation
+* Use queue_creation to send queue's metadata
+* Fix functional tests
+* Add support for flavor to the client library
+* Rename `shard` to `pool`
+* Add support for `pop` implemented in v1.1
+* Add support for bulk message delete in v1
+* CLI support for queue existence and metadata operations
+* Updated from global requirements
+* Send more than 1 message in messages_get_many
+* Start adding support for v1.1
+* Work toward Python 3.4 support and testing
+* Remove hardcoded version
+
+0.0.3
+-----
+
+* Fix .gitreview due to the repo rename/move
+* Dividing markups into multiple lines
+* Rename Marconi to Zaqar
+* Updated from global requirements
+* Adds extra info about python-marconiclient and usage instructions
+* Updated from global requirements
+* doc: Update README.rst with correct installation and contibution info
+
+0.0.2
+-----
+
+* chore: Bump version to 0.0.2 in preparation for bugfix release
+* Throw exceptions on erroneous status codes
+* Enable deleting of message with claim id
+* Updated from global requirements
+* Initial support for openstack-client
+* fix: add https support
+
+0.0.1
+-----
+
+* chore: Classify as Beta (was pre-alpha)
+* Updated from global requirements
+* Updated from global requirements
+* Bump client version to 0.0.1
+* Don't stream by default
+* Updated from global requirements
+* Updated from global requirements
+* Add sample for Keystone auth
+* Updated from global requirements
+* Move auth tests under the unit package
+* Refactoring iterators
+* Added API version to URL
+* Add support for claims
+* Updated from global requirements
+* Updated from global requirements
+* Added iterable list of queues
+* Fix the message __repr__ formatter
+* Add python3 and pypy trove classifiers
+* Fix misspellings in python marconiclient
+* Add /health support to the client
+* Removed oslo.config from requirements.text
+* Delete unused module
+* Expose the stats attribute on a queue
+* Sync with global requirements
+* Add shard support to the client
+* Keystoneclient supports Py3K now
+* Let Hacking choose the right dependencies on its own
+* Fixes wrong variable invoking during get transport
+
+0.0.1a1
+-------
+
+* chore: Bump version to 0.0.1a1 in preparation for our first release!
+* Add a Message resource and a MessageIterator
+* Add `deserialized_content` to the response
+* Use oslo.config>=1.2.0
+* Add a base test class for the queues package
+* Add a Client 'instantiator'
+* Move request_and_transport to the Client
+* Make pbr only a build-time dependency
+* Add missing requests requirement
+* Add `simple` example for the client library
+* Remove the dependency on oslo.config
+* Bootstrap Messages support
+* fix: import-time side effect on errors
+* Remove unused packages
+* Support building wheels (PEP-427)
+* Fix some links in the README
+* Updated the readme to have valid links
+* Add list of required fields to the API definition
+* Implement queue's API methods
+* change assertEquals to assertEqual
+* Pass keywords to the request initialization
+* Implement HTTP Transport
+* Make the request object API aware
+* Split get_transport into 2 different functions
+* Complete refactor of api.py
+* Create v1 package and move messages there
+* Add prepare_request function to requests.py
+* Add a base transport class
+* Restructure client code
+* Use latest PBR
+* Add keystone backend
+* Authentication API + NoAuth backend
+* Add common http class
+* This adds a transport layer request spec class
+* Refactor client's structure to reflect Marconi's
+* Remove mox from test-requirements.txt
+* Added a base class for tests
+* Adding first oslo module and config
+* Update requirements and pbr version
+* Update .gitreview for incubation org move
+* Implement message controller
+* Update tox.ini and setup.cfg
+* Added support for running the tests under PyPy with tox
+* Revert "Add apiclient library"
+* Expose the version of the client
+* Gate on Python 3.3
+* Improve README, add HACKING
+* Ignore *.egg files
+* Convert to more modern openstack-common.conf format
+* docs(README): add link to design wiki
+* Add apiclient library
+* Rename requires files to standard names
+* Migrate to pbr
+* Lets get the party started :)
+* Added .gitreview

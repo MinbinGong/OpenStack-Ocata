@@ -1,0 +1,54 @@
+[console_scripts]
+mistral-db-manage = mistral.db.sqlalchemy.migration.cli:main
+mistral-server = mistral.cmd.launch:main
+
+[kombu_driver.executors]
+blocking = futurist:SynchronousExecutor
+threading = futurist:ThreadPoolExecutor
+
+[mistral.actions]
+std.async_noop = mistral.actions.std_actions:AsyncNoOpAction
+std.echo = mistral.actions.std_actions:EchoAction
+std.email = mistral.actions.std_actions:SendEmailAction
+std.fail = mistral.actions.std_actions:FailAction
+std.http = mistral.actions.std_actions:HTTPAction
+std.javascript = mistral.actions.std_actions:JavaScriptAction
+std.js = mistral.actions.std_actions:JavaScriptAction
+std.mistral_http = mistral.actions.std_actions:MistralHTTPAction
+std.noop = mistral.actions.std_actions:NoOpAction
+std.sleep = mistral.actions.std_actions:SleepAction
+std.ssh = mistral.actions.std_actions:SSHAction
+std.ssh_proxied = mistral.actions.std_actions:SSHProxiedAction
+std.test_dict = mistral.actions.std_actions:TestDictAction
+
+[mistral.auth]
+keycloak-oidc = mistral.auth.keycloak:KeycloakAuthHandler
+keystone = mistral.auth.keystone:KeystoneAuthHandler
+
+[mistral.engine.rpc_backend]
+kombu_client = mistral.engine.rpc_backend.kombu.kombu_client:KombuRPCClient
+kombu_server = mistral.engine.rpc_backend.kombu.kombu_server:KombuRPCServer
+oslo_client = mistral.engine.rpc_backend.oslo.oslo_client:OsloRPCClient
+oslo_server = mistral.engine.rpc_backend.oslo.oslo_server:OsloRPCServer
+
+[mistral.expression.evaluators]
+jinja = mistral.expressions.jinja_expression:InlineJinjaEvaluator
+yaql = mistral.expressions.yaql_expression:InlineYAQLEvaluator
+
+[mistral.expression.functions]
+env = mistral.utils.expression_utils:env_
+execution = mistral.utils.expression_utils:execution_
+json_pp = mistral.utils.expression_utils:json_pp_
+task = mistral.utils.expression_utils:task_
+tasks = mistral.utils.expression_utils:tasks_
+uuid = mistral.utils.expression_utils:uuid_
+
+[oslo.config.opts]
+mistral.config = mistral.config:list_opts
+
+[oslo.config.opts.defaults]
+mistral.config = mistral.config:set_cors_middleware_defaults
+
+[tempest.test_plugins]
+mistral_test = mistral_tempest_tests.plugin:MistralTempestPlugin
+

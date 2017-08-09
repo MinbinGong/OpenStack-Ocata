@@ -1,0 +1,658 @@
+CHANGES
+=======
+
+1.5.2
+-----
+
+* Updated from global requirements
+* bugs fixes:
+* testing try to add logs to keystoneauth
+* Fixed the name of group options in get_opts_lists
+* Updated from global requirements
+
+1.5.1
+-----
+
+* Doctor datasource - severity is not mandatory
+* change datasource type to static for devstack installation
+* fix the client attribute for alarms
+* fix the client attribute for alarms
+* Update UPPER_CONSTRAINTS_FILE for stable/ocata
+* Update .gitreview for stable/ocata
+
+1.5.0
+-----
+
+* Added prelude to the Ocata release notes
+* not condition
+* Added Ocata release notes
+* no more mocks
+* fix mapping to create an alarm on a resource other then host
+* Updated from global requirements
+* Allow interchangeable graph class for the entity graph. Graph driver class is a configurable entry point using stevedore, can be changed in entry_points.txt and vitrage.conf. NetworkX graph - classes encapsulation, can now easily be replaced
+* change the way I create a alarm id
+
+1.4.0
+-----
+
+* Support post event API
+* more tempests changes
+* fix tempests in gate
+* Code refactoring - EntityGraph class functionality moved to a processor utils
+* Rename `config_id` to `static_id`
+* Neighbor validation for static datasource transformer
+* Remove evacuate - this functionality is not working well, and should not be a part of Vitrage
+* Updated Vitrage documentation and architecture diagram
+* update the collectd readme
+* Rename `static_info_re` to `static_info` to avoid confusion
+* Implement static datasource transformer
+* small changes
+* Some fixes in the tests
+* add collectd datasource
+* test fix
+* Add update neighbors tests
+* Fix warning from PyCharm: Default argument value is mutable
+* Transformers refactoring
+* Tempests fix
+* Vitrage Topology graph-type=tree requires filter
+* Implement Doctor datasource for handling alarms coming from OPNFV Doctor monitor Implements: blueprint doctor-datasource
+* Tempsets exception raise change
+* Implement aodh alarm notification
+* enable blank relationships in template
+* Updated from global requirements
+* Replaces uuid.uuid4 with uuidutils.generate_uuid()
+* enrich_event should not be a static method
+* change vitrage.conf to work with username vitrage instead of admin
+* add aodh functional tests
+* Implement static datasource driver
+* tox.ini changes due to kombu 4.0.1 dependency
+* Use assertGreater(len(x), y) instead of assertTrue(len(x) > y)
+* Updated from global requirements
+* heat tempest fix
+* enable heat in gate
+* Separate common fields from TemplateFields
+* add aodh transformer unit test
+* restore checking the action about alarm with 'ok' state
+* add prints for exceptions
+* Updated from global requirements
+* Bug fix: When creating a vertex by the evaluator transformer, take only parameters that are not None. Otherwise, a None parameter may overwrite a "real" parameter that already exists on the vertex
+* Replaced e.message with str(e)
+* Changed the home-page link
+* Move utility methods from `common/utils` to `utils`
+* change constants names
+* refactor the '_extract_action_type' function
+* support cors
+* rename internal vitrage properties
+* Show team and repo badges on README
+* Updated from global requirements
+* test for removing is_deleted edges
+* remove is_deleted edges
+* Use more specific asserts in tests
+* update the clean stage to clean all config data
+* Updated from global requirements
+* skip heat tempest temporary
+* Replace six.iteritems with dict.items()
+* resolve the conflict about event_type in different namespace
+* Skeleton for static datasource
+* bug fix in heat. 1. show heat stack in error state. 2. event property changed to "project" insead of "project_id"
+* Refactoring common/file_utils.py
+* template str dependant uuid
+* Beautify, correct URLs in documentation files
+* delete 'resource_id' as a component of key_values
+* Add apache license to source files
+* Replace deprecated LOG.warn with warning LOG
+* remove edges which are is_deleted=true
+* Fix warnings in PyCharm
+* Don't include openstack/common in flake8 exclude list
+* Add notice to nagios devstack installation
+* use aodh alarm_id as alarm_key
+* fix the parameter type of input and output
+* Modify variable's using method in Log Messages
+* evaluator fix for startup phase
+* Multi tenancy for topology, alarms and rca apis
+* Fixed some diagrams
+* Heat.stack datasource values fix
+* Added Comprised relationship to constants
+* Shorten rescheduler test time
+* Re-indent lines and add code block
+* Add details to config nagios GUI, re-indent lines
+* Clarify zabbix with vitrage installation guide
+* Drop *openstack/common* in flake8 exclude list
+* delete useless input parameter
+* fix the error URL in nagios-devstack-installation.rst
+* Stop adding ServiceAvailable group option
+* Enable release notes translation
+* Updated from global requirements
+* Maintain releasenotes for vitrage
+* RCA API changes
+* Change RCA API to index
+* Correct installation file name stack -> stack.sh
+* Updated from global requirements
+* rename vitrage engine to vitrage service
+* Documentation updates
+* make the os clients dynamiclly imported
+
+1.3.0
+-----
+
+* Updated from global requirements
+* fix some syntax error
+* Correct reraising of exception
+* add new datasource documentation
+* removed exrex usage; mock no longer supports REGEX in datasource examples
+* Add Python 3.5 classifier and venv
+* TrivialFix: Remove logging import unused
+* Enable heat tempests
+* Fix template validation status code reference
+
+1.2.0
+-----
+
+* skip heat tempest
+* Additional Volume info
+* ReScheduler class for Vitrage Snapshot Service
+* Fix for bug in topology show and RCA show API
+* heat tempests
+* heat unit tests
+
+1.1.0
+-----
+
+* Adding heat datasource
+* Added an option to evacuate instances from a failed host
+
+1.0.0
+-----
+
+* filter properties from nova.instance datasource
+* zabbix retry import and client login
+* Fix typo in `docs/notitier-aodh-plugin`
+* Remove exrex from requirments. It is used only for testing, and does not exist in global-requiremenst
+* Allow static physical configuration to include all sorts of resources and make relationships non mandatory
+* change api syntax for alarms list
+* Log filtered result of actions
+* Add the resource to the alarm in the message that the alarm notifier receive from the graph. Blueprint : Add to alarm notification the resource
+* Add category validation for action `add_causal_relationship`
+* Replace `template_ids` array with `definitions_index` dict
+* Fix argument name in functions
+* Replace assertEqual(None, *) with assertIsNone in test_consistency_transformer.py
+* remove trailing spaces
+* fixed template sample
+* Fix resource_id of event alarm
+* Ignore .python-version which is used by pyenv
+* change tenant_id to project_id
+* Support transformers update_method
+* fixed bugs in template validation
+* `mark down` is used for host
+* use `name` not `id` in template
+* Remove redundant method + Zabbix fix
+* enable external notifiers
+* Fix typo in template
+* Aodh datasource should not retrieve alarms with status 'insufficient data'
+* Datasources tenants
+* Datasource configurable update Method
+* zabbix datasource - adding rawtext to get_all and fixed bugs
+* Add new Tempest for datasources in the gate
+* Zabbix to Vitrage notifications
+* Change tempest configuration
+* add connect and managed_by to edge labels
+* template validation - fixed bug
+* Remove discover from test-requirements
+* Correct reraising of exception
+* Remove unused LOG to keep code clean
+* Replace deprecated LOG.warn with LOG.warning
+* add some sample templates
+* Datasource tempests changes
+* add nova force-down-notifier
+* Typo commit fixed a spelling in the documentation
+* tempests changes
+* Add mark-down action
+* add tempest tests for template list/validate/show api's
+* Gate-hook devstack post-config
+* template show api documentation
+* template show - API handler and Controller
+* template list (documentation) spelling mistake
+* template list - documentation
+* template list - adding uuid
+* add neutron test and fix bug 1593447: vitrage topology show doesn't show all the graph for type graph
+* template validation - change 'error code' to 'status code'
+* template list - api handler and controller
+* a depth in `get topology show` API can only be used if there is a root
+* template list - change template class name to template_data
+* template validation - fixed bugs
+* aggregated + operational values documentation
+* Neutron Network and Port Notifier support
+* template list - changed template class name to template_data
+* template validate - status code documentation and status code OK changed to 0
+* template validate - hide logging messages in unit tests
+* Zabbix datasource unit tests (additional changes)
+* Zabbix datasource unit tests
+* template validate - replace error_msgs to status_msgs
+* Zabbix datasource
+* removing bracket
+* Change the interval of the processor service
+* template validate API - documentation
+* tests optimizations - add assert validations
+* template validate API - change error code to status code
+* When Aodh alarm is deleted, need to update its state to INACTIVE
+* template validate API - adding error code
+* add some print info for graph query
+* overlapping templates - default behavior for unknown severities and states
+* template validate API support content validation
+* template validate API controller and API handler
+* Added Template&Confs to Tempest Env
+* upgrade oslo.messaging version
+* Overlapping templates support - documentation
+* support for overlapping templates
+* add set state test and aodh notifier test
+* Get All Tenants
+* use 'alarm_name' not 'alarm_type' in properties of raise_alarm action in the example template
+* templatecontent validation - fixed bug
+* Graph-type tree without a filter
+* Tempest Gate Fix
+* Rearrange state_manager
+* template content validation - fix bugs
+* template content validation
+* rca
+* some syntax error in scenarios section of vitrage-template-format.rst
+* tempest cli configuration
+* add self.assertIsNotNone(api_graph) in test_topology tests
+* template syntax validation - category validation
+* get topology with wrong filter returns 404
+* Multi-test Tempest script
+* Subgraph matching to return the found matching vertices, and not only their ids. This information is use full later in the evaluator, instead of querying the graph again
+* template syntax validation - template_id validation
+* remove the verbose configuration
+* make it compatible with py34
+* Add another queue before the processor, dedicated for evaluator events. Evaluator and processor are on the same process, thus should not use the multiprocessing queue between them
+* template syntax validation - adding error_messages dict
+* Removal of unused static abstract method in driver_base and redundant use in 2 datasources
+* tempest changes
+* tempest configuration
+* tempest configuration
+* tempest configuration
+* tempest configuration
+* template syntax validation - refactoring
+* template syntax validation - returns answer with description
+* tempest configuration
+* Tempest Fix for Gate
+* Tempest Fix for Gate
+* get topology API don't handle the parameter depth
+* tree topology API should return the specified root
+* Changed assertTrue(isinstance) to assertIsInstance()
+* consistency test for transformer
+* consistency changes - push changes made by consistency to queue
+* template content validation
+* delete vitrage.transformers section in setup.cfg
+* Bug fix in state_manager
+* Tempest Gate - Update
+* Tempest Gate - Update
+* remove vitrage-dashboard
+* test only topology change to admin password
+* split create_neighbors method to create_update_neighbors and create_snapshot_neighbors
+* create a local.conf file with post-config
+* escape the $ in the localrc file
+* Replace deprecated LOG.warn with LOG.warning
+* Tempest Gate
+* tempests changes
+* Tempest Gate
+* Tempest Gate
+* update tox
+
+0.2.0
+-----
+
+* documentation fix
+* template documentation
+* Bug Fix - vitrage datasource service crashes on non working data source
+* fix bug in disable datasource
+* support py34
+* updated some pictures
+* documentation fixes; first steps guide
+* alarms and templates
+* aodh values yaml
+* add ip addresses to port entity
+* move neutron tyaml files
+* Fix processor bug - cannot create an alarm after it was deleted
+* bug fix - delete aodh/nagios alarm in vitrage when the original alarm is deleted. Also added nagios test that verifies this behavior
+* Add tempest tests to Gerrit Gate - Experimental
+* support py3
+* documentation review
+* remove misc intellij warnings
+* Bug fixes + aodh tempest
+* Documentation
+* update the notification driver
+* Support aodh alarms with no resource id
+* fix datsource parameter
+* resource state config documentation review
+* deduced alarm notifier, is subscribed to graph changes, upon a deduced alarm added an activate notification is sent to the notifers service
+* reviewed template format documentation
+* add neutron states config
+* Cosmetic changes
+* template syntax validation - adding description
+* add neutron states config
+* tempest for datasources
+* Added positive filtering (specific event types to get notified about) and removed negative filtering
+* change normalized state to normalized value
+* rename from plugin to datasource
+* reviewed alarm-state-config, without changing state to severity in code
+* change port id property
+* add debug message
+* remove notifier call from evaluator
+* disable nagios datasource if not installed
+* add update events to neutron datasource
+* add debug log for events recevied
+* topology tempest
+* add section to configure notifications
+* name refactor - change 'SynchronizerProperties' to DatasourceProperties
+* state manager changes
+* rename folder
+* scenario evaluator documentation
+* rename refactor - replace 'synchronizer' and 'plugin' to 'datasource' and 'driver'
+* added a link to nagios devstack installation
+* add port plugin
+* Show only non deprecated elements
+* topology tempests
+* add transformer for port and network
+* condition parsing fix
+* change hierarchy
+* data sources functional tests
+* bugs fixes
+* fix some intellij warnnings
+* fix section name in devstack configuration
+* plugins tests
+* add vitrage plugins to devstack configuration
+* changed synchronizer_plugins group name to plugins
+* add alarms & change tempest folder hierarchy
+* fix transformer for get all
+* nagios configuration guide
+* move create_placement_hoder and _extract_action_type to  base class
+* transformer for get all
+* small refactor
+* cinder oslo notifications changes
+* fix runners & new topology tests
+* changes
+* transformers refactoring
+* enable loading of external plugins with different base path
+* instance transformer - small refactoring
+* first stage in neutron plugin
+* fix a bug in preveius refactroring
+* Enrich aodh sync event so it can be connected to the graph
+* Enrich aodh sync event so it can be connected to the graph
+* adding inactive state to Nagios alarms
+* change Vitrage alarm timestamp format to be aligned to other formats
+* small refactoring to be more pythonic
+* added the nova instance synchronizer with a listener service
+* cinder states yaml
+* fix misc intellij inspection warnings
+* mock resources changes
+* change import
+* cinder plugin
+* update test requirements
+* add branch for vitrage client when reclone is true
+* Enrich aodh sync event so it can be connected to the graph
+* replace setup method with setUpClass 2
+* transformer + synchronizer changes
+* fix the path for the mock file flag in conf
+* transformer + synchronizer changes
+* installation and configuration links
+* fixed configuration documentation
+* add some info to the readme
+* add link to devstack installation
+* fix misc intellij inspection warnings
+* move mock flag to oslo config
+* fix parameter passing
+* consistency + sample_timestamp
+* load-plugins-from-conf-file-update
+* remove mutable default parameters
+* disable intellij warnings
+* rename parameters
+* rename parameters
+* port to python 34
+* fix spelling mistakes
+* EntityType - Deprecated
+* improving action recipes tests
+* refactor to use generator
+* dont read config file in test
+* add sample_timestamp and change update_timestamp
+* Fix keystone client and refactor synchronizers to use it
+* improving action executor test 2
+* make process_initializator in consistency work
+* small fixes
+* aodh notifier and better logging
+* adding comments to action recipes
+* aodh notifier
+* logging in evaluator; added is_deleted=false requirement
+* adding active and inactive states to deduced alarm
+* move callback to the c'tor
+* rca direction
+* adding graph index to show topology API
+* change stale entities in consistency to mark entities as is_deleted=True
+* consistency process fix periodic process should check only non vitrage entities
+* rpc api context
+* refactor _find_rca_index
+* evaluator timestamp and vitrage_id fixes
+* move entity graph apis class to its own file
+* change initial_delay for change service to start after changes_interval
+* adding inspected_index
+* adding inspected_index
+* fix inheritance
+* Spelling error correction
+* rpc api config fix
+*  evaluator - bugs fixing:  1. adding state to deduced alarms  2. handle datetime in action executor
+* add TODO comment
+* to broad exceptions
+* fix init method
+* fix signature of overwrite method
+* methods maybe static
+* fix method call
+* Change nagios transformer to support switches Change API to return only alive entities
+* Replace deprecated LOG.warn with LOG.warning
+* code fix + test directions change
+* support python 3.4
+* fix api doc
+* add api doc
+*  evaluator -support severity in vitrage alarm
+* state normalization fixes
+* bug fixes
+*  evaluator - adding raise alarm (undo action)
+*  evaluator - adding raise alarm (do action)
+* scenario evaluator refactoring
+* get_topology changes
+* important root_id fix
+* first aodh plugin get-all implementation + some nagios fixes
+* Evaluator Engine / subgraph matching changes / small bug fixes
+*  evaluator - adding RCA action
+* rpc api service fix
+* bug fixes
+* Load plugins from conf file
+* rpc api handler configuration
+* mock changes
+* fix call to rpc client
+*  evaluator - action executor
+* state normalization fixes
+* fix path of vitrage dir creation
+* bug fix for evaluator
+* Load transformer plugins from conf file
+* move rpc transport to pecan hooks
+* add get_rca call to transport
+* create some directories in conf directory
+* add states plugins yamls to etc
+* fix bug in update edge/vertex
+* changes for get_rca in api handler
+* support update/delete edge in entity graph processor
+* states configuration documentation + changes
+* fix mock files
+* update_vertex + update_edge changes
+*  evaluator - action wrapper
+* add inspected_index to get_rca
+* add state to openstack node
+* Use assertIsNone(None, X)
+* state normalization support
+* state normalization support implementation
+* support nagios get_changes
+* fix load_files and load_yaml
+*  evaluator - improve the template test
+* evaluator processor - action definitions
+* Notifier: Edge notification also includes the relevant vertices
+* api handler rpc changes
+* Refactoring graph driver folders
+* evaluator - loading template files and build scenario repository
+* Implements: blueprint entity-graph-change-notifications
+* implements: blueprint synchronizer-nagios-get-all
+* Static physical configuration changes
+* Static physical configuration documentation
+* get_topology validation & run_vitrage_tempest.sh
+* documented nagios configuration
+* delete obsolete documentation
+* implements: blueprint synchronizer-nagios-get-all
+* bug fix for LOG
+* put the call under try catch
+* fix parameter name
+* fix method name and typo
+* Change api mocks + rename 'node' to 'openstack.cluster'
+* fix path of vitrage.bash_completion
+* fix file name
+* consistency initializing process implements: blueprint entity-graph-consistency-validator
+* implements: blueprint synchronizer-nagios-get-all
+* evaluator - loading template files
+* fix topology mock
+* implements: blueprint synchronizer-nagios-get-all
+* initial devstack installation
+* Add sub graph matching to graph algorithm driver
+* infrastructure changes for synchronizers and consistency
+* nagios transformer - adding tests
+* fix get topology parameters
+* nagios transformer - bug fixed
+* run_vitrage & stop_vitrage & get_topology
+* fix typo
+* fix resource show and list
+* add rca mock
+* services changes implements: blueprint entity-graph-consistency-validator
+* add consistency with starting process implements: blueprint entity-graph-consistency-validator
+* fix query to the rca
+* add consistency with periodic process implements: blueprint entity-graph-consistency-validator
+* evaluator processor initial outline
+* add query to the rca
+* move transformers package to Synchronizer package
+* split the documentation to two files: design and use cases
+* small fixes for nagios synchronizer plugin implements: blueprint synchronizer-nagios-get-all
+* Added template format specification doc small fixes to template format
+* output_graph method fix. when using json_graph.node_link_data, it puts in default 'id' in the each vertex properties with the value of the vitrage_id implements: blueprint static-synchronizer
+* Initial implementation for nagios synchronizer plugin implements: blueprint synchronizer-nagios-get-all
+* nagios synchronizer - nagios alarm transformer more updates
+* bug fix in graph utils implements: blueprint static-synchronizer
+* nagios synchronizer - nagios alarm transformer
+* cosmetic change
+* nagios synchronizer - nagios alarm transformer
+* improvements to nagios events mock
+* api handler get alarms
+* nagios synchronizer - adding mock
+* Add Static Physical transformer + unit tests implements: blueprint static-synchronizer
+* Add get alarms to graph driver and api handler
+* vitrage evaluator - move EventAction class to entity_graph package
+* changes in transformer api implements: blueprint static-synchronizer
+* Use uppercase 'S' in word "OpenStack"
+* vitrage evaluator - template validator
+* add rca api
+* implements: blueprint static-synchronizer
+* implements: blueprint static-synchronizer
+* implements: blueprint static-synchronizer
+* implements: blueprint static-synchronizer
+* vitrage host transfomer - fixed bug
+* add rca api
+* implements: blueprint static-synchronizer
+* add authentication test
+* bp/vitrage_template_loader - parse template
+* bp/vitrage_template_loader - load templates from templates dir
+* return any array of alarms
+* make http error clear in mock
+* add alarms api
+* add a flag for returning a mock file
+* add functional tests for api
+* evaluator - adding evaluator package
+* nova transformer - code improvements
+* fixed readme file
+* nova transformer - splitting nova transformers to different files
+* make the options more readable
+* add show resource and list resources
+* basic rpc api
+* Fixed pictures allignment
+* Design and use cases for vitrage graph
+* cosmetic changes: change type to category and subtype to type
+* nova transformer - improvements
+* bug fixes
+* make utc time function more readable
+* add sample date to list all nova
+* add sample date to list all nova
+* fix graph main
+* refactor synchronizer.  Synchronizer class is container for \  all Synchronizer's services
+* make sure there is one section for entry_points
+* vitrage-graph integration 1. with host transformer 2. with zone transformer 3. create graph test Implements: blueprint vitrage-resource-processor
+* nova transformer - cosmetic changes
+* nova transformer - adding host and zone transformers - cosmetic changes
+* nova transformer - adding host and zone transformers
+* sped up mock generator
+* Implements: blueprint networkx-graph-driver
+* vitrage-graph service integration
+* Use assertTrue/False instead of assertEqual(T/F)
+* added mock support for zone sync events
+* change topology api to get complex query
+* Adding new actions for processor
+* renamed event format files; added sync host mock support
+* fix instance and host plugin
+* synchronizer zone + host, generic changes
+* Create ServiceLauncher that launches the services: 1. Entity graph 2. api_handler 3. synchronizer 4. Graph consistency
+* added alu copyright
+* Implements: blueprint networkx-graph-driver
+* 1. code integration of Synchronizer + Processor + transformer 2. Create Entity graph service + Synchronizer service
+* 1. code integration of Synchronizer + Processor + transformer 2. Create Entity graph service + Synchronizer service
+* code changes Implements: blueprint vitrage-resource-processor
+* nova transformer - adding tests + bug fixes
+* processor code review comments Implements: blueprint vitrage-resource-processor
+* processor code review comments Implements: blueprint vitrage-resource-processor
+* added mock support for external input
+* nova transformer - transform instance update events
+* Integration of Synchronizer + Processor + Transformer Implements: blueprint vitrage-resource-processor
+* Integration of Synchronizer + Processor + Transformer Implements: blueprint vitrage-resource-processor
+* bug fixes in nova transformer
+* Mock support for correct synchronizer event format, and added for transformer events
+* add copyright
+* vitrage processor code review and documentation Implements: blueprint vitrage-resource-processor
+* add graph type option for get topology
+* add .iml to git ignore
+* add parameters got get topology
+* vitrage processor implementation Implements: blueprint vitrage-resource-processor
+* nova transformer maintenance
+* nova transformer and tests
+* make the file an example template
+* nova instance transformer
+* Implements: blueprint networkx-graph-driver
+* fix doc
+* fix import
+* add policy
+* init vitrage tempest plugin
+* remove cors and redundant init file
+* vitrage-synchronizer fw implements: blueprint synchronizer-get-all-instances
+* mock generator - bug fix
+* Implements: blueprint networkx-graph-driver
+* nova instance transformer and tests
+* fixed getting path of generator file
+* no need for keyauth workaround
+* Mock for synchronizer data stream
+* make topology get return a sample json file
+* add a rest get for topology
+* change double quote to single quote
+* add configuration files and options
+* entity graph - properties file
+* fix setup.cfg
+* Implements: blueprint networkx-graph-driver
+* add initial files for topology api
+* transformer base and base unit test-2
+* delete unnecessary directory
+* Rearranged entity graph directory
+* Add common directories and initializers
+* remove support for pypy in tox.ini
+* Adds .gitignore file
+* Add Vitrage project initial file
+* Added .gitreview

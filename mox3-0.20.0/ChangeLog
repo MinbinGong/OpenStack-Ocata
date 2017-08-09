@@ -1,0 +1,139 @@
+CHANGES
+=======
+
+0.20.0
+------
+
+* Revert "Use inspect.signature() if available"
+
+0.19.0
+------
+
+* Use inspect.signature() if available
+* Updated from global requirements
+* setup.cfg: configure doc build
+* Replace 'assertTrue(a (not)in b)' with 'assert(Not)In(a, b)'
+
+0.18.0
+------
+
+* Remove discover from test-requirements
+
+0.17.0
+------
+
+* Updated from global requirements
+
+0.16.0
+------
+
+* Updated from global requirements
+* Correct spelling of occurrences
+
+0.15.0
+------
+
+* Updated from global requirements
+* Updated from global requirements
+
+0.14.0
+------
+
+* Updated from global requirements
+* Updated from global requirements
+
+0.13.0
+------
+
+* Updated from global requirements
+* Remove Python 2.6 classifier
+
+0.12.0
+------
+
+* Add universal wheel tag to setup.cfg
+
+0.11.0
+------
+
+* Fix broken test and remove Bad test
+* Updated from global requirements
+* Activate pep8 check that _ is imported
+
+0.10.0
+------
+
+* Updated from global requirements
+* Updated from global requirements
+
+0.9.0
+-----
+
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+
+0.8.0
+-----
+
+* Fixes to allow a new release
+* Updated requirements
+* Add a fixture for consuming mox3 easily
+* Add CONTRIBUTING file
+* Cleaed up AUTHORS/ChangeLog file
+* Migrate test bases to testtools
+* Fix all of the flake8/hacking warnings
+* Fix the leading indentation issue
+* Updated to use OpenStack standards
+* Add openstack stuff
+* Changed project description
+* Author is not required - maintainer is enough
+* Added tests to sdist
+* Applied some changes according to http://getpython3.com/diveintopython3/packaging.html
+* Changed directory test to tests. Fixed travis config
+* Adjusted the structure of the mox3
+* Minor fixes + changes in metadata
+* Update README
+* Fixed pep8 issues
+* Added test for changed semantics in Python 3
+* Added modification info
+* Fixed isinstance check on instances of MockObject
+* Fixed a bug when dir() called on MockObject was not returning attributes of a mocked class (Python3)
+* Pep8's E111 error is now ignored
+* Removed exclamation mark from travis.yml
+* Added pep8 to .travis.yml
+* Fixed deprecation warnings in mox_test.py
+* Introduced class to which mocks can be bound in order to preserve binding information (Python3 and missing unbound methods issue)
+* Added __hash__ for MockMethod - no default hash in py3k
+* bugfix for unhashable/uncomparable dicts
+* Restored callable function since it's present in python 3.2
+* Converted all classes to the new style (inheriting from object) - this is the only option in py3k
+* Py3k always sets re.U flag, so the resulting regex.flags are equals to flags | re.U
+* Fixed all the simple compatiblity issues
+* Fixed compatiblity issues in stubout
+* Fixed some of the compatiblity issues
+* info about modification
+* Added modification info
+* Enabled Travis CI
+* Enabled Travis CI
+* Another bugfix... Tests are still passing
+* Bugfix. At least I hope so..
+* fixed indentation
+* bugfix
+* Added .gitignore
+* Updated to version 0.5.3
+* Numerous fixes from Google:
+* Mox release 0.5.1, which includes some bug fixes and tests for stubout
+* Fix for Issue 3, submitted by a...@therobots.org
+* Fix for Issue 5, submitted by agoratim
+* Patch from Matt Brown (mdbrow@gmail.com) to inspect the arguments of mocked methods.  Alright! :)
+* Added support for __contains__, thanks to Adam Lowry
+* Added import for inspect, and tests for stubout.  Patch by Manuel Holtgrewe
+* Remove duplicate NotTest.  Bad patch
+* Add a Not comparator to compose with other comparators
+* Fix MoxTestBase to be usable with multiple-inheritance
+* Write a README
+* Start our first release at 0.5.0, not 1.0.0
+* Include the mox_test_helper.py in the distribution
+* Fix mailing list address
+* Initial import of mox (originally an internal Google project)

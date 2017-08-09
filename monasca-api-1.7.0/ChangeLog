@@ -1,0 +1,1240 @@
+CHANGES
+=======
+
+1.7.0
+-----
+
+* Accept epoch time offset for alarm-history
+* Add libssl to fix pep8
+* Updated from global requirements
+* Only import wsgiref when needed
+* Use proper type for notification periods
+* Run against ocata requirements
+* Add bindep.txt
+
+1.6.1
+-----
+
+* Bugfix: Forbid colon in dimension name
+* Updated from global requirements
+* Adding WSGI support
+* Update UPPER_CONSTRAINTS_FILE for stable/ocata
+* Update .gitreview for stable/ocata
+
+1.6.0
+-----
+
+* Release version 1.2.1 for Java
+* Fix Python tempest gate
+* Remove note of Xenial read only file system problem from README
+* Use monasca_common for metric validation
+* Updated from global requirements
+* Enabling Postgres + ORM in devstack
+* Fix alarm_count with multiple group_by fields from CLI
+* Fix alarm count failing with metric name
+* [WIP][BANDIT] Extended code analysis
+* [PEP8] Extended code analysis
+* Forced grafana installation process to remove files if they exists in grafana-build
+* Resolve hang with grub-pc
+* Use "SHOW TAG KEYS/VALUES" for list dim names and values
+* Add Tempest tests for invalid IDs and fix potential 500 errors
+* Removes unnecessary utf-8 coding
+* Updated from global requirements
+* Updated from global requirements
+* Allow lower case for queries with state and severity
+* Remove references to kafka-python
+* Fix "permission denied" error in devstack
+* Refactor monasca libraries
+* All alarm-definition-updated event fields must be set
+* Granular logging control
+* Devstack should apply changes to affected repos
+* Fix vertica metric name list with dimensions
+* Treat period, periods and threshold as numbers
+* Change offset of list notification to integer instead of id
+* Updated from global requirements
+* Add missing api-logging.conf to setup.cfg
+* Migrate test run to ostestr
+* Add validation for period and periods
+* Fix influxdb statistics list with multiple functions
+* Remove custom configuration for tempest
+* Updated from global requirements
+* Add tests for invalid webhook and email addresses
+* Fix list metric for other tenants
+* Replace deprecated identity options for tempest
+* Integration with oslo.context
+* Updated from global requirements
+* Fix the Monasca API tempest tests
+* Fix python monasca-api mysql server connection loss
+* Modify Vagrant box to bento/ubuntu-16.04
+
+1.5.0
+-----
+
+* Change version to 1.2.0
+* Make Kafka listen on all interfaces
+* Updated from global requirements
+* Fix UnicodeEncodeError for alarm definition
+* Add support for InfluxDB 0.11.0 to 1.1.0 in the Python API
+* Make statsd options configurable
+* Set proxy for npm
+* Increase parse_and_validate LOG level
+* Allow unicode for notification type
+* Define common function to download files
+* Mark password configure options as secret
+* Fix readme about how to run tempest tests in devstack
+* Fix Vertica provisioning on Xenial
+* Show team and repo badges on README
+* Enable all monasca services with systemctl
+* Update README for xenial
+* Make cloning of Grafana faster
+* Monasca-notification config file
+* Removed monasca-smoke-tests
+* Replaced e.message with str(e)
+
+1.4.0
+-----
+
+* Start grafana-server if horizon is available
+* Add duplicate action id validation
+* Allow admin users to backfill data
+* Updated from global requirements
+* Updated from global requirements
+* Migrate devstack to xenial
+* Add group by multiple dimensions
+* Updated from global requirements
+* Removed unnecessary sleep from devstack plugin
+* Use devstack dlm-zookeeper functionality
+* Updated from global requirements
+* Add python multiple metrics for measurement and statistics
+* Check services are enabled
+* Remove unnecessary condition
+* Use devstack git_clone
+* Move versions to settings
+* Updated from global requirements
+* Fix local deployment
+* Fix metric-statistics API fails when offset is given
+* Fix Cassandra statistics behavior
+* Remove id from monasca metric name list (Cassandra)
+* Improve metrics query with measurements join instead of subselect
+* Speed up local deployment
+* Fix LOG.warn to LOG.warning
+* Using assertIsNone() instead of assertEqual(None)
+* Updated from global requirements
+* Proposition for separate config for loggers
+* Fix generating proper mysql connection url
+* Use database password from variable
+* Add support for 'last' function
+* Fix grafana build steps, remove godep requirement
+* python impl. of metric-name-list for InfluxDB returns incomplete results
+* Add metrics/dimensions/names into monasca-api
+* Update grafana devstack setup
+* Stop adding ServiceAvailable group option
+* Changed the home-page url link
+* Remove id from monasca metric name list
+* Fix grafana build steps
+* Fix typo: remove redundant 'the'
+* Change assertTrue(isinstance()) by optimal assert
+* Add prefix "$" for command examples
+* Fix a few typos in API spec
+* TrivialFix: Using assertEqual instead of assertEquals
+* Add Apache 2.0 license to source file
+
+1.3.0
+-----
+
+* CRIT: Fix grafana build
+* Upgrade to Storm 1.0.2
+* Remove 'fill(0)' and fix influx time offset
+* TrivialFix: Remove logging import unused
+* Use absolute path for /etc/monasca
+* Updated from global requirements
+* Use constraints everywhere
+* Sync tools/tox_install.sh
+* Improve dimension filtering performance
+* Rollback the transaction if an exception is thrown
+* Fix config-generator.tempest.conf path
+* Use apt-get wrapper function
+* Fix Influx statistics and Alarm History behavior
+* Bump drizzle driver version to support millisecond resolution
+* Convert type to uppercase in command setters
+* Remove simport from devstack plugin
+* Fix Alarm State Transitions tests to always work
+* Add monasca api read-only user role
+* Avoid compilation error in monasca-common AlarmNotificationMethodType change
+* Add Cassandra support to devstack
+* Enable Cassandra Database
+* Removed mysql tables - follow up
+* Adds support for  notification plugins in monacaapi
+* Add state to sub_alarm table
+* Add a tempest test for patching notification with new type and period
+* Remove -H from sudo command in plugin.sh
+* Do not download when OFFLINE=True
+* Update the Tempest Test README for devstack
+* Add Tempest Run option to README
+* Remove event kafka topics and mysql tables
+* Remove discover from test-requirements
+* Add metrics/dimensions/names/values api for grafana templating optimization
+* Add patch-notification into the content of monasca-api-spec
+* Fix default domain name
+* Fix typo in devstack scripts and README
+* Change Monasca Port
+* Install monasca-agent without global requirements
+* Don't use deprecated nimbus.host
+* Fix update notification method doc
+* Use nvm to install node
+* Fix alarm definition tests
+* Move influxdb install into tox.ini and plugin.sh
+* Allow TLD test with port in Notification Webhook Address
+* Filter dimension queries by time
+* Remove gunicorn library from requirements.txt
+* Small function for basic email address validation
+* Show testr output in console
+* Clone monascaclient instead of installing via pip
+* Handle is_deterministic returned as Short or Boolean
+* SortBy for Hibernate ORM
+* Pagination fix for ORM
+* Modify influx port to avoid conflict
+* Don't remove dimensions from measurements unless merging results
+* Add patch to notification method and clean up code
+
+1.2.0
+-----
+
+* Import simport from monasca-common
+* Add domain variables for client
+* Enable filter by severity in ORM
+* Fix monascaclient in tempest for updates
+* Allow QA teams to use the Top Level Domain .test
+* Pass Credentials object instead of TestResource object
+* Fix format specifier bug in GET /names
+* Adjust devstack plugin for new storm/thresh version
+* Allow filtering by multiple severities
+* Add period field to notification methods
+* Added more logs to devstack log output
+* (Non)deterministic support for alarms
+* Remove unused and wrong pot file
+* Fix alarm definition ok action validation
+* Omit error logs which say can't remove npm cache
+* [monasca-api] Change tox to use https instead of git
+* Remove python-dateutil useless requirement
+* Remove ujson useless requirement
+* Remove unnecessary executable permissions
+* Pagination fix for ORM
+* [monasca-api]Constraint tox targets with upper-constraints.txt
+* Make devstack setup script use identity v3
+* Fix metrics statistics with multiple statistics
+* Or zookeeper with true when starting Kafka
+* Fix group_by concurrent modification exception
+* Add the ability to give vertica a hint to satisfy query locally
+* Add support for multiple metrics in measurements and statistics resources
+* Add equal sign on start/end time in influx
+* Fix metric-list limits
+* Honour ENABLED_SERVICES in devstack plugin
+* Return 422 when updating with invalid notification method
+* [Trivial] Remove unnecessary executable privilege
+* Change tox file
+* Fix sqla query of getting an alarm definition
+* Ignore value-meta validation when value-meta doesn't exist
+* Alarm-update failed with too few arguments
+* Add kafka python to monasca-agent virtualenv
+* Fix alarms with sort_by tests
+* FIX installation to enable to install after unstack
+* Replace measurements table join with subquery that fits in memory
+* Fix dimension validation of alarms
+* Update nodejs and npm packages
+* Fix alarmdefs multiple sort_by doesn't work correctly
+* Proposal of adding sort parameter to list notifications
+* Add grafana 2 setup to devstack monasca setup
+* Validate value meta key and value in python api
+* Honor accessedViaHttps flag on self and next links
+* Remove sphinx requires from test-requirements
+* Add clean up of Vertica
+* Add support for Vertica in the DevStack plugin
+* Fix install of Horizon Monasa UI in DevStack Plugin
+* Fix statistic tests with Vertica in Devstack
+
+1.1.2
+-----
+
+* Fix List Alarm/Alarms History Offset in Vertica
+* Fix timestamps columns of updating notification
+* Dimension Filtering in Vertica
+* Change sorted order of alarm state and severity
+* Add number of processors for kafka topics in persister conf
+* Change tempest_lib to tempest.lib
+* Resurrect reduction of inner join change, fix limit bug
+* Use correct dimension binding in metric names
+* Fix next link
+* Fix metric-list starttime bug
+* Fix limit issue on metric names query in vertica
+* Add repository section to python persister configuration
+* ORM (sqlalchemy) implementation for python
+* Check for complete string in sort_by
+* Fix Tempest Tests in test_metrics.py
+* Documentation:List Alarm/Alarms State History
+* Add new test for sort_by option
+* Use SimpleDateFormat in thread safe manner
+* Use vertica query binding for measurements and statistics
+* Allow filtering alarms by severity
+* Correct hibernate query for alarm definitions
+* Hibernate: Fetch alarms for services
+* Fix typo and add missed "metric_" prefix in docs
+* Allow filtering alarms by severity
+* Allow filtering alarm definitions by severity
+* Only do base monitoring by default in devstack
+* Dimension keys and values must not be empty
+* Ensure the same branch is used for common build
+* Revert "Avoid multiple inner joins if dimensions specified"
+* Fix a bug in state history and definition dimension queries
+* Allow filtering alarm definitions by severity
+* Fix error when sorting with limit
+* devstack install fails at monasca-api
+* Enhance test list alarm history
+* Test: Creating Metrics with Empty Value Key and Name
+
+1.1.1
+-----
+
+* Fix bug in dimension filtering
+
+1.1.0
+-----
+
+* Change MySqlDB to pymysql
+* Improve Email/URL address validator of python monasca-api
+* Pass link and lifecycle state in state transitions
+* Pass link and lifecycle state in state transitions
+* Fix magic comment of character encode
+* Use pip_install function for python components
+* Enhance dimension filtering
+* Allow alarm definition and alarm lists to be sorted
+* Add alarm count resource
+* Change offset of alarm history to timestamp
+
+1.0.1
+-----
+
+* Mitaka compatability
+* Fix java config
+* Clean up removed hacking rule from [flake8] ignore lists
+* Update API to falcon 0.3
+* Fix create service script
+* Specify python path to monitoring  module
+* Add Email/URL address validator to python monasca-api
+
+1.0.0
+-----
+
+* Adding specific keystoneclient
+* Add some unit tests for creating/updating definitions
+* Alarms history with no dulipcate timestamp
+* limit split of URL query params name-value pairs
+* Keep py3.X compatibility for urllib
+* Fix permissions on java log folders
+* Add Unit Tests for Java API
+* make enforce_type=True in CONF.set_override
+* Replace assertTrue(isinstance()) with assertIsInstance()
+* Correct 201 return code description
+* Change tempest.conf in devstack
+* Fix error when test setup fails to produce the required metrics
+* Fix notification methods test
+* Fix for alarm history paging
+* Fix edit notification page field is too small
+* Put py3x first in the env order of tox
+* Fix Monasca Tempest tests to use correct cred
+* Add testr init in Documentation
+* Fix measurement-list without endtime option fails
+* Allow Bad Request or Unprocessable entity
+* Bug in return 3 digit timestamp
+* Fix a 500 error if the user submits an invalid period
+* Fix alarm patch/update bug
+* Return 3 decimals in measurement timestamp
+* Fix create alarms bug in test
+* Adding liberty versions of oslo to requirements.txt
+* Revert back to try-with-resources statement
+* Add optional start_time and end_time for metrics list
+* Upgrade to Kafka 0.8.2.2
+* Fix bug in creating metric with Java API
+* Add db handle close statements
+* Fix stats bug for start_time = 1970-01-01
+* Fixed link creation during stack process
+* Fix a helper method which is ignoring timezone
+* Add the rejected value into error message
+* Update API doc
+* Use 3 decimals on timestamp calculation
+* Fix typo in alarm def creation example
+* Fix metric-statistics doesn't respond "Bad Request"
+* Change timstamp matching to always use 3 digits
+* Error out if test setup fails
+* Fix documentation on get_alarm
+* Fix metric-statistics doesn't respond "Conflict"
+* Always return 3 decimal places in measurement timestamp
+* Run tests with a particular attribute
+* Fix timestamp creation in helpers
+* Delete python bytecode before every test run
+* influxdb.conf location different for 0.9.5
+* KAFKA_VERSION was being created incorrectly
+* Add / fixup Cray copyright notices
+* Upgrade Influxdb to 0.9.5
+* Use Measurement where Metric was incorrectly used
+* Fix timestamp bug on create metrics
+* Enhance test_alarm_definitions
+* Fix statistics errors
+* Enhance test_measurements
+* Allow spaces and apostrophes in dimension key/value
+* Make state history test more predictable
+* Fix error in path while setting up monasca-ui in devstack
+* Don't check for duplicate name if name not specified
+* Increase difference in timestamps for measurements
+* Fix alarm links
+* Monasca API sometimes doesn't preserve milliseconds on timestamp
+* Fix alarm-history-list with single dimension fail
+* Improve unit test: test_alarm_state_history
+* Add verify functions back into test_metrics
+* Cleanup a couple of files
+* Fix missing credentials
+* Fix alarm-updated message for the python API
+* Improved test_alarms_state_history
+* Enhance test_alarms
+* "List Alarms State History" response body does not contain "id" fields
+* Fix sed command
+* Fix comment about default implementations
+* Fix test metrics limit offset
+* Fix sed command
+* Add another method to run tempest tests
+* Adding more log capture to monasca gate jobs
+* add adminUserDomainId and adminUserProjectId support to monasca-api
+* Matched python and java persister config
+* Replace time with timestamp in statistics return body
+* Enhance test_statistics
+* Use SERVICE_HOST for ip addresses
+* Attempting to gather logs from devstack gate run
+* Require all fields on alarm definition PUT request
+* Fix metrics test
+* Pinning version of oslo.config
+* Fix problem with type mismatch on Kafka config
+* Lock pyparsing library to specific version
+* Fix query param parsing
+* Fix metrics offset limit test
+* Fix alarm match_by test errors
+* Fixed errors in the resouce try/catch decorator
+* Enhance test_metrics
+* Require all fields on alarm definition PUT
+* Fix list alarms by state
+* Update to InfluxDB 0.9.4.2
+* Enhance test_metric_names and test_alarms_state_history
+* Add fixes for metrics list queries
+* Upgrade Apache Storm from 0.9.5 to 0.9.6
+* Add documentation to devstack README
+* Fixed alarm list errors
+* Fix smoke2.py tests
+* Make Monasca Java API bind interface configurable
+* Make Monasca API bind interface configurable
+* Fix corrupted link in Tempest Tests README.md
+* Move install of simport to virtualenv setup
+* Matching tests to spec
+* Removed wait time after creating metrics
+* Fix problem with Monasca API install
+* Removed some extraneous spaces
+* Added exception specific to influxdb
+* Make Python implementations the default
+* Set SERVICE_HOST, enable cache, install key, tempest and monasca only
+* Use sudo on tempest test run
+* Fix formatting in Tempest Tests README.md
+* Change tests to accept 400 or 422
+* Reset notification errors to return 400
+* Register Monasca API in Keystone using SERVICE_HOST
+* Added tests for duplicate query param merge_metrics
+* Added type check to alarm definition schema
+* Fixed bugs in clean up function and measurement test
+* Matching validation to documentation
+* Change to 422 instead of 400
+* Added additional IPs to no_proxy variable
+* Return 422 Unprocessable entity instead of 400 bad request
+* Add monasca-user role to demo user
+* Matching gunicorn config to devstack environment
+* Modified passwords for DevStack in the Vagrantfile
+* Moved tempest tests back to monasca_tempest_tests folder
+* Added tests of match_by in alarm definitions and alarms
+* Added skip exceptions and made tempest tests working with ostestr
+* Make devstack-gate work
+* Updated the monasca tempest test README.md
+* add missing timestamp to alarm_transitioned_event
+* Fix the description for when UNDETERMINED is set
+* Added /vagrant_home mount point and fixed plugin name
+* Update the DevStack Readme
+* Add MONASCA_BASE var to DevStack plugin
+* Added proxy settings for maven
+* Enforce unique tenant_id/name for alarm definitions and notifications
+* Added proxy setting and git:// redirect
+* Fix the remaining URLs from the move to openstack
+* Updated for migration from Stackforge to OpenStack
+* Update the Tempest tests documentation
+* Start Monasca API as non-daemon
+* Change the repositories from stackforge to openstack
+* Update .gitreview for new namespace
+* Add Monasca Tempest Tests
+* Fix Find Alarm Query
+* Add Monasca Horizon UI into DevStack
+* Avoid multiple inner joins if dimensions specified
+* Add process name to monasca-api
+* Add a Vagrantfile for deploying DevStack in a VM
+* Rename from install_keystone to install_monasca_keystone_client
+* Fix double decode bug in notifications
+* Hibernate test is failing with timezone issues
+* Disallow null values in metrics
+* Fix bug with alarm list
+* Fix type with "IMPLEMENTATION"
+* Check entire set of value_meta key/value pairs for length
+* Monasca DevStack integration
+* Added missing comment markers
+* Code refactor for monasca-api resources
+* Monasca DevStack integration
+* Fix value_meta length check
+* Improve alarm list query performance
+* Don't fail if database returns "description": None
+* Install monasca-api in DevStack
+* Time zone fix
+* Install schemas in DevStack
+* Install Influxdb in DevStack
+* Install kafka
+* Install zookeeper
+* Fix the build docs path in .gitignore file
+* Fix fatal typo in alarm history API
+* Refine the monasca services in the plugin.sh file
+* Add copyright headers
+* Change ignore-errors to ignore_errors
+* Fix typo in devstack plugin comments
+* Start devstack integration
+* Add adminUserDomainName and adminProjectDomainName to monasca-api
+* Fix typos
+* Fix issue with state_updated_time
+* Add the drizzle driver to pom
+* Config hibernate to be off by default
+* Add support for drizzle jdbc connector
+* Upgrade influxdb python from 2.3.0 to 2.8.0
+* Hibernate support added
+* Upgrade MySQL-pthon to 1.2.5
+* Add virtenv dir and contents to .gitignore
+* Allow maxQueryLimit to not be set
+* Remove all invalid dimensions in returned metrics
+* Fix handling of mutiple dimensions in query
+* Adding stubs for Cassandra support
+* Return empty dict when measurement has no metadata
+* Fix case insensitive role authorization comparison
+* Use vertica time slice functionality to speed up queries
+* Remove accepting complex type values
+* target link was being created incorrectly
+* Fix timestamp comparison in alarm state history
+* Do not reject spaces or apostrophes in dimension keys/values
+* Added unit test for Versions resource
+* Move api_func_check.py to monasca-ci repo
+* Require all fields in an alarm update request
+* Fix alarm history pagination
+* Add check for restricted characters
+* Do not allow metrics in quotes
+* Add ability for monasca-admin to get cross tenant metrics
+* Separate metric name and dimension validation
+* Updated requirements.txt
+* Make changes for Influxdb 0.9 Latest Stable
+* Wrapping single metrics in a list on post
+* Don't throw exceptions when value_meta is empty
+* Match alarm expression parsing to java api
+* Converted to the oslo libraries in pypi
+* Fix statistics resource
+* Fix bug jah-1771
+* added version for restapi and fixed requirements to = 0.2
+* Fix bug jah-1669
+* Bugfixes for java parity
+* Updated for Falcon 0.2 and clean-up
+* Fix bug jah-1731
+* Add basic functional test
+* Parse dates with 'T' and without 'T'
+* Fix bug jah-1722
+* Also check dimension values for restricted characters
+* Add metric name resource
+* Add lifecycle_state and link to alarms
+* Remove 'select *' from measurements query for Influxdb
+* Implement Influxdb 0.9.0
+* Fix jah-1654
+* Fix bug jah-1393
+* Add lifecyclefields to alarms
+* Switch state history return order to match influx
+* Always validate metric name even if no dimensions
+* Implement the find metric names resource for vertica
+* Exception handling for duplicate Notification methods
+* Performance modifications
+* Increased address size for notifications
+* Improve Patch Alarm Definition parsing
+* Remove ID from measurements
+* Fix typo in the alarm definitions example
+* Remove unnecessary use of generics
+* Add field parsing for PATCH Alarm Definition
+* Fix bug JAH-1394
+* Fix conditional statement
+* Cleanup some warnings
+* Fix bug JAH-1455
+* Check for backslash in metric names
+* Fix bug JAH-1393
+* Update code for vertica
+* Update documentation for dimension keys and values
+* Validate metric name if dimensionstr is not present
+* Add double quotes dimension names when querying influx
+* Added documentation on scoping of metrics, delegation and milliseconds
+* Bump the version to 1.1.0
+* Update docs for unicode changes
+* Added a small summary on Notification Methods
+* Make delegate role configurable
+* Minor updates to api spec for millis
+* Bump to version 1.1
+
+2015.1
+------
+
+* streams definition POST, GET, GET (id), DELETE
+* Allow unicode in metric definitions
+* Added two GET api methods for events
+* Let any user with valid keystone token get version
+* Remove Influxdb 8
+* Allow unicode in response
+* AlarmStateTransitionedEvent timestamp now in ms
+* Make gzip responses from Influxdb configurable
+* Check for null pointer in dimension name validation
+* Add a check on the alarm definition match_by field
+* Update doc for value-meta value
+* Allow empty values for value_meta
+* Accept gzip results from influxdb
+* Remove warnings
+* Cleanup multiple metrics exception handling
+* Allow tenant_id without delegate role if same
+* Correct the 'reference' format transform method
+* Deb only installs jar and example config now
+* Fix bug with alarm_state_history query and tenant_id
+* Store tenant_id and region as private
+* Return "updated_at" field with alarms
+* Remove extra, unnecessary id column from measurement
+* Fix id of alarm-state-history-list
+* Metric name optional for metric-list and alarm-list resources
+* Update docs
+* Add new resource to return a list of unique metric names
+* Refactored the notification method Impl code
+* Update docs for Influxdb 9 and pagination
+* Added java -jar monasca-api.jar --version
+* Values from statistics query return doubles
+* Add sub_alarms column to select statement
+* Fix problem with limit 0 when using Influxdb V8
+* URL encode query parms of next link
+* Update copyright date to 2015
+* Add pagination support
+* Added option to define project for admin user
+* Change to use maven 3
+* Change version resource to return a JSON object
+* Update docs for change from JSON array to JSON object
+* Wrap all lists in JSON object
+* Conversion to milliseconds
+* Conversion to milliseconds
+* Duplicate named AlarmDefinition for a specific TenantID
+* Events (already distilled) will be posted to transformed-events
+* Add measurement valueMeta
+* Add error field to Series
+* Handle error message from influxdb 9 when no measurement found
+* Translate 'mean' -> 'avg' and 'time' -> 'timestamp' in stats query
+* Adding Alarm State subAlarms to Influx9
+* Fix date parsing for Alarm State History for Influxdb V9 RC4
+* Translate avg to mean for influxdb v9
+* Influxdb 9 RC4 support
+* Adding sub alarms information to Alarm State History
+* Add more entries to .gitignore
+* Add Influxdb 0.9.0 support
+* creation_time to use utc timestamp for metrics and events
+* application/json in only valid patch Content-Type
+* Converted the three sql statements to one sql
+* Fixing log property
+* Fix find AlarmDefinition by dimension
+* Change the maximum metric name length to be 255
+* Removed references to SMS support
+* Integrating monasca-api with keystonemiddleware
+* Limit the changes that can be made to Alarm Definition
+* Update version of docker-java
+* Patch for Alarm Definitions failed if expression not given
+* Use consistent Version for the Java API
+* Get the java build working in StackForge
+* Fixed Pagerduty missing information, schema, and added some tests
+* First step to removing use of application/json-patch+json
+* Set default severity of Alarm Definitions to LOW
+* Setup the api-config.yml so it can be used with mini-mon
+* Added pagerduty support to the Java API
+* Distribute messages better among the Kafka partitions
+* Removing imports of classes instead of modules
+* Remove limit parameter from measurement-list resource
+* Fix NPE bug in metric-list introduced by pagination changes
+* Fix bug where metric name regex matches prefixes
+* Restrict changes to existing Alarm Definitions
+* Add pagination
+* URL encode metric name when it is used as offset for metric list
+* Dimension values that contained a colon were mishandled
+* Fix metric name and dimension values matching
+* Add pagination
+* Check alarm description for NoneType
+* Don't treat the Agent role as a restriction
+* Factor out SubAlarmDefinition class into separate file
+* Removed HealthCheck from MonascaAPI
+* Factor out common code
+* Remove peewee and replace with mysqldb
+* Improve the speed of retrieving alarms by using a single query
+* Added a link to the API spec docs
+* Distribute the AlarmStateTransitionEvents better
+* Removed swagger
+* Add requirements
+* Move tenant id to front for serie name
+* Move tenant id to front for serie name
+* Allow localhost as a valid email domain
+* Fix http return codes and rename method
+* Add alarm definition update and alarm definition patch resources
+* implementation specific requirement files
+* enable microservice
+* Fixing security issue for deleting alarms
+* Improve alarm update logic
+* Fixes validation of emails and webhooks. Fixed the incorrect indentation as well. Added unit tests as well
+* Added support for webhook in Python port of monasca API
+* Send alarm transitioned events on patch and update
+* Add alarm patch resource
+* Check for valid state on alarm update
+* Add alarm update resource
+* Adding support to WEBHOOK notification
+* Minor corrrections. Specify avg as arithmetic average
+* Switch to MySQLdb
+* Add alarm history resource
+* Add alarm delete resource
+* Log helpful messages when keystone connection is misconfigured
+* Add alarm show resource
+* Refactor redundant code
+* Add alarm list resource
+* Add check for NULL in where clause to get_alarm_definition method
+* Add alarm definition show resource
+* Add __init__ methods for cooperative multiple inheritance
+* Add Alarms resources files
+* Fix sql injection vulnerability
+* Add alarm definition list resource
+* Closes-Bug: Typo in MonApiModule.java where vertica was spelled vertiva
+* Add alarm definition delete resource
+* Update API doc for Alarm Definitions
+* Spread the metrics better across kafka partitions
+* Use properties in alarm expression parser
+* Change alarm_id to alarm_definition_id in alarm_action table
+* Change alarm_id to alarm_definition_id in alarm_action table
+* Remove unused imports
+* Add alarm definition create resource
+* Fix Swagger initialization
+* Update alarm expression BNF documentation
+* JAH-775 Monasca-api is encountering SSL problems
+* common method for read http and init driver, fix metric validate
+* Notifications resource support, helpers.py link functions
+* Fix the path in the alarm_definition link
+* Update alarm expression BNF documentation
+* Update alarm expression BNF documentation
+* Update alarm expression BNF documentation
+* Update alarm expression documentation
+* Simplify list comprehension logic
+* Fix alarm expression documentation
+* Remove the alarmDefinitionId field in the Alarm JSON
+* Fix alarm expression documentation
+* Fix the query to get all the AlarmStateHistory objects
+* Add AlarmDefinition information to returned Alarm json
+* Fix config file for case sensitivity
+* Add metric statistics resource
+* Switch crossTenantId for tenant ID in metrics that are published downstream
+* Add timestamp parameter to measurement-list resource
+* Use new monasca-common package names
+* Fix the tests that should have been part of previous change
+* Remove incorrect metric value validation. Allow unusually large/small values to be truncated as documented
+* Add measurement-list resource
+* Change to use monasca everywhere
+* Set severity in the AlarmStateTransitionEvent
+* Change abstract classes to use six
+* Change creation of AlarmUpdatedEvent and AlarmDeletedEvent
+* Return metric list from InfluxDB as JSON
+* Fix resource path
+* Add new alarm definition resources
+* Start of initial reference implementation and re-factored
+* Document cross tenant id query param for posting metrics
+* WIP - Alarmed metrics API changes - Changed alarms resource to alarm-definitions - Added new alarms resource that tracks alarm/metric associations
+* Fixed posting of cross-tenant metrics. X-Roles header is now added by the PostAuthentication servlet filter to make roles accessible from resources
+* Add version information to maven plugins
+* Split methods for better modularity
+* initial python implementation
+* Refactor serie name decoder
+* Remove unnecessary sanitize for URL encoded strings
+* Fix 500 server error when metric name does not exist
+* Series name contains metadata
+* Relieve some compile warnings
+* Fix the capitalization of AlarmMySqlRepositoryImplTest.java
+* Added a tar ball to the package target
+* Remove all dependencies on hpcloud maven repository
+* Added TOC
+* Return only names matching exactly
+* Add copyrights to files without them
+* Fix problems with capitalization in file names
+* Partition metrics by name instead of tenant id
+* Added highlighting of some special chars
+* Added horizontal rules to api spec
+* updated configuration file
+* Remove tenant_id and region from metric list
+* add roles for reading and writing to the api
+* Updated the dimensions sections to include changes to handle special characters
+* Add details on HTTP headers for CORS supported by api
+* Add tenant_id to where clause
+* Fix bug jah431
+* Changes to work with new monasca_common build
+* Allow unicode chars
+* Removed v2.0 from versions path. Fixed up one Request Body
+* Use DatabaseConfiguration from mon-influxdb
+* Allow additional chars in SQL [=,:,%,/,?,&]
+* Fixed alarm expression BNF description to not require colons between metric name and dimensions. Added quoting around constants in API descriptions
+* Allow additional chars in SQL [=,:,%,/,?,&]
+* Use InfluxDbConfiguration from mon-influxdb
+* Added common eror codes and misc clean-up
+* Converted to new template
+* Changed document names to Monasca. Removed overivew. Updated README
+* Fixed formatting problem
+* Added alarm specification as well as many other improvements
+* Check port 8080 for availability before running instance of monasca api
+* Wait for docker images to be pulled
+* Added more detail to the overview section
+* Updated the documentation
+* Change docker-version
+* Migrate docker images to monasca repo
+* Get initial build to work
+* Add config file for integration testing
+* Make docker integration tests work from CL with 'mvn verify'
+* Find the latest built shaded jar automatically
+* Delete AlarmStateHistoryInfluxDBRepositoryImplTest.java
+* UTC Date
+* Make tests use UTC dates
+* Updated executable api jar
+* Add integration tests with docker
+* Add integration tests using docker
+* Delete NotificationMethodMySQLRepositoryImpl.java
+* Delete AlarmMySQLRepositoryImpl.java
+* Delete StatisticInfluxDBRepositoryImpl.java
+* Delete MetricDefinitionInfluxDBRepositoryImpl.java
+* Delete InfluxDBConfig.java
+* Delete AlarmStateHistoryInfluxDBRepositoryImpl.java
+* Delete MeasurementInfluxDBRepositoryImpl.java
+* Fix unit test
+* Remove dependencies
+* Make tests use UTC for dates
+* Fixed class name case mismatches
+* fixing middleware disabled
+* Do not use auth filters if middleware is disabled
+* Removed unused imports
+* Added ability to filter alarms by name
+* Renamed a few classes according to google style guide's naming conventions
+* Killed compile warnings
+* Formatted code according to google style guide
+* Organized persistence code around technology specific packages
+* Fixed import warnings
+* Moved db config classes to persistence package
+* Only enable the http methods for CORS that grafana needs
+* Remove unneccesary cast
+* Add CORS support and switch back to vertica in conf
+* Add CORS support and switch back to vertica in conf
+* Make seq number a long. Format dates with UTC indicator 'Z'
+* Fix all time cast exceptions. Format sequence number and measurement to be non-exponential
+* Fix time bug
+* changed code to include changes for mon-middleware
+* merged middle changes
+* Added cross-origin servlet filter
+* removing middleware code from mon-api
+* removing middleware code from mon-api
+* restructured middleware into hpcloud
+* removing hard coded parameters and removing debugging
+* changed to original pom file
+* fixing pom.xml after merge
+* had to add the influx db dependency back after the merge removed it
+* merge complete
+* removed old files added configuration options
+* remove unused classes and cleaning up caching code
+* cleaning up code
+* removed unused files
+* commented out unnecessary files and code
+* Added order by time_stamp, id to query in MeasurementVerticaRepositoryImpl
+* Add sample config file
+* Add unit tests
+* Inject InfluxDB connection
+* Refactor code to remove duplication. Add unit tests
+* Prevent SQL injection attacks
+* still need to fix problem when pool is at max
+* Optimize the query for series names
+* Allow queries with no dimensions specified
+* Allow InfluxDBConfiguration to be null
+* Rename Vertica driver implementations
+* Add copyright header
+* Remove sys.err messages on bad DB detected
+* Replace string cat with StringBuilder in tight for loop with potential for many iterations
+* testing authentication
+* Remove empty statement
+* Throw ProvisionException when unknown DB is encountered
+* Add influxDB Support
+* Added metric name to measuremnts query
+* Update README.md
+* Update README.md
+* Update README.md
+* Update README.md
+* not authenticating
+* Add region configuration and use region as meta for all posted metrics
+* updated to get middleware working
+* JAH-1891 Threshold Engine will not update State properly if user has changed state via the API
+* Changes so it will use mon-common from the local snapshot. Change URLs to github
+* Add in checkConnectionOnBorrow: true to sample config file to prevent connection problems when idle overnight
+* Only check for action existence once across all action types
+* fix for end_time parameter problem
+* bug fix for handling case insensitive statistics
+* correct the input for state
+* Change enabled field to actions_enabled for alarm PATCH calls
+* Allow severity to not be set. Will default to low
+* remove log folder
+* merged craig's changes
+* Modified README.md
+* Delete prod-hpmiddleware-truststore.jks
+* Delete prod-hpmiddleware-truststore.jks
+* Delete prod-hpmiddleware-keystore.jks
+* Delete prod-hpmiddleware-keystore.jks
+* merged craig's changes
+* minor changes after the merge
+* minor changes after the merge
+* fixed test
+* fixed test
+* updated with severity code
+* updated with severity code
+* fixed update to persist data to database
+* fixed update to persist data to database
+* added severity
+* added severity
+* More updates
+* More updates
+* Converted from MaaS to Mon
+* Converted from MaaS to Mon
+* Added support for alarm state history queries Moved some dimension querying code to a separate utility class
+* Added support for alarm state history queries Moved some dimension querying code to a separate utility class
+* Update README.md
+* Update README.md
+* Renamed mon-api-spec.md
+* Renamed mon-api-spec.md
+* Update README.md
+* Update README.md
+* Updated README
+* Updated README
+* Added mon-api-overview and mon-api-spec
+* Added mon-api-overview and mon-api-spec
+* Update README.md
+* Update README.md
+* Update README.md
+* Update README.md
+* Added copyright and license to README.md
+* Added copyright and license to README.md
+* Update to build 51 of mon-common so MetricEnvelope gets a timestamp before sending on the Kafka queue
+* Update to build 51 of mon-common so MetricEnvelope gets a timestamp before sending on the Kafka queue
+* Modified the AlarmRepositoryImplTest to test getting sub alarms without dimensions in the Metric as well as ones with dimensions
+* The SQL for the Sub Alarms was not returning Sub Alarms with no dimensions. Added an outer join
+* Removed direct write of Alarm State Transitioned to Vertica table MonAlarms.StateHistory. No longer need to pass a AlarmStateHistoryRepository to AlarmService
+* Removed direct write of Alarm State Transitioned to Vertica table MonAlarms.StateHistory. No longer need to pass a AlarmStateHistoryRepository to AlarmService
+* updated joins with outer joins to view queries without dimensions
+* updated joins with outer joins to view queries without dimensions
+* Added "left outer join" to sql query to handle alarms with no dimensions supplied
+* Added "left outer join" to sql query to handle alarms with no dimensions supplied
+* Add ordering for alarm state history, descending by timestamp
+* Add ordering for alarm state history, descending by timestamp
+* cleaning up commented out code
+* cleaning up commented out code
+* committed out AlarmResourceTest
+* committed out AlarmResourceTest
+* Removed swagger specific stuff from index.html
+* Removed swagger specific stuff from index.html
+* Persister is expecting the timestamp on the AlarmStateTransitionedEvent to be in seconds, not milliseconds
+* Persister is expecting the timestamp on the AlarmStateTransitionedEvent to be in seconds, not milliseconds
+* Update README.md
+* Update README.md
+* allowed more fields from the alarm tables on query
+* allowed more fields from the alarm tables on query
+* filter alarms by dimensions and status
+* filter alarms by dimensions and status
+* Tighten up the post authentication filter's URI pattern to ignore the swagger-ui path
+* Tighten up the post authentication filter's URI pattern to ignore the swagger-ui path
+* Removed a couple of errant @author tags
+* Removed a couple of errant @author tags
+* Added license file
+* Added license file
+* Removed mon-http dependencies updated mon-common dep
+* Removed mon-http dependencies updated mon-common dep
+* Added initial alarm expression data support Added license to all files Removed @author tags from all Javadoc
+* Added initial alarm expression data support Added license to all files Removed @author tags from all Javadoc
+* Added initial support for alarm expression data Updated mock auth filter to return proper errors when missing auth data
+* Added initial support for alarm expression data Updated mock auth filter to return proper errors when missing auth data
+* Allow requests without an auth token
+* Allow requests without an auth token
+* Convert auth token to tenant id for local environments
+* Convert auth token to tenant id for local environments
+* Updated timestamps to be ISO 8601 formatted
+* Updated timestamps to be ISO 8601 formatted
+* Dimensions should not be required for statistics
+* Dimensions should not be required for statistics
+* Implemented alarm state history resource and persistence for JAH-98
+* Implemented alarm state history resource and persistence for JAH-98
+* Use try-with blocks for opening DB handles
+* Use try-with blocks for opening DB handles
+* Update readme to add swagger-ui link
+* Update readme to add swagger-ui link
+* Added initial swagger-ui support
+* Added initial swagger-ui support
+* WIP
+* WIP
+* Remove comment
+* Remove comment
+* parse proper field for expression when doing an Alarm patch
+* parse proper field for expression when doing an Alarm patch
+* updated values to statistics and name of class
+* updated values to statistics and name of class
+* Send alarm state transitions to related topic
+* Send alarm state transitions to related topic
+* Send alarm state transitioned events
+* Send alarm state transitioned events
+* Use common method for building statistic dimensions in query
+* Use common method for building statistic dimensions in query
+* Killing some compiler warnings and whitespace
+* Killing some compiler warnings and whitespace
+* Added description to AlarmUpdatedEvent
+* Added description to AlarmUpdatedEvent
+* removed temp files
+* removed temp files
+* updated statistics format
+* updated statistics format
+* updated
+* updated
+* updating for new format
+* updating for new format
+* removed log
+* removed log
+* removed unused variables
+* removed unused variables
+* removing logs
+* removing logs
+* updated to support Statistics
+* updated to support Statistics
+* making changes for statistics
+* making changes for statistics
+* Added support for changed sub alarm expressions which are sent in the AlarmUpdatedEvent
+* Added support for changed sub alarm expressions which are sent in the AlarmUpdatedEvent
+* Change measurements JSON response format to be tabular
+* Change measurements JSON response format to be tabular
+* Fixed alarms test for actions_enabled
+* Fixed alarms test for actions_enabled
+* AlarmResource should not always return an Accept header
+* AlarmResource should not always return an Accept header
+* Alarm enabled -> actionsEnabled
+* Alarm enabled -> actionsEnabled
+* Updated metric and measurement queries to support new normalized db schema
+* Updated metric and measurement queries to support new normalized db schema
+* Undo code changes / reformatting
+* Undo code changes / reformatting
+* Fix formatting
+* Fix formatting
+* Add Swagger infrastructure
+* Add Swagger infrastructure
+* Add logging config for dropwizard 0.7.0-rc3
+* Add logging config for dropwizard 0.7.0-rc3
+* Update dropwizard version. Get basic logging config working
+* Update dropwizard version. Get basic logging config working
+* Allow alarms without dimensions
+* Allow alarms without dimensions
+* Added tenant id to metric def and measurement queries
+* Added tenant id to metric def and measurement queries
+* updated sample yaml config file
+* updated sample yaml config file
+* Measurement timestamps should be in seconds, not millis
+* Measurement timestamps should be in seconds, not millis
+* Removed name/dimensions requirements for metric and measurement queries
+* Removed name/dimensions requirements for metric and measurement queries
+* readme improvements re: layering
+* readme improvements re: layering
+* Removed requirement that new alarms have alarm actions
+* Removed requirement that new alarms have alarm actions
+* DB cleanup, readying stubs
+* DB cleanup, readying stubs
+* Added basic metric def repo impl test
+* Added basic metric def repo impl test
+* Added support for metric definition queries
+* Added support for metric definition queries
+* Initial support for filtering measurement queries by start and end times
+* Initial support for filtering measurement queries by start and end times
+* Test cleanup
+* Test cleanup
+* pony power
+* pony power
+* Updated column naming for new vertica schema
+* Updated column naming for new vertica schema
+* Added initial support for querying measurements
+* Added initial support for querying measurements
+* Added initial alarm history stubs
+* Added initial alarm history stubs
+* Added alarm history links to responses Stubbed out alarm history types
+* Added alarm history links to responses Stubbed out alarm history types
+* Enabled statistic and measurement resources Wires statistic and measurement repos
+* Enabled statistic and measurement resources Wires statistic and measurement repos
+* Send alarm state and enabled values with updated events
+* Send alarm state and enabled values with updated events
+* Naming fixes
+* Naming fixes
+* Added support for alarm patches Removed AlarmDetail
+* Added support for alarm patches Removed AlarmDetail
+* Handle null dimensions
+* Handle null dimensions
+* dropwiz rc-2 upgrade
+* dropwiz rc-2 upgrade
+* No need to compensate for alarm update failures
+* No need to compensate for alarm update failures
+* Patches should do simply passthrough to app service
+* Patches should do simply passthrough to app service
+* Tidying up
+* Tidying up
+* Added AlarmService unit tests
+* Added AlarmService unit tests
+* Added alarm update test. Added initial PATCH support for all resources
+* Added alarm update test. Added initial PATCH support for all resources
+* Better notification method update test
+* Better notification method update test
+* Add JSON Consumers annotations to update request handlers
+* Add JSON Consumers annotations to update request handlers
+* Finished alarm update persistence implementation / tests
+* Finished alarm update persistence implementation / tests
+* Update alarm resource test to green
+* Update alarm resource test to green
+* Implemented alarm udpates Broke apart metric resource into new measurement and statistics resources Repaired the metric resource test Created statistic resource test
+* Implemented alarm udpates Broke apart metric resource into new measurement and statistics resources Repaired the metric resource test Created statistic resource test
+* Pretty POM
+* Pretty POM
+* Remove auth token from resources/app layer services
+* Remove auth token from resources/app layer services
+* Restrict metric posting for HPCS service (not name)
+* Restrict metric posting for HPCS service (not name)
+* Better application name
+* Better application name
+* Removed jersey client config
+* Removed jersey client config
+* Removed resource ownership verification service and implementations. Removed identity service implementations
+* Removed resource ownership verification service and implementations. Removed identity service implementations
+* Add separate methods for various metric queries
+* Add separate methods for various metric queries
+* Make ServletHandler happy for now
+* Make ServletHandler happy for now
+* upstart restart is unreliable changed to stop/start
+* upstart restart is unreliable changed to stop/start
+* Removed root element from notification method resource representations. Added support for updating notification methods via PUT
+* Removed root element from notification method resource representations. Added support for updating notification methods via PUT
+* Test renaming
+* Test renaming
+* Removed the horrible root element/wrapper stuff from resource representations
+* Removed the horrible root element/wrapper stuff from resource representations
+* Fixed tests for alarm JSON changes
+* Fixed tests for alarm JSON changes
+* Added alarm description, enabled, okactions, undetermined actions. Namespace -> Service Better organized metric name / dimension validation Removed required dimension validation Added alarm state to alarm actions
+* Added alarm description, enabled, okactions, undetermined actions. Namespace -> Service Better organized metric name / dimension validation Removed required dimension validation Added alarm state to alarm actions
+* updated the mysql connector to a version that is compatible with the database
+* updated the mysql connector to a version that is compatible with the database
+* Added application layer tests
+* Added application layer tests
+* Added representation tests
+* Added representation tests
+* metric namespace -> name
+* metric namespace -> name
+* removing backup file
+* removing backup file
+* update mon-api.conf
+* update mon-api.conf
+* updated from som user to mon
+* updated from som user to mon
+* More namespace -> name conversion
+* More namespace -> name conversion
+* updated pom
+* updated pom
+* merged pom with master
+* merged pom with master
+* merged pom file
+* merged pom file
+*  updated pom with Debian code to produce .deb file
+*  updated pom with Debian code to produce .deb file
+* Update POM to point to initial mon-common release
+* Update POM to point to initial mon-common release
+* Metric Namespace -> name
+* Metric Namespace -> name
+* Formatting
+* Formatting
+* Point to proper test config file
+* Point to proper test config file
+*  updated pom with Debian code to produce .deb file
+*  updated pom with Debian code to produce .deb file
+* Committing initial disabled metric and alarm integration tests
+* Committing initial disabled metric and alarm integration tests
+* Pushing disabled alarm and metric tests. Will enable once metric schema is finalized
+* Pushing disabled alarm and metric tests. Will enable once metric schema is finalized
+* Implemented initial notification method integration test
+* Implemented initial notification method integration test
+* Add repository test implementations
+* Add repository test implementations
+* Remove unneeded test config from module
+* Remove unneeded test config from module
+* Added version and notification method resource tests
+* Added version and notification method resource tests
+* Added constraint violation exception mapper
+* Added constraint violation exception mapper
+* Set initial API version to v2.0
+* Set initial API version to v2.0
+* Massively cleaned/simplified request validation
+* Massively cleaned/simplified request validation
+* Massively cleaned/simplified request validation
+* Massively cleaned/simplified request validation
+* Removed secondary resource IDs from compute resource verification service (Bravo FTW)!
+* Removed secondary resource IDs from compute resource verification service (Bravo FTW)!
+* Rename service runner -> application runner
+* Rename service runner -> application runner
+* Command validation work. Added support for multi-metric publishing
+* Command validation work. Added support for multi-metric publishing
+* Removed some servlet filters, we don't need
+* Removed some servlet filters, we don't need
+* Added registration for alarm, metrics, notificaiton method repos, and added a few missing bindings
+* Added registration for alarm, metrics, notificaiton method repos, and added a few missing bindings
+* Remove unused stuff from MetricService
+* Remove unused stuff from MetricService
+* Add kafka health check
+* Add kafka health check
+* Fixed jersey client version conflict
+* Fixed jersey client version conflict
+* Consolidated the modules. Added a few missing bindings
+* Consolidated the modules. Added a few missing bindings
+* Remove some unused config
+* Remove some unused config
+* Remove address validation for now
+* Remove address validation for now
+* Dropwiz test package changes
+* Dropwiz test package changes
+* FIx slf4j conflict
+* FIx slf4j conflict
+* Remove LockService for now
+* Remove LockService for now
+* Use default kafka partitioner
+* Use default kafka partitioner
+* Added some domain model tests
+* Added some domain model tests
+* Added infrastructure services for resource verification and identity
+* Added infrastructure services for resource verification and identity
+* Added initial Kafka support
+* Added initial Kafka support
+* Added InvalidEntityException and Mapper
+* Added InvalidEntityException and Mapper
+* Removed Zookeeper and LockService for now
+* Removed Zookeeper and LockService for now
+* Added key and trust stores
+* Added key and trust stores
+* Added initial readme
+* Initial commit
+* Initial commit

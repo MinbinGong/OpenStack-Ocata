@@ -1,0 +1,18 @@
+[console_scripts]
+vitrage-api = vitrage.cmd.api:main
+vitrage-graph = vitrage.cmd.graph:main
+vitrage-notifier = vitrage.cmd.notifier:main
+
+[keystoneauth1.plugin]
+password-vitrage-legacy = vitrage.keystone_client:LegacyVitrageKeystoneLoader
+
+[oslo.config.opts]
+datasources = vitrage.opts:datasources_opts
+vitrage = vitrage.opts:list_opts
+
+[tempest.test_plugins]
+vitrage_tests = vitrage_tempest_tests.plugin:VitrageTempestPlugin
+
+[vitrage.entity_graph]
+networkx = vitrage.graph.driver.networkx_graph:NXGraph
+

@@ -1,0 +1,13 @@
+[console_scripts]
+congress-db-manage = congress.db.migration.cli:main
+congress-server = congress.server.congress_server:main
+
+[oslo.config.opts]
+congress = congress.opts:list_opts
+
+[oslo.config.opts.defaults]
+congress = congress.common.config:set_config_defaults
+
+[tempest.test_plugins]
+congress_tests = congress_tempest_tests.plugin:CongressTempestPlugin
+

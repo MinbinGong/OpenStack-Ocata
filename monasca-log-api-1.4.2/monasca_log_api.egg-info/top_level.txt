@@ -1,0 +1,2 @@
+monasca_log_api
+monasca_log_api_tempest

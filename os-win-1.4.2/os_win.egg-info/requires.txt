@@ -1,0 +1,12 @@
+pbr>=1.8
+Babel>=2.3.4
+eventlet!=0.18.3,>=0.18.2
+oslo.concurrency>=3.8.0
+oslo.config!=3.18.0,>=3.14.0
+oslo.log>=3.11.0
+oslo.utils>=3.18.0
+oslo.i18n>=2.1.0
+
+[:(sys_platform=='win32')]
+PyMI>=1.0.0
+wmi

@@ -1,0 +1,367 @@
+CHANGES
+=======
+
+3.0.0
+-----
+
+* Fix issues of multi-region devstack environment setup
+* Add get pod unit test case
+* Add update pod unit test case
+* Remove cmd folder
+* Add delete mappings unit test case
+* Update release notes about network availability zone hint
+* Update installation guide to use tricircle command
+* Minor change to the local plugin test
+* Update release notes for security group rule deletion
+* Fix semantic error in networking guide
+* Fix get_pod_by_top_id method in common.utils
+* Remove the unused oslo.versionedobjects requirement
+* Updated from global requirements
+* Add get pod by region unit test case
+* [Urgent] Rollback client change
+* Add get bottom_id by top_id and region_name test case
+* Add get top pod unit test case
+* Add find pod by az_region unit test case
+* Remove useless test_rpc method
+* Improve test for client module
+* Updated from global requirements
+* Add utils's check_string_length test case
+* Add unit tests for resource_handle module
+* Updated from global requirements
+* Updated from global requirements
+* Add local subnet update unit test case
+* Modify test_get_networks_invaild_region func name
+* Improve bottom allocation pool calculation
+* Fix typo in installation guide
+* Add unit tests for lock_handle module
+* Update library used in client module
+* Fix typo in networking guide
+* Remove support for py34
+* Change release note link to OpenStack docs site
+* Add network az_hints check when boot vm
+* [Urgent] Fix error in XJob RPC API
+* Enhance the description of supported network type in networking guide
+* Remove link to modindex
+* Clean imports in code
+* Fix unit tests error introduced by _get_session
+* Updated from global requirements
+* Enhance the documentation structure
+* Add 'extern' physical network create supported
+* Use neutron-lib provider net api-def
+* Add networking guide link for README
+* Use neutron-lib portbindings api-def
+* "br-etx" should be "br-ext" in the doc
+* Fix Xjob of router setup not triggered
+* Add subnet update operation support
+* Add networking guide in Tricircle
+* Updating python language classifier in setup.cfg
+* XJob reliability improvement
+* Add port base attributes update operation support
+* Change network type shared_vlan name to vlan
+* Updated from global requirements
+* clean up requirements.txt dependencies
+* Remove useless requirements
+* Use tempest and tricircle in Devstack samples
+* Add DVR support
+* Support region in az-hint for internal net creation
+* Simplify, Update and Fix Devstack installation
+* Fail to boot vm in network with az-hint specified
+* Removed unnecessary utf-8 encoding
+* [Urgent] Fix migration script and rename pod_name
+* DB migration version
+* Update devstack plugin to support multi-region installation
+* Support python3 in tricircle
+* Fix security group rule sync
+* [Urgent] Modify plugin UT to adopt Neutron change
+* Fix eventlet monkey_patch
+* Remove some codes in resource_handle
+* Combine bridge networks
+* Fix list port failure due to dummy pod entry
+* Updated from global requirements
+* Clean useless tables in Tricircle after splitting
+* Register the service following devstack standards
+* Use tricircle commands in devstack screen
+* Enhance XJob reliability spec
+* Support printing coverage report run tox -ecover
+* Add release notes for resource routing api
+* Fix the incorrect title level of configuration
+* spec on legacy tables clean work
+* Add network update operation support(1)
+* Add configuration guide in the Tricircle
+* Replace LOG.warn with LOG.warning
+* Fix resource deletion
+* Updated from global requirements
+* Trival fix some typo
+* Add Constraints support
+* Enable tricircle commands
+* Add manual installation guide
+* Remove part tables from Tricircle
+* Fix order of arguments in assertEqual
+* Fix typos
+* Fix typo installation guide
+* Updated from global requirements
+* Updated from global requirements
+* Layer-3 networking and combined bridge network spec
+* Unify the usage of the log module
+* Fix README.rst
+* ID should be biginteger in resource routing table
+* Documentation on resource routing API
+* Updated from global requirements
+* Fix register tricircle endpoint failed
+* PEP8 failed when import i18n more than one
+* Updated from global requirements
+* Changed the home-page link
+* The "LOG.warning" should correspond with "_LW"
+* Fix the bug of missing constraint
+* Tricircle document improvement
+* Remove logging import unused
+* [Urgent] Mock directory.get_plugin in neutron-lib
+* Show team and repo badges on README
+* Change passing session to context in segments db functions
+* Remove quota from Tricircle
+* Fix configuration file generator
+* Implement resource routing features
+* Updated from global requirements
+* [urgent] Fix multi-node installation guide about node_2
+* Add release notes for the master branch
+* Updated from global requirements
+
+2.1.0
+-----
+
+* Update multi-node installation guide with DevStack
+* Central and local plugin (part3, security group)
+* Update installation guide after the Tricircle splitting
+* Updated from global requirements
+* Remove API-GW related code from the Tricricle
+* Central and local plugin (part 2, l3 functionality)
+* Central and local plugin (part 1, base)
+* Fix bugs on network and port query
+* Changed the home-page url link
+* Enable release notes translation
+* Updated from global requirements
+* Update README and setup description after splitting
+* Implement volume attachment basic operation
+* Fix some fuzzy descriptions in the installation.rst
+* Specification for local Neutron plugin
+* Updated from global requirements
+* Fix typo in verify_cross_pod_install.sh
+* Update flake8 ignore list
+* Updated from global requirements
+* Using assertIsNone() instead of assertEqual(None)
+* Implement force detach volume
+* The framework of dynamic pod binding
+* Bridge network, subnet clean during router deletion
+* Nova_APIGW Server Action Support(part2)
+* Pre-created port clean during subnet deletion
+* Drop MANIFEST.in - it's not needed by pbr
+* Return empty dict in controller(Urgent)
+* Nova_APIGW Server Action Support(part1)
+* Support floating ip deletion
+* Updated from global requirements
+* Drop *openstack/common* in flake8 exclude list
+* Disable initial network creation(urgent)
+* py33 is no longer supported by Infra's CI
+* Enable service t-api t-ngw t-cgw t-job in plugin.sh
+* Support policy control on Admin-API request
+* [Urgent] Modify FakeNeutronContext and FakeSession
+* Fix the link error in the installation.rst
+* Fix the link error in the document README.rst
+* Documentation on pod and pod binding
+* Nova_APIGW REST API Microversion Support
+* Support l3 networking in shared vlan network
+* Updated from global requirements
+* [Urgent] mock _allocate_ips_for_port in unit tests
+* [Urgent] fix unit test failure casused by IPAM driver
+* Enable DeprecationWarning in test environments
+* Updated from global requirements
+* Fix az parameter handling in Nova API-GW and External Network
+* Fix exception if no "networks" in server creation
+* [Urgent]Fix the integration test failure casused by http header processing
+* Updated from global requirements
+* Change dhcp port creation mechanism
+* Updated from global requirements
+* Fix the issue introduced by Neutron config file refactorying
+* Move dhcp port handle to the helper module
+* Fix regex expresion error in integration test
+* Move router operations to xjob
+* Fix issue from _add_network_segment in Neutron
+* Add shared vlan type driver
+* Fix the issue introduced by Neutron in _add_network_segment
+* Updated from global requirements
+* Bump to Nova v2.1
+* Fix DevStack script error
+* Urgent fix the link error in the README.rst
+* Align project files structure with cookiecutter template
+* Updated from global requirements
+* Add tempest test cases which are needed for integration test in Tricircle
+* Updated from global requirements
+* Implement volume actions
+* Remove stub function _allocate_specific_ip which blocks the unit test
+* Implement volume metadata basic operation
+* Adapt error response body in nova and cinder api
+* Add network type support to the Tricircle plugin
+* Implement volume type basic operation
+* Add cross-pod L2 Networking spec file
+* Fix az parameter handling which blocks the integration test
+* Register core_plugin for all tests in test_plugin
+* Add specification for dynamic pod binding
+* Add hook scripts for the Jenkins job for Tricircle tempest
+* Fix stub function fake_generate_ip for unit test
+* Updated from global requirements
+* Add the Tricircle tempest plugin with a sample test case
+* Updated from global requirements
+* Updated from global requirements
+* Implement floating ip disassociation
+* Manual sync from global-requirements
+* Fix incorrect file permission
+* Fix a typing error
+* Fix test error caused by i18n
+* Use PortOpt and IpOpt
+* fix network unit test case
+* Exception catching and logging
+* Implement router gateway removing
+* Implement volume update operation
+* Implement volume list availability zone filter
+* Implement router interface deletion
+* Pass tempest list_server_filters test
+* Update readme
+* Implement server delete API
+* Implement server action API(part 1)
+* Fix cinder delete response which stops tempest
+* Quota management for Nova-APIGW(part4 metadata and injected files)
+* Asynchronous job management(part 2)
+* Exception base class refactory
+* Asynchronous job management(part 1)
+* Adapt Neutron database change
+* Implement volume attaching functionality
+* Quota management for Nova-APIGW (part3 os-quota-sets and limits )
+* Implement security group - Neutron plugin part
+* Implement security group - Nova API gateway part
+* Ensure network AZ and server AZ are the same
+* Fix the bug "North-South Networking doesn't work"
+* Transfer query object to dictionary
+* Fix test case bug
+* Quota management for Nova-APIGW and Cinder-APIGW(part2)
+* L3 North-South Networking
+* Cross Pod L3 Networking - Part2
+* Quota management for Nova-APIGW and Cinder-APIGW(part1)
+* Move statless design from experiment to master branch
+* Changed HOST_IP=172.16.10.10 in local.conf.sample to 127.0.0.1 for devstack. Applied fix https://github.com/openstack/tricircle/commit/50176d04aaeeac75971e9f50869638d9eeeea3e4 to avoid py27 test failure
+* Change the gate to OpenStack infrastrucure
+* Proxy for compute
+* Reorganize code
+* Site create RPC
+* Site create API
+* Change the repository from stackforge to openstack
+* Update .gitreview for new namespace
+* Fix pep8 error
+* nova skeleton
+* Add create and delete operation to client wrapper
+* Provide rpc for port status update
+* Add cascade service REST api framework
+* cascade_service: client wrapper
+* cascade_service: DB infrastructure
+* cascade_service framework
+* networking-tricircle core plugin and security group
+* Base devstack install script first patch only handle networking
+* Remove old code
+* Modify description files
+* Remove unused files
+* Remove code for image syncing which is not used now
+* Update project README file
+* Submit new code base
+* modify l2-proxy to add network_delete function
+* refresh cinder proxy about attach volume
+* add enabled_volume_types
+* add volume check before sync volumes
+* 1. check logical volume while sync vols 2. add clean_extra_cascaded_vol_flag 3. remove keyword "pool" for report cacading simu-driver info
+* Modify port value to Integer when create http connection
+* Modify glance sync not auth loc when add glance-loc
+* Add docstring for added/modified options
+* add query_ports mode for l2proxy, query ports from novaproxy or cascaded neutron
+* send port info to neutron
+* Add config to controll the resource sync
+* sync instance's metadata
+* refresh cinder proxy
+* Modify neutron name rule when created in nova
+* Periodic update under aggregate/resources info for schedule (part 1)
+* add volume metadata sync function
+* modify l2-proxy to process unauthorized exception when query port
+* add keystoneclient/cinderclient token unauthorized exception caught when cinderClient being generated, b/c this will be helpful to break out from recursion when cinderclient being constructed from invalid user/password
+* add token authorized exception caught when cinder client being generated
+* modify VOLUME_NAME_LENGTH to VOLUME_NAME_MAX_LEN
+* update notes for cinder proxy
+* Add re-check logic when create network failed with conflict
+* fresh cinder proxy
+* recovery mapping_uuid in cinder-proxy volume metadata
+* refresh README.md and install script
+* Add port name for mapping
+* Add port name for mapping
+* refactor novaclient code
+* add volume sync timestamp flag
+* refresh cinder-proxy
+* refresh cinder proxy
+* Nova rebuild support sync update instance's name
+* refresh cinder proxy
+* Cache neutron net/subnet mapping info into memory
+* refresh cinder proxy
+* refresh cinder proxy
+* fresh cinder proxy
+* Add func to get cascaded instace uuid when not in the uuid_mapping
+* refresh cinder proxy
+* Cache cascaded nova client
+* modified genenerate cinder client
+* Remove instance_mapping_uuid_patch
+* Support flavor sync with accesses info
+* modified generate cinder admin client
+* modified generate cinder admin client
+* modified README.md
+* Cache subnet mapping info between cascaded and cascading
+* add vol/snapshot name length check add vol/snapshot deletion check
+* modify cinder README.md add vol/snapshot name length check add vol/snapshot deletion check
+* Modify the installation script of nova and glance
+* add README file for neutron cascaded_l3_patch and timestamp_cascaded_patch
+* modified README.md for installation cinder-proxy
+* modify install script and remove uuid-mapping-patch
+* Modify Readmd for the remove of mapping_uuid patch
+* resolve sync image execption handle in nova
+* add script module for tricircle options
+* modify cinder client
+* fix  tenant name for  admin client
+* rollback update_available_resource
+* 1. reuse mapping uuid cache for cinder proxy 2. get rid off service cacatlog in cinder admin uer cinder client
+* store cinderclient for admin user in proxy cache
+* modify l2-proxy to get token when it was expired
+* cache the sync nova client
+* modify remarks and logs for cinder proxy
+* remove terminate_connection while detach_volume for novaproxy
+* get rid off terminate_connection for nova_proxy while detach volume
+* Cinder proxy paging
+* novaproxy performance optimization
+* delete spaces in l2_proxy.py file
+* delete some spaces in l2_proxy.py file
+* port list pagination patch for l2-proxy
+* Resovle some perfromance issues of nova cascading
+* Config paging query for cinder
+* add config option "cascade_str" for cascading_l3_patch
+* add config option "cascade_str" for cascading_l3_patch
+* Check and sync flavor extra_spces
+* Modify glance's sync strategy option
+* Unuse the mapping_uuid field in cascading
+* modify l2-proxy-- query ports based on timestamp
+* modify install.sh of neutron_cascading_l3_patch
+* add neutron cascaded big2layer patch
+* nova flavor/keypair modification synced
+* add timestamp patch for cascaded neutron server
+* Modify Readme and install files
+* Add/Modify some files
+* Modify image sync in novaproxy to for juno
+* Modify nova proxy to adapt juno
+* Transplant tricircle to juno version
+* Sync image when first instance launched
+* Add delay time for sync between cascading and cascaded vm status
+* Modify the arguments number lack bug
+* Add code lines developed description
+* Add source code to Tricircle
+* Added .gitreview

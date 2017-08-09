@@ -1,0 +1,508 @@
+CHANGES
+=======
+
+4.0.1
+-----
+
+* Fix some issues with tempest test when not running with devstack
+* Updated from global requirements
+* Replace unintented key removal behavior using getter
+* Force Swift storage driver to always get a new client
+* Use bindep to define binary deps
+* Updated from global requirements
+* Updated from global requirements
+* Fix Tempest tests running on dsvm
+* Tune logging level for swift chunks
+* Fix backups of nameless volumes
+* Allow for multiple jobs to be executed at the same time
+* Fix ssh connection while restore
+* Fix Cinder restore
+* Fix max_segment_size parameter
+* Updated from global requirements
+* Remove verify option as it is not in the args of freezerclient
+* Fix the fetch of the stream generator
+* Fix SSL connections to connect to swift, glance, nova
+* Use correct arugment for nova restore
+* Added missing OS options
+* Update UPPER_CONSTRAINTS_FILE for stable/ocata
+* Update .gitreview for stable/ocata
+
+4.0.0
+-----
+
+* Add ability to restore nova instance
+* Updated from global requirements
+
+4.0.0.0b3
+---------
+
+* Block based incremental support - rsync
+* Fix scheduler_cron have a error get cron args use dict
+* Enable release notes translation
+* Updated from global requirements
+* Add .project and .pydevproject to .gitignore
+* Add backup_name to cindernative backup
+* Remove default=None for config options
+* Backup/restore cinder/nova to ssh
+* fix a typo in FAQ.rst
+* Replace --unlink-first with --overwrite
+* Backup nova/cinder to local
+
+4.0.0.0b2
+---------
+
+* Change --mode description
+* Updated from global requirements
+* Implemet PIPESTATUS env var to handle error correctly
+* Restore by glance fail to remove temporary image
+* Remove unused code from freezer-scheduler
+* Select the most recent backup previous to the date
+* Fix restore nova nova_network validation
+* Fix print warning when scheduler starts
+* Print the backup name to log file
+* Compare the two time using different format
+* Fix upload Engine metafile to swift
+* Show team and repo badges on README
+* Add pep8 check to freezer tests
+* Import only modules rather than objects
+* Replace LOG.warn with LOG.warning
+* Switch to python-freezerclient
+* Updated from global requirements
+* Added py35 environment configuration to tox.ini
+* Typo fixing
+* Append newline after printing the action result
+* Change "Openstack" to "OpenStack"
+* Fix manifest upload with ceph backend
+* Change import order
+* Updated from global requirements
+* failed to backup data to ssh storage
+* freezer README.rst error about MySQL config file
+* Updated from global requirements
+* Use LOG.error to record log when initializing LOG
+* Clean imports in code
+* Fix removing temp file
+* Updated from global requirements
+* Added release notes for freezer-agent
+* Refactoring devstack plugin and tests
+* Refactoring Freezer Engines
+* [TrivialFix] Fix freezer typo of README.rst
+* fix job_schedule result and start/end timestamps
+* Updated from global requirements
+* Create directory JOBS_DIR using the devstack script
+* Updated from global requirements
+* Fix job_schedule trigger cron
+* Fixing lvm snapshot mountpoint
+* Support upper-constraints in tox.ini
+* Updated from global requirements
+* Report Backup/Restore/Admin job was successful or not
+* Added sync and nosync opts for making the sync subprocess optional
+* Stop adding ServiceAvailable group option
+* TrivialFix: Remove cfg import unused
+* Fixing max_retries
+* Fix docstrings in index.rst & README.rst
+* Remove deprecated code
+* failed to stop freezer-scheduler
+* Using assertEqual instead of assertEquals
+* Improve abort mechanism to support same functionality as stable/mitaka
+* log info was written to pid file
+* Use ConfigParser instead of SafeConfigParser in Python 3
+* Updated from global requirements
+*  Correct syntax errors
+
+3.0.0.0rc1
+----------
+
+* Fix Cinder Backups
+* Fixed nova backup and restore
+* Update message for job start/stop/abort
+* change directory structure for unit tests
+* Fix  error: snaphost-->snapshot
+* incorrect use CONF.set_override
+* Updated from global requirements
+* Enable parallel job execution for the scheduler to allow abort signals
+* Correct freezer reraising of exception
+* TrivialFix: Remove logging import unused
+* Fix order of arguments in assertEqual
+
+3.0.0.0b3
+---------
+
+* Require a backup name for backup/restore/admin
+* Remove tar option "--overwrite" when extracting archives
+* can't output the debug log for freezer-scheduler
+* Added Validation layer for freezer jobs
+* failed to start freezer-scheduler
+* Updated from global requirements
+* Fixed the use of --insecure cli option
+* Fixed use os.path.join to concatenate default logging location
+* Freezer metadata part2
+* Fix typo in the file
+* Fix freezer-scheduler start_date and endtime
+* Fix restore exception handling
+* Fix restore nova for multiple networks
+* Changes freezer-agent consistency switches to hyphens/dashes
+* Fixing Freezer with config file but no trickle throws error
+* Remove discover from test-requirements
+* Updated from global requirements
+* add cindernative-backup-id option when restore cinder
+* Change cinder backup to define full backup or incremental backup
+* Fail on non-existing path to backup
+* Revise test_metadata_checksum
+* Add high-level backup utilities to BaseFreezerTest
+
+3.0.0.0b2
+---------
+
+* Fix checksum generation so that it handles binary data
+* Removed remnant of git conflict in README.rst
+* freezer client report "Unauthorized" error
+* Correct reraising of exception
+* Fix log-config-append does not work when passed as config file
+* Remove white space between print and ()
+* Updated from global requirements
+* Fix Freezer Agent Logging
+* Fix LVM mountpoint issues
+* Always collect freezer.log when tests fail
+* Fix tar error handling arguments
+* Fix restore tar error handling
+* Add integration test to verify compression options
+* Fix devstack-dsvm failure reporting
+* Fix bug with snapshot removal
+* Fix cStringIO usage
+* Add Tempest tests to validate checksum usage
+* Fix tox.ini file
+* Fix messed up readme
+* Fix exception propagation
+* First scenario test
+* Fix gnu tar error handling
+* New Better & Well Formatted Docs with Sphinx
+* Improve Tempest tests
+* Fix Tempest tests acquiring credentials
+* Fix incompatibility with keystoneauth
+* Fixed freezer-agent is not using the correct log
+* Fix the failure of loading the instance of MongoDbMode
+* Delete Invalid variable
+* Remove version from setup.cfg
+
+3.0.0.0b1
+---------
+
+* Switch to keystoneauth
+* list backups stored in API
+* Adds checksum before backup and after restore for consistency check
+* Freezer metadata
+* Restore cindernative-vol-id by increment
+* Fix chunk_size for tar engine
+* Clean up README
+* Refactor Freezer authentication with keystone
+* Use tempest credentials rather than hardcoded values
+* Use uuid instead of time as path for test data
+* Remove auto_snap
+* Allow freezer to use trickle installed system wide
+* Updated from global requirements
+* Fix storage not swift to backup nova or cinder
+* Update README with linux requirements for freezer
+* fix some rst syntax error of code block
+* Add More Freezer Tempest Tests
+* Restore cinder native backup pass right params and call right api
+* Use volume_id and timestamp to generate container name
+* Add Freezer Tempest Tests
+* Generate a full backup first time
+* Change $USER to $STACK_USER
+* Updating README.rst
+* Fixing Freezer-Agent help
+* Fix glance client creation
+* Adding the freezer logo to the README
+* Recreation swift client for each chunk during swift incremental restore
+
+2.0.0
+-----
+
+* Allow the user to use percentage on lvm snapsize
+* Fix creation of jobs with stopped state
+* Updated from global requirements
+* Added --overwrite parameter for removing all files from restore directory. Default value --overwrite=False
+* Use correct type for freezer arguments
+* Fix typos
+* Provides more details in the help of --restore-from-date option. Explains the behavior with an example
+* Rename mode default to fs
+* Modify the vars display_name to 'name'
+* Start to introduce tempest tests
+* freezer_conf_d is created automatically
+* enable output of metadata to a file
+* Modify the function configure_freezer_scheduler
+
+2.0.0.0rc1
+----------
+
+* Fix openssl decryption command
+* Fix ssh storage backup directory creation
+* Broken level for incremental backups
+* Refactoring of code:
+* Updating README and HACKING files for oslo options
+* Adding option disable-exec to freezer-scheduler
+
+2.0.0.0b3
+---------
+
+* Refactoring of mysql, msserver and mongo code
+* lvm snapshot unique name
+* Fix metadata curr_level
+* Add space to log message
+* Removing defaults values from cli
+* Disable freezer-agent from logging to output stream
+* fix creation of jobs with already scheduled state
+* Add oslo.config entry point for Freezer-scheduler Allows freezer-scheduler to generate sample config files for the ease of use. To generate a config file use the following command: oslo-config-generator --config-file config-generator/scheduler.conf it will generate a sample config file in freezer/etc
+* Switch freezer-agent to oslo.config and oslo.log
+* incorrect enable plugin url in doc
+* Add SSL support for freezer
+* Swift client does not stringify object names anymore on get_object()
+* Fix freezer for py3 compatibility
+* Start using oslosphinx theme for docs
+* Fix parsing multiline ini files
+* Fix typo in keystone v3 creation dict
+* Add Sphinx doc build
+* Switch cinder api to v2 and add --force and --incremental
+* Fix configuration option restore_from_host
+* Fix a mistake about  function for install_freezer
+* Increase the Freezer devstack steps
+* Fix a freezer-agent bug for when restoring data from Swift
+
+2.0.0.0b2
+---------
+
+* Add check for name=='__main__'
+* Align requirements and version to Mitaka
+* Fix a mistake in 'plugin.sh'
+* Change Freezer repo_url from stackforge to openstack
+
+1.2.0
+-----
+
+* Adding devstack plugin for freezer gate job
+* Command for changing logging level. And pep8 fixing (suddenly this pull request was rejected by jenkins and pep8. so this commit also contains some small style changes for pep8.)
+* Fix the parameter order of assertEqual
+* Parallel backup
+* Fix grammatical and spelling errors in the README.rst file
+* Add default namespace to apiclient
+* Updated Windows installer and binaries documentation
+* use openstack command to create user and project
+* Pass proxy enviroment varibles in tox
+* Blueprint specs for python-freezerclient repo
+* Replace assertEqual(*, None) with assertIsNone in tests
+* Drop MANIFEST.in - Because it's already use PBR
+* Design specs and considerations for tenant based backups
+* Deprecated tox -downloadcache option removed
+* Switch freezer-scheduler to oslo.config and oslo.log switch freezer-scheduler to use oslo.config and switch from native python logging module to oslo.log This commit includes: - using oslo.config for parsing cli and config files options - using oslo.log instead of native python logging module - this applied only on freezer-scheduler Implements: blueprint using-oslo-libs
+* Removing old integration tests
+* Removing obsolete parameters from freezer args (swift related)
+* Delete python bytecode before every test run
+* Fix typo: my scheduled backup 6 => schedule_backups 6
+* Fixed astroid version to fix pylint
+* Initialize freezer-scheduler with insecure mode for keystone v3
+* Freezer Scheduler for Windows
+* Import pep3134daemon as local module
+* Freezer instructions for Windows
+* Fix metadata storage
+* Updated python-keystoneclient requirement
+* Updated requirements to match Liberty's one
+* Fix tests
+* Improvements for windows snapshots
+* Fix versions for Liberty
+
+1.1.3
+-----
+
+* Add backup metadata fields
+* Updated LICENSE file and headers
+* PBR version needs to be explicitly set on setup.py
+* Fix bug on setup.cfg after bin removal
+* Fixes for cinder backup
+* Removed freezer/bin directory from the repo
+* Add cygwin source of cygwin .dll
+* Fixed tar command for windows
+* Improved freezerc and freezer-agent script management
+* Fixed bug on requierments and deps
+* Fix nova backup
+* Add some FAQ items
+* Test coverage improvement
+* swift backup should respect chunk size
+* Fixed bug on setup.cfg and added author and changelog
+* Fixed and improved tox.ini, added subunit as dep
+* Update .gitreview for new namespace
+* fix integration tests
+* Switching to PBR in freezer
+* Swift from pytest to testr for unittests
+* Forgotten return in ssh
+* Test Coverage: Improving test coverage by creation fs_like storage
+* Unable to create backup or restore on Mac OS X Resolves bug: 1505629
+* Report error if the choosen algorithm executable is not found
+* Test coverage improvments: Validator and Utils
+* Freezer should show correct error in case of tar process errors
+* Test coverage improvment
+* Align requirements.txt to setup.py
+* Fix error message if no credentials are provided
+* Fix freezer fail when using bandwidth limit
+* LVM snapshot mountpoint fix and improved usability
+* Fix typo in freezer-agent help
+* Fix for race condition for parallel multi-level backup restore
+* Throttling bandwidth on Linux for HTTPS
+* Fix bug when freezer_main() raise exception
+* Fixed deps in setup.py and a bug in tests
+* Configurable SSH-PORT
+* fix end result of jobs with multiple actions
+* First iteration of multiple storages. Unification storages and extraction backup engine
+* freezer-scheduler in no-daemon mode
+* Default namespace for args options
+* Select endpoint type of freezer api service
+* UI repo split
+* job event requests use specific api endpoint
+* Documentation about ssh storage
+* Fix for parsing database credentials
+* Jobs now start immediately if only interval is provided
+* freezer-agent support for keystone v2.0 and v3
+* Updating HP Copyright label
+* README info about scheduler and job creation
+* Fix for duplicate ID's on backup metadata
+* Fix bug with empty client_manager
+* remove older then typo
+* apiclient support for keystone v2.0 and v3
+* fix loop while getting list of resources from api
+* Fix bug on auto lvm snap
+* ~/.freezer work_dir created automatically
+* basic integration tests for freezer-agent
+* fix scheduler job removal when api not available
+* Auto snap uses also mount to guess lvm info
+* add option to choose compression algorithm with choose between gzip, bzip2 and xz
+* Allow freezer-scheduler to find freezerc binary in a non-activated virtualenv
+* Possible fix of test_local invocation on jenkins
+* Fix for duplicate dependencies
+* Fix for issues in the parsing of mysql credentials
+* Improve test coverage of storage.py
+* Remove freezer_api from freezer repo
+* Align pymongo version with global requirements
+* Align requirements with global-requirements
+* Remove old snapshots for local and ssh
+* Auto ssh storage host adding
+* add api endpoint /v1/health to support HAProxy
+* freezer-scheduler without api service
+* Environment inheritance for freezer agent executed by the scheduler
+* Improve installation docs for freezer dashboard
+* Add freezer dashboard documentation to html files
+* fix i18n related to the api
+* documentation on integration test procedures
+* Change nova and cinder client constructor invocation
+* Pluggable storages integration for freezer dashboard
+* Backup history
+* Flexible way to create, update, delete actions in a job
+* Refactoring api interface on freezer_ui
+* Backup ID now is not splited by dashes
+* Improve README file by removing unexpected git info
+* Refactoring logging and translations on freezer_api
+* add session properties to json_schemas of job
+* SSH Storage In order to give flexibility Freezer needs to be able to store data to a remote file system host using ssh/scp instead instead of Swift
+* Refactor api imports to OpenStack Hacking compliant
+* Added architecture information to README, updated FAQ
+* fix scheduler session_id argument consistency
+* update oslo namespace to oslo_config
+* Plugable storages architecture and Local storage implementation
+* Add Elasticsearch index creation
+* Quick fix for freezer dashboard
+* Horizon bulk remove for Jobs and Actions
+* Job creation for multiple clients
+* Horizon implementation for sessions endpoint
+* Horizon implementation for jobs api endpoint
+* elasticsearch init script
+* add execute sync command before execution of backup action
+* freezer scheduler
+* Honor the env var OS_SERVICE_ENDPOINT so to be able to use adminURL or publicURL Blueprint: endpoint-type
+* Fix unwanted output to stdout
+* Fix improper segment name when uploading segments to swift
+* Add file/dir check upon backup using tar
+* Keystone API endpoint discovery
+* Add  freezer exec action to execute script
+* Pluggable storages
+* Adding Support for LVM snapshot permission by --lvm-snap-perm Implements: blueprint immutable-snapshot
+* Make lvm snap immutable
+* correct error message when backup path or file that does not exist
+* freezer service API v1 specification reformatted
+* Add api support for jobs
+* First version of setup.py
+* Fix for random test failure on restore.py
+* Copied tox.ini and .pylintrc from root directory
+* Implementation of Cinder backup compatible mode
+* Fix default auth credentials in freezer-api.conf
+* Added pylint checks. Fixed import error during python-novaclient import
+* Fixed import error on bin/freezerc
+* Reduce SQL Server downtime and Snapshot option on windows
+* Implementation of nova instance backups
+* Ensure in tests that time is check with appropriate timezone offset
+* Added config file support in freezerc
+* This version contains the following pages:  - Overview displays charts/reports (Currently only placeholders)  - Configurations allows to define new backup configurations and link them to    instances  - Backups shows a list of all succesful backups and allows to restore them  - Restores shows a history of all restored backups
+* Consistent opt args and variable to dentify that same opt arg
+* Data consistent way of making cinder backups
+* Changed client data description to include "hostname""
+* Added parameters to the "list-backups" python api
+* Bandwith limitation functional test
+* Incremental LVM functional test
+* Fix stale import in freezer_api/storage/driver.py
+* Cinder Volumes Backup Implements blueprint: cinder-backup
+* freezer api support for action
+* Add tests for client registration
+* 100% test coverage in freezer/apiclient/backups.py
+* Fix initial no_lvm and lvm_level0 tests
+* freezer api support for client registration
+* Fix broken functional tests freezer_main()
+* client retrieval of freezer api endpoint
+* Fix bug on --remove-older-then opt
+* Fix when freezer runs without arguments
+* Refactor environment variable aquisition class
+* Fixed references to freezerclient which is now apiclient
+* Windows backup and restore incrementals
+* Windows support for freezer
+* Freezer API
+* Implementation of bandwidth-limitation blueprint
+* Functional tests and Vagrant environment
+* Fix backup sort and related problems
+* Fix handling of timestamp in old backup removal
+* Remove pyrsync dependency
+* Add dry-run execution
+* pass optional os_options on to switfclient library
+* Fix removal of backup segments
+* Main loop refactor
+* Proxy implementation
+* Fixed bug 1415865 for old backup removal
+* Add auth version parameter
+* Change in default location of log file
+* Add insecure parameter
+* Update requirements for environment variables
+* Fix for Exception order in freezerc
+* Added specs template for freezer
+* Updated setup.py to add proper pyrsync installation
+* Use Python module MyMySQL instead of MySQLdb
+* Add port argument to MySQL connection
+* Added unittest for freezer.main
+* Exceptions handling revisited and improved
+* Added unittest for restore.py
+* Add unittest for swift.py and bug fix
+* Added unittest for tar.py
+
+1.1.0
+-----
+
+* Fixed bug in setup.py and remove test auth file in mysql test
+* Added unittest for lvm.py
+* Added unittest for utils.py
+* Web UI for freezer
+* Added unittest for arguments.py
+* Unittest for backup.py with coverage >= 90%
+* Containers created by Freezer will have freezer_ as prefix
+* Fixed a bug in multi level restore and added new --action arg
+* Basic structure of the freezer web ui integrated in horizon
+* Restore process fails managing big data stream from swift
+* Fixed bug launchpad #1382809 to manage token expired
+* Added symlink/dereference and modified lvm auto guess options
+* Use strings of 8 chars for indexing Swift chunks
+* Added --lvm-auto-snap guessing option
+* Changed .gitreview  .gitignore and added tox.ini
+* Freezer initial commit

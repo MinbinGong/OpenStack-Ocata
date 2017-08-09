@@ -1,0 +1,16 @@
+WebOb>=1.6.0
+eventlet!=0.18.3,>=0.18.2
+greenlet>=0.3.2
+monotonic>=0.6
+oslo.utils>=3.18.0
+oslo.concurrency>=3.8.0
+oslo.config!=3.18.0,>=3.14.0
+oslo.log>=3.11.0
+six>=1.9.0
+oslo.i18n>=2.1.0
+PasteDeploy>=1.5.0
+Routes!=2.0,!=2.1,!=2.3.0,>=1.12.3
+Paste
+
+[:(python_version!='2.7')]
+Routes!=2.0,!=2.3.0,>=1.12.3

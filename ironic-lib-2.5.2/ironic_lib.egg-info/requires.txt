@@ -1,0 +1,10 @@
+pbr>=1.8
+oslo.concurrency>=3.8.0
+oslo.config!=3.18.0,>=3.14.0
+oslo.i18n>=2.1.0
+oslo.serialization>=1.10.0
+oslo.service>=1.10.0
+oslo.utils>=3.18.0
+requests!=2.12.2,>=2.10.0
+six>=1.9.0
+oslo.log>=3.11.0

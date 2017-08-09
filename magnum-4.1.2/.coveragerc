@@ -1,0 +1,9 @@
+[run]
+branch = True
+source = magnum
+omit = magnum/tests/*
+
+[report]
+ignore_errors = True
+exclude_lines =
+    pass

@@ -1,0 +1,104 @@
+CHANGES
+=======
+
+1.3.1
+-----
+
+* Updated from global requirements
+* Use bindep to define binary deps
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+
+1.3.0
+-----
+
+* Enable project_id for multi-domain support
+* Displaying job status
+* Deletion of backup metadata
+* client-id is now required when creating jobs
+* Enable client deletion
+* Update message for job start/stop/abort
+* Updated from global requirements
+* Added session-start option to allow starting sessions
+* Fix SSL connections initiated from freezer-scheduler
+* Fix ssl connections
+* Update UPPER_CONSTRAINTS_FILE for stable/ocata
+* Update .gitreview for stable/ocata
+
+1.2.0
+-----
+
+* Updated from global requirements
+* Updated from global requirements
+* Removes unnecessary utf-8 encoding
+* Add Keystone V3 OS_USER_DOMAIN_ID and OS_PROJECT_DOMAIN_ID
+* Print version information dynamically
+* Updated from global requirements
+
+1.1.0
+-----
+
+* Fix freezer backup support
+* Add full pep8 check
+* The --file parameter should be changed to required
+* Change --session-id and --job-id to required
+* Fixed "End Date" and "Interval" error
+* Support upper-constraints in tox.ini
+* Show team and repo badges on README
+* Add session-delete command
+* freezer session-* improvements
+* Achieve a consistent style output
+* Added py35 environment configuration to tox.ini
+* Updated from global requirements
+* Import objects replaced by modules
+* Updated from global requirements
+* Fix freezer client-* output
+* Fix freezer client-register prompt
+* Fix freezer CLI output
+* releasenote: Fix typo
+* Enable releasenotes translation
+* Using assertEqual instead of assertEquals
+* Fixed python-freezerclient insecure option
+* Updated from global requirements
+* Remove devstack plugin for python-freezerclient
+* Adding some statistics to python-freezerclient
+* Added releasenotes
+* Filter jobs by client and/or custom filters
+* Docstrings should not start with a space
+* Remove discover from test-requirements
+
+1.0.0
+-----
+
+* Force python-freezerclient to send Accept in headers
+* Fixed set values for opts argument
+* Enforce content-type in request headers
+* Fixed client creation when no os_backup_url is given
+* .gitreview updated to point new repo
+* Bump version to 2.0.0
+* Small code cleaning
+* Python freezer client
+* Fix freezer for py3 compatibility
+* Fix typo in keystone v3 creation dict
+* Command for changing logging level. And pep8 fixing (suddenly this pull request was rejected by jenkins and pep8. so this commit also contains some small style changes for pep8.)
+* Add default namespace to apiclient
+* Switch freezer-scheduler to oslo.config and oslo.log switch freezer-scheduler to use oslo.config and switch from native python logging module to oslo.log This commit includes: - using oslo.config for parsing cli and config files options - using oslo.log instead of native python logging module - this applied only on freezer-scheduler Implements: blueprint using-oslo-libs
+* Initialize freezer-scheduler with insecure mode for keystone v3
+* Updated LICENSE file and headers
+* Fix error message if no credentials are provided
+* Default namespace for args options
+* Select endpoint type of freezer api service
+* job event requests use specific api endpoint
+* Updating HP Copyright label
+* apiclient support for keystone v2.0 and v3
+* freezer scheduler
+* Add api support for jobs
+* This version contains the following pages:  - Overview displays charts/reports (Currently only placeholders)  - Configurations allows to define new backup configurations and link them to    instances  - Backups shows a list of all succesful backups and allows to restore them  - Restores shows a history of all restored backups
+* Added parameters to the "list-backups" python api
+* freezer api support for action
+* Add tests for client registration
+* freezer api support for client registration
+* client retrieval of freezer api endpoint
+* Fixed references to freezerclient which is now apiclient
+* Freezer API

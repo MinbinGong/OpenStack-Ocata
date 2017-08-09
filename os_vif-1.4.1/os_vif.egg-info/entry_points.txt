@@ -1,0 +1,4 @@
+[os_vif]
+linux_bridge = vif_plug_linux_bridge.linux_bridge:LinuxBridgePlugin
+ovs = vif_plug_ovs.ovs:OvsPlugin
+

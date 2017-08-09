@@ -1,0 +1,565 @@
+CHANGES
+=======
+
+2.0.0
+-----
+
+* Updated from global requirements
+* Update UPPER_CONSTRAINTS_FILE for stable/ocata
+* Update .gitreview for stable/ocata
+
+2.0.0.0rc1
+----------
+
+* Use keystoneauth1 session instead of keystoneclient
+* Handle ironic service not being present
+* Disable ironic plugin by default in devstack
+* Fix filtered queries for Elasticsearch 5
+* Searchlight ironic plugin
+* Handle nova rename events
+* Fix search policy unit test failure
+
+2.0.0.0b3
+---------
+
+* Implement flavor notification handler
+* Fix server group rbac test
+* Fix typo in utils.py
+* Updated from global requirements
+* Add a hacking to check double word typo automatically
+* Fix HACKING.rst with hacking checks
+* Update nova config reference file
+* Removing Unused imports
+* Implement pipeline
+* Add metadata field and updated_at field to server group index
+* Add server group notification handler
+* Support tests coverage report
+* Fix multi-typo in searchlight
+* Fix typo
+* Updated from global requirements
+
+2.0.0.0b2
+---------
+
+* Fix dot issue in field name
+* Remove unused using_elasticsearch_v2 function
+* Trival fix api-ref
+* Updated from global requirements
+* Delete deprecated Hacking in tox.ini
+* Updated from global requirements
+* Warn user if types using es to reindex don't exist
+* Updated from global requirements
+* Add alt text for badges
+* Use default jdk in devstack setup
+* Add tools/test-setup.sh script to setup test environment
+* Fix typo in Helper.py
+* Use ConfigParser instead of SafeConfigParser in Python 3
+* Show team and repo badges on README
+* Replace six.iteritems() with .items()
+* Duplicated ES reindex when plugins in different groups
+* Add option to reindex notification-less plugins
+* Remove uneccessary "in" from CONTRIBUTING.rst
+* Use messagingv2 by default
+* Replaces uuid.uuid4 with uuidutils.generate_uuid()
+* Modify variable's using method in Log Messages
+* Fix a typo in manage.py & utils.py
+
+2.0.0.0b1
+---------
+
+* Fix typo in helper.py
+* Allow notification handler cls to be None
+* Updated from global requirements
+* Updated from global requirements
+* Comment 'man_pages' config in conf.py
+* Fix the issue that plugins list not shown on Searchlight Indexing page
+* Change "Openstack" to "OpenStack"
+* Remove mox3 in test-requirement.txt
+* Allow 'size' and 'from' as search parameters
+* Allow listener to process "error" notification priority
+* Drop MANIFEST.in - it's not needed by pbr
+* Remove html_static_path from doc
+* Tool to translate a *.po file
+* Add http_proxy_to_wsgi to api-paste
+* Don't include openstack/common in flake8 exclude list
+* Enable release notes translation
+* Fix typo: remove redundant 'the'
+* Fix typo in notification_handlers.py
+* Fix typo in docstring
+* Use upper constraints for all jobs in tox.ini
+* Updated from global requirements
+* Fix a typo in documentation
+* Fix a typo in authoring-plugins.rst,etc
+* api-ref: Add Searchlight api-ref
+* Use upper-constraints for tox envs
+* Docstrings should not start with a space
+* TrivialFix: Remove default=None when set value in Config
+* RBAC for network sharing
+* Return __searchlight-user-role with highlighting
+* Restrict image member list
+* Support X_IS_ADMIN_PROJECT header on auth response
+* Don't listen for dns.zone.exists
+* Security group rule race condition
+* Log indexing exceptions at 'exception' level
+* Updated from global requirements
+* Do not index some Neutron ports
+* 'deleted_at' Date field needed for get_version
+* Cinder mapping incorrect
+* Update reno for stable/newton
+
+1.0.0.0rc1
+----------
+
+* Indicate 'nested' on facet types
+* Disable returning options for the facet fields
+* Add "updated_at" field to all mappings
+* Handle nova error states correctly
+* standardize release note page ordering
+* Allow aggregations in search requests
+* Change Elasticsearch installation doc
+* Change Designate recordset mapping
+* Replace some 'nested' mapping types with 'object'
+* [api-ref] Remove temporary block code in conf.py
+* to_dict instead of __dict__ for cinder resource
+* Verify resource group name
+* Fix exceptions error for image plugin
+* Fix translation of exceptions
+* Use more specific asserts in tests
+* Revert "Allow aggregations in search requests"
+* Raise NotImplementedError instead of NotImplemented
+
+1.0.0.0b3
+---------
+
+* Add region name to mappings and documents
+* Allow aggregations in search requests
+* Config logABug feature for searchlight api-ref
+* Updated from global requirements
+* API plugin endpoint needs aliases
+* TrivialFix: Remove logging import unused
+* Updated from global requirements
+* Get ready for os-api-ref sphinx theme change
+* Updated from global requirements
+* Service policy file support
+* Document the Searchlight architecture
+* Add nova server groups plugin
+* :Move elasticsearch install to plugin, use v2.3.4
+* Ignore nova deleting state changes
+* Force Elasticsearch indexing
+* Updated from global requirements
+* Fix nova exchange exception
+* Add warning for plugins without notifications
+* api-ref: add base structure
+* Updated from global requirements
+* Add totals to facets
+* Support 'shelve' and 'reboot' instance notifications
+* Allow wildcard in index --type argument
+* Flavor Plugin
+* Log notification events
+* Fixing typo in manage.py
+* Remove discover from test-requirements
+* Display ES indices
+* Updated from global requirements
+* Speed up Searchlight indexing
+* Small improvement for dynamic index settings doc
+* Fix --type handling for indexing parent plugins
+
+1.0.0.0b2
+---------
+
+* Cleanup i18n marker functions to match Oslo docs
+* Updated from global requirements
+* Remove designate v1 artifacts
+* A typo commit in the documentation
+* Add Neutron security group plugin
+* Add Python 3.5 classifier and venv
+* Replace assertEqual(None, *) with assertIsNone in tests
+* Fixes: Typo Error in helper.py
+* Correct reraising of exception
+* Spelling fixes in README
+* Updated from global requirements
+* Config: no need to set default=None
+* Allow dynamic index settings
+* Reduce number of API calls on nova boot
+* Neutron floating IP support
+* Expand designate functional tests
+* Fix typo errors in the description
+* make string.letters python3 compatible
+* Handle JSON object in hypervisor serialization
+* Updated from global requirements
+* Updated from global requirements
+* Enabled Neutron notifications in sample local.conf
+* Determine routing before delete on neutron events
+* Add microversion support for nova plugins
+* Image type should be a facet
+* Expose 'version' as a search parameter
+* Correct doc_values info in authoring plugins docs
+* Updated from global requirements
+* Change Nova API version to V2.1
+* Add project_id to all serialized documents
+* Fix reindexing conflict handling in es2
+* Correct es 2.x functional test config
+* Imported Translations from Zanata
+* Updated from global requirements
+
+1.0.0.0b1
+---------
+
+* Return raw subfields on facets of analyzed string fields
+* Updated from global requirements
+* Don't accept domain-scoped tokens for auth
+* Fix python3 compatible issue in listener
+* python 3.4 support for urlparse
+* Remove mention of oslo.log 'verbose' option
+* Correct wrong link in doc
+* Use Notification Pools by Default
+* Added os_endpoint_type to various OpenStack clients
+* Add Release notes for fixes backported to 0.2.1
+* Enable notification messaging pools
+* Updated from global requirements
+* Adds Nova Functional Tests
+* Correct cinder 'exchange' value
+* Resource types for reference and parent id
+* Replace use of search_type=count with size=0
+* Updated from global requirements
+* Apply query to highlight query
+* Include zone_id in Designate Recordset mapping
+* remove verbose option in devstack plugin
+* Simple Script for Generating Resources
+* Overwrite child plugin resource_group_name durning parent registration
+* Updated from global requirements
+* Improve plugin authoring information
+* Reenable multiple elasticsearch indices
+* Updated from global requirements
+* Ensure consistency in mapping field types
+* Add freeform search syntax to docs
+* Imported Translations from Zanata
+* Error deleting index in initial syncing
+* Updated from global requirements
+* use thread safe fnmatch
+* Document that initial sync is mandatory
+* Hypervisor plugin
+* Allow limit=0 In Searches
+* [Trivial] Remove unnecessary executable privilege
+* Make func test indexing more consistent
+* Add cleanup in functional tests
+* Making searchlight-manage python-3 compatible
+* Fix unicode error when booting instance from volume
+* Imported Translations from Zanata
+* Updated from global requirements
+* Add release note for index refresh disabling
+* Zero Downtime Re-indexing Functional Tests
+* Updated from global requirements
+* Add volume.retype event
+* Remove port.create.end handler from nova
+* Breaking up utils.py
+* Disable index refresh during data re-sync
+* Fix inconsistent mapping in image plugin
+* Use delete_index instead of alias_listener_update
+* Updated from global requirements
+* Add region_name to service_credentials for devstack
+* Updated from global requirements
+* Listen to instance volume attach/detach events
+* Add searchlight-ui to example local.conf
+* Add Link to client and ui
+* Zero Downtime Re-indexing Unit Tests
+* Proposed clarification on zero-downtime reindexing doc
+
+0.2.0
+-----
+
+* Backward compatibility with designate v1 api
+* Disable oslo_config file discovery in tests
+* Backward compatibility with designate v1 api
+* Increase heap for elasticsearch in func tests
+* Fix _is_multiple_alias_exception signature
+* Add missing zero-downtime indexing documentation
+* Increase heap for elasticsearch in func tests
+* Eliminate stray asterisk
+* Fix _is_multiple_alias_exception signature
+* Add missing zero-downtime indexing documentation
+* Disable oslo_config file discovery in tests
+* Re-indexing optimization for doc_type
+* Re-indexing optimization for doc_type
+* Add missing mitaka release notes
+* Zero Downtime Re-indexing Error Handling
+* Zero Downtime Re-indexing Error Handling
+* Don't index DHCP ports
+* Add missing mitaka release notes
+* Update reno for stable/mitaka
+* Update .gitreview for stable/mitaka
+
+0.2.0.0rc1
+----------
+
+* Fix for showing subnet, port to admin users in non-tenant
+* Add long to doc_values
+* Don't index DHCP ports
+* Add missing neutron fields
+* Handle BulkIndexError properly during deletes
+* Allow multiple plugins to handle an event
+* Add neutron subnets and routers
+* Add network.update.end event
+* Fix duplicate entries displayed w/"index sync"
+* Mitaka doc updates
+* Update Docs for Mitaka Release
+* Remove duplicate project facets from cinder plugins Closes-Bug: #1558606
+* Swift plugin
+* Fix for delete children with role separated parent
+* Remove resource_group_name as a per-plugin option
+* Correct cinder configuration examples
+* Apply rbac more consistently
+* Per resource policy control
+* Add _routing field to ES CRUD for plugins
+* Add Cinder volume/snapshot plugins
+* Partially correct func test indexing
+* Fix functional test failure under python 3
+* Use 'date' type for updated_at in neutron plugins
+* Zero Downtime Re-indexing changes
+* Fix doc_values for dynamic_templates
+* register the config generator default hook with the right name
+* Set doc_values on field definitions
+* Replace deprecated LOG.warn with LOG.warning
+* Version deletes and inc default GC delete time
+* Update sample configurations and local.conf
+* Remove custom plugin.__init__in func tests
+* Fix _parent determination in some role sep configs
+* Updated from global requirements
+* Updated from global requirements
+
+0.2.0.0b3
+---------
+
+* Fix role based indexing for designate
+* Neutron plugin
+* Moved CORS middleware configuration into oslo-config-generator
+* Remove pre-1.0 glance auth error handling
+* Cleaned up some spacing
+* Generate swift test data
+* Remove unused pngmath Sphinx extension
+* Add some documentation on authoring plugins
+* Updated from global requirements
+* Add sample devstack local.conf
+* Updated from global requirements
+* Fix bug that listener worker doesn't exit
+* Use external version to ensure index updates
+* Make default limit for search configurable
+* Updated from global requirements
+* Correct unit test mocking
+* Move glance-specific test code into glance test
+* Ignore 404 on missing mapping
+* Add .coveragerc file
+* Remove KEYSTONE_CATALOG_BACKEND in devstack plugin
+* Updated from global requirements
+* Index child plugins as part of parent
+* Only evaluate RBAC filter for current request
+* Added Keystone and RequestID headers to CORS middleware
+* Updated from global requirements
+* Separate documents by role
+* Add plugin options to generated config
+* Update home page URL in setup.cfg
+* Updated from global requirements
+* Revert "Make compatible for keystone v3 for devstack plugin"
+* Use uppercase 'S' in word "OpenStack"
+* Fix spell typo
+* Fix test_context_middleware py34 error
+* Add config-file to dev env setup instructions
+* Remove outdated pot files
+* Don't use _id path mapping
+* Fix doc_count for nested fields
+* Updated from global requirements
+* Add Devstack install support for searchlightclient
+* Updated from global requirements
+
+0.2.0.0b2
+---------
+
+* Updated from global requirements
+* Remove duplication in functional test setup
+* Add python 3.4 to programming languages in setup.cfg
+* Replace deprecated library function os.popen() with subprocess
+* Updated from global requirements
+* Fix functional test [api] config section
+* Delete python bytecode before every test run
+* Updated from global requirements
+* Remove index API
+* Catch endpoint not found exception
+* Fix service_credential config generator
+* Put py34 first in the env order of tox
+* Remove useless opts namespace 'searchlight.api'
+* Update gitignore to ignore searchlight.conf.sample
+* Add release note for config group change
+* Move related options to group 'api'
+* Deprecated tox -downloadcache option removed
+* Restrict the minimum workers for listener
+* Cap elasticsearch client <2.0
+* Rname oslo config generator config file
+* Force releasenotes warnings to be treated as errors
+* Elasticsearch v2 client warning causes devstack to not stack
+* Update Designate Devstack info
+* Emit warning if indexing with elasticsearch v2
+* Make compatible for keystone v3 for devstack plugin
+* Remove version per M-1 release instructions
+* Raise HTTPBadRequest when passing invalid query to search api
+
+0.2.0.0b1
+---------
+
+* Set listener workers according to config
+* Adds some more considerations for rel notes update
+* Add releasenote for rename default config
+* Rename default config
+* Add reno for release notes management
+* Restructure index and notification classes
+* Feature/Bug workflow corrections
+* Update documentation for automatic index creation
+* Document Feature Request and Bug Workflow
+* Fix Internal Server Error when query isn't specified
+* OS::Glance::Metadefs to OS::Glance::Metadef
+* Include oslo.messaging options in generated config
+* Remove unused pycrypto dependency
+* Move httplib2 to test-requirements
+* Remove unused JSON Schema code and requirement
+* Added CORS support to Searchlight
+* Add _member_ to property-protections-roles.conf.sample
+
+0.1.0
+-----
+
+* Fix for no name field in metadef namespace
+* Fix for no name field in metadef namespace
+* Remove 'not_analyzed' from server.name
+* Remove 'not_analyzed' from server.name
+
+0.1.0.0rc2
+----------
+
+* More Doc improvements for Liberty Release
+* More Doc improvements for Liberty Release
+* Document unsearchable_fields configuration option
+* Document unsearchable_fields configuration option
+* Improve documentation for Liberty release
+* Don't index admin-only fields
+* Don't index admin-only fields
+* Improve documentation for Liberty release
+* Update setup.cfg 0.2.0
+* Update setup.cfg to version 0.1.0
+* Glance exceptions should be removed
+
+0.1.0.0rc1
+----------
+
+* Make use of config options for indexer plugins
+* Fix for updating image index on member notifications
+* Add 'limit_terms' to facets
+* Apply RBAC to facets for admin unless all_projects
+* Add kernel_id and ramdisk_id to indexed images
+* Fix for Scrub references to glance in searchlight
+* Add --no-delete to indexing
+* Add facet terms for dns recordsets
+* Correct facet error when no mapping defined
+* Default designate updated_at to created_at
+* Add 'id' to metadefs
+* Adds a new cert under Searchlight name
+* Refactor clients handling to use Sessions
+* Apply RBAC for admins unless all_projects is given
+* Add additional facet fields
+* Rename GLANCE_TEST_SOCKET_FD_STR
+* Fix for Property mapping for Metadef properties fails
+* Add --force when doing initial index sync
+* More efficient result filtering
+* Fix sorting behavior for common problematic fields
+* Fix typos in documentation
+* Standardize created_at, updated_at
+* Functional Tests for Searchlight Tests added     - Initial Load     - API     - Event Listener
+* Add faceting
+* Fix typos about launchpad url, openstack spell
+* Changing Comments & Vars w/ Glance name
+* Rename 'fields' to '_source'
+* Raise on RBAC error
+* Add Designate plugin
+* Fix for updated/missing fields in python glance client for image members
+* Add '_parent' to bulk indexing if needed
+* Corrected RST markup
+* Corrected 'Openstack' references
+* Clarify glance api restart
+* Allow indexing of single type or index
+* Fix for metadef events failing in listener service
+* Fix Glance Indexing after Notification
+* Add nova instances plugin
+* Add 'sort' parameter
+* Fix RBAC filters
+* Fix for API root returns HTML instead of a list of versions
+* Clear cached os-client auth on unauthorized
+* Fix for Authentication not Happening
+* DevStack: Keystone V3 Service/Endpoint Creation
+* Enable configurable index names
+* Fix the unit tests for python3
+* Glance images retain deleted properties
+* Add python -mjson.tool after v1/search to make output easier to read
+* Glance index visibility should only be for v1
+* Fix Request ID has a double 'req-' at the start
+* Change Glance notifications to be create_or_update
+* Glance image notification serialization fix
+* Update indexingservice.rst with latest info
+* Add sections and plugins to documentation index
+* Fix issue with multiple notification listeners
+* Remove the i18n module of oslo-incubator
+* Consolidate duplicate section
+* Don't retrieve image members for public images
+* Document Listener and Manage Entrypoints Dev Docs
+* Add Manage command Main invocation
+* Devstack plugin changes for additional entrypoints
+* Replace exception_to_str with oslo exception_to_unicode
+* Remove unused oslo incubator files
+* Tidy up searchlight entry points
+* Add devstack plugin
+* Developer manual install docs
+* Remove duplicated entry from .gitignore
+* Add tox -e docs gitgnore .DS_Store
+* Index command doesn't do anything
+* Use dictionary literals and comprehensions
+* Switch to oslo.service
+* Cleanup Glance references
+* Initial translation setup
+* Update version for Liberty
+* Fix unit tests from initial import
+* Update readme to standard format
+* Add .gitreview
+* Fine tuning glance plugin
+* Fixed unit test case for duplicate properties and cleaned up glance plugin
+* Fix glance plugin serializer errors
+* Add RBAC tests to existing plugins
+* Add rbac tests, include api tests
+* Sort all serialized lists
+* pep8 fixes
+* Fix 'properties' handling
+* Add metadefs plugin in to stevedore list
+* Specify glance v2 client
+* Allow doc id field to be specified
+* Add back in metadefs plugin
+* Put plugin unit tests in their own modules
+* Add license header to opts to make pep8 happy
+* Remove old static config file
+* Drop oslo.concurrency and oslo.messaging from conf
+* Add elasticsearch options
+* Add some common config options
+* Add options from searchlight.common.wsgi
+* Add opts entry point
+* Add stub opts module
+* Remove run_tests.sh
+* Add back osprofiler to requirements
+* Remove common/rpc.py
+* Remove common/client.py
+* Drop py33 env
+* Move elasticsearch dependency to requirements.txt
+* Trim requirements files
+* No need to carry over all of Glance's policy rules
+* Pep8 fixes
+* Fix unittests and test runner
+* Refactor glance plugin to use API (images only)
+* Fix tox pep8 invocation
+* Add documentation
+* Change README to RST format
+* Change README to RST format
+* Initial commit

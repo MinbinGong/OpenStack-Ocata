@@ -1,0 +1,40 @@
+# turn on all the vitrage services by default
+# API service
+enable_service vitrage-api
+# Graph
+enable_service vitrage-graph
+# Notifier
+enable_service vitrage-notifier
+
+
+# Default directories
+VITRAGE_DIR=$DEST/vitrage
+VITRAGE_CONF_DIR=/etc/vitrage
+VITRAGE_CONF=$VITRAGE_CONF_DIR/vitrage.conf
+VITRAGE_API_LOG_DIR=/var/log/vitrage-api
+VITRAGE_AUTH_CACHE_DIR=${VITRAGE_AUTH_CACHE_DIR:-/var/cache/vitrage}
+VITRAGE_WSGI_DIR=${VITRAGE_WSGI_DIR:-/var/www/vitrage}
+
+# Vitrage connection info.
+VITRAGE_SERVICE_PROTOCOL=http
+VITRAGE_SERVICE_HOST=$SERVICE_HOST
+VITRAGE_SERVICE_PORT=${VITRAGE_SERVICE_PORT:-8999}
+VITRAGE_USE_MOD_WSGI=${VITRAGE_USE_MOD_WSGI:-${ENABLE_HTTPD_MOD_WSGI_SERVICES}}
+
+# Toggle for deploying Vitrage with/without nagios
+VITRAGE_USE_NAGIOS=$(trueorfalse False VITRAGE_USE_NAGIOS)
+
+VITRAGE_DEFAULT_DATASOURCES=${VITRAGE_DEFAULT_DATASOURCES:-nova.host,nova.instance,nova.zone,nagios,static,static_physical,aodh,cinder.volume,neutron.network,neutron.port,heat.stack,doctor}
+
+
+# Tell Tempest this project is present
+TEMPEST_SERVICES+=,vitrage
+
+# for now dont use pip install for the client
+LIBS_FROM_GIT=python-vitrageclient
+
+# admin details
+admin_project_name=${ADMIN_TENANT_NAME:-admin}
+admin_domain_name=${ADMIN_DOMAIN_NAME:-Default}
+
+VITRAGECLIENT_BRANCH=stable/ocata

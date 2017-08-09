@@ -1,0 +1,364 @@
+CHANGES
+=======
+
+5.0.1
+-----
+
+* Fix gnocchi metric collection
+* Assign the resource\_type when search resource by gnocchiclient
+* Improve and simplify the gnocchi collector
+* Fix usage of period configuration value
+* Update .gitreview for stable/ocata
+
+5.0.0
+-----
+
+* Trivial: fix warnings when build\_sphinx
+* Modify policy of get total/summary
+* Rename yaml file to keep consistent format
+* Refact Orchestrator
+* Fix JSON serialization error with sqlachemy storage backend
+* Fix compute service collection with ceilometer
+* Trivial: add the missing period
+* Add oslo\_debug\_helper to tox.ini
+* Fix wrong option names and missed options in cloudkitty.conf.sample
+* Get total price group by res\_type and tenant\_id
+* Fix pep8 check error
+* Improve User Experience by adding an info REST entrypoint
+* Added release note for cloudkitty
+* Add a note to indicate the change of default port
+* Generate the needed configuration files for devstack
+* [docs] Add rating module introduction
+* The qty's type should be more precision in storage tables
+* Replace oslo\_utils.timeutils.isotime
+* Update the documentation to propose the usage of keystone v3
+* Introduce hacking check to Cloudkitty
+* Bring the begin/end checking before the storage module
+* Ensure the exist of writer path
+* devstack: support the gnocchi collector
+* Don't include openstack/common in flake8 exclude list
+* Add .idea and vim temp/swap types to .gitignore
+* Delete the magic number
+* Use keystone v3 instead of keystone v2 in cloudkitty's devstack plugin
+* Remove discover from test-requirements
+* Pin kombu to < 4.0.0 to fix gate error
+* Add wrapper for decimal.Decimal objects in json.dumps()
+* Replace six.iteritems() with .items()
+* Show team and repo badges on README
+* Add PyScript module documentation
+* Fix devstack plugin compatibility
+* Add Apache 2.0 license header to the alembic/script.py.mako
+* Update the install docs
+* Modify variable's using method in Log Messages
+* Rename the gabbi filename to avoid GabbiSyntaxWarning
+* Replaces uuid.uuid4 with uuidutils.generate\_uuid()
+* Make begin and end optional when get dataframes
+* Don't include \*/alembic/version/\* in flake8 exclude list
+* Upgrade oslo.messaging to 5.2.0
+* Enable DeprecationWarning in test environments
+* Remove mox3 in test-requirement.txt
+* Add http\_proxy\_to\_wsgi to api\_paste
+* Enable code coverage report in console output
+* Remove html\_static\_path from doc
+
+0.6.1
+-----
+
+* Update outputs in "Hashmap rating module"
+* Fix consistency on gnocchi storage commit
+* Fix typo in the file
+* ceilometer network.\* collector are not JSON serializable
+* Update hashmap documentation
+* Fix typos in docstrings
+* Add volume\_type attribute to volume when gnocchi collector
+* Change git url to openstack git in devstack doc
+* Fix the image size unit from 'image' to 'MB'
+* Specifies gabbi version in test-requirements.txt
+* Fix state tracking in gnocchi storage
+* modify the home-page info with the developer documentation
+
+0.6.0
+-----
+
+* Added native gnocchi storage driver
+* Add network.floating to Gnocchi collector
+* Add fields to csv reports
+* Fix network.bw.\* qty matching the unit by gnocchi collector
+* Avoid error when iamge\_ref is None
+* Add infos about fields in hashmap documentation
+* Add Python 3.5 classifier and venv for cloudkitty
+* Add CSV support to cloudkitty-writer
+* Create DBCommand object after parsing
+* ceilometer image collector is not JSON serializable
+* Fix db api with hash rating
+* Improve the rpc module
+* Use local.conf instead of localrc in devstack doc
+* Remove downgrade migrations
+* Change LOG.warn to LOG.warning
+* Remove rating SQL Schema Downgrades
+* Remove db SQL Schema Downgrades
+* Remove storage SQL Schema Downgrades
+* Use international logging message
+* doc: fix cmd for creating hashmap group
+* Delete python bytecode before every test run
+* fix the typo
+* RootController: Use an index method instead of get
+* Fix port hardcoded on APILink sample
+* Changes default port from 8888 to 8889
+* Fix loosing resource metadata in Gnocchi
+* Correct concurrency of gabbi tests for gabbi 1.22.0
+* Refactor gnocchi transformer
+* Refactor ceilometer transformer
+* Remove spec file since cloudkitty is in RDO
+* Ensure module list is up to date in API tests
+* Refactor transformer base
+* Fix gnocchi support
+* Add per tenant hashmap rules
+* Add API check to verify PyScripts is loaded
+* Added gabbi tests for hashmap module
+* Clean constraints in hashmap fields table
+* Fix issues with alembic constraint naming
+* Added hashmap module documentation
+* Rename hashmap mapping table to hashmap\_mappings
+* Code cleanup of hashmap constraint migration
+* Refactor storage-init command
+* Refactor database models and migrations
+* Fix missing requirement alembic
+* Refactor writer command
+* Refactor dbsync command
+* Fix gnocchi UUID length in storage
+* Fix the path of the logo for the README file
+* Add a logo to the frontpage
+* Fix devstack cleanup of data dir
+* Replace subclassed RequestContext with base class
+* Define context.roles with base class
+
+0.5.0
+-----
+
+* Added support for an hybrid gnocchi storage
+* Added gnocchi collector
+* Migrate from keystoneclient to keystoneauth
+* policy: fix the roles setup in the requests context
+* Fixed devstack not creating folder for tooz locks
+* Added distributed lock fixing horizontal scaling
+* Fixed meta collector not applying mappings
+* Added CORS support to CloudKitty
+* Use IPOpt and PortOpt
+* Updated from global requirements
+* Improve default error handling on collector
+* Cleanup unused conf variables
+* Refactor keystone tenant fetcher
+* Removes unused posix\_ipc requirement
+* Test: make enforce\_type=True in CONF.set\_override
+* Replace deprecated LOG.warn with LOG.warning
+* Load wsgi app(api) with paste.deploy
+* remove rating no match case
+* remove setting for option verbose
+* Modify noop module code in arch.rst
+* drop py33 and py26 env test
+* remove unused method in orchestrator
+* Remove iso8601 dependency
+* Deprecated tox -downloadcache option removed
+* Fixed random failures in storage tests
+* Loading scripts in memory when load pyscripts rating model
+* Remove unnecessary parameter
+* Put py34 first in the env order of tox
+* Added unit tests for storage drivers
+* Fixed \_NO\_DATA\_ insertion even when data was present
+* The result of tenant list may be unpredictable
+* Fixed Horizon static file compression in devstack
+* Change not found HTTP status code from 400 to 404
+* Move global variables to settings file
+* Fix error when using keystone v3
+* fixes error when get quote price from rpc
+* modify api of report total
+* Add .DS\_Store to .gitignore
+* Add \*.swp to .gitignore
+* Fixes sample rabbitmq config in doc
+* Tenant fetcher sometimes return wrong result
+* Added AuthPlugin support in devstack
+* Remove useless LOG definitions
+* Delegate log formatting to logging package
+* devstack: enable cloudkitty services by default
+* Added more API calls for HashMap rating module
+* Removed version information from setup.cfg
+* Fixed files to support liberty dashboard
+* Updated files to the new namespace
+* Update .gitreview for new namespace
+* Added new rating module PyScripts
+* Fix the sphinx build path in .gitignore file
+* Added gabbi API tests
+* UnconfigurableController returns 409 on all methods
+* Removed default values on rating modules
+* Fixed None value returned by report/total
+* Added support for dynamic rating module reloading
+* Fix the README file of the DevStack integration
+* readthedocs doesn't allow multiple files anymore
+* doc: document how to install from packages
+* install doc: install policy.json in /etc/cloudkitty
+* Added support for Keystone AuthPlugins
+* Moving to Liberty cycle (0.5)
+
+0.4.1
+-----
+
+* Preparing 0.4.1 release
+
+0.4.0
+-----
+
+* Improved documentation
+* Replace assertEqual(None, \*) with assertIsNone
+* Use six.text\_type() in exceptions
+* Update README.rst file
+* Improve setup.cfg a bit
+* Collector cleanup and six string types
+* Fixed output option basepath not applied to writer
+* Fixed mock tests failing due to deprecation
+* Added dashboard integration's documentation
+* Unused functions removal in writer
+* \_\_commit\_data() raising exception on empty data
+* Updated requirements to stable/kilo
+* Bumped version of WSME
+* Sync oslo modules
+* Refactored meta collector API
+* Fixed flag setting error after data commit to storage
+* Fixed errors in ceilometer volume data collection
+* Fixed hashmap migrations for postgresql
+* Fix the Context hook
+* Make keystone optional
+* doc: enable ceilometer and horizon in devstack
+* Enforce a default policy
+* Changed network bandwidth from B to MB
+* Fixed error when no field mapping was created
+* Added a fake fetcher and collector
+* Fixed tenant fetcher using Keystone objects
+* Fixed empty dataset handling on CloudKitty storage
+* Fixed dashboard installation with devstack
+* Added support for dashboard in devstack
+* Fixed collector unhandled exception management
+* Added more resources to ceilometer collector
+* Added implicit cast to decimal in rating total calculation
+* Fixed API bug with parents UUID
+* Added collection error catching
+* Added new mapping type: threshold
+* Fixed tenant list filtering with keystone fetcher
+* Fix the config sample generator method
+* Fix the broken options for tenant\_fetcher
+* Update the devstack scripts
+* Add ACL support on the API
+* Added support for pluggable tenant fetcher
+* Correct the authtoken options sample of installation
+* Fixed problem with the NO\_DATA type in sqlalchemy
+* Change the API storage path
+* Fixed potentially uninitialized session in sqlalchemy storage
+* Fix wrong order of arguments
+* Fixed bug in sqlalchemy storage filtering
+* Add option values log for cloudkitty-api
+* Fixed regression in processors handling
+* Fixed regression in RatingProcessorBase: nodata missing
+* Fixed a bug with uninitialized usage interval in nodata
+* Added CloudKitty client install to devstack
+* Added support for rating module priority
+* get\_rpc\_client has been renamed to rpc.get\_client()
+* Make sure the RPC use str's
+* Remove explicit oslo.messaging version requirement
+* Fix the public access on /
+* Fixed regression in the RPC module
+* Renaming billing to rating
+* devstack: configure keystone middleware
+* Added handling of empty collections
+* Added quote calls to rating processors
+* New HashMap rating module version
+* Add filtering on resource type to the storage API
+* Split the api controllers and resources
+* Use keystone middleware for authentication
+* Generate the sample with oslo-config-generator
+* Support both oslo.messaging and oslo\_messaging
+* Ceilo transformer: handle multiple metadata keys
+* Move extra files to the contrib/ dir
+* storage API: handle NoTimeFrame exception
+* Update the devstack lib and documentation
+* Provide an installation documentation
+* Implement a storage API
+* Added multi-tenancy support
+* Moved keystone settings in the ceilometer collector
+* Pinned oslo.messaging version
+* Drop some unneeded deps from .spec
+* Fixed extra/missing init files from migrations
+* Adding image collection to the collector
+* Insert empty frame if no data
+* Add missing \_\_init\_\_.py's
+* Fixed a bug while enabling rating module by RPC
+* Removed configuration check from pep8 tests
+* small changes to index file
+* Modified utils to implement all time calculations
+* Using UTC datetimes in StateManager tests
+* Repository general files update
+* rpm: install the new binaries in the common rpm
+* Fixed OSRF format writer to support Decimal
+* Fixed output format for sqlalchemy storage backend
+* Separated writing and rating processing
+* Added support for total on API
+* Implemented new storage drivers
+* Provide rpm packaging configurations
+* Added instance\_id in compute metadata
+* Fixed bug while loading empty metadata
+* Added time calculations code in utils
+* Removed i18n from flake checks
+* Added support for Multiple Collectors
+* Add tests for the DB state manager
+* Rename get\_migrate method for consistency
+* Move the tests in the cloudkitty package
+* Added pluggable transformer support
+* Fixed regression in file writing
+* Fixed writers bugs when switching to RPC
+* Added basepath support for writers
+* Fixed ZipFile not supporting backends
+* Implemented RPC messaging
+* Work toward Python 3.4 support and testing
+* Improved architecture section in documentation
+* Remove docutils from test-requirements
+* Add Devstack support for the api
+* Fix accuracy of the States.state column
+* Fix the output basepath for WriteOrchestrator
+* Removed docbook requirements from documentation
+* Updated sphinx version in test-requirements
+* Modified path in documentation config file
+* Update the pbr version
+* Fix the get/set state method
+* Fixed host port detection in root controller
+* Fixed bug with module name detection
+* Added hashmap types query via API
+* Improved documentation (docstrings and sphinx)
+* Updated openstack-common code to latest version
+* Added cloudkitty-dbsync tool
+* Implemented HashMap API
+* Added API service
+* Added module state management DB
+* Added alembic support for database migrations
+* Fixed missing config generator.rc file
+* Transitioned from file state to DB state
+* Added i18n support
+* Transitioned from importutils to stevedore
+* Moved base billing code
+* Moved base backend code
+* Fixed wrong datetime usage
+* Moved base collector code
+* Fixed state recovery in osrf writer
+* Moved base writer code
+* Fixed wrong path for cloudkitty config sample
+* Added config tools
+* Setup and dist modifications
+* Added ropeproject to gitignore
+* Bump hacking to version 0.9.2
+* Fixed typo in README
+* Added more informations in the README
+* Moved to importutils from oslo-incubator
+* PEP8 and hacking compliance
+* Added more files to gitignore
+* Set copyright/license information in .py files
+* Modified README to use rst format
+* Pushing initial work
+* Added .gitreview

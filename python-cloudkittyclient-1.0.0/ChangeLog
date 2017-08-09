@@ -1,0 +1,103 @@
+CHANGES
+=======
+
+1.0.0
+-----
+
+* Add `--all-tenants` when get total/summary
+* Improve User experience
+* Update .gitignore
+* Remove white space between print ()
+* Add oslo_debug_helper to tox.ini
+* Add client for get summary report
+* Remove white space between print () in cliutils.py
+* Delete unnecessary utf-8 coding
+* H803 hacking have been deprecated
+* Set upper-constraints for tox
+* Add support for OpenStack client
+* Add module priority management
+* Use os_project name in get_client
+* Unify the date format "YYYY-MM-DDTHH:MM:SS"
+* Catches the right exceptions shell.py files
+* Show team and repo badges on README
+* Change the time args format from timestamp to date/time when total-get
+* Add __ne__ built-in function
+* Remove unused pylintrc
+* Make begin and end optional when get dataframes
+* move old oslo-incubator code out of openstack/common
+
+0.6.0
+-----
+
+* Fix the logic of do_hashmap_mapping_list
+* Add short arg for collector command
+* Fix CLI threshold command
+* Replaces client_kwargs by empty dict in ckclient/shell.py
+* Fix CLI auth user interface
+* Add short arg for storage command
+* [trivial] fix wrong typo
+* Remove discover from test-requirements
+* Add client support for per tenant hashmap rules
+* Remove spec file since cloudkittyclient is in RDO
+* Add an explicit dependency on prettytable
+* [Trivial] Remove executable privilege of doc/source/conf.py
+
+0.5.0
+-----
+
+* Updated requirements for mitaka
+* Update requirements
+* Fix argument order for assertEqual to (expected, observed)
+* Add support for query cost by service
+* cloudkittyclient with keystone v3 not working
+* Fix client V3 unscope bug
+* Add helpinfo for collector commands
+* Fix name not defined error
+* py33 is no longer supported by Infra's CI
+* Removes MANIFEST.in as it is not needed explicitely by PBR
+* Drop py33 support
+* Support getting client with keystone session
+* Set AuthPlugin in __init__()
+* Fix help message
+* Fixed bug with report total
+* Fix a typo in command help
+* Add common arguments
+* Do no set the version in setup.cfg
+* Improve HashMap client
+* Update .gitreview for new namespace
+* Add support for PyScripts rating module
+* Change ignore-errors to ignore_errors
+* Moving to Liberty cycle (0.5)
+
+0.4.1
+-----
+
+* Preparing release 0.4.1
+* Fix syntax error of shell description
+* setup.cfg: set a version
+* Transitioned collector client to new API
+
+0.4.0
+-----
+
+* Refactored code to use new olso namespace
+* Fix the CLI for {group,mapping}-create
+* Add support for the hashmap threshold API
+* Add support for the storage API
+* Fix the hashmap related commands of cloudkittyclient
+* Fix the wrong input package of pbr of cloudkittyclient
+* Add predictive pricing
+* Provide a sample .spec file
+* Rename billing to rating
+* Global rewrite of the client
+* Stop using intersphinx
+* Work toward Python 3.4 support and testing
+* Add the billing/modules request (v1)
+* Move to oslotest
+* Add the billing/quote request
+* Boost the coverage and launch all the tests
+* Add the report request
+* Add tests for the client
+* Minor typo fixed in README
+* Initial work for the CloudKitty client
+* Added .gitreview

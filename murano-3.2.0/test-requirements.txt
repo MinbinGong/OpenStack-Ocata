@@ -1,0 +1,30 @@
+# The order of packages is significant, because pip processes them in the order
+# of appearance. Changing the order has an impact on the overall integration
+# process, which may cause wedges in the gate later.
+hacking<0.11,>=0.10.0
+
+coverage>=4.0 # Apache-2.0
+fixtures>=3.0.0 # Apache-2.0/BSD
+mock>=2.0 # BSD
+nose # LGPL
+oslotest>=1.10.0 # Apache-2.0
+sqlalchemy-migrate>=0.9.6 # Apache-2.0
+testrepository>=0.0.18 # Apache-2.0/BSD
+testresources>=0.2.4 # Apache-2.0/BSD
+testscenarios>=0.4 # Apache-2.0/BSD
+unittest2 # BSD
+pylint==1.4.5 # GPLv2
+requests!=2.12.2,>=2.10.0 # Apache-2.0
+os-testr>=0.8.0 # Apache-2.0
+murano-pkg-check>=0.2.0 # Apache-2.0
+
+# Some of the tests use real MySQL and Postgres databases
+PyMySQL>=0.7.6 # MIT License
+psycopg2>=2.5 # LGPL/ZPL
+
+# doc build requirements
+oslosphinx>=4.7.0 # Apache-2.0
+sphinx!=1.3b1,<1.4,>=1.2.1 # BSD
+sphinxcontrib-httpdomain # BSD
+reno>=1.8.0 # Apache-2.0
+openstackdocstheme>=1.5.0 # Apache-2.0

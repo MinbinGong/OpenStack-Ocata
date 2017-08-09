@@ -1,0 +1,156 @@
+CHANGES
+=======
+
+1.0.0
+-----
+
+* update '--detail' help in goal list
+* Updated from global requirements
+* Add functional tests to watcherclient
+* Support parents field along with planner changes
+* changes to make consistent with other openstack component
+* Use keystoneauth instead of keystoneclient
+* Remove unused files
+* Enable coverage report in console output
+* Add param 'goal' and 'strategy' in list()
+* Removes unnecessary utf-8 encoding
+* update audit create '--interval' description
+* Add unit for continuous audit's interval
+* Fix a typo in audittemplate help
+* use 'auto' instead of None
+* Add auto_trigger support
+* Fix TOKENID format which should without dashed
+* too many digits after the decimal point
+
+0.27.0
+------
+
+* Remove readme reference because of sphinx error
+* Replace six.iteritems() with .items()
+* Updated from global requirements
+* Show team and repo badges on README
+* Updated from global requirements
+* Use uuidutils instead of uuid.uuid4()
+
+0.26.0
+------
+
+* Updated from global requirements
+* Remove obsolete object attributes
+* Fix a typo error in a help message in the client
+* Updated from global requirements
+* Remove unnecessary ')'
+* Add Python 3.5 classifier and venv
+* Add __ne__ built-in function
+* Updated from global requirements
+* Add support for Audit Scope
+* Add parameters in Audit creation attributes list
+* Updated from global requirements
+* Added support for Client creation from KS session
+* Updated from global requirements
+* Add fixtures to test-requirements
+* Add constraint target to tox.ini and remove 1 dep
+* Add service support
+* python-openstackclient ClientManager interface changed
+* Update home page link in cfg file
+* Clean imports in code
+
+0.25.0
+------
+
+* Add again parameters as Audit creation attributes
+* Updated from global requirements
+* Add strategy name in action plan fields
+* Updated from global requirements
+* remove redundant ')'
+* Add goal_id, strategy_id and host_aggregate CLI options to audit
+* Optimiz the help information for audit type parameter
+* Updated from global requirements
+* Add scoring engine commands
+* Remove discover from test-requirements
+* Updated from global requirements
+* Updated from global requirements
+* Fix for importing osc-lib instead openstackclient
+* Updated from global requirements
+
+0.24.0
+------
+
+* Fix for error importing of exception class
+* Add support continuously-optimization
+* Remove the blank space between the function name and the parenthesis
+* Prints  '-' instead of 'None' when data is None
+* Enable strategy parameter
+* Fix field type to audit_type
+* Add license file
+* Updated from global requirements
+* Remove tempest-lib
+* Updated from global requirements
+* Revert "Add support continuously-optimization"
+* Replaced UUID of goal with name
+* Remove useless index on root doc page
+* Updated CLI to display efficacy related fields
+* Updated from global requirements
+* Add support continuously-optimization
+
+0.23.0
+------
+
+* Update Watcher CLI documentation
+* Use goal name as strategy list filter
+* Replaced UUID of goal and strategy with name
+* Flatten the project structure
+* Switch Watcher CLI to an OSC-compatible version
+* OpenStackClient plugin for action
+* OpenStackClient plugin for action plan
+* OpenStackClient plugin for audit
+* OpenStackClient plugin for audit template
+* OpenStackClient plugin for strategy
+* OpenStackClient plugin for goal
+* Tidy up
+* Use the correct capitalization of OpenStack
+* Support for refactored /audit_templates endpoint
+* Added Strategy support in Watcher CLI
+* Updated CLI for new /goals API
+* Add PrettyTable module
+* Fixed audit creation bug in CLI
+* Removed unused 'alarm' field
+* Add audit-template name checking in CLI
+* Updated from global requirements
+
+0.22.0
+------
+
+* Rename TRIGGERED state as PENDING
+* Updated from global requirements
+* Updated from global requirements
+* Replace deprecated LOG.warn with LOG.warning
+* Removed host_aggregate filter for Audit Template
+* Removed useless '--name' in audit-template-list
+* Sync with openstack/requirements master branch
+
+0.21.0
+------
+
+* Updated STARTING to TRIGGERED
+* Remove argparse from requirements
+* Fix extraction of _LI _LW _LE _LC for translation
+* Update Watcher documentation in README
+* i18n - Make string translatable
+* Respect the import order template
+* Sync Action resource fields
+* Sync with oslo-incubator
+* use keystoneclient exceptions instead of oslo-incubator code
+* Drop py33 support
+
+0.20.0
+------
+
+* Remove py26 support
+* Update requirements from OS Global Requirements
+* bug and requirements fixes
+* Change stackforge to openstack
+* Update .gitreview for new namespace
+* update README.rst file
+* push initial version
+* Added .gitreview

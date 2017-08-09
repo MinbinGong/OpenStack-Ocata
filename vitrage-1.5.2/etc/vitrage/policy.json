@@ -1,0 +1,14 @@
+{
+  "get topology": "",
+  "get topology:all_tenants": "role:admin",
+  "get resource": "",
+  "list resources": "",
+  "list alarms": "",
+  "list alarms:all_tenants": "role:admin",
+  "get rca": "",
+  "get rca:all_tenants": "role:admin",
+  "template validate": "",
+  "template list": "",
+  "template show": "",
+  "event post": ""
+}

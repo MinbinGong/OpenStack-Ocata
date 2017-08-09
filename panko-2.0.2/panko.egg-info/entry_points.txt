@@ -1,0 +1,28 @@
+[ceilometer.dispatcher.event]
+panko = panko.dispatcher.database:DatabaseDispatcher
+
+[console_scripts]
+panko-dbsync = panko.cmd.storage:dbsync
+panko-expirer = panko.cmd.storage:expirer
+
+[oslo.config.opts]
+panko = panko.opts:list_opts
+
+[oslo.config.opts.defaults]
+panko = panko.conf.defaults:set_cors_middleware_defaults
+
+[panko.storage]
+es = panko.storage.impl_elasticsearch:Connection
+hbase = panko.storage.impl_hbase:Connection
+log = panko.storage.impl_log:Connection
+mongodb = panko.storage.impl_mongodb:Connection
+mysql = panko.storage.impl_sqlalchemy:Connection
+postgresql = panko.storage.impl_sqlalchemy:Connection
+sqlite = panko.storage.impl_sqlalchemy:Connection
+
+[tempest.test_plugins]
+panko_tests = panko.tests.tempest.plugin:PankoTempestPlugin
+
+[wsgi_scripts]
+panko-api = panko.api.app:build_wsgi_app
+

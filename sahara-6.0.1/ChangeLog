@@ -1,0 +1,3446 @@
+CHANGES
+=======
+
+6.0.1
+-----
+
+* Refine settings of grenade in ocata
+* Configure the publicURL instead of adminURL in devstack
+* install saharaclient from pypi if not from source
+* Updated from global requirements
+* Updated from global requirements
+* Prepare for using standard python tests
+* Update UPPER_CONSTRAINTS_FILE for stable/ocata
+* Update .gitreview for stable/ocata
+
+6.0.0
+-----
+
+* Fix unexpected removing of deprecating flag for MapR 5.1
+* Remove MapR v5.0.0
+* Add Kafka to MapR plugin
+* Fix Maria-DB installation for centos7
+* Add new service versions to MapR plugin
+* Extend cluster provision logging of MapR plugin
+
+6.0.0.0b3
+---------
+
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* Change link to mysql-connector for Oozie in MapR plugin
+* Fix links in tests docs
+* API: Updating error response codes
+* Add HBASE MASTER processes number validation
+* Updated from global requirements
+* Fix some doc and comments nits
+* Updated from global requirements
+* Updated from global requirements
+* Add test_natural_sort_key()
+* Remove unexpected files
+* Updated from global requirements
+* Add test_update_plugin()
+* fix syntax errors in labels.py
+* Set access_policy for messaging's dispatcher
+* Add reno for CDH 5.9
+* support of CDH 5.9.0
+* Removing "def" from the methods at edp.spi
+* support of HDP 2.5
+* Updated from global requirements
+* Update "Additional Details for MapReduce jobs" docs
+* Judgment error
+* Fix typo error
+* Adding tenant_id to regex_search
+* Correct the unit test in V5_5_0
+* Adding tenant_id to regex_search
+* modify useless assertions
+* Updated from global requirements
+* Fix typo in cover.sh
+* Updated from global requirements
+* fix some typos
+
+6.0.0.0b2
+---------
+
+* Problem about permission
+* Switch use_neutron=true by default
+* Use assertGreater(len(x), 0) instead of assertTrue(len(x) > 0)
+* Updated from global requirements
+* Replace logging with oslo_log
+* replace 'assertFalse' with 'assertNotEqual'
+* [DOC] Beutify the chapter 'sahara on ironic'
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* Updating list of plugins in config sample
+* Show team and repo badges on README
+* Updated from global requirements
+* spelling fixed
+* definition spelling mistake
+* fix creation of endpoints
+* Updated from global requirements
+* Fixing endpoint type for glance client
+* Fixed some typos. Trivial fixes
+* Updated from global requirements
+* Provide context for castellan config validation
+* totally changed requred to required
+
+6.0.0.0b1
+---------
+
+* Fix import of common libraries from Manila client
+* Catch correct exception in check_cinder_exists fct
+* Remove enable_notifications option
+* Updated from global requirements
+* Updated from global requirements
+* Replaces uuid.uuid4 with uuidutils.generate_uuid()
+* Updated from global requirements
+* Updated from global requirements
+* Fix remove not existed devices
+* Updated from global requirements
+* Fix check cinder quotas
+* OpenStack typo
+* No doctext in some ProvisioningPluginBase methods
+* Updated from global requirements
+* Fix a typo in rootwrap.conf
+* Fix a typo in devstack.rst
+* [Trivial Fix]Fix typo in test_images.py
+* Constraints are ready to be used for tox.ini
+* Use http_proxy_to_wsgi middleware
+* Fix response code for invalid requests
+* Replace 'sudo pip install' with pip_install
+* Correct the  spelling error
+* [api-ref] Fix missprints in response codes
+* Enable release notes translation
+* Updated from global requirements
+* Fix wrong URL to castellan’s documentation
+* Remove html_static_path from api-ref
+* Fix wrong message formats
+* Fix typo in comment
+* tenant replaced to project in doc
+* Updated from global requirements
+* Fixed some fonts issue in user doc, EDP section
+* Remove unused config.CONF
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* Fix API compatibility issue
+* Updated from global requirements
+* Fix incorrect event log for ambari
+* [DOC] update doc about restapi
+* [DOC] update doc about sahara features
+* [doc] added description about plugin management
+* [DOC] Update quickstart guide
+* [DOC] update userdoc/edp.rst
+* Updated from global requirements
+* [DOC] update doc about mapr plugin
+* Add workaround for Hue on CentOS 7
+* [DOC] update doc about config recommendations
+* [DOC] update configuration guide doc
+* Fix ZooKeeper check for CentOS 7
+* Fill tempest.conf with Sahara-specific values
+* [DOC] update index and architecture docs
+* [DOC] Fix misprint in userdoc/statuses.rst
+* [DOC] update installation guide doc
+* [DOC] update doc about spark plugin
+* [DOC] update overview doc
+* [DOC] update doc about ambari plugin
+* [DOC] update upgrage guide
+* [DOC] update guest requirements doc
+* [DOC] Update Dashboard user guide
+* [DOC] Update dashboard dev environment guide
+* Update reno for stable/newton
+* Documentation fixes and updates for devref
+
+5.0.0.0rc1
+----------
+
+* [DOC] update doc about advanced configuration
+* Update link reference
+* [DOC] update doc about vanilla image builder
+* [DOC] update doc about vanilla plugin
+* do not use artifacts at sahara files
+* fix docs env
+* [doc] change location of swiftfs jars
+* [DOC] update doc about cluster statuses
+* [DOC] update doc about registering image
+* write docs about enabling kerberos
+* [DOC] update doc about CDH image builder
+* [DOC] update user doc about CDH plugin
+* [Doc] Small fixes according to Spark on Vanilla supporting
+* [Ambari] fix Ubuntu deploy
+* Remove entry point of sahara tempest plugin
+* Updated from global requirements
+* Remove Tempest-like tests for clients (see sahara-tests)
+* Deprecate MapR 5.1.0.mvr2
+* Add repo configs
+* standardize release note page ordering
+* reimplement oozie client as abstract
+* allow configuration of strategy for UI
+* [DOC] Add docs about pagination abilities
+* Add MapR core 5.2
+* [api-ref] Stop supporting os-api-ref 1.0.0
+* Add new version pack for services
+* Add event log for HDP plugin
+* Update api-ref docs for Designate feature
+* Add Sentry service v1.6 to MapR plugin
+* Add custom health check for MapR plugin
+* Rename all ClusterContext variables to 'cluster_context'
+* Replace mfs.exchange with g.copy_file where it is possible
+* [DOC] Update user doc about Designate
+* [DOC] Fix misprints in api-ref
+* Spark on Vanilla Clusters
+* Added rack awareness in CDH plugin
+* [Doc] add description of "plugin update" to api ref
+
+5.0.0.0b3
+---------
+
+* Updated from global requirements
+* Remove support for Spark standalone
+* Remove ssl config for Hue
+* Refactor service home dir owner setting
+* [Ambari] More flexible auto configuration
+* Fix invalid security repo
+* Added rack awareness in HDP plugin
+* Updated from global requirements
+* use _LE() to wrap the error message
+* Added option to disable sahara db for storing job binaries
+* Config logABug feature for Sahara api-ref
+* Remove unused config.CONF
+* improve logging for job execution failure
+* Updating DOC on floating IPs change
+* Updated from global requirements
+* Fix wait conditions with SSL deployments
+* Enabling MapR on CentOS7
+* Updated from global requirements
+* Fix wrong instance count in provision events
+* [doc] Fix some problems in docs
+* delete unused LOG in some files
+* TrivialFix: Remove logging import usused
+* Fix mapr cluster deployment
+* Remove MAPR_USER variable
+* Delete useless 'pass'
+* Updated from global requirements
+* replace assertListEqual() to assertEqual()
+* Updated from global requirements
+* Error handling during hosts file generation
+* Replace 'lsb_release -is' with the method 'get_os_distrib'
+* Add auto configs to HDP plugin
+* Correct reraising of exception
+* Fix wrong epel version for CentOS 7
+* Clean imports in code
+* Adding release note to floating ips change
+* Updated from global requirements
+* Remove hardcoded password from db schema
+* Get ready for os-api-ref sphinx theme change
+* Replace old CLI calls in grenade
+* Updated from global requirements
+* Add Kafka to CDH 5.5 and CDH 5.7
+* Updated from global requirements
+* plugins:patch is now admin only operation
+* Fix small bugs in pagination
+* Fix wrong hue-livy process name and move installation
+* Fix wrong owner setting for config files
+* copying oozie.warden to prevent failure
+* Updated from global requirements
+* Image argument validation and declaration
+* [ambari] support kerberos deployment
+* [cdh] kerberos support implementation
+* kerberos infra deployment impl
+* Fixed the error with updating the job via command line
+* Add sorting ability to Sahara-API
+* Health check for Designate
+* Fix configs for repos and swift urls in CDH 5.7
+* Added documentation for Designate feature
+* Documentation for image gen CLI and framework
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* Designate integration
+* Updated from global requirements
+* Correct reraising of exception
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* labels for CDH plugin
+* Changing zookeeper path while updating conf
+* labels for MapR plugin
+* Remove hardcoded password for Oozie service
+* Refactor the logic around use of floating ips
+* Adding argument-related validators for image configurability
+* Configuration engine for image generation CLI
+* Use assertEqual() instead of assertDictEqual()
+* improve error message for execution with retries
+* remove infrastructure engine option
+* Add pagination ability to Sahara-API
+* [DOC] Added docs for sahara+ironic
+* [DOC] Inform operators about limited quotas
+* delete two unused LOG
+* Updated from global requirements
+* Remove unused LOG
+* Updated from global requirements
+* Fixing unit tests for image create
+* improved scaling for cdh plugin
+* Adding Pyleus configs to Storm plugin
+* Add Python 3.5 classifier and venv
+* Docs should use "--plugin-version" instead of "--version"
+* CLI for Plugin-Declared Image Declaration
+* make ability to return real plugins in list ops
+* Failed to download ext-2.2.zip from dev.sencha.com
+* Adding Python Jobs using Pyleus
+* Simplify tox hacking rule to match other projects
+* [DOC] Cleanup time for incomplete clusters
+* improvements on api for plugins
+
+5.0.0.0b2
+---------
+
+* Resolves issue where to allow custom repo URLS
+* Updated from global requirements
+* Updated from global requirements
+* don't serialize auto security group if not needed
+* Fix typo in ambari_plugin.rst
+* replace import of future to the top
+* fix building api ref docs
+* The addition of the parentheses for py3
+* [DOC] Update installation guide
+* use sessions for creating heatclient
+* Fixed spelling error
+* forbid cluster creation without secondarynamenode
+* Fix subdirectory typo in sahara db template Readme file
+* Updated from global requirements
+* Upgrade Storm plugin to version 1.0.1
+* Updated from global requirements
+* Add Impala 2.2 to MapR plugin
+* Support of CDH 5.7
+* fixing sahara-engine setup in devstack
+* Fix typo in configs_recommendations.rst
+* Remove outdated tools
+* [DOC] improve docs
+* Fix typo in cdh_plugin.rst
+* Fix glanceclient.v2.images
+* Remove unecessary decorators from private interface
+* Ignore Nova config drive in devices list
+* plugins api impl
+* sleep before waiting requests
+* allow to specify notifications transport url
+* ability to configure endpoint type for services
+* Updated from global requirements
+* novaclient.v2.images to glanceclient migration
+* Updated from global requirements
+* Update documentation for hadoop-swift
+* Updated from global requirements
+* Updated from global requirements
+* [DOC] updated docs about keystone cli
+* Trivial: Fix wrong button name in dashboard user guide
+* Updated from global requirements
+* implement db ops for plugin's api
+* replace seriailization of plugin to PluginManager
+* Moving WADL docs to Sahara repository
+* Remove convert to cluster template feature
+* Trivial: Remove useless words in CDN image builder doc
+* Updated from global requirements
+* remove ability to create barbicanclient
+* Fix the ca certificate handling in the client sessions
+* fix grenade from mitaka upgrade
+* remove config groups associated with removed hosts
+* Updated from global requirements
+* workaround to fix ambari start on centos7
+* Updated from global requirements
+* Fix provision events for installing services
+* New version of HDP plugin 2.4
+* Display credentials info in cluster general info
+* Updated from global requirements
+* Improve timeout message when cluster create fails
+* Updated from global requirements
+* Modify HDP plugin doc for Ambari plugin
+
+5.0.0.0b1
+---------
+
+* Fix retrieve auth_url and python 3 jobs
+* Readable logging for Heat templates
+* Use split_path from oslo.utils
+* Added "\" In quickstart guide
+* Corrects MapR distro selection for RHEL
+* Fix cluster creation with another tenant
+* Updated from global requirements
+* Added unit tests for CDH 5.5.0 deploy file
+* Updated from global requirements
+* [Trivial] Remove unnecessary executable privilege
+* Updated from global requirements
+* Code refactoring of ambari deploy processes
+* Fix down scaling of ambari cluster
+* HDP hive HDFS support
+* improve description of ambari plugin
+* Remove hdp 2.0.6 plugin
+* Updated from global requirements
+* Fix grenade
+* Updated from global requirements
+* Minimise number of auto security groups
+* remove verbose option in devstack plugin
+* use the only method to initialize client
+* Updated from global requirements
+* Resolve bug with long value to RANDSTR function
+* Change 'Hbase' to 'HBase' string in spark service
+* Updated from global requirements
+* Remove openstack/common related stuff
+* Added unit tests for ha_helper file
+* Updated from global requirements
+* Updated from global requirements
+* Fix typo in Spark service
+* Renamed job execution and templates endpoints
+* Fix doc about scenario and Tempest tests
+* keystoneclient to keystoneauth migration
+* Helper method to use dnf instead of yum on fedora >=22
+* PrettyTable and rfc3986 are no longer used in tests
+* Update the links to the RDO project
+* Focus the documentation on distributed mode
+* Updated from global requirements
+* cdh plugin yum install option "-y" missing
+* update options mentioned in tempest readme
+* Update hadoop swift docs
+* Updated from global requirements
+* Fix doc build if git is absent
+* Added new unittest to oozie module
+* Updated from global requirements
+* SPI Method to Validate Images
+* Added tests for sahara cli
+* Fix unavailable MCS link
+* Define context.roles with base class
+* Update the Administrator Guide link
+* Updated from global requirements
+* Updated from global requirements
+* Change property for auto creating schema
+* Remove unsupported services from 5.1.0
+* Updated from global requirements
+* Updated from global requirements
+* Bandit password tests
+* Workaround for temporary Oozie bug
+* Fixing the bandit config
+* Pkg installation to ssh_remote
+* fix syntax error in ui dev docs
+
+4.0.0
+-----
+
+* Set libext path for Oozie 4.0.1, 4.1.0
+* rename service api modules
+* Fixing grenade job
+* Add hadoop openstack swift jar to ambari cluster
+* Fix Hue integration with Spark and Hive
+* Move bandit to pep8
+* Revert "Remove PyMySQL and psycopg2 from test-requirements.txt"
+* Do not build config example for readthedocs.org
+* Remove PyMySQL and psycopg2 from test-requirements.txt
+* Correctly configure Spark with Hive, HBase
+* Set libext path for Oozie 4.0.1, 4.1.0
+* Add hive property for Hue < 0.9.0
+* Updated Sahara arch diagram
+* Fix incorrect visualization of MapR versions
+* Updated volumes section in docs
+* Update reno for stable/mitaka
+* Update .gitreview for stable/mitaka
+
+4.0.0.0rc1
+----------
+
+* Updated UI docs
+* Fix staled configs for ha deployments
+* Use auth admin for get_router when building proxy commands
+* Don't use precreated ports in heat templates
+* get_admin_context overwriting context
+* Inject drivers to jars in Ambari Spark engine
+* Deprecate HDP 2.0.6 plugin
+* Fix updating datasource without changing a name
+* register the config generator default hook with the right name
+* Fix a mess in config helpers
+* rewrite wait condition script
+* Run cluster verification after cluster / creation scaling
+* Fix HA for Resourcemanager
+* Add an extra copy of neutron info after run_job
+* Remove cinder v1 api support
+* Updated from global requirements
+* Updating quickstart guide with openstackclient usage
+* Fix MapR 500 tempest test fails
+* Moved CORS middleware configuration into oslo-config-generator
+* Add MapR 5.1.0
+* Fix blueprints configuration for HA
+
+4.0.0.0b3
+---------
+
+* Do not use explict keyword arguments in image resource
+* Improve exception message for wait_ambari_requests
+* Added #nosec to sahara.service.coordinator package
+* Added #nosec to sahara.utils.hacking package
+* add nosec to subprocess usage in launch_command
+* add nosec to remote ssh pickle usages
+* Refine the code for CDH PluginUtils class
+* Remove UI configuring for Oozie
+* Updated from global requirements
+* HA for NameNode and ResourceManager in HDP 2.2
+* move heat template version to common module
+* No longer necessary to specify jackson-core-asl in spark classpath
+* Improve config description in CDH config_helper
+* Remove unneeded version string check in CDH plugin
+* Remove unused pngmath Sphinx extension
+* Add Flume 1.6.0 to MapR plugin
+* Remove vanilla 2.6.0 in doc
+* Remove unsupported MapR plugin versions
+* Updating get_auth_token to use keystonemiddleware
+* remove hdp from the default plugin list
+* enable ambari plugin by default
+* Updating dashboard user guide post-reorg
+* Use the integrated tempest.lib module
+* Update CDH user doc for CDH 5.5.0
+* Add CDH 5.5 support
+* CDH plugin edp engine code refactoring
+* CDH plugin config helper refactoring
+* Updated from global requirements
+* Use ostestr instead of the custom pretty_tox.sh
+* split cloudera health checks
+* ambari health check implementation
+* Making health verification periodics distributed
+* Fixed typo of precendence to precedence
+* Fix typo in api_validator.py
+* Updated from global requirements
+* Added #nosec for bandit check
+* Missing ignore_prot_on_def flag
+* Updated from global requirements
+* Remove support for spark 1.0.0
+* [EDP] Add suspend_job() for sahara edp engine(oozie implementation)
+* Updated from global requirements
+* Remove vanilla 2.6.0 code
+* Add Spark 1.5.2 to MapR plugin
+* Fix in wrong substitution
+* Adding data source update validation
+* Adding more information to validation errors
+* Revert "Fix gate pep8"
+* Add default templates for spark plugin, version 1.6.0
+* Updated from global requirements
+* Add Hue 3.9.0 to MapR plugin
+* Add property 'MapR-FS heap size percent' to cluster template
+* implement sending health notifications
+* cloudera health checks implementation
+* Added scaling support for HDP 2.2 / 2.3
+* base cluster verifications implementation
+* Check that main-class value is not null in job execution validator
+* Fixes to make bandit integration tests work with sahara
+* honor api_insecure parameters
+* Replace assertNotEqual(None,) with assertIsNotNone
+* Start RPC service before waiting
+* Add support running Sahara as wsgi app
+* Add test cases for CDH plugin config_helper
+* CDH plugin versionhandler refactoring
+* Add test cases for versionhandler
+* Remove support of HDP 2.2
+* Use the oslo.utils.reflection to extract class name
+* Don't use Mock.called_once_with that does not exist
+* Add regex matching for job_executions_list()
+* Add regex matching for job_binary_internal_list()
+* Python3: Fix using dictionary keys()
+* Await start datanodes in Spark plugin
+* Updated from global requirements
+* Add regex matching for job_list()
+* Add regex matching for job_binary_list()
+* Add regex matching for node_group_templates_list()
+* Add regex matching for clusters_list()
+* Add regex matching for data_sources_list()
+* Add regex matching for cluster_templates_list()
+* add initial v2 api
+* add orphan to configs recommendations
+* add vanilla image builder docs to index
+* Enabling distributed periodics in devstack
+* Adding doc about distributed periodics
+* Fix gate pep8
+* Added support of Spark 1.6.0
+* Distributed periodic tasks implementation
+* Parse properties with custom key/value separator
+* Updated from global requirements
+* Revert "Enable sahara-dashboard devstack plugin in sahara plugin"
+* Update bandit version
+* Update the devstack.rst document
+* Enabling cluster termination via OPS in periodics
+* use uppercase 'S' in word "OpenStack"
+* Fix spell typos
+* Add creation of mapr user
+* Fix missing configuration for mapreduce
+* Fix problem with zombie processes in engine
+* Add Hive 1.2 to MapR plugin
+* Add Oozie 4.2.0 to MapR plugin
+* Add Pig 0.15 to MapR plugin
+* Add Drill 1.4 to MapR plugin
+* Add ability for setting file mode
+* CDH plugin validation mudule refactoring
+* Add CDH plugin validation test cases
+* Add install priority to each service
+* Remove redundant tabs when add MapR repos
+* Remove outdated pot files
+* Add unit test cases for cdh plugin utils
+* Move notifications options into oslo_messaging_notifications
+* Updated from global requirements
+* Allow 'is_public' to be set on protected resources
+* Add 'is_protected' field to all default templates
+* Change 'ignore_default' to 'ignore_prot_on_def'
+* Remove overlap of 'is_default' and 'is_protected' for templates
+* correct spelling mistake
+* Update the link to sahara.py
+* Updated from global requirements
+* Add release notes for external key manager usage
+* Fix anti-affinity handling in heat engine
+* Where filter is not done correctly on programmatic selection
+* Remove scenario tests and related files
+* Use internal auth url to communicate with swift
+* Updated from global requirements
+* notification_driver from group DEFAULT is deprecated
+
+4.0.0.0b2
+---------
+
+* Migrate to new repository in gate checks
+* Fix python 2,3 compatibility issue with six
+* Fixing kwarg name for centos repository
+* Updated from global requirements
+* Fix using regions in all OS clients
+* Add release notes for scheduling EDP jobs
+* remove openstack-common.conf
+* Updated from global requirements
+* Enable sahara-dashboard devstack plugin in sahara plugin
+* Add a common Hive and Pig config in workflow_factory
+* add cdh plugin passwords to key manager
+* add debug testenv in tox
+* add developer documentation about the key manager
+* Updated from global requirements
+* add helper functions for key manager
+* Setting auth_url for token auth plugin object
+* Replace deprecated library function os.popen() with subprocess
+* Enable passwordless ssh beetween vanilla nodes
+* Added Keystone and RequestID headers to CORS middleware
+* Removed redundant list declaration
+* Updated from global requirements
+* Change assertTrue(isinstance()) by optimal assert
+* Fix wrong file path in scenario test README.rst
+* Updated from global requirements
+* Use run_as_root instead of sudo to execute_command
+* Ensure default arguments are not mutable
+* Compare node groups in CDH plugin IMPALA validation
+* Add translation for log messages
+* Fixing cinder check with is_proxy_gateway
+* Update HA scenario for CDH
+* Use cfg.PortOpt for port option
+* Clean the code in vanilla's utils
+* [EDP] Add scheduling EDP jobs in sahara(oozie engine implementation)
+* Adding doc about data source placeholders
+* Remove she-bang from sahara CLI modules
+* Stop using unicode builtin
+* Initial key manager implementation
+* Move c_helper, db_helper into __init__ for CDH plugin_utils
+* Updated from global requirements
+* Added check for images tags
+* Updated from global requirements
+* Replace assertEqual(None, *) with assertIsNone in tests
+* Updates DevStack git repo link in Sahara Dev Ref
+* Implement custom check for Kafka Service
+* Don't configure hadoop.tmp.dir in Spark plugin
+* Updated from global requirements
+* Deprecated tox -downloadcache option removed
+* Updated from global requirements
+* Scenario templates: make is_proxy_gateway configurable
+* Added several parametrs to priority-one-confs file
+* Add CDH plugin edp engine unit tests
+* Add missing i18n module into CDH plugin edp_engine
+* Add ability to get auth token from auth plugin
+* Trust usage improvements in sahara
+* Replacing all hard coded cluster status using cluster_utils
+* Always enable heat service in devstack plugin
+* Remove unused code from volumes module
+* Updated from global requirements
+* Now updating cluster templates on update
+* Add log when directly return from cancel_job
+* Updated from global requirements
+* remove the qpid message driver from the configuration file
+* Adds nosec to system call in NetcatSocket._terminate
+* rewrite heat client calls
+* Remove MANIFEST.in
+* Updated from global requirements
+* refine the development environment document
+* test: make enforce_type=True in CONF.set_override
+* Explicitly calling start for sahara-api in sahara-all
+* Adding ability disable anti_affinty check in plugin
+* Remove version from setup.cfg
+* Force releasenotes warnings to be treated as errors
+
+4.0.0.0b1
+---------
+
+* Override verify argument of generic session
+* Add missed checks for testing update method
+* Updated from global requirements
+* Optimize "open" method with context manager
+* Launching 1 instance in grenade instead of 2
+* Updated from global requirements
+* Fix bashate warnings
+* Support of Spark EDP in Ambari plugin
+* Check cluster if it is None before run job
+* Enable heat_enable_wait_condition by default
+* Update scenario test readme file
+* Add more useful information to the Heat stack description
+* Replacing hard coded cluster status using cluster_utils
+* cleanup sahara commands
+* Support unmounting shares on cluster update
+* Updated from global requirements
+* Mounting changed shares on cluster update
+* Remove unneeded 'self' in plugins.cdh.v5_4_0.plugin_utils
+* Drop direct engine support
+* Remove old integration tests for sahara codebase
+* Option for disabling wait condition feature
+* Remove unneeded volume serialization
+* Updated from global requirements
+* Doc fix: use_floating_ip to use_floating_ips
+* change port option from Opt to IntOpt
+* implement is_sahara_enabled
+* Add test cases for CDH plugin versionfactory
+* Adding tests for checking updating of templates
+* Updated from global requirements
+* Add "unreleased" release notes page
+* Support reno for release notes management
+* Update Sahara Dev Quickstart Guide
+* Updated from global requirements
+* Fix doc8 check failures
+* Rename get_job_status to get_job_info in oozie.py
+* Updated from global requirements
+* Run py34 first in default tox run
+* Updated from global requirements
+* Use oslo.service for launching sahara
+* Disable base repos by the option
+* Publish sample conf to docs
+* refine the sahara installation guide
+* Move doc8 dependency to test-requirements.txt
+* Fix E005 bashate error
+* Plugin version error in scenario test for vanilla2.6.0
+* Add unit test to cover cancel job operation in oozie engine
+* Make ssh timeout configurable
+* Missing stuff for Kafka in Ambari plugin
+* Add default templates for MapR plugin 5.0.0 mrv1 & mrv2
+* Support overriding of driver classpath in Spark jobs
+* Add ability validate yaml files before run tests
+* Remove TODO line while bug 1413602 is fixed
+* Add CDH test enabling HDFS HA
+* Add CDH 5.4.0 contents in doc
+* Allowing shares to be edited on cluster update
+* Remove TODO in the feature.rst
+* Fix a couple typo in EDP doc
+* Refine the overview.rst for sahara
+* Fix Spark installation fails when parsing spark-env.sh
+* Disable security for Oozie in Ambari
+* Remove verbose code for hive metastore schema creation in MapR plugin
+* Providing more information about fail job
+* Refine the doc for sahara
+* Fix magic method name in plugin.cdh.clent.type
+* Add additional filter to volume_type check
+* Remove known issue from the doc
+* Use assertTrue/False instead of assertEqual(T/F)
+* Updated from global requirements
+* Fixing job execution creation with is_protected field
+* Fixing cluster creation with is_protected field
+* Adding ability to register image without description
+* Get Open Ports for Storm
+* Simplify the method _count_instances_to_attach
+* Add source url into README.rst
+* Updated from global requirements
+* Fix Mapr on ci
+* Fixing problem with validation of job binaries update
+* Fixing search of devices that need to be mount
+* Cleanup config-generator.sahara.conf
+* Updated from global requirements
+* Switched CORS configuration to use oslo_config
+* Add batching for EDP jobs in scenario tests
+* Fixing event log handling during volumes mount
+* Fixing grenade job
+* Add support of Drill 1.2 to MapR plugin
+* Add -f option to formatting volumes for xfs
+* Hive job type support on CI
+* Add unit tests for AuthValidator middleware
+* Remove old sahara endpoint
+* Updated from global requirements
+* Add -f option to formatting volumes
+* Fix issue with job types in Ambari plugin
+* Fix tempest tests
+* Modify service-role view in creating node group template
+* Updated from global requirements
+* Add ability running tests on existing cluster
+* Reformat job flows
+* Bringing the Sahara Bandit config current
+* Add testresources used by oslo.db fixture
+* Use api-paste.ini for loading middleware
+* Add event logs for MapR plugin
+* code cleanup
+* Fixing grenade job for upgrades from liberty
+* Fix typos in developer documentation
+* Updated from global requirements
+* Fixing cluster creation without auto_security_group
+* Use distributed mode by default in devstack
+* Updated from global requirements
+* Adding ability run several edp jobs flows
+* Updated from global requirements
+* Add /usr/share/sahara/rootwrap to filters_path
+* Fixing grenade_job
+* replace multiple if stmts with dict and for loop
+* Fix the bug of "Error spelling of a word"
+* Fix the bug of "Error spelling of 'occured'"
+* Removed redundant metaclass declarations in MapR plugin
+* Fix of client tests in tempest
+* Added support for Spark 1.3.1 in MapR plugin
+* use list comprehensions
+* Cleanup databases during execution of hive example
+* Open Mitaka development
+
+3.0.0
+-----
+
+* Use explicit version of image client in gates
+* Use xfs for formatting
+* Configurable timeouts for disk preparing
+* Generate random heat stack name for cluster
+* Resolve issue with operating heat stack outputs
+* Updating vanilla imagebuilder docs
+* Add more information about configuring NTP service
+* Fix problem with loading Ambari configs
+* Update indexes after adding security repo in MapR plugin
+* Add put data in HDFS for EDP testcase
+* Add wait condition for heat templates
+* Updated from global requirements
+* Change ignore-errors to ignore_errors
+* Fix wrong init of ThreadGrop
+* Fix missed service message in MapR plugin
+* Heat stack creation with tags
+* Enable ceilometer services using new plugin model
+* Add spaces around function params for browser to linewrap on
+* Convert manila api version to string
+* [doc-day] Updated development guidelines
+* Adapt python client tests to use Tempest plugin interface
+* Python client tests: access to credentials/net clients
+* Formatting and mounting methods changed for ironic
+* HDP plugin should ignore untagged configs when creating cluster_spec
+* Fixed service restart in MapR plugin
+* Adding check of indirect access
+* Fix problem with create cluster w/o internet
+* Improving node group templates validation
+* Fix incorrect function name in swift client
+* Adding fake plugin usage in validation ut
+* Update hdp plugin docs
+* Use get_resource instead of Ref defenition
+* Create ResourceGroup with volumes only if it is required
+* Selects IPv4 preferentially for internal_ip
+* Fix working scenario tests with swiftclient
+* Improving cluster templates validation
+* Report stack_status_reason on heat failure
+* Change nova client util to use proper client
+* New doc about autoconfiguration policy
+* Increasing time for cluster creation/deletion in grenade
+* cleanup spark plugin documentation
+* Remove mountpoint from heat stack because it always null
+* Fix capitalization on sahara
+* Updating Ubuntu Server version in devstack doc
+* Fixed RM HA in MapR plugin 5.0.0 MRv2
+* Only add current directory to classpath for client deploy mode
+* Include YARN 2.7.0 to service install priority list in MapR plugin
+* Updated from global requirements
+* Documenting interface map
+* Set the flavor to large for the cdh 5.4.0 name node in template.conf
+* Use custom flavor in gate
+* Add SPARK_YARN_HISTORY_SERVER to default templates for cdh
+* Register SSL cert in Java keystore to access to swift via SSL
+* Adding doc about shared and protected resources
+* Convert True to string for image registry
+* Fixed Hive 1.0 failure on MapR plugin
+* [sahara doc fix] log guidelines doc
+* Removed duplicated definition of support Impala in MapR plugin
+* Add keystone and swift url to /etc/hosts
+* Update plugin spi docs with new method
+* [sahara doc fix] guest requirements doc
+* [sahara doc fix] registering image doc
+* Enable anti_affinity feature in scenario test
+* Fix mocks in scenario_unit tests
+* [CDH] Fix problem with launching Spark jobs
+* Updating architecture doc
+* [sahara doc fix] update the statuses.rst in userdoc
+* Drop HDP 1.3.2 plugin
+* Drop Vanilla Hadoop 1
+* Adds IPv6 support to auto security group
+* Updating overview document
+* Updating the userdoc configuration
+* Correcting userdoc installation guide
+* Minor updates to edp documentation
+* Modify recommend_configs arguments in vanilla 1
+* Updated from global requirements
+
+3.0.0.0b3
+---------
+
+* Minor updates and fixes to features doc
+* updating index doc
+* updating plugins doc
+* Added CORS middleware to Sahara
+* Documentation for Manila integration
+* Updating userdoc overview
+* Add missing ssl_verify for swift in scenario tests
+* [doc-day] Updated development environment guide
+* Updating the dashboard guide for Sahara
+* Updating the rest api documentation
+* Updating the dev environment guide for the Sahara UI
+* Update documentation for Vanilla plugin
+* Add port type on port option
+* Updated from global requirements
+* Print Heat stack before create/update to debug logs
+* Remove useless test dependency 'discover'
+* Use internalURL endpoint by default in Sahara
+* Use demo user and tenant for testing
+* Explicitly set infra engine based on job type
+* Use less resources in sceanrio gate job
+* Removed installation of Oozie sharelibs in MapR plugin
+* Fix problem with using auto security groups in Heat
+* adding developer docs guidelines about clients
+* Added HBase REST node process to MapR plugin
+* Disable autotune configs for scaling old clusters
+* Add sample spark wordcount job
+* Deprecate Vanilla 2.6.0
+* Add additional HDP services
+* Add EDP services to new HDP plugin
+* Add base services support for HDP 2.2 / 2.3
+* Adding support for the Spark Shell job
+* project_name is changed to optional parameter
+* Change version package imports to correct in MapR plugin
+* Added support of Hue 3.8.1 to MapR plugin
+* Job execution cancel timeout
+* Rename oozie_job_id
+* adding neutron to sessions module
+* adding cinder to sessions module
+* Removing token information from debug log
+* Fix bash condition for enabling heat engine in devstack
+* Updated from global requirements
+* Enable YARN ResourceManager HA in CDH plugin
+* Changing scenario runner to use subprocess
+* Add CDH HDFS HA part in the user doc
+* Updated from global requirements
+* Fail if FAILED in the scenario tests run log
+* Actually install Heat for the Hest-based jobs
+* Ensure working dir is on driver class path for Spark/Swift
+* Add validation rules about IMPALAD
+* Remove unneeded starting ntp
+* Expose cloudera manager information
+* Updated from global requirements
+* adding nova to session cache
+* Adding Grenade support for Sahara
+* Update plugin version for transient tests to vanilla 2.7.1
+* Updated from global requirements
+* New version of HDP plugin
+* Adding shared and protected resources support
+* Adding is_public and is_protected fields support
+* Use "get_instances" method from sahara.plugins.utils
+* Doc, scenario tests: variables config file
+* Adding clusters_update api call
+* Implement ability of creating flavor for scenario tests
+* Add support of SSL in scenario tests
+* Remove libevent installation from MapR plugin
+* Updated from global requirements
+* Add manila nfs data sources
+* Added support for MapR v5.0.0
+* Run scenario tests for the fake plugin in gate
+* Add separated dir with fake plugin scenario for gate testing
+* Set missed admin user parameters used for trusts creation in devstack
+* Make tools/pretty_tox.sh more informative and reliable
+* Make infra engine configurable in devstack plugin
+* Added support of Hadoop 2.7.0 to MapR plugin
+* Remove never executable code from devstack plugin
+* Scenario tests: store ssh key if resources are retained
+* doc, sahara-templates: fix typo
+* Add scenario gate testing placeholders
+* Adding job_update api call
+* Adding job_execution_update api call
+* Adding sessions module and keystone client upgrade
+* Adding job_binary_internal_update api call
+* Fix HBase config name when using HA with HDP 2.0.6
+* Removed confusing typos in utils/openstack/base.py file
+* Remove README in sahara/locale
+* Update stackforge to openstack
+* Updated from global requirements
+* Fix wrong compute nodes name in doc
+* Adding HTTP PATCH method to modify existing resources
+* Allow Sahara native urls and runtime urls to differ for datasources
+* Support manila shares as binary store
+* Add script to report uncovered new lines
+* Increase coverage report precision
+* Add recommendation support to Cloudera plugin
+* Support placeholders in args of job for i/o
+* add unit test for test_hdfs_helper
+* Updated from global requirements
+* Update vanilla plugin to the latest version
+* Remove quotes from subshell call in install_scala.sh
+* Fixed WebServer validation in MapR plugin
+* Update cluster UI info in MapR plugin
+* Prevent writing security repos twice in MapR plugin
+* Check ACLs before adding access for Manila share
+* Make starting scripts module for vanilla 2 plugin
+* Small refactoring for vanilla 2
+* Fix MapR plugin versions loading
+* Put missing fields to validation schema
+* Remove test for job type in get_data_sources
+* add unit test cover oozie upload workflow file function
+* Updated from global requirements
+* Remove spaces from Sahara key comment
+* Increase internal_ip and management_ip column size
+* Drop support of deprecated 2.4.1 Vanilla plugin
+* Added support of Drill 1.1 to MapR plugin
+* Added support of HBase 0.98.12 to MapR plugin
+* Added support of Mahout 0.10 to MapR plugin
+* Added support of Hive 1.0 to MapR plugin
+* Add CLUSTER_STATUS
+* Remove cluster status change in HDP plugin
+* Removed support of Hive 0.12 and Impala 1.2.3 from MapR plugin
+* Changed misleading function name in Heat engine
+* Mount share API
+* EDP Spark jobs work with Swift
+* Fix six typos on sahara documentation
+
+3.0.0.0b2
+---------
+
+* Configure NTP service on cluster instances
+* Updated from global requirements
+* Changing log level inside execute_with_retries method
+* Updated from global requirements
+* Remove extra merge methods in plugins
+* Add configs unit test case
+* Change zk_instance to zk_instances in storm plugin
+* Add recommendation support for Spark plugin
+* Migrate to flavor field in spark 1.3.1
+* Cleanup .gitignore
+* Ignore .eggs directory in git
+* Use keystone service catalog for getting auth urls
+* Storm job type not found
+* Implement recommendations for vanilla 2.6.0
+* Add missing mako template for Spark 1.3.1
+* Add unit test for external hdfs missed for URLs
+* Migrate "flavor_id" to "flavor" in scenario tests
+* Remove openstack.common package
+* updating documentation on devstack usage
+* Added the ability to specify the name of the flavor_id
+* [EDP]upgrade oozie Web Service API version of oozie engine
+* Enable HDFS HA in Cloudera plugin
+* Made 'files' dict as member field of ClusterStack
+* Changed all stacks retrieval with filtered search
+* Removed useless ClusterStack class from heat engine
+* Removed useless 'Launcher' class from heat engine
+* Cluster creation with trust
+* Add default templates for Spark 1.3.1
+* Add Zookeeper and Sentry in CDH540 scenario tests
+* Fix README.rst in scenario dir
+* Fix installing python-saharaclient
+* Deprecate Spark 1.0.0
+* Switch to the oslo_utils.fileutils
+* Added failed thread group stacktrace to logs
+* Updated from global requirements
+* [CDH] Provide ability to configure gateway configs
+* Remove the old scenario YAML files
+* Derive Mako scenario templates from the current YAMLs
+* Improvement check scale in scenario tests
+* Allow multiple clusters creation
+* Modify launch_command to support global variables
+* Allow Mako templates as input for scenario test runner
+* Updated from global requirements
+* Allowing job binary objects to be updated
+* Resolve 500 error during simultaneously deletion
+* Fix retrieve_auth_url in case Keystone URL does not contain port
+* Spark job for Cloudera 5.3.0 and 5.4.0 added
+* Fix problem with using volumes for HDFS data in vanilla plugin
+* Fix failed unit tests
+* Added support of Drill 0.9 to MapR plugin
+* Added support of Drill 0.8 to MapR plugin
+* Added support of HBase 0.98.9 to MapR plugin
+* Added support of Hue 3.7.0 to MapR plugin
+* [EDP] Delete edp job if raise exception
+* add unit test covering cancel_job in job_manager
+* Remove un-used "completed" filed when do cluster_provision_step_add
+* Allow to specify auto_security_group in default templates
+* Add check for cinder in scenario tests
+* [HDP] Nameservice awareness for NNHA case
+* Return back devstack exercise to in-tree plugin
+* Fix devstack plugin - sahara repo already cloned
+* Add py34 to envlist
+* Remove bin/ scripts support from in-tree devstack plugin
+* Enable all plugins in devstack code
+* Add CM API support for enable hdfs HA
+* Add bashate check for devstack scripts
+* Updated from global requirements
+* Add in-tree Devstack plugin
+* Support Spark 1.3.1
+* Updated from global requirements
+* Minor - move definition to avoid AttributeError
+* [EDP] Unified Map to Define Job Interface
+* Enable Java Keystore KMS service in CDH5.4
+* [EDP][Oozie] external hdfs missed for URLs in job_configs
+* Fix compatible issues in unit tests for python 3
+* Use right oslo.service entry points
+* Updated from global requirements
+* pass environment variables of proxy to tox
+* Switch to oslo.service
+
+3.0.0b1
+-------
+
+* Updated from global requirements
+* Add sentry check for CDH 5.3
+* Allowing data souce objects to be updated
+* Updated from global requirements
+* Add method for geting instances with process
+* Add CDH5.4 support in sahara
+* Add support of custom scenario to scenario tests
+* Added method for connect to node and run command
+* Update version for Liberty
+
+3.0.0a0
+-------
+
+* Removed dependency on Spark plugin in edp code
+* Removed unused filtering in get_plugins
+* Refactor exception is Sahara
+* Removed HashableDict
+* Updated from global requirements
+* Spark doc references vanilla diskimagebuilder page
+* Also install alembic_migration folder
+* Remove duplicate 'an' and 'the' in docs
+* Add policy namespace change to the upgrade guide
+* Transform configuration values into int or float when needed
+* Updated from global requirements
+* Add cinder volumes to mapr scenario template
+* Modifying Swift Paths for EDP Examples
+* Updated from global requirements
+* Fix problem with removing PID from list
+* Remove deprecated group name of option
+* Remove WritableLogger wrapper
+* Updated from global requirements
+* [CDH] Load missed configs from yarn-gateway.json
+* Switched from all stacks polling to filtered list
+* Disable neutron DEBUG logs
+* Fixed typo in the Oozie CL documentation
+* Move cluster deletion to common engine module
+* Fix Typo Error for "Cloudera"
+* Don't use reduce for python3 compatibility
+* Making policy namespaces more unique
+* Switched Heat engine to ResourceGroup use
+* Add "null" for fields in cluster and node group template JSON schemas
+* Minor - Fixed wrong log formatting
+* Hiding volumes from cluster output
+* Minor improvement of validation rules
+* [CDH] Add validation check about dfs_replication
+* Update list of supported API versions
+* Fix issue with configuring HDP cluster
+* Add updating jobs statuses before cluster deletion
+* Added missing retries of clients calls
+* Adding retry ability to cinderclient calls
+* Fix typo in Sahara doc
+* Added checking of event-log in scenario tests
+* Print traceback in logs for cluster operations
+* Update the docs about how to build images for Sahara usage
+* Fix logging_context_format_string input for sahara
+* Added validation of template names in scenario tests
+* Adding retry ability to heatclient calls
+* Enabling Swift client retries
+* Adding retry ability to keystoneclient calls
+* Adding retry ability to novaclient calls
+* Adding retry ability to neutronclient calls
+* Remove the custom duplicate check on cluster template update
+* Fix cluster templates update
+* Fix MapR Oozie dependency resolution
+* Fix usage volume type in Heat
+* Adding ability to retry clients calls
+* Remove resetting self.flavor_id in CDH test
+* Remove custom duplication check for node group template update
+* Fixed bug with volume type validation
+* Improve unit tests of general utils
+* Implementation of Storm scaling
+* Adding yaml scenario file for Mapr 4.0.2 plugin
+* Added support of Oozie 4.1.0 to MapR plugin
+* Use PyMySQL as MySQL DB driver for unit tests
+* Extra tests for quotas
+* Deprecate the Direct Engine
+* Updated from global requirements
+* Improve compatible with python3
+* [HDP] java64_home not pointing at default-installed JDK for plugin
+* Fixed logging issues with missing ids
+* Add support of Mapr FS to scenario tests
+* Updated from global requirements
+* Use keystone session in new integration tests
+* Fix logging_context_format_string input for sahara
+* Implemented support of placeholders in datasource URLs
+* Drop use of 'oslo' namespace package
+* Added support of Pig 0.14 to MapR plugin
+* Remove sqlalchemy-migrate from test-requirements
+* Session usage improved in sqlalchemy api
+* Increase edp module test coverage
+* Added unit tests for service/api module
+* Improved unit test coverage of poll_utils
+* Updated from global requirements
+* Fix delete volume and improved conductor coverage
+* Improved coverage for workflow_creator
+* Test coverage improvement for cluster_progress_ops
+* Test coverage improvement for sahara.service.networks
+* Make configurable timeouts in scenario tests
+* Storm EDP implementation
+* Fix InvalidRequestError being skipped
+* Remove unused code from sqlalchemy api module
+* Add unit tests for exceptions module
+* Improved unit test coverage of periodic module
+* Fix management IPs usage
+* Test coverage improvement for sahara.service.engine
+* Improve unit test for HashableDict
+* Improved test coverage for utils/resources
+* Change ext-2.2.zip url
+* Adding basic bandit config
+* Cleanup sqla custom types
+* Finally drop XML REST API related code
+* Improve unit test for utils/edp.py
+* Event log supported in new integration tests
+* Use ThreadGroup instead of separate threads
+* made a change to upgrade guide
+* Use correct config_helper in Vanilla 2.6
+* Add sahara_service_type support for auth for sahara
+* Updated from global requirements
+
+2015.1.0
+--------
+
+* Add links to the public place with prepared images
+* Add links to the public place with prepared images
+* Fixing log messages to avoid information duplication
+* Adding cluster, instance, job_execution ids to logs
+* Support x-openstack-request-id
+* Removing unused methods from utils.openstack.*
+* Release Import of Translations from Transifex
+* [CDH] swift lib support
+* Fix slow unit test
+* Adding .to_wrapped_dict to node_group_template update
+* update .gitreview for stable/kilo
+* Remove duplicated codes in CDH plugin
+* Add scenario yaml file for fake plugin
+* Add handler for configuration w/o sec groups
+* Updated from global requirements
+* Minor refactor of the integration service test
+* Added check of scaling for Spark plugin
+* Install Oozie UI on MapR clusters
+* Adding config hints for CDH plugin
+* Add a brief description of the default template mechanism
+* Put in Sahara repo actual scenario files
+* Use jsonutils from oslo.serialization
+* Add CDH template for the scenario integration test
+* Restrict cluster to have at most one secondary namenode
+* Adding config hints for vanilla plugin
+* Adding config hints for HDP plugin
+* Add hacking checks related to logging guideliness
+* Date format set to be correct utc date
+* Fix strange check in code
+* Rename templates in scenario yaml files
+
+2015.1.0rc1
+-----------
+
+* Updating edp json examples
+* Updating the developer quickstart guide
+* Updating sahara-ci readme
+* Updating edp-java readme
+* Updating wordcount readme
+* Updates to the EDP doc
+* Updating installation guide
+* Updating features documentation
+* Add Sahara log guideliness
+* Updated from global requirements
+* Adding documentation for guide pages in horizon
+* Fix libevent and epel install on MapR
+* Update EDP doc
+* How to build Oozie docs updated
+* Update Cloudera plugin docs
+* Update statuses docs
+* Update vanilla plugin doc
+* Update jenkins doc
+* Open Liberty development
+* Update Sahara 'How to Participate' doc
+* Update overview.rst
+* Update Plugin SPI doc
+* Update doc for adding database migrations
+* Add docs for event log usage
+* Implement cluster creation with 'quotas = unlimited'
+* Update testing page in developer docs
+* Update development.environment.rst
+* Update launchpad.rst
+* Updating advanced configuration guide
+* Updating EDP SPI doc
+* Replace current API docs with new Sahara API docs
+* Migrate to oslo.policy lib instead of copy-pasted oslo-incubator
+* Validate node groups without volumes
+* Updating upgrade guide documentation
+* Updating EDP doc
+* Updating configuration guide documentation
+* Fix mailing list in feature requests info
+* Add unit-tests for new integration tests
+* Leverage dict comprehension in PEP-0274
+* Fixed issue with waiting for ssh of deleted cluster
+* Default templates for MapR
+* Default templates for CDH
+* Default templates for Vanilla
+* Default templates for Spark
+* Add unit tests for default templates update functionality
+* Add unit tests for default templates delete functionality
+* Add unit tests for default templates utils
+* Default templates for HDP
+* Add a CLI tool for managing default templates
+* Add validation in new integration tests
+* Adding run time of tests
+* Add missed configs for ThriftJobTrackerPlugin
+* Minor - allow changing status description of deleting cluster
+* Updating horizon user guide to use new terminology
+* Docs updated with instance locality feature
+* Fix common misspellings
+* Add usages of poll util for service modules
+* Switched heat engine from JSON to HOT
+* Set cluster mode on every node
+* Adding plugin version information to scenario test report
+* Documentation for scenario tests
+* Set up network client for tempest client tests
+* Implement job-types endpoint support methods for MapR plugin
+* Drop support database downgrades
+* Add information about cluster state in test report
+* Fix topology awareness configuration
+* Add new log messages where it's needed
+* Add integration tests for scaling in Spark
+* Updated from global requirements
+* Generate random password for CM admin user
+* Add get and update user APIs
+* Add scenario files for new integration tests
+* Fix order of arguments in assertEqual - Part1
+* Notify Kerberos and Sentry do not take effect
+* Raise the default max header to accommodate large tokens
+* Sync with latest oslo-incubator
+* Replace direct http requests by sahara client in Quick start guide
+* Add usages of plugin poll - part 1
+
+2015.1.0b3
+----------
+
+* Fix log import error in tempest tests for Sahara
+* Remove the sahara.conf.sample file
+* Add usages of plugin poll - part 2
+* Apply event-log feature for HDP plugin
+* Implement job-types endpoint support methods for Fake plugin
+* Update MapR plugin docs
+* MapR validation rules fixed
+* Fix order of arguments in assertEqual - Part3
+* Fix order of arguments in assertEqual - Part2
+* Implement job-types endpoint support methods for CDH plugin
+* Implement job-types endpoint support methods for Spark plugin
+* Implement job-types endpoint support methods for Vanilla plugin
+* Add Spark support for MapR plugin
+* Install MySQL JDBC driver along with client
+* Default version update for vanilla integration test
+* Implement poll util and plugin poll util
+* Minor - misprint corrected
+* Imported Translations from Transifex
+* Move updating provision progress to conductor
+* Add usages for step_type field
+* HDP plugin: Fix Beeswax error when starting Hue
+* Replace empty list with scalable process in scaling
+* Add missed translation for exceptions in versionhandler
+* Switch to v2 version of novaclient
+* Add support for MapR v4.0.2
+* Changing method for verifying existence of cinder
+* [HDP] Add validation check for dfs.replication
+* Take back upstream checks for import order
+* Rewrite malformed imports order
+* Node Groups now have id field
+* Update the docs for CDH plugin userdoc and image-builder doc
+* Add an is_default field to cluster templates and node group templates
+* Move cluster template schema definition to is own file
+* Added support of instance locality to engines
+* Rewrite log levels and messages
+* Move node group template schema definition to its own file
+* Add Sentry service test in cdh plugin integration test
+* Add transient checks support in scenario tests
+* Change imports after moving tempest common code
+* Add Hue support for MapR plugin
+* Skip job_execution tempest client test
+* Add a common HBase lib in hdfs on cluster start
+* Take back upstream checks for commit message
+* Imported Translations from Transifex
+* HDP plugin: Fix Bash error when starting Hue
+* Adding barbican client and keymgr module
+* Fix tempest tests for Sahara
+* Updated from global requirements
+* Adding CDH to the list of default plugins
+* Added volume_local_to_instance field support
+* [EDP][Spark] Configure cluster for external hdfs
+* Add validation for cluster templates update
+* Implement job-types endpoint support methods for HDP plugin
+* Add job-types endpoint
+* Changed heat engine to work with objects
+* Implemented multi-worker solution for Sahara API
+* Changed wrong value for total during step creation
+* Adding additional validation to node group template edit
+* [EDP] Add Oozie Shell Job Type
+* check solr availability integration testing without add skip_test
+* Add validation for node group templates update
+* Add Impala service test in cdh plugin integration test
+* Applying event log feature for CDH - part 3
+* Imported Translations from Transifex
+* Updated from global requirements
+* Refactoring methods for terminating
+* Apply event-log feature for Vanilla plugins
+* Add Impala support for MapR plugin
+* Add Solr service test in cdh plugin integration test
+* Add Sqoop support for MapR plugin
+* Add CM API lib into CDH plugin codes
+* Fix some translator mistakes
+* Adding ability to edit cluster templates
+* Removing alpha warning on distributed mode
+* Add missed files for migrations in MANIFEST.in
+* Fix indent miss caused by f4138a30c972fce334e5e2a0fc78570b0ddb288b
+* Applying event log feature for CDH - part 2
+* Applying event log feature for CDH - part 1
+* Add support of several scenario files in integration tests
+* Provide ability to get events directly from cluster
+* Add Key Value Store service test in cdh plugin integration test
+* Fix tempest client tests in Sahara
+* Remove unused field in job_execution table
+* Collect errors in new integration tests
+* Add Drill support for MapR plugin
+* Minor - changed name of argument in mirgation tests
+* Minor - Added missing check for 'Deleting' state
+* Add support for oslo_debug_helper to tox.ini
+* Remove unused code (timed decorator)
+* Updated from global requirements
+* Add bare images support for MapR plugin
+* Add concurrency support in new integration tests
+* Add provisioning steps to Storm plugin
+* Adding ability to edit node group templates
+* Updated from global requirements
+* Fix transient cluster gating
+* Add Flume support for MapR plugin
+* Fixed format mapping in MalformedRequestBody
+* Reorganized heat template generation code
+* Add check to integration tests to check event-log
+* New integration tests - EDP
+* Add provision steps to Spark Plugin
+* New integration tests - scaling
+* New integration tests - base functional
+* Make status description field more useful
+* Imported Translations from Transifex
+* Updated from global requirements
+* Added periodic clean up of old inactive clusters
+* Refactor MapR plugin for Sahara
+* Add missing database updates for cluster events
+* Add option to disable event log
+* Fix problems with provisioning steps
+* Removed error log for failure inside individual thread
+* Add Sqoop service test in cdh plugin integration test
+* Add Flume service test in cdh plugin integration test
+* Updated from global requirements
+* Add ability to get cluster_id directly from instance
+* Changing zookeeper to not use version number
+* Adding validation check for Spark plugin
+* [Vanilla2] Open ports for hive
+* Improve messages for validation
+* Add impala shell solr package in the cdh plugin
+* Add efficient method for detecting installed packages
+* Adding hacking check to prevent old oslo namespace usage
+* Refactor event-log code
+* Imported Translations from Transifex
+* Updated from global requirements
+* Config parameters beginning with "oozie." should be in job properties file
+* Add resource quota checks for clusters
+* Fixed bug with spark scaling
+* Remove obsolete oslo modules
+* Remove obsolete exceptions module
+* Adding missed oslo import change
+* Separate the codes of CDH5 and CDH5.3.0
+* Initialize MQ transport only once
+* Removing service.engine._log_operation_exception
+
+2015.1.0b2
+----------
+
+* Using oslo_* instead of oslo.*
+* Added documentation for indirect VM access feature
+* Updated from global requirements
+* Fixed unit tests failures caused by missing patch stops
+* Updated sample config after oslo messaging update
+* Add Swift integration with Spark
+* Using oslo context as context-storage for logs
+* Waiting should depends on cluster state
+* Open port 8088 for HDP 2.0.6
+* Add indirect VMs access implementation
+* Remove log module from common modules
+* Specify the package name when executing Java type edp jobs
+* Fixed minor errors in Sahara DB comments
+* Drop cli/sahara-rootwrap
+* Add provision step to Heat engine
+* Make vanilla 2.4.1 plugin deprecated
+* Add CDH configuration in itest.conf.sample-full
+* Add swift and mapreduce test after scaling in cdh integration test
+* Add ability to search images by name
+* Fix getting not registered images
+* Add HBase service test in cdh plugin integration test
+* Spark Temporary Job Data Retention and Cleanup
+* Updated from global requirements
+* Update threadgroup oslo-incubator module
+* Update log oslo-incubator module
+* Fix incorrect s/oslo/sahara/ in _i18n
+* Migrate to oslo.log
+* Refactoring datasource, job and job_binary name validations
+* Updated from global requirements
+* Removed EXTRA_OPTS tuning from devstack configuration
+* Follow the argument order specified in spark-submit help
+* Change CDH plugin Processes Show_names
+* Updated from global requirements
+* Add edp.java.adapt_for_oozie config for Java Action
+* Fix getting heat stack in Sahara
+* Add cleanup in the integration test gating file
+* fix Direct engine moves cluster to "Scaling" twice
+* Updated from global requirements
+* Refactoring swift binary retrievers to allow context auth
+* Add integration test for Hive on vanilla2
+* Add context manager to assign events
+* Drop uuidutils
+* Add refactor to Vanilla 1.2.1
+* Removed unused variable from tests
+* Removed sad line
+* Imported Translations from Transifex
+* Fixed context injection for RPC server
+* Remove useless packages from requirements
+* Add provisioning steps to Direct Engine
+* Added endpoint and utils to work with events
+* Enable auto security group when Bug 1392738 is fixed
+* Fixed issues in docs
+* Adding hive support for vanilla 2.6
+* Use pretty-tox for better test output
+* Adding usage of "openstack.common.log" instead of "logging"
+* Updated from global requirements
+* Add options supporting DataSource identifiers in job_configs
+* Removing warnings in the MAPR doc plugin
+* Hide oslo.messaging DEBUG logs by default
+* Add integration tests for transient clusters
+* Move to hacking 0.10
+* Use HDFS parameter to inject swift info
+* Added ability to listen HTTPS port
+* Added ability to use other services via HTTPS
+* Updated from global requirements
+* Enable 5.3 version choice in cdh plugin
+* Updated from global requirements
+* Updated from global requirements
+* fix the edp and hive test issue for CDH5.3
+* Refactor db migration tests
+* Imported Translations from Transifex
+* Fixes a job_configs update by wrong value when deleting proxy-user
+* Adding Storm entry point to setup.cfg
+* Cleaned up config generator settings
+* Extracted config check from pep8 to separate env
+* Fixed topology parameters help in config
+* Fixed pep8 after oslo update (01/06/2015)
+* Renamed InvalidException to InvalidReferenceException
+* Mount volumes with options for HDFS performance
+* Fixed vanilla1/2 cluster not launched problem
+* Increase RAM for CDH master processes in CDH IT
+* Minor refactoring integration tests
+* Migrate to oslo.concurrency
+* Adding ability to access context from openstack.common.log
+* Fixed hdfs mkdir problem in vanilla1
+* Add Java type edp test in integration test of CDH plugin
+* Enable more services in CDH plugin
+* Adding database detection to migration tests
+* Fixed pep8 after keystoneclient upgrade
+* Added validation on proxy domain for 'hiveserver' process
+* Fix oslo.db import due to move out of the namespace package
+* Updated from global requirements
+* Add one more sample for pig job examples
+
+2015.1.0b1
+----------
+
+* Imported Translations from Transifex
+* Updated from global requirements
+* Use xml.dom.minidom and xmlutils in unit tests
+* Saharaclient tests for tempest
+* Enable HDFS NameNode High Availability with HDP 2.0.6 plugin
+* All user preserve EDP objects after test
+* Migrate to oslo.context
+* Use first_run to Start Services
+* Removing unecessary check
+* Adding Hadoop 2.6.0 support to Vanilla plugin
+* Fixed configs generation for vanilla2
+* Fixed auto security group for nova network
+* Updated from global requirements
+* Fixed subprocess error reporting
+* Fixed scaling with new node group with auto sg
+* Update oslo-incubator periodic_task
+* Update oslo-incubator threadgroup
+* Update oslo-incubator policy
+* Update oslo-incubator log
+* Update oslo-incubator lockutils
+* Removed _i18n module, it is not used directly
+* Updated from global requirements
+* Update conf sample after oslo.messaging release
+* Workflow documentation is now in infra-manual
+* Disabled requiretty in cloud-init script
+* Storm integration
+* Fixed Fake plugin for Fedora image
+* Update plugin descriptions
+* Add integration test for Hive EDP job
+* [CDH] Add validation for spark
+* Support searching job executions by job status
+* Don't provide CONF to the AuthProtocol middleware
+* Inherit Context from oslo
+* Sync latest context module from oslo-incubator
+* Specify CDH version
+* Add CDH plugin documents
+* Added get_open_ports description to plugin SPI
+* Add list of open ports for Spark plugin
+* Open all ports for private network for auto SG
+* [CDH] Convert node group config dict
+* Add test for DB schema comparison
+* Adding uuids to exceptions
+* Add db/conductor ops to work with new events objects
+* Add new events objects to Sahara
+* Fix broken unit tests
+* changes to quickstart
+* Remove py26 from tox
+* Fixed error on attempt to delete job execution several times
+* Added hive support for vanilla2
+* Support searching job executions by cluster name and job name
+* Sample JSON files for Sahara EDP APIs
+* Updated from global requirements
+* Added checks on deleting cluster
+* small change to edp_spi
+* small change to diskimagebuilder file
+* Support query filtering for cluster objects
+* Support query filtering for templates and EDP objects
+* Enable auto security group for vanilla integration tests
+* Updated from global requirements
+* Format volumes filesystems in parallel
+* Correcting small grammatical errors in logs
+* Imported Translations from Transifex
+* Replacing data_processing with data-processing
+* Updated from global requirements
+* Pylint check was broken after pylint update
+* Refactoring integration tests for Vanilla 1 plugin
+* Fix for getting auth url for hadoop-swift
+* Fixed bug with Hive jobs fail
+* Fixed pep8 after oslo.db config update
+* Add HBase support to CDH plugin
+* Add ZooKeeper support to CDH plugin
+* Fixed auto security group cleanup in case of creation error
+* Adds doc to devref quickstart document
+* Add list of open ports for HDP plugin
+* Fixed trunk pep8 errors
+* Disable all set of tests (every plugin) by default
+* Print Cloudera manager logs if integration test failed
+* Added ability to access a swift from vanilla-1 hive
+* change to devstack.rst
+* corrected error in dashboard_user_guide
+* corrected error in overview.rst
+* corrected error in vanilla_plugin.html
+* Add list of open ports for Cloudera plugin
+* Imported Translations from Transifex
+* Remove unused class and arguments
+* Updated from global requirements
+* Remove oslo-incubator's gettextutils
+* Drop obsolete oslo-confing-generator
+* Add link on Hue Dashboard for CDH plugin
+* Explicitly specifies cm_api version in CDH plugin
+* Fixed job execution update in case of proxy command
+* Removing Swift container support for job binaries
+* Fixed cluster scaling in distributed mode
+* Auth policy support implementation
+* Fix working EDP jobs with non-string configs
+* Fix vanilla test_get_configs() for i386
+* Added ability to launch jobs on fake plugin
+* Fix Cloudera plugin with CDH packages < 5.2.0
+* typo found on Sahara Cluster Statuses Overview
+* Fix bugs on doc registering an image
+* Fix bugs on Sahara overview
+* Fix bug on features.rst doc
+* Fix bug on diskimagebuilder.rst
+* Make proxy command generic and user-definable
+* Add checks in fake plugin
+* Add scaling opportunity for fake plugin
+* Imported Translations from Transifex
+* Install ExtJS library for CDH plugin
+* Fix bug on Sahara UI Dev Environment Setup
+* Fix dict iteration usage
+* Fixing validation exception for valid security group
+* Remove explicit set of CONF.os_region_name in mapr plugin tests
+* Correcting error in NeutronClientRemoteWrapper._get_adapters
+* Drop some obsolete oslo-incubator modules
+* Fix 'Clock Offset' error in Cloudera Manager
+* Add Spark support to CDH
+* Add missed translations
+* Added cancel before deleting job execution
+* Grouped EDP endpoints by type
+* changes to features.rst
+* change to edp.rst
+* Flush netcat socket buffer when proxying HTTP connections
+* Add Hue support to Cloudera plugin
+* Add hash to auto security group name for uniqueness
+* Invalid JSON in quickstart guide
+* Fix argument list in NeutronClientRemoteWrapper
+* Fix security groups
+* MapR plugin implementation
+* Fix old style class declaration
+* Imported Translations from Transifex
+* Fix quickstart guide
+* Drop obsolete wsgi and xmlutils modules
+* Add Hive support to CDH plugin
+* Fix parallel testing EDP jobs for Fedora and CentOS images
+* Small refactoring of get_by_id methods
+* Use oslo.middleware instead of copy-pasted
+* Sync with oslo-incubator and removing excutils
+* Updated from global requirements
+* Adds openSUSE support for developer documentation
+* MapR FS datasource
+* Add volume type support to sahara
+* Correct parameter name in integration tests
+* Updated from global requirements
+* Updated from global requirements
+* [DOC] Add notes on disabling permissions for Data Processing
+* Fixed problem with canceling during pending
+* Remove Vanilla 2.3 Hadoop
+* Support Cinder availability zones
+* Add bashate checks
+* [DOC] Added multi region deployment to features list
+* Use new style classes everywhere
+* [DOC] Fixed link from upgrade guide to installation guide
+* [DOC] Fixed broken list in edp.spi doc
+* [DOC] Minor change - replaced external link with internal
+* [IT] Fix deleting transient cluster when cluster in error state
+* Fix bashate errors
+* Imported Translations from Transifex
+* Updated from global requirements
+* Moved exceptions.py and utils.py up to plugins dir
+* Adding support for oslo.rootwrap to namespace access
+
+2014.2
+------
+
+* Fix HDFS url description, and other various edits
+* Remove line saying that scaling and EDP are not supported for Spark
+* Description of job config hints in new doc page is wrong
+* Removing extraneous Swift information from Features
+* Update the Elastic Data Processing (EDP) documentation page
+* Add documentation on the EDP job engine SPI
+* Imported Translations from Transifex
+* Fix working Spark with cinder volumes
+* Fix scaling with Heat and Neutron
+* Fixed volumes configuration in spark plugin
+* Fixed cinder check for non-admin user
+* Make versions list sorted for Vanilla and HDP
+* Imported Translations from Transifex
+* Fix working Spark with cinder volumes
+* Fix scaling with Heat and Neutron
+* Support Cinder API version 2
+* Parallel testing EDP jobs
+* Fix HDFS url description, and other various edits
+* Fixed cinder check for non-admin user
+* Support Nova availability zones
+* Remove line saying that scaling and EDP are not supported for Spark
+* Description of job config hints in new doc page is wrong
+* Removing extraneous Swift information from Features
+* Update the Elastic Data Processing (EDP) documentation page
+* Add documentation on the EDP job engine SPI
+* Fixed volumes configuration in spark plugin
+
+2014.2.rc1
+----------
+
+* Add links for Spark images
+* Use $((EXPRESSION)) instead of $[EXPRESSION]
+* Open Kilo development
+* Sahara UI panels configuration docs updated
+* Updating RDO installation documentation
+* Update custom hacking checks
+* Update CONTRIBUTING.rst
+* Added docs for running Sahara in distributed mode
+* Removed mentions of Sahara Dashboard
+* Adding Spark to the list of default plugins
+* [DOC] Changed feature matrix for Spark
+* Fixed broken pep8 after keystone update
+* Adding job execution examples to UI user guide
+* Updating Hadoop-Swift documentation
+* Add CDH plugin in plugin availability matrix (userdoc)
+* Updated from global requirements
+* Add devref/devstack to docs index
+* Adding links for Juno Fedora images
+* [DOC] Removed feature matrix for heat engine
+* Image building docs updated
+* Updated REST API documentation
+* Update links for plugin images
+* [DOC] Made disk image builder docs more accurate
+* [DOC] Made EDP requirements plugin specific
+* [DOC] Switched docs from answers.launchpad.net to ask.o.o
+* [DOC] Fixed deprecated config style in devstack instruction
+* Adding missing CDH resources to MANIFEST.in
+* [Vanilla] Increased security of temporary files for db
+* Changed hardcoded 'hadoop' hdfs user name to template
+* Use 'auth_uri' parameter from config
+* Changing Hadoop to "Data Processing"
+* Updating documentation for overview/details
+* Imported Translations from Transifex
+* Add pip-missing-reqs tox env
+* Add genconfig tox env
+* Fix typo in CDH description
+* Updated from global requirements
+* [DOC] Minor change - added missing period
+* Add entry for Yevgen Runts to avoid dup author
+* Add entry for Sofiia to avoid dup author
+* Add entry for Andrey Pavlov to fix author name
+* Add entry for Kazuki Oikawa to avoid dup authors
+* [DOC] Removed note about SAHARA_USE_NEUTRON in sahara-dashboard
+* Imported Translations from Transifex
+* Imported Translations from Transifex
+* Fixed descriptions for db migrations
+* Fixed example of hadoop versions return in plugin SPI
+* Removed remaining 'swift-internal' prefix
+* Add missed translations at service/validations/edp
+* Remove direct dep on oslo-incubator jsonutils
+* Sahara-Dashboard docs updated
+* Imported Translations from Transifex
+* Refactoring HDP plugins to allow multiple Zookeeper servers
+* Updated from global requirements
+* Added information about sahara settings to cluster
+* Fixed the localrc file for enabling swift services
+* Fixed terminate_unneeded_clusters fail in distributed mode
+* Default value of 'global/namenode_opt_maxnewsize' should be 200m
+* Adding documentation for proxy domain usage
+* Removed attempt to ignore tests in pylint
+* Remove direct dep on oslo-incubator timeutils
+* Update oslo processutils module
+* Update oslo lockutils module
+* Update oslo log module
+* Update oslo jsonutils module
+* Sync oslo strutils module
+* CDH manager-node flavor change
+* Add use of nova_kwargs for nova servers create to improve readability
+* Imported Translations from Transifex
+* Renamed pylintrc to be found by pylint
+* Made link to devstack installation internal (instead of external)
+* Moved validate_edp from plugin SPI to edp_engine
+* Install packages for CDH plugin without their starting
+* Install non deprecated DB for Cloudera Manager
+* Added missed translation for service.edp.spark
+* Adding a periodic task to remove zombie proxy users
+* Refactoring DataSources to use proxy user
+* Updating JobBinaries to use proxy for Swift access
+* Adding trust delegation and removal for proxy users
+* Adding proxy user creation per job execution
+* Adding configuration and check for proxy domain
+* Migrate to oslo.serialization
+* Renamed missing 'savanna' tags to 'sahara'
+* Fix cluster creation with heat engine
+* Update sahara.conf.sample
+* Imported Translations from Transifex
+
+2014.2.b3
+---------
+
+* Imported Translations from Transifex
+* Fixed typo in integration tests error handling
+* Add warn re sorting requirements
+* Add spark to toctree on doc index page
+* Fix doc issues
+* Add doc8 tox env
+* Replaced range with six.moves.range for significant ranges
+* Removed comment about hashseed reset in unit tests
+* Allowed to specify IDs for security groups
+* Switched anti-affinity feature to server groups
+* Moved get_oozie_server from plugin SPI to edp_engine
+* Moved URI getters from plugin SPI to edp_engine
+* Updated docs with security group management feature
+* Minor change - removed unnessary parentheses
+* Added translation for CDH plugin description
+* [HEAT] Fixed rollback error on failure during scale down
+* Implemented get_open_ports method for vanilla hadoop2
+* Added ability to create security group automatically
+* Catching all connection errors in waiting HDP server
+* Make starting services in Vanilla 2.4.1 parallel
+* Add notifications to Sahara
+* Fix help strings
+* Updated from global requirements
+* Waiting connect cloudera agents to cloudera manager
+* [HDP1.3.2] Fixed bug with decommissioning cluster
+* Imported Translations from Transifex
+* Remove host from CDH cluster after decommissioning
+* Enable swift in IT for CDH by default
+* Documented heat engine backward compatibility break
+* Use Vanilla 2 plugin for transient checks
+* Use auth_token from keystonemiddleware
+* Updated from global requirements
+* Fix updating include files after scaling for vanilla 2 plugin
+* Add EDP IT after scaling for vanilla 1 plugin
+* Make Vanilla 2.3.0 plugin deprecated
+* Imported Translations from Transifex
+* Adjust RESTAPIs convert-config w/suggests from SL
+* Removed sqlite from docs
+* Removed support of swift-internal prefix
+* Removed one round trip to server for HDFS put
+* Added create_hdfs_dir method to oozie edp engine
+* Made EDP engine plugin specific
+* Do not rely on hash ordering in tests
+* Fix some of tests that rely on hash ordering
+* Fix jsonschema>=2.4.0 message assertion
+* Fixed wrong use of testtools.ExpectedException
+* Fix using cinder volumes with nodemanager in HDP2
+* Correction of words decoMMiSSion-decoMMiSSioning
+* Add tests for ops.py
+* Add Spark integration test
+* Fix starting instances after scaling for CDH
+* Improved error handling for provisioning operations
+* Fix parsing dfsreport for CDH in integration tests
+* Unit tests for CDH plugin
+* Imported Translations from Transifex
+* Updated from global requirements
+* Create etc/edp-examples directory
+* Fixed Exception failures caused by i18n
+* Add translation support to plugin modules
+* Imported Translations from Transifex
+* Remove unused parameter from CDH IT
+* Fix scale up cluster on CDH plugin with vanilla image
+* Fixed DecommissionError bug
+* Imported Translations from Transifex
+* Fixed bug with NotFoundException
+* Migration to oslo.utils
+* Imported Translations from Transifex
+* Fixed concurrent job execution with external hdfs
+* Update oslo.messaging to alpha/juno version
+* Update oslo.config to the alpha/juno version
+* Updated from global requirements
+* Move middleware package to api package
+* Imported Translations from Transifex
+* Removed a duplicate directive
+* Added ability to specify security group for node group
+* Fixed cluster rollback on scaling with heat engine
+* Fix closing HTTP session in Ambari plugin
+* Add test for storing data in DB for 007 migration
+* Group tests by class
+* Imported Translations from Transifex
+* Fixed a ValueError on provisioning cluster
+* Adding job execution status constants
+* Add a Spark job type for EDP
+* Fix put_file_to_hdfs method in hdfs_helper
+* Set python hash seed to 0 in tox.ini
+* Adding generic trust creation and destruction methods
+* Add oslo.messaging confs to sample config
+* Fixed logging about changes of cluster status
+* Add translation support to service and missed modules
+* Imported Translations from Transifex
+* Implement EDP for a Spark standalone cluster
+* Imported Translations from Transifex
+* Waiting deleting Heat stack
+* Integration tests for CDH plugin
+* Add CDH plugin to Sahara
+* Add rm from docs env to whitelist to avoid warn
+* Add translation support to service and utils modules
+* Migration to oslo.db
+* Imported Translations from Transifex
+* Removed extra work in case of no volumes
+* Add translation support to upper level modules
+* Adding sanitization for trusts in JobExecution model
+* Removed code duplication on cluster state change
+* Mark floating-IP auto-assignment as disabled also with Neutron
+* Updated from global requirements
+* Use with_variant method for dialects db types
+
+2014.2.b2
+---------
+
+* Delete migration tests for placeholders
+* Fixed bug with empty "volumes" when heat engine is used
+* Add support testing mr job without log checking
+* Migrate integration tests to oslotest
+* Append to a remote existing file
+* Fixed diction: VMWare should be VMware
+* Imported Translations from Transifex
+* Fix a auth_uri cannot get in sahara-engine
+* Create an option for Spark path
+* Bump Hadoop to 2.4.1 version
+* Wrap eventlet's Timeout exception
+* Imported Translations from Transifex
+* Add support skipping EDP tests for vanilla 2 plugin
+* Update oslo-incubator db.sqlalchemy module
+* Update oslo-incubator threadgroup modules
+* Update oslo-incubator processutils module
+* Update oslo-incubator periodic_task module
+* Update oslo-incubator network_utils module
+* Fix creating cluster with Vanilla 2.4.0 plugin
+* Fixes failure to scale cluster adding new Hive or WebHCat service
+* Revert "Fix use of novaclient.exceptions.NotFound"
+* Renamed Pending to PENDING fixes bug 1329526
+* Update oslo-incubator loopingcall module
+* Update oslo-incubator context module
+* Update oslo-incubator config.generator module
+* Update oslo-incubator lockutils module
+* Update oslo-incubator fileutils module
+* Update oslo-incubator log module
+* Fix scaling cluster Vanilla for Hadoop 2.3
+* Updated from global requirements
+* Add vanilla plugin with Hadoop 2.4.0
+* Fixed configuring instances for Vanilla 2.0
+* Fix hardcoded username(ec2-user) for heat-engine
+* Fixed EDP job execution failure
+* Fix use of novaclient.exceptions.NotFound
+* Update oslo-incubator excutils module
+* Update oslo-incubator jsonutils module
+* Update oslo-incubator importutils module
+* Update oslo-incubator strutils module
+* Update oslo-incubator gettextutils module
+* Update oslo-incubator timeutils module
+* Allow plugins to choose the EDP implementation
+* Refactor the job manager to allow multiple execution engines
+* Use oslo.i18n
+* Add oslo.i18n lib to requirements
+* Update image registry docs to use cli
+* Imported Translations from Transifex
+* Remove docutils pin
+* Fixed hadoop keys generation in case of existing extra
+* Switched Sahara unit tests base class to oslotest
+* Update doc for REST endpoint convert-config
+* Extend status_description column in Clusters tables
+* Updated from global requirements
+* Update docs to reflect the changes in security group section in horizon
+* Fix formatting in readme for vanilla configs
+* Added validation check for number of datanodes
+* Imported Translations from Transifex
+* Fix tools/get_auth_token
+* Corrected a number of pep8 errors
+* Changed HDP unit tests base class
+* Updated from global requirements
+* Fixed volumes mount in case of existing volumes
+* Adds DataNode decommissioning support to HDP Plugin
+* Refactoring vanilla 2 plugin
+* Fix docs to use sahara-all instead of sahara-api
+* Use immutable arg rather mutable arg
+* Upgrades the HDP plugin to use Ambari 1.6.0
+* Fix detaching cinder volumes
+* Updated from global requirements
+* Upgrades the HDP plug-in to install Hue
+* Fixed number of hacking errors
+* Updated from global requirements
+* Small fixes in README migration file
+* Imported Translations from Transifex
+* Implement scaling for Spark clusters
+* Installation guide updated
+* Fix Sahara CI links
+* Fixed H405 pep8 style check
+* Updated from global requirements
+* Make deleting transient clusters safe
+* Fix docs for configuring authentication
+* Handle remote driver not loaded situation
+* Migrated integration tests to testtools
+* Remove vim editor configuration from comments
+* Fixed indent in testing docs
+* Updated from global requirements
+* Imported Translations from Transifex
+* Fixed E265 pep8
+* Removed cluster retrieving in provisioning engine
+* Added new hacking version to requirements
+* Updated from global requirements
+* Hided not found logger messages in unit tests
+* Migrated unit tests to testtools
+* Sync up oslo log module
+* Fixed /etc/hosts update for external hdfs
+* Fixed status update for job execution
+* Update job execution status on cluster deletion
+* Fixed remote call in external HDFS configuration method
+* Remove usage of remote from HDP Instance constructor
+
+2014.2.b1
+---------
+
+* Added jobhistory address config to vanilla 2
+* Added secondary name node heap size param to vanilla plugin
+* Minor EDP refactoring
+* Update documentation for Spark 1.0.0
+* Use in-memory sqlite DB for unit tests
+* Imported Translations from Transifex
+* Added several checks on deleted cluster to prevent error logs
+* Changing job excecution status to 'FAILED' in case of exception
+* Add Spark 1.0.0 to the version list
+* Rework keystone auth_token middleware configs
+* [HDP] Integration tests for HDP 2.0.6
+* Add Spark to overview and feature matrix
+* Documentation for the Spark plugin
+* Adding disconnected mode fixes to hdp plugin
+* [HDP] Changed test tag for HDP1 plugin
+* Made Swift topology optional for data locality
+* Add warn re alpha readiness of distrib mode
+* Updated from global requirements
+* Sync the latest DB code from oslo-incubator
+* Added ability to run HDFS service only with Hadoop 2
+* Removed versions from Vanilla plugin description
+* Fixed oozie component name in HDP exception
+* Added validate_edp method to Plugin SPI doc
+* Added validation for long hostnames
+* Add upgrade notes for sahara-api to sahara-all
+* Updated from global requirements
+* Replaced RuntimeErrors with specific errors
+* remove default=None for config options
+* Removed unused global var and unnessary param
+* Add Spark plugin to Sahara
+* Fix intermittent transient cluster tests failure
+* Synced jsonutils from oslo-incubator
+* Added validation check that network provided for neutron
+* Remove unused parameters in integration tests
+* Remove unused function from xmlutils
+* Fix typo: Plaform -> Platform
+* Fix working sahara with heat and nova-network
+* Removed unneeded check on job type during job execution
+* Add ".sahara" suffix automatically to swift URLs in workflows
+* Removed migration-time config folders lookup
+* Remove all mostly untranslated PO files
+* Made processes names case sensitive
+* replaced e.message
+* Remove monkey_patch from test_context
+* Fix hardcoded tenant name for job binaries
+* Imported Translations from Transifex
+* Run periodics in sahara-engine instead of sahara-api
+* Create trusts for admin user with correct tenant name
+* Imported Translations from Transifex
+* Updated from global requirements
+* Clean up openstack-common.conf
+*  correcting the MANIFEST.in paths
+* correcting the MANIFEST.in paths
+* Extended plugin SPI with methods to communicate with EDP
+* Allow HDFS data source paths without the hdfs:// scheme
+* Improve validation for swift data source URLs
+* Imported Translations from Transifex
+* Updated from global requirements
+* Replaced the word components with component(s)
+* Updated from global requirements
+* Synced jsonutils from oslo-incubator
+* Split sahara into sahara-api and sahara-engine
+* [IT] More coverage of EDP in tests
+* Add sahara-all binary
+* Imported Translations from Transifex
+* Fix eventlet monkey patch and threadlocal usage
+* Change the package name of the example to org.openstack.sahara.examples
+* Imported Translations from Transifex
+* Fix running EDP job on transient cluster
+* Add simple fake plugin for testing
+* Imported Translations from Transifex
+* Moved information about processes names to plugins
+* Updated architecture diagram in docs
+* Forced lowercase for instance names
+* Improved validation for data-sources creation
+* Add upgrade doc stub page
+* Updated from global requirements
+* Add secondarynamenode support to vanilla 2 plugin
+* [IT] More coverage of EDP in tests
+* Add tenant_id getting in integration tests
+* Added support of multi-region environment
+* [IT] Fixed error when skipping scaling test
+* Fixed validation of novanetwork w/o autoassignment
+* Avoid deleting transient cluster before job is started
+* Fixed wrong exceptions use for decommission errors
+* Implementing constants for the job types used by EDP
+* Change IRC channel name to #openstack-sahara
+* Imported Translations from Transifex
+* Remove IDH plugin from sahara
+* Fix storing binaries in Swift
+* Updated hdp_plugin features to align with current capabilties
+* Saharaclient must be installed for UI to work in dev environment
+* Change links to images in Quick Start guide
+* REST API 1.1 corresponds to Icehouse as well
+* Updated validation section for Vanilla Plugin
+* Add *.log files to gitignore
+* Fix up DevStack guide
+* Imported Translations from Transifex
+* Cleanup of docs for integration tests
+* Fix up Sahara UI installation guide
+* Updated from global requirements
+* Fixed wrong use of SaharaException
+* Update links for vanilla images in doc
+* Minor fixes to Sahara UI Installation Guide
+* Fix big job binary objects in mysql
+* Doc's update for integration tests
+* Removed possibility to run job w/o Oozie
+* Removed impossible branch of 'if' statement
+* Fix up installation guide
+* Add a custom filter method to scan wrapped dict results
+* Check that all po/pot files are valid
+
+2014.1.rc1
+----------
+
+* Add examples of upstream files that we should not change
+* Updating the setup development environment docs for icehouse
+* Update EDP requirements for hadoop v2
+* Added rackawareness to Hadoop 2 in vanilla plugin
+* Do not document use_identity_api_v3 in the sample-basic file
+* Add short info re testing
+* Reserve 5 migrations for backports
+* Compact all Icehouse migrations into single one
+* Added parameters to configure a list of node group processes
+* Add description to use IDH plugin with requests
+* Fixed tests failures when SKIP_ALL_TESTS_FOR_PLUGIN=True
+* Fix db management: don't autocreate db on start
+* Updating the vanilla image building docs
+* Add a page to the developer guide on Alembic migrations
+* Add a paragraph discouraging modification of upstream files
+* Open Juno dev
+* Update REST api docs
+* Updating dashboard user guide doc for icehouse
+* [IDH] Integration tests for IDH 3.0.2
+* [IDH302] Restoring cluster parameters after scaling
+* Fix check active nodemanagers for vanilla 2 plugin
+* Heat docs update
+* Fix default repo links and tarball links for IDH
+* Add EDP integration tests for vanilla 2 plugin
+* Filter 'fields' from JobExecutions returned from REST api
+* Renamed 'idh' integration tests to 'idh2'
+* Standardize README header
+* Fixed wrong attached volume's names via Heat
+* Some configs updates for vanilla 2 plugin
+* Remove Mirantis copyright from README
+* Add EDP support for Vanilla 2 plugin
+* Add fixed and floating IPs discovery via neutron
+* Updated from global requirements
+* Change tag for vanilla integration test to 'vanilla1'
+* Remove agent remote
+* Fix parallel running integration tests with vanilla plugins
+* Fix transient clusters termination
+* Add note about OS_TENANT_* to integration tests
+* Add integration tests for vanilla 2 plugin
+* Validate data sources reference different resources
+* Add transient tag to transient cluster test
+* Fix running integration tests by tag
+* [IDH] Fixed cluster scale down
+* Filter credentials in jobs returned from REST api
+* Fixed incorrect use of RuntimeError
+* Rename missed env variables in oslo code
+* Move swift configs to core-site.xml
+* Prepare integration tests for use for hadoop 2
+* Imported Translations from Transifex
+* Updated from global requirements
+* Added missing lib to dev UI installation guide
+* Added python-pip installation to dev environment instruction
+* Rename strings in plugins dir
+* Missed renames in code base
+* Missed renaming in docs
+* Integration test for a transient cluster was added
+* Add Job History Server process to vanilla 2 plugin
+* Fixup 'savanna' references in run_tests.sh
+* Override 'savanna' strings in openstack/common
+* Miscellaneous renaming string fixes
+* Change remaining references in the doc subdir
+* Change savanna references in top level docs
+* Completely remove etc/savanna dir
+* Move integration tests to python-saharaclient 0.6.0
+* Imported Translations from Transifex
+* Change remaining savanna namespaces in setup.cfg
+* Change 'savanna' references in tools
+* Renaming files with savanna words in its names
+* Change remaining 'savanna' references in sahara/tests
+* Change "_savanna_" image properties to "_sahara_"
+* Keep python 3.X compatibility for xrange
+* Rename 'self.savanna' to 'self.sahara' in integration tests
+* Change the 'savanna-db' scheme to 'internal-db'
+* Changed Savanna to Sahara in documentation images
+* Move the savanna subdir to sahara
+* Replaced or removed Savanna words in comments
+* Replaced all Savanna words in class names
+* Renames all doc references from Savanna to Sahara
+* Update i18n config due to the renaming
+* Renamed all swift-dependent configs to sahara
+* [IDH] Initial documentation for IDH plugin
+* We're now using nove client >= 2.17.0
+* [IDH] Fixed history server assignment
+* Fixed reference errors in docs
+* Update .gitreview to point on updated repo
+* Updated from global requirements
+* Cleanup openstack-common.conf
+* Updated from global requirements
+* Update oslo-incubator config module
+* Update oslo-incubator service module
+* Fixed typo in rollback function description
+* Make savanna able to be executed as sahara
+* Removed log message duplication
+* Update oslo-incubator context module
+* Update oslo-incubator processutils module
+* Update oslo-incubator periodic_task module
+* Update oslo-incubator loopingcall module
+* Update oslo-incubator log module
+* Update oslo-incubator jsonutils modules
+* Update oslo-incubator importutils module
+* Update oslo-incubator excutils module
+* Update oslo-incubator gettextutils module
+* Update oslo-incubator common module
+
+2014.1.b3
+---------
+
+* Fixed bug with unxpected stack delete
+* Minimal "lifetime" of transient cluster
+* Add cluster validation to vanilla 2 plugin
+* Add scaling support to vanilla 2 plugin
+* Removed EDP dependency on hive server
+* Updated from global requirements
+* Add swift support to vanilla 2 plugin
+* Use keystone v3 api by default
+* Add alias 'direct' for savanna/direct engine
+* Expand cluster-template usage validation message
+* Make decommissioning timeout configurable
+* Intial Agent remote implementation
+* [IDH] Added IDH 3.0.2 support
+* Updated features comparision heat with direct engine
+* Add Hadoop 2 vanilla plugin
+* Added scaling parameters to HDP plugin config
+* Removed EDP dependency on job_tracker instance
+* [IDH] Added ability to support several versions
+* Fix scale down cluster
+* Updated from global requirements
+* Updated from global requirements
+* Fixed itests to work with new savannaclient
+* Changed get_node_groups to receive only one node process
+* [IDH] Removed copy-pasted test utility file
+* Added IDH plugin to savanna config
+* Replace service-specific exceptions with general (continuation)
+* Throw exception if get_instance found several candidates
+* Added EDP test for HDP plugin
+* Improve help strings
+* Updated from global requirements
+* Added networks validation
+* Updated from global requirements
+* Replace assertEqual(None, *) with assertIsNone in tests
+* Make savanna-db-manage able to discover configs
+* Filter credentials field in data_sources returned from REST api
+* Expand swift data source credential tests
+* Fix non-deterministic a-a test
+* Add ability to support several versions vanilla plugin
+* Cinder test to integration tests was added
+* Replace service-specific exceptions with general
+* Speed up of Heat provisioning via Neutron
+* Hiding neutron Client class
+* Move client docs to python-savannaclient
+* Fix running IT for IDH plugin
+* Expand node-group-template usage validation msg
+* Auto generate and check config sample
+* Move REST API docs to separated dir
+* Standardize config sample locations
+* Fix how migration's cli register db connection opt
+* Delete 'links' only if it is present
+* Shorten swift-internal:// to swift://
+* Add run_test.sh for running tests
+* Attach volumes in parallel
+* Keep py3.X compatibility for urllib
+* Use six.moves cStringIO instead of cStringIO
+* Fix swift data source credential validation
+* Don't raise MySQL 2013 'Lost connection' errors
+* Add integration tests to Intel plugin
+* Fix cluster scaling in IDH plugin
+* Enable HDP 2 deployment leveraging HDP plugin
+* Filter credentials when returning job binaries through REST api
+* Add support retrying rest call in IDH plugin
+* Add userdoc install instructions for Fuel
+* Switch over to oslosphinx
+* Sort modules in openstack-common.conf
+* Rename Openstack to OpenStack
+* Use six.moves.urllib.parse instead of urlparse
+* Remove extraneous vim configuration comments
+* Fixed hadoop dir creation during hadoop-swift lib download
+* [IDH] Fixed cluster start without jobtracker service
+* Remove all support for "Jar" as a job type (alias for "MapReduce")
+* Further preparation for transition to guest agent
+* Add support for dotted job types
+* Remove compatibility code allowing "args" as dict
+* Fixed a small typo
+* Fix imports ordering and separation
+* Sync with global requirements
+* Make remote pluggable
+* Fix typo in savanna/tests
+* [IDH] Fixed cluster start without jobtracker service
+* Add utilities for supporting dotted job types
+* Remove extra Java job type fields from JobExecutions
+* Modify the REST doc to show a Java job type execution
+* Update the edp user doc to discuss "edp." configs for Java jobs
+* Move 'main_class' and 'java_opts' into edp.java configs
+* Default OpenStack auth port was changed
+* Sync with global-requirements
+* Refactored unit tests structure
+* Add integration test for streaming mapreduce
+* Add validation check for streaming elements on MapReduce without libs
+* Generate streaming tag in mapreduce job
+* Extract configs beginning with "edp." from job_configs['configs']
+* [DOC] Fixed link to oozie in docs
+* Add <streaming> tag generation to mapreduce workflow
+* Imported Translations from Transifex
+* Separated "tests for utils" and "utils for tests" in unit tests
+* Remove kombu from requirements
+* [Integration tests]Deleted unnecessary underscores
+* Fixed HDP plugin to support Heat engine
+* Validation of job execution data should raise InvalidDataException
+* Update oslo-incubator db.sqlalchemy module
+* Update oslo-incubator py3kcompat module
+* Update oslo-incubator middleware.base module
+* Update oslo-incubator processutils module
+* Update oslo-incubator service module
+* Update oslo-incubator threadgroup module
+* Update oslo-incubator log module
+* Update oslo-incubator timeutils module
+* Update oslo-incubator gettextutils module
+* Small fix in development install guide
+* Fix nova client initialization arguments
+* Setup logging for wsgi server
+* Bump stevedore to >=0.14
+* Fixed potential problems with global CONF in unit tests
+* Enable EDP on private neutron networks
+* Allow boolean "streaming" in Job JSON
+* Added more strict check for heat stack statuses
+* Updated from global requirements
+* Require "libs" for MapReduce and Java jobs and disallow "mains"
+* Fixed reading topology file with newline at the end
+* Fixed potential problems in test_periodic.py
+* Add a config flag to disable cluster deletion after integration test
+* Add an hdfs data source example to the rest doc
+* Update Ambari Repo location and services refactoring
+* Fixed HDP plugin to support Heat engine
+* Updated from global requirements
+* Fixed typo in unit tests utility method
+* Removed underscore from valid symbols for names used as hostname
+* Made general name validation less strict
+* Add support deprecated db param in savanna-db-manage
+* Disable autocreating database when start savanna
+* Update install guide
+* Make error logging more safe
+* Added short doc about new Heat engine
+
+2014.1.b2
+---------
+
+* Add integration test for Oozie java action
+* Updated from global requirements
+* Read Swift credentials from input_data OR output_data
+* Add alembic migration tool to sqlalchemy
+* Update EDP doc
+* Imported Translations from Transifex
+* [IDH] Added config controlling hadoop-swift.jar URL
+* [Vanilla] Updated docs to point to icehouse images
+* Change configs["args"] to be a list for Pig jobs
+* Ignore key/value pairs with empty keys in workflow generation
+* Add code to configure cluster for external hdfs
+* Imported Translations from Transifex
+* Add support for HBase in HDP plugin
+* Imported Translations from Transifex
+* Add missed i18n configs to setup.cfg
+* Enable check of Heat engine for Vanilla and HDP
+* Enable heat engine to launch cluster without keypair
+* Fix installation intel plugin
+* [IDH] Fixed work with cluster configs
+* Added 'oozie' service support to IDH plugin
+* Fixed wrong instance name with Heat engine
+* Added anti-affinity feature to Heat engine
+* Changed Vanilla plugin to use ports from config
+* Changed HDP plugin to use ports from config
+* Add util method to get port from address
+* Update sample savanna config
+* [Vanilla] Added unit test on get_hadoop_ssh_keys method
+* Added cache for image_username
+* Fixed cluster template with no nodegroups creation
+* Extract common part of instances.py and instances_heat.py
+* Remove unused node_group parameter in get_config_value
+* Minor exception text changes
+* Update oslo-incubator db.sqlalchemy module
+* Update oslo-incubator db module
+* Update oslo-incubator py3kcompat module
+* Update oslo-incubator service module
+* Update oslo-incubator gettextutils module
+* Update oslo-incubator timeutils module
+* Add Oozie java action workflows
+* Eliminate extra newlines in generated workflow.xml
+* Fix typos in edp integration test utility method name
+* Fix typo in error message
+* Fix typo in error message
+* Update oslo-incubator db module
+* Update oslo-incubator service module
+* Fix deleting cinder volumes
+* Properly catch timeout exception raised in thread
+* Added unit-tests to Heat engine
+* Fix mounting cinder volumes
+* Adding IDH plugin basic implementation
+* Reset CONF for topology_helper and services during unit tests
+* Delete determine_cluster_config method from vanilla plugin
+* Fixed issue with undeleted instances
+* Integration tests related changes
+* Do not check the status of a job execution if Oozie id is None
+* Moved tests for general utils out of vanilla package
+* Node group handling improved in the db module
+* Update oslo-incubator processutils module
+* Update oslo-incubator loopingcall module
+* Update oslo-incubator periodic_task module
+* Update oslo-incubator log module
+* Update oslo-incubator excutils module
+* Update oslo-incubator db.sqlalchemy module
+* Update oslo-incubator timeutils module
+* Wait for HDFS readiness after datanode services start
+* Increase timeout for Ambari server setup
+* Minor refactoring of vanilla create cluster
+* Fixed reporting about new cluster state
+* Changing oozie libs setup to manual copy
+* Removal of AUTHORS file from repo
+* Change "Jar" job type to "MapReduce"
+* Template names  in integration tests were changed
+* Add generating new keypair to hadoop user in vanilla plugin
+* Removed cloud user private key pushing to nodes
+* Enable data locality for HDP plugin
+* Integration tests related improvements
+* Added heat service retrieving from keystone catalog
+* Fix getting cinder devices in heat
+* Remove properties from Object classes
+* Added 'gcc' to requirements in dev instructions
+* Launch integration tests with testr
+* Provisioning via Heat
+* Migrating to testr
+* Python client docs added
+* Docs in integration tests were updated
+* Sync requirements: pin Sphinx to <1.2
+* Fix some typos in configs/messages
+* Integration tests have image related changes
+* Sync minor updates in oslo
+* Sync minor updates in oslo.db module
+* Add py3kcompat utils module
+* Oslo sync: make wait/stop funs work on all threads
+* Bump savanna client used for tests to >= 0.4.0
+* Make infrastructure engine pluggable
+* Fixed link to how_to_build_oozie page from index
+* Added savanna component to devstack installation instruction
+* Use stevedore for plugins loading
+* Enable cluster deployment with pre-installed JDK
+* Remove plugin from service/instances.py
+* Drop os.common.exceptions
+* Fixed wrong flavor validation
+* Use @six.add_metaclass instead off __metaclass__
+* Use six for iter keys/values
+
+2014.1.b1
+---------
+
+* Remove missed call get_plugin_opts
+* There is no sense to keep py33 in tox envs
+* Added Neutron support to integration tests
+* Added missing default message in InvalidCredentials exception
+* Improved error handling in vanilla plugin
+* Fix getting hidden vanilla plugin parameters
+* Remove unused oslo libs
+* Remove unused plugins opts support
+* Fix typo in node group property documentation
+* Removed usages of uuidutils.generate_uuid()
+* Revert "Support building wheels (PEP-427)"
+* Fixed bug when Oozie heap size is not applied
+* Add support for sqoop service in HDP plugin
+* Bump version to 2014.1
+* Support building wheels (PEP-427)
+* Enable EDP with HDP plugin
+* Hacking contains all needed requirements
+* Replace unicode() with six.text_type()
+* Fix auth url in swift
+* Remove check already released in hacking 0.8.0
+* Fix style errors and upgrade hacking
+* Replace copy-pasted HACKING.rst with link
+* Upgrade openstack common from oslo-incubator
+* Convert to modern form of openstack-common.conf
+* Fixed Integration tests
+* Added json REST samples for edp
+* Changed use of images for integration tests
+* A timing/profiling utility for savanna
+* Changed use of flavors for Integration tests
+* Add support for cinder to HDP plugin
+* update installation guide
+* update guide document
+* Added check to string validations to skip non-strings
+* Add a general requirements section for guest images
+* Add Oozie building instruction
+* Set iso8601 logging level to WARN
+* Enable network operations over neutron private nets
+* Add a requirements section to the EDP doc
+* Fix web UI ports bug in vanilla plugin
+* Sync with global-requirements
+* Add missing flag to UI docs
+* Add support for oozie in HDP plugin
+* Added a check for Oozie configs
+* Remove duplicate retrieve_auth_url
+* Add support for Hive related services
+* Integration test for Swift has changes
+* Make 'ls' check threaded
+* Include Vanilla Plugin *.sql files
+* Changed Integration tests
+* Docs for integration tests was added
+* Revert "Add link to centos image"
+* Add link to centos image
+* Fixed some warnings during doc building:
+* Decreasing integration test for cluster configs
+
+0.3
+---
+
+* Use release version of python-savannaclient
+* Added REST API v1.1 section
+* Include the EDP Technical Considerations page in the EDP page
+* Add content to userdoc/edp.rst
+* Fix bug with auth_token in trusts
+* Refreshed sample config files
+* Add lower bound for the six dep
+* Remove the section label markups for EDP
+
+0.3.rc4
+-------
+
+* Use python-savannaclient 0.3.rc4
+* Minor docs restructurization
+* Remove KeypairManager.get monkey patch
+* Update end time in job execution after job complete
+* Unconditionally monkey patch nova.keypairs.get
+* Changing SAVANNA_URL to use v1.1 of the savanna-api
+* Integration test improvements
+* Enhance logging
+* Remove extra agrument from call of run_job after cluster start
+
+0.3.rc3
+-------
+
+* Use savanna client 0.3-rc3
+* Add validations for name fields in all EDP objects
+* Replace DBError with DeletionFailed for DataSource and Job
+* Remove the 2.0 related version code
+* Fix the _assert_types test to allow for fields that are enums
+* Add __init__.py file to enable edp validation tests
+* Add roles to trusts creating
+* Fixed issue with wrong validation of jobs creation
+* First cut at UI documentation
+* Fix auth url retrieval for identity
+* Fix lost anti_affinity field from Cluster Template
+* Add a page for documentation of the Savanna Python client
+* Another change to parallelize Vanilla plugin provisioning
+* Added EDP testing
+* Remove unused EDP JSON validation schemes to prevent confusion
+* Need to empty /tmp/*-env.sh, before appending
+* config_helper.py doesn't handle negative int correctly
+* Added data-locality feature description
+* Sync openstack common with oslo stable/havana
+* Move swift client to runtime requirements
+* Hide savanna-subprocess endpoint from end users
+* Docs for Cluster statuses
+* Added rack topology configuration for hadoop cluster
+* Add new EDP sections to the documentation tree
+
+0.3.rc2
+-------
+
+* Configuring state hanging fixed
+* Fix database model for Job Binary
+* Bump savanna client version to 0.3-rc2
+* Right import of modules in itests was made
+* Excessive log was deleted
+* Docs updated for image usernames
+* Close FDs for subprocesses
+* Follow hacking about import
+* Adding Denny Zhang to AUTHORS
+* Delete constant 'GENERAL_CONFS' from config_helper.py
+* Fixed typos in docs
+* Add back copy-pasted theme for Read The Docs only
+* Starting Job Execution in separate thread
+* Update stackforge links to openstack
+* Fix typos in userdoc
+* Add missing package dependency for test_requirements.txt
+* Fix docs layout for Read The Docs
+* Fix version generation (pep8)
+* Update .gitreview file following repository move
+* Increase timeout for decomission operation
+* Sync with global requirements
+* Trusts for longrunning tasks
+* Allow job binaries to be retrieved from internal swift
+
+0.3.rc1
+-------
+
+* Impl multitenancy support
+* Replace copy-pasted sphinx theme with oslo.sphinx
+* Improvements of integration tests
+* Add support for multiple HDP versions
+* Implement threaded SSH for provisioning and Vanilla plugin
+* Print request body when log-exchange flag is true
+* Add admin context for non-request ops
+* Migration to new integration tests
+* Added missed default configs for Oozie-4.0.0
+* Removing line breaks from default configs
+
+0.3a1
+-----
+
+* Add /jobs/config-hints/<job_type> REST API call
+* Add running hdfs operations from plugin specific user
+* Revert bump of alembic version
+* Integration test refactoring
+* Fix submitting hive job
+* Oozie manager enhancement
+* Bump oslo.config version to use Havana release
+* Refactoring job execution flow
+* Fix Cinder volumes support with xenserver
+* Doc fix for replacement of Hadoop version in Vanilla plugin
+* Add default sqlite db to .gitignore
+* Impl context.to_dict()
+* Set default log levels for some third-party libs
+* Temporarily fixes bug #1223934
+* Sync requirements with global requirements
+* Remove version pbr pins from setup_requires
+* Enable swift integration
+* Edit doc for diskimage-builder
+* Get ambari mirror with curl instead of wget
+* Floating ip assignement support
+* Added validation for 'default_image_id' field for cluster create
+* Fixed wrong usage of SavannaException
+* Fix exception handling in Savanna subprocessing
+* Add horizon install instructions for RDO
+* Add pointer to userdoc from horizon guide
+* Add userdoc install instructions for RDO
+* Refactor job manager to isolate explicit references to job type
+* Fixed rep_factor calculation in cluster shrink validation
+* Modify job_configs fields to hold configs, args, and params
+* Docs fix for Neutron and Floating IP supprot
+* Docs fix for scaling
+* Fix Cluster Template name
+* Add direct dependency on iso8601
+* Fixed output of --version command
+* Partial implementation for bug 1217983
+* Filter out some vendor based input from a template upload
+* Replacement of Vanilla Hadoop 1.1.2 to Hadoop 1.2.1
+* Fix print non unicode symbols in remote exception
+* Add complete paths in MANIFEST.in
+* Added job status update and hook for transient cluster shutdown
+* Configuration token replacement is incorrect for some topologies
+* Don't use ModelBase.save() inside of transaction
+* Fix random fails of unit tests
+* Add "mains" and "libs" fields to JobOrigins
+* Wrapping ssh calls into subprocesses
+* Partial resolution to bug 121783
+* Fix AUTHORS file
+* Sync oslo with os/oslo-incubator
+* Sync requirements with os/requirements
+* Use setup.py develop for tox install
+* Update ambari admin credentials for scaling
+* Fix typo
+* Update Ambari repo URL for 0.2.2 release
+* Fix job manager for hive action
+* Documentation about HDP plugin
+* Add an ability to configure a job
+* Fix developer install guide from horizon
+* Add Hive + MySQL configuration
+* Fix create cluster with cinder
+* Remove an unncecessary loop from validation code
+* Get rid of headers in context
+* Added corrections to the documentation
+* Use api v1.1 for integration tests
+* Add hive workflow creator
+* Move Babel from test to runtime requirements
+* Remove failing on sqla 0.7.X assert
+* Make model_base work with sqla 0.7.X
+* Sync requirements with global-requirements
+* Docs update for Neutron support
+* Added Hive configuration, new nodeprocess - hiveserver
+* Get rid of pycrypto dep
+* Fix "Broken Cinder Volume"
+* Neutron support
+* Fixed typo in development quickstart guide
+* Extend JobBinary REST api to allow retrieval of raw data
+* Added job execution after cluster start and operation for job execution
+* Oozie + MySQL configuration
+* Enable the scaling up of nodes in a cluster
+* Install configs to share/savanna from etc/savanna
+* Migrate to pbr
+* First version of job manager
+* Ensure that translations packaged to tarballs
+* Add support of periodic tasks for edp needs
+* Add initial oslo-related strings to the pot
+* First steps for i18n support
+* Upgrade oslo and add periodic_task module
+* Check for valid flavor on cluster create
+* Add an API for managing job binaries in the savanna db
+* Add database support for JobBinary objects
+* Hadoop-Swift integration jar moved to the CDN
+* Limit requests version
+* Added Heap Size provisioning for Oozie
+* JobOrigin REST and API integration
+* Integration REST and conductor API
+* Add comment about keypairs tweak removal
+* Test added for sqla MutableList
+* Test added for sqla MutableDict
+* Remove legacy filtering code from sqla model base
+* Add test for sqlalchemy JsonEncoded type decorator
+* Add __author__ attr check
+* Allow Ambari port to be specified in configuration
+* Sync OpenStack commons with oslo-incubator
+* Fix custom hacking check id
+* Refactoring cinder support
+* Revert "Refactoring cinder support"
+* Refactoring cinder support
+* Migrate to Conductor
+* Remove timeout for id_rsa generation
+* Hadoop test can turn on and turn off
+* Added cluster deletion during failure
+* Add database support for the JobOrigin object
+* Resolved issue with wrong comparison
+* Sync with global requirements
+* Raise eventlet to 0.13.0
+* Bump hacking to 0.7
+* Improve exceptions handling in created threads
+* Added cluster states transition logging
+* Add a stub API method for updating a JobOrigin object
+* Fail tests if cluster in Error state
+* Oozie bug-fixing
+* Added conductor API for JobExecution Object
+* Conductor code fixed and extended tests added
+* Revert "Conductor objects are re-populated on update"
+* Several fixes and improvements for conductor
+* Integration test updating for "HDP" plugin
+* Add initial version of the REST api for the job origin component
+* Made Ambari RPM location configurable
+* Fix test files names
+* Fix retrieval of updated id
+* Updated how_to_participate doc
+* Add check for deprecated method assertEquals
+* Conductor API re-init only objects, not IDs
+* Allow Ambari users to be specified in configuration
+* Added conductor API for Job Object
+* Conductor objects are re-populated on update
+* Refactoring hdp plugin
+* Added conductor API for DataSource object
+* Added first version of model for EDP
+* Implement to_dict() method for Resource
+* Added basic helper for map-reduce actions
+* Bump version to 0.3
+* Conductor impr for tenants and templates
+* Create DB tables on Savanna start
+* Implement object classes for Conductor
+* Unit test for Conductor Manager improved
+* Refactoring remote utils
+* A Resource implementation for Conductor
+* Tests module refactoring
+* Fix docs build
+* Fix requests version
+* Unit Tests and fixes for Conductor Manager API
+* Add check S361 for imports of savanna.db module
+* Update requirements to the latest versions
+* Improve coverage calculation
+* Created savanna-db-manage script for new DB
+* Added validation checks to HDP plugin
+* Workflow creator
+* Conductor methods added
+* Docs build fixed
+* Fix foreign keys and table names in new model
+* Move path manipulations into function
+* Fix Ganglia service start failure
+* Fix processing cluster configs in HDP plugin
+* Fix to convert parsing failure
+* Port sqlalchemy db models to conductor
+* Initial part of conductor implementation
+* Resolves critical issue with oozie service
+* Ambari install screen after install fix
+* Fix to OpenStack utils
+* Add changing owner a private key
+* Enforce hacking >=0.6.0
+* Fix using nova_info in HDP plugin
+* Added a first version of REST client for Oozie
+* Fix bool default values in HDP plugin
+* Integrate Oozie deployment for Vanilla Plugin
+* Removed extra from Node Group
+* Docs fixed for horizon
+* Allow sqlalchemy 0.8.X
+* Now swift config is not passed if Swift disable
+* Fix contributing.rst file
+* Move requirements files to the common place
+* Now it is possible create a hadoop config without property filter
+* Added REST API for job and data source with simple validation
+* Validate image tags to contain required tags for plugin
+* Docs improvements
+* Refactoring db module
+* Added REST API skeleton for EDP component
+* Fixes issue with ng names duplicates
+* Instance remote usage refactoring
+
+0.2.1.rc1
+---------
+
+* Image Registry tags validation
+* Fix delete templates that are in use
+* Added integration test for cluster scaling
+* Refactoring unit tests for validation
+* Fix a bug in integration tests
+* Use console_scripts instead of bin
+* Fix HDP plugin should register service urls
+* Oslo has been updated
+* Licence header added to tools/get_auth_token.py
+* Add HDP plugin to default plugins
+* Allow hacking 0.6.0 and fix errors from new checks
+* Cluster scaling bug fixing:
+* Added __init__.py to migration directory
+* Cluster scaling improvement
+* Cluster scaling bug fixing
+* Documents typo fixes
+* Unit tests for scaling validation
+* Cluster scaling bug fixing
+* Skipping non-existing instances while deletion
+* Cluster scaling: deletion
+* Status description is set on errors
+* Fix sqlalchemy CompileError
+* Add cinder validation
+* Validation exceptions handling improved
+* REST API returns traceback fix
+* Added config tests
+* Minor addition to installation guide
+
+0.2
+---
+
+* Remove autoindex
+* Fix several sphinx bugs and include autoindex
+* Added details on registering images
+* Some more last-minute changes to docs
+* Details on enabling Anti-Affinity
+* Add cinder features in documentation
+* README and docs has been updated
+* Some minor changes
+* Docs SPI header fixed
+* Initial implementation of HDP plugin
+
+0.2.rc2
+-------
+
+* Fix author/homepage in setup.py
+* Fix install guide to fedora and centos
+* Reworked installation guides
+* Unit tests for savanna validation
+* Updated development guidelines
+* Plugin page is added
+* Added improvement to code for swift test
+* Minor changes in documentation
+* Docs feature page
+* Docs for Jenkins page updated
+* Docs fixed for horizon dev istallation
+* Docs fixed for horizon installation
+* Docs for Disk Imge Builder fixed
+* Docs feature page
+* Docs for Jenkins ci added
+* Refactoring and changing savanna documentation
+
+0.2.rc1
+-------
+
+* Validation checks improvements
+
+0.2a2
+-----
+
+* Cluster scaling validation added
+* User's Perspective updated on overview page
+* AUTHORS file generation fixed
+* Validation added for missed scale/convert impl
+* Stubs for plugin and scaling ops added
+* Added more info into Templates section of UserGuide
+* Added docs for DiskImageBuilder
+* Api validator is now passes all api args to validators
+* Change default port for savanna api to 8386
+* Changing default for os_auth_host to 127.0.0.1
+* Documentation update for REST API
+* Cosmetic changes in the docs
+* SPI documentation updated
+* Add doc about how to write docs
+* The starting page for User Guide is done
+* Fixes AA schema defenitions in clusters and cluster templates
+* Revert Ilya Tyaptin to AUTHORS
+* Support for 'Co-Authored-By' fixed
+* Added swift itest and improvements to test code
+* Req/resp exchange logging is now configurable
+* Help messages for savanna-api configs improved
+* Database schema for 0.2 release added
+* Internal error message fixed
+* Added plugins overview for Dev Guide
+* Revert "unit tests for "Implemention manual scaling""
+* Support of different content types cleaned
+* Added plugin configuration checks to validate methods
+* Add attaching/detaching volume unit tests
+* Context helper improved, avoid 500 instead of 404
+* Improve context.set_ctx to not fail
+* Reset context before/after request handling
+* The 'model_update' helper has been added
+* unit tests for "Implemention manual scaling"
+* Updated quickstart guide
+* Some logging added to cluster provisioning
+* REST API validation implementation
+* Add support attach cinder volume to scale cluster
+* Added improvements to test code
+* Python 3 print check added
+* Updated project docs design
+* Add description and template id during Cluster creation
+* Wrote installation guide for Savanna
+* Added improvements to test for image registry
+* Updated guide for dev environment
+* Next gen AA implemented and small cleanup
+* Savanna Dashboard installation guide updated
+* Cluster scaling bug fixing
+* Restructured project documentation
+* UI dev guide updated
+* Cluster scaling: validation
+
+0.2a1
+-----
+
+* Add attaching and detaching cinder volumes
+* Anti affinitity group field name fixed in validation schema
+* Plugin version exists check has been added
+* Remove dynamic serialization switching
+* Cluster scaling implementation
+* Private key for user hadoop in vanilla plugin
+* Rollback sitepackages fix for tox.ini
+* Fix version of pyflakes: pyflakes==0.7.2
+* Fix pep8 and pycrypto versions, fix tox.ini
+* Preserve order of plugins taken from config
+* Added small correction to test code
+* Make 'Enable Swift' config in plugin priority 1
+* Renamed MAPREDUCE service in plugin to MapReduce
+* Improvements of test for image registry
+* All validation schemas and functions prepared
+* Multi-tenancy support has been implemented
+* Added integration tests for cluster creation
+* Fix issue w/ setting service urls
+* Make all cluster-wide configs priority 1 in Vanilla plugin
+* Posargs has been added to the flake8 command
+* Type fixed in cinder client
+* Unnecessary logging removed from nova and cinder clients
+* Add request/response logging when debug=True
+* Oslo has been updated to the latest version
+* Requirements has been updated
+* ApiValidator tests moved to the right place (utils)
+* Fix cluster delete when instances are already deleted
+* The special type implemented for flavors
+* Fixed min volumes_size constraint
+* License hacking tests has been added
+* The tenant_id should not be specified in requests
+* NodeGroup creation request body schema validation
+* Type 'configs' implemented for ApiValidator
+* More strict images validation
+* Threading utils implemented
+* Placeholders for future validators and schemas
+* Basic schema validation added to images calls
+* The 'check_exists' applied to all API calls
+* Added hadoop testing
+* If validation is not pass, cluster status is set to Error
+* Little isue with storage_path generation fixed
+* Simple tests for utils/crypto
+* Place patches test to the right place
+* Base validation framework implemented
+* Avoid internal error while quering plugin
+* NotFoundException implemented
+* Implement _map_to_user_inputs helper
+* Plugins could return required image tags now
+* Fix minor plugin issue
+* MANIFEST.in has been added
+* Added itest and improvements to code of tests
+* Add info property to the Cluster object
+* XML coverage report added (cobertura)
+* Fix storage helper
+* NodeGroupTemplate conversion method fixed
+* The plugin's 'convert' method improved
+* Move base.py w/ unit tests to the tests root
+* Upgrade migration script to the latest model
+* Model has been updated
+* Use userdata instead of files for VM key-pair
+* Enchancement for instance interop helper
+* Initial migration script has been upgraded
+* Added cinder volumes support to vanilla plugin
+* Replaced all 'General' configs to 'general'
+* Add cover report to .gitignore
+* Added integration test for image registry
+* Heap Size can be applied for Hadoop services now
+* Defined Priority 1 and cluster configurations for Hadoop services
+* Applied Swift Integration in Vanilla Plugin:
+* Vanilla plugin configuration helper fixing:
+* Vanilla plugin configs are more informative now
+* Add cinderclient
+* Some changes were added to savanna-dashboard installation
+* Added integration crud tests
+* Update object model to support cinder volumes
+* Replace dumb reraise with reraise util
+* Now instances are deleted after rollback cluster creation
+* Unregister image rest api call has been added
+* Fix savanna.conf.sample
+* Move swift helper tests to the right place
+* Reraise exception about error during the instance creation
+* User keypair is now optional for cluster creation
+* Added fast integration test
+* Cluster creation moved in separate thread
+* Added first Savanna Controller level validation
+* Impl bulk ops for instance interop helper
+* Helper for Swift integration was added
+* Savanna context now is local to greenthread, not just thread
+* Add fqdn property to instance object
+* Reduce number of ssh sessions while scp muliple files
+* InstanceInteropHelper improvements
+* Conf samples has been updated
+* Update database defaults
+* Implementation of Vanilla Plugin
+* Print stacktrace if error occured while cluster creation
+* Improve cluster creation from cluster template
+* Support cluster creation from cluster template
+* Cluster templates could be now created using node group templates
+* REST API / (versions) endpoint has been fixed
+* Id of the NodeGroup is now hidden
+* Oslo libs has been updated
+* Basic impl of 'convert' method
+* Impl file upload for Savanna REST API utils
+* pbr updated to the latest version
+* The use_floating_ip flag implemented
+* Description is now optional in ImageRegistry
+* Sync tools/*-requires with openstack/requirements
+* Apply minidom patch to Python prior to 2.7.3
+* Use internal IPs in /etc/hosts
+* Sample conf fix
+* Images REST API cleanup
+* Plugin resource name fixed for REST API calls
+* Adding Nadya Privalova to AUTHORS
+* Cleanup tools/*-requires
+* ImageRegistry completed
+* Correct todo messages
+* Fix for Dummy plugin
+* REST API samples updated
+* Small code improvements
+* Core part improvements
+* Pin pbr to avoid sphinx autodocs issues
+* Adding lintstack to support pylint testing
+* Documentation for Hadoop-Swift integration was added
+* Simple REST API call samples has been added
+* TemplatesRelation is now NodeGroup-like object
+* Plugin stub updated to the latest version of configs vision
+* Improve REST API bindings
+* instruction for dev env for horizone plugin
+* Adjust Config class to the docs
+* Enable all code style tests
+* Add simple plugin calls and cluster status updates
+* Small cleanup of db model
+* The 'model_save' helper added to the context
+* Helper for configuration in node group
+* Cluster security and node placement control
+* The 'ctx' arg removed from plaggable provisioning
+* Fix remote util
+* Fix crypto util
+* Improve database model
+* Placeholder for instance creation has been added
+* Keystone auth middleware configuration fixed
+* User keypair added to cluster object
+* Remove unused variable
+* Patch novaclient to support getting keypairs
+* Introduce py33 to tox.ini
+* AUTHORS added to the repo
+* The .mailmap file updated to fix AUTHORS
+* Fix nova helpers (remove unneeded headers)
+* Hostname/username are now available in Instance
+* Use six to improve python 3 compatibility
+* Basic instance interop helpers added
+* Private key has been added to the Cluster object
+* Initial version of Savanna v0.2
+
+0.1.2
+-----
+
+* Pre-release 0.1.2 doc changes
+* Replaced path to start-all.sh script
+* New hadoop tests were added
+* Small docs improvements
+* Integration tests improvements and fixes
+* Integration tests for hadoop were added
+* Removed unused paramter '-force' when formatting NameNode
+* Updated project documentation
+* .gitignore updated
+* Requires updated due to the openstack/requirements
+* Some improvements to documentation were added
+* Add changes in horizon docs
+* Revert "Integration tests for hadoop were added."
+* Integration tests for hadoop were added
+* cscope.out has been added to .gitignore
+* Change allow-cluster-ops default from False to True
+* bump version to 0.1.2
+
+0.1.1
+-----
+
+* Pre-release 0.1.1 docs fixes
+* Cluster status fix when error during vms starting
+* Unnecessary whitespace has been removed
+
+0.1.1a2
+-------
+
+* Patch for minidom's writexml has been added
+* Positive test for validation has been readded
+* The is_node_template_associated function added
+* Added default values for JT, NN, TT, DN processes
+* NodeTemplate usage check moved to validation
+
+0.1.1a1
+-------
+
+* "Last updated" info has been added to generated Sphinx pages
+* Common version is now used in Sphinx docs
+* Keystone client creation moved to the setUp() function
+* oslo has been updated
+* Adds xml hadoop config generating
+* Keystone removed from the global variables and added it to the class
+* time.sleep replaced with eventlet.sleep
+* Deps cleaned by openstack/requirements
+* Tenants support implemented for clusters
+* Using clear_override in tearDown
+* docs fixed, tool renamed
+* Implements integration tests
+* OpenStack Common has been updated to the latest version
+* Some large (and slow) validation tests has been splitted to several cases
+* tools/install_venv fixed
+* Index page updated
+* Validation for required process props added
+* /etc/hosts generator implemented
+* Additional info files added to repo
+* Re-add setuptools-git to setup.py
+* quickstart has been updated
+* All tools modev to tox
+* Validation tests fixed (jsonschema update)
+* OS Summit session nnouncement has been added
+* Limit cluster name to 50 characters
+* bump version to 0.1.1
+* info about pypi has been added
+* Remove an invalid trove classifier
+* Horizon howto page updated and published
+
+0.1
+---
+
+* setup.py has been improved
+* Some useful links added to README
+* Note about use_floating_ips has been added
+* Simple quickstart fix
+
+0.1a2
+-----
+
+* setuptools-get has been removed from deps
+* AUTHORS and ChangeLog has been added to .gitignore
+* VM Image link has been fixed
+* Small index page improvement
+* Links to bugs and blueprints has been added
+* simple tests for cluster validation has been added
+
+0.1a1
+-----
+
+* Added instruction how to get Savanna from tarball
+* sample-conf has been removed from savanna-manage
+* Added error codes to REST API docs
+* Trailing whitespaces has been removed from the validation messages
+* Side effect in SavannaTestCase has been fixed
+* oslo has been updated
+* HowToParticipiate page updated
+* Fixed issue when json's responses contain null values
+* Introduced new networking option for cluster
+* Fixed validation errors and wrong response codes
+* get_auth_token is now uses default configs
+* Added Nova resource checking in cluster creation operation
+* Implemented Hadoop config provisioning
+* resources has been added to sdist tarball
+* Exec permissions added to the savanna-manage command
+* savanna-manage added to the scripts section of setup.py
+* sample-conf command added to savanna-manage
+* Several fixes in tools and docs
+* Quickstart updated
+* SavannaTestCase added
+* Some hacking.py fixes and fixes in validation and cluster_ops
+* hacking.py added
+* Tools has been improved
+* Service layer validation added
+* Tenant id is now extracted from headers; eq function added to api Resource class
+* Added basic validation and error handling
+* small refactoring - service and storage (dao) layers has been created
+* savanna-manage has been added; reset-db/gen-templates moved to it
+* Author email has been fixed
+* dev-conf is now supported
+* some confs cleanup, pyflakes added to tox
+* versions added to api, small api improvements
+* small cleanup
+* quickstart has been updated
+* docs has been updated
+* simple tox.ini has been added
+* unused config item has been removed
+* oslo.config is now available in pypi
+* renaming rollbacked to prevent problems with the old image
+* conf files moved to the right place
+* Add .gitreview file
+* mailing list address has been fixed
+* Changed pictures in docs according to Savanna name and replaced Horizon pages
+* Changed docs with replacement of EHO to Savanna
+* eho -> savanna
+* .mailmap fixed
+* .pylintrc improved
+* oslo conf has been updated
+* Build docs is now implemented using setup.py
+* unused arg has been removed
+* oslo upgraded
+* sample confs has been improved
+* logging of defaults generator has been cleaned
+* plain py logging replaced with oslo log
+* conf-print has been removed
+* get_auth_token has been fixed
+* stollen files has been moved to openstack package
+* tests runner has been fixed
+* unused configs has been removed
+* refactoring: eho.server -> eho
+* unused option dev removed; analyze_opts.py removed; eho.conf.sample updated
+* some cleanups, tests fixed
+* oslo context has been added
+* oslo-config has been upgraded to the latest version
+* EHO-Horizon Setup instruction is added
+* Switched from self-made config to oslo.config
+* htp site page fixed
+* Corrected link in how-to-participate
+* tenant_id has been removed from tests
+* Added bullet point for base_image_id in Item 4
+* Polished Quick Start guide a little
+* small fix
+* some mistakes has been fixed
+* Added 'How to Participate' page to the docs
+* sources and launchpad links has been added
+* quickstart link has been added
+* quickstart has been added
+* Enhanced get_auth_token: It can get credentials and tenant from console It could be launched from any directory, not just project root
+* Made note in docs that we use flavor name instead of flavor id temporarily
+* SQLAlchemy version has been specified (>=0.7,<0.8a0)
+* tenant_id has been removed from objects
+* run command added to README
+* Corrected examples in API docs
+* custom horizon screenshots has been added to docs
+* roadmap has been updated
+* default node_password has been changed
+* Corrected API docs
+* if content type is undefined json should be applied
+* xml requests deserialization has been disabled
+* xml requests and responses are now supported
+* some oslo modules has been added
+* copyright has been added
+* cleaned
+* setup utils is now from oslo-incubator
+* .mailmap has been added
+* test job has been disabled
+* objects has been wrapped and tenants are now passed in urls and validated before app
+* Inserted {tenant_id} into urls in API docs
+* setup.py has been added
+* "stolen" comment has been added
+* tenant_id is now taken from headers
+* docs has been fixed
+* restapi doc has been upgraded to fit new tenant_id style
+* using specifed tenant_id
+* comment about tenant check has been added
+* apidocs generation has been disabled
+* docs has been updated
+* auth token creation helper has been added
+* unnecessary lambda usage has been removed
+* tests has been fixed to fit added auth token middleware
+* wsgi middlewares are now added correctly
+* test has been improved
+* missing webob dep has been added
+* horizon token auth is now used
+* openstack interop helper has been added
+* Now we print exceptions with stacktraces into log
+* bug with eternally stoping cluster in case of stoped vms has been fixed
+* doc has been fixed
+* configs has been fixed
+* stop_cluster clusterop has been mocked for tests
+* service_urls has been fixed (dict instead of array of dicts)
+* using conf files instead of hardcoded values
+* using conf dicts instead of global statements
+* REST API has been updated to v0.2
+* Fixed pep8 error
+* Fixed VMs networking
+* Now we use hostnames for addressing between VMs Fixed network discovery - now we correctly identify public interface Little renaming + spell fixes
+* Code has been reformatted
+* Some pylint warns has been fixed
+* All docs has been ported to sphinx
+* Fixed pep8 and tests
+* Working version without coroutines
+* api methods has been splitted and some warns has been fixed
+* some warnings has been fixed
+* vm termination implemented
+* tests has been fixed
+* allow cluster ops flag added
+* warnings has been fixed
+* nodes are now sorted before assertEquals while creating clusters
+* api test has been upgraded
+* logging added
+* todo added
+* some fixes, clusterops are now starting using eventlet
+* warnings has been fixed
+* Added jinja templates for startup scripts
+* todos reformatted
+* Update README.rst
+* api test has been updated to use new defaults
+* pep8 has been fixed
+* many pylint warns has been fixed
+* pyflakes warnings has been fixed
+* readme has been updated
+* pylint and pyflakes static analysis has been added
+* sample test has been removed
+* Extracted string constants in cluster_ops
+* add tests for delete cluster and node template
+* clusterops now is pep8 compliant
+* traceback removed
+* Working version of cluster deployment
+* defaults has been updated
+* test_api -> test_api_v01
+* some tests has been added
+* Cluster statuses has been added
+* Minor changes
+* may be we should move configs to the 'configs' sub-object for templates get/list responses
+* deletions has been added into the rest api
+* service api improvements (termination, nodes creation, etc)
+* cascade options has been added
+* README has been updated
+* Initial implementation of cluster ops. Not working yet :-)
+* test_api has been updated
+* python style names has been reverted
+* new defaults is now used
+* RESET_DB flag is now supported
+* args has been updated
+* new args has been added
+* example routines has been added for cluster creation
+* patching all main components
+* only wsgi mode now used
+* defaults has been updated
+* some cli args has been added, logging is now configurable
+* background execution support has been added
+* default conf has been cleaned
+* --with-xunit added to run_tests
+* Readme didn't mention that you need to install a couple of dependencies first
+* nosetests.xml added to .gitignore
+* simple api test has been added
+* conf improved
+* debug=True has been removed from bin/eho-api
+* *.db added to .gitignore
+* Readme updated
+* tests, coverage added
+* note about hooks added
+* incorrect scheduler call has been removed
+* bin added
+* Some fixes
+* Initial implementation of REST API
+* install_venv fixed
+* Initial commit

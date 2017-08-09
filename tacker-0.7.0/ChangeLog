@@ -1,0 +1,631 @@
+CHANGES
+=======
+
+0.7.0
+-----
+
+* Docs update for Ocata features
+* Unlimit the ram quota for testing
+* nsd-support release note
+* Adds attributes for verify support
+* Add onboarded as default template-source
+* Fix ns_create stuck in pending state issue
+* Updated from global requirements
+* Add column attributes to vnffgs in db
+* api-ref for nsd, ns
+* Implement VNFC support
+* Include alembic versions directory to the package
+* Correct path to migration scripts in alembic.ini
+* Sample tosca templates for nsd
+* Support VNF create from inline template
+* Prepare for using standard python tests
+* Put dev doc under pep8 check
+* Support parameter input for vnffg template
+* Fix the log systax
+* Put exception earlier
+* Upgrade keystone version from v2.0 t v3 in functional test cases
+* Fix the invocation of novaclient object using named parameters
+* Delete mistral resources, when workflow raise exception
+* Update api-ref rest parameters
+
+0.6.0
+-----
+
+* Module index fix in doc
+* Updated from global requirements
+* Fix typo: coditions -> conditions
+* Implement NSD Support part 2
+* Modify the novaclient signature based on the novaclient=6.0.0
+* Fix the invocation of novaclient object using named parameters
+* Remove support for legacy VNFD templates
+* Misc correction in README
+* Increase vim password column length
+* Fix typos in scale_usage_guide.rst
+* _80_nfv.py file is moved to enabled folder in tacker_horizon folder
+* Fix a nit, replace a string with the macro
+* Implement NSD Support - Add CRUD operations for NSD
+* Updated from global requirements
+* _80_nfv.py file is moved to enabled folder in tacker_horizon folder
+* Remove useless cliff requirements
+* Remove useless requirements
+* Fix docs "Line too long" under doc8 style
+* Use devstack system public auth url as default VIM auth_url
+* Updated from global requirements
+* Remove infra and mgmt parsing logic from API
+* Update API Ref guide
+* Remove deprecated heat infra_driver
+* parameter value wrongly mapped in vnfd
+* Add guru meditation support
+* Remove support for legacy VNFD templates
+* Fix: nested resources are ignored
+* Updated from global requirements
+* RFE alarm monitor: Fix hardcoded metadata,add func. test
+* Updated from global requirements
+* Updated from global requirements
+* Fix 'No data to report' error in coverage
+* Updated from global requirements
+* Use heat devstack plugin
+* Refactor the source code of infra_driver/openstack
+* Avoid Forcing the Translation of Translatable Variables
+* Add mac_address into CP's properties
+* Fix dsvm failure caused by devstack plugin and event/auditing func
+* Fixed Heat installation dependency for Tacker
+* Updated from global requirements
+* tacker-db-manage purge_deleted command error
+* Typo in devstack tacker lib file
+* Fix broken link in EPA doc
+* Modify the document of vnfd template parameterization
+* Fix the problem of the file mode
+* Updated from global requirements
+* Remove keystone catalog backend
+* API reference documentation
+* Modified the VNFD Resource state to OnBoarded
+* Show team and repo badges on README
+* Fix the typo in tests
+* Fix IndexError when creating a VNFFG
+* Updated from global requirements
+* Migrate from keystoneclient to keystoneauth
+* Replace six.iteritems() with .items()
+* Updated from global requirements
+* Clears the devstack settings whitespaces
+* Add __ne__ built-in function
+* Initial api-ref skeleton for Tacker
+* Small correction in glance cli of openwrt document
+* Updated from global requirements
+* Add vnffg_id into nfp dict
+* [DOC] Update the manual installation guide to rectify errors
+* Change network into net_mgmt
+* Fix resource type miss in vnfd scale template
+* Allow to install tacker only env
+* Add Apache 2.0 license to source file
+* Updated from global requirements
+* Remove deprecated nova infra driver
+* Updated from global requirements
+* Remove the service id from vnfd-create command output
+* Remove deprecated default_vim config item
+* Updated from global requirements
+* Updated from global requirements
+* Fix wrong format of doc
+* Update description of CP in VNFD Template Guide
+* Change nfvo into nfvo_vim for os config generation group name
+* Updates config generator conf
+* VNF event detail is modified to match with resource state
+* Tacker deploy OpenWRT as VNF guide
+* Correcting spelling mistakes in test_vnfm_param.py
+* Updated from global requirements
+* Enable release notes translation
+* Fixes event ordering for alarm monitor and scale actions
+* Updated from global requirements
+* Updated from global requirements
+* Added py34, py35 to tox.ini
+* Fix vnf scaling action policy to use infra_driver
+* Fix LOG.warn to LOG.warning
+* Update reno for stable/newton
+* Updated from global requirements
+* Fix some typos in cmd_executer.py & nova.py
+* Docstrings should not start with a space
+* Fix a spell for respawn
+
+0.5.0
+-----
+
+* Adds devref guides for VNFFG
+* Fix respawn action for alarm monitor
+* Updated from global requirements
+* Add release notes for alarm monitoring feature
+* Fix: alarms stuck in "insufficient state" and update usage guide
+* Fix py27/py35 errors on jenkins gate
+* VNFFG: neutron networking-sfc driver and plugin fixes
+* Add release notes for VNF scaling feature
+* Devref for event logging feature
+* Add release notes for VNF Forwarding Graph
+* Adds limitations to scaling dev ref
+* update vnf monitor to use vim type
+* Adds unit test case for scaling
+* Remove virtualenv management scripts from oslo-incubator
+* Introduce uniqueness constraint on resource names
+* Implement Alarm monitor
+* Device refactor part4: rename vm plugin and db into vnfm plugin and db
+* Updated from global requirements
+* VIM event type fixed to be of type Monitor
+* implement get_resource_info noop, nova
+* Rename heat unit tests to openstack
+* VNF Scaling event capture: Functional Test
+* Derive infra driver using VIM type
+* Events functional tests: verify resource state
+* Updated from global requirements
+* Fix formats for doc's information
+* Stop using config option sqlite_db
+* Reflect introduction of CP order in documents
+* Add functional tests for ConnectionPoint features
+* Ensures common services plugin is always loaded
+* Provide support for security groups for ConnectionPoints
+* Add tacker gerrit dashbaord to developer info
+* Devref for vnf scaling feature
+* VNF scaling: Functional test
+* [py35] Fix for jenkins-gate-py35 error
+* Introduce TOSCA 'order' property for connection points
+* Allow vdu (VM) names to be specified as a parameter
+* Implements VNFFG into NFVO
+* Updated from global requirements
+* Cleanup unused file hooks.py
+* Move functional tests from commonservices directory
+* VNF monitoring event capture: Functional test
+* Better handle vim domain exception
+* Update the sample vnfd template in getting started guide
+* Fix the monitor bug
+* Clean imports in code
+* Refactor Tacker unit tests to remove xml support
+* Add VNF resource details to get vnf API
+* Deprecate warning for infra_driver and mgmt_driver at server
+* Logs events for VNF scale operations
+* Logs events for VNF monitoring and actions
+* Monitoring driver keep monitoring, even if vnf status showing ERROR
+* Add __ne__ built-in function
+* Updated from global requirements
+* VNFFG  abstract driver
+* Temporarily disable ping monitor functional test
+* Move tempest_lib to tempest.lib
+* Add a shell script for developers to prepare functional test env
+* Updated from global requirements
+* modify vnfd, param & config attr. to dict objects
+* Cleaning utils code
+* TrivialFix: Remove logging import unused
+* Delete unused pom.xml file from doc directory
+* Device refactor Part3: Rename device in codes
+* Adds functional tests for common services plugin
+* Python 3: dict.itervalues()
+* Device refactor Part2: Remove unused scheduler code
+
+0.4.0
+-----
+
+* Updated from global requirements
+* Support purge of soft-deleted resources from DB tables
+* Use upper constraints for all jobs in tox.ini
+* Logs events for VIM, VNFD and VNF operations
+* Adds common services plugin for audit support
+* Enables soft deletion for VIM, VNFD and VNF
+* Adds audit support for VIM, VNFD and VNF
+* Device refactor Part1: Rename device db name
+* Make Name parameter positional argument in DOCs and devstack lib
+* Remove unused LOG to keep code clean
+* Implement tacker workflows
+* Make is_default optional in server side
+* Updated from global requirements
+* doc change default vim registration via CLI
+* Name of the exception is corrected
+* Remove trailing whitespaces
+* Fix tarball generation error due to missing tacker.conf
+* Replace deprecated LOG.warn with LOG.warning
+* Updated from global requirements
+* Password Mask for debug logs
+* Remove *openstack/common* from flake8 excclude list in tox.ini
+* Don't change existing nullable property
+* Update the home-page info with the developer documentation
+* Updated from global requirements
+* VNF scaling: REST API
+* VNF scaling: Infra (heat) driver update
+* Updated from global requirements
+* Remove keystone reconfiguration in devstack script
+* Remove execute permission on one file
+* Remove proxy related db tables
+* Always use upper-constraints
+* Add domain name info into auth for keystone v3
+* Transition default VIM to API and DB operation
+* Convert parameters to dict before passing to TOSCA parser
+* Tacker extension alias and name are swapped
+* Adding  multi-vdu and http vnf monitoring testcase with tosca-template
+* VNF scaling: TOSCA definitions and sample template
+* Use assertEqual() instead of assertDictEqual()
+* Change the amin_user_name to admin_user_name
+* Add TOSCA VNFD template for auto network creation
+* Remove discover from test-requirements
+* Sample tacker.conf generator
+* Recover some file permissions
+* Add VNFD template usage guide
+*     Adding Tacker functional tests with parameterization using tosca template
+* Fix typo in devstack configuration file
+* VNFD Legacy templates deprecated
+* Updated from global requirements
+* Refactor heat driver create() handler
+* Refactor tacker vnfd samples for consistency
+* Heat driver config description updates
+* Correct the reference and actual parameters in assertEqual
+* Remove all openstack common stuff
+* Use oslo i18n
+* Use oslo policy
+* Fix dict.keys() PY3 compatible
+* Updated from global requirements
+* Remove unused LOG to keep code clean
+* Add monitor feature to the VIM
+* Add .idea/ to .gitignore
+* Masks hashed password in VIM CRUD responses
+* Correct reraising of exception
+* Fixes manual installation doc
+* Error Indentation request
+* Add python-tackerclient to test-requirements.txt
+* Corrected execution step for devstack
+* Fix some syntax errors and one spelling mistake
+* Fix typos for Tacker
+* Changing incorrect url
+* Fix foreign key and primary key errors in db scripts
+* Updated from global requirements
+* Remove common cache codes and timeutils
+* Use python package instead of sshpass to execute remote commands
+* Use importutils and service from oslo
+* Updated from global requirements
+* Add multisite VIM usage guide
+* Allow flavor creation for non admin projects
+* Correcting net-mgmt to net_mgmt in sample template files
+* Updated from global requirements
+* Updated from global requirements
+* Remove double requirement
+* Make VNFD/VNF/VIM Name Mandatory in Tacker API's
+* Devref for EPA usage guide
+* Add key injection support to tosca.nodes.nfv.VDU.Tacker
+* Adds keystoneauth middleware into requirements.txt
+* db schema improvements: set mandatory column not null
+* Use base context and uuidutils in oslo utils
+* Functional test for a big VNFD template
+* Functional tests for auto resource creation
+* Release notes for deafult port change
+* db schema improvements: openstack entity id set to 64 length
+* db schema improvements: description is set to text
+* db schema improvements: blob to json text
+* db schema improvements: uuid consistency
+* Add user_data sample TOSCA VNFD template
+* Refactor respawn workflow for monitor
+* Use  oslo for excutils and versionutils
+* Fix 'Nuetron' typo
+* Correcting import order
+* Delete device when instance_id is null
+* Updated from global requirements
+* Log message correction
+* Use request_id from oslo middleware
+* Use oslo serialization jsonutils
+* Remove the fixture codes which are not used
+* nova infra driver failed to load
+* Use oslo db for db access
+* oslo: remove usage of oslo.log verbose option
+* Adding vnf testcase with monitoring with new tosca template
+* Remove rpc_compat which is not used at all
+* Updated from global requirements
+* Add reno support to tacker
+* Remove unused model class from db layer
+* Fix the typo for 'device_template_id'
+* Change default port into 9890
+* Use oslo log and oslo concurrency
+* Updated from global requirements
+* Fix keystone error handling in openstack driver
+* Updated from global requirements
+* Fix user_data handling in VDU.Tacker node type
+* Fix the typo for 'VimNotFoundException'
+* Add support to capture error_reason for the VNF
+* Updated from global requirements
+* Remove premature vnf delete from db
+* Re-organize tacker sample templates
+* Updates method details in monitor-driver guide
+* Updated from global requirements
+* Update devstack install guide for stable branch
+* Updated from global requirements
+* Developers guide for functional tests
+* Update TOSCA defs to set required: true/false as appropriate on properties
+* Updated from global requirements
+* Remove unused import logging
+* Fixes broken link in tacker api doc
+* Fixes get-started guide
+* Remove 'MANIFEST.in'
+* Updated from global requirements
+* Replace string format arguments with function parameters
+* Clean redundant argument to dict.get
+* Fix mutable default arguments
+* Updated from global requirements
+* py3.x: Use six.iteritems for Iterable dict items
+* Disable nova quota for dsvm functional test
+* Adds sample TOSCA VNFDs for EVP features
+* Apply vcpu and memory definitions to numa node for a VM
+* Cleanup and fix Tacker coverage
+* Fix monitoring of TOSCA VNFDs
+* Updated from global requirements
+* Implements SR-IOV support
+* Support port_security_enabled for Heat Kilo ver
+* Add debug testenv in tox
+* py3.x: Use six.iteritems for Iterable dict items
+* Openwrt image download failure handled
+* Updated from global requirements
+* Deprecate infra driver nova for Mitaka
+* Fix keystone v2 support for multisite
+* Updated from global requirements
+* Remove neutron agents codes
+* Updated from global requirements
+* Add an exception class for undefined default_vim option
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* Remove unused attach/detach interface method
+* Updated from global requirements
+* Fix typos in Tacker files
+
+0.3.0
+-----
+
+* Revert multiple mgmtdriver check for old templates
+* Fix monitoring policy in new sample tosca templates
+* Implements auto image creation
+* Add default VIM steps for manual install
+* Implements the Enhanced VNF placement blueprint
+* Implement multisite VIM feature
+* Adding vnf create/delete testcase with VIM id
+* Adding testcase for create and delete VIM
+* Cleanup vim settings
+* Implements auto flavor creation
+* py3.x: Use six.text_type() instead of unicode()
+* Cleanup copyright header
+* Implement tosca-parser/heat-translator integration
+* Collect test result reports
+* py3: use function next() instead of next() method on iterator objects
+* Avoid using built-in function name
+* Fixing assignment-from-no-return issue
+* Removing unused clauses
+* Keep py3.X compatibility for urllib
+* Removing "device" API from external inteface on master branch
+* Remove sleep timer in monitor respawn
+* Updated from global requirements
+* Code cleanup for passing mutable object as default argument
+* Introduce environment variable to disable neutron agents
+* Fix summary line for setup.cfg
+* Fix gettext wrong argument error in py34
+* remove version from setup.cfg
+* Fix some small doc issues
+* Updated from global requirements
+* Update DevStack README
+* Change the mode of devstack plugin.sh and fix typo
+* Rearrange and cleanup tacker doc index
+* Updated from global requirements
+* Tacker manual installation guide
+* Unify the driver config opts
+* Updated from global requirements
+* Updated from global requirements
+* Fix MANO API devref
+* Updated from global requirements
+* Function to upload OpenWRT image during Tacker devstack installation
+* Removing the method re-defined in same class
+* Remove empty tacker.pot
+* Fix pep8 errors in tacker code
+* Updated from global requirements
+* Code cleanup at multiple places
+* Fixing default mutable argument issue
+* Updated from global requirements
+* Alter the 'value' column in 'deviceattributes' table
+* Renamed 'servicevm' 'advsvc' in tacker install file
+* Remove argparse from requirements
+* Updated from global requirements
+* Updated from global requirements
+* Trival: remove unused logging
+* Fix E713 and F811 errors in tacker code
+* Updated from global requirements
+* Fix mgmt_url 'NoneType' error can't be decoded
+* Fix Testing.rst
+* Updated from global requirements
+* Fix E265 errors in tacker code
+* Change LOG.warn to LOG.warning
+* Display missing key name in error message
+* Update hacking
+* Enable pep8 tests in tacker code
+* Fix E251 errors in tacker code
+* remove python 2.6 trove classifier
+* Fix H404, H402, H405 errors in tacker code
+* Updated from global requirements
+* Fix help info in tacker/tests/functional/vnfm/base.py
+* Remove RPC server and client related stuff
+* Enable H304 pep8 test in tacker code
+* Updated from global requirements
+* Fix H307 errors in tacker code
+* Fix E305 errors in tacker code
+* Deprecated tox -downloadcache option removed
+* Remove Service instance, context resources
+* Updated from global requirements
+* Updated from global requirements
+* Increase the heat stack wait time out
+* Make the db migration scripts complete
+* Make tacker-db-manage revision 'xxx' --autogenerate work
+* Func test cases for vnf and vnfd param
+* Add clients module to Tacker
+* Use main port_security_enabled port propert instead of value_specs
+* Add Tacker monitor test with new template
+* Update VNFD delete message
+* update requirements according to global requirements
+* Fixup oslo middleware to use new package name
+* Tacker test for multi vdu with monitoring enabled
+* Add tacker http monitor test
+* Fix ServiceTypeNotFound and MGMTDriverNotSpecified
+* Fix tacker doc reference links
+* Reduce vdu2 flavor from  ml.medium to ml.tiny
+*     Add tacker multi vdu tests
+* Add Tacker monitoring tests
+
+0.2.0
+-----
+
+* Fixes port still in use for monitoring workflow
+* Add unit test cases for monitoring framework
+* Move oslosphinx from test to main requirements
+* Remove check for service_type in openwrt mgmt driver
+* Cleanup tox doc8 errors and other format cleanups
+* Adds devref for vnfd parameterization support
+* Register boot_wait option at VNFM plugin level
+* Cleanup Tacker docs and introduce tox doc test
+* Fix the source repositories to OpenStack
+* Update .gitreview for new namespace
+* Add unit tests for heat infra driver
+* Preserve network interfaces order of vnfd template
+* API Documentation for Monitoring Framework
+* Fix for deleting VM when VNF is deleted
+* Fixes management IP info missing for VDUs
+* Add service_type to device dict
+* HTTP ping monitor driver for Monitoring Framework
+* Implement Monitoring Framework
+* Cleanup requirements file
+* Add config-openwrt-with-firewall file to samples
+* Use value_specs for port_security_enabled flag
+* Modify the datatype of 'value' column
+* Fixes vnf create failure even if all parameters are supplied
+* Fixes VNF state being stuck in PENDING_CREATE
+* Handle vnf response appropriately for MANO API
+* Sample VNFD parameterized templates and param values
+* IP Address parameterization support
+*     Add tacker create vnf test
+* Implementation of Tacker NFV MANO API
+* Fix post gate hook to use correct path
+* Fixes devstack script for CentOS
+* Support user_data property
+* Update tacker README
+* Add tacker devstack-gate functional post test hooks
+* Change ignore-errors to ignore_errors
+* Add tacker functional tests
+* Remove unused code and docs
+* Move NOOP Infra driver from tests folder to tacker/vm
+* Moves NOOP driver from tests folder to tacker/vm/mgmt_drivers
+* Fixes typo and message formatting
+* Add Tacker development process policy document
+* Configure tacker to run functional tests
+* Support Tacker service in master branch
+* Parameterization support added for VNFD templates
+* Remove unused tacker agent code
+* Update Tacker README.rst with new project scope and pointers
+* Name and description are always copied from template
+* Tacker support on physical host
+* Add devstack hook for tacker
+* Errors during the vnf-create configuration process are not logged
+* Error during VNF create returns internal error
+* delete_wait() has typos that cause it not to wait
+* Check instance exists when attach or detach interface
+* Refactor tacker.conf
+* Fix delete device bug
+* README.rst should contain tacker related information
+* Disable import exception for tacker.i18n
+* Cleanup Tacker devref from Neutron related docs
+* Change admin_state_up to True when create port
+* configure after respawn
+* copy description when respawn
+* add description to vnf
+* config service when vm is ready
+* monitor: monitor with correct vnf id
+* get_vnfs: don't return internally used record
+* monitor:respawn heat: make device status active->dead->active
+* support config update for multiple vdus
+* mgmt driver for openwrt
+* vnf-update: update attributes
+* teach service type to vnfd and vnf
+* make pending create deletable
+* tacker/vm/drivers/heat/heat.py: make multiple vdu work
+* tacker/vm/monitor.py: log format error
+* monitor, respawn: keep vnf id when respawning new vnf
+* infra_driver:heat: fill name and description when appropriate
+* monitor: implement boot_wait
+* failure policy: make respawn workable
+* glue monitoring code and failure policy code
+* glue monitor policy and implement failure policy
+* device, vnf: attributes wasn't supported properly
+* support provider net for monitoring
+* fill mgmt_url
+* device, vnf: add name column
+* heat driver: teach config drive
+* vnfd: placement policy with availability zone
+* heat driver: teach vnfd sample
+* Add Heath check class
+* heat infra driver
+* extensions/servicevm.py: default value for service context
+* db: increase device attribute size
+* tacker/db/vm/vm_db.py: type: kwargs -> attributes
+* disable service api
+* nova driver authentication
+* mgmt_driver invocation:
+* update: etc/tacker/tacker.conf
+* typo: abstractmetho
+* Revert "drop service instance rest resources and drop related codes"
+* Revert "drop agent related code which isn't used at this point"
+* update requirement.txt
+* update tacker.conf for keystone
+* XML_NS_V20 -> XML_NS_V10
+* api-paste.ini: use new keystone library
+* db update:
+* add proxy_db.py
+* add mgmt drivers(work in progress)
+* s/oslo.config/oslo_config/
+* fix: config file path
+* fix exceptions
+* api update: device_driver -> infra_driver, mgmt_address -> mgmt_url
+* add attach-interface and detach-interface action to device
+* API: add constants for key of template attributes
+* plugins/common/constants.py: drop unnecessary constants
+* drop unnecessary constants and rename quantum -> tacker
+* context: add auth token to context
+* Enable hacking check H401
+* Enable hacking check H104
+* Bump hacking to version 0.9.2
+* Workflow documentation is now in infra-manual
+* Work toward Python 3.4 support and testing
+* drop agent related code which isn't used at this point
+* drop service instance rest resources and drop related codes
+* scheduler for hosting device
+* agent for rpc proxy
+* mgmt driver for rpc and rpc proxy
+* device driver for nova
+* servicevm plugin
+* tacker/tests/unit/services/vm/test_servicevm_extension.py: added
+* data model for servicevm
+* extension for servicevm api
+* driver_manager: library for loading drivers
+* mgmt_driver: base class and noop driver
+* device_driver: base class and noop driver
+* add tacker/db/models_v1.py
+* update configuration files for tacker TODO: import python-tackerclient once pypi repository
+* upate files under etc for tacker
+* move server command under tacker/cmd dir
+* rename neutron/{extensions, plugins, services} to tacker/{extensions, plugins, services}
+* rename various files of neutron/*.py to tacker/*.py
+* rename neutron/api to tacker/api
+* rename neutron/common to tacker/common
+* rename neutron/locale to tacker/locale
+* rename neutron/db to tacker/db
+* rename neutron/tests to tacker/tests
+* rename neutron/openstack/ to tacker
+* rename neutron/agent to tacker
+* remove unnecessary neutron_plugin_base_v2.py quota.py
+* remove unnecessary files under  neutron/notifiers
+* remove unnecessary neutron files under neutron/api/rpc
+* remove unnecessary files under neutron/db
+* remove unnecessary files under neutron/scheduler
+* remove unnecessary neutron files under neutron/extensions
+* remove unnecessary neutron files under neutron/debug
+* remove unnecessary neutron files under neutron/locale
+* remove unnecessary neutron files under neutron/services/
+* remove unnecessary neutron files under neutron/{cmd, common}
+* remove unnecessary neutron files under neutron/agent
+* remove unnecessary neutron files under neutron/plugins
+* remove unnecessary neutron files under neutron/tests
+* tox.ini: disable unit tests for now until its stabilization
+* import neutron master of cba140daccd7c4f715263cda422d5cec27af069d
+* Added .gitreview

@@ -1,0 +1,113 @@
+CHANGES
+=======
+
+1.1.2
+-----
+
+* Updated from global requirements
+* Updated from global requirements
+* Update .gitreview for stable/ocata
+
+1.1.1
+-----
+
+* Ocata release notes
+
+1.1.0
+-----
+
+* Support post event API
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* Added the releasenotes
+* Jenkins Job \*-docs-ubuntu-xenial
+* Make method import\_versioned\_module work
+* support osc
+* add vitrage client to osc
+* Show team and repo badges on README
+* Updated from global requirements
+* update vitrage bash completion
+* Show vitrage-id for alarms in alarm list cli
+* Remove white space between print () in exc.py
+* all\_tenants flag default value to false
+* Multi tenancy support - all tenants
+* Updated from global requirements
+* TrivialFix: Remove logging import unused
+* Clean imports in code
+
+1.0.1
+-----
+
+* removed unused log
+
+1.0.0
+-----
+
+* Updated from global requirements
+* change api syntax for alarms list
+* Add Python 3.5 classifier and venv
+* Remove discover from test-requirements
+* Updated from global requirements
+* add template show api
+* template list - client side
+* optimizations of get topology check
+* add the response msg as input to the ClientException
+* add some check about query condition to get topology show API
+* Template Validate API - validation of several templates
+* Template Validate API - support more then one returned result
+* Template Validate API - client side
+* change states fields
+* update tox version
+
+0.2.1
+-----
+
+* change allow\_abbrev to be false for argparse
+* add endpoint override option
+* change severity to normalized\_severity
+* fix link in docs
+* fix link in docs
+* fix link in docs
+* fixed the style
+* fixed the link from README.rst to cli.rst
+* split README.rst to two separate files
+* fix readme file
+* add documentation
+* add documentation and py34
+* change alarms cli
+* remove redundant code
+* change alarms cli
+* make the import more readable
+* cosmetic change
+* fix query to the rca
+* change alarms cli
+* cosmetic change
+* change alarms cli
+* change alarms cli
+* add rca api
+* add columns to alarms cli response
+* add alarms api
+* add alarms api
+* add show resource and list resources
+* work with no query
+* fix parameter limit
+* fix parameter limit
+* change topology api to get complex query
+* add graph type option for get topology
+* add .iml to git ignore
+* add parameters for get topology
+* fix doc
+* remove redundant mainfest.in file
+* fix client to work
+* make cliff return data as json
+* initialize the client field
+* removed topology-list
+* add more api
+* small refactoring
+* add more boilerplate files
+* add initial files for shell
+* change folder name
+* initial skeleton
+* python-vitrageclient project init
+* Added .gitreview

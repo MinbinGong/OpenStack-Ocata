@@ -1,0 +1,3 @@
+[console_scripts]
+instack = instack.main:main
+

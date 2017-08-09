@@ -1,0 +1,112 @@
+CHANGES
+=======
+
+1.0.3
+-----
+
+* retrieve project id to ignore from keystone
+
+1.0.2
+-----
+
+* switch to topics when declaring notifier
+* Update .gitreview for stable/ocata
+
+1.0.0
+-----
+
+* Convert nonblocking\_notify value from string to boolean
+* No reason to start with '\_' define a general variable
+* Enable release notes translation
+* Clean imports in code
+* Bump the oslo.messaging version
+* clean up oslo-incubator related stuff
+* Add release note for background thread notifier
+* Delete openstack/common from the exclude list of flake8 in tox
+* Add reno for release notes management
+* Avoid useless dependency on oslo\_utils
+* Update the home-page with developer documentation
+* Fix bug in background sending
+* Add support for Python 3.5
+* Remove py33 from tox envlist
+
+0.5.0
+-----
+
+* Add background thread notifier sending ability
+* Upgrade hacking
+* Updated from global requirements
+* Only install hacking in pep8
+* Remove oslo.context dependency
+* Remove unused requirements
+* Add missing requirements for mock
+* Updated from global requirements
+* [Trivial] Remove executable privilege of doc/source/conf.py
+* Updated from global requirements
+* Updated from global requirements
+* use path as resource id when missing RESELLER prefix
+
+0.4.0
+-----
+
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* Use assertTrue/False instead of assertEqual(T/F)
+* Updated from global requirements
+* Removes MANIFEST.in as it is not needed explicitely by PBR
+* Remove py26 support from ceilometermiddleware
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* swift: upgrade messaging to v2
+* Updated from global requirements
+* Updated from global requirements
+* Fix the mistakes in .gitignore file
+* Change ignore-errors to ignore\_errors
+
+0.3.0
+-----
+
+* Ignore request with swift.source in env
+* Updated from global requirements
+* Fixes parsing req path for account HEAD/GET
+* HTTP\_X\_TENANT\_ID is deprecated and replaced by HTTP\_X\_PROJECT\_ID
+* Updated from global requirements
+* Activate pep8 check that \_ is imported
+* Updated from global requirements
+* Drop use of 'oslo' namespace package
+* Updated from global requirements
+* Add test which asserts non-empty target\_id
+* Updated from global requirements
+* add support to skip event/meter generation for certain projects
+* Set correct config choice for transport url
+
+0.2.0
+-----
+
+* Updated from global requirements
+* Drop use of 'oslo' namespace package
+* Update README to work with release tools
+* Updated from global requirements
+* Add \*paste.filter\_factory\* entry point
+* use pycadf helper module to assign action
+* Updated from global requirements
+* remove gitignore files
+
+0.1.0
+-----
+
+* add README template
+* add options to configure messaging
+* ignore changelog
+* fix py34 tests
+* fix gitignore
+* fix gitignore
+* initial checkin
+* initial checkin
+* Initial commit

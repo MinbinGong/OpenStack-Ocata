@@ -1,0 +1,30 @@
+[barbican.certificate.event.plugin]
+simple_certificate_event = barbican.plugin.simple_certificate_manager:SimpleCertificateEventPlugin
+
+[barbican.certificate.plugin]
+dogtag = barbican.plugin.dogtag:DogtagCAPlugin
+simple_certificate = barbican.plugin.simple_certificate_manager:SimpleCertificatePlugin
+snakeoil_ca = barbican.plugin.snakeoil_ca:SnakeoilCACertificatePlugin
+symantec = barbican.plugin.symantec:SymantecCertificatePlugin
+
+[barbican.crypto.plugin]
+p11_crypto = barbican.plugin.crypto.p11_crypto:P11CryptoPlugin
+simple_crypto = barbican.plugin.crypto.simple_crypto:SimpleCryptoPlugin
+
+[barbican.secretstore.plugin]
+dogtag_crypto = barbican.plugin.dogtag:DogtagKRAPlugin
+kmip_plugin = barbican.plugin.kmip_secret_store:KMIPSecretStore
+store_crypto = barbican.plugin.store_crypto:StoreCryptoAdapterPlugin
+
+[barbican.test.crypto.plugin]
+test_crypto = barbican.tests.crypto.test_plugin:TestCryptoPlugin
+
+[console_scripts]
+barbican-db-manage = barbican.cmd.db_manage:main
+barbican-keystone-listener = barbican.cmd.keystone_listener:main
+barbican-manage = barbican.cmd.barbican_manage:main
+barbican-retry = barbican.cmd.retry_scheduler:main
+barbican-worker = barbican.cmd.worker:main
+pkcs11-kek-rewrap = barbican.cmd.pkcs11_kek_rewrap:main
+pkcs11-key-generation = barbican.cmd.pkcs11_key_generation:main
+

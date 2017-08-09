@@ -1,0 +1,111 @@
+Adam Gandelman <adamg@ubuntu.com>
+Alexey Galkin <agalkin@mirantis.com>
+Aline Bousquet <albousque@gmail.com>
+Andreas Jaeger <aj@suse.com>
+Andreas Jaeger <aj@suse.de>
+Andrey Kurilin <akurilin@mirantis.com>
+Anh Tran <anhtt@vn.fujitsu.com>
+Anton Arefiev <aarefiev@mirantis.com>
+Arun S A G <saga@yahoo-inc.com>
+Ben Nemec <bnemec@redhat.com>
+Brad P. Crochet <brad@redhat.com>
+ChangBo Guo(gcb) <eric.guo@easystack.cn>
+Chaozhe.Chen <chaozhe.chen@easystack.cn>
+ChenZheng <chen.zheng@easystack.cn>
+Chris Krelle <nobodycam@gmail.com>
+Christian Berendt <berendt@b1-systems.de>
+Clark Boylan <clark.boylan@gmail.com>
+Clif Houck <me@clifhouck.com>
+Dao Cong Tien <tiendc@vn.fujitsu.com>
+Davanum Srinivas <davanum@gmail.com>
+David Hu <david.hu@hp.com>
+David Shrewsbury <shrewsbury.dave@gmail.com>
+Devananda van der Veen <devananda.vdv@gmail.com>
+Diego de Lima Pereira <diegolp@lsd.ufcg.edu.br>
+Dirk Mueller <dirk@dmllr.de>
+Dmitry Tantsur <dtantsur@redhat.com>
+Doug Hellmann <doug@doughellmann.com>
+Flavio Percoco <flaper87@gmail.com>
+Florian Fuchs <flfuchs@redhat.com>
+Galyna Zholtkevych <gzholtkevych@mirantis.com>
+Ghe Rivero <ghe.rivero@hp.com>
+HaoZhi, Cui <haozhi.cui@gmail.com>
+Haomeng, Wang <whaom@cn.ibm.com>
+He Yongli <yongli.he@intel.com>
+Himanshu Kumar <singh05himanshu@yahoo.com>
+Hironori Shiina <shiina.hironori@jp.fujitsu.com>
+Jamie Lennox <jamielennox@gmail.com>
+Jamie Lennox <jamielennox@redhat.com>
+Jeremy Stanley <fungi@yuggoth.org>
+Jim Rollenhagen <jim@jimrollenhagen.com>
+John L. Villalovos <john.l.villalovos@intel.com>
+John Trowbridge <trown@redhat.com>
+JuPing <jup.fnst@cn.fujitsu.com>
+Julia Kreger <juliaashleykreger@gmail.com>
+KATO Tomoyuki <kato.tomoyuki@jp.fujitsu.com>
+Kan <kansks@cn.ibm.com>
+Kevin McDonald <k3vinmcdonald@gmail.com>
+Kui Shi <skuicloud@gmail.com>
+Kyrylo Romanenko <kromanenko@mirantis.com>
+Lin Tan <lin.tan@intel.com>
+Lin Tan <tan.lin.good@gmail.com>
+LiuNanke <nanke.liu@easystack.cn>
+Lokesh S <lokesh.s@hp.com>
+Lucas Alvares Gomes <lucasagomes@gmail.com>
+Luong Anh Tuan <tuanla@vn.fujitsu.com>
+Marc Aubry <maubry@internap.com>
+Martin Geisler <martin@geisler.net>
+Maxime Belanger <mbelanger@iweb.com>
+Michael Davies <michael@the-davies.net>
+Michael Turek <mjturek@linux.vnet.ibm.com>
+Mikhail Durnosvistov <mdurnosvistov@mirantis.com>
+Miles Gould <mgould@redhat.com>
+Monty Taylor <mordred@inaugust.com>
+Motohiro OTSUKA <ootsuka@mxs.nes.nec.co.jp>
+Naohiro Tamura <naohirot@jp.fujitsu.com>
+Nisha Agarwal <agarwalnisha1980@gmail.com>
+Ondřej Nový <ondrej.novy@firma.seznam.cz>
+OpenStack Release Bot <infra-root@openstack.org>
+Pavlo Shchelokovskyy <pshchelokovskyy@mirantis.com>
+Rakesh H S <rh-s@hp.com>
+Ramakrishnan G <rameshg87@gmail.com>
+Rodion Promyshlennikov <rpromyshlennikov@mirantis.com>
+Ruby Loo <rloo@yahoo-inc.com>
+Ruby Loo <ruby.loo@intel.com>
+Rui Chen <chenrui.momo@gmail.com>
+Sam Betts <sam@code-smash.net>
+Sascha Peilicke <speilicke@suse.com>
+Sergey Lupersolsky <slupers1@yahoo.com>
+Sergey Turivnyi <sturivnyi@mirantis.com>
+Sergii Turivnyi <sturivnyi@mirantis.com>
+Shuquan Huang <huang.shuquan@99cloud.net>
+Sinval Vieira <sinvalneto01@gmail.com>
+Steve Martinelli <stevemar@ca.ibm.com>
+Tang Chen <chen.tang@easystack.cn>
+Tang Chen <tangchen@cn.fujitsu.com>
+Ukesh Kumar Vasudevan <ukeshkumar@gmail.com>
+Vadim Hmyrov <vhmyrov@mirantis.com>
+Vasyl Saienko <vsaienko@mirantis.com>
+Victor Sergeyev <vsergeyev@mirantis.com>
+Vladyslav Drok <vdrok@mirantis.com>
+William Stevenson <will.stevenson@sap.com>
+Yang Hongyang <hongyang.yang@easystack.cn>
+Yuiko Takada <takada-yuiko@mxn.nes.nec.co.jp>
+YuikoTakada <takada-yuiko@mxn.nes.nec.co.jp>
+Yuriy Zveryanskyy <yzveryanskyy@mirantis.com>
+Yushiro FURUKAWA <y.furukawa_2@jp.fujitsu.com>
+Zhenguo Niu <niuzhenguo@huawei.com>
+jiangfei <jiangfei0622@huawei.com>
+linbing <hawkerous@gmail.com>
+linggao <linggao@us.ibm.com>
+liuqing <jing.liuqing@99cloud.net>
+llg8212 <lilinguo@huawei.com>
+max_lobur <mlobur@mirantis.com>
+qinchunhua <qin.chunhua@zte.com.cn>
+sandriichenko <sandriichenko@mirantis.com>
+shu-mutou <shu-mutou@rf.jp.nec.com>
+sonu.kumar <sonu.kumar@nectechnologies.in>
+venkatamahesh <venkatamaheshkotha@gmail.com>
+vishal mahajan <vishal.mahajan@nectechnologies.in>
+xiexs <xiexs@cn.fujitsu.com>
+zhengchuan hu <zhengchuan.hu@easystack.cn>

@@ -1,0 +1,3 @@
+[console_scripts]
+tacker = tackerclient.shell:main
+

@@ -1,0 +1,58 @@
+Metadata-Version: 1.1
+Name: murano
+Version: 3.2.0
+Summary: Murano API
+Home-page: http://www.openstack.org/software/releases/mitaka/components/murano
+Author: OpenStack
+Author-email: openstack-dev@lists.openstack.org
+License: Apache License, Version 2.0
+Description: ========================
+        Team and repository tags
+        ========================
+        
+        .. image:: http://governance.openstack.org/badges/murano.svg
+            :target: http://governance.openstack.org/reference/tags/index.html
+        
+        .. Change things from this point on
+        
+        Murano
+        ======
+        
+        Murano Project introduces an application catalog, which allows application
+        developers and cloud administrators to publish various cloud-ready
+        applications in a browsable categorised catalog. Cloud users
+        -- including inexperienced ones -- can then use the catalog to
+        compose reliable application environments with the push of a button.
+        
+        
+        Project Resources
+        -----------------
+        
+        * `Murano Official Documentation <http://docs.openstack.org/developer/murano/>`_
+        
+        * Project status, bugs, and blueprints are tracked on
+          `Launchpad <https://launchpad.net/murano>`_
+        
+        * Additional resources are linked from the project
+          `Wiki <https://wiki.openstack.org/wiki/Murano>`_ page
+        
+        * `Python client <https://git.openstack.org/cgit/openstack/python-muranoclient>`_
+        
+        License
+        -------
+        
+        Apache License Version 2.0 http://www.apache.org/licenses/LICENSE-2.0
+        
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: OpenStack
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5

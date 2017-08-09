@@ -1,0 +1,50 @@
+#cloud-config
+write_files:
+  - path: /etc/systemd/system/enable-kubelet.service
+    owner: "root:root"
+    permissions: "0644"
+    content: |
+      [Unit]
+      Description=Enable Kubelet
+
+      [Service]
+      Type=oneshot
+      EnvironmentFile=/etc/sysconfig/heat-params
+      ExecStart=/etc/sysconfig/enable-kubelet-master.sh
+
+      [Install]
+      WantedBy=multi-user.target
+
+  - path: /etc/sysconfig/enable-kubelet-master.sh
+    owner: "root:root"
+    permissions: "0755"
+    content: |
+      #!/bin/sh
+
+      if [ -z "${KUBE_NODE_IP}" ]; then
+        KUBE_NODE_IP=$(curl -s http://169.254.169.254/latest/meta-data/local-ipv4)
+      fi
+
+      CONF_FILE=/etc/systemd/system/kubelet.service
+      cat > $CONF_FILE <<EOF
+      [Service]
+      Environment=KUBELET_VERSION=${KUBE_VERSION}
+      Environment=KUBELET_ACI=${HYPERKUBE_IMAGE_REPO}
+      ExecStart=/usr/lib/coreos/kubelet-wrapper \
+        --api-servers=http://127.0.0.1:8080 \
+        --address=0.0.0.0 \
+        --register-node=true \
+        --register-schedulable=false \
+        --allow-privileged=true \
+        --config=/etc/kubernetes/manifests \
+        --hostname-override=${KUBE_NODE_IP} \
+        --logtostderr=true \
+        --v=0
+      Restart=always
+      RestartSec=10
+      [Install]
+      WantedBy=multi-user.target
+      EOF
+
+      systemctl enable kubelet
+      systemctl --no-block start kubelet

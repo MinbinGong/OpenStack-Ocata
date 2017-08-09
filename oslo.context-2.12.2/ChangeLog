@@ -1,0 +1,225 @@
+CHANGES
+=======
+
+2.12.2
+------
+
+* Updated from global requirements
+* Updated from global requirements
+
+2.12.1
+------
+
+* Postpone deprecation warnings to Pike
+* Update UPPER_CONSTRAINTS_FILE for stable/ocata
+* Update .gitreview for stable/ocata
+
+2.12.0
+------
+
+* Updated from global requirements
+* Remove references to Python 3.4
+* Add Constraints support
+* Show team and repo badges on README
+* Add the service token details to context
+* Reformat the Context.__init__ arguments
+* Move existing attributes to _id suffixed attributes
+
+2.11.0
+------
+
+* Updated from global requirements
+* Revert "Fix X-User and X-Tenant deprecated headers in from_environ"
+* Updated from global requirements
+* Updated from global requirements
+* Changed the home-page link
+
+2.10.0
+------
+
+* Enable release notes translation
+* Updated from global requirements
+* Provide a way to deprecate policy values
+* Update reno for stable/newton
+* Fix typos
+* Fix X-User and X-Tenant deprecated headers in from_environ
+
+2.9.0
+-----
+
+* Updated from global requirements
+
+2.8.0
+-----
+
+* Delete H803 in flake8 ignore list
+* Fix parameters of assertEqual are misplaced
+* Manually specify from_dict parameters
+
+2.7.0
+-----
+
+* Add Python 3.5 classifier and venv
+* Emit deprecation warnings when positional args passed
+
+2.6.0
+-----
+
+* Allow deprecated X-Tenant-Name in from_environ
+* Handle openstack.request_id in from_environ
+* Add is_admin_project to context
+* Updated from global requirements
+
+2.5.0
+-----
+
+* Add reno for releasenotes management
+* Add oslo.context name attributes matching ids
+
+2.4.0
+-----
+
+* Trivial: ignore openstack/common in flake8 exclude list
+* Strip roles in from_environ
+* Allow deprecated headers in from_environ
+
+2.3.0
+-----
+
+* Drop babel as requirement since its not used
+* Updated from global requirements
+* Ensure to_dict() supports unicode
+
+2.2.0
+-----
+
+* Standardize an oslo.policy credentials dictionary
+* Revert "Add common oslo.log format parameters"
+* Add roles to context
+
+2.1.0
+-----
+
+* Agnostic approach to construct context from_dict
+* Add common oslo.log format parameters
+
+2.0.0
+-----
+
+* Improve Context docs with example syntax
+* Define method for oslo.log context parameters
+* Add additional unit tests
+* Fix request_id type on Python 3: use text (Unicode)
+* Updated from global requirements
+* Provide a helper to load a context from environment
+
+1.0.1
+-----
+
+* Revert "Add properties for id attributes"
+* Add properties for id attributes
+* Trival: Remove 'MANIFEST.in'
+
+1.0.0
+-----
+
+* Updated from global requirements
+* Remove python 2.6 classifier
+* Remove python 2.6 and cleanup tox.ini
+
+0.9.0
+-----
+
+* Remove reference to undefined attributes
+
+0.8.0
+-----
+
+* Fix coverage configuration and execution
+
+0.7.0
+-----
+
+* Add shields.io version/downloads links/badges into README.rst
+* Change ignore-errors to ignore_errors
+* Updated from global requirements
+
+0.6.0
+-----
+
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+
+0.5.0
+-----
+
+* Updated from global requirements
+* Updated from global requirements
+* Add tox target to find missing requirements
+* Updated from global requirements
+* Updated from global requirements
+
+0.4.0
+-----
+
+* Remove support for Python 3.3
+* Do not sync run_cross_tests.sh
+* Updated from global requirements
+
+0.3.0
+-----
+
+* Uncap library requirements for liberty
+* Standardize setup.cfg summary for oslo libs
+* Update to latest hacking
+* Updated from global requirements
+* fix bug tracker link
+
+0.2.0
+-----
+
+* ensure we reset contexts when fixture is used
+* Activate pep8 check that _ is imported
+
+0.1.0
+-----
+
+* Workflow documentation is now in infra-manual
+* Documentation cleanup
+* Add ClearRequestContext fixture
+* Cache the current context for the thread
+* Add docstring to get_admin_context()
+* Change instance_uuid to resource_uuid
+* Better information in the README
+* Generate better documentation for the module
+* Move out of the oslo namespace package
+* get test to actually run
+* fix links and requirements to latest versions
+* Make the unit test run properly - fix import
+* exported from oslo-incubator by graduate.sh
+* Add a RequestContext.from_dict method
+* Use oslotest instead of common test module
+* Python 3: enable tests/unit/middleware/test_request_id.py
+* Add model_query() to db.sqlalchemy.utils module
+* Adding domain to context and log
+* Remove vim header
+* Remove uuidutils imports in oslo modules
+* Revert "Removes generate_uuid from uuidutils"
+* Removes generate_uuid from uuidutils
+* Adding instance_uuid to context and log
+* Replace using tests.utils with openstack.common.test
+* Fix bad default for show_deleted
+* Enable hacking H404 test
+* Replaces the standard uuid with common in the context module
+* Fix Copyright Headers - Rename LLC to Foundation
+* Fix inconsistency with auth_tok/auth_token
+* Replace direct use of testtools BaseTestCase
+* Use testtools as test base class
+* Move get_context_from_function_and_args() to context.py
+* Added dictify() and uuids to the common request context
+* add context 'tests'
+* make the skeleton project a template
+* reog from import merge
+* Add some more generic middleware, request context, utils, and versioning. Add basic template for server binary
+* Initial skeleton project

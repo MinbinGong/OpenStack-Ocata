@@ -1,0 +1,2206 @@
+CHANGES
+=======
+
+3.2.0
+-----
+
+* Fix murano-api docs
+* Fixed opportunity run muranoagent twice
+* Remove support for py34
+* Prepare for using standard python tests
+* Remove heat as enable_service in devstack
+* Make use of already registered group
+* Increase unit test coverage for Cfapi
+* Fixes various Cfapi bugs
+* 'io.murano.apps.' is not used to download packages
+* Updated from global requirements
+
+3.1.0
+-----
+
+* Updated from global requirements
+* Fix typos
+* v1 execution plan template processing was fixed
+* Marking rabbitmq password config property as secret
+* Fixes various documentation typos in Murano automated tests description
+* Exclude build dir for flake8 test
+* Add debug to tox enviroment
+* Updated from global requirements
+* Allows fetching of deployments from all environments
+* Increase unit test coverage for Common WSGI
+* Update response code descriptions in API spec
+* Let admin can delete user's environment
+* Correct the wrong calling 'getExternalNetworkIdForRouter'
+* Fix a typo
+* Increase unit test coverage for Common Auth Utils
+* Updated from global requirements
+* Fixes TypeError thrown by parallel_select in DSL Helpers
+* Remove ALLOWED_HOSTS using murano devstack plugin
+* Removes unnecessary utf-8 encoding
+* Developing Murano Packages 101
+* Increase unit test coverage for DSL Helpers
+* Updated from global requirements
+* Use test-config phase for configuring murano tempest
+* Updated from global requirements
+* Use assertIn() to replace asserTrue(* in *)
+* ExistingNeutronNetwork didn't return IPs for the instance
+* Updated from global requirements
+* Deleting dates from dictionaries to skip it in assert
+* Use assertIsNone(...) instead of assertIs(None, ...)
+* Add log translation marker
+* Updated from global requirements
+* modify print information
+* Modify variable's usage in Log Messages
+* Updated from global requirements
+* Replace six iteration methods with standard ones
+* Translate info-level log messages for LOG.error
+* Murano can now properly attach VMs to shared networks
+* Fixed SharedIp class
+* Fix removes date_time items from dictionaries
+* Always declare agent RabbitMQ queues
+* 2 forgotten files from https://review.openstack.org/#/c/401327
+* Reduce the amount of smoke tests from 61 to 40
+* Show team and repo badges on README
+* Updated from global requirements
+* Fix syntax errors of exception print
+* Fix syntax errors of the comments
+* Add Nova anti-affinity rules
+* Ability to retrieve current/owner user/project
+* Revert "Update devstack keystone_authtoken config to fit with keystone v3"
+* Multi-region support for WindowsInstance
+* HeatStack async mode fix
+* Don't purge random stacks
+* Fix a typo
+* Configuration is now properly applied to new nodes
+* Fix typos in cover.sh
+* Updated from global requirements
+* [Docs] Restructuring
+* Add murano-pkg-check to the test-requirements.txt
+* Increase unit test coverage for common wsgi
+* Use method ensure_tree from oslo.utils
+* [Docs] Restructuring
+* Replace oslo_utils.timeutils.isotime
+* Updated from global requirements
+* Fill ALLOWED_HOSTS using murano devstack plugin
+* Updated from global requirements
+* Order the packages for parameter search
+* Typo fix in murano
+* Documentation for Parameters and ParametersSource
+* Fix typos in class_templ.rst & test_catalog.py
+* OpenStack typo
+* Updated from global requirements
+* Fix debug output for SSLMiddleware X-Forwarded-Proto
+* Updated from global requirements
+* Updated from global requirements
+* Increase unit test coverage for common engine and instance statistics API
+* Move test with cinder backup creation to the IsolatedAdmin suite
+* Fixed Shellcheck's warnings in murano-agent
+* Unblocking the gate
+* Update devstack keystone_authtoken config to fit with keystone v3
+* Increase unit test coverage for Version Negotiation API
+* Increase test coverage for Schema Generation API
+* Increase unit test coverage for Stats API
+* Repair cinder integration tests
+* Update .coveragerc after the removal of openstack directory
+* Added LICENSE to application development library
+* Increase unit test coverage for Heat Stack
+* Improve first app builds
+* Updated from global requirements
+* Fix TypeError being throw by wait_ready in Engine System Agent
+* Increase unit test coverage for Agent API
+* Remove getRegion() calls from network initializers
+* Updated from global requirements
+* Fix statservice save db error
+* Increase unit test coverage for db services environments and engine system
+* Increase unit test coverage for engine system
+* Increase unit test coverage for Engine Package Loader
+* [docs] Update API spec with info about environment model API
+* [docs] Add info about show env model and edit env model commands
+* Fix TypeError being thrown by six.reraise in Engine Package Loader
+* Improve tests documentation markup
+* Fix a typo in multi_region.rst
+* Increase unit test coverage for CFConnections API
+* Increase unit test coverage for Manage CLI
+* Increase unit test coverage for murano heat stack and yaql
+* Enable release notes translation
+* Updated from global requirements
+* [Docs] Add skeleton for My first Murano app guide
+* Initialize environments with empty metadata
+* Add environment edit API
+* MetadataAware mixin added to Core Library
+* [docs] fix typo manual installation
+* Fixes Statistics class create referencing invalid attributes for models.ApiStats
+* GC unit test coverage increased
+* Increase unit test coverage for DB Instances API
+* Fix TypeError being thrown by delete_environment_from_space in cf_connections
+* Increase unit test coverage for base Utils
+* Increase unit test coverage for External Context Middleware
+* Increase unit test coverage for mqclient
+* Filter enviroment list by project id
+* Metadata storage in object model
+* Increase unit test coverage for common.app_loader
+* Increase unit test coverage for Stat Service API
+* Increase unit test coverage for Common Server API
+* Correctly release CinderVolumes
+* Fix typo and make docstring more clear
+* Increase unit test coverage for Schemas API
+* Increase unit test coverage for Sessions API
+* Allow to PUT an empty object model
+* Updated from global requirements
+* Increase unit test coverage for hacking checks
+* [Docs] [networking] section for multi-region deployment
+* Increase unit test coverage for Services Actions API
+* Async HeatStack::push
+* Fix indentation in ReplicationGroup class
+* Increase unit test coverage for murano heat stack
+* Increase unit test coverage for test fixture
+* Mark .testr.conf as not-executable
+* Using assertIsNotNone() instead of assertNotEqual(None) and assertIsNot(None)
+* Change assertTrue(isinstance()) by optimal assert
+* Increase unit test coverage for dsl session_local_storage
+* Fix invalid SessionState.deploying reference in services actions
+* Increase unit test coverage for Hot Package API
+* Refactoring of Instance::ipAddresses retrieving
+* Prevent unnecessary stack.push in Instance::releaseResources
+* Increase unit test coverage for services api
+* Adds menuselection syntax in enduser guide, quick start section
+* Increase unit test coverage for Package Base API
+* Increase unit test coverage for exceptions in Packages API
+* Increase unit test coverage for common utils
+* Change assertTrue(isinstance()) by optimal assert
+* Fixes CFServiceInstance.to_dict calls wrong class
+* Increase unit test coverage for murano db and db services
+* MuranoPL garbage collection system overview
+* Fix the python3.4 TypeError
+* Fix menuselection syntax in enduser-guide
+* Fix typo
+* Revises json to JSON, yaml to YAML and yaql to YAQL in documents
+* Use sys.maxsize instead of sys.maxint
+* Updated from global requirements
+* Fix copying file before checking it exists in hot package
+* Increase unit test coverage for Load Utils API
+* Murano bindings to Glance Metadef API
+* Call addGroupingress() in init of NeutronSecurityGroupManager
+* Increase unit test coverage for MPL Package API
+* Fix a grammatical error
+* Fix removes duplicated phrase from the document
+* [Docs] Document Multi-Region Support
+* [docs] Add info about template() contract
+* Updated from global requirements
+* Add quotes to versions
+* Add hacking rule for using assertIsNone instead of assertEqual(None,***)
+* Fix some typos in devstack readme
+* Install all apps from ./meta directory on devstack
+* Remove unused config.CONF
+* [Docs] Migration guide to newton for application developer
+* Documentation on App development framework
+* Remove networking config section from devstack settings
+* Use fnmatch from oslo.utils
+* Updated from global requirements
+* Add missing ":command:" markup for the command
+* Remove unnecessary setUp
+* [Core Library] Add getInstanceIpList to NovaNetwork
+* Increase unit test coverage for dsl attribute_store and context_manager
+* Increase unit test coverage for system agent
+* Replace retrying with tenacity
+* Increase unit test coverage for Static Actions API
+* Increase unit test coverage for Env Templates API
+* Increase unit test coverage for Actions API
+* Increase unit test coverage for Catalog API
+* Increase unit test coverage for api deployments
+* Convert =0 version specs to ==0 specs
+* Move getRegion() in CinderVolume to deploy() method
+* Update docs with installation of io.murano.applications
+* Remove the unused images
+* Fix a typo in utils.py
+* Updated from global requirements
+* [messaging] Using get_notification_transport()
+* [Docs] Murano plug-ins
+* Increase unit test coverage
+* Remove  default=None for config options
+* Add unit versioning test suite
+* Updated from global requirements
+* Update reno for stable/newton
+* Fixes ObjectDestroyedError on StackTrace object
+* Move session.finish() to 'finally' block
+
+3.0.0.0rc1
+----------
+
+* Forces applications to be deleted before Heat stack
+* Prevent logging of result of resources.string() method call
+* Prevent executor finalization until exception are not handled
+* Small fixes in Core Library
+* [docs] Conventional changes and formatting fixes
+* Serialization of destruction dependencies
+* GC.isDoomed() and GC.isDestroyed() functions were added
+* Serialization of destroyed objects
+* Raise exception on call of method of destroyed object
+* Pass receiver to :GC.subscribeDestruction explicitly
+* On-demand garbage collection
+* Break cyclic references in DSL
+* Cleanup, clarify newton release-notes
+* [Doc] Add auth params to core library import instruction
+* Fix multiple errors in network configuration function
+* Add joinedNetworks property to Instance class
+* Use openstack-client variables in openstack CLI calls
+* [Docs] Update screenshots
+* Better detect and configure murano-agent pre-installed on image
+* Updated from global requirements
+* Adjust region name for network selection in devstack
+* Make tests compose packages in temporarily directory
+* [Docs] Add info about using abstract dependencies between applications
+* Use default region_name parameter in clients
+* Create glare client in functional tests
+* [messaging] Using get_notification_transport()
+* Move misplaced reno notes in place
+* Fix NetworkExplorer creation
+* Fix adds notes about replacements of items between % signs
+* Fixes invalid expression in app dev framework
+* Set the desired hostname to a instance using murano instead of Murano Pattern
+* Add __ne__ built-in function for murano
+* Object's properties deserialize was fixed
+* Fix for Wrong reference in glare docs
+* ObjectStore parent lookup with temporary id was fixed
+
+3.0.0.0b3
+---------
+
+* Updated from global requirements
+* Type name resolution was fixed
+* Increase description column length in task table
+* An initial commit for MuranoPL garbage collector
+* MasterSlave* classes were deleted
+* Alive objects from Objects and ObjectsCopy were merged
+* Migrate JSON schema generator to new framework
+* Update clients with multi-region support
+* Update app dev framework with multi-region support
+* New framework for contracts
+* TestFixture mocks were updated
+* firstOrDefault() was replaced with first(null)
+* Replace functions 'Dict.get' and 'del' with 'Dict.pop'
+* Updated from global requirements
+* TrivialFix: Remove cfg import unused
+* modify the home-page info with the developer documentation
+* Correct murano reraising of exception
+* Update Readme with correct Doc URL
+* Install all dashboard/panel files from murano-dashboard
+* OpenstackSecurityConfigurable was renamed
+* Allow network driver selection override
+* Fix some typos in wsgi.py & catalog.py
+* Updated from global requirements
+* Remove pot files
+* Adds more replica provider primitives
+* Migration of replication to the template() contract
+* Clean imports in code
+* Update the UI test running documentation
+* Change Murano API detection in tests and fix tests itself
+* [docs] Add instruction to add policy files to horizon
+* Use upper constraints for all jobs in tox.ini
+* Base Application classes for App Development Framework
+* Extracted replication capabilities from ServerGroup
+* Updated from global requirements
+* Revert "Fix config group for SSL in tempest test"
+* Fix config group for SSL in tempest test
+* Fixes congress integration
+* SoftwareComponent hierarchy refactoring
+* Improved Server naming and provisioning reporting
+* Renamed Instance* to Server*
+* AppDevFramework: Server Replication reporting
+* [Docs] Moves network configuration to admin-guide
+* Refactor 'wait_for_environment_deploy' function
+* Use glare urls explicitly in devstack plugin
+* Add tempest versioning test suite
+* Support for multi-regional apps was added
+* Do not serialize Config properties
+* Don't put non-initialized objects into ObjectStore
+* template() contract function was introduced
+* Updated from global requirements
+* Refactor merge_dicts helper function tests
+* Add multiple api workers
+* Trivial: Add python identifiers in setup.cfg
+* Linux.runCommand() and Linux.putFile() are now non-synchronized
+* Changes type format in object model
+* Fixed reporting in app development framework
+* [docs] Remove "meta-class" term
+* Updated from global requirements
+* Add missing parenthesis
+* Add deployment murano tempest test
+* Make service broker work with GLARE again
+* Fix a typo in the rst file
+* Move .init call into separate load phase
+* Get rid of type origins
+* Add py2.7 and py3.4 identifiers in setup.cfg
+* Add cinder volumes attachment tests
+* Updated from global requirements
+* [docs] Fix formatting in installation guide
+* Add base and packages for tempest murano scenario tests
+* Nested new() were not using 2-phase load
+* Duplicate objects were instantiated for redeclared properties
+* Updated from global requirements
+* [Docs]Update the Murano service broker install guide
+* Fix string interpolation to delayed by logging
+* Add Python 3.5 classifier and venv
+* Use assertIn, assertNotIn and assertIsNotNone
+* Do not override credential provider in tenant isolation tests
+* [Docs] Move user and appdev guides from draft to main docs
+* SoftwareComponent implementation
+* MuranoPL forms implementation
+* Respect per region RabbitMQ configs in Agent[Listener]
+* Updated from global requirements
+* Concurrent Execution Control
+* InstanceGroup and InstanceProvider hierarchy
+* Event Notification pattern implemented
+* Replication classes of Application Development Framework library
+* TestFixtureWithEnvironment class for TestRunner
+* dump() function added to DSL
+* Ability to instantiate object graph
+* Refactor tempest utils readlines() to read()
+* Fix typo in package loader logging
+* Use assertEqual() instead of assertDictEqual()
+* Fix used package versions for stable inheritance
+* Refactoring of the ObjectStore passing in DSL
+* [Docs] Change FQNs of murano apps and add examples of FQNs
+* [Docs] Add information about Config property usage
+* Use devstack for service broker use separate paste and db
+* Replace OpenStack LLC with OpenStack Foundation
+* Enable static action tests with glare backend
+* Add tempest GLARE sanity check tests
+* Initial implementation of artifacts client in tempest plugin
+* [Docs] Clarify how to run API and engine in separate terminal
+* Fix cfapi test job
+* Devstack install murano-dashboard with murano RBAC policy
+* Updated from global requirements
+* [Docs]Update the Murano Dashboard install guide
+* Fixed owner usage for dict-based new() function
+* Updated from global requirements
+
+3.0.0.0b2
+---------
+
+* [Docs] Add parameter resources-dir for hot-packages
+* Updated from global requirements
+* Add py27-mitaka tox target
+* Updated from global requirements
+* Use keystoneauth1 lib for authentication helpers
+* fix a spelling mistake: applcation should be application
+* Implement API call and RPC call for static actions
+* Could not invoke static methods from Python
+* [Docs] Add info about 2.2.0 version of execution plan template format
+* Add filter based on 'in' operator
+* Use upper-constraints in tox test environments
+* [docs] Added murano gerrit dashboard
+* Do not use stevedore namespase as a prefix for class FQNs
+* Use the absolute path for the session backend
+* Use multiprocessing.cpu_count instead of psutil.NUM_CPUS
+* Improve cover job output
+* Updated from global requirements
+* Improved Test-Runner's output
+* Test-runner now properly invokes setUp/tearDown methods
+* Added equality handlers for MuranoObjectInterface
+* Update namespaces for MagnumBay application
+* Include objects created with new() into the ObjectStore
+* Allows Spec::transform treat generators as list
+* Convert script line endings for the target OS
+* Improve __init__ detection
+* Fix error in Magnum-app
+* Amended reno note about booting from cinder volumes
+* [Docs] Add a reference to the article about multi regions
+* Use Murano-specific Horizon settings when devstack install
+* Get package service backend when package import in devstack
+* [Plugins] Updated from global requirements
+* Add metadata to the result of action serialization
+* Implement new syntax for action declaration
+* Fix issue with deployment with cloudbase-init on Windows
+* Updated from global requirements
+* Use SafeLoader to load yaml files
+* Added a muranoPL-specific override of 'call'
+* Refactor API params tuples to sets
+* Format logs in devstack setup
+* Including a description field for environment and environment templates
+* Updated from global requirements
+* [docs] Add information about TestSuiteMultipleEnvironments
+* Use a correct config option in example plugin
+* Add io.murano namespace to demo app for example plugin
+* Use murano CLI for importing core library in devstack
+* Remove version from example and heat-translator plugins
+* Fix missing parenthesis in _getSubnetworks call
+* Fix application template update
+* Two-phase Instance deployment support
+* Fixed a bug when Heat Stack Update was called without template changes
+* Finish porting unit tests to Python 3
+* Port API v1 unit tests to Python 3
+* Fixed inability to deploy if security groups are disabled
+* Port test_agent and test_catalog to Python 3
+* Implement meta-classes for UI hints
+* Add timeout to the methods of Linux class
+* Fix defaultGroupName of SecurityGroupManager Class
+* Devstack add compile message for murano-dashboard
+* Change to tempest stable API
+* Reorder release notes to put master on top
+* [Docs] Add an example about usage of static methods in contracts
+* Updated from global requirements
+* Update version of source files in cloudify example app
+* Update obsolete way of initialize tempest client manager
+* Update functional test _get_stack
+* Updated from global requirements
+* [Docs] Fix typos
+* Updated *_domain_id to "Default"
+* Magnum plugin: import exceptions robustly
+* fix typo oslo.messaginga
+* Fixing application template deletion
+* Fix mismatch description in env template api doc
+* Updated from global requirements
+
+3.0.0.0b1
+---------
+
+* Updated from global requirements
+* [devstack] Pass MURANO_USE_GLARE as bool, not as str
+* Update version of cloudify client in cloudify plugin requirements
+* Move service broker api to the top level
+* Generate separate db for murano service broker
+* Replace obsolete way of get creds in tempest tests
+* Documentation to use sub-templates in HOT packages
+* Updated from global requirements
+* [Docs] Replace names and images
+* [Admin Guide] System requirements
+* Added package references to generated UIs
+* Forced flush of tmp file to disk on ui retrieval
+* Support GLARE configuration in Murano tempest plugin
+* Fix up Assignment table in MuranoPL Reference
+* Remove unnecessary executable permissions
+* [Docs] Add info about manifest format to versioning docs
+* Updated from global requirements
+* [docs] Fix small typo in docs about automated tests
+* Updated from global requirements
+* [Trivial] Fix mismatch string format argument
+* Add models and migration for new service broker db
+* Increase status report messages time resolution
+* Correct wrong import statement in Magnum App
+* Updated from global requirements
+* Trivial: ignore openstack/common in flake8 exclude list
+* [docs] Add info about sanity_check suits
+* Updated from global requirements
+* [Docs] Install diskimage-builder by pip
+* [Murano Docs] Versioning
+* Allow insecure SSL communications with RabbitMQ
+* Modified docstrings to comply with pep8 H405 style check
+* Change incorrect murano-agent bin file location
+* Updated from global requirements
+* Remove explicit version from magnum plugin
+* Support GLARE installation in devstack Murano plugin
+* [Murano Docs] Cinder Volume supporting
+* Pass [rabbitmq]/ca_certs file to murano-spawned instance
+* Skip test_migrations on Python 3
+* Revert the destroy execution order
+* [Trivial] Remove unnecessary executable privilege
+* [Murano Docs] Murano Contributor rules
+* Fix tempest.conf generation
+* Support for *args/**kwargs was added to the MuranoPL
+* Deployment reports datetime DB insertion was fixed
+* Incorrect Method param inheritance was fixed
+* [Docs] Add limitations of deployment murano-agent by cloud-init
+* Fix typo in word "settings" in docs about using glare
+* Fix inaccuracies in docs about murano apps tests
+* Fixes race condition in HeatStack
+* Fixed a bug in _get_glare_url
+* Updated from global requirements
+* Fix base64 on Python 3 in yaql_functions.py
+* Port cloudfoundry/test_cfapi.py to Python 3
+* Port test_plugin_loader to Python 3
+* Fix tox -e py34
+* Imported Translations from Zanata
+* [Murano Docs] Edits
+* Use unified decorator for retries
+* Updated from global requirements
+* [Murano Docs] Remove articles
+* [Murano docs] Publish CLI section
+* Switch to using get_notification_listner
+* Change clusterip field description in docs about Dynamic UI
+* Add ability to configure home region in murano devstack installation
+* Do not force admin credentials in service broker test suite
+* Remove tempest-lib from test-requirements
+* Increased the size of TEXT columns to store large object models
+* 'GetPackageUI' API can now be called even if Glare is used
+* Updated from global requirements
+* Add help string for cfapi opts
+* Updated from global requirements
+* Heat stack deletion for HOT/TOSCA packages was fixed
+* [Murano Docs] Install murano-agent by cloud-init
+* [Murano Docs] Manage environment templates
+* Add documentation about bundles
+* Define context.roles with base class
+* [docs] Add stable branch backporting documentation
+* Updated from global requirements
+* [docs] Documentation about using Glare Artifact Repository
+* [docs] Fixed cfapi CLI command sections
+* Track status report timestamp
+* Fix Heat Resource Leak in LinuxMuranoInstance
+* Fix links for samples in heat-transtator plugin
+* Destroy orphan objects
+* Don't use bash eval for Linux.runCommand
+* Add note about big files download
+* [Murano Docs] Set environment variables
+* Fix case-sensitive filter value in cfapi
+* Docs about murano applications debugging
+* Do not upgrade packages with cloud-init
+* Fix typos in Murano files
+* Clean up the configure network doc
+* Revert "Use unified retrying decorator"
+* Use unified retrying decorator
+* Document changes in Dynamic UI
+* Adds a test for logo validation
+* Handling of ephemeral methods was fixed
+* Removed warnings from building docs
+* [doc] Fix typo in directory name
+* [doc] Fix formatting for argument
+* Also package murano_tempest_tests
+* Remove unnecessary packages.rst
+* [doc] Fix malformed table error
+* Use _LW for deprecation warning
+* Update reno for stable/mitaka
+
+2.0.0.0rc1
+----------
+
+* Upgrade bind function to use murano actions
+* [cfapi] Use muranoclient to access murano packages
+* Fix error on deleting Magnum App
+* Document MuranoPL Metadata
+* Removes ability to alter defaults for child objects
+* Add descriptions for policy rules
+* Do not wait for MessageHandlingServer
+* App to deploy Magnum Bay
+* Updated from global requirements
+* Documentation for static/extension method/properties
+* Import and deploy TOSCA CSAR packages
+* Deprecate packages_opts conf group
+* Delay load of package Meta
+* Modified the wrong note
+* register the config generator default hook with the right name
+* [Murano Docs] Install murano client
+* [Admin Guide] SSL configuration
+* Meta values evaluation was fixed
+* Documentation for reflection capabilities in MuranoPL
+* [Admin Guide] Deploy murano
+* Spelling mistake corrected
+* Add 'delete-application-from-env-template' in spec doc
+* Updated from global requirements
+* Moved CORS middleware configuration into oslo-config-generator
+* Fix static method parameter validation
+* Improve logo validation during package uploading
+* Makes config() function be available to Core Library only
+
+2.0.0.0b3
+---------
+
+* Added property to associate environment with OS region
+* Extension methods were introduced to MuranoPL
+* [Murano Docs] Fix description for bundle-import
+* Py3 compatibility fixes
+* Support of MuranoPL extended metadata was added
+* [Murano Docs] [CLI] Intro
+* [Docs] Add info about two new properties of Instance class
+* Identity v3 support to external context middleware
+* [Murano docs] fix command name in enduser-guide
+* [doc]Update the compose.rst images path
+* Add roles to RequestContext.to_dict if they're not there
+* Do not use list lenght checks in Env-Templates test suite
+* Fix the entry point for oslo-config generator
+* Update tempest plugin after tempest-lib deprecation
+* Added links to murano-specs documentation
+* [Murano Docs]/[docs] Replace all instances of "tenant" with "project"
+* Fix clobbered releasenote
+* Fix incorrect ICMP rule in SecurityGroup
+* Remove unused pngmath Sphinx extension
+* Rename glance to glare
+* Ability to have several MuranoPL classes in single YAML file
+* Use precompiled regex for yaql expression detection
+* Use more generic "type" name instead of "murano_class"
+* Support unversioned keystone endpoints
+* [doc]Improve the Murano client doc
+* Updated from global requirements
+* Update docs, to reflect correct place for driver config option
+* [Core-Library] Fix the name of variable in Instance method
+* Remove obsolete tests for logging
+* Added [murano-test-runner] venv in tox
+* Strengthen validation of receiver type for methods
+* Namespace resolution was incorrect for empty namespace
+* Refactoring of smart-types defined in DSL
+* Allow static methods to detect calls on object
+* Import of static and classmethod Python methods
+* [Murano Docs] Multi-region support
+* Updated from global requirements
+* Removes unnecessary import
+* Heat stack was not always deleted
+* Fix tests that broke after release of oslo.config 3.8
+* Add multiple engine workers
+* Updated from global requirements
+* Major refactoring of how OS clients are created and managed
+* Operations on reflected entities
+* Updated from global requirements
+* Enable pep8 to check files in directory tools
+* Support for static methods/properties
+* Basic reflection capabilities were added to MuranoPL
+* Migration to yaql 1.1
+* Remove incorrectly used "# flake8: noqa"
+* Use eventlet.monkey_patch() before any libs are loaded
+* [docs]Update the package-import version parameter
+* Updated from global requirements
+* New operator 'is' was added
+* [Murano Docs] Log in to murano-spawned instance
+* [Murano docs] Managing packages -edits
+* Update documentation to use openstack-client
+* Improve grammar in reno notes
+* Versioning for class configs
+* Add the max length check for environment update
+* Add test for update environment with invalid name
+* Don't use list lenght check in Repository test suite
+* Updated from global requirements
+* Remove KEYSTONE_CATALOG_BACKEND variable usage
+* Update glare definitions path
+* [Murano Docs] Fix Windows 2012 R2 and 2008 R2 image links
+* Fix adding unit test module
+* Removes unused posix_ipc requirement
+* [Core-Library] Add ability to boot instance from volume
+* Updated from global requirements
+* Updated from global requirements
+* Replace HTTP 415 return code to HTTP 406 when it's correct
+* cleanup of manual rst file murano docs
+* cleanup of specification murano docs
+* Fixed confirmInput parameter name in Dynamic UI docs
+* Fix incorrect result of listing templates
+* Remove xfail in service broker negative tests
+* [Murano Docs] [CLI] Remove manage apps
+* [doc] Add documentation on package loaders and package cache
+* [Core-Library] Reset all out properties during releasing
+* Updated from global requirements
+* Skip description from service transformation
+* [Murano Docs] Extend Contract section
+* Use uppercase 'S' in OpenStack
+* Fix spelling typos
+* [package_cache] Lock usage_mem_lock based on package id
+* [Core-Library] Increase format version
+* copy-editing of debug-tips murano file
+* fixed typo on client rst file
+* [Core-Library] Add 'direction' argument to '_addGroup' method
+* [Murano Docs] Fix indentation level in UI definition example
+* Remove old API tests in favor of tempest plugin
+* [Core-Library] Delete redundant expression from Instance deploy method
+* Add environment templates test suite to the tempest plugin
+* Add categories management test suite to the tempest plugin
+* [Murano Docs] [CLI] Deploying
+* Allow murano to run under windows
+* Update _get_tags function to prevent race condition
+* Move load_packages_from from engine section to packages_opts section
+* Cleanup .lock files after package deletion from cache
+* Add service management tests suite to the tempest plugin
+* Add session management test suite to the tempest plugin
+* Add environment management test suite to the tempest plugin
+* Add missing whitespace to error message
+* Attempt deleting stale packages from cache at download time
+* Add application catalog repository tests to the tempest plugin
+* Updated from global requirements
+* [Core-Library] Fix the way of getting DNS in describe() method
+* Updated from global requirements
+* [Murano Docs] [CLI] Manage categories
+* Remove cap for pip version
+* [Doc] Update YAQL repository link
+* Updated from global requirements
+* API hanged on a termination signal
+* testtools was moved to main requirements file
+* [docs]Rename 'Package Definitions' to 'Packages'
+* Introducing ConfLangInstance
+* Fix import order of modules
+* Allow package cache to persist on disc
+* [Core-Library] Add ability to specify direction and ethetype for groups
+* Updated from global requirements
+* "notification_driver" from group "DEFAULT" is deprecated
+
+2.0.0.0b2
+---------
+
+* Cap pip to <8 for dsvm job
+* Python3: Add support for raise and urlparse
+* Install murano-agent by cloud-init
+* [Docs] Update Dymanic UI specification
+* Fix using map() for python2,3 compatibility
+* [docs] Add murano test runner information
+* Fix migrations to maintain compatibility with sqlite
+* Fixes attribute store for MuranoClassReference types
+* Updated from global requirements
+* Python3: Use six.moves for py2 compatibility
+* Python3: Replace basestring by six.string_types
+* [Doc] Fix directory name containing execution plan template
+* Add package check for package name length
+* Updated from global requirements
+* Python3:Replace iter.next() with next(iter)
+* Fix python 2 and 3 compatibility issue with six
+* Python3: Replace dict.itervalues with six.itervalues
+* Python3: Replace dict.iterkeys with six.iterkeys
+* [docs] Update to use openstack CLI instead of glance(v1)
+* Python3: Keep compatibility for urllib.urlencode
+* Imported Translations from Zanata
+* Updated from global requirements
+* Broken owner parameter for getAttr/setAttr was fixed
+* Python3: Fix using dictionary keys() as list
+* Python3: Replace dict.iteritems with six.iteritems
+* [Doc] Fix 'Murano packages structure' link
+* py3: Replaces xrange() with six.moves.range()
+* make enforce_type=True in CONF.set_override
+* [Murano Docs] [CLI] Manage environments
+* Support for Cinder volumes was added
+* Fix the parameter order in method assertEqual
+* Correct some spelling mistake in guide
+* Correct filename
+* Updated from global requirements
+* Replace deprecated keystoneclient...exceptions
+* Fix error in app io.murano.apps.demo.DemoApp
+* [test-runner] Refactor mock unit-tests
+* Replace deprecated library function os.popen() with subprocess
+* Replace assertTrue(isinstance()) by optimal assert
+* Modify filter by 'Name' in Package Definition
+* Use assertTrue/False instead of assertEqual(T/F)
+* Updated from global requirements
+* Updated from global requirements
+* Imported Translations from Zanata
+* user_id column was widened to support domain users
+* Replace unicode with six.text_type
+* Add tagging fuctionality for heat stacks
+* [test-runner] Create new executer on each test case
+* Replace tenant_id with project_id in auth_utils
+* Fix test class property access in mocks
+* [Murano Docs] Introduction to the User Guide
+* Missing blankspace in debug in murano.common.statservice
+* Drop MANIFEST.in - it's not needed with PBR
+* [docs] Add the step to add passenv in tox.ini
+* Adjust '410 Gone' exception in service broker negative tests
+* Use murano client for getting final status of environment
+* Change LOG.warn to LOG.warning
+* Wait for state progress of Heat stack upon delete
+* Updated from global requirements
+* [Murano Docs] Describe app migrating to L
+* [test-runner] Put TestFixture class check to the right place
+* [Murano Docs] Adds Using CLI section to End User Guide
+* Update buiding windows image article
+* Add mutable default arguments hacking check
+* Update the README.rst
+* [AppDev Guide] MuranoPL Core library
+* change the repo stackforge to openstack and github to cgit
+* Remove arguments "{}" and "[]" in function definitions
+* Updated mock release note and mock-index maxdepth
+* [docs] Add example of delete item from the list
+* fix typo in doc/source/image_builders/upload.rst
+* Updated from global requirements
+* [murano-test-runner] Mark 'package' as required parameter
+* Stop using WritableLogger() which is deprecated
+* [mocking-machinery] Add original method function
+* [Murano Docs] Fix links on client docs page
+* Add release note for fip on multiple networks fix
+* Updated from global requirements
+* Pass environment variables of proxy to tox
+* [mocking-machinery] Add inject YAQL functions
+* [Murano Docs] Add an intro to apps section
+* Remove libs and libs usage from murano and murano hooks
+* Updated from global requirements
+* Fix spelling error for db migration file name
+* Updated from global requirements
+* Added CORS support to Murano
+* Add an option to filter packages by 'id' in API
+* Improve public network detection algorithm
+* Do not wait for MessageHandlingServer
+* Synced requirements with global requirements
+* Updated from global requirements
+* Modify describe method of core-library networking classes
+* Fix Linux.runCommand method
+* Add MockContextManager
+* Fix alignment in log messages
+* [Murano Docs] Add an intro to env section
+* Remove version from setup.cfg
+* Add OneOf smart type
+* Updated from global requirements
+* Raise proper exception in ext context middleware
+
+2.0.0.0b1
+---------
+
+* [Admin Guide] Policy enforcement
+* HOT outputs were merged
+* Fix debug log message
+* Functional tests for Chef and Puppet examples
+* [Murano Docs] Remove logs section
+* Include default region for multiregion testbed
+* [cfapi] Add multiple tests for cfapi service
+* [Murano Docs] Browse component details
+* Glare Plugin Package version removed
+* Updated from global requirements
+* [Murano Docs] Add info to deploy an env
+* Replacing application_catalog with application-catalog
+* Updated from global requirements
+* Remove iso8601 dependency
+* Documentation for package type plugins
+* Force releasenotes warnings to be treated as errors
+* [Murano Docs] Review an environment
+* Remove unused bunch class
+* [docs] Update error message
+* Add verbosity control for Murano-test-runner
+* Add binding test for cfapi
+* Add negative test for cfapi last_status route
+* [cfapi] Prevent code 500 if instance, environment or service doesn't exists
+* Skip package section from input parameters
+* Add provision and deprovision test for cfapi
+* Fix method comment typo
+* Remove 'not in global requirenments' section
+* Public environment template
+* Fix logging_setup call
+* Updated from global requirements
+* Get scoped token from ext_context middleware
+* Update functional tests due to tempest update
+* [docs] Fix unit tests location
+* [docs] Remove py26 from tox targets
+* Fixed broken assignment to dictionary using integer key
+* Updated from global requirements
+* [Murano Docs] Edit an environment
+* Fix Example of net-config filename
+* Update help message of test-runner to same format
+* [Murano Docs] Create an environment
+* Rework service broker authorization process
+* Updated from global requirements
+* Documentation for Cloudify plugin and example application
+* Add reno for release notes management
+* Add middleware for external requests
+* [docs] Introduction minor edit
+* Fix TypeError set param from 'null' to some value
+* Add new dsl exception for better error reporting
+* Add functional api tests for categories
+* Initial commit for service broker tests in tempest plugin
+* Improved reporting for EADDRINUSE error
+* Set the port to use oslo_config PortOpt
+* remove default=None for config options
+* Use detail instead of explanation for 415 errors
+* Adding Cloudify apps library and Example App
+* Adding the Cloudify Plugin Files
+* Drop types module usage
+* Remove obsolete names checks
+* [documentation] Deletion of the articles rewritten
+* [test-runner] Show help on error
+* Use assertIsNone instead of assertEqual(None, ***)
+* Banish all 'witches' in murano repository
+* Move variables from plugin.sh to settings
+* Update default devstack MURANO_REPO_URL
+* Fix test execution result status
+* Move cfapi opts to global variables view
+* Add murano-cfapi endpoint during devstack installation
+* Updated from global requirements
+* [Murano Docs] Deployment logs
+* Return 403 instead of 401 HTTP Response
+* Move enabling services to plugin settings
+* FIP was not assigned to revived Instance
+* Import packages from murano-apps in Devstack
+* [documentation] Introduction and User Guide publishing
+* [doc] Improve devstack plugin installation docs
+* Use default readthedocs theme
+* Adjust tempest config file path
+* Remove libs and extras.d usage from gate hooks
+* Package type plugins support was added
+* Change in Murano Devstack installation
+* Updated from global requirements
+* [doc] Add CLI deployment instructions section
+* Check dashboard symlinks during horizon plugin installation
+* Add murano service broker in devstack installation
+* No need to enable services when plugin is activated
+* Remove unused tests from project
+* Updated from global requirements
+* Streamline test_simple_software_configuration
+* [Docs] Add murano agent description
+* Improve message for publish package conflict
+* Updated from global requirements
+* Log request headers in debug mode
+* Open Mitaka development
+
+1.0.0
+-----
+
+* Fix a typo in db/catalog/api.py
+* Fix the delete package give the error with "&quot;"
+* Add test for simple software configuration
+* Adds plugin dependency for plugin demo app
+* Initial commit for service broker documentation
+* Add Apache 2.0 license info to core library
+* Fixed a typo in example plugin config
+* Introduce MuranoPL/1.1 and 1.2
+* New middleware to handle ssl termination proxies
+* Updated from global requirements
+* Use migrate command instead of syncdb
+* Increased the number of environments per tenant
+* Updated from global requirements
+* Fix typos in Murano PL Reference
+* Fix a typo in Quickstart guide
+* Fix typos in developer documentation
+* [Murano Docs] Application topology
+* Change the way devstack configures murano-dashboard
+* Do not try to delete server from deleted Heat stack
+* Makes conditional expressions consistent with yaql 1.0
+* [Docs] Describe token expiration in troubleshooting
+* Incorrect yaql engine was used for MuranoPL/1.0
+* [test-runner] Register test-runner system class automatically
+* Return full structure of std info in Linux class methods
+* Fix obsolete imports in functional tests
+* Updated from global requirements
+* [test runner] Support --config-file option
+* Retry-on-deadlock added to modify package db api
+* Replace deprecated tempest config option
+* Customization of default_dns in Devstack
+* Add dependent application test
+* MuranoPL logging tutorial added
+* [docs] Add commands to register murano in Keystone
+* [Intro] Architecture and use cases sections editing and rewording
+* Updated from global requirements
+* Make test_package_is_not_provided less strict
+* Python method results were not converted to immutable values
+* Updated from global requirements
+* Made service broker to handle asynchronous request
+* Add 'acquired_by' property to Environment resource
+* Fix building documentation on readthedocs
+* Add 'How to login into instance' section to the new docs
+* Test hot package files with sets instead of lists
+* Number of yaql functions caused AmbiguousFunctionException
+* Fix get_sessions state parameter not working
+* Fix a typo for environments error msg
+* Fixed "ERROR: Malformed table" in RST
+* Add troubleshooting section for a new documentation
+* Fix order of arguments in assertEqual
+* Add prefix 'test' to unit test module names
+* Fix typos in app development guide
+* Enable H233: Python 3.x incompatible use of print operator
+* Keyword validation regexp was fixed
+* Add test for resources deallocation
+* [Murano Docs] Add Deploy an env HowTo
+* Specification of which property/argument violated contract was added
+* Murano waited indefinitely for UPDATE_COMPLETE stack status
+* Fix the run_test unchecked pep8 W503 and E402 errors
+* Add missing import of '_' in template_applications
+* Release resources allocated to the Instance when it gets deleted
+
+1.0.0.0rc1
+----------
+
+* Fix minItems value for tags in json-schema
+* Fix link in the documentation
+* Remove mistral libs installation from test-hooks
+* Fix agent error message
+* Change ignore-errors to ignore_errors
+* Function caller was incorrect when called from Parallel block
+* Updated from global requirements
+* Show public packages for non-admin users
+* Fix three typos
+* Fix an error with wrong argument
+* Remove H904 rule from ignore list
+* Updated from global requirements
+* Support unicode characters in Applications or Packages's filter
+* Added the home-page value with openstack.org
+* Updated from global requirements
+* Support for Unicode strings in MuranoPL was fixed
+* Fix race condition with router creation
+* Improve the Murano Documentation
+* Delete the unused LOG configure code
+
+1.0.0.0b3
+---------
+
+* Updated from global requirements
+* Added the support of Glance Artifact Repository
+* Log refactoring close to new logging spec
+* Fixed incorrect MuranoPL names for some of Python-based methods
+* Murano Policy Based Modification Documentation
+* Update response codes to expected ones
+* Add id to sort keys parameters while pagination
+* Environment modify actions introduced
+* Convert api internal TypeError to HTTPBadRequest
+* Updated from global requirements
+* Remove legacy network-related code
+* Add cd, export and enable service command in doc
+* Updated from global requirements
+* ID references made model not able to load in 2 passes
+* Improve error message in case no environment name
+* Use default devstack functions for create murano in devsstack environment
+* Fixes incorrect log format string
+* Fix typos and plugin samples link
+* Fix the location of unattend template
+* Apply yaql conventions to __init__ parameters
+* yaql context versioning
+* Fix pylint errors 'unused variable'
+* Fix murano devstack libs and plugin
+* Restores back plugin support
+* Version-aware YAML loading
+* Glance MuranoPackage Artifact
+* Package versioning
+* Temporarily skip tests with dependant applications
+* Add support for more Cloud Foundry API calls
+* Fix silently overwrite user specified content type
+* Updated from global requirements
+* Cloud Foundry Service Broker API initial commit
+* Introduce test-runner for MuranoPL test packages
+* Add tenant_id check for {env_id}/lastStatus api
+* Abandon environment on each exception during removal
+* Updated from global requirements
+* Remove tethering between func and api tests and use venv for tempest
+* Fix the Download link for VirtIO
+* Adds version info to ApplicationPackage
+* Move congress/mistral integration related tests to separated dir
+* Add support for heat environments
+* Updated from global requirements
+* BOM symbol removed from Agent-v1.template
+* Run compress command for dashboard in devstack
+* Fixed the typo's in multiple files
+* Logging API for MuranoPL
+* Simple instance configuration
+* Improve functional engine tests cleanup
+* Removing unused dependency: discover
+* Namespace resolution error was fixed
+* Fixes Congress model validation
+* Type cast error in engine
+* Updated from global requirements
+* Add port type on port option
+* Enforced AUTO replacement_policy for sharedIp port
+* Updated from global requirements
+* Fixed the SharedIp class
+* Make commands in install manual copy-paste-able
+* Add logging.conf to gitignore
+* Migration to yaql 1.0
+* Updated from global requirements
+* Update the tox.ini for build docs
+* Concatenate environment ID to stack name
+* [Murano Docs] Add an application HowTo
+* Default Region Configuration Property
+* Fixing support for package download API
+* Updated from global requirements
+* Update the gitingore file
+* Updated from global requirements
+* Updated from global requirements
+* Return x-openstack-request-id header to the caller
+* Inherit RequestContext from oslo_context's RequestContext
+* Updated from global requirements
+* Typo leaded to FIP not being assigned for nova-network
+* Add category list pagination support
+* Attempt to make pylint output more useful
+* Added info about client and murano-apps trackers to CONTRIBUTING.rst
+* default_dns from config was never used
+* Add support for heat files
+* Do not confuse terminal stack statuses
+* Add HelloReporter application to rally-jobs
+* [Murano Docs] Add Delete an application HowTo
+* Updated from global requirements
+* Fix minor typos in murano example plugin
+* Making murano components aware of openstack ID
+* Postpone setting fipAssigned attribute until stack successful push
+* Update the gitingore file
+* Perform tests tagging
+* Add dummy test-app and test for it
+* Prevent 500 when requesting deployments of a deleting env
+* Attempt to fix congress client initialization
+* Use oslo.log library instead of system logging module
+* Remove openstack.common package
+* Warn user about unsupported content type
+* Fix incorrect format syntax in app_loader
+* Check session validity during env show api call
+* Updated from global requirements
+* [End User guide] QuickStart, delete app
+* Fix sample logging config
+
+1.0.0.0b2
+---------
+
+* Add possibilty to delete environment with incorrect .destroy method
+* Include original ObjectsCopy/Attributes in exception_result
+* System class was forgotten in core library manifest
+* Remove duplicated check env code
+* Removes early creation of Heat stack
+* Updated from global requirements
+* Fix logs loss after switching to oslo_log
+* [Docs] Add policy file description
+* Delete ability to manage packages by name
+* Separate load_app from api starter
+* Introduces combined class loader
+* murano.cmd.api: Unable to import 'paste'
+* Updated from global requirements
+* Fix typo in error message
+* Improve Murano PL docs
+* [Murano Docs] Add Delete an app HowTo
+* Describe 'UI Network Selection' in the docs
+* Check tenant id during abandoning of an env
+* Allow setting eventlet.wsgi.MAX_HEADER_LINE
+* Remove entry of 'deprecated' log level
+* Restrict environment template name length to 255
+* Move congress-specific test functions to separate class
+* Introduce refactored tests
+* Restrict environment name length to 255
+* Make tools/cover.sh executable
+* Remove hardcoded dns from config file
+* Handle ValueError from hot_package
+* [Murano Docs] Add managing packages HowTo
+* Use setup_develop in devstack libs and plugin for devstack
+* Switch to oslo_log
+* Improve the docs on UI Definitions format versions
+* [Murano docs] Quickstart partial
+* [Murano docs] Adds bigger screenshots
+* Fix error message in case category name is too long
+* Declare the CONF variable
+* Switch to oslo.service
+* Use Custom networks as primary if no others exist
+* [Murano Docs] Add Searching for an app HowTo
+* Added script for unit tests coverage job
+* Remove unnecessary pass-statement
+* Move load_paste_app to the place it should be
+* Remove the wrong assert_is_called checking
+* Remove all vim modelines
+* Allows congress to fetch environments from all tenants
+* Hide TrustId in log to tighten up security
+* Organize imports in correct order
+* [Murano Docs] replace screenshots
+* Remove vim headers and shebang
+* Reload logging options when receiving SIGHUP
+
+1.0.0.0b1
+---------
+
+* Update from global-requirements
+* Improve dsl exception readability
+* Update version for Liberty
+* Fix inconsistency of error message and validation when create env
+* Add CLI reference
+
+1.0.0a0
+-------
+
+* Document murano actions
+* [Murano Docs] Adds ref links to manage_applications
+* Do not store session db in tmp directory
+* Modify environment delete API endopoint to have "abandon" feature
+* Enable trusts by default
+* Make use of devstack external plugin
+* Fix table with block constructs in muranoPl doc
+* Fix urls in docs for image builders
+* [Murano Docs] Fixes a typo in the Import an app package section
+* Increase default timeout for agents response to 1 hour
+* Update from global requirements
+* Migrations: ignore mysql fk cheks for any mysql driver
+* Add new content to Murano introduction article
+* [Murano Docs] Add importing an app package HowTo
+* Clean-up openstack.common
+* Attempt to make pylint output more useful
+* Add note to docs that hash is not used in images.lst
+* Use oslo.policy instead of incubated version
+* [Murano docs] MuranoPL section review
+* [Murano Docs] Remove old versions of articles
+* Switch from MySQL-python to PyMySQL
+* [Murano docs] Examples section review
+* Murano docs: Intro, key features, target users
+* cleanup murano docs in the image_builders folder
+* murano install docs improvements
+* murano documentation and cleanup
+* Update docs about Require section
+* Add support for 'boolean' HOT parameter
+* corrected typos throughout murano source articles
+* Add MURANO_REPO_URL customization support for devstack
+* Improve exception handling during enviroment editing
+* Murano docs: navigation restructure
+* Add unique constraint to environment table
+* Update meta folder readme
+* Refactor test plugin app
+* Fix incorrect method when creating unicode env
+* Add Examples and Use-Cases to app developer guide
+* App Dev Guide: Murano packages
+* Appdev guide migration
+* 'Execution plan template' section
+* App Dev Guide: MuranoPL section
+* App Dev Guide: Hot Packages
+* Removed CLI tests from repo
+* Adds FAQ content to the Murano docs
+* Step-by-Step
+* Add Rally jobs related files to Murano
+* Update from global-requirements.txt and fix cli tests
+* Installation docs: install core library as public package
+* Use catalog=True for package_loader queries
+* Murano docs structure
+* Better ordering of HOT parameters in generated UI form
+* Improved error reporting for HOT applications
+* Fix for HOT parameter types conversion
+* Fix cleanup_duplicates PluginLoader method
+* Remove unused dependency on lockfile
+* Execute pre/post deployment hooks on GC
+* pselect exited on first exception
+* Fixed YAQL tag leakage to YAML loader
+* Add missed tests for migrations
+* Test db api pagination and ordering
+* Update from global-requirements.txt
+* Add stevedore to Murano Requirements
+* Fixed rules for Congress integration tests
+* Drop use of 'oslo' namespace package
+* Add missing RabbitMQ user parameter to Murano lib in devstack
+* Streamline and simplify package filtering api
+* Updated YAQL requirement to >= 0.2.6
+* Fixes Heat stack rollback on failed stack update
+* Update project README file
+* Remove obsolete system class definitions
+* Remove murano-manage usage from the documentation
+* Adding lintstack to support pylint gate job
+* Fix bug with murano-dashboard cleanup in devstack
+* Open Liberty development
+
+2015.1.0rc1
+-----------
+
+* [devstack] Automatically enable required service in devstack
+* File key is wrongly created when the File Type is downloadable
+* Update devstack scripts to reflect repo rename
+* Update docs to reflect repo rename
+* Update .gitreview file to reflect repo rename
+* Add method in Agent class to allow message handling extensions
+* Fix for cross-tenant package and class isolation
+* Show example of setting requirements to flavor field
+* Policy enforcement - add cleaning action rules
+* Cleanup action policies will be created manually as described in this documentation
+* A Galera-compliant database locking solution
+* Enable OpenStack Theme for docs
+* Adds describe method to Network implementations
+* Murano documentation update
+* Log exceptions, raised during api
+* Forbid setting is_public via querystring
+* Update default policy settings
+* [devstack] Install Murano as plugin for Horizon
+* Remove filter for tasks to show logs for all actions
+* Set template for docs
+* Allow any admins to perform actions on packages
+* Nova Network support
+* Restricted text search on packages to text fields
+* Policy enforcement 'services' relationship
+* Add package_count to Category objects
+* Fix installation document
+* Safely encode yaql expressions to support unicode expressions
+* Update muranodashboard installation
+* Cannot create environment from env-template
+* Update Image Builder documentation
+* Fixed wrong super call in models.TimestampMixin
+* Removed redundant code from models module
+* Fixed 500 error in get_result API handler
+* Fixes instance FIP assignment
+* Bump python-muranoclient version in requirements
+* Provide Identity version for negative tests
+* Updated from global requirements
+* Fixes action result serialization
+* Computes transitive relationships in murano model
+* Fix EP building if app doesn't have files in template
+
+2015.1.0b3
+----------
+
+* Initial implementation of Plugable Classes
+* Fixes incorrect handling of <...> in execution plans
+* Updates k8s DIB element
+* Functional tests for environment template functionality
+* Configurable environment's default network config
+* [DIB] Kubernetes: added installation of flannel and haproxy
+* Fix error with package tags type
+* Use python from venv for subunit-trace
+* Fix pep8 issues in imports
+* Environment Template. Create an environment from a template
+* File Downloable Feature
+* Environment Template API documentation Targets https://blueprints.launchpad.net/murano/+spec/environment-template
+* Fixed gate-murano-congress-dsvm job
+* Added iniset for policy_enforcer if Congress policies are enabled
+* Modified Mistral Workflow due to syntax change
+* move configure_network post-config to extra phase
+* Fixes agent call may hanged upon action call
+* fix typo
+* Reworked functional tests for Murano
+* Implement category management API
+* Makes exception_traceback optional for exception_result
+* Remove deprecated Kubernetes binary "kubecfg" from DIB element
+* Update API policy
+* Adds API to obtain action result
+* Return 409 status instead of 500 if package exists
+* Extension API for environment templates
+* Ignoring properties with None value in Murano->Congress mapping
+* Fixes environment owner in congress mapping
+* Remove test skipping
+* Mistral integration functional tests - scripts
+* Environment Template entity and its service
+* [DIB-elements] Kubernetes binaries added to PATH
+* Remove wsgiref from requirements.txt
+* Functional test for Murano Mistral integration
+* Update from global requirements
+* Add document describing v0.5->Juno app migrating
+* Fixed logic of determining environment status
+* Changed status constant PENDING -> pending
+* Kubernetes DIB element: fixed critical bug with application path
+* Include missing log string format specifier
+* Fix Policy Enforcement Test App
+* Fix for testclass TestRepositoryNegativeForbidden
+* Use oslo.i18n for translation
+* Policy enforcement functional tests - scripts
+* Fix inaccuracies in dashboard manual installation
+* DIB elements for Docker
+* DIB elements for Kubernetes
+* Improve exception message
+
+2015.1.0b2
+----------
+
+* Policy enforcement functional tests
+* Fix for tempest tests
+* Added tenant check in sessions API resource
+* Added auth customization in API tests
+* Update dashboard installation section in docs
+* Changed models to match migrations
+* Add timeouts to murano-agent calls
+* Fix for DSVM gate
+* Resolve and enable H702 PEP8 rule
+* Resolve and enable H307 pep8 rule
+* Resolve and enable E265 pep8 issue
+* Resolve H305 pep8 issue
+* Enable and resolve some PEP8 issues
+* Adds ability to join instances to existing Neutron networks
+* Add class that runs Mistral workflow
+* Remove 'murano_metadata_url' from config options
+* Documentation for policy enforcement
+* Reverted router_id to router in NeutronNetwork
+* Add availabilityZone property to Instance class
+* Initial implementation of policy enforcement point
+* Changes replacement policy for Neutron ports to AUTO
+* Use pretty-tox for better test output
+* Refactor db migration tests
+* Configure Murano network in devstack
+* Fix rest_client import for Tempest based tests
+* Fix name of the properties for networking resources
+* Remove usage of FloatingIPAssociation
+* Adds congress client to client manager
+* Add Mistarl client to murano
+* Log details about finished deployment
+* Fix usage of oslo.utils.uuidutils
+
+2015.1.0b1
+----------
+
+* Drop unused dependencies
+* Adds per-class configs
+* Updated from global requirements
+* Removed unused file from openstack/common
+* Removed deprecated run_tests.sh
+* Removed unused uml-generator from contrib
+* Drop ordereddict from requirements
+* Replace anyjson with oslo.serialization
+* Use oslo.serialization
+* Use oslo.utils
+* Change the package 'description' field type
+* Remove unused imports from genconfig
+* Update from oslo incubator
+* Fix Murano app names
+* Workflow documentation is now in infra-manual
+* Update information about murano sample config file
+* Removed outdated init scripts
+* Added generated sample config to gitignore
+* Remove py26 from tox targets
+* Merged duplicating unit tests for actions
+* Update from global-requirements
+* Update DB migration tests in respect to new release of Alembic
+* Adds aggregate function to MuranoPL (YAQL)
+* Fix dvsm gate
+* Add tests for tenant isolation
+* Remove skipping tests on resolved bugs
+* Change name new_name generation
+* Change application index default sort from 'created' to 'name'
+* Remove #noqa from gettextutils imports
+* Fix documentation errors and warnings
+* Use Keystone trusts to get fresh token
+* Remove unused functional from murano/common/wsgi.py
+* Fix method lock release upon exception
+* Update from global requirements
+* Use oslo.config generator in murano
+* Environment in delete failed state was in progress forever
+* Extract version definition to a separate file
+* Add check on CLI environment actions
+* Sync with latest Tempest changes
+* Update article about functional tests
+* Fix defects in API specification
+* Add information about network configuration
+* Add information about 'update_settings.sh' script
+* Add initial information about debugging
+* Extend installation guide
+* Update manual launching guide
+* Exceptions get muted in Try-Finally
+* Open Kilo development
+
+2014.2.rc2
+----------
+
+* Updated from global requirements
+* Missing validation for environment name in API
+* No error's reported if heat stack creation/update fails
+* Fixes typo in JsonPatch UT
+* Fixes stealing of agent responses in some cases
+* Do not check config on pep8
+* Runtime properties may no longer have default value
+* Creates a router if one doesn't exist
+* Use only specific router for created networks
+* $list.skip($start).take($count) throw YAQL exception
+* Updated from global requirements
+* Don't rely on OS::Nova::Server.addresses
+* Fix concurrency issue with HeatStack.push
+* keystoneclient.middleware -> keystonemiddleware
+* Throw macro caused syntax error exception
+* Remove Contract on customUserData
+* Remove setup.sh
+* Allow signalTransport option for sw deployments
+* Make engine tests based on python murano client
+* Add two new functions to manipulate with lists
+
+2014.2.b3
+---------
+
+* Restore auth_uri config option
+* Remove partial clean-up in Instance.destroy
+* Fix race condition when two Instances are deployed
+* Move wsgi module to murano/common
+* Add status reports to HOT packages
+* Fix issue with Default for Runtime props in HeatSWConfigInstance
+* Fix deployment failure detection
+* Provide a description for syntax error
+* Fix property initialization
+* Enable H202, H402, H404 rules
+* Apply fault middleware
+* Don't treat stack missing as failure during delete
+* Adds REST API endpoint for action execution
+* Improve logging in sessions.py
+* Migrate to oslo.db
+* Fixed issue with loading yaml files
+* Fix agent.prepare() when agents disabled
+* Don't hide exception messages during package load
+* Application base class didn't define deploy method
+* Fix occasional deletion failure
+* Fix check for floating ip in func tests
+* Fix pep H101(TODO) and H231(py3 exceptions)
+* Set next version to 2014.2
+* Fixes silent deletion of environments
+* LHS assignment expressions didn't work with non-trivial indexation
+* Make apache restarts a little more forgiving
+* Correct InstanceNotifier yaml stub
+* Allow strings in heat SW config configSection
+* Add openstack libs to config checker
+* Reduce number of API requests during deploy
+* Allow murano-agent to be disabled
+* Unit tests for MuranoPL execution result serializer
+* Add sample logging.conf
+* Allow software config at deploy
+* Add cleanup method in devstack scripts
+* Define Murano API URL explicitely
+* Add simple smoke tests for Murano CLI client
+* Make default branches independent
+* Fixed race in DB migration testing
+* Default is_public to false
+* Fixes to unit tests around policies
+* Add caller information to Begin execute log entry
+* Move and rename functional tests
+* Use with_variant method for dialects db types
+* Fix the concurrency issue agent queue creation and VM agent
+* Added Murano config checks
+* Fix the issue with multiple agent call
+
+2014.2.b2
+---------
+
+* Fix tests which checks stack deletion
+* Add version command to murano-db-manage
+* Make sure supplier logo saved on dashboard upload
+* Handle null JSON blobs
+* Add failure messages in engine functional tests
+* Fixes name generation for Heat stack
+* Inherit api tests from tempest base test class
+* Adds Continue macro to MuranoPL
+* Unit tests for macro blocks
+* Add new requirements install in setup.sh script
+* Fixed incorrect information on Python frames in MuranoPL stack traces
+* Unit tests for exception handling in MuranoPL
+* Fix issue with incorrect model on MySQL
+* Unit tests for engine's YAQL functions
+* Fix DB migration script
+* Delete Heat stack when environment is deleted
+* Fix stack inconsistency after app deletion
+* Improve dsl testing framework foundation
+* Add 'userdata_format' to Server heat template
+* Add optional fields to packages for supplier info
+* Unit tests for MuranoPL assignment expressions
+* Add --log-file to each daemon init script
+* Fix issues with Heat template updating
+* Fixed issues with port checks timeout
+* Fix syntax error in Environment.yaml
+* Fix setup.sh to import core library each time
+* Use random name for Heat stack name instead of environment's name
+* YAQL version updated to 0.2.3
+* Add lib-pqdev to Ubuntu prereqs in documentation
+* Unit tests for method and property access
+* Unit tests for contracts
+* Code refactoring and improvements for MuranoPL testing mini-framework
+* Updated from global requirements
+* Fix pep8 issues
+* Update docs to reflect change from murano-api to murano
+* Add articles about Automated Tests
+* Add testresources in test-requirements
+* Add port checks after deployment success
+* MuranoPL testing mini-framework
+* fix db-sync execution in Murano setup script
+* Added coveragerc
+* Added DB migrations on Alembic
+* Change how actions are stored in Object Model
+* Return and Break were broken
+* MuranoPlException was referenced from incorrect module
+* Support specifying ``sort_dir`` key in packages.search call
+
+2014.2.b1
+---------
+
+* Deprecate run_tests.sh
+* Adds ability to throw/catch/rethrow exceptions in MuranoPL
+* Bump pythonclient version to 0.5.2
+* Maintain virtual MuranoPL stack trace
+* Add policy checks to API
+* Add heat_template_version to network fragments
+* Make sys:Resources class use resources belonging to its owner
+* Install python client from repo
+* Introduce a SharedIp object for Clustering
+* Make categories optional parameter
+* Fix issue with incorrect uploading packages
+* Fixed endless recursion loop when super() called in base class
+* Add API unit tests
+* Renames 'Workflow' to 'Methods'
+* Automatically call MuranoPL initialize/destroy methods
+* Improve method resolution rules for multiple inheritance
+* Ensure that all the Instance's networks are created prior to joining
+* Move Neutron networking implementation to Core Library
+* Add new deployment tests
+* add pid directory deletion in murano setup script
+* Fixes Python 2.6 compatibility in HeatStack class
+* Fixed VM instance tracking in MuranoPL core Instance class
+* Migrate unit test to testtools
+* Correct property accessibility for classes in Instance hierarchy
+* Declare a Runtime property for StatusReporter in Environment
+* Reorganize documentation index page
+* Make environment name unique within a tenant
+* Subsequent stack updates for Heat have proper set of parameters
+* New instances can now join Networks created in previous deployments
+* Add support for actions in engine
+* Fix issue with package loader
+* Make packages API work on Windows
+* Restore identity of upcasted MPL object on method call
+* Add default for getAttr
+* Preliminary support for HOT packages
+* Drop unused dependencies
+* Cleanup tox.ini
+* Allow package_get by name
+* Refactor api.catalog.search() method to provide 'next_marker' value
+* Make DELETE request return 404 for nonexistant package
+* Update dynamic ui fields docs, fix some indents
+* Fix incorrect import after rename
+* Import networking library with devstack
+* Add initial tests for application deployments
+* Rename muranoapi to murano
+* Code update
+* Update gitreview to match repo rename
+* Renamed the PublicIp and set it to addresses in instance snippet
+* Send message_id as property
+* Add rmq message logging
+* Removed version prefix from the endpoint urls
+* Add rabbitmq section config
+* Add more info to dynamic UI devdoc article
+* Adds an explanation of the engine workflow
+* Add API specification
+* Add new articles to documentation
+* Add more classes to Instance inheritance hierarchy
+* debug level logs should not be translated
+* Fix credentials passed to tempest
+* Add documentation about Murano PL system classes
+* Use HOT instead of CFN heat template format
+* Add notification_driver to config in devstack
+* Fixed python2.6 compat for RFCSysLogHandler
+* Allow import-package to delete & re-import
+* Allow AgentExceptions to be logged properly
+* Fix a bug when the same method could be run concurrently by 2 threads
+* Add docs for App Catalog:
+* Log unhandled exceptions during task execution
+* Basic Security Groups implementation
+* Add KeyName to Instance heat template
+* Increase length of 'name' column in package table
+* Add fix for compatibility with SQLalchemy 0.7.9
+* Added functionality to assign FloatingIP addresses
+* Add custom String type to support collation
+* Fix issue with user permission on package deletion
+* Implemented AdvNetworking scenarios via Neutron
+* Added MuranoPL infrastructure for advanced networking scenarios
+* Added NetworkExplorer engine object class
+* Add negative tests for murano repository
+* Add negative tests for murano repository
+* Add include_disabled param to pkg search
+* Fix teh gate
+* Delete ActiveDirectory application
+* Changed tests for murano repository
+* Revert "Remove hardcoded foreign keys from db.catalog.api"
+* Add basic reporting to engine
+* Uncomment tag import
+* Fix extracting services from deployment.description
+* Added ipAddresses property to Instance
+* Get function added
+* Fix issue with getting heat outputs
+* Fix issue with keystone
+* Fixed name of the log file on VM
+* Update ActiveDirectory UI to the last changes
+* Fix murano-manage import-package
+* Launch murano-engine with Murano services
+* Add file limit for a package archive during upload
+* Set a proper name for murano config section
+* Added developer documentation
+* Fixed incorrect instantiation of Resources class
+* Heat stack could remain even if all applications were removed
+* Wrong Usage for dns_ip property in AD PrimaryController
+* Typo in HeatStack API
+* DirectoryPackageLoader skipped all package directories
+* AD was broken because of missing Body key
+* Rename Type to Usage for MuranoPL properties
+* Added a CLI command to manage categories
+* Bump python-muranoclient version to 0.5.0
+* Use io.BytesIO instead of sqlalchemy.byte_buffer
+* Preserve keys in object's system area
+* Configure rabbit vhost for Murano
+* replace reference to ._items w/ call to .items()
+* Add CPU info to stats
+* Fix class FQNs for Active Directory in Dynamic UI
+* Fix missing function error in install_venv
+* Replace 'applications' in deployments data with 'services'
+* Add 'cp' of murano-dashboard lib file in devstack README
+* Default MuranoPL function argument value was evaluated incorrectly
+* Fix issue with hostname
+* Setup doc build infrastructure
+* Fix some options set by devstack
+* Get rid of murano-common
+* Add murano-dashboard to devstack
+* Fix engine results processing
+* Handle unicode strings in merge-dict
+* Typo in murano-api.conf
+* Devstack scripts update
+* Update requirements.txt due to changes in global-requirements.txt
+* Fix for package import
+* Fixes DB migrations on SQLite
+* Add tag assignment during manifest parsing
+* Support packages in dsl and engine
+* Remove hardcoded foreign keys from db.catalog.api
+* Fix wrong indentation in sample UI definition
+* Update dynamic UI sample - according to the new format
+* Remove deep dependency from muranoapi
+* Billing statistics improved
+* Fix search in tags and categories
+* Resolve issue with InstanceTracked instantiation
+* io.murano.Environment used without namespace
+* Removed dependency from kombu.five
+* Use plural for class_definition
+* Fixed mysql muranoUser setup, add time sync
+* Add migration for inserting default categories
+* Catch DBDuplicateEntry exception
+* Resolve issue with uploading package
+* Make DB scheme be compatible with MySQL, PostgreSQL and SQLite
+* Add excpicit comparison instead of using in
+* Added collation to FQN field to solve MySQL error 1071
+* Added 'destroy' method that is called on deleted instances
+* Improve GET packages API call
+* Make fully_qualified a unique parameter
+* Fix bug with session during deploy
+* Removed unused muranoapi/contrib
+* Correct --unittest-only test behavior
+* Added CLI command to import packages
+* Fix Murano gate job
+* Add API entry for Statistics
+* Update for api and engine services installation
+* Requirements bumped to global-requirements.txt
+* Fix parentheses in log translation
+* Change the way of updating class definition table
+* Add MuranoPL Testing Framework
+* Remove auto-create db option from sample config
+* Make logger inside wsgi a bit more informative
+* Improve repository API
+* Collection of MuranoPL instance statistics for billing purposes
+* statistics renamed to request_statistics
+* Add DELETE repository API call
+* Implement repository API GET methods
+* Refactor murano functional tests
+* Added explicit db-sync command
+* Implement upload call to the repository API
+* Adoption of pre-0.5 environment API to MuranoPL format
+* Use native oslo.messaging notification dispatcher
+* UML Generator script
+* Resolve issues with circular dependency
+* Implement package search in repository API
+* Initial commit for repository API support
+* Add repository API tests
+* Added initial version of murano application package parser
+* Devstack scripts update
+* Add db backend to support metadata-repository
+* Merged in murano-common
+* Add MuranoPL Engine
+* Add services tests
+* Added sessions tests
+* Added environments tests
+* Lead log spelling to the one style
+* Set up logs in config.py in appropriate way
+* Initial MuranoPL implementation v2
+* Added base for Tempest tests in dvsm jobs
+* Added Devstack integration
+* Add versioning support
+* Add per API call statistics
+* Add Statistics Collection loop
+* Initial MuranoPL implementation
+* Use oslo.messaging
+* Fix and enable import checks
+* Synchronized Openstack Common
+* Remove copyright from empty files
+* Enable H102 "License headers"
+* Run hacking and flake checks for real
+* Update gitignore
+* Fixed issue with requirements
+* Remove oslo.uuidutils from muranoapi
+* Update context from Oslo
+* Update README with actual info
+* Return setup scripts in the consistent state
+* Remove 'openstack-' prefix in service name
+* Organize setup scripts
+* Add tempest integration tests
+* Cherry-pick the following commits from release-0.4
+* Add new setup script and SysV inits
+* Cherry-pick the following commits from release-0.4:
+* Fix dev version package spec in requirements.txt
+* Support getting and updating network_info of environment
+* Add common log and configuration places
+* Cherry-pick from release-0.3:
+* Enable HA on declared queues
+* Don't delete environment in case there are problems with RabbitMQ
+* Fixed the component name for tarballs
+* Update requirements to match havana's ones
+* Fixed https://bugs.launchpad.net/murano/+bug/1244118
+* Remove d2to1 dependency
+* Resolved issue with MySQL
+* Cherry-pick from release-0.2
+* Add murano-api to PYTHONPATH
+* RabbitMQ SSL parameters were not passed to MqClient for certain types of operations
+* Fixed log output, MRN-922
+* Porting changes from Release 0.2
+* Cherry-pick following change-ids from release-0.2
+* Moved keystone config to conf file
+* Upgraded prerequisites
+* Resolved issue MRN-751
+* Resolved bug MRN-719
+* Resolved MRN-704
+* Fixed a bug with error and warning state count
+* API now gets and handles conductor exceptions
+* Fixed MRN-680
+* Resolved bug MRN-699
+* Add info about ssl configuration to murano-api.conf
+* Resolve MRN-682
+* Updated to muranocommon 0.2 with SSL support Change-Id: Ibf4ec63332ab1073bda7d1a1cd102cf514284188
+* Migrated to Murano Common
+* Increment environment
+* lastStatus introduced
+* Fixed injectinit function
+* Modified pip search, garbage deleted
+* Deployment description is not hidden anymore
+* Fix jsonschema version in pip-requires
+* Added non existent environment verification
+* Removed extra param from config
+* Resolved MRN-576
+* Resolved issue with session delete
+* Corrections in edge-case output in Deployments API
+* Deployment logs fetching
+* Remove obsolete code
+* Added ability to remove services
+* New API v2.0
+* fixed python setup workflow
+* Fix MRN-582. Env version incrementation added
+* Added Traverse Helper
+* Move to openstack.common.db
+* Change oslo.config dependacy declaration
+*  Updated to latest OpenStack Common
+* Cherry-pick all changes from release-0.1 branch
+* Resolved Bug #1186804
+* Added MANIFEST.in and LICENSE
+* Fixed Environment::Get
+* Fix import in systemservices
+* Support for ASP.NET apps git-based deployment
+* Fix issue with deploy API
+* Resolve issues with requestion list of services
+* Resolved issues with Environment::Get
+* Handle some divergence cases
+* New way of session handling
+* Resolved issue with logging
+* Resolve issues with service deletion
+* Changed output messages
+* Support for ASP.NET apps git-based deployment
+* Add CentOS setup script and modified ubuntu script
+* Cleaned-up request.context code
+* Add setup.sh to project murano-api
+* Fixed issue with service deletion
+* Resolve issue with circular dependecies
+* Add .gitreview file
+* Rename misc files
+* Rename configs
+* KEERO-315 -  Fix all occurrences of old names (keero, glazier) in REST API
+* Fix name of the entrypoint stript
+* Removed all projects except Glazier Api
+* Small fixes for unit tests
+* Fixed issue with length of new name
+* Fixed small issue
+* Fixed issue with names
+* Fixed issue with names
+* Fixed issue with names
+* Fixed issue with names
+* Fixed issue with names
+* Fixed issue with names
+* Fixed issue with names
+* Fixed small issue with new names
+* Fixed issue with horizon component installation
+* Fixed issue with horizon component installation
+* Fixed issue with horizon component installation
+* Finished converting API Specification
+* Fixed small issue with setup.py
+* Fixed issue with renaming of the tabula component
+* Fixed issue with renaming of the tabula component
+* Added part of API Specification
+* Tabula renamed to dashboard
+* Tabula renamed to dashboard
+* Finished documentation for API
+* Finished documentation for API
+* Renamed Portas to API
+* Renamed Portas to API
+* Added tox for webUI tests
+* Added license to documentation of Portas Client
+* Small fix
+* Fixed api interface names to environments
+* Fixed api interface names to environments
+* Renamed and licensed python-glazierclient
+* Fixed api interface names to environments
+* Fixed api interface names to environments
+* Renamed documentation project
+* Fixed licenses for tabula and tests. Fixed name of tabula project
+* Fixed licenses for tabula and tests. Fixed name of tabula project
+* Fixed a few small issues
+* Pass all RabbitMQ settings from conductor to Agent
+* Initialization of tox for conductor and portas. Add new webUI automated tests
+* Licenses added
+* A lot of changes were made
+* Issue with figures
+* Main Documentation Project
+* Fixed ignore file for python-portasclient
+* Documentation for UI
+* Documentation for Python PortasClient
+* Forgot man pages
+* Documentation for Portas Project
+* Send token when deleting environment
+* Fixed https://mirantis.jira.com/browse/KEERO-227
+* Fixed issue with sessions
+* Fixed issue with sessions
+* Experiments
+* Experiments
+* Experiments
+* Experiments
+* Experiments
+* Add logging to WebUI
+* Add initial files for unit tests
+* Fixed issues with sessions Added logging
+* Added unit tests for client. Coverage 66%
+* Rename RabbitMQ username field Removed use_ssl option from settings
+* Fix running install_venv.py
+* Updated python-portasclient
+* PEP8 compliance
+* Fixed unit tests
+* Added ability to add services to environment
+* bug fix
+* bug fix
+* Fixed index bug
+* Finalize UI
+* Finalize UI
+* Experiments
+* Experiments
+* Experiments
+* Experiments
+* Experiments
+* Experiments
+* Experiments
+* Experiments
+* Experiments
+* Experiments
+* Fix PEP8 errors
+* Experiments
+* Experiments
+* Experiments
+* Experiments
+* Experiments
+* Experiments
+* Experiments
+* Experiments
+* Fix issue with statuses
+* Experiments
+* Experiments
+* Experiments
+* Experiments
+* Experiments
+* Experiments
+* Experiments
+* Experiments
+* Experiments
+* Experiments
+* Experiments
+* Experiments
+* Fixed issue with sessions
+* Naming conventions: use name instead of id for instance names
+* Heat auto-discovery, keero-linux-keys -> keero-keys
+* Experiments with UI
+* typo
+* Scoped tokens
+* Experiments with UI
+* Experiments with UI
+* Experiments with UI
+* Experiments with UI
+* Experiments with UI
+* Experiments with UI
+* Experiments with UI
+* Fix issue for result of deleted environments
+* Fix merge issue
+* Merged
+* Fixed small issue
+* Fixed small issue
+* Fixed small issue
+* Fixed small issue
+* Fixed small issue
+* Fixed small issue
+* Fixed small issue
+* Fixed small issue
+* Fixed small issue
+* Fixed small issue
+* Fixed small issue
+* Fix name of the variable
+* Fixed small issue
+* Send token when deleting environment
+* Removed unneeded binding
+* Fixed small issue
+* Fixed small issue
+* Fixed small issue
+* Fixed small issue
+* Fixed small issue
+* Fixed small issue
+* Fixed small issue
+* Fixed small issue
+* Fixed small issue
+* Fixed small issue
+* Fixed small issue
+* Fixed small issue
+* Fixed small issue
+* Fixed small issue
+* Fixed small issue
+* Added tabs for services
+* forgotten file
+* Fixed issue with activeDirectory deletion
+* Add support for reports filtering
+* Added tabs for services
+* Fixed small issue
+* Fixed small issue
+* Fixed small issue
+* Fixed small issue
+* Fixed small issue
+* Fixed small issue
+* Added dropdown list with list of services
+* Added initial version of tabs for services
+* Added initial version of tabs for services
+* Added initial version of tabs for services
+* Fixed issues with templates
+* Fixed issue  with installation
+* Fixed issue  with installation
+* PEP-8
+* Fixed issue with incorrect import
+* logging and bug-fixes
+* fixed VM initialization script
+* Evironment/Units deletion, bug-fixes
+* Fixed UI issues
+* Remove service deletion button
+* Finished installable UI
+* Removed old code
+* Naming conventions changed
+* Updated OpenStack Common (Fixed issue with notifier package)
+* Use Heat REST API instead of command-line
+* Added support for setup.py Added localization and documentation skeletons PEP8 Fixes, optimized imports
+* #KEERO-222 Remove random part of unit name
+* Send Env to Conductor for deletion
+* Hot fix for WebUI tests
+* Fixed WebUI tests. Added new tests
+* #KEERO-220 Send X-Auth-Token to Conductor
+* Added initial unit tests for RestAPI service
+* Fixed all pep8
+* Fixed automated tests for web UI
+* Fixed automated tests for WebUI. Added class Page with simple objects
+* Code to start\stop keero components using devstack functions
+* Fixed: changed the run mode for install venv script
+* Added deployment script for automated tests
+* All Cloudbase-Init plugins disabled except UserDataPlugin
+* Userdata script updated to support computer renaming functionality
+* Entry point script renamed 2d27f4f5054f34982ed67da2bf4b35c8ac1558d3
+* Issues #195 and #199
+* README and guide for conductor
+* Fix and unit test for issue: https://mirantis.jira.com/browse/KEERO-219
+* Added unit tests for REST API client. Fixed pep8
+* New devstack scripts added
+* Old devstack scripts removed
+* Write-Host replaced by Write-Log
+* Fixed typo
+* Sync
+* Sync
+* Sync
+* Cloned horizon and added our dashboard
+* Removed obsolete code Removed projects: [windc, windcclient]
+* Added tests for REST API. Fixed issues with Web UI
+* Added tests for REST API. Fixed issues with Web UI
+* Merged iteration3 branch to master. Fixed pep8
+* Fixed small issues with UI
+* Added lst fixes for demo
+* Fix another issue with environments list
+* Fix another issue with services
+* Fix issue with getting list of environments
+* Added progress bars for services. Fixed few issues for demo
+* Fix issue with ack on results
+* Add part of service id to unit name
+* Add ability to get status for Environments and Sessions
+* Added password-secure checks for UI, fix usability issues for demo
+* ExecutionPlanGenerator DSL processor
+* Updated workflow elements to reflect new name changes and to fix typos
+* ExecutionPlanGenerator DSL processor
+* Updated workflow elements to reflect new name changes and to fix typos
+* Another Issue with sessions
+* Added progress bar to Web UI. Fixed pep8 errors
+* Change behaviour of viewing services
+* Issue with session
+* No ack is needed when auto_ack set to True
+* Resolved issue with reports from orchestration engine
+* FIx issue with fields created & updated
+* Fixed issue with logging
+* Added deploy button for data centers in UI. Fixed templates for services
+* Queues should be durable
+* Add debug logging for controllers
+* Sync before tag
+* Fixed issue with empty services list
+* Added new API for Web UI
+* typos
+* Fixed length of names
+* Fixed instance namings
+* Added WebServer and AD
+* Workflows, ExecutionPlanGenerator, Reporting, UserData, conductor improvements
+* Removed obsolete file
+* Bug with Session
+* Added Session operations
+* Added Environments CRUD operations
+* Issue with deleting Environment
+* Removed obsolete files
+* Added initial version for python-portasclient
+* Issue with port for RabbitMQ
+* Function updated to return IPv4 addresses only
+* Typo
+* Explicit import of module DnsServer added
+* Function to install IIS added
+* Code to return DNS listening IPs from DC added
+* WebServer API Added WebServer API Small refactoring
+* Fix issues with queues
+* Added units name generation
+* Write results from orchestration engine
+* Active Directory API
+* Remove obsolete service table
+* Enable session deployment
+* Reports from orchestration engine Added ability to store and expose reports from orchestration engine
+* Cleaned up API
+* Added support for reading messages from RabbitMQ asynchronously
+* Typo
+* userdata.py fixed
+* Finished Task KEERO-111. Added base UI tests
+* Hot fix: Fixed pep8 for Dashboard
+* Finished Task: KEERO-117. Added new UI wizard for Create Services Action
+* Userdata plugin with minimal MIME support added
+* User data sample file added
+* Extra functions moved to NotCoreFunctions.ps1 file in order to remove them in the future
+* Functions to work with Base64 strings added
+* Functions to work with Zip files added
+* Modified files from cloudbase-init added
+* Fixed pep8. Fixed deployment script
+* Added support for session checking
+* Most part of Session API
+* Removed obsolete code
+* Added new Session model and migration Fixed issues with previous models
+* Initial conductor implementation
+* Added deployment script and automated tests
+* Small PEP8 fixes
+* Fixed small issues with parameters. It is required fix
+* Added remove method for environments Also slightly updated routes table
+* Finished environments api
+* Only environments from same tenant as users should be shown
+* Remove unnecessary blocks of code
+* When new DC is adding tenant_id is added as param
+* Fix issues with context
+* Moved utils.py from WindDC
+* Small changes to .gitignore Removed global .gitignore Added .gitignore to WindowsAgent project
+* Update added files
+* Added support for keystone-auth
+* Updated initial version of portas-api
+* Initial version of portas-api
+* Simple function to update agent config added
+* Simple function for working with templates added
+* Function to retrieve meta data opject from config drive added
+* localrc updated
+* Files to automate devstack installation added
+* Fixed small issues with WebUI
+* asd
+* test.commit
+* test.commit
+* Log functions updated
+* Stop-Execution modified
+* Removed obsole line
+* Removed obsolete file Added .gitignore file
+* Added reference JSON for Active Directory
+* Fixed urls for dashboard
+* Fixed Web UI for demo
+* Files removed
+* Windows PowerShell module added
+* Unattended installation files added
+* Execution plan files added
+* windc iteration2
+* Added WebUI for correct configuration of new service AD
+* Resolved issue with datacenter id
+* Resolved issue with datacenter id
+* Fixed many small issues
+* Fixed typo
+* Fixed KEERO-89
+* Fixed issue with data centers
+* Added services functions to client. Need to be tested
+* [KEERO-83] Windows Agent: Ability to reboot machine after execution plan is executed
+* [KEERO-83] Windows Agent: Typo fixes + sample values in config
+* [KEERO-83] Windows Agent initial implementation
+* Added operations for chef. They might be remove if we decide to not use chef
+* Fixed small issues
+* Fixed KEERO-85
+* Fixed issue with virtual environment SQLAlchemy library
+* Added library libsqlite3-dev to virtual environment for windc client
+* Added new functional to dashboard, fixed small issues
+* Added windc API client, sync repo with dev box
+* Added new files
+* Updated design. Removed extra code
+* 1. Added support of CloudFormation templates. Made a simple interface to build template. Stan can work here to redesign template.py 2. Added calls of drivers. Now heat is called from cmd instead of client. Should be rewritten. 3. ActiveDirectory makes a static template. Need to rewrite this with working with actual parameters
+* Added additional fields for Domain Controller
+* Added simple form for configuration Domen Controllers and IIS Servers
+* Fixed small problems with links and titles on pages
+* Fixed small problems with links and titles on pages
+* Added initial project for horizon dashboard
+* 1. Added builders support. Each builder is a class dynamically loaded from ./windc/core/builders folder. The class name should be the same as module file name. 2. Updated core/api.py to support datacenter and service creation with extra parameters which are not defined by model explicitly. 3. Added event based approach for the windows environment change. Now when user submits a request to API the core updates database and initiates a new event which defined scope (datacenter, service, VM) and action (add, modify, delete). This event and data will be iterated over all registered builders. Each builder can use this event and data to plan some modification
+* 1. Fixed issue with main file start ./bin/windc-api 2. Added router to Route /datacenters/ and /services/ URLs 3. Added stubs for windc/core/api. 4. Fixed start-up process for service ------------------------------------------------- Now it is working service which will reply for curl http://localhost:8181/tenant_id/datacenters/ curl http://localhost:8181/tenant_id/datacenters/dc_id/services curl http://localhost:8181/tenant_id/datacenters/dc_id/services/service_id
+* Initial version of the Windows DataCenter project. It is openstak-skeleton based
+* Unattended files added
+* Initial empty repository

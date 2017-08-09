@@ -1,0 +1,14 @@
+pbr>=1.8
+six>=1.9.0
+oslo.config!=3.18.0,>=3.14.0
+oslo.context>=2.9.0
+oslo.i18n>=2.1.0
+oslo.utils>=3.18.0
+oslo.serialization>=1.10.0
+debtcollector>=1.2.0
+pyinotify>=0.9.6
+python-dateutil>=2.4.2
+monotonic>=0.6
+
+[fixtures]
+fixtures>=3.0.0 # Apache-2.0/BSD

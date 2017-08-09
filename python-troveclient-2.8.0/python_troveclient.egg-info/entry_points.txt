@@ -1,0 +1,9 @@
+[console_scripts]
+trove = troveclient.shell:main
+
+[openstack.cli.extension]
+database = troveclient.osc.plugin
+
+[openstack.database.v1]
+database_flavor_list = troveclient.osc.v1.database_flavors:ListDatabaseFlavors
+

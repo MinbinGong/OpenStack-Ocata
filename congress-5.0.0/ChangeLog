@@ -1,0 +1,1348 @@
+CHANGES
+=======
+
+5.0.0
+-----
+
+* Exclude atomic rule from dependency graph
+* fix delete-missing-driver-datasources function
+* Update UPPER_CONSTRAINTS_FILE for stable/ocata
+* Update .gitreview for stable/ocata
+
+5.0.0.0rc1
+----------
+
+* Supress ceilometer event list error
+* Supress alarm_list error while polling
+* Add tables contributed by atomic rules
+* Do not init data on subscribe for unresponsive service
+* Update and add haht rule test cases for locking
+
+5.0.0.0b3
+---------
+
+* Updated from global requirements
+* Update standalone installation section
+* Remove antlr3 files except Python runtime
+* Add heat and aodh plugins to sample local.conf
+* Updated from global requirements
+* Add aodhclient to requirements.txt
+* Added link to modindex
+* Fix exception to display driver_name
+* Updated from global requirements
+* update the log level to debug in datasource_synchronizer
+* Update doc to list Aodh as supported datasource driver
+* Update LOG message in get_status
+* Fix typo in README.rst
+* Fixes congress.conf.sample file generation
+* Lock table and sync rule before each rule insert
+* specify webob Response charset
+* Updated from global requirements
+* Set up pre-defined policy rules automatically in devstack install
+* Refactor datasource synchronizer
+* Updated from global requirements
+* Fix check that policy-names are valid IDs in the grammar
+* Correct default to Default in auth params
+* Refactor policy synchronizer
+* Replaces uuid.uuid4 with uuidutils.generate_uuid()
+* Adds output_policy_command.py in scripts directory
+* Add namespace 'builtin' for builtins
+* Updated from global requirements
+* Allow subscription before data service exists
+* Updated from global requirements
+* Display id column in PolicRule data in horizon
+* List subscribers for a particular service
+* Fix typo in alembic.ini
+* Remove outdated changes
+* Add get_item call in datasource_model
+* Updated from global requirements
+
+5.0.0.0b2
+---------
+
+* Fix cinder driver all_tenant typo
+* Support v3 auth in congress-dashboard
+* Updated from global requirements
+* Add tempest tests for aodh driver
+* Show team and repo badges on README
+* fix instruction of endpoint creation
+* wait after killing polling thread
+* Fix a typo
+* start datasource drivers before policy engine
+* Correct  reraising of exception
+* Remove if-statements for checking dse or dse2
+* Fix Doctor datasource description
+* gate-issue: Update tests to use fake clients
+* Updated from global requirements
+* Route datasource add/delete request to datasource node
+* Increase timeout for unittest
+* GateIssue:Remove KEYSTONE_CATALOG_BACKEND var
+* Add Aodh datasource driver
+* Add network address builtins to datalog
+* Suppress ceilometer_driver aodh error
+
+5.0.0.0b1
+---------
+
+* Minor change in HA test
+* Updated from global requirements
+* Do not check in-mem dupe in persistent_create_policy
+* Move and rename datalog builtin file and test
+* Gate-Issue: Fix datasource sync period
+* Sync-datasources only on datasource nodes
+* Updated from global requirements
+* Minor updates of docs in datasource creation section
+* prevent duplicate policy names using constraint
+* remove useless ds-add recovery code
+* Updated from global requirements
+* Updated from global requirements
+* local HA tests
+* tempest HAHT wait for sync
+* Use upper constraints for all jobs in tox.ini
+* Updated from global requirements
+* Updated from global requirements
+* Newer release notes are not traceable
+* Update .coveragerc after the removal of openstack directory
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* Set HTTPProxyTOWSGI middleware in front of congress
+* HeartBeat packet includes subscribed_table info
+* Enable release notes translation
+* Critical newton fix: Use new db session for table locking
+* Updated from global requirements
+* Update haht docs
+* Update release notes for Newton release
+* Disable subtransactions in table locking transaction
+* Remove unnecessary test_noop.py and tests2 directory
+* Updated from global requirements
+* Specify text-length for MySQL only
+* Add missing whitespaces to a few messages
+* Disallow duplicated policy name in DB
+* Fix rule sync for head-only rules
+* Updated from global requirements
+* Using assertIsNotNone() instead of assertNotEqual(None)
+* Updated from global requirements
+* Updated from global requirements
+* Trivial: Replace 'assertTrue(a not in b)' with 'assertNotIn(a, b)'
+* Fixes to synchronize_policies
+* Use keystone session in keystone_driver
+* Remove the traceback added by oslo-messaging RPC
+* Default to single process in devstack
+* Remove outdated changes in docs
+* Some updations in congress docs
+* Mark distributed_architecture config as DEPRECATED
+* Make policy rule requests gives 404 (not 400) when policy not found
+* Check DB only to detect duplicate DS name on add
+* Updated from global requirements
+* Updated from global requirements
+* Add support to use pdb with tox
+* Modified to use Identity v2.0
+* Add __ne__ built-in function
+* Remove old dse reference in code
+* Update reno for stable/newton
+* Fix error: option --no-parallel not recognized
+
+4.0.0.0rc1
+----------
+
+* Use only strings in paste.deploy.loadapp global_conf
+* control_bus service has only 1 heartbeat thread
+* delete python bytecode including pyo before every test run
+* haht release notes
+* Editing pass over docs
+* Updated from global requirements
+* Stop using config option sqlite_db
+* Fix standalon install manual in README
+* Replace retrying with tenacity
+* Raise BadRequest while pushing data to non-push ds
+* give correct http error on getting non-existent policy
+* Adds a releasenote of lazy datasource
+* Devstack to support CONGRESS_REPLICATED flag
+* Fix issues raised while starting multiple PE's
+* Keystone CLI is removed and so replaced with openstack CLI
+* Add support to synchronize one policy
+* Added Monasca and OPNFV Doctor to section 3
+* Fix objects_translator fails to pull data
+* Fix alarms_translator fails to pull data
+* Use Reno for release note
+* Clean imports in code
+* remove new_arch in tox
+* Remove distributed_architecture flag
+* Use assertIn(A, B) instead of assertTrue(A in B )
+* trivial typo fix
+* Support lazy tables in openstack drivers
+* Instantiating datasource service by synchronizer
+* Remove old synchronizer code
+* Resolve gate: reduce ds sync period in devstack
+* Restore the DSE opt group
+
+4.0.0.0b3
+---------
+
+* DSE2 - resubscribe if update missing for too long
+* Remove deepsix reference in datasource drivers
+* Sync datasources only on datasource node
+* Add __ne__ built-in function
+* Clean up old dse codes in Policy Engine
+* use - instead of _ in cli opts
+* Added Congress HA Overview guide
+* Updated from global requirements
+* Replace raw_input with input to make PY3 compatible
+* Modify existing HA tempest test
+* Clean imports in code
+* TrivialFix: Remove logging import unused
+* Updated from global requirements
+* dist_arch flag removed from devstack
+* Fix tempest.conf generation
+* Correct reraising of exception
+* Updated from global requirements
+* Remove white space between print and ()
+* Improve logging in dse_node.py
+* Introduce 'lazy_tables' flag to nova datasource driver
+* Remove an unnecessary assignment
+* Updated from global requirements
+* Added oslo-messaging exchange 'congress'
+* Cleanup old dse code in API models (part-2)
+* HAHT - datasource synchronizer use UUID not name
+* Fix launching devstack failure in gate
+* HAHT - Mitigate missed action during DSD failover
+* HAHT - persist pushed data
+* Add required api_version argument in ironic
+* Updated from global requirements
+* Updated from global requirements
+* Race-free synchronize policies
+* Replaced e.message with str(e)
+* Disable old DSE code
+* Updated from global requirements
+* Fix string interpolation at logging call
+* Implement horizon plugin model
+* Scrap testHA:test_datasource_db_sync_remove
+* Correct reraising of exception
+* Fix an argument order of assertTrue
+* Enable devstack to start congress services seperately
+* Fix misuse of assertTrue
+* Updated from global requirements
+* Add Python 3.5 classifier and venv
+* Updated from global requirements
+* Fix Gate HA test Failure
+* Updated from global requirements
+* Exit if datasource could not be loaded
+* modify the home-page info with the developer documentation
+* Updated from global requirements
+* API routing to intranode PE
+* Deployment guide of Resource Agent
+* Migrate synchronizer to DSE2
+* Use auth_url from horizon settings
+* Removed extra dashes in title lines
+* remove unused log
+* Thread-safety review
+* Adds custom ocf for HA of DataSource Node
+* Updated from global requirements
+* Remove unused LOG to keep code clean
+* WIP:Update description field for datasources
+
+4.0.0.0b2
+---------
+
+* Update to fix minor grammar
+* ExecutionDriver handles exec requests from replicated PEs
+* Move dse_opts to default group
+* Remove policy_engine dependency while starting API
+* Updated from global requirements
+* Stop import datasource manager in plexxi driver and harness
+* Removed duplicate oslo-concurrency requirement
+* Fix test_webservice.py for py35
+* Adds execute(self, action, action_args) to PlexxiDriver
+* TestPolicyExecute no longer inherits from TestCongress
+* Add keystone v3 datasource
+* Enable different deployment configurations for HA
+* Updated from global requirements
+* Prevent a new datasource from deleted in creation
+* Updated from global requirements
+* Start and Stop DatasourceDriver in new architecture
+* Updated from global requirements
+* Fix wrong usage of novaclient
+* Fix gate failure
+* Add congress to service_available group
+* Add support to both v2 and v3 auth_urls
+* Remove use of deprecated network_resources module
+* Updated from global requirements
+* Updated from global requirements
+* Add configuration options description to docs
+* Updated from global requirements
+* List 'node_id' as part of [dse] section in conf
+* dse2 sequenced, differential pub-sub
+* Updated from global requirements
+* Add reference to configuration options in Upgrade instructions
+
+4.0.0.0b1
+---------
+
+* Make the messaging driver configurable
+* Working Hot Stanby HA on any driver of oslo.messaging
+* Use right method to get admin credential
+* Updated from global requirements
+* Tempest for Push Type Driver
+* Load rules after service start
+* Add Upgrade instructions to README
+* Fix logging in dse2
+* Migrate test-congress to dse2
+* Remove unnecessary executable permissions
+* Updated from global requirements
+* Updated from global requirements
+* Loads persited policy rules during launcing PolicyEngine
+* Changed assertTrue(isinstance()) to assertIsInstance()
+* Updated from global requirements
+* Updated from global requirements
+* Support datasource names in API
+* Updated from global requirements
+* remove verbose option in devstack plugin
+* Launch Congress with distributed_architecture flag is true
+* Fix row-order-sensitivity in test_congress
+* Adds Doctor Driver
+* Loads configured datasource driver
+* Updated from global requirements
+* [Trivial] Remove unnecessary executable privilege
+* Fix gate failure
+* Add dse_opts to the conf file
+* (un)subhandler for DSE2
+* Node id for devstack install
+* Use test_data_service in tests2
+* Migrate harness to DSE2
+* Add keystoneauth1 to requirements.txt
+* Clarify and correct tests/helper.retry_check_no_subscribers
+* Fix subscriber_list has no return value
+* Updated from global requirements
+* Resolve Gate failure
+* Switch to Ceilometer tempest plugin
+* Avoid re-starting service rpc_server
+* Updated from global requirements
+* Fixes Tempest error caused by tempest's changes
+* Remove version from setup.cfg
+* Define context.roles with base class
+* Updated from global requirements
+* keystone session touch-up
+
+3.0.0
+-----
+
+* Use keystone session in murano_driver
+* Use keystone sessions to authenticate
+* Fix typo in congress
+* Use keystone sessions to authenticate
+* Use keystone session in murano_driver
+* Update standalone setup instructions
+* Also package congress_tempest_tests
+* Add Push driver
+* Also package congress_tempest_tests
+* Fix for broken antlr3 in stand-alone install
+* Build docs using tox
+* Enable Murano tempest tests
+* Update standalone setup instructions
+* Minor updates to standalone install
+* Build docs using tox
+* Minor updates to standalone install
+* Remove cloudfoundry from congress.conf instructions
+* Update .gitreview for stable/mitaka
+* Remove cloudfoundry from congress.conf instructions
+* Fix for broken antlr3 in stand-alone install
+
+3.0.0.0rc1
+----------
+
+* Cleanup unused Oslo Incubator code and references
+* Update congress documentation
+* Make persistent_insert_rule error on IncompleteSchemaException
+* Enable congress HA tests
+* Fix for tuple assignment causing 500 Error
+* Moved CORS middleware configuration into oslo-config-generator
+* Fixed policy metadata mismatch between policy engine and db
+* Use tempest.lib instead of tempest_lib
+* Fixed delete policy bug while disabled events outstanding
+* raise exception on adding same rules with different literal order
+* Update performance testing docstring
+* Reject rules with column refs on non-datasources
+* Use routers_client instead of neutron client
+* Fix use of devstack-based branch for congress
+* Add oslosphinx to sphinx conf.py
+* Moved handling of polling threads to PollingDataSourceDriver
+* Updated from global requirements
+* Require dse2 partitioning in unittesting
+* Enables users to specify api version for Nova DataSource
+* DataModelExceptioncreate to raise proper exception
+* Updated from global requirements
+* Use argparse instead of optparse
+
+3.0.0.0b3
+---------
+
+* Clarify devstack install instructions
+* Use assert(Not)Equal/Less/GreaterEqual
+* Migrate datasource api model
+* Remove redundant dse2 partitioning code
+* Heartbeat update of subscribed tables
+* Use partitions in all DSE2 tests
+* Updated from global requirements
+* Move datasource exceptions to exceptions.py
+* Isolate DSE2 tests from one another
+* Migrate datasource create/delete to DSE2
+* Enable subsequent heartbeat updates
+* Stop every node after each test
+* Updated from global requirements
+* fixed unsubscribe_table bug where entire target unsub'ed
+* Updated from global requirements
+* Migrate PushTypeDriver to DSE2
+* minor fixes to test_control_bus
+* Enable row_model exception tests
+* Enable policy and rule disabled exception tests
+* Migrate row_model API to dse2
+* Enable tests of action-model
+* Enable tests-2 according to new arh
+* Raise proper exceptions in new architecture
+* Migrate API action-model to DSE2
+* Fix unit test failures
+* Updates to use base.APIModel instead of deepSix
+* Add original tests that are passing to tests2
+* Updated from global requirements
+* Allow distributed_architecture flag to be set
+* Enables Row Model to Update All Rows by HTTP Request
+* Add PushedDataSourceDriver class
+* Migrate datasource_manager and tests to DSE2
+* Migrates Status API Model to new dse2
+* Migrate Schema Model API to new architecture
+* Migrate Table Model API to new dse2
+* Move common functionalities to base APIModel
+* Updated from global requirements
+* More efficient implementation of find_dependent_nodes
+* Fix find_reachable_nodes bug on empty set roots
+* Add cyclic dependency test
+* Order-insensitivity for DeltaRule
+* Retry tempest tests on any error
+* Use uppercase 'S' in word "OpenStack"
+* Migrate API policy model to dse2
+* Updated from global requirements
+* Fix spelling typos and one underline
+* Migrate agnostic policy engine to dse2
+* Migrate datasource polling to dse2
+* Make dse2 tests run properly with tox -enew_arch
+* Enable basic_ops tempest tests
+* LOG.warn is deprecated in python3
+* Adds test directory for new architecture
+* Adds an Initializing Method for Policy Model Testing in New Architecture
+* Basic pub/sub on dse2
+* Create dse2.DseNode class
+* Enables devstack to switch Congress architecture by the config file
+* Updated from global requirements
+* Adding Monasca Driver to Datasources
+* Remove unused d6cage.ini
+* Create dse2.DataService class
+* Create dse2 path for distributed DSE development
+* Updated from global requirements
+* Add resources and events sources to heat driver
+* Updated from global requirements
+* Add retry to fix intermittent tempest failures
+* Use python3 print, division, import
+* Remove argparse from requirements
+
+3.0.0.0b2
+---------
+
+* Add description field in schema for Neutron
+* Updated from global requirements
+* Replace assertEqual(*, None) with assertIsNone in tests
+* Fix keystone tempest test failure
+* Updated from global requirements
+* Add option to specify --kind while creating policy
+* Added CORS support to Congress
+* Use assertTrue/False instead of assertEqual(T/F)
+* Updated from global requirements
+* Fix congress install manual
+* Keep setup.cfg up-to-date with python versions
+* Replace antlr3 symlinking by sys.path
+* Replace raise <str> by raise <Exception>
+* Updated from global requirements
+* remove python 2.6 trove classifier
+* Change assertTrue(isinstance()) by optimal assert
+* Drop MANIFEST.in - it's not needed with PBR
+* Add py34 support in tox
+* Fix tox.ini to generate proper config file
+* use neutron security_groups_client
+* Updated from global requirements
+* Use roles_client in keystone
+* Prepare Status Model API for the new architecture
+* Fix gate failure - Use tenants_client
+* Fix a link to devstack instruction
+* Eliminate unnecessary deps for tox -e pep8,genconfig
+* Enable neutron tempest tests
+* Enable keystone, cinder, ceilometer tempest tests
+* Enable Nova and Glance tempest tests
+* Updated from global requirements
+* Disable ceilometer alarms
+* tox: rm all pyc before doing unit test
+* Python3 readiness for congress (misc changes)
+* Python3 readiness for congress/api
+* Python3 readiness for congress/datasources
+* Move antlr version choice out of setup.py
+
+3.0.0.0b1
+---------
+
+* Python3 readiness for congress/datalog
+* Separate Polling Methods in DataSourceDriver to PollingDataSourceDriver
+* Use skip_checks to define class level skip condition
+* Add synchronizer for policies and rules
+* Replacing application_catalog with application-catalog
+* Unblocks Gate-Use oslo_middleware
+* Fix tempest failures
+* Fixed datalog/utility Graph cycle enumeration inf loop bug
+* Fix description field in schema for Nova
+* Remove execute table from policy table list
+* Cleanup old devstack related files in contrib
+* Python3-readiness for antlr3 pieces
+* Update readme on tox commands to run tempest tests
+* Remove useless ResourceManager.register_model()
+* Updated from global requirements
+* Openstack typo
+* Tidy engine and datasource mgr refer in harness
+* Change col name for instance_id in nova:floatingIPS
+* Add host_name information into nova driver
+* Add avilability zones and its fields into nova driver
+* Simplified graph dependency computation
+* Fixed bugs in dependency graph tests
+* Fix PolicyException on restarting service
+* Prepare Row Model API for the new distributed arch
+* Migrate to tempest_lib : exceptions
+* Literal has an is_builtin function
+* Add native column-references into policy engine
+* Updated from global requirements
+* Prepare Table Model API for the new distributed architecture
+* Add floating ip table for neutronv2 datasource driver
+* remove default=None for config options
+* Enhance devstack to support heat datasource driver
+* Use assertIsNone instead of assertEqual(None, ***)
+* Add reactive enforcement example in doc
+* The output don't match with example commands in enforcement.rst
+* Remove ServiceClient from policy_client
+* Cleanup datasource_config_model.py
+* Abstract function should use NotImplementedError
+* Add availability zone information into nova driver
+* Updated from global requirements
+* Fix builtins table in policy.rst
+* clarify the example in 'Simulation with Actions'
+* Use oslo_config new type PortOpt for port options
+* Revert "Code re-org for distributed architecture"
+* Add a script to start and monitor children processes
+* Corrected minor mistakes in assert fail message
+* Updated from global requirements
+* Sets loaded rule info to Rule instances
+* Clean up policy API tests from test_congress.py
+* Added sample conf instructions to resolve errors
+* Updated from global requirements
+* Added DevStack plugin for Congress
+* Allow deleting policy by name
+* Update version to 2.0.1
+* Correct class name of test_row_model.py
+* Updated from global requirements
+* Update LOG level for some messages
+* Change devstack to OS_PROJECT_NAME and avoid mocking oslo.policy internals
+* Add swift back in devstack
+* Fixed murano error on show actions
+* Fix heat polling error
+* Fixed typo in Heat's description
+* Amended install instructions in README.rst
+* Fix some more discrepancies in assertEqual
+* Updated from global requirements
+* Rename inspect_builtin_methods to add_executable_client_methods
+* Raise exception if policy doesn't exist
+* Add built in actions for more datasource drivers
+* Correct Simulate API Query
+* Fix order of arguments in assertEqual
+* Fix error on deleting a policy
+* Minor README improvement
+* Fix state computation incorrect
+* Remove execute permission for some py files
+* Fix swift auth problem
+* Fix TypeError on restarting congress service
+* Remove one local copy of the Python antlr3 module
+* Replace local copy of dateutil 1.5, use dependency
+* Updated from global requirements
+* Fix creating policy with long abbreviation fails
+* Add nested context manager to tests.base for py3
+* Fix relative imports for Python 3
+* Replace httplib import with six.moves.http_client
+* Fix usage of dict methods on Python 3
+* Replace xrange() with six.moves.range
+* Update hacking to version 0.10
+* Missing tests for rule_model
+* Update comment field during rule creation
+* Fix AttributeError while inserting a rule
+* Symantec's domain quota policy enforcement
+* Change ignore-errors to ignore_errors
+* Change to use tempest plugin framework
+* Add datatsource actions API into doc
+* Fix few typos
+* Updated from global requirements
+* python3: Switch to mox3 instead of mox
+* Remove 'all_tenants' while listing floating_ips
+* Raise python-3 compatible exceptions
+* Import python 3 compatible StringIO and cStringIO
+* Fix mis-match of example quoted and description
+* Fix KeyError message format
+* Add versions API in doc
+* Add a table schema API in doc
+* Fix typos in enforcement docs
+* Doc editing for liberty release
+* Do refactor for datasource drivers
+* Fix Ceilometer datasource errors on poll
+
+2.0.0.0rc1
+----------
+
+* Ensure datasources are properly deleted
+* Add swift config options
+* Fix typo in /etc/README-congress.conf.txt
+* Fix datasource creation inconsistency
+* Fixed some types in Congress tutorial
+* Prepare Schema Model API for the new architecture
+* Updated from global requirements
+* Ignore KeyError for secret field
+* Built-in names should not be used in rule head
+* Unbreak master with 2 fixes in 1 commit
+* Catch driver not found in API
+* Add an object extract function key to translators
+
+2.0.0.0b3
+---------
+
+* Removes unused posix-ipc requirement
+* Adding distributed_architecture flag in congress.conf
+* Fixes the potential conflictions in rule creation
+* Updated from global requirements
+* Removing unused dependency: discover
+* Rule.tablenames() should not return builtin tables
+* Using oslo to generate congress.conf.sample
+* Updated from global requirements
+* Updated from global requirements
+* Enable Murano in congress libs
+* Disable remaining datasource-specific tempest tests
+* Updated from global requirements
+* Fix import error in keystone tempest test
+* Disabling more tempest tests
+* Temporarily disable Murano
+* RPCify rule_model
+* Include HTTP error codes in error_codes
+* Prepare Policy Model API for RPC
+* Disable flakey tempest tests
+* Partially revert tempest/devstack changes
+* Revert "Add a unique canonical_rule column to each Rule in the db"
+* Remove WritableLogger
+* Add a unique canonical_rule column to each Rule in the db
+* Updated from global requirements
+* Ordered datasource actions list
+* No using d6cage to initialize APIRouter()
+* Code re-org for distributed architecture
+* Updated from global requirements
+* remove congressclient and keystoneclient from ha test cases
+* Do refactor for neutronv2 driver
+* Add update_state in DataSourceDriver
+* Avoid to use python-ceilometerclient 1.4.0 in test
+* Implement listing actions supported
+* Updated from global requirements
+* Updated from global requirements
+* Hook up grammar changes to Event
+* Grammar changes for 174476, and generate lexer and parser
+* Add nova services table
+* Add decorator for translating function
+
+2.0.0.0b2
+---------
+
+* Replace basestring with six.string_types
+* Adds error log for d6cage.createservice() failing
+* Add execution controll option
+* Enable tempest tests to run in virtualenv
+* Fix exception message
+* Support version list API
+* Updated from global requirements
+* Replace (int, long) with six.integer_types
+* Updated from global requirements
+* Remove usage of dict.iteritems()
+* Fix UnicodeDecodeError in py3 jenkins job
+* Fix some issues in enforcement.rst
+* Stop subscribe attempts after successfully handled
+* Cleanup pep8 H302
+* Updated from global requirements
+* Implement ExecutionDriver for all datasource drivers
+* remove deprecated callback in schedule()
+* Updated from global requirements
+* Replace iterator.next() with next(iterator)
+* Updated from global requirements
+* Remove usage of dict.iterkeys()
+* Replace dict.itervalues() with dict.values()
+* Replace unicode with six.text_type
+* Not show backtrace when stop server by sigint or ctrl+c
+* Do refactor for deepsix.inpubrep()
+* Clean unused oslo incubator files
+* Use lockutils-wrapper
+* Use oslo.context instead of oslo incubator
+* Migrate congress/openstack/common/log.py to oslo.log
+* Use oslo_utils.uuidutils
+* Reformat DSE README.rst
+* Clean up server launch
+* Drop use of 'oslo' namespace package
+* Fix eventlet_server.Server TypeError
+* Fix some tempest failures
+* Updated from global requirements
+* Remove httpretty out of test-requirements
+* Corrected wrong field names when translating cloudfoundry response
+* Acknowledge PIP_UPGRADE for third-party install
+* Fixed some misspellings
+* Fix tempest failures
+* Replace busy-wait loop in DSE
+* Drop use of 'oslo' namespace package
+* Switch to oslo.service
+
+2.0.0b1
+-------
+
+* Change to semantic versioning
+
+2.0.0a0
+-------
+
+* Move python-muranoclient to requirements.txt
+* Removing print statements
+* Updated from global requirements
+* Add id function extractor to datasource driver
+* Create Tablename class
+* Add unit tests for api codes
+* Fix AssertionError and backtrace when kill congress-server
+* API: Proper error reporting on invalid JSON input
+* Add VM Migrator to VM placement engine
+* Add Datalog to LP conversion
+* Add ability to generate all instances of a rule
+* Add analysis routine for subpolicy construction
+* Sync with latest oslo-incubator
+* Use graduated oslo.policy
+* Heat datasource driver
+* Fix congress-server launching failed
+* Using datasource id in Read datasource table properties API
+* Fix iterstr to return string representations
+* Add status api calls for policy and rule
+* Not add datasource if configured datasource is disabled
+* Update .gitignore with .idea
+* Unused pretty printer cleanup
+* Added support for folder and file exclusion for pep8 analysis
+* Switch from MySQL-python to PyMySQL
+* Remove commented out logging statement
+* Updated from global requirements
+* Add tempest test for reactive enforcement
+* Add datasource action API for action-execution-interface
+* Add execution-interface to neutron
+* Fix missing required argument
+* Make sure cinder ds driver can work with Havana
+* Add action execution for murano driver
+* Set unique object ids in data source tables' table
+* Fix stevedore package conflict in devstack script
+* Fixed bug in error message format
+* Fixes to Glance tempest tests
+* Fix imports in tempest test
+* Disable test_murano tempest test since it fails
+* Fetch neutron data for each comparison with Congress
+* Fixed bug in negation
+* Drop use of 'oslo' namespace package
+* Fix bug when processing built-in semantics
+
+2015.1.0rc1
+-----------
+
+* More doc tweaks
+* Fix bug with policy negation and multiple policies
+* Edit remaining docs for kilo
+* Updated the Datasource doc
+* Remove policy_path config from devstack
+* Respond correct error if policy not exist
+* Fix policy-deletion bug in domain-agnostic policy engine
+* Fix bug in trigger for initialize_tables()
+* Edit docs for kilo release
+* Fix incorrect validation of translation_type
+* Change stackforge references to openstack
+* Fix bug in execute[] when rule inserted before data
+* Add validation to datasource creation
+* Add on-demand datasource polling
+* Improve API error messages for unknown tables
+* Add test for execute[nova:action(...)]
+* Fix tests to use _ for unused varible
+* Reject rules inserted into non persisted policies
+* Remove support for policy snapshot file
+* Updated from global requirements
+* Fix bug in execute[nova:p(x)]
+* Improve arity computation
+* Mask password in logs
+* Sort head and body before computing a Rule's hash
+* Update .gitreview file to reflect repo rename
+* Restrict modals to 'execute'
+* Allow policy-name in head of rules with modal
+* Add parser/lexer
+
+2015.1.0b3
+----------
+
+* Create rule in a policy via Horizon
+* Fixed keyerrors exception when no named pair arguments are passed
+* Added DataSources status table
+* Nova driver does not read hosts table
+* Add explicit reactive enforcment
+* Track modals in dependency graph of agnostic policy engine
+* Add modal field to agnostic policy engine trigger registry
+* Add comma missing from list of data source drivers
+* Fix here-document usage
+* Delete rule from a policy via Horizon
+* Delete policy via Horizon
+* Create policy via Horizon
+* publish policy table result to dse bus
+* Add murano environments to murano datasource tables and fix bugs
+* Add datasource synchronizer
+* get_items on non-existent collection
+* Make PolicyException inherit from CongressException
+* Do not write a localrc
+* Update README standalone install
+* Add skeleton for VM-placement engine driver
+* Add tests for policy-engine triggers
+* Eliminate duplicates from policy engine queries
+* Fix bug in action theory on restart
+* devstack: Add --config poll_time 10 when creating drivers
+* Added tempest test to test action execution interface
+* Modified predeployment example and added tempest test
+* Adds action execution interface
+* Fix inconsistent rule insert bug
+* Fix tempest imports
+* Adds connected table to murano datasource
+* Make congress-server --version work
+* Fix for graph dependency bug
+* Updated from global requirements
+* Fix bug with getting policy table column names
+* Fixed bug in trigger code
+* Add pretty_json util methods which is useful to pretty json readable
+* Add service_bindings table to cloudfoundryv2 driver
+* Allow for API calls to be made while keystone is being used
+* Disallow deletion of datasource if dangling references
+* Add triggers to domain-agnostic policy engine
+* Fix ironic datasource info 'secret' field not set
+* Change term for non-policy data sources in Horizon
+* Get data source information in Horizon by id
+* Revert change to .gitreview
+* Reduce logging in dse
+* Add note about logrotate to docs
+* Updated from global requirements
+* adjust paths to CongressLexer.py and CongressParser.py in MANIFEST.in
+* Remove dead code from congress_server
+* Add 'simulation' description to docs
+* Added triple-quoted string support and refactored
+* Updated from global requirements
+* Updated from global requirements
+* Do not expose secret fields in config
+* Fix race condition for FakeDatasource
+* Added BYTES literals and Pythonesque comments
+* Updated from global requirements
+* Add tempest to ENABLED_SERVICES in README
+* Update description on cloudfoundryv2 driver
+* Make plexxi driver use constants
+* Make poll_time configurable via the API
+* Slight refactor of policy engine builtin functionality
+* Setup thirdparty-requirements
+* Expose services for Cloudfoundryv2 datasource driver
+* Prevent congress-server from dying on startup
+* Need to specify name so that correct exception string is returned
+* Fix bug in get_credentials
+* Fix unit test breakage
+* Include Relationships and extend other murano datasource tables
+* Added single-line string literal support per 3.4.2 (no BYTES yet)
+* Fix Makefile for new congress/datalog directory
+* Fix Unauthorized exception after auth_token expire
+* Add missing __init__.py to tests/policy_engines
+* Explicitly add noproxy for congress host for curl
+* Skip loading datasource driver if it's not enabled
+* Add Ironic datasource driver
+* Rename 'congress/policy' directory to 'congress/datalog'
+* Fix failure to load rules into policy engine on restart
+* Make private methods start with underscore
+* Updated from global requirements
+* Update tutorial per data source driver changes
+* Fix KeyError if two drivers are loaded with same name
+* Updated from global requirements
+* Reorganize policy engines
+* Remove unneeed get_translators in some datasource drivers
+* Have datasource base class register_translators
+* Updated from global requirements
+* Remove unused Modal and Negation code from policy engine
+* Modal operators "execute" and "permit"
+* Fixes to README.rst for standalone congress setup
+* Updated from global requirements
+* Remove unneeded commented out code
+* Fix get_required_openstack_options username should be required
+* Updated drivers to improve compatibility with current release
+* Fix Datasource not found error for policy table commands
+
+2015.1.0b2
+----------
+
+* Updated from global requirements
+* Add a latency test for simulate
+* Add select tests, one for 1 match, one for 100 matches
+* Remove unneed __author__ var in __init__ file
+* Increase stop_max_attempt_number to 1000
+* Remove duplicate code create_table_dict
+* Decouple API router code from congress_server
+* Remove datasource.conf from needing to exist
+* API: Improve status api code and add tests
+* API: Add tests fo schema_model
+* Remove http error codes from managers/datasource
+* Make datasources configurable via the API
+* Fix ceilometer/nova test due to change in tempest
+* Fix congress devstack keystone integration and keystone tempest test
+* Fix index lookup in runtime joins
+* Added Python floating-point support per 3.4.2
+* Add abandon_old_review script
+* Change 152791: changed Grammar.g to support Python 3.4.2 integers
+* Add cloudfoundry datasource driver
+* Updated Plexxi Driver to improve compatibility with the  Horizon UI
+* Fix failing test case TestDsePerformance
+* Adds driver for Murano datasource
+* Updated from global requirements
+* Fix unbound veriable reference in amqprouter and unicode check
+* Add DSE/Runtime/Datasource performance tests
+* Improve logging in webservice
+* Make get_schema a classmethod
+* Add and use Fact and FactSet
+* Move exception definitions to congress.exceptions
+* Make nonrecursive.py obey private method convention
+* Make runtime.py obey private method convention
+* Fix multipolicy simulation bug
+* Cache schema generation
+* Update Tempest README file
+* Updated from global requirements
+* Updated from global requirements
+* Move self.rules implementations to TopDownTheory subclasses
+* Use __slots__ for runtime classes
+* Removed ID from Rule datastructure of policy engine
+* Update Horizon Policies panel per model changes
+* Add test_runtime_performance test
+* Update README for standalone install
+* Speed up __hash__() using tuples instead of repr
+* Fix tempest test return value
+* restructure get_status api return
+* Added statistics for ceilometer datasource
+* Use error.message in error response
+* Update .gitignore to ignore snapshot/test file
+* LOG traceback on TypeError for POST
+* Extend policy rules to have name attribute in api
+* Restructure simulate api to avoid passing query in uri
+* Rename initialize to initialize_tables
+* Modifications to dependency graph speedup
+* Introduce test_datasource_driver_config for all openstack drivers
+* Implement NeutronV2 Driver
+* Speed up dependency graph computation
+* Set all_tenants=True to populate all floating ips
+* Add back verbose names for tables in Horizon
+* Updated from global requirements
+* Split up runtime.py into more separate files
+* Handle case when last_policy_change is None
+* Fix tempest test failures
+* Split up runtime.py into separate files
+* Fix tempest test to expect just one value from image_list()
+* Use schema instead of hard coded index
+* Make indexing work for joins
+* Refactor to separate RuleSet
+* Fix a transient test failure in tempest tests
+* Adds runtime.ExperimentalRuntime class
+* Add vCenter driver
+* Enable pep8 H302 test
+* Enable pep8 H237 test
+* Enable pep8 H405 tests
+* Tempest test for cinder datasource driver
+* Enable H904: wrapping using parantheses
+* Imports not grouped correctly
+* Add tempest code coverage for ceilometer driver
+* Reject rules that reference policies in head
+* Add create/delete policy to API
+* Circular import of compile/runtime/unify
+* Remove last of unneeded setUp methods
+* Python 3: Remove long value check
+* Python 3: Fix import path for d6message in deepsix
+* Python 3: Fix httplib
+* Remove E113 comment
+* Enable: E129
+* Enable: F402 import module shadowed by loop variable
+* Updated from global requirements
+* Add tempest code coverage for keystone driver
+* Enable: E128 continuation line under-indented for visual indent
+* Enable: E251 unexpected spaces around keyword / parameter equals
+* Prettify policy and data source tables in Horizon
+* Add keystone entry to datasources.conf
+* Enable: F811 redefinition of unused variable
+* Enable: H305 imports not grouped correctly
+* Enable: H401 docstring should not start with a space
+* Enable: F812 list comprehension redefines name from line
+* Update glancev2 to use parent-col-name for tags table
+* Allow parent_key column to specify its name
+* Make congress devstack smarter with ENABLED SERVICES
+* Enable H231 check
+* Skip the sdist phase
+* Enable H404
+* Migrate to oslo.middleware
+* Remove code to run scripts directly
+* Include congress in ENABLED_SERVICES
+* Subclass from congress.tests.base.TestCase
+* Updated from global requirements
+* Move antlr3 from the front to the back of sys.path
+* Break out _get_schema to get_schema(hdict|vdict|list)
+* Break out inline method _get_schema
+* Make parent_key accessable from subtable
+* Implement in-line attribute for hdict
+* Break up convert_obj
+* Fix tempest integration due to change in tempest
+* Remove references to plugin in README
+* Add missing file required for migrations
+* Added subscribers/subscriptions to datasource status
+* Fix for simulation bug
+* Add code pointers to docs
+* Fix wildcard for editors
+* Log exception in runtime.update
+* Move last of tests to tests directory
+* Enable: E122 continuation line missing indentation or outdented
+* Enable: E713 test for membership should be ‘not in'
+* Enable: H307 like imports should be grouped
+* Workflow documentation is now in infra-manual
+* Down convert unicode to str before importing at datasource
+* Add validation for val-col LIST
+* Add validation for key-col/val-col VDICT
+* Enable: H301 one import per line
+* Fix perm on file and remove main and unused import
+* Add tempest test to check that all datasources expose tables
+* Add Tempest test to check that datasources are initialized=True
+* Fix race condition in Datasources
+* Updated Ceilometer driver as per new datasource driver
+* Enable E126 continuation line over-indented for hanging indent
+* Enable E125 pep8 check
+* Enabled H233/H402 check
+* Added missing test dependency
+* Fix openstack-common.conf to contain the modules we are using
+* Fix get_policy_rules() to not pass None to policy_name
+* Enable H402 one line docstring needs punctuation
+* Enable H233 Python 3.x incompatible
+* Enable E112 expected an indented block
+* Fix default file permissions on source tree
+* Make tests location consistent
+* 500 error returned on invalid table name
+* Updated from global requirements
+* Attemp to fix python34 gating error
+* Fix incorrect comments in glance driver
+* Fix bug with column-references
+* Fix for logging bug
+* Fix tempest tests due to tempest changes
+* Added implementation for Horizon Panels for Congress Datasources
+* Describe convenience translators in driver documentation
+* Update README, fix formatting in tutorial
+* Added Plexxi Driver
+* Allow congress to run with no datasources
+* remove excessively clever TestOrderedSet.test_order_retention method
+* Fix Postgres support for Congress
+* Add safety check for cross-theory recursion
+* Make Runtime class aware of modules
+* Refactor module_schemas in policy engine Runtime
+* Encapsulate Runtime's policy collections
+* reduce likelihood of order collisions in OrderedSet tests
+* Add missing register_translator() for nova driver
+* Bugfix for Swift driver (Bug 1393933)
+* Update README with db instructions
+* Remove duplicated method create_network_group
+* Refactor get_credentials out of DataSourceDriver class
+* Remove unmaintained functional tests
+* Implement get_translators in the base class
+* Move exceptions from datasource_driver to exception file
+* Refactor datasource translator logic
+* Move inline funtions out of convert_obj
+* Add glancev2 datasource driver
+* Optimize policy processing time
+* Add datasource benchmark tests
+* Fix docstring typo selection-type->selector-type
+* Lazily interpolate strings when logging
+* Fix logging level
+* Rename congress_policy_client to congress_client
+* Allow a subtranslator to use a field from the parent table as an id
+* Add missing database section to congress.conf.sample
+* Increase timeout on retry decorator
+* Updated from global requirements
+* Datasource driver for Swift
+* Fixed a bug in Nova driver
+* Start persisting data to database
+* Add persistant store for api
+* PEP8: Removing unexpected indentation and allowing E113 checks
+* Make nondeterministic tests more robust
+* Create Data Sources panel in Horizon
+* Fixed API bug for datasource tables queried through policy
+* Fixes to datasource schema API
+* Updated from global requirements
+* Log exceptions in drivers
+* Clear state later in ceilometer driver
+* Exposed datasource schemas through API
+* Add tests for nova datasource driver
+* Fixed API rule error message tests
+* Fix type in method name get_schema
+* Fix to setup.cfg for dateutil
+* Data source driver for Cinder
+* Installed builtin reordering everywhere
+* Added builtin safety and reordering to policy engine
+* Added datetime builtins to policy engine
+* Add dateutil code
+* Added status for datasources and exposed status via API
+* Throw HTTP 409 (Conflict) on duplicate rules
+* Convert Neutron driver to use new datasource_driver
+* Convert Nova driver to use new datasource_driver
+* Convert keystone driver to use new datasource_driver
+* Handle when obj to be translated is None
+* Use declarative description to drive datasource data conversion
+* Fix for circular imports in compile and runtime
+* Added column-references to datalog language
+* Added schema error-checking to policy engine
+* Try to stop test_cage from failing as much
+* Updated from global requirements
+* Remove unneeded code from test_dse
+* Updated from global requirements
+* Enable H302 check
+* Enable E303 Check
+* Enable E265 check
+* Enable H104 check
+* Modifying assertEquals call for Python 3 Compatibility
+* Added trace option to simulate
+* Tweaked API layer of policy engine simulate
+* Added simulate to API
+* add action file that is created via test_dump_loads test
+* Fix run_tests.sh so that it can build a venv
+* Support action API requests
+* Horizon panel, tabs, and tables for policies
+* Added delta version of simulate
+* Reactivated simulation functionality in policy engine
+* Sync with latest oslo-incubator to add uuidutils
+* Change Copy right text
+* Enable E111 check
+* Enable E123 check
+* Upgrade hacking so we can start using more advanced hacking rules
+* Refactor tempest integration splitting out manager code
+* This file is no longer used
+* Trival whitespace cleanup
+* Ceilometer should also connect as admin
+* Removed d6cage reload module warning messages
+* Removed extraneous print statements from policy engine builtins
+* Data source driver for ceilometer
+* Fix bug in value_to_congress
+* Add README file for how to configure congress and tempest
+* Add Check to see if congress has started in devstack
+* Remove nicira prompt from doc and add $ before each curl command
+* Adding tempest integration and testing
+* Make default creds for datasources admin
+* Make devstack script able to set password
+* Don't use keystone client before initializing it
+* Default setting for verbose/debug should be True
+* Add a Congress driver for Keystone
+* Fixes docstring typos
+* Updated from global requirements
+* Added pretty-printing for policy rules for client
+* Builtin Integrated with Runtime
+* Changed DSE to use eventlets rather than threads
+* Fix bind_port in sample config to be correct
+* Fixed bug in materializedViewTheory
+* Reactivating materialized theory tests
+* Resurrected more policy tests
+* Replace fakes.FakeClient inheritence with Mock
+* Add version /v1 to url in congress api
+* Fixed bug for inserting rules via API
+* Add congressclient bindings to tutorial
+* Change default congress port to non reserved port number 1789
+* Remove unneed step to set fixed-ip and neutron cleanup
+* Update README with how to install java on ubuntu
+* Fixed bug in config file poll_time parameter
+* Remove quickstart.rst as base README covers this
+* Correct api return code for invalid urls
+* Shortened tablenames constants in Neutron driver
+* Fixed Neutron translation of external_gateway_info
+* Added schema interface to datasource drivers
+* Cleaned up Neutron and Nova drivers
+* Improve prepare_devstack.sh with success message
+* Added test cases for CollectionHandler
+* Fix missing imports causing gate failures
+* Update recommended devstack ENABLED_SERVICES value
+* Updated from global requirements
+* Added Release info to README
+* moving specs to the new repo
+* Updated from global requirements
+
+1.0.0a1
+-------
+
+* Enable all services
+* Fix link to policy.rst
+* Updated standalone install instructions in README
+* Fix up formatting more
+* Fix up formatting
+* Fix up policy section
+* Edit cloud services section
+* Fix up tutorial formatting
+* Update config information for OS_USERNAME
+* Improved robustness of devstack install script for snapshot
+* Fix number of columns in network table
+* Added troubleshooting guide
+* Fixed return value in row_model's get_items
+* Move policy motivation to intro/readme
+* Turn verbose/debug logging off by default
+* Tweak to README to use 'password'
+* Removed unused column
+* Properly surface rule errors to API
+* Fixed devstack installation to handle datasource config
+* Removed Services theory
+* Fix up architecture section
+* Flag Basic Concepts for removal and clean up Policy section
+* Edit basic concepts a little
+* Clean up and re-word README/Intro
+* Add a Congress tutorial for group membership
+* Updated README file
+* Addendum to docs
+* Updated docs for alpha
+* Path bug fixes for harness
+* Fix parameter ordering to add_item
+* Added tracing to API
+* Added tracing option to Select queries
+* Spin up all configured services at startup
+* Made policy_path optional
+* Added per-datasource configuration
+* API: Pass query parameters to DataModels
+* API Model: return dict in get_items()
+* Fix requirements.txt
+* Support API errors from data models
+* Simplify prepare-devstack script
+* Tests: reset config after each test
+* Fix neutron/nova datasource tests to inherit from base.TestCase
+* Fetch servers from all tenants from nova
+* Install default-jre from devstack script
+* Change hardcoded ip to localhost
+* Add devstack integration files
+* Fix up congress.conf.sample file
+* Sync requirements with upstream
+* Add OpenStack policy integration bits
+* Add keystone support
+* Simplifying policy runtime to use single theories
+* More logging for table_model
+* Made DSE raise exceptions instead of log
+* Fixed bug with auto-generated tables
+* Avoid redundant datasource tuple translation
+* Eliminates redundant table rows at API level
+* Aggregated commit after VM failure
+* Fixing up getting started instructions
+* Wire API models to policy engine
+* Add missing entry point in setup.cfg for congress-server
+* Make tests in test_webservice run
+* Refactor congress eventlet server code
+* Add run_tests.sh to congress
+* Add oslo-incubator files for running congress-server
+* Add eventlet to requirements.txt
+* Added API data models
+* Fix gate missing test-requirement httpretty
+* spec compromised vm
+* Fix dataObject class declaration
+* Update congress README file
+* Add more things to .gitignore
+* Add hook to create parser in setup.py
+* Ignore generated parsers in pep8
+* Add WebOb to requirements.txt
+* Fix relative import path in source tree
+* Integrate openstack/common logging and cfg with congress
+* Copy needed openstack.common files into congress
+* olso.config and oslo-incubator integration spec
+* Add *.swo to .gitignore
+* Keystone integration spec
+* Add SimpleDataModel unit tests and fix bugs
+* Spec API validation
+* README.rst file for DSE
+* Match global requirements
+* Functional integration of DSE, policy, data sources
+* Remove OVS dependency from api.wsgi
+* Update API implementation to refreshed design
+* Add gettextutils from oslo
+* Remove legacy API server
+* Move API specific code to api subdirectory
+* Update comment for deltarule
+* Made datasources periodically poll via DSE
+* Robustness improvements to NeutronDriver
+* Integrated DSE, Data sources, and Policy engine
+* create specs in the congress project
+* added first spec, for the DSE integration
+* Added registry for Datalog builtins
+* Added policy target to policy runtime Event
+* Added ability to dump/load all policies at once
+* Added test cases for neutron and nova driver
+* Added missing ini file to dse
+* Made run_tests work on mac as well as linux
+* Unit Test for Nova Driver
+* Changed location of datasource drivers and renamed the folder
+* Added support for List of Hosts and Floating IPs
+* Added Nova driver
+* Remaining Files
+* Initial commit
+* Adding future-features.txt
+* Docs on How to write a data source driver
+* Added AccessControl policy
+* Fixed errors and some bugs in the neutron_pluggin
+* Added generic driver and neutron driver
+* First cut of user-docs
+* Merged Literal and Atom classes
+* Added rule body reordering for safety
+* Added policy error checking
+* Hack to make unittests pass with tox
+* Update imports to reflect new package path
+* Update Makefile to reflect new source path
+* Tweaks to private_public demo
+* Split TestPolicyApi into multiple tests
+* Fixed Makefile, scripts for change in dir name src
+* Trivial: pep8 compliance tweaks
+* Split TestTablesApi into multiple tests
+* Restructure to follow OpenStack cookiecutter template
+* Add .gitreview file
+* Update licensing
+* Added enforcement to private-public network demo
+* Added Enforcement policy
+* Adding Neutron action descriptions
+* Fixed bug where ordering of rules and data mattered
+* fix typo in compiler
+* Remove hard-coded module search paths
+* Fixed bug in main
+* Basic API server
+* Expanded private_network script
+* Added Projection capabilities to the runtime
+* Extended example to include remediation
+* Added remediation computation
+* Added abduction to top_down_eval suite
+* Added ability for one theory to include another
+* Added negation to NonrecursiveRuleTheory top-down eval
+* Added top-down evaluation for NonrecursiveRuleTheory
+* Reorganized runtime into theories
+* Added recursion to the language
+* Extended queries from atomic to conjunctive
+* Added command line demo
+* Added explanation extraction
+* Added insert/delete-rule to top-level interface
+* Added negation, proofs to policy engine runtime
+* Added proof-tracking support
+* Adding runtime tests
+* Modifications to organization of runtime, to enable testing
+* Add test wrapper to work around PYTHONPATH
+* Add example unittest
+* Fixed path for antlr in compiler.py
+* Rearrange project directory structure
+* Runtime passed first test
+* Adding runtime
+* Added .gitignore
+* Added line numbers to internal objects
+* Added Antlr compiler/runtime and wrote initial grammar
+* Initial empty repository

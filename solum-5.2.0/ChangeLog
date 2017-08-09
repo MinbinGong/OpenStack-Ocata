@@ -1,0 +1,1053 @@
+CHANGES
+=======
+
+5.2.0
+-----
+
+* Devstack replace nova-docker
+* Fixing functional tests
+* Add *.swo to gitignore
+
+5.1.0
+-----
+
+* Updated from global requirements
+* Add debug to tox enviroment
+* Updated from global requirements
+* Setting endpoint, user, project using DevStack functions-common
+* Remove the commenting out config generation TODO
+* Add hacking check framework for solum
+* Updated from global requirements
+* Let solum devstack using the new enable file
+* Use heat plugin replace enable_service
+* Updated from global requirements
+* (Temp change) Using devstack commit-id to unblock the gate
+* Updated from global requirements
+* Remove the pep8 ignore
+* Show team and repo badges on README
+* Fix typo
+* Use assertGreater(len(x), 0) instead of assertTrue(len(x) > 0)
+* Remove KEYSTONE_CATALOG_BACKEND from devstack plugin
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* Remove the mistral.openstack.common import
+* Replaces uuid.uuid4 with uuidutils.generate_uuid()
+* Remove the openstack/common in code
+* Revise readme of devstack plugin
+* Updated from global requirements
+* Remove the openstack-common.conf and dirs in solum
+* Enable and start docker service when install docker
+* Updated from global requirements
+* Updated from global requirements
+* Enable docs in tox
+* Use upper constraints for all jobs in tox.ini
+* Updated from global requirements
+* Update the rst table format
+* Change stackforge to openstack
+* Fix the issue that solum readme doc is not covered
+* Update reno for stable/newton
+* Fix devstack path in doc
+* Updated from global requirements
+* Fix no parameters app solum-worker gives KeyError
+* Drop MANIFEST.in - it's not needed by pbr
+
+5.0.1
+-----
+
+* Fix the wrong '--plan-file' flag in quick start doc
+* Enable release notes translation
+* Updated from global requirements
+* Updated from global requirements
+* Remove solum-builder-api from setup.cfg
+* Updated from global requirements
+* Trivial: Remove vim header from source files
+* Bump devstack version
+* Using sys.exit(main()) instead of main()
+* Updated from global requirements
+* Don't pass argument sqlite_db in method set_defaults
+* Replace assertEqual(None, *) with assertIsNone in tests
+* Updated from global requirements
+* Let solum api/conductor/deployer/worker work with logging
+* Fix tempest error
+* Let solum conductor/deployer/worker work without logging
+* Updated from global requirements
+* [workaround]Let solum work without logging
+* Updated from global requirements
+* Add Python 3.5 classifier and venv for solum
+* Coreos uses the stable version
+* Modify use of assertTrue(A in B)
+* Remove all the openstack directory
+* Switch to oslo_i18n
+* Using oslo_utils instead of excutils.py
+* Switch to oslo_utils
+* Updated from global requirements
+
+5.0.0
+-----
+
+* Switch to oslo_log
+* Fix output public_ip  in the coreos.yaml
+* Updated from global requirements
+* TrivialFix: Remove logging import unused
+* Updated from global requirements
+* Replace solum.openstack.common.uuidutls with oslo_utils.uuidutls
+* Remove incubated lockutils from solum
+* Updated from global requirements
+* Update Installation steps, Deploying DU on VM
+* Updated from global requirements
+* Add LP operator config to worker
+* Use tempest.lib instead of tempest-lib
+* Updated from global requirements
+* Fix the gate broken
+* Remove discover from test-requirements
+* Updated from global requirements
+* Updated from global requirements
+* add key_name Property
+* Correct reraising of exception
+* Fix argument order for assertEqual to (expected, observed)
+* Updated from global requirements
+* Adding exception handler for Workflow delete
+* Updated from global requirements
+* Check container status,add docker ps
+* Using user creds to perform heat operations
+* Deleting Assembly add Workflow.id
+* Updated from global requirements
+* Check description field length on app create
+* vm build-app disk-image-create ERROR
+* Github webhook handling
+* Update Using VM Builder
+* delete vm-slug
+* Updated from global requirements
+* Better logging on solum-worker
+* Updated from global requirements
+* Add PyMySQL to test-requirements.txt
+* Updated from global requirements
+* Add judgment, in repo_token, private, private_ssh_key
+* update README.rst
+* Fix pep8 error
+* Fix private repo build
+* Add judgement for git clone command
+* Update the project gitignore file
+* plugin.sh: Add the installing solum-dashboard
+* Add updated_at field to app data model
+* install_solum_dashboard
+* git url checking support private
+* on github trigger deploy pull request sha
+* Add sudo to mkdir LOG_DIR
+* Supporting parameters as part of lp create
+* On PR close do not trigger app workflow
+* Adding limits on number of lps that can be created
+* Deleting app images from glance
+* tenant_name changed to project_name
+* check LP name starts with alpha character
+* Check app name starts with alpha char
+* Add checks to delete app artifacts from appropriate backends
+* Creating single plan per app
+* Deleting LP image from glance
+* change workflow status from READY to DEPLOYMENT_COMPLETE
+* Do not allow uppercase letters in LP name
+* Make sure app name contains valid characters
+* Updating  examples README.add nodejs part
+* Adding a check to handle optional languagepack in app create
+* Updating getting_started docs; adding local.conf
+* Fix the wrong link of devstack
+* Devstack plugin update
+* Ensure context created using named parameters
+* Changing type of scale_target from text to int
+* Updating the examples in the getting started guide
+* Define context.roles with base class
+* Update reno for stable/mitaka
+* Updating solum docs
+* Unblocking the dsvm gate
+
+4.1.1
+-----
+
+* Checking app repo url
+* Graduate to oslo.utils timeutils
+* Added Java example app
+* Adding https transport for apt to devstack plugin
+* Updating example apps
+* Fixing cherrypy example app
+* On app create check languagepack exists or not
+* Update devstack/plugin.sh
+* register the config generator default hook with the right name
+* Workaround debug DuplicateOptError with generator
+* Replace deprecated LOG.warn with LOG.warning
+* App name cannot be empty
+* Workaround for oslo duplicate config issue
+* Moved CORS middleware configuration into oslo-config-generator
+* Added devstack-provenance file
+* Checking git url format
+
+4.1.0
+-----
+
+* Add reno
+* tempest_lib to tempest.lib for importing auth
+* Convert build-app and a new worker handler
+* Updating app domain model to contain scale_config
+* Validate scale target and set max scale limit
+* config option to limit number of apps per tenant
+* Adds support to deploy already created DU
+* Added CORS support to Solum
+* Refactor trigger controller
+* Adding functionality to support scaling of an app
+* Add scale_config column to the app table
+* Add the missed colon in DevStack README
+* Migrate to oslo.context from Oslo incubator
+* Fixing app cleanup for trigger tests
+* Convert unittest-app bash script to python
+* Use oslo_serialization library
+* Use prepare_service() in commands
+* Introduce sections in parameters file
+* Add result column to workflow table
+* Adding raw_content column to app table
+* Convert bash scripts to Python
+* Delete heat stack on app delete
+* Migrate to oslo config generation
+* Making changes to unblock devstack gate
+* Replace deprecated keystoneclient...exceptions
+* Use assertTrue/False instead of assertEqual(T/F)
+* Replace deprecated LOG.warn with LOG.warning
+* use keystoneclient exceptions instead of oslo-incubator code
+* Drop py33 support
+* Replace assertEqual(None, *) with assertIsNone in tests
+* Updated README
+* Migrate sample 'plan' files to 'app' files
+* Delete python bytecode before every test run
+* Remove py26 from tox.ini and setup.cfg
+* solum app create with param file fails
+* Changing example for mysql, solum-pep8
+* Documents languagepack uses cases
+* Fix the accurate file to prevent import errors
+* Updated README
+* Added Devstack plugin for Solum
+
+4.0.0
+-----
+
+* Delete old stacks on successful app deploy
+* Fix some spelling typos
+* Fixing broken languagepack logs
+* Add logs to workflow resource
+* Fix two typos
+* Removing incorrect barbican setup in pre_test_hook
+* Delete workflows on app delete
+* Use @six.python_2_unicode_compatible decorator
+* Upgrading tempest-lib to unblock dvsm gate
+* Changing glance commands to use version flag
+* Updating docs to reflect introduction of app
+* Fixing bug in wsme_pecan exception wrapper
+* Fixing py27 and devstack gate
+* Added created_at attribute on creation of an app
+* Replace exc.message with six.text_type(exc)
+* Migrating trigger functionality
+* Languagepack delete fixup to work with app
+* Fixed some mistakes in multiple files
+* py3: Stop using StandardError exception
+* Remove solum/openstack/common/versionutils.py
+* py3: Replace dict.iteritems() with dict.items()
+* py3: MultiType.validate() now catchs TypeError
+* Adding uniqueness constraint on workflow table
+* Replace string.letters with string.ascii_letters
+* py3: Replace types.BooleanType with bool
+* py3: Get httplib and __builtin__ from six.moves
+* py3: Get urllib and urlparse from six.moves
+* py3: Replace unicode with six.text_type
+* Remove quotes from subshell call in bash script
+* Change ignore-errors to ignore_errors
+* Changing stackforge to openstack in git repo names
+* Update .gitreview for project rename
+* Modifying workflow api data model to be WSME complaint
+* Updating example app file
+* Update workflow and app status
+* Added workflow handler and connected it to worker and deployer
+* Adding workflow objects and models
+* Fixes to work with WSME 0.8.0
+* Parsing subnet-id for ipv4 subnet from neutron
+* Correctly parsing the server ip from the created heat stack
+* Functional tests: Some new additions and updates to some old ones
+* Update Solum documentation to include Operator's guide
+* Setting default values for languagepack admin creds
+* Updated README
+* Barbican configuration file name change
+* Add correct error handling to wsmext.pecan.wsexpose
+* Add error handling for wsmeext.pecan.wsexpose controllers
+* Fix mock dependencies and unit tests
+* Validate LP name before creation
+* Adds app resource
+* Drop use of 'oslo' namespace package
+* Support operator LP download with swiftclient
+* Fix for bug which leaves logs in swift after App deletion
+* Update pbr version to 2015.1.1 in setup.cfg
+* Prevent creation of nameless plans
+
+2015.1.0
+--------
+
+* Modifying the heat deployer to use injected file to download DU
+* Add configuration options for catalog directories
+* Use eventlet as wsgi server
+* Refactoring heat deployer's multi-port checking code
+* Delete App image from swift
+* Delete LP image files from swift
+* Delete APP logs from swift
+* Delete LP logs from swift
+* Fixing concurrency bug in heat deployer
+* Swift client wrapper
+* Separate the storage of image loc and tag
+* Use swift signal handler in heat template
+* Filter operator LPs by state
+* Admin users are able to access apps belonging to other tenants
+* Deploying refactoring fix
+* Trigger changes
+* Support for pluggable keystone client
+* Check for code attribute in wrapped exceptions
+* Update in-memory status of assem during deploy
+* Fixing a typo
+* Destroy other assemblies on successful deploy
+* Deployer refactoring
+* tempest drops auth
+* Making changes so that custom LP flow works in devstack
+* Updating version in setup.cfg
+* Do not delete LP images
+* Changing the application_uri to include port along with host_ip
+* Add logs for swift-handler
+* Make unittest and run scripts executable if not yet
+* Using python swift CLI to upload/download images
+* Change 'waiting_for_docker_du' state
+* Deployment related cleanup
+* Default log uploaders to LocalStorage
+* Replace 'ADD' with 'COPY' in generated Dockerfile
+* Adding user log messages in deployer; catching IOERROR
+* Added retry for docker save and load
+* Enabling generation and collection of deployer logs
+* Check if an LP is being used before deleting it
+* Update DU state
+* Retry docker builds without cache in build-app/-lp
+* Fix removal of temp files
+* Namespacing built LPs and DUs
+* Modify LP download strategy for custom LPs stored in Swift
+* Retry git clone in scripts
+* Correcting status message for DU deployment failure
+* Support CAMP assembly resources
+* Changing /dev/shm to /tmp for storing languagepacks during build
+* Correcting the status in building LP
+* Updating solum docs
+* Rename languagepack 'PENDING' state to 'QUEUED'
+* Namespacing for DUs uploaded to image storage
+* Language pack with invalid source uri goes to READY
+* Fixing Plan create error handling
+* Reverting back to previous heat stack deletion
+* Delete assemblies when plan is deleted
+* Inconsistent DB column name between app and image
+* Inconsistent end state name between apps and language packs
+* Added exception handlers for heat calls
+* WIP: Custom workflow
+* Removing sudo from wget commands
+* remove build-api
+* Passing protocol to get-temp-url method
+* Using status to determine if heat stack is deleted or not
+* Delete builder API
+* Missing config option import in get_temp_url.py
+* Enabling docker-py in requirements
+* Create temp_url for LPs uploaded to swift
+* Updating Tempest manager usage
+* Reading in temp_url related configuration parameters from file
+* Using python-swiftclient for languagepack upload
+* Added a global 'region_name' config
+* Using python-swiftclient to upload DUs
+* Fix port mapping code in worker shell
+* Deployer changes for supporting port mapping
+* Worker changes for port mapping
+* Include operator created LPs when listing LPs
+* Adding sudo to docker commands and force to image removal
+* Add port configuration in plan data model
+* Fix the swift list command
+* Fix None type in params
+* Changing scripts to save swift files to tmp directory
+* Consolidate Solum and Builder API
+* Setting Auth url to empty if it is not available in context
+* In devstack setup perform barbican actions when enabled
+* Docker image cleanup on failed unit tests
+* Modified heat.py to handle DUs stored on swift
+* Modified build-app build-lp unittest-app shell.py to use swift
+* Allow users to use LP names in a plan file
+* Add support for accessing LP logs from CLI
+* Avoid creating empty parameter object
+* Add retry for DB calls
+* Adding region option to OpenStack clients
+* Fix UserlogHandler bug
+* Renamed safe_update() to update_and_save()
+* Add a debug msg for checking deployment status
+* Delete cloned git repos from worker node
+* Delete local languagepack image after building the DU
+* Add pip install to get latest tempest reqs
+* Add user accessible logging to languagepack build
+* Add a 'BUILT' assembly state
+* Default cedarish test command to noop
+* Filter images by languagepack type
+* Swift image storage backend Bug fixes
+* Support for languagepack list and show
+* Fixed base_image_id check for auto
+* Several small fixes
+* Execute unit tests and build DU
+* Introduce run_cmd in the planfile
+* Make image storage configurable
+* Support for using CoreOS for deployment
+* Updating requirements to avoid buggy testtools package
+* Replace use of deprecated devstack function
+* Add timeout for sending http requests
+* Support CAMP-compliant plans
+* Fixed broken query to heat_stack_component
+* Fix database concurrency issue
+* Updating tests to use tempest-lib
+* Modified the Custom languagepack Build flow
+* Fix worker cannot find build script on gate
+* Stop raising SolumException in controller/v1/plan
+* Include region argument in functest client init
+* Remove unused param in _find_id_if_stack_exists()
+* Expose Assembly updated_at and created_at fields
+* Fixing test_components_get_all
+* Report configured Solum build in reponse headers
+* Clean up after test_language_packs_get_all Try 2 Closes-Bug: #1406647
+* Configurable storage of solum-generated variables
+* Close the back door
+* Add service to SolumClient super.__init__ call in functests
+* Adds delete to ImageController
+* Report unittest status from worker shell handler
+* Add content-type json/yaml for PUT /plan/:id
+* Add content-type json/yaml for POST /plans
+* Add accept json/yaml for GET /plan/:id
+* Add accept json/yaml for GET /plans
+
+2014.2.2
+--------
+
+* Use docker registry consistently in contrib script
+* Use the new keystonemiddleware module
+* Fix build_lp call in worker/handlers/shell.py
+* Fix retry on public repos
+* Get COMMIT_ID properly in cedarish/docker/build-app
+* Correct trigger_uri if X-Forwarded-Proto is https
+* Added a python app example
+* Workflow documentation is now in infra-manual
+* Remove solum.conf.sample from source control
+* Fix value type in parameter
+* Update solum.conf.sample for olso.messaging
+* Mark assembly as ERROR on build failures
+* Not use Drone for unittest by default
+* Filter Solum resources by project ID
+* Move update_assembly_status function from worker to conductor
+* Install curl on the example chef LP
+* Add username to Assembly table
+* Add example parameter file
+* Custom variables
+* Allow git clone from any host inside container
+* Fix broken build script in dockerfile lp plugin
+* Support for building Custom languagepack
+* Implement top-level container resources
+* List uploaded stage logs for an assembly
+* Adding skip if service disabled based on Tempest config
+* Update barbican client usage
+* TLOG steals image_id
+* Restore unittest-app to lp-cedarish
+* Check that the chef LP exists in chef unittest_app
+* Carry deploy_keys_ref in triggers
+* sudo is not needed to make these dirs as we create them in prepare
+* B64-decode Shelved keys
+* Add CAMP type_defnitions and attribute_defintions resources
+* Remove docutils pin
+* Fix to handle recent upstream python-barbicanclient changes
+* fix bug in unittest for docker command
+* Fix typo in uploader tests
+* Change drone.io download URL
+* Optionally upload stage logs to Swift
+* Rename deployer delete_heat_stack to destroy
+* don't set up glance url if shell_nobuild
+* Change the hard coded build cmd in _run_unittest()
+* Support private git repo's without using Barbican
+* Add static type and attribute definition metadata files
+* Set barbican host_href param to $SERVICE_HOST on devstack
+* Fixed a path bug in contrib/lp-chef/docker/prepare
+* Check that public repos exist before cloning
+* A chef LP handler for contrib
+* Controllers and models for static CAMP resources
+* Fix mistral client setup
+* Stop using intersphinx
+* Enable retry tests on comment
+* Add missing version field in mysql and docker_registry example plans
+* Minor typo fix: Use 'OpenStack' instead of 'Openstack'
+* Added support for private GitHub repos
+* Added tests for bug-1367470
+* Fix constructed .drone.yml script line
+* Replace "glance index" with "glance image-list"
+* utilize drone cli to run unit tests when installed
+* clone repo locally and then perform tests by doing a docker build
+* Send back testing results
+* require eventlet in RPC service
+* Run unit tests against a particular git branch
+* Work toward Python 3.4 support and testing
+* Reverse diff check in check_uptodate
+* Moving assembly and plan creation and deletion to base client
+* Configurable base location of worker scripts
+* Updating version in setup.cfg
+* Add missing install.d instructions in gitolite elements
+* Add use of guestagent install shell script in infra dibs
+* Moving git_url into git_info dictionary
+* Add barbican/mistral devstack integration for functionaltests
+* Anticipate Plan delete DBReferenceError
+* Rename marconi to zaqar
+
+2014.2.1
+--------
+
+* Next version is 2014.2.1
+* Move to oslo.db
+* Enables no auth for public endpoints
+* Configurable build-app and unittest logs
+* Move tests/api/v1 to tests/api/controllers/v1
+* Fix argument count in unittest-app
+* Update oslo-incubator (except the db code)
+* Switch from openstack.common.test to oslotest
+* Specify 'master' branch in unittest-app
+* get the pipeline trigger working
+* Don't use PRUN on a command that has a pipe "|"
+* Fix app_glance_id() function in build-app
+* Fix pipeline _get_context_from_last_execution()
+* Add use of guestagent base image in infra Dockerfiles
+* Add dockerfile for guestagent
+* Add dib elements for guestagent
+* Replace use of ubuntu 'raring' by 'precise' for infra images
+* bugfix for example chef LP
+* Remove analyze_opts paragraph in readme
+* Use glance instead of docker-registry in build-app
+* Updated from global requirements
+* Try and create the workbook if possible
+* Build the execution context from previous executions if possible
+* Fix the execution context
+* Move get_network_parameters to heat_utils
+* Add the start of a default workbook
+* Adds worker shell handler with dummied build
+* Refactoring build-app and unittest-app
+* Create marconi queue when infra stack is created
+* Add execution table to link to mistral
+* Custom language pack for Go
+* Create an empty stack when creating the pipeline
+* Prevent excessive keystone client connections
+* Fix mistral's service_type
+* Correct the order of assembly deletion
+* Added a Dockerfile to create Chef language pack
+* Updated assign_and_create in conductor
+* Adding unit testing station to workflow
+* Revert configuration sample update from previous commit
+* Add Marconi client
+* Add infrastructure root to have info when GET /infrastructure/
+* Add images for gitolite
+* Add ENTRYPOINT and EXPOSE for Drone
+* Start heat stack when infra stack is created
+* Add Infrastructure API and db object
+* Start hooking up mistral
+* Add mistral client
+* Adding projects.txt check for devstack
+* Make the catalog tests more reliable
+* Add gate_hook for gate scripts
+* Updated from global requirements
+* Remove whitespaces from component names
+* Updating getting started docs
+* Updated from global requirements
+* dockerfile language pack
+* Store heat_stack_id and component_type in component table
+* Replaced yaml.dump/load with yamlutils versions
+* Add better checking for failed authentication in the worker
+* Set the API host to the same ip as SERVICE_HOST
+* Fix authentication from the auth_ref
+* Sync yamlutils with solumclient changes for empty list
+* Updated from global requirements
+* Add an autoscaling heat template for the build-farm
+* Add tests for common module functions in Plan controller
+* Add a catalog of local files
+* Add use of wrap_pecan_exception decorator in trigger controller
+* Add yaml safe dumper
+* Add several yaml checks in yamlutils
+* Add param for growth factor in devstack lib
+* Change bad iniset call in solum devstack lib
+* Add uri in Plan yaml response
+* Updated from global requirements
+* Updated from global requirements
+* Fix pep errors of recently merged patches
+* Fix pipeline delete
+* Fix pipeline API lookup
+
+2014.2.0
+--------
+
+* Fix the new hacking rules
+* Use auth_token_info to initialize solum_keystoneclient sessions
+* Add triggers and trusts to pipeline
+* Add the pipeline API and db object
+* Add auth_token_info to the context
+* Add jenkins Dockerfile in "build farm"
+* Add diskimage-builder scripts for Jenkins in "build farm"
+* Add Plan versioning management
+* Do not translate DEBUG logs
+* Replace py3kcompat with six.moves.urllib
+* Add Dockerfile for drone container image
+* Add diskimage-builder script for Drone
+* Add YAML format support for Plan resource by using Pecan
+* Use distinct names to create Heat stacks
+* Fix some docs warnings
+
+2014.1.2
+--------
+
+* Delete deprecated heat template
+* Add missing documentation for LanguagePack API
+* Add YAMLEncodeDict as sqlalchemy type
+* Add Pecan support for wrap_controller_exception decorator
+* Add docs for the builder API
+* Updated from global requirements
+* Handler declaration can fit in one line for Plan and Sensor
+* Fix pecan error message not available in body for Trigger.post
+* Update solum.conf according to Keystone changes
+* Fix _delete_assembly in test_trigger_post functional test
+* Obfuscate controllers server side error messages
+* Allow the worker to work from the build-api
+* Make Image state depend on object.images.State class
+* Check if solum services are running
+* Remove trailing comma and fix imports
+* use paulczar fork of mono buildpack
+* use neutron heat template for docker based containers
+* Moves the deploy call from conductor to worker
+* Add flavor adjustment doc section
+* Remove hack around swift max_header_size constraint
+* Adding .NET Support
+* Docker Build-Script Enhancements
+* Change the default flavor for docker to m1.tiny
+* Updated from global requirements
+* Don't check for nova useablity when we use glance
+* Deleting heat stack when deleting assembly
+* Don't log the OS_AUTH_TOKEN in the worker
+* Adjust copyright string on docs
+* Use pecan instead of wsme for trigger
+* Make sure we have a real created_image_id
+* Add uuidutils from oslo-incubator
+* Sanitize all entity names
+* Add the missing singular controllers to the webapi docs
+* Fixed directory check for swift settings
+* Documentation Enhancements
+* Fix solum for devstack with swift disabled
+* Fix devstack gate by increasing Swift max_header_size
+* Raise a BadRequest when no plan is provided
+* Update status and reason in conductor method
+* Remove redundant 'import testscenarios' from tests
+* Pass the user's token into build_app
+* Use trusts in the assembly
+* Add trusts helper code
+* Add trust_id to the context
+* Separate out the build command generation
+* Support testscenarios by default in BaseTestCase
+* Update image 'state' and 'description' fields
+* Improve controller get() tests by adding return_value to handler mocks
+* Add missing handler mocks in Controllers test
+* use solum account at docker registry rather than paulczar
+* Updated from global requirements
+* Break lines without using "\" in models.py
+* Delete all components when deleting an assembly
+* Convert "auto" to "cedarish" in the worker
+* Make sure the base_image is used in build_app
+* Pass the context into plan get_by_uuid
+* Enable Generic get_url_for method
+* Fix error: "Stack already exists" in trigger workflow
+* Upgrade sphinxcontrib-pecanwsme to version 0.8
+* Add post_nodata tests for Plan, Extension and Sensor Controllers
+* Add missing tests for Operations Controller
+* Add functional tests for error cases (POST 400)
+* Add functional tests for error cases (PUT 400)
+* Add functionnal tests for error cases (DELETE 404)
+* Add functionnal tests for error cases (PUT 404)
+* Add functionnal tests for error cases (GET 404)
+* Update devstack doc to add neutron information
+* Added a missing check for build-app
+* Updated from global requirements
+* Update getting started guide
+
+2014.1.1
+--------
+
+* Move Image/Build states into own class
+* Load solum objects in rpc service
+
+2014.1.0
+--------
+
+* Test sqlachemy objects with Component instead of Plan
+* Test types with Component and test extra_keys in from_db_model
+* Allow as_dict with no assembly_id FK set in Component
+* Fix solum conf for keystone
+* assembly status should show correct status
+* Add a new Heat template when deploying Docker images
+* Remove LanguagePacks and LP related objects from the db model
+* Fix controller test, put return value was wrong
+* Activate functionnal tests for LP
+* Change bad client version for glance
+* Test service with Component instead of Plan db object
+* Remove unused mock parameter in test clients and fix import order
+* Enable running a subset of functionnal tests
+* Remove unused plan parameter in build artifact
+* Standardize uri fields length by adjusting source_uri length to 1024
+* Updated from global requirements
+* Changed assembly status in fakes
+* example plan for deploying Ghost blogging platform
+* tag slug containers and upload slugrunner
+* Squash alembic files
+* Add missing description field for LP
+* Simply mocks in test_lp_handler
+* Use glance as a backend for Solum LanguagePack API (DELETE Method)
+* typos and layout of docs
+* Use glance as a backend for Solum LanguagePack API (PUT Method)
+* Add network parameters to Heat template creation
+* Rearrange vm-slug build-app into functions
+* Code improvement in plan datamodel
+* Code improvement on how to get session
+* Make deployer sleep time variable
+* Renamed default handlers to noop
+* Use glance as a backend for Solum LanguagePack API (POST Method)
+* Add python-neutronclient to solum
+* Fix docker image format devstack variable
+* Return assembly 'status' and 'application_uri'
+* Update getting started guide
+* Add configurable handler selection for Deployer
+* Updated from global requirements
+* Add an option to enable/disable cedarish install
+* Use glance as a backend for Solum LanguagePack API (GET ALL Method)
+* Use glance as a backend for Solum LanguagePack API (GET Method)
+* Dissociate LanguagePack and Service objects
+* Add glance client to solum
+* Add missing new line in test_clients imports
+* Add urlfetch to download external http resources chunk by chunk
+* Add max byte size for plan in conf
+* Add swift in clients.py
+* support multiple image formats and enable docker driver
+* Add configurable handler selection for Worker
+* Git push trigger workflow
+* Update assembly when heat stack is complete
+* Updated Getting Started Guide
+* Create examples folder and move plan example into examples/plans
+* Remove glance id whitespace in build-app
+* move LP download to devstack via localrc vars
+* Add 'application_uri' attribute to assembly DB schema
+* Stack attributes were used the wrong way after a stack creation
+* heat client expects a string for the template not json
+* The default port number must be quoted
+* Add CRUD functional tests to LanguagePack
+* Manage OS_Platform in language_pack API
+* Manage Compiler_versions in language_pack API
+* Remove the quiet option when downloading cedarish image
+* Allow icmp traffic to the app
+* increase the flavor size to m1.small
+* Add context to send-echo-to-worker
+* allow passing openstack creds via ENV to buildapp scripts
+* Remove "exit 0" from prepare script
+* Change port type from number to string in heat template
+* Fix doc format
+* Fix libguestfs tools prompt in cedarish prepare
+* M1: devstack integration should install solum client
+* Remove the OpenStack logo from our developer docs
+* Update m1 run-through documentation
+* Add CRUD functionnal tests for 'component'
+* Fix SolumBase _raise_not_found() 'glued' to the API due to __resource__
+* Add foreign key constraints for Component fields
+* Updated from global requirements
+* Add DELETE methods to language_pack
+* Fix the sample config after the new keystone client got released
+* Add a doc to help with running through m1
+* Enable the download-cedarish to make solum easier to get started
+* Both the deploy and conductor need objects loaded
+* make sure that the white space is stripped from image_id
+* fix the arguments to deploy
+* build app handle the base_image argument
+* Use update() on the image data
+* Updated from global requirements
+* fix the build id argument to the conductor
+* trace: don't log the auth_token and service_catalog
+* Use trace to help with logging the worker
+* trace: don't try to zero values as it has no effect
+* Add the calls to assembly_handler to kick off image building
+* Updated from global requirements
+* Fix vm-slug/prepare update-guestfs-applicance not found
+* Add resource_uri in Component API model
+* Connect the completion of the image create to deploy
+* Add an assembly.components property
+* Add heat stack creation in the deployer
+* Move the image creation into the rpc worker
+* Rename subprocess to shell to avoid name clash
+* Add a context serializer for the messaging
+* Add language_pack to the artifact
+* Make sure plan.raw_content is populated
+* Add keystone exceptions wrapper for openstack clients
+* Add missing tests for Service controller
+* Replace trigger_id by trigger_uri in Assembly API model
+* Remove the nova boot from build-app
+* Add resource_uri to component
+* Add the builder to devstack
+* Add UPDATE methods to LanguagePack
+* Add CREATE methods to LanguagePack
+* Added common RPC service and API classes
+* Fix comment to reflect the code
+* Adding 'status' field to assembly
+* Fix alembic downgrade for language pack
+* Some adjustements in language_pack table and db model
+* Add CRUD functionnal tests to assembly
+* Construct plan_uri in from_db_model of Assembly
+* Fix the authtoken config sample
+* Update oslo-incubator for new config generator
+* Allow db_manage to be used by the new config generator
+* Fix functionaltests (imported tempest code has changed)
+* Documentation update to show example apps
+* Add get_all and post unit tests for components controller
+* Fix as_dict parameter in Component controllers
+* Add management of assembly dependency in component model
+* Configure devstack solum to listen on 0.0.0.0
+* Add missing Auth hook to image builder
+* Add a client wrapper class
+* Remove unneeded from_db_object from image type
+* Make the image api more useful
+* Add plan_uuid property in assembly db object
+* Authentication uses boolean for enable_authentication now
+* Switch to oslosphinx
+* Changing Solum listening ports to 127.0.0.1 default
+* Use extra_keys in as_dict method
+* Passing tenant id to build_app
+* Updated from global requirements
+* Add some missing @exception.wrap_controller_exception
+* Add missing context in call to db object for LanguagePack handler
+* Connect db and api for 'Operation'
+* Use new method to check if an attribute exists in models.update
+* Factor out _update_db_object method in handlers
+* Fix _start_build
+* Remove unused log
+* Update plan schema
+* Updated from global requirements
+* Add catalog helper methods to RequestContext
+* Use the context to pass to the db
+* Pass the RequestContext to the handlers
+* Add the project_id to the app build path
+* make buildpacks only when needed
+* Fix sqlachemy warning
+* Make the get_all functional tests assume less of the db state
+* Make the functional tests cleanup after themselves
+* Don't override the default default_log_level
+* Made build-app tenant aware
+* Move language pack handler test file
+* DB objects have destroy() not delete()
+* Use create_all instead of alembic upgrade in the tests
+* fix scripts for newer docker version
+* Add a trivial image building implementation
+* Log configuration options at startup
+* Add more assertEqual checks to test_plan.py
+* Connect Language Pack API to DB
+* Add CRUD functionnal tests to plan
+* Delegate to the handler when a trigger is posted
+* Add trigger_id attribute to the 'assembly' db object
+* Add security context for each incoming request
+* Fix the preformatted commands in DevStack docs
+* Added data validation for name in POST assembly
+* inject slug into vm-image during build
+* Add an image builder api
+* Add objects for images
+* Add CRUD functionnal tests to service
+* Fix bugs on Services API
+* Extend RequestContext class
+* Add UUID in API model
+* Refactor get_by_id to match get_by_uuid
+* Remove unneccessary calls to objects.load()
+* Remove get_by_uuid method from assembly
+* Connect Component api to DB
+* Factor out common method _raise_duplicate_object
+* Language Pack DB schema and object model
+* Add missing description field in db for plan
+* Factor out common method _raise_not_found
+* Component DB schema and object model
+* Connect the service API to the DB
+* Connect the plan API to the DB
+* Connect the assembly API to the DB
+* Assembly DB schema and object model
+* Have a single get_by_uuid() for all sqlachemy objects
+* Link db model to api for 'Extension'
+* Link db model to api for 'Sensor'
+* Updated from global requirements
+* Refactor use of NotFound and ResourceExists exceptions
+* Change from_db_model to create the correct uri
+* Trace data class for enchanced Solum logging
+* Add sqlalchemy objects for the 'extension' resource
+* Added test cases for plan.PlansController
+* Updated from global requirements
+* Fix alembic revision number for sensor and merge_plan_and_application
+* Fix devstack job failure
+* Add a git post-receive hook example to trigger solum endpoint
+* Create an API endpoint for Zuul
+* Add a tool to check for multiple alembic heads
+* Add as_dict and from_db_model in Base API
+* Fix documentation references
+* Prevent a false warning from solum-db-manage
+* print the version from solum-db-manage
+* Add sqlalchemy objects for the 'sensor' resource
+* Refactor test of 'operation' object
+* Refactor test of 'service' object
+* Add sqlalchemy objects for the 'operation' resource
+* Add merge of 'application' and 'plan' objects
+* Remove unused pecan.request.context[]
+* Service DB schema and object model
+* Fix alembic drop tables in downgrade methods
+* Remove tox locale overrides
+* Trivial: Remove redundant aliasing from imports
+* Refactor of sqlalchemy objects unit tests
+* Add decorator for controllers exception management
+* Quick fix for TypeError on FakePecanRequest
+* Add mixin for basic crud db operation
+* Add tests for handlers
+* Fix Tempest tests failing on gate-solum-devstack-dsvm
+* Add the plan objects and schema
+* Add API resources for Plans and Plan
+* Make sure the db is created and upgraded in tempest
+* Make sure the alembic schema are run in the tests
+* Add the db schema for the application table
+* Add "id" argument to the handler.update
+* Add a man page for solum-db-manage
+* Enable mysql_traditional_mode
+* Make sure that the db connection is used correctly
+* WIP: example of git push workflow against lp-cedarish
+* WIP: docker-builder
+* Standardize Data types accross model objects
+* Add missing tests for Collections of objects Controllers
+* Resource for querying available language packs
+* New test cases for AssembliesController
+* Add the alembic migration framework
+* Fix Tempest tests failing on gate-solum-devstack-dsvm
+* Add service user and some keystone parameters to Solum config
+* Change some assertTrue to assertIsNotNone
+* Add sensor datamodel and sensor handler
+* Add Operation datamodel and Operation handler
+* Update the remaining modules from oslo-incubator
+* Update db module from oslo-incubator
+* Update the config generator from oslo-incubator
+* Update test module from oslo-incubator
+* Add extension datamodel and extension handler
+* Fix typo in root.py in sample : extenstions => extensions
+* Add Service datamodel and Service handler
+* Updated from global requirements
+* Add context from olso-incubator
+* make the development instructions more consistent
+* Fix broken docs references
+* Organize imports according to the template in [1]
+* Change oslo log imports to be consistent
+* Updated from global requirements
+* Refactored api unit tests for DRY
+* Enable auth tests as py33 issue is fixed in python-keystoneclient
+* Minor addition of packages needed to contribution docs
+* Remove rquests from test-requirements
+* Add more functional tests
+* Make use of REST client from tempest project
+* Configure solum service and endpoint in keystone
+* Move testtools to test-requirements.txt
+* Update diskimage-builder element for tomcat
+* Move devstack hooks from infra config to solum repo
+* API worker architecture
+* Updated from global requirements
+* Import oslo fix for generate config
+* Always delete the check_uptodate.sh tempdir
+* This patch adds a user authentication of incoming request
+* Change Oslo log imports to be consistent
+* Add a diskimage-builder script that creates a Fedora 19 image
+* Make sure API is up before running tests
+* Add a diskimage-builder script that creates an Ubuntu 13.04 image
+* Move testtools to requirements.txt
+* Add exception tests for ResourceExists and ApplicationExists
+* Move solum/common related tests into solum/tests/common
+* Add tests for SolumException
+* Fix minor bug in test_get_root_discovers_v1
+* Ensure object model is loaded at correct time
+* Add sqlalchemy subclass for Application
+* Add simple application interface and object registry
+* Add more api unit tests
+* Use coverage.sh script in tox.ini
+* Updated from global requirements
+* Add a trivial functionaltests/run_tests.sh
+* Fixed docstring
+* Add nicer support for coverage
+* Add functionaltests directory
+* API update: add project_id and user_id to all resources
+* Setting project summary to be consistent with project intent
+* Add mocks for Pecan objects
+* Fix missing imports of _
+* Fix unicode() issue for Python3 compatibility
+* Added how to run API service to README.rst
+* Docs: layout our docs like the official openstack docs
+* API: some doc string nits
+* API: Fix the sensor_type and value
+* API update: make platform return uri's
+* Fix a typo in component doc string
+* Import py3kcompat module from oslo-incubator
+* Add Negative test for Root Controller of Solum API
+* Import fixture from oslo-incubator
+* API update: return objects not links
+* API: add a common base type
+* Add sphinxcontirb-httpdomain to the test-requirements
+* Docs: Fix the path to the controllers
+* API: fix the samples
+* API update: Remove camelHumps
+* API: change all documentation samples to use example.com
+* Automatically verify sample config is up to date
+* Add SQLAlchemy to requirements.txt
+* Add config up-to-date check script
+* Add auto-generated solum.conf.sample
+* Add E123, E125 and H803 to flake8 ignore list
+* Remove excess whitespace from setup.cfg
+* Fix typo in AssembliesController
+* Import 'versionutils' from oslo-incubator
+* Adjust names in example URIs to be more realistic
+* Move ending of one line docstrings to the same line
+* Import openstack.common.config from oslo-incubator
+* Use the default port in the sample usage
+* Re-factor functional test code
+* Fix python 3.3 failures
+* Re-factor each resource implementation into separate file
+* Add Sensors to API
+* Add Operations to API
+* Add Extensions to API
+* Support building wheels (PEP-427)
+* Add AUTHORS and ChangeLog to .gitignore
+* Add Services to the v1 API
+* Add devstack integration
+* Make solum-api serve up the API
+* Add Components to API
+* Import 'db.sqlalchemy' from oslo-incubator
+* Import 'db' from oslo-incubator
+* Add Assemblies to the rest API
+* Add the platform to the rest API
+* Move the Link class into common_types
+* Add the v1 controller to the root API
+* Add automatic docs for the API
+* Add missing __init__.py to solum/cmd/
+* Update hacking version to match with global requirements
+* Fix some documentation errors
+* Improve the api versioning
+* Fix a H302 pep error in the api
+* Oslo sync
+* Add HACKING.rst
+* Adds basic plumbing for RESTful API service using Pecan+WSME
+* Move version code into separate file and set pbr version to 2014.1.0
+* Add test module from oslo-incubator
+* Add .testrepository to .gitignore
+* Add a solum-api command
+* Import logging from oslo-incubator
+* Remove install_venv_common from openstack-common.conf
+* Add git review configuration file and update README
+* Formatting change
+* Improved README.rst
+* Updated for the latest cookiecutter
+* Initial cookie-cuttere'd repo
+* Initial commit

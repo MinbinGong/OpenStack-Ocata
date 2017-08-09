@@ -1,0 +1,38 @@
+[console_scripts]
+_sahara-subprocess = sahara.cli.sahara_subprocess:main
+sahara-all = sahara.cli.sahara_all:main
+sahara-api = sahara.cli.sahara_api:main
+sahara-db-manage = sahara.db.migration.cli:main
+sahara-engine = sahara.cli.sahara_engine:main
+sahara-image-pack = sahara.cli.image_pack.cli:main
+sahara-rootwrap = oslo_rootwrap.cmd:main
+sahara-templates = sahara.db.templates.cli:main
+
+[oslo.config.opts]
+sahara.config = sahara.config:list_opts
+
+[oslo.config.opts.defaults]
+sahara.config = sahara.common.config:set_cors_middleware_defaults
+
+[sahara.cluster.plugins]
+ambari = sahara.plugins.ambari.plugin:AmbariPluginProvider
+cdh = sahara.plugins.cdh.plugin:CDHPluginProvider
+fake = sahara.plugins.fake.plugin:FakePluginProvider
+mapr = sahara.plugins.mapr.plugin:MapRPlugin
+spark = sahara.plugins.spark.plugin:SparkProvider
+storm = sahara.plugins.storm.plugin:StormProvider
+vanilla = sahara.plugins.vanilla.plugin:VanillaProvider
+
+[sahara.infrastructure.engine]
+heat = sahara.service.heat.heat_engine:HeatEngine
+
+[sahara.remote]
+ssh = sahara.utils.ssh_remote:SshRemoteDriver
+
+[sahara.run.mode]
+all-in-one = sahara.service.ops:LocalOps
+distributed = sahara.service.ops:RemoteOps
+
+[wsgi_scripts]
+sahara-wsgi-api = sahara.cli.sahara_api:setup_api
+

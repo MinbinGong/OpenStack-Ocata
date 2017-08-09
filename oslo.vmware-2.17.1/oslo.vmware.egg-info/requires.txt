@@ -1,0 +1,13 @@
+pbr>=1.8
+stevedore>=1.17.1
+netaddr!=0.7.16,>=0.7.13
+six>=1.9.0
+oslo.i18n>=2.1.0
+oslo.utils>=3.18.0
+PyYAML>=3.10.0
+lxml!=3.7.0,>=2.3
+suds-jurko>=0.6
+eventlet!=0.18.3,>=0.18.2
+requests!=2.12.2,>=2.10.0
+urllib3>=1.15.1
+oslo.concurrency>=3.8.0

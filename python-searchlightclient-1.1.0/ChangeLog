@@ -1,0 +1,81 @@
+CHANGES
+=======
+
+1.1.0
+-----
+
+* Add client doc details
+* Updated from global requirements
+* Replace six.iteritems() with .items()
+* Show team and repo badges on README
+* Updated from global requirements
+* no longer use oslo-incubator code
+* Updated from global requirements
+* Don't include openstack/common in flake8 exclude list
+* Add Python 3.5 classifier and venv
+* Remove white space between print and ()
+* Replace 'MagicMock' with 'Mock'
+* Drop MANIFEST.in - it's not needed by pbr
+* Add plug-in summary for osc doc
+* Remove circular TOC reference
+* Update homepage with developer documentation page
+* Do not process additional fields in search response
+* TrivialFix: Remove logging import unused
+
+1.0.0
+-----
+
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* Remove discover from test-requirements
+* Updated from global requirements
+* Updated from global requirements
+* Use osc_lib instead of cliff
+* Use osc-lib instead of openstackclient
+* Support new facet response format
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+
+0.2.1
+-----
+
+* Updated from global requirements
+
+0.2.0
+-----
+
+* Escape slashes in query_strings
+* Fix warning 'test command found but not installed in testenv'
+* Updated from global requirements
+* Remove duplicated take_action logging
+* Updated from global requirements
+* Updated from global requirements
+* Remove argparse from requirements
+* Update README
+* Remove extra infomation from ID field
+* Updated from global requirements
+* Updated from global requirements
+* Support DSL query for the query cli
+* Support token based auth options for osc
+* Add optional fields for source to query cli
+* Added search resource client and cli
+* Remove dash for resource-type in cli
+* Add facet list support
+* Add resource type list CLI
+* Updated from global requirements
+* Update link to CLI Reference
+* Updated from global requirements
+* Delete python bytecode before every test run
+* Fixes api usage example
+* Remove py26 support
+* Deprecated tox -downloadcache option removed
+* Use seperate launchpad project for client
+* Init searchlightclient base
+* Added .gitreview

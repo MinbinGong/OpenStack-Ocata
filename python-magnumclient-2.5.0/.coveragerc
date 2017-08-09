@@ -1,0 +1,7 @@
+[run]
+branch = True
+source = magnumclient
+omit = magnumclient/tests/*
+
+[report]
+ignore_errors = True

@@ -1,0 +1,234 @@
+CHANGES
+=======
+
+1.17.1
+------
+
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* Update UPPER_CONSTRAINTS_FILE for stable/ocata
+* Update .gitreview for stable/ocata
+
+1.17.0
+------
+
+* Updated from global requirements
+* Updated from global requirements
+* Add Constraints support
+* Bump hacking dep
+* Show team and repo badges on README
+
+1.16.0
+------
+
+* Fix a typo
+* Updated from global requirements
+* Add reno for release notes management
+* Updated from global requirements
+* Updated from global requirements
+* Changed the home-page link
+
+1.15.0
+------
+
+* Updated from global requirements
+
+1.14.0
+------
+
+* Updated from global requirements
+
+1.13.0
+------
+
+* Updated from global requirements
+* Add Python 3.5 classifier and venv
+
+1.12.0
+------
+
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+
+1.11.0
+------
+
+* Use file modification events instead of signal handler
+* Imported Translations from Zanata
+
+1.10.0
+------
+
+* Updated from global requirements
+
+1.9.0
+-----
+
+* Trivial: ignore openstack/common in flake8 exclude list
+
+1.8.0
+-----
+
+* Remove direct dependency on babel
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+
+1.6.0
+-----
+
+* Updated from global requirements
+* Updated from global requirements
+
+1.5.0
+-----
+
+* Updated from global requirements
+
+1.4.0
+-----
+
+* Update translation setup
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+
+1.3.0
+-----
+
+* Updated from global requirements
+
+1.2.0
+-----
+
+* Print the traceback if there was an exception in run()
+* Rename signal handler argument to 'frame'
+* Updated from global requirements
+* Updated from global requirements
+* Trival: Remove 'MANIFEST.in'
+
+1.1.0
+-----
+
+* Drop python 2.6 support
+
+1.0.0
+-----
+
+* Updated from global requirements
+* Remove Python 2.6 classifier
+* Updated from global requirements
+* Remove python 2.6 and cleanup tox.ini
+
+0.8.0
+-----
+
+* Fix Transition to SIGUSR2 in oslo.reports breaks upgrade
+* Updated from global requirements
+* Updated from global requirements
+
+0.7.0
+-----
+
+* Updated from global requirements
+* Fix a typo in process.py
+
+0.6.0
+-----
+
+* remove extraneous coverage omit instruction
+* No need for Oslo Incubator Sync
+* Fix coverage configuration and execution
+* How to use oslo.reports documentation
+* add auto-generated api documentation
+* clean up release notes in toctree
+* add auto-generated docs for config options
+* Add shields.io version/downloads links/badges into README.rst
+* Updated from global requirements
+* guru_meditation_report: Use SIGUSR2 instead of SIGUSR1
+
+0.5.0
+-----
+
+* Updated from global requirements
+* Updated from global requirements
+* Add a configuration for the directory to generate gmr
+* Fill README from information in the wiki
+* Updated from global requirements
+* Setup translations
+* Updated from global requirements
+
+0.4.0
+-----
+
+* Updated from global requirements
+
+0.3.0
+-----
+
+* Updated from global requirements
+* Fix mock of open() for mock 1.1.0
+* Fix GMR break with new psutil versions
+
+0.2.0
+-----
+
+* Add oslo.utils dependency
+* Add tox target to find missing requirements
+
+0.1.0
+-----
+
+* Updated from global requirements
+* Guru Meditation Reports broken without version_string
+* Fix intermittent test failures because of sort order
+* Graduation Prep: Use six.text_type instead of str
+* Graduation Prep: Initial Import Fixup
+* exported from oslo-incubator by graduate.sh
+* Remove timeutils.strtime() usage
+* Switch from oslo.config to oslo_config
+* Use oslo_utils instead of deprecated oslo.utils
+* Report: Add basic processes section
+* Change oslo.config to oslo_config
+* switch to oslo_serialization
+* Reports: Use sig handler traceback for curr thread
+* Report: Propagate view_type through collections
+* Report: Support Sequences and Mappings as Data
+* Use same mask pattern for reports as mask_password
+* Mask secrets when output conf
+* Delete graduated serialization files
+* Remove our custom test base class
+* Switch oslo-incubator to use oslo.utils and remove old modules
+* Fix tests.unit.reports.* with python3.4
+* Fix tests.unit.reports.test_base_report with python3.4
+* Set pbr 'warnerrors' option for doc build
+* fixed typos found by RETF rules
+* Report: Fix JinjaView deepcopy
+* Fixed several typos
+* Fix tests.unit.reports.test_guru_meditation_report under Python3
+* Use from/import style in module report
+* Fix tests.unit.reports.test_views failures under Python3
+* Add option for GM report to dump to a file
+* Removed unneeded #noqa tag
+* Fixes Guru Meditation portability issue
+* Fix typo in inline documentation for report module
+* Use six.StringIO/BytesIO instead of StringIO.StringIO
+* Rename Openstack to OpenStack
+* Avoid failure of test_basic_report on 32 bit OS
+* Fix filter() usage due to python 3 compability
+* Unify different names between Python2/3 with six.moves
+* Remove vim header
+* Use six.string_type instead of basestring
+* Fix typos in oslo
+* Adjust import order according to PEP8 imports rule
+* Replace assertEquals with assertEqual
+* Introduces The Guru Meditation Report
+* Introduces Openstack-Specific Report Utilities
+* Introduces Report Views
+* Introduces Basic Report and Model
+* initial commit
+* Initial skeleton project

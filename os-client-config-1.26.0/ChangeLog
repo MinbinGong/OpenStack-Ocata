@@ -1,0 +1,550 @@
+CHANGES
+=======
+
+1.26.0
+------
+
+* Revert "Fix interface_key for identity clients"
+* Add support for Murano
+
+1.25.0
+------
+
+* Add OpenTelekomCloud to the vendors
+* Remove 3.4 from tox envlist
+* Use upper-constraints for tox envs
+* Update swift constructor to be Session aware
+* Magnum's service_type is container_infra
+* Add docutils contraint on 0.13.1 to fix building
+* Fix interface_key for identity clients
+* Show team and repo badges on README
+
+1.24.0
+------
+
+* Revert "Remove validate_auth_ksc"
+
+1.23.0
+------
+
+* Remove validate_auth_ksc
+* Add fuga.io to vendors
+* Support token_endpoint as an auth_type
+* Add support for volumev3 service type
+* Normalize cloud config before osc-lib call
+* Fix a bunch of tests
+* Clarify how to set SSL settings
+* Update ECS image_api_version to 1
+
+1.22.0
+------
+
+* Revert "Split auth plugin loading into its own method"
+* Add setter for session constructor
+* Enable release notes translation
+* cloud_config:get_session_endpoint: catch Keystone EndpointNotFound
+* Using assertIsNone() instead of assertEqual(None, ...)
+* Update homepage with developer documentation page
+* List py35 in the default tox env list
+* Fix AttributeError in `get_config`
+* modify the home-page info with the developer documentation
+* Don't create envvars cloud if cloud or region are set
+* Don't build releasenotes in normal docs build
+* Update reno for stable/newton
+* Add ability to configure Session constructor
+* Split auth plugin loading into its own method
+
+1.21.1
+------
+
+* Go ahead and handle YAML list in region_name
+
+1.21.0
+------
+
+* Add prompting for KSA options
+* Clean up vendor support list
+
+1.20.1
+------
+
+* Precedence final solution
+
+1.20.0
+------
+
+* Add support for configuring split-stack networks
+* Pop domain-id from the config if we infer values
+* Update Internap information
+
+1.19.1
+------
+
+* Add test for precedence rules
+* Pass the argparse data into to validate_auth
+* Revert "Fix precedence for pass-in options"
+
+1.19.0
+------
+
+* Add release notes for 1.19.0 release
+* Add the new DreamCompute cloud
+* Fix precedence for pass-in options
+* Update citycloud to list new regions
+* Add support for listing a cloud as shut down
+* Add support for deprecating cloud profiles
+* Refactor fix magic in get_one_cloud()
+
+1.18.0
+------
+
+* Reword the entries in the README a bit
+* Add shade constructor helper method
+* Rename session_client to make_rest_client
+* Add helper method for OpenStack SDK constructor
+* Add missing "cloud" argument to _validate_auth_ksc
+* Workaround bad required params in troveclient
+* Trivial: Remove 'MANIFEST.in'
+* Trivial: remove openstack/common from flake8 exclude list
+* drop python3.3 support in classifier
+* Fix formatting in readme file
+* Remove discover from test-requirements.txt
+* Add version string
+
+1.17.0
+------
+
+* Pull the network settings from the actual dict
+* Clarify one-per-cloud network values
+* Flesh out netowrk config list
+* Change network info indication to a generic list
+* Update reno for stable/mitaka
+* Add osic vendor profile
+
+1.16.0
+------
+
+* Update the README a bit
+* Allow session_client to take the same args as make_client
+* Fix formulation
+
+1.15.0
+------
+
+* Add release notes
+* Send swiftclient username/password and token
+* Remove HP and RunAbove from vendor profiles
+* Added SSL support for VEXXHOST
+* Add support for zetta.io
+* Stop ignoring v2password plugin
+* Go ahead and remove final excludes
+* Don't set project_domain if not project scoped
+* Clean up removed hacking rule from [flake8] ignore lists
+* set up release notes build
+
+1.14.0
+------
+
+* Fix a precedence problem with auth arguments
+* Return empty dict instead of None for lack of file
+* Pass version arg by name not position
+* Use _get_client in make_client helper function
+* Add barbicanclient support
+* Remove openstack-common.conf
+* Add IBM Public Cloud
+* Replace assertEqual(None, *) with assertIsNone in tests
+* Update auth urls and identity API versions
+* Stop hardcoding compute in simple_client
+* Update volume API default version from v1 to v2
+* Debug log a deferred keystone exception, else we mask some useful diag
+* Fix README.rst, add a check for it to fit PyPI rules
+* Use reno for release notes
+* add URLs for release announcement tools
+* Allow filtering clouds on command line
+
+1.13.1
+------
+
+* Munge region_name to '' if set to None
+* Fix some README typos
+* Fix token_endpoint usage
+* remove python 2.6 os-client-config classifier
+* If cloud doesn't list regions expand passed name
+
+1.13.0
+------
+
+* Fix glance endpoints with endpoint_override
+* Allow passing in explicit version for legacy_client
+* Pass endpoint override to constructors
+* Support backwards compat for _ args
+* Add backwards compat mapping for auth-token
+* Replace assertEqual(None, *) with assertIsNone in tests
+* Allow arbitrary client-specific options
+* Add ceilometer constructor to known constructors
+* Add support for generalized per-region settings
+* Fix a README typo - hepler is not actually a thing
+* Make client constructor optional
+* Updated README to clarify legacy client usage
+* Add simple helper function for client construction
+* Add method for registering argparse options
+* Update vexxhost to Identity v3
+* Make sure that cloud always has a name
+* Remove optional keystoneauth1 imports
+
+1.12.0
+------
+
+* Add BHS1 to OVH
+* Handle cinder v2
+* Add support for secure.yaml file for auth info
+
+1.11.1
+------
+
+* Fix lack of parenthesis around boolean logic
+
+1.11.0
+------
+
+* Only pass timeout to swift if we have a value
+* Fix name of the object-store api key
+* Refactor per-service key making
+* Add support for legacy envvar prefixes
+* Fix JSON schema
+
+1.10.2
+------
+
+* Workaround a dispute between osc and neutronclient
+* Workaround for int value with verbose_level
+* Remove unneeded workaround for ksc
+* Add default API version for magnum service
+
+1.10.1
+------
+
+* Work around a bug in keystoneclient constructor
+* Return cache settings as numbers not strings
+* Add method to get a mounted session from config
+
+1.10.0
+------
+
+* Convert floats to string
+* Don't assume pass_version_arg=False for network
+* Update network api version in defaults.json
+* Dont turn bools into strings
+* Use requestsexceptions for urllib squelching
+* Normalize int config values to string
+* Disable spurious urllib warnings
+* Add logging module support
+* Add methods for getting Session and Client objects
+* Update conoha's vendor profile to include SJC
+* Use json for in-tree cloud data
+* Update auro to indicate move to neutron
+* Copy values in backwards_interface differently
+* Fix typo in Catalyst region configs
+* Aligned a few words in the docs
+* Sort vendor list
+* Add conoha public cloud
+* Allow for templated variables in auth_url
+* Use assertDictEqual to test dict equality
+* Always pull regions from vendor profiles
+
+1.9.0
+-----
+
+* Clean up cache interface, add support for services
+* Add Rackspace LON region
+* Validate requested region against region list
+* Fix documentation around regions
+* Add an API reference to the docs
+* Pass OpenStackConfig in to CloudConfig for caches
+* Add auth hook for OpenStackClient
+* Adds some lines to complete table formatting
+
+1.8.1
+-----
+
+* Add universal=1 to setup.cfg to build python 3 wheels
+* Some cleanup
+
+1.8.0
+-----
+
+* Fix two typos
+* Put in override for Rackspace broken neutron
+* Support passing force_ipv4 to the constructor
+* identity version is 2.0
+* Handle OS_CLOUD and OS_REGION_NAME friendly-like
+* Added SWITCHengines vendor file
+* update RST for readme so pypi looks pretty
+
+1.7.5
+-----
+
+* Fix a little error with the None auth type
+* Add support for Catalyst as vendor
+* Change ignore-errors to ignore_errors
+
+1.7.4
+-----
+
+* Handle ksa opt with no deprecated field
+
+1.7.3
+-----
+
+* Fall back to keystoneclient arg processing
+* Fix typo in ovh region names
+
+1.7.2
+-----
+
+* Move plugin loader creation to try block
+
+1.7.1
+-----
+
+* Convert auth kwargs '-' to '_'
+* Properly handle os- prefixed args in fix_args
+* Test kwargs passing not just argparse
+
+1.7.0
+-----
+
+* Allow configuring domain id once
+* Add internap to the vendor list
+* Fix typo in comment - we use ksa not ksc
+* Defer plugin validation to keystoneauth
+
+1.6.4
+-----
+
+* Remove an extra line
+* Add Datacentred to the vendor list
+* Add ultimum to list of vendors
+* Add Enter Cloud Suite to vendors list
+* Add elastx to vendor support matrix
+* Switch the image default to v2
+* Update auro auth_url and region information
+* Add citycloud to the vendors list
+* Return keystoneauth plugins based on auth args
+* Remove duplicate lines that are the same as default
+* Add default version number for heat
+* Update OVH public cloud information
+* Handle empty defaults.yaml file
+* Do not treat project_name and project_id the same
+* Revert "Revert "Use the correct auth_plugin for token authentication""
+
+1.6.3
+-----
+
+* Revert "Use the correct auth_plugin for token authentication"
+
+1.6.2
+-----
+
+* Ignore infra CI env vars
+* Use the correct auth_plugin for token authentication
+
+1.6.1
+-----
+
+* Align to generic password auth-type
+
+1.6.0
+-----
+
+* Clarify floating ip use for vendors
+* Add per-service endpoint overrides
+
+1.5.0
+-----
+
+* Remove requirements.txt from tox.ini
+* Remove py26 and py33 from tox.ini
+* Rename 'endpoint_type' to 'interface'
+* Have service name default to None
+* Remove region list from single cloud
+* Fix set_default() when used before config init
+* Specify the config file with environment variable
+* Add support for configuring region lists with yaml
+* Fix rendering issue in Readme
+* Clean up vendor data
+* Add support for indicating preference for IPv6
+* Normalize project_name aliases
+
+1.4.0
+-----
+
+* Add some accessor methods to CloudConfig
+* Add missing tests
+* Add test to check cert and key as a tuple
+* Use one yaml file per vendor
+* Raise warning when a vendor profile is missing
+* Some cleanup in the README.rst
+* Add support for OVH Public Cloud
+* Add SSL documentation to README.rst
+* Stringify project details
+* Raise a warning with conflicting SSL params
+* Change references of "clouds.yaml" for real file
+* Raise a warning when using 'cloud' in config
+* Add cloud vendor files config in doc
+
+1.3.0
+-----
+
+* Provide a helper method to get requests ssl values
+* Add more defaults to our defaults file
+* Change naming in vendor doc to match vendors.py
+* Add auro to list of known vendors
+* Add list of image params needed to disable agents
+
+1.2.0
+-----
+
+* Add set_one_cloud method
+* Add tests for get_cloud_names
+* Add flag to indicate handling of security groups
+* Don't normalize too deeply
+
+1.1.0
+-----
+
+* Add tests for cloud config comparison
+* Add inequality method
+* Add an equality method for CloudConfig
+* Capture the filename used for config
+* Normalize all keys down to _ instead of -
+* Expose method for getting a list of cloud names
+* Rename cloud to profile
+* Don't pass None as the cloud name
+
+1.0.0
+-----
+
+* Change overriding defaults to kwarg
+* Add tests for OSC usage
+* Use appdirs for platform-independent locations
+* Add UnitedStack
+* Expose function to get defaults dict
+* Add default versions for trove and ironic
+* Sort defaults list for less conflicts
+* Only add fall through cloud as a fall through
+
+0.8.2
+-----
+
+* Add flag to indicate where floating ips come from
+* get_one_cloud should use auth merge
+* Also accept .yml as a suffix
+* Remove crufty lines from README
+* Update vendor support to reflect v2 non-task
+
+0.8.1
+-----
+
+* Add flag to trigger task interface for rackspace
+
+0.8.0
+-----
+
+* Document vendor support information
+* Reset cache default to 0
+* add .venv to gitignore
+* Move region_names out of auth dict
+* Add runabove to vendors
+* Add image information to vexxhost account
+* Add vexxhost
+* Add DreamCompute to vendors list
+* Allow overriding envvars as the name of the cloud
+* Put env vars into their own cloud config
+* Add keystoneclient to test-requirements
+* Actually put some content into our sphinx docs
+
+0.7.0
+-----
+
+* Update .gitreview for git section rename
+* Change dogpile cache defaults
+* Add cover to .gitignore
+
+0.6.0
+-----
+
+* Flesh out api version defaults
+* Handle project_name/tenant_name in the auth dict
+* Add two newlines to the ends of files
+* Rename auth_plugin to auth_type
+
+0.5.0
+-----
+
+* Add support for configuring dogpile.cache
+* Fix coverage report
+* Add more testing of vendor yaml loading
+* More comprehensive unit tests for os-client-config
+* Allow keystone validation bypass for noauth usage
+* Add basic unit test for config
+
+0.4.3
+-----
+
+* Prefer dest value when option is depricated
+* Allow region_name to be None
+
+0.4.2
+-----
+
+* Don't return the auth dict inside the loop
+* Make sure we're deep-copying the auth dict
+
+0.4.1
+-----
+
+* Remove runtime depend on pbr
+* Provide Rackspace service_name override
+
+0.4.0
+-----
+
+* Start keeping default versions for all services
+* Support keystone auth plugins in a generic way
+* Replace defaults_dict with scanning env vars
+* Workflow documentation is now in infra-manual
+* Corrections to readme
+* Use yaml.safe_load instead of load
+* Throw error if a non-existent cloud is requested
+
+0.3.0
+-----
+
+* Fix a missed argument from a previous refactor
+* Map CloudConfig attributes to CloudConfig.config
+* Add support for argparse Namespace objects
+* Add support for command line argument processing
+* Handle lack of username for project_name defaults
+* Handle the project/tenant nonesense more cleanly
+* Add cache control settings
+* Handle no vendor clouds config files
+* Remove unused class method get_services
+* Add clouds-public.yaml
+* Prep for move to stackforge
+
+0.2.0
+-----
+
+* Handle missing vendor key
+* Make env vars lowest priority
+* Handle null region
+* Update the README file for more completeness
+
+0.1.0
+-----
+
+* Get rid of extra complexity with service values
+* Remove babel and add pyyaml
+* Port in config reading from shade
+* Initial Cookiecutter Commit

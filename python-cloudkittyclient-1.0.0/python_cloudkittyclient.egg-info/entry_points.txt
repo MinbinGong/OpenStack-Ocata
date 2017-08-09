@@ -1,0 +1,54 @@
+[cloudkitty.client.modules]
+hashmap = cloudkittyclient.v1.rating.hashmap.extension:Extension
+pyscripts = cloudkittyclient.v1.rating.pyscripts.extension:Extension
+
+[console_scripts]
+cloudkitty = cloudkittyclient.shell:main
+
+[openstack.cli.extension]
+rating = cloudkittyclient.osc
+
+[openstack.rating.v1]
+rating_collector-mapping-create = cloudkittyclient.v1.collector.shell_cli:CliCollectorMappingCreate
+rating_collector-mapping-delete = cloudkittyclient.v1.collector.shell_cli:CliCollectorMappingDelete
+rating_collector-mapping-get = cloudkittyclient.v1.collector.shell_cli:CliCollectorMappingGet
+rating_collector-mapping-list = cloudkittyclient.v1.collector.shell_cli:CliCollectorMappingList
+rating_collector-state-disable = cloudkittyclient.v1.collector.shell_cli:CliCollectorStateDisable
+rating_collector-state-enable = cloudkittyclient.v1.collector.shell_cli:CliCollectorStateEnable
+rating_collector-state-get = cloudkittyclient.v1.collector.shell_cli:CliCollectorStateGet
+rating_hashmap-field-create = cloudkittyclient.v1.rating.hashmap.shell_cli:CliHashmapFieldCreate
+rating_hashmap-field-delete = cloudkittyclient.v1.rating.hashmap.shell_cli:CliHashmapFieldDelete
+rating_hashmap-field-list = cloudkittyclient.v1.rating.hashmap.shell_cli:CliHashmapFieldList
+rating_hashmap-group-create = cloudkittyclient.v1.rating.hashmap.shell_cli:CliHashmapGroupCreate
+rating_hashmap-group-delete = cloudkittyclient.v1.rating.hashmap.shell_cli:CliHashmapGroupDelete
+rating_hashmap-group-list = cloudkittyclient.v1.rating.hashmap.shell_cli:CliHashmapGroupList
+rating_hashmap-mapping-create = cloudkittyclient.v1.rating.hashmap.shell_cli:CliHashmapMappingCreate
+rating_hashmap-mapping-delete = cloudkittyclient.v1.rating.hashmap.shell_cli:CliHashmapMappingDelete
+rating_hashmap-mapping-list = cloudkittyclient.v1.rating.hashmap.shell_cli:CliHashmapMappingList
+rating_hashmap-mapping-update = cloudkittyclient.v1.rating.hashmap.shell_cli:CliHashmapMappingUpdate
+rating_hashmap-service-create = cloudkittyclient.v1.rating.hashmap.shell_cli:CliHashmapServiceCreate
+rating_hashmap-service-delete = cloudkittyclient.v1.rating.hashmap.shell_cli:CliHashmapServiceDelete
+rating_hashmap-service-list = cloudkittyclient.v1.rating.hashmap.shell_cli:CliHashmapServiceList
+rating_hashmap-threshold-create = cloudkittyclient.v1.rating.hashmap.shell_cli:CliHashmapThresholdCreate
+rating_hashmap-threshold-delete = cloudkittyclient.v1.rating.hashmap.shell_cli:CliHashmapThresholdDelete
+rating_hashmap-threshold-get = cloudkittyclient.v1.rating.hashmap.shell_cli:CliHashmapThresholdGet
+rating_hashmap-threshold-group = cloudkittyclient.v1.rating.hashmap.shell_cli:CliHashmapThresholdGroup
+rating_hashmap-threshold-list = cloudkittyclient.v1.rating.hashmap.shell_cli:CliHashmapThresholdList
+rating_hashmap-threshold-update = cloudkittyclient.v1.rating.hashmap.shell_cli:CliHashmapThresholdUpdate
+rating_info-config-get = cloudkittyclient.v1.shell_cli:CliInfoGetConfig
+rating_info-service-get = cloudkittyclient.v1.shell_cli:CliInfoGetService
+rating_module-disable = cloudkittyclient.v1.shell_cli:CliModuleDisable
+rating_module-enable = cloudkittyclient.v1.shell_cli:CliModuleEnable
+rating_module-list = cloudkittyclient.v1.shell_cli:CliModuleList
+rating_module-set-priority = cloudkittyclient.v1.shell_cli:CliModuleSetPriority
+rating_pyscripts-script-create = cloudkittyclient.v1.rating.pyscripts.shell_cli:CliPyScriptCreate
+rating_pyscripts-script-delete = cloudkittyclient.v1.rating.pyscripts.shell_cli:CliPyScriptDelete
+rating_pyscripts-script-get = cloudkittyclient.v1.rating.pyscripts.shell_cli:CliPyScriptGet
+rating_pyscripts-script-get-data = cloudkittyclient.v1.rating.pyscripts.shell_cli:CliPyScriptGetData
+rating_pyscripts-script-list = cloudkittyclient.v1.rating.pyscripts.shell_cli:CliPyScriptList
+rating_pyscripts-script-update = cloudkittyclient.v1.rating.pyscripts.shell_cli:CliPyScriptUpdate
+rating_report-tenant-list = cloudkittyclient.v1.report.shell_cli:CliReportTenantList
+rating_storage-dataframe-list = cloudkittyclient.v1.storage.shell_cli:CliStorageDataframeList
+rating_summary-get = cloudkittyclient.v1.report.shell_cli:CliSummaryGet
+rating_total-get = cloudkittyclient.v1.report.shell_cli:CliTotalGet
+

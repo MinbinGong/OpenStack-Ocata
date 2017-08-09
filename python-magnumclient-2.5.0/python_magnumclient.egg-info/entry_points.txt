@@ -1,0 +1,9 @@
+[console_scripts]
+magnum = magnumclient.shell:main
+
+[openstack.cli.extension]
+container_infra = magnumclient.osc.plugin
+
+[openstack.container_infra.v1]
+cluster_template_list = magnumclient.osc.v1.cluster_templates:ListTemplateCluster
+

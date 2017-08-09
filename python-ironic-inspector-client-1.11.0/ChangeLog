@@ -1,0 +1,175 @@
+CHANGES
+=======
+
+1.11.0
+------
+
+* Updated from global requirements
+* Clarify that node names can be used in addition to UUIDs
+* Deprecate setting IPMI credentials
+* Updated from global requirements
+* List introspection statuses support
+* Updated from global requirements
+* Pin functest-requirements to a specific SHA
+* Show team and repo badges on README
+* Updated from global requirements
+* Rework handling requirements for functional tests
+* Update to newer hacking
+* UUID, started_at, finished_at in the status
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* Fix functional tests after recent API changes
+* Updated from global requirements
+* Bump hacking to 0.11.0 in test-requirements
+* Updated from global requirements
+* Updated from global requirements
+* Enable release notes translation
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* Move documentation from README to Sphinx
+* Add simple Sphinx documentation
+* TrivialFix: Remove logging import unused
+* Add oslotest to test-requirements
+* Update reno for stable/newton
+
+1.9.0
+-----
+
+* Sync tools/tox_install.sh
+* Using assertIsNone() is preferred over assertIs(None,..)
+* Switch to osc-lib instead of cliff
+* Add functional tests for CLI
+* Updated from global requirements
+* Increase verbosity for functional tests
+* Add functional test for wait_for_finish
+* Use constraints for all the things
+* Fix functional tests broken by the latest refactoring
+* Deprecate global functions in favor of ClientV1 methods
+* Updated from global requirements
+* Updated from global requirements
+* Add Python 3.5 tox env and detailed setup.cfg classifiers
+* Updated from global requirements
+* Add a test dependency on requests-mock
+
+1.8.0
+-----
+
+* Updated from global requirements
+* Print rule import results
+* Updated from global requirements
+* Use osc-lib instead of openstackclient
+* Updated from global requirements
+* Updated from global requirements
+* Switch to keystoneauth
+* Bump max api version to 1.6
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+
+1.7.0
+-----
+
+* Updated from global requirements
+* Bump supported API version to 1.5
+* Introspection on stored data
+* Updated from global requirements
+* Update reno for stable/mitaka
+* Updated from global requirements
+
+1.5.0
+-----
+
+* Bump MAX_API_VERSION to actually supported 1.3
+* Try to fetch inspector URL from the service catalog
+* Updated from global requirements
+* Update README: `start` cli doesn't rely on Ironic
+* Updated from global requirements
+* Introduce command to abort introspection
+* Updated from global requirements
+* Add a missing unit test on 'introspection status' command
+* Update --wait release note with an upgrade notice
+* Set MAX_API_VERSION to actually supported 1.2
+* Updated from global requirements
+* Add --wait flag to 'introspection start' to wait for results
+* Updated from global requirements
+* Switch to accepting keystone session objects in client constructor
+
+1.4.0
+-----
+
+* Updated from global requirements
+* Implement 'introspection data save' command
+* Stop relying on deprecated and removed support for maintenance mode in tests
+* Put py34 first in the env order of tox
+* Removes MANIFEST.in as it is not needed explicitely by PBR
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* Fixed links to the new ironic-inspector documentation
+
+1.3.0
+-----
+
+* Updated from global requirements
+* Add missing release notes
+* Use Reno for release notes management
+* Allow several UUID's in 'introspection start'
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* Copy gitignore file from ironic-inspector
+* Stop assuming that all shell unit tests are for rules API
+* Support for getting introspection data in Python library
+* Updated from global requirements
+
+1.2.0
+-----
+
+* Add a simple 'introspection rule show' command
+* Support for introspection rules
+* Fix func test job broken by Inspector func tests changes
+* Add a proper client object
+
+1.1.0
+-----
+
+* Updated from global requirements
+* Make our README friendly to OpenStack release-tools
+* Updated from global requirements
+* Make sure we expose all API elements in the top-level package
+* Drop comment about changing functional tests to use released inspector
+* Fix error message for unsupported API version
+* Updated from global requirements
+* Updated from global requirements
+* Implement optional API versioning
+* Create own functional tests for the client
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* Use released ironic-inspector for functional testing
+* Don't repeat requirements in tox.ini
+* Add functional test
+* Updated from global requirements
+* Change to Capital letters
+
+1.0.1
+-----
+
+* Explicitly depend on pbr
+* Add venv environment for tox
+* Use pbr without explicit version
+
+1.0.0
+-----
+
+* Manual update from global requirements
+* Switch to pbr
+* Basic support for API versions
+* After-moving code reorganization
+* Sync remaining changes from ironic-inspector tree
+* Add gitreview file
+* Initial import

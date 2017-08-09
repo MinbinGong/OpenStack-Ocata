@@ -1,0 +1,218 @@
+CHANGES
+=======
+
+4.10.1
+------
+
+* Updated from global requirements
+* Updated from global requirements
+* Update UPPER_CONSTRAINTS_FILE for stable/ocata
+* Update .gitreview for stable/ocata
+
+4.10.0
+------
+
+* Remove references to Python 3.4
+* Add Constraints support
+* Updated from global requirements
+* Show team and repo badges on README
+
+4.9.0
+-----
+
+* Updated from global requirements
+* Add reno for release notes management
+
+4.8.0
+-----
+
+* Updated from global requirements
+* Update homepage with developer documentation page
+* Support more notice blocks like important, tip and caution
+* Fixed AttributeError: 'str' object has no attribute 'decode'
+
+4.7.0
+-----
+
+* Allow "Other Versions" section to be configurable
+
+4.6.0
+-----
+
+* Updated from global requirements
+* fix other versions sidebar links
+
+4.5.0
+-----
+
+* Subprocess returns bytes in py3
+
+4.4.0
+-----
+
+* Updated from global requirements
+* add recent versions links to sidebar
+
+4.3.0
+-----
+
+* Add version and download badges to README
+* Correct project source guessing for OpenStack
+* Updated from global requirements
+
+4.2.0
+-----
+
+* Updated from global requirements
+* Deprecated tox -downloadcache option removed
+* Removes MANIFEST.in as it is not needed explicitely by PBR
+* Use proper decode function name
+
+4.1.0
+-----
+
+* trap errors from git not being present
+* Updated from global requirements
+* Fix a string vs bytes issue in _guess_cgit_link
+
+4.0.0
+-----
+
+* Remove Python 2.6 classifier
+
+3.4.1
+-----
+
+* fix html context event handler
+* cleanup tox.ini
+
+3.4.0
+-----
+
+* add config option to point to the cgit browser
+
+3.3.1
+-----
+
+* fix html-page-context event handler
+
+3.3.0
+-----
+
+* Updated from global requirements
+* No need for Oslo Incubator Sync
+* Make urlparse import Python3-compatible
+* Fix subprocess exception name
+* Titles in table of contents continue into the page
+* clean up documentation titles and intros
+* add pbr-generated release history to the doc build
+* add link to project source in navigation sidebar
+* Updated from global requirements
+
+3.2.0
+-----
+
+* Updated from global requirements
+* Updated from global requirements
+
+3.1.0
+-----
+
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+
+3.0.0
+-----
+
+* Drop incubating theme option
+* Replace ci.o.o links with docs.o.o/infra
+* Advertise support for Python3.4 / Remove support for Python 3.3
+* Updated from global requirements
+* Remove run_cross_tests.sh
+* Updated from global requirements
+* Remove the unneeded horizontal scrollbar
+* Adds javascript footer for Google Analytics tracking
+* Update to latest hacking
+
+2.5.0
+-----
+
+* Speed up blueprint checking with naming convention
+
+2.4.0
+-----
+
+* Allow alternate OpenStack themes
+* Update run_cross_tests.sh to latest
+* Add links to the README
+* Add run_cross_tests.sh from incubator
+* Add an extension for validating blueprint names
+* Workflow documentation is now in infra-manual
+
+2.3.0
+-----
+
+* provide visual separation in sidebar
+* Updated from global requirements
+* Add pbr to installation requirements
+* Tighten up documentation
+* Report documentation build warnings as errors
+* Add initial cut for documentation
+* Remove empty file
+* warn against sorting requirements
+
+2.2.0
+-----
+
+* Fixed link text colour for incubation variant
+
+2.2.0.0a2
+---------
+
+* Added a incubating project config option
+
+2.2.0.0a1
+---------
+
+* Updated from global requirements
+* Bump hacking to 0.9.x series
+* Updated from global requirements
+
+2.1.0
+-----
+
+* Update manifest to use oslosphinx
+* Prevent left sidebar text overflow
+* Add Python 3 trove classifiers
+* Remove vim header
+* Remove references to oslo.sphinx
+* Update .gitreview after repo rename
+* Support building wheels (PEP-427)
+
+2.0
+---
+
+* Rename package from oslo.sphinx to oslosphinx
+* Sync with global requirements
+* Add -U flag to pip install command
+* Update URL for global HACKING document
+
+1.1
+---
+
+* Update build config
+* Add namespace_packages to setup.cfg
+* Update pbr usage past needing d2to1
+* Remove useless jquery.tweet.js
+* Allow use of hacking 0.6.0 and fix min version
+* Add an OpenStack-wide intersphinx mapping file
+* Ensure that AUTHORS and ChangeLog are packaged
+* Add emacs save files to gitignore
+
+1.0
+---
+
+* Add venv tox env
+* Import Sphinx theme for OpenStack
+* Added .gitreview

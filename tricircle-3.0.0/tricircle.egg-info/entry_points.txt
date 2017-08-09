@@ -1,0 +1,19 @@
+[console_scripts]
+tricircle-api = tricircle.cmd.api:main
+tricircle-db-manage = tricircle.cmd.manage:main
+tricircle-xjob = tricircle.cmd.xjob:main
+
+[oslo.config.opts]
+tricircle.api = tricircle.api.opts:list_opts
+tricircle.common = tricircle.common.opts:list_opts
+tricircle.db = tricircle.db.opts:list_opts
+tricircle.network = tricircle.network.opts:list_opts
+tricircle.xjob = tricircle.xjob.opts:list_opts
+
+[tempest.test_plugins]
+tricircle_tests = tricircle.tempestplugin.plugin:TricircleTempestPlugin
+
+[tricircle.network.type_drivers]
+local = tricircle.network.drivers.type_local:LocalTypeDriver
+vlan = tricircle.network.drivers.type_vlan:VLANTypeDriver
+

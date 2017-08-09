@@ -1,0 +1,1675 @@
+CHANGES
+=======
+
+4.0.2
+-----
+
+* Fix work of task() without task name within on-clause cases
+* Updated from global requirements
+
+4.0.1
+-----
+
+* Release notes for "evaluate_env"
+* Add 'evaluate_env' workflow parameter
+* Add hide_args=True to @profiler.trace() where it may cause problems
+* Updated from global requirements
+* Add missing swift actions
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* Fix memory leak related to cached lookups
+
+4.0.0
+-----
+
+* Fix for coverage job showing 0% coverage for kombu
+* Refactor RPC serialization: add polymophic serializer
+* Add Keycloak authentication doc for client side
+* Add details into docs about semantics of 'on-XXX' clauses
+* Add Keycloak authentication doc for server side
+* Add reno for tasks function
+* Remove '__task_execution' from task outbound context
+* Fix for failing services on py3 with kombu driver
+* Remove support for py34
+* Remove wrong licensing
+* Refactor RPC serialization: remove JsonPayloadSerializer class
+* Update reno for stable/ocata
+* Enforce style check for xrange()
+* Fix doc build if git is absent
+* Prepare for using standard python tests
+* Update UPPER_CONSTRAINTS_FILE for stable/ocata
+* Update .gitreview for stable/ocata
+
+4.0.0.0rc1
+----------
+
+* Fix for failing gates
+* Fix for failing services on py3 with kombu driver
+* Fix try import of openstack client modules
+* Remove some profiler traces, logs, use utils.cut() where needed
+* Remove unnecessary evaluation of outbound context
+* Optimizing utils.cut() for big dictionaries and lists
+
+4.0.0.0b3
+---------
+
+* Updated from global requirements
+* Add support for Rabbit HA
+* Refactor rpc configuration loading
+* Updated from global requirements
+* Invalid jinja pattern regex corrected
+* Add script for unit test coverage job
+* Updated from global requirements
+* In Python 3.7 "async" and "await" will become reserved keywords
+* Allow hyphens in Workflow and ad-hoc action names
+* External OpenStack action mapping file support added
+* Make 'task' function work w/o a task name
+* using utcnow instead of now in expiration policy
+* Enforce style check for assertIsNone
+* Add action "std.test_dict"
+* Register Javascript action additionally as 'js' action
+* Role based resource access control - update workflows
+* Remove insecure flag from the Baremetal Introspection client
+* Updated from global requirements
+* Make kombu driver work in multi-thread manner
+* Fix unit test that rely on order of return from DB
+* Use utcnow() instead of now()
+* Stop excpecting to have rabbit flags set when using fake driver
+* Updated from global requirements
+* Insecure flag added to openstack context
+* Initial commit for mistral api-ref
+* Removed unnecessary utf-8 encoding
+* Python3 common patterns
+* Updated from global requirements
+* Fix unit test that rely on order of return from DB
+* Fix for failing kombu dsvm gate
+* Move mock requirement to test-requirements.txt
+* Using sys.exit(main()) instead of main()
+* Use i18n for help text
+* Added gnocchi action pack
+* Add 'retry_on_deadlock' decorator
+* Fix two failing test cases in test_tasks
+* Add the "has" DB filter
+* Use assertGreater() or assertLess()
+* Fix version response from root controller
+* Adding releasenotes for aodh action support
+* Updated from global requirements
+* Refactor 'stress_test' to fit the current layout better
+* Add rally tests for 'join': 100 and 500 parallel tasks
+* Add a test for 'with-items' task: count=100, concurrency=10
+* Add aodh actions to mistral
+* Disable invalid API test till it's fixed
+* Copy _50_mistral.py file from enabled folder
+* Fix doc for missing dashboard config file
+* Role based resource access control - get workflows
+* Make body of std.email optional
+* Refresh object state after lock acquisition in WithItemsTask
+* Small adjustments in WithItemsTask
+* Fix 'with-items' task completion condition
+* Apply locking to control 'with-items' concurrency
+* Slightly improve 'with-items' tests
+* Get rid of with_items.py module in favor of WithItemsTask class
+* Refactor and improve 'with-items' algorithms
+* Fix docs in README.rst
+* Fix configuration generator
+* Fix version response from root controller
+* Exclude .tox folder from coverage report
+* Updated from global requirements
+* Add more tests to mistral rally
+* Replace six.iteritems() with .items()
+* Display all the possible server values
+
+4.0.0.0b2
+---------
+
+* Correct missspellings of secret
+* Minor changes in the document
+* Added test cases for a few possible scenarios
+* change the cron-trigger execution time from localtime to UTC
+* Use the with keyword dealing with file objects
+* Modify the link in 'README.rst'
+* Modify the function "_get_spec_version(spec_dict)"
+* Update the wording in the actions terminology docs
+* Remove commented-out Apache 2 classifier from setup.cfg
+* Updated from global requirements
+* Fix for failing kombu gate
+* modify something in 'dsl_v2.rst'
+* Fix two errors in YAML example and a error in action doc
+* Handling MistralException in default executor
+* Fix a syntax error in yaml example
+* std.email action requires a smtp_password
+* Change version '1.0' to '2.0'
+* Add descriptions for on_task_state_change parameters
+* Updated from global requirements
+* Added releasenote for retry policy update
+* Cleanup obvious issues in 'with-items' tests
+* Updated from global requirements
+* Allow "version" to be within workflow names in workbooks
+* Updated from global requirements
+* Yaql Tasks Function
+* Bump Ironic API version to 1.22 when creating the Ironic client
+* Small changes to docs to comply with openstack document style
+* Fix launch process of Mistral components
+* Modify import style in code
+* Some spelling errors
+* Initial commit for mistral-i18n support
+* Add timestamp at the bottom of every page
+* Show team and repo badges on README
+* Make CI gate for unit tests on mysql work
+* Fix the default configuration file path
+* Updated from global requirements
+* Mock the HTTP action in the with_items tests
+* Fix devstack plugin compatibility
+* Updated the retries_remain statement
+* Updated from global requirements
+* Add Ironic RAID actions
+* Revert "Remove unused scripts in tools"
+* Add a test for invalid task input expression
+* Fix config import in javascript action module
+* Make Jinja evaluator catch and wrap all underlying exceptions
+* Make YAQL evaluator catch and wrap all underlying exceptions
+* Replace 'assertFalse(a in b)' with 'assertNotIn(a, b)'
+* Updated from global requirements
+
+4.0.0.0b1
+---------
+
+* Replace retrying with tenacity
+* Add cancelled state to action executions
+* Updated from global requirements
+* Fix possible DB race conditions in REST controller
+* Remove unused pylintrc
+* Added releasenote for Senlin Action Pack
+* Migrated to the new oslo.db enginefacade
+* Added senlin action pack
+* Few changes in the doc
+* Use mock for a bad HTTP call in unit tests
+* Few changes related to the doc blueprint
+* Fix REST API dangling transactions
+* Fix error message format in action handler
+* Fix error message format in other task handler methods
+* Migrate mistral task_type
+* Fix error message format for task run and continue
+* Fix missing exception decorators in REST API
+* Remove unused scripts in tools
+* Replace uuid4() with generate_uuid() from oslo_utils
+* Updated from global requirements
+* Add type to tasks API
+* Handle region_name in openstack actions
+* Add more tests to mistral rally
+* Replace oslo_utils.timeutils.isotime
+* Adding Variables to Log Messages
+* Updated from global requirements
+* cors: update default configuration
+* Added unit tests for workflow executions and task executions filtering
+* Fix DB API transaction()
+* Run actions without Scheduer
+* Get correct inbound tasks context for retry policy
+* Updated from global requirements
+* Adding tests for workbook execution and execution list to Rally
+* Use service catalog from authentication response
+* Updated from global requirements
+* Fix a bug in the algo that determines if a route is possible
+* Enable DeprecationWarning in test environments
+* Added additional info in devstack/readme.rst
+* Fixing 'join' task completion logic
+* Updated from global requirements
+* Removal of unneccessary directory in run_tests.sh
+* Get service catalog from token info
+* Add one more test for YAQL error message format
+* Change format of YAQL errors
+* Updated from global requirements
+* Update .coveragerc after the removal of openstack directory
+* Enable code coverage report in console output
+* Updated from global requirements
+* Remove logging import unused
+* Cleanup Newton Release Notes
+* Publish/output in case of task/workflow failure
+* Don't include openstack/common in flake8 exclude list
+* Fix PEP8 issue
+* Change task() function to return 'null' if task doesn't exist
+* Enable release notes translation
+* Updated from global requirements
+* Describe vital details for debugging in PyCharm
+* Update documentation for multi-vim support
+* Add Jinja evaluator
+* Minor changes to the documentation
+* Minor changes in the installation guides
+* Add a way to save action executions that run synchronously
+* Import haskey from keys module
+* Declare the encoding of file
+* Changes made to comply with OpenStack writing style
+* Cleanup the Quickstart Documentation
+* Stop adding ServiceAvailable group option
+* Updated from global requirements
+* Update heat actions in mapping.json
+* Updated from global requirements
+* Accept service catalog from client side
+* Using assertIsNone() instead of assertEqual(None, ...)
+* Updated from global requirements
+* Make deafult executor use async messaging when returning action results
+* Disable Client Caching
+* Updated from global requirements
+* Revert "Update UPPER_CONSTRAINTS_FILE for stable/newton"
+* Remove environment data from task inbound context
+* Use parenthesis to wrap strings over multiple lines
+* Updated from global requirements
+* Using sys.exit(main()) instead of main()
+* Do not include project name in the client cache key
+* Updated from global requirements
+* Add tests to check deletion of delayed calls on WF execution delete
+* Delete all necessary delayed calls on WF stop
+* Update UPPER_CONSTRAINTS_FILE for stable/newton
+* Fix for timeouting  actions on run-action
+* Fix a typo in access_control.py
+* Adding a script for fast mistralclient help generation
+* Make Javascript implementation configurable
+* Add unit test case for deletion of execution in case of (error and cancelled)
+* Avoid storing workflow input in task inbound context
+* Replace assertEqual(None, *) with assertIsNone in tests
+* Updated from global requirements
+* Add __ne__ built-in function
+* Update reno for stable/newton
+* Remove context.spawn
+* Correct documentation about task attributes 'action' and 'workflow'
+* Updating mistralclient docs
+* Abstract authentication function
+* Fix for raising excepton from kombu
+
+3.0.0.0rc1
+----------
+
+* Remove workflow spec, input and params from workflow context
+* Add a smarter delay between workflow completion checks
+* Optimize the logic that check if 'join' task is allowed to start
+* Copy cached WF spec stored by definition id into WF execution cache
+* Add functional tests for event engine functions
+* Added unit tests for Workbook and Workflow filtering
+* Delete unnecessary comma
+* Fixed task in_bound context when retrying
+* Enable changing of rpc driver from devstack
+* Take os_actions_endpoint_type into use
+* Fix mistral API docs Fixing v2.rst to refer to new module paths, and adding the cron trigger param to POST v2/cron_triggers/ documentation
+* Add event trigger REST API
+* Using count() instead of all() for getting incompleted tasks
+* Fix for raising exception directly to kombu
+* Updated from global requirements
+* Fix delayed calls DB migration
+* standardize release note page ordering
+* Fixed http links in CONRIBUTING.rst
+* Optimize finder functions for task executions
+* Change execution mechanism for 'join' tasks
+* Fixed an incorrect migration revision number in a comment
+* cast to str for allowable types
+* Raise NotImplementedError instead of NotImplemented
+* Optionally include the output when retrieving all executions
+* Add __ne__ built-in function
+* Fix getting URLs / and /v2
+* Add event configuration for event trigger
+
+3.0.0.0b3
+---------
+
+* Add 'uuid' YAQL function
+* Sync tools/tox_install.sh
+* Updated from global requirements
+* Fix for 'Cannot authenticate without an auth_url'
+* Add client caching for OpenStack actions
+* Add setuptools to requirements.txt
+* Task publish does not overwrite variable in context Edit
+* Updated from global requirements
+* Clean imports in code
+* TrivialFix: Remove logging import unused
+* Add a note to the documentation about std.fail
+* Some minor code optimization in post_test_hook.sh
+* Updated from global requirements
+* Fix for not working 'run-action' on kombu driver
+* Updated from global requirements
+* Fix documentation
+* Clean imports in code
+* Use more specific asserts in tests
+* Use upper constraints for all jobs in tox.ini
+* Updated from global requirements
+* Updated the configuration guide
+* Add a DB migration for named locks
+* Implement named transactional lock (semaphore)
+* Updated from global requirements
+* Closes-Bug: 1607348
+* Optimize task defer() method
+* Optimize direct workflow controller
+* Updated from global requirements
+* Updated from global requirements
+* Fix task post completion scheduling
+* Fix _possible_route() method to account for not completed tasks
+* Add 'wait-before' policy test with two chained tasks
+* Fix task 'defer'
+* Filtering support for actions
+* Increase size of 'task_executions_v2.unique_key' column
+* Add 'join after join' test
+* Slightly improve workflow trace logging
+* Fix workflow and join completion logic
+* Towards non-locking model: remove pessimistic locks
+* Fix specification caching mechanism
+* Towards non-locking model: make 'with-items' work w/o locks
+* Make mistral work with amqp and zmq backends
+* Towards non-locking model: adapt 'join' tasks to work w/o locks
+* Add unique keys for non locking model
+* Updated from global requirements
+* Fix GET /executions/<id> to init 'output' attribute explicitly
+* Fix past migration scripts discrepancies
+* fix for get action executions fails with "has no property 'type"
+* Updated Doc for SSL configuration
+* Use actual session for ironic-inspector action population
+* Added support for SSL connection in mistra-api server
+* Towards non-locking model: decouple WF completion check via scheduler
+* Towards non-locking model: use insert_or_ignore() for delayed calls
+* Towards non-locking model: add insert_or_ignore() on DB API
+* Fix the use of both adhoc actions and "with-items" in workflows
+* Towards non-locking model: removing env update from WF controller
+* Updated from global requirements
+* DB migration to three execution tables and increase some columns
+* Updated from global requirements
+* Add state info for synchronous actions run from CLI
+* Towards non-locking model: fix obvious workflow controller issues
+* Towards non-locking model: Add 'unique_key' for delayed calls
+* Add _get_fake_client to ironic-inspector actions
+* Add target parameters to REST API
+* Update docs and add release not for safe-rerun flag
+* Invalidate workflow spec cache on workflow definition updates
+* Removing unnecessary workflow specification parsing
+* Splitting executions into different tables
+* Added releasenote for https support
+* Add cancelled state to executions
+* Enable user to use transport_url in kombu driver
+* Fixed trivial issue in exception message
+* Updated from global requirements
+* Fix DSLv2 example according to Mistral Neuton
+* Updated from global requirements
+* Use 'rpc_response_timeout' in kombu driver
+* Use Paginate query even if 'limit'or 'marker' is not set
+* Remove task result for collection REST requests
+* Allow to use both name and id to update action definitions
+* Remove some inconsistency in DB api
+* Get rid of oslo_db warning about "id" not being in "sort_keys"
+* Add event engine service
+* Error handling test: error in 'publish' for a task with 'on-error'
+* Added 'pip install -r requirements.txt' instruction
+* Executor fails actions if they are redelivered
+* Move the remainder of REST resources to resources.py
+* Move REST resources action, action execution and task to resources.py
+* Add the new endpoint /v2/tasks/<id>/workflow_executions
+* Allow to use both name and id to access action definitions
+* Pass 'safe-rerun' param to RPC layer
+* Initialize RPC-related flag when starting API
+* Update in installation package list in installation guide
+* Add param 'safe-rerun' to task
+* Create MistralContext from rpc context in kombu engine
+* Add db models for event trigger
+* Updated from global requirements
+* Fix SPAG errors in Quickstart and Main Features docs
+* Fix some trivial SPAG errors in docs
+* Rename package mistral.engine.rpc to mistral.engine.rpc_backend
+* Fixing filtering in task controller
+* Add Python 3.5 classifier and venv
+* Updated from global requirements
+
+3.0.0.0b2
+---------
+
+* Fix for YaqlEvaluationException in std.create_instance workflow
+* Updated from global requirements
+* Add tests for Kombu driver
+* Release note for KeyCloak OIDC support
+* Add KeyCloak OpenID Connect server-side authentication
+* Add authentication options for KeyCloak OIDC
+* Add proper handling for implicit task completion
+* Add proper error handling for task continuation
+* Add error handling tests: invalid workflow input, error in first task
+* Add more tests for error handling
+* Fix utility print_executions method
+* Log warn openstack action generation failures
+* Fix Magnum action _get_fake_class
+* Fix Murano action _get_fake_class
+* Stylistic cleanups to lazy loading patch
+* Add configuration option for endpoint type
+* Add filters to all collections listing functions (tags included)
+* Lazy load client classes
+* Integrating new RPC layer with Mistral
+* Make RPC implementation configurable
+* Adding OsloRPC server and client
+* Add support for custom YAQL functions
+* Remove obsolete config option "use_mistral_rpc"
+* Add tacker actions in mistral
+* Update Expiration Policy Documentation
+* New RPC layer implementation
+* Don't create actions when attempting to update one that doesn't exist
+* Updated from global requirements
+* Add zake into dependencies
+* Add action context to all action executions
+* Fix SSHActionsTestsV2 failure
+* Updated mapping.json file
+* Support recursive ad-hoc action definitions
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* Use client credentials to retrieve service list
+* Remove std.mistral_http action from tests
+* Doc updated for oslo_policy configuration
+* Updated from global requirements
+* Remove .mailmap file
+* Fix mysql driver installation section in readme
+* Fix API inconsistencies with GET /v2/workflows
+* Fixed fake clients of glance and designate
+* Fixed get_actions_list script to get glance actions
+* Fixed get_actions_list script to get designate actions
+* Example Mistral docker container broke due to oslo.policy update
+* Refactored tempest tests
+* Release note for magnum actions support
+* Fix postgresql test failure
+* Add configuration for Mistral tempest testing
+* Added doc string for enforce method
+* Release note for murano actions support
+* Add magnum certificates and mservices actions
+* Release note for role base access control
+* Added role base authentication support
+* Added murano actions
+* Add magnum bays actions
+* Enable osprofiler to measure performance
+* Rename the to_string method to to_json to clarify it's purpose
+* Support JSON data in JSON API type
+* Add Magnum actions
+* Updated from global requirements
+* Removing redundant wf_ex_id parameter for rerun across the code
+* Add explicit preconditions for methods of Action, Task and Workflow
+* Add a test that verifies an old bug with join
+* Refactoring workflow handler
+* Fix invalid type usage for join
+* mistral actions for designate v1 api's not working
+* Updated from global requirements
+* Remove AUTHORS file
+* Remove AUTHORS file from git tracking
+* Add missing argument in exception string
+* Updated from global requirements
+* Use LOG.exception when logging exceptions
+
+3.0.0.0b1
+---------
+
+* 	Release notes for fail/pause/success transition message
+* Updated from global requirements
+* Fail/Success/Pause transition message
+* Remove unnecessary database transaction from Scheduler
+* Update .mailmap
+* Refactor Mistral Engine
+* Updated from global requirements
+* Updated from global requirements
+* Fixes the Mistral Docker image
+* Updated from global requirements
+* Return 'Unknown error' when error output is empty
+* Fix client in TroveActions
+* Add Python 3.4 to the classifiers
+* Remove unnecessary executable permissions
+* Updated from global requirements
+* Add baremetal.wait_for_finish action to mapping
+* Update get_arg_list_as_str to skip func params
+* Updated from global requirements
+* Enforcing upper constraints for tox test jobs
+* Fix get task list on YAQL error in with-items
+* Add API to validate ad-hoc action
+* Updated from global requirements
+* Updated from global requirements
+* Replace keystone CLI with openstack CLI
+* Add Designate apis as mistral actions
+* Remove oslo.messaging hack since it's broken with 5.0.0 version
+* Fix the yaql github repository
+* Updated from global requirements
+* Updated from global requirements
+* Fix mistral installation in devstack
+* Refactoring exception hierarchy
+* Updated from global requirements
+* Fixing engine facade hierarchy
+* Fixed issue related to docker image creation
+* Updated from global requirements
+* Rename base API test class
+* Disable cron trigger thread for API unit tests
+* Disabled ssl warnings while runing tempest tests
+* Add extra checks for the existance of executor_callback
+* Updated from global requirements
+* Updated from global requirements
+* Added script to create docker image
+* Switch to auto-generated cron trigger names in unit tests
+* tempest: fix dir_path
+* Leave more relevant comment in engine race condition test
+* Add utility methods to test action executions more conveniently
+* Fixing failing functional tests for Cinder and Heat actions
+* Update OpenStack actions mapping
+* Updated from global requirements
+* Unblock skipped test
+* Replace self._await(lamdba: ..) constructs with more readable calls
+* Add auth_enabled=False to a cron trigger test
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* Unblock skipped tests in test_action_defaults.py
+* Updated from global requirements
+* Fixing issue with different versions of oslo_messaging
+* Getting rid of task result proxies in workflow context
+* Fix typos in Mistral files
+* Hacking log for warning
+* Fixing engine transaction model and error handling
+* Refactor workflow controller and fix a bug in _fail_workflow()
+* Fixing a bug in DB API method that acquires entity lock
+* Also package mistral_tempest_tests
+* module docs are not being generated
+* Update reno for stable/mitaka
+
+2.0.0.0rc1
+----------
+
+* Ack message after processing (oslo.messaging)
+* Run mistral services as separate processes
+* Fix compatibility with WebOb 1.6.0
+* Reduce spec parsing some more
+* register the config generator default hook with the right name
+* Moved CORS middleware configuration into oslo-config-generator
+* Updated from global requirements
+* Deleting redundant trust creation in workbook uploading mechanism
+* Use tempest.lib instead of tempest-lib
+* Fix with-items task termination when sub-workflows fail
+* Restruct README file
+* Updated from global requirements
+* Updated from global requirements
+
+2.0.0.0b3
+---------
+
+* Fix the problem when parse config file
+* Add asynchronous actions doc
+* Add release notes for M-3
+* Updated from global requirements
+* Updated from global requirements
+* Fixed 'workflow_name' key error
+* Change for synchronous Mistral actions from CLI
+* Updated from global requirements
+* Delete workflow members when deleting workflow
+* Add Mistral action pack
+* Release notes for Barbican actions
+* Updated from global requirements
+* Updated from global requirements
+* Add timestamp for member api response
+* Show shared workflows
+* Add actions to expose OpenStack Barbican APIs
+* Updated from global requirements
+* tempest-lib has been added to requirements.txt
+* Fix occasional test failure by SSHActions
+* Reduce spec parsing in workflow lifecycle
+* Support workflow id in execution operations
+* Add workflow id column to executions_v2 table
+* Fix occasional test failure by assertListEqual
+* Added CORS support to Mistral
+* Fix spellings for two words
+* BaremetalIntrospectionAction get endpoint by service_type
+* Implement basic Zaqar queue operations
+* Fix with-items concurrency for sub-workflows
+* Mistral tests will run from tempest plugin
+* Use proper way to initialize nova client
+* Updated from global requirements
+* Fix for not running 'on-success' task after task with 'with-items'
+* Fix quickstart doc error
+* Added link for pre-built docker image
+* Fix rerun of task in subworkflow
+* Fixed engine tests
+* Removed mistral/tests/functional
+* Updated from global requirements
+* Fix multiple reruns of with-items task
+* Remove argparse from requirements
+* Updated from global requirements
+* Add release note for tempest plugin
+
+2.0.0.0b2
+---------
+
+* Add release note for swift action support
+* Add task_execution_id to workflow execution in API
+* Support workflow sharing API
+* Change LOG.warn to LOG.warning
+* Add db operations for resource members
+* Add db model for resource sharing
+* Remove unused logging import
+* Update REST API to support env update
+* Allow env update on resume and rerun workflows
+* Add support for OpenStack Swift actions
+* Disallow user to change workflow scope
+* Replace assertTrue(isinstance()) with assertIsInstance()
+* Updated from global requirements
+* Support workflow UUID when creating cron trigger
+* "test_ssh_actions" failed test has been fix
+* Fix db error when running python34 unit tests
+* Updated dynamic credential support for funtional test
+* Trival: Remove unused logging import
+* Drop py33 support
+* Release note for mistral-docker-image
+* Added README.rst file for tempest plugin
+* Added base.py to tempest plugin
+* Added engine to tempest plugin
+* Added test_mistral_basic_v2.py to tempest plugin
+* Initial layout for mistral tempest plugin
+* Added mistral default actions
+* If task fails on timeout - there is no clear message of failure
+* devstack/plugin.sh: stop using deprecated option group for rabbit
+* Fix client name in setUpClass's method in 'test_ssh_actions'
+* Documentation for Mistral and Docker
+* Added Dockerfile to create docker image
+* Fix example for workbook in doc
+* Support UUID when deleting a workflow definition
+* Support UUID when updating a workflow definition
+* Support UUID when getting a workflow definition
+* Fix DB migration 009 constraint dropping
+* Add releatenote for fix execution saved in wrong tenant
+* Updated from global requirements
+* Workflow name can not be in the format of UUID
+* Fix join on branch error
+* Updated from global requirements
+* Get "cron trigger" list using model query
+* Add support for OpenStack Ironic Inspector actions
+* Updated from global requirements
+* Refactor action generator
+* Fix concurrency issues by using READ_COMMITTED
+* Ignored PEP257 errors
+* Fix example for ad-hoc action in doc
+* Numerous debug messages due to iso8601 log level
+* Fixing execution saved in wrong tenant
+* Updated from global requirements
+* Pass environment variables of proxy to tox
+* Make test_expiration_policy_for_executions stable
+* Delete python bytecode before every test run
+* Fix state_info details for with-items task error
+* Reset task state_info on task re-run
+* Run pep8 on some tools python files
+* Remove version from setup.cfg
+
+2.0.0.0b1
+---------
+
+* Add support for OpenStack Ironic actions
+* Fix tools/get_action_list.py
+* Update install_venv.py so it says 'Mistral'
+* Add etc/mistral.conf.sample to .gitignore
+* Add database indices to improve query performance
+* Result will be [], if list for with-items is empty
+* Added Unit test when policy input is variable
+* Improve error message for YAQL task function
+* Add release notes for trove support
+* Add release notes for Cinder v2 support
+* Updated from global requirements
+* Force releasenotes warnings to be treated as errors
+* Send mail to mutli to_addrs failed
+* Correct heatclient comment in mapping.json
+* Remove running of CLI tests on commit to mistral repo
+* Change installation of python-mistralclient in the gates
+* Fix database upgrade from a new database
+* Updated from global requirements
+* Fix task state for YAQL error in subflow output
+* Moved to cinderv2 client support
+* Show project id when retrieving workflow(s)
+* Updated from global requirements
+* Add the CONTRIBUTING.rst file
+* Fix with-items concurrency greater than the number of items
+* Adding releasenotes management to Mistral
+* Use setup_develop instead of setup_package in plugin.sh
+* Add Trove to mistral actions
+* Fix cron-trigger's execution with pattern and first time
+* Pass creds into the clients.Manager() in functional tests
+* Move base.py and config.py under unit/ folder
+* Add ceilometer action support
+* Increased size of "state_info" column to 64kb
+* Skipped some tests in py3 environment
+* Fixing reference of floating_ips_client in tests
+* OpenStack typo
+* Updated from global requirements
+* Ensure only one WF execution for every CT cycle
+* Wrap sync_db operations in transactions
+* Remove iso8601 dependency
+* Fix all H405 pep8 errors
+* Adding callback url to action context
+* Updated from global requirements
+* Remove kombu as a dependency for Mistral
+* Move the default directories into settings file
+* Removing wait() when initializing notification listener
+* Updated from global requirements
+* Do not use len() in log_exec decorator
+* Fixing wf execution creation at initial stage
+* remove default=None for config options
+* Fixing workflow execution state calculation
+* Resolved encoding/decoding problem
+* Wrapper is used instead of direct json library
+* Comparision opeartor has been changed
+* Fixed some unit test issue
+* Filter is converted to list
+* Fix state change on exception during task state change
+* Updated from global requirements
+* Change in sort direction at execution controller
+* Avoid comparision between "None" type and "int" type
+* Division result is wrapped to int()
+* Updated from global requirements
+* devstack: add support for mistraldashboard
+* Fixing SSH actions to use names of private keys
+* [Docs] Add 'Cookbooks' page
+* Use oslo_config new type PortOpt for port options
+* Add decode() function for string comparison
+* Refactored filter implementation
+* mistral-documentation: dashboard documentation regarding debug known issue
+* Fix mistral dsvm gate
+* Updated from global requirements
+* Adding 'json_pp' function in YAQL
+* Added home-page value with mistral docs
+* filter() is wrapped around list()
+* Updated from global requirements
+* Updated from global requirements
+* Extracting generator objects returned by openstack actions
+* Set version for Mitaka
+* Updated from global requirements
+* Adding functional tests for SSH actions
+* Fixing "Task result / Data Flow" section of "Main Features" in docs
+* Fixing terminoloty/actions section in documentation
+* Fixing description of "mistral_http" action in DSL spec
+* Adding section about validation into API v2 spec
+* Adding "Cron triggers" section into API v2 specification
+* Action definition updated, when workbook is created
+* Adding "Services" section into API v2 specification
+* Fixing small issues in documentation
+* Updated from global requirements
+* Creating new SSH action which uses gateway
+* Fixing ssh action to use private keys
+* Use MutableDict from sqlalchemy directly
+* Updated from global requirements
+* Delivering error message via header in pecan.abort
+* Replace copy.copy with copy.deepcopy
+* Updated from global requirements
+* Remove the transaction scope from task executions API
+* Colorise mistral log output
+* Updated from global requirements
+* Fix argparse error in wsgi script
+* Update AUTHORS file
+* mistral-documentation: dashboard documentation regarding debug
+* Fix more unit tests in py34 job
+* Fixing scheduler tests
+* Remove usage of expandtabs() in get_workflow_definition
+* Renaming state DELAYED to RUNNING_DELAYED in doc
+
+1.0.0.0rc1
+----------
+
+* Renaming state DELAYED to RUNNING_DELAYED
+* Support JSON and arrays in JavaScript action in Mistral
+* Fix some spelling typo in manual and program output
+* Fix order of arguments in assertEqual
+* Fix more tests in python34 gate
+* Using six.iteritems() to avoid some python3 tests failure
+* Fixing run action when error occurs
+* Fixing std.create_instance workflow
+* Adding devstack installation doc
+* Fixing searching errors in mistral.exceptions
+* Check for trigger before delete wf
+* Change ignore-errors to ignore_errors
+* Removing "skip" decorators for some OpenStack actions tests
+* Workflow definition updated, when workbook is created
+* Fail task on publish error
+* Raise correct exception when a service doesn't exist
+* Add semantics validation of direct workflow 'join' tasks
+* .mailmap for pbr AUTHORS upate
+* Fix two typos
+* Updated from global requirements
+* Adding validation of workflow graph
+* Mistral documentation: CLI operations
+* Adding 'is_system' to definition model
+* Fixing uploading public workflow or action
+* Fixing DSL documentation
+* Initial commit that fix py34 tests run
+* Refactor get_task_spec using mechanism of polymorphic DSL entities
+* get_action_list: improve generated JSON output
+* get_action_list: use novaclient.client.Client
+* Adding test where with-items evaluates 'env'
+* Fixing indentation in 'create action' tutorial
+* Minor changes to Mistral docs
+* Customized response sent in case of fault condition
+* Fix docstring for the test of the std.email action
+* Fix order of arguments in assertEqual
+* Switch to devstack plugin
+* Updated from global requirements
+* Fix usage of python-novaclient in Mistral
+
+1.0.0.0b3
+---------
+
+* Mistral docs: Upgrade database guide
+* Mistral terminology: cron-triggers and actions
+* Add YAQL function 'task' to extract info about task in DSL
+* Raising exception if there aren't start tasks in direct workflow
+* Mistral docs terminology: executions
+* The Link for plugin samples is added
+* Mistral documentation: mistralclient
+* Support action_execution deletion
+* Use default devstack functional for Mistral user/service/endpoint creation
+* Fix timing in expired execution unit test
+* Fix execution update where state_info is unset
+* Fix creation of Mistral service and endpoints
+* Removes unused posix-ipc requirement
+* Mistral documentation: architecture
+* Mistral documentation: Quickstart
+* Updated from global requirements
+* Small adjustements and fixes for execution expiration policy
+* Mistral docs terminology: workbooks and workflows
+* Fixing occasional fail of test_create_action_execution
+* Adding project_id to expiration-policy for executions ctx
+* Fixing 2 typos in comments
+* Mistral documentation: adding configuration guide
+* Refactor task controller with new json type
+* Refactor execution controller with new json type
+* Refactor environment controller with new json type
+* Refactor cron trigger controller with new json type
+* Refactor action execution controller and tests
+* Fixing working concurrency when value is YAQL
+* Add fields filter for workflow query
+* Mistral documentation: adding installation guide
+* Fix failure in execution pagination functioinal tests
+* Enabling direct workflow cycles: adding a parallel cycles test
+* Switching to six module where it's not used yet
+* Mistral documentation: dashboard installation guide
+* Mistral documentation: main features
+* Add resource params to reflect WSME 0.8 fixes
+* Add schema for additional properties of BaseListSpec
+* Enabling direct workflow cycles: adding another test
+* Enabling direct workflow cycles: fixing evaluation of final context
+* Add config example for rotating logs
+* Add pagination support for executions query API
+* Purge executions created during functional testing
+* Moving to YAQL 1.0
+* Fixing cron trigger test
+* Update the gitingore file and tox.ini
+* Enabling direct workflow cycles: fixing find_task_execution() function
+* Enabling direct workflow cycles: adding a test that now doesn't pass
+* Add pagination support for actions query API
+* Add functional tests for workflow query
+* Fixed lack of context for triggers
+* Fixing working with-items and retry together
+* Implementing with-items concurrency
+* Add pagination support for workflows query API
+* Update AUTHORS
+* Raise user-friendly exception in case of connection failed
+* Scheduler in HA
+
+1.0.0.0b2
+---------
+
+* Fix postgresql unit tests running
+* Add API for rerunning failed task execution
+* Remove mistral.conf.sample
+* Expiration policy for expired Executions
+* Add Service API
+* Add coordination feature to mistral service
+* Mistral documentation: Overview article
+* Mistral documentation: Initial commit
+* Complete action on async action invocation failure
+* Add processed field in task query response
+* Add one more tox env for running unit tests with postgresql
+* Add feature to rerun failed WF to the engine interface
+* Enable workflow to be resumable from errors
+* Fixing error result in run-action command
+* Fixing std.http action
+* Add coordination util for service management
+* Support large datasets for execution objects
+* Fixing execution state_info
+* Fixing import error in sync_db.py
+* Error result: fix std.http action
+* Error result: doc explaining error result in base action class
+* Error result: adding more tests
+* Making / and /v2 URLs allowed without auth
+* Error result: allow actions to return instance of wf_utils.Result
+* Error result: adding a test for error result
+* Remove explicit requirements.txt occurrence from tox.ini
+* Remove H803, H305
+* Fixing workflow behavior with non-existent task spec
+* Make update behavior consistent
+* Drop use of 'oslo' namespace package
+* Add guidance for updaing openstack action mappings
+* New mock release(1.1.0) broke unit/function tests
+* Fixing get task list API
+* Updating yaql version
+* Fix cron triggers
+* Fix mistralclient errors when reinstalling devstack
+* use task.spec to result always a list for with-items remove redundant 'if' Change-Id: Id656685c45856e628ded2686d1f44dac8aa491de Closes-Bug: #1468419
+* Modify run_tests.sh to support PostgreSQL
+* Add Mistral service and endpoint registration to README.rst
+* Fix inappropriate condition for retry policy
+* Fix invalid workflow completion in case of "join"
+* No input validation for action with kwargs argument
+* Delete one more tag 1.0.0.0b1 in devstack script pushed by mistake
+
+1.0.0.0b1
+---------
+
+* Removing redundant header from setup.py
+* Simplifying a few data_flow methods
+* Workflow variables: modifying engine so that variables work
+* Workflow variables: adding "vars" property in to workflow specification
+* Fixing devstack gate failure
+* Bug fix with-items tasks should always have result of list type
+* Set default log level of loopingcall module to 'INFO'
+* Implementing action_execution POST API
+* Implementing 'start_action' on engine side
+* Fix wrong zuul_project name in mistral gate script
+* Creating action_handler to separate action functionality
+* Get rid of openstack/common package
+* Improving devstack docs
+* Drop use of 'oslo' namespace package
+* Fix execution update description error
+* Fix the inappropriate database initialization in README.rst
+* Fix stackforge repo refs in devstack/lib/mistral
+* Fix wrong db connection string in README.rst file
+* Add description param to execution creation API
+* Update .gitreview file for project rename
+* Add description field to executions_v2 table
+* Make use of graduated oslo.log module
+* Implementing 'continue-on' retry policy property
+* Adding some more constraints to cron trigger
+* Adding 'continue-on' to retry policy spec
+* Adding input validation to cron-trigger creation
+* Fixing execution-update API
+* Fixing sending the result of subworkflow
+* Fix command line arguments has lower priority than config file
+* Make mistral use of oslo-config-generator
+* Fixing mistral resources path
+* Fix devstack back to rabbit
+* Fixing devstack-gate failure
+* fix: Extra fields in the env definition are allowed
+* Allow pause-before to override wait-before policy
+* Adjust docs API to last changes
+* Fixing YAQL related errors
+* Skip test on heat action
+* Removing incorrect 2015.* tags for client in devstack script
+* Adding migrations README
+* Fix dsvm gate failure
+* Fixing YAQL len() function in Mistral
+* Adding 'workflow_params' to cron triggers
+* Allowing a single string value for "requires" clause
+* Adding "requires" to "task-defaults" clause
+* Updating requirements to master
+* Updating mapping.json to master
+* Fix bug with action class attributes
+* Setting base version in setup.cfg for libery cycle
+* Fix error when getting workflow with default input value
+* Fix wrong log content
+* Retry policy one line syntax
+* Fixing yaql version
+* Fix yaql error caused by the ply dependency
+* Fixing action_executions API
+* Adding script for retrieving OpenStack action list
+* Adding tests on 'break-on' of retry policy
+* Update mapping.json for OpenStack actions
+* Allowing strings in on-success/on-error/on-complete clauses
+* Consider input default values in ad-hoc action
+* Change novaclient import to v2
+
+2015.1.0rc1
+-----------
+
+* Add action execution ID to action context
+* Consider input default values in workflow execution
+* Removing "policies" keyword from resources
+* Getting rid of "policies" keyword
+* Rolling back YAQL to v0.2.4
+* Fixing result ordering in 'with-items'
+* Fixing tags of wf as part of wb
+* Fixing variable names in db/v2/sqlalchemy/api.py
+* Fix a logging issue in ssh_utils
+* Pin oslo pip requirements
+* Add YAQL parsing to DSL validation
+* Fixing engine concurrent issues
+* Apply input schema to workflow/action input
+* Add schema for workflow input with default value support
+* Remove transport from WSGI script
+* Fixing API 500 errors on Engine side
+* Fix typo in wf_v2.yaml
+* Moving to YAQL 1.0
+* Get rid of v1 in installation scripts
+* Fixing exception type that workbook negative tests expect
+* Removing v1 related entries from setup.cfg
+* Renaming "engine1" to "engine"
+* Fixing DB errors in transport
+* Removing left v1 related stuff (resources, DSL specs)
+* Add workbook and workflow validation endpoints
+* Deleting all v1 related stuff
+* Fixing docs on target task property in README
+* Rename 'wf_db' to 'wf_def' to keep consistency
+* Provide 'output' in action_execution API correctly
+* Small data_flow refactoring, added TODOs to think about design
+* Fixing version info in server title
+* Fixing 'with-items' with plain input
+* Add 'keep-result' property to task-spec
+* Add implicit task access in workflow
+* Fixing work 'with-items' on empty list
+* Expanding generators when evaluating yaql expressions
+* Add mistral-db-manage script
+* Small refactoring in engine, task handler and workflow utils
+* Fixing big type column for output and in_context
+* Harden v2 DSL schema for validation
+* Fix bug with redundant task_id in part of logs
+* Fixing 'with-items' functionality
+* Fixing task API (published vars)
+* Support subclass iteration for Workflow controller
+
+2015.1.0b3
+----------
+
+* Fixing tasks API endpoint
+* Add action_execution API
+* Fixing pause-before policy
+* Fixing timeout policy
+* Implementing 'acquire_lock' method and fixing workflow completion
+* Fix retry policy
+* Fixing wait-after policy
+* Fixing wait-before policy
+* Trigger remaining-executions and first-exec-date
+* Refactor task output: full engine redesign
+* Fix DSL schema in test workbook
+* Fixing scheduler work
+* Small refactoring in test_javascript
+* Add WSGI script for API server
+* Fix list of upstream tasks for task with no join
+* Fixing finishing workflow in case DELAYED task state
+* Adding validation in policies
+* Refactor task output: DB API methods for action executions
+* Refactor task output: 'db_tasks'->'task_execs', 'db_execs'->'wf_execs'
+* Refactoring task output: 'task_db' -> 'task_ex', 'exec_db' -> 'wf_ex'
+* Refactoring task output: full redesign of DB models
+* Adding string() YAQL function registered at Mistral level
+* Fixing published vars for parallel tasks (and join)
+* Limit WorkflowExecution.state_info size
+* Fixing YAQL in policies
+* Default workflow type to 'direct'
+* Fix wrong log task changing state
+* Fix mismatch to new YAQL syntax
+* Adjust standard actions and workflows
+* Changing YAQL syntax delimeters
+* Remove eventlet monkey patch in mistral __init__
+* Refactoring task output: renaming DB models for better consistency
+* Fix OS action client initialization
+* Expose stop_workflow in API
+* Add simple integration tests for OpenStack actions
+* Fix formatting endpoint urls in OS actions
+* Fixing a bug in logging logic and small refactoring
+* Refactoring task output: renaming 'output' to 'result' for task
+* Refactoring task output: adding ActionInvocation model
+* Task specification improvement(Part 2)
+* Add support for auth against keystone on https
+* Support ssl cert verification on outgoing https
+* Make spec object more readable in logging
+* Fix test_nova_actions after changes in tempest
+* Task specification improvement
+* Renaming _find_completed_tasks to _find_successful_tasks
+* Adding more tests for parallel tasks publishing
+* Fixing bug with context publishing of parallel tasks
+* Fix keystone actions
+* Fix tempest gate, add tempest import to our script
+* Fix the wrong project name in run_tests.sh usage
+* Track execution and task IDs in WF trace log
+* Changing InlineYAQLEvaluator: treat only {yaql} as YAQL
+* Fix H904 pep8 error
+* Refactoring inline parameters syntax
+* Add Rally jobs related files to Mistral
+
+2015.1.0b2
+----------
+
+* JavaScript action: part 2
+* Allowing multiple hosts for ssh action
+* Catch workflow errors
+* Rename environment to env in start_workflow
+* Fix action_context in with_items
+* Fix sequential tasks publishing the same variable
+* fix doc dsl v2
+* JavaScript action: part 1
+* Apply default to action inputs from environment
+* Add full support for YAQL expressions
+* Fixing a data flow bug with parallel tasks
+* Changing publishing mechanism to allow referencing context variables
+* Fix 500 error on wrong definition
+* Pass action error to results
+* Fixing problem with trust creation
+* Working on secure DB access (part 4)
+* Working on secure DB access (part 3)
+* Working on secure DB access (part 2)
+* Working on secure DB access (part 1)
+* Concurrency: part 2
+* Adding assertions for "updated_at" field in DB tests
+* Fix imports due to changes in tempest
+* Fixing environment tests
+* Concurrency: part 1
+* Change 'with-items' syntax
+* Add validation on 'with-items' input
+* Adding test on calculating multi-array input
+* Adding more tests for YAQL length() function
+* Implement workflow execution environment - part 3
+* Implement workflow execution environment - part 2
+* Implement workflow execution environment - part 1
+* Small: remove polluting debug log
+* Updating YAQL dependency to version 0.2.4
+* Update README file with devstack installation instruction
+* Small: refactor commands
+* Fix mistralclient initialization
+* Small fixes in default config
+* small tox fixes
+* Using 'with-items' instead of 'for-each'
+* Fixing README
+* Implementing "no-op" task
+* Updating SQLAlchemy dependency
+
+2015.1.0b1
+----------
+
+* Refacor resume algorithm
+* Implement pause-before
+* Fixing parsing inline syntax parameters
+* Fix retry policy unit test
+* Fixing a bug retry policy
+* Updates logging configuration samples
+* Changing target task property to singular form
+* Add region name to OpenStack client initialization
+* Fixing for-each
+* API controllers should log requests at INFO level
+* Add test case for dataflow to test action input
+* Refactor for-each
+* Style changes in launch.py
+* Testing wait policies defined in "task-defaults" for reverse worklfow
+* Testing timeout policy defined in "task-defaults" for reverse workflow
+* Testing retry policy defined in "task-defaults" for reverse workflow
+* Redesigning engine to move all remote calls from transactions
+* Working on "join": making "one" join value work (discriminator)
+* Working on "join": allowed value "one" for "join" property
+* Add docs on task-affinity and configuring MySQL
+* Working on "join": removing array type from "join" JSON schema
+* Working on "join": making "join" trigger only once
+* Working on "join": adding a test to verify that join triggers once
+* Working on "join": fixing "partial join" test new "noop" engine command
+* Working on "join": implementing partial join with numeric cardinality
+* Modified install docs
+* Fix creating triggers with the same pattern, wf and wf-input
+* Working on "join": added a test for numbered partial join
+* Refactor policies tests
+* Working on "join": making "full join" work with conditional transitions
+* Working on "join": making "full join" work with incoming errors
+* Adding "std.fail" action that always throws ActionException
+* Adding "std.noop" action (can be useful for testing)
+* Raise human-readable exception if workflow_name is not a dict
+* Working on "join": first basic implementation of full join
+* Working on "join": add "join" property into task specification
+* Working on "join": implement basic test for full join
+* Fix trace with wrong input for action
+* Fix Application context not found in tests
+* Add advanced tests on workflow-resume
+* Make able to resume workflow
+* Refactor API tests for v2
+* Fix creating std actions
+* Renaming trusts.py to security.py and adding method add_security_info
+* Refactoring workbooks service to be symmetric with other services
+* Use YAML text instead of JSON in HTTP body
+* Renaming "commands" to "cmds" in engine to avoid name conflicts
+* Refactor std.email action
+* Update README files
+* Sort executions and tasks by time
+* Add 'project_id' to Execution and Task
+* Fill 'wf_name' task_db field
+* Add cinder actions
+* Add possibility to pass variables from context to for-each
+* Implement for-each task property
+* Updating AUTHORS file
+* Refactoring getting one object from DB
+* Fix creating objects with the same names
+* Add API integration tests for actions
+
+0.1.1
+-----
+
+* Construct and pass action_context to action
+* Add passing auth info to std.http
+* Adding print out of server information into launch script
+* Adding method for authentication based on config keystone properties
+* Add functional API tests for cron-triggers
+* Docs fix - small structure fix
+* Add documentation - part 3
+* Add validating of 'for-each' task property DSL
+* Cut too long task result in log
+* Cleanup, refactoring and logging
+* Fixing condition in workflow service
+* Adding endpoint for cron triggers
+* Refactoring workflow and action services
+* Implementing cron cron trigger v2
+* Adding DB model and DB api methods for cron triggers
+* Provide workflow input via API
+* Add for-each to task spec
+* Now collections in the DB sorted by name
+* Create standard workflows and actions
+* Fixing order of commands and tasks in direct workflow
+* Fix task-defaults correct work
+* Removing saving raw action/workflow result under 'task.taskName'
+* Making YAQL function length() work for generators
+* Fixing a bug in inline expressions
+* Adding length() YAQL function
+* Whitelist binary 'rm' in tox.ini
+* Add adding target via YAQL
+* Add simple task affinity feature
+* Fixing dsl v2 unit test
+* Refactoring action service
+* Use keystonemiddleware in place of keystoneclient
+* Add generating parameters for openstack-actions
+* Provide action-input via API
+* Fix dataflow work
+* Add documentation - part 2
+* Add documentation - part 1
+* Update tearDown methods in API integration tests
+* Use $(COMMAND) instead of `COMMAND`
+* Making execution context immutable
+* Add workflow trace logging in engine v2
+* Fix scheduler test
+* Fix providing 'is_system' property in /actions
+* Fix tasks in order of execution
+* Stop using intersphinx
+* Style changes in Scheduler and its tests
+* Add script to run functional tests locally
+* Adding 'tags' to action rest resource
+* Modifying workflow and action services to save 'tags'
+* Adding 'tags' to workflow and action specs
+* Cleaning up obsolete TODOs and minor style changes
+* Update requirements due to global requirements (master)
+* Fix API tests for v2 version
+
+0.1
+---
+
+* Style changes in policies and commands
+* Fix race conditions in policies
+* Fix workbook and workflow models
+* Implementing policies in task-defaults property
+* Add timeout policy
+* Implementing 'task-defaults' workflow property
+* Cosmetic changes in actions service
+* Making action controller able to handler multiple actions
+* Making workflow endpoint able to upload multiple workflows
+* Fixing v2 workbooks controller not to deal with 'name'
+* Modifying workbook service to infer name and tags from definition
+* Adding 'name' to reverse_workflow.yaml workbook
+* Add workflow service module
+* Fix providing result (task-update API)
+* Add param 'name' to the test definition
+* Adding 'name' and 'tags' into workbook spec
+* Cosmetic changes in executions v2 controller and tests
+* Removing obsolete code related to ad-hoc actions
+* Renaming 'parameters' to 'input' everywhere
+* Cosmetic changes in Data Flow and commands
+* Fix passing params to execution
+* Fix dataflow work
+* Adding workflow parameters validation
+* Removing engine redundant parameter
+* Adding tests for order of engine instructions
+* Fixing db properties for testing purposes
+* Add API integration tests for v2
+* Trivial: improve ad-hoc action test
+* Fix input on execution create
+* Fixing task/workflow specs to do transformations with 'on-XXX' once
+* Fixing v2 specs so 'on-XXX' clauses return lists instead of dicts
+* Improving exceptions for OpenStack actions
+* Getting rid of explicit 'start-task' property in workflow DSL
+* Implementing workflow 'on-task-XXX' clauses
+* Fix wrong passing parameter 'workflow_input'
+* Fixing workflow specification to support 'on-task-XXX' clauses
+* Fixing workflow handlers to return all possible commands
+* Refactoring engine using abstraction of command
+* Delete explicit raising DBError from transaction
+* Fixing passing raw_result in v1
+* Register v2 API on keystone by default
+* Renaming 'stop_workflow' to 'pause_workflow'
+* Adding unit for tests engine instructions
+* Fixing task v2 specification
+* Fix run workflow in case task state == ERROR
+* Fixed retry-policy optional 'break-on' property
+* Fix workflow update API
+* Add mechanism for generation action parameters
+* Implement short syntax for passing base-parameters into adhoc-action
+* Changing all DSL keywords to lower case
+* Additional testing of reverse workflow
+* Pass output from task API to convey_task_result
+* Moving all API tests under 'mistral.tests.unit' package
+* Fixing workbook definition upload for v1
+* Add check on config file in sync_db script
+* Fixed Execution WSME model and to_dict()
+* Saving description from definition in actions endpoint
+* Fixing workflows controller to fill 'spec' property based on definition
+* Adding actions endpoint
+* Cosmetic changes
+* Fixing engine to support adhoc actions
+* Fixing workbook service to create actions
+* Implement wait-after policy and retry
+* Add test on passing expressions to parameters
+* Fixed Engine v2 work on fake RPC backend
+* Add posibillity to use different types in task parameters
+* Adding necessary DB API methods for actions
+* Creating ad-hoc actions engine test
+* Removing obsolete namespace related methods from task v2 spec
+* Fixing subworkflow resolution algorithm
+* Removing 'workflow_parameters' from workflow spec
+* Switching to using 'with db_api.transaction()'
+* Removing redundant parameters from methods of policies
+* Add 'description' field to specifications
+* Add serializers to scheduler call
+* Implement Wait-before policy
+* Refactoring engine to build and call task policies
+* Provide executor info about action
+* Create action_factory without access to DB
+* Delete code related to Namespaces
+* Change instruction how to start Mistral
+* Dividing get_action_class on two separate methods
+* Rename action_factory to action_manager
+* Modify action_factory to store actions in DB
+* Work toward Python 3.4 support and testing
+* Renaming 'on-finish' to 'on-complete' in task spec
+* Adding "wait-before" and "wait-after" to task policies
+* Fixing workflow spec to return start task spec instead its name
+* Including "policies" into task spec
+* Adjusting policy interfaces
+* Renaming 'workflow_parameters' to 'workflow-parameters'
+* Small optimizations and fixes
+* Fixing processing subworkflow result
+* Renaming 'class' to 'base' in action spec
+* Renaming 'start_task' to 'start-task' in workflow spec
+* Fix execution state ERROR if task_spec has on-finish
+* Additional changes in Delayed calls
+* Fixing services/workbooks.py to use create_or_update_workflow()
+* Implement REST API v2.0
+* Adding new methods to DB API v2 (load_xxx and create_or_update_xxx)
+* Adding unit tests for workflow DB model
+* Add service for delayed calls
+* Improving services/workbooks
+* Removing obsolete db.api.py module in favor of db.v1.api.py
+* Introducing 'workflow' as an individual entity
+* Removing 'Namespaces' section from DSL
+* Renaming 'linear' workflow to 'direct'
+* Implementing task execution infrastructure
+* Add two more tests which check workflow execution
+* Small updates to devstack integration
+* Adding transaction context manager function for db transactions
+* Fail workflow if any task fails
+* Fixing validation for action specifications ('output' property)
+* Working on linear workflow: on_task_result()
+* Working on linear workflow: start_workflow()
+* Working on engine implementation: on_task_result()
+* Renaming base class for Mistral DB models
+* Working on engine implementation: start_workflow()
+* Fix small issues in tests
+* Cosmetic changes in integration tests
+* Rename resource directory
+* Add integration test on Glance Action
+* Add test on Keystone Action
+* Add integration tests on nova actions
+* Add tests which check task dependencies
+* Move gate tests under mistral/tests
+* Add neutron actions
+* Small fixes in openstack-actions
+* Moving TaskResult and states to 'workflow' package
+* Adding implementation of method __repr__ for DB models
+* Working on reverse workflow: on_task_result()
+* Working on reverse workflow: implementing method start_workflow()
+* Replacing NotImplemented with NotImplementedError
+* Working on reverse workflow: fixing specification version injection
+* Unit tests for v2 DB model
+* Refactoring DB access layer
+* Implementing DSL specification v2 (partially)
+* Add heat actions
+* Add openstack actions
+* Switching from dicts to regular objects in DB API
+* Initial commit for the new engine
+* Fix mistral gate job
+* Replace oslo-incubator's db with standalone oslo.db
+* Move oslotest into test-requirements.txt
+* Calculate context for tasks with dependencies
+* Cleaning up index.rst file
+* The schedule triggers need to setup admin context before run
+* Add running mistralclient integrational tests
+* Make executor able to work in isolated environment
+* Add installation of mistralclient in devstack script
+* Make plugins easier to use
+* Update requirements due to global-requirements
+* Fixing Mistral HTTP action to take care of empty headers
+* Log action failures and exceptions
+
+0.0.4
+-----
+
+* Fixing wrong access to Mistral security context in engine
+* Make OpenStack related data available in actions
+* Add project_id to the workbook and filter by it
+* Make sure the context is correctly passed through the rpc
+* Add Executions and Tasks root API endpoints
+* Removing obsolete folder "scripts"
+* Remove redundant convey_task_results arguments
+* Remove redundant DB API arguments
+* 'requires' should take a string or list
+* Fix get task list of nonexistent execution
+* Favor addCleanup() over tearDown()
+* Make sure the api tests get a valid context
+* Fix Hacking rule H306 and H307
+* Fix hacking rule H236
+* Fix Hacking rule H302 (import only modules)
+* Expose Task's output and parameters through API
+* Make the service_type more consistent
+* Switch from unittest2 to oslotest(testtools)
+* Fix hacking rules H101 and E265
+* Temporarily disable the new hacking rules
+* Renaming all example config files from *.conf.example to *.conf.sample
+* Fixing obsolete file name in README.rst
+* Fix devstack gate
+* Add upload definition action in test
+* Do a better job of quietening the logs
+* All tests should call the base class setUp()
+* Move all tests to use base.BaseTest
+* Add OS_LOG_CAPTURE to testr.conf
+* Fix create execution when workbook does not exist
+* Fix getting action_spec in create tasks
+* Added information about automated tests
+* Refactor test_task_retry to not rely on start_task
+* Clean up configuration settings
+* Refactor test_engine to not rely on start_task
+* Fix update nonexistent task
+* Fix get execution list when workbook does not exist
+* Fix keystone config group for trust creation
+* fix mistral devstack scripts
+* Fix bug with getting nonexistent task
+* Fix duplicate keystone auth_token config options
+* Move tests to testr
+* Add negative functional tests
+* Add new tests for executions and tasks
+* Add lockutils to openstack/common
+* Implement new mistral tests
+* Remove unneccesary oslo modules
+* Making "Namespaces" section truly optional
+* Restore script update_env_deps in tools
+* Fix devstack integration scripts
+* Remove unused function get_state_by_http_status_code
+* Sync code with oslo-incubator
+* Small engine bugfixing/refactoring
+* Make field 'Namespaces' optional
+* Add support for plugin actions
+* Add autogenerated API documentation
+* Adding docstring for HTTPAction class
+* Renaming 'events' to 'triggers'
+* Adding more http standard action parameters
+* Fix H404  multi line docstring should start without a leading new line
+* Fix H233  Python 3.x incompatible use of print operator
+* Fix pep H301  one import per line
+* Fix pep H231  Python 3.x incompatible 'except x,y:' construct
+* Fix pep H402  one line docstring needs punctuation
+* Fix pep H201  no 'except:' at least use 'except Exception:'
+* Fix pep E226 missing whitespace around arithmetic operator
+* Add hacking to the flake8 tests
+* Add/Fix all error handling mechanism on REST API
+* Fix url in "get workbook definition" test
+* Cleanup exceptions and add http code
+* Throwing an error when workbook validation fails
+* Throw NotFoundException when object not found
+* Fix creating trust on workbook creation
+* Allow launch script to start any combination of servers
+* Fix 500 status code on DELETE request
+* Fix issue with tempest tests
+* Task.publish now is processed as arbitrary structure
+* Fix demo.yaml example in tempest tests
+* Add test on arbitrary output dict in action
+* Fix mistral tests
+* Update mistral tests
+* Context contains results of all previous tasks now
+
+0.0.2
+-----
+
+* Fixed issue with tarballs
+
+0.0.1
+-----
+
+* Refactor engine to use plugins
+* Fixes list of requirements
+* Fixes README.rst formatting
+* Making workflow trace logging more consistent
+* Added Devstack integration
+* Fixing setup.cfg
+* Fix work on MySQL backend
+* Replace rabbit config to 'default' section
+* Additional workflow trace logging in abstract_engine.py
+* Fixing wrong comparison in retry.py
+* Engine as a standalone process
+* Improved README file
+* Fix evaluating task parameters
+* Adding all conf files in etc/ to .gitignore
+* Fix broken retry tests
+* Remove etc/logging.conf
+* Add workflow logging
+* Fixing inline expressions evaluation
+* Making execution data available in data flow context
+* Fixing initialization of variable 'action_spec' in abstract_engine.py
+* Remove redundant update task operation
+* Fix convert params and result in AdHocAction
+* Adding parameters to adhoc action namespaces
+* Removing 'base_output' from ad-hoc actions specification
+* Temporarily commenting assertions in task retry tests
+* Temporarily commenting assertions in task retry tests
+* Fix result of HTTP action
+* Fix returning ERROR task state
+* Fixing http action and abstract engine
+* Moving expressions.py out of package 'engine'
+* Change repeater to retry on error
+* BP mistral-actions-design (raw action spec -> ActionSpec)
+* BP mistral-actions-design (removing old actions, addressing previous comments)
+* BP mistral-actions-design (add SSH action)
+* BP mistral-actions-design (switch to new design)
+* BP mistral-actions-design (ad-hoc actions in factory)
+* BP mistral-actions-design (ad-hoc action)
+* BP mistral-actions-design (Mistral HTTP action)
+* BP mistral-actions-design (action creation)
+* BP mistral-actions-design (add new actions package)
+* BP mistral-actions-design
+* Add SSH Action
+* Remove local engine
+* Fix repeatable task scheduling
+* Add resolving inline expressions
+* Cosmetic change
+* Fixed issue with deprecated exception
+* Fix minor issues
+* Fix keystone trust client
+* Add extracting action output
+* Refactor the local engine to use an in process executor
+* Implements: blueprint mistral-std-repeat-action
+* Correct fake action test name
+* Remove unneeded declarations in unit tests
+* Add keystone auth_token in context
+* Fix keystone config group name
+* Add script to allow update dependencies in all envs
+* Fixing ordering bugs in local engine tests
+* Fixing ordering bugs in workbook model and tests
+* Fixing executor launch script
+* Fix getting task on-* properties
+* Rename 'events' to 'triggers'
+* Implement new object-model specification
+* Use oslo.messaging for AMQP communications
+* Working on Data Flow (step 5)
+* Working on Data Flow (step 4)
+* Working on Data Flow (step 3)
+* Make engine configurable, make debugger show local variables
+* Partially fixed the pylint errors
+* Fix throwing exception when 'output' block is not defined
+* Fixed critical pylint warnings
+* Working on Data Flow (step 2)
+* Working on Data Flow (step 1)
+* Add scheduling specific task on sucess/error
+* Send email action, part 2
+* Rename "target_task" to "task"
+* Send email action, step 1
+* Add negative tests to api
+* Fixing access to task "parameters" property in DSL
+* Fix getting task on-* properties in DSL
+* Fix task keys properties in DSL parser
+* Add YAQL expression evaluation
+* Modified Rest action for process 'input' property
+* Add sync task execution
+* Fixing and refactoring authentication
+* Deleting client and demo app from main Mistral repo
+* Fixed issue with tarballs
+* Add integration tests
+* Divide RestAction on two separated actions in DSL
+* Add new access methods in DSL parser
+* Refactoring local and scalable engines
+* Adding Data Flow related code to REST API
+* Fixing typo in an exception message in Mistral client
+* Step 2 refactoring Mistral engines
+* Step 1 refactoring Mistral engines
+* Fix exceptions output when creating object in DB
+* Add SQLAlchemy in requirements.txt
+* Fix DB API import in scheduler.py
+* Implement single (non-scalable) engine
+* Fixing scheduler transactions
+* Fixing workbook events creation
+* Fixing flak8 excludes in tox.ini
+* Adjusting all license headers in python files so they look the same
+* Adding license and authors file
+* context creation in periodic task to execute workbook
+* Fix workbook POST duplicate exception
+* Add demo app for Mistral
+* Fix client for further patching
+* Added trust for workbook runs
+* Updating README.md file
+* Fixing scalable engine algorithm
+* Fixing scripts' headers to make them executable
+* Various fixes related to end-to-end testing
+* Fix resolving dependencies in workflow
+* Add explicit DB transaction management
+* Added context for application
+* Added keystone token authorization
+* Fix periodic tasks running over engine
+* Add engine related features
+* Implementing scalable Mistral Engine
+* Add DSL parser
+* Implementing Mistral Rest API Client
+* Add SQLAlchemy models and access methods
+* Connect DB implementation with DB interface
+* Added periodic events
+* Working on REST API
+* Added initial database setup
+* Adding REST API application skeleton based on pecan/wsme
+* Adding pecan, wsme, oslo and adjusting packages
+* Modify use case example
+* Fixing licence in setyp.py
+* Add example of using taskflow
+* Add .gitreview, setup.py and other infrastructure
+* Adding .gitignore
+* Adding virtual environment tools
+* Adjusting project name in readme file
+* Initial commit

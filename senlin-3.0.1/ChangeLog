@@ -1,0 +1,4011 @@
+CHANGES
+=======
+
+3.0.1
+-----
+
+* Fix availability_zone issues in nova driver
+* Add more db retry on action db API
+* Fix stack tagging bug
+* Updated from global requirements
+* Fix cluster_check cannot go to do_recover
+* Revise log in _chase_up
+* Fix health registry claim bug(2)
+* revise dumping event notifications
+* More release notes for the Ocata RC
+* Fixed inappropriate event generation in action base
+* Enable heat stack event listener
+* Add tags to newly created heat stacks
+* Fix node get bug in docker profile
+* Add support to REBOOT as a recovery action
+* Validating adjustment properties for scaling policy
+* User reference documentation for health policy
+* Revise params check when cluster update
+* User reference documentation for batch policy
+* User reference doc for scaling policy
+* Listener endpoint for Heat stack events
+* Fix update timeout field of cluster failed
+* Revise action_delete_by_target api
+* Fix health registry claim bug
+* Revise cluster action
+* Use 'get_service_context' in health manager
+
+3.0.0
+-----
+
+* Release notes for final RC of Ocata
+* Fix start checking  condition
+* Fix receiver reference documentation
+* Support 'enabled' in attach callback
+* Rename get_service_context to get_service_credentials
+* Fix node show detail image id error
+* Add db purge in senlin manage
+* User reference doc for deletion policy
+* User reference documentation for zone policy
+* User reference documentation for region policy
+* User reference documentation for LB policy (1)
+* Improve params check when resize
+* Revise  'cluster_check' RPC fail log
+* Tutorial for autoscaling
+* User reference for affinity policy
+* Use dynamic timer for cluster status polling
+* Update API-REF for the cluster-del-node  API
+* Fix node deletion logic
+* Fixing enabling order for OSProfiler plugins
+* Update UPPER_CONSTRAINTS_FILE for stable/ocata
+* Update .gitreview for stable/ocata
+
+3.0.0.0rc1
+----------
+
+* Move 'to_dict' to cluster object
+* Remove 'load_all' from cluster_policy module
+* Make room from heat event listener
+* Rename 'VM_LIFECYCLE_EVENTS' to 'LIFECYCLE_EVENTS'
+* Move 'to_dict' to node object
+* Driver for glance v2
+* Add 'server_create_image' operation for nova driver
+* Revise UUID field checking
+* Remove 'load_all' from profile/policy base
+* Ensure server zone is updated properly
+* Remove 'load_all' from receiver and action base
+* Decision to keep our copy of NonNegativeInteger
+* Remove unused notification_sample method
+* Add more nova server operations
+* Enforce context validation for profiles
+* Make rebuild an operation for nova server
+* Revise TODO list and FEATURE list based on meetup
+* Updated from global requirements
+* Ensure cluster recovery is triggered after polling
+
+3.0.0.0b3
+---------
+
+* Fix cluster health registry creating issue
+* Fix cluster health policy attach fail
+* Typo fix: exisiting => existing
+* revise tempest api test for policy 2
+* revise tempest api test for profile/policy types
+* revise tempest api test for node 2
+* revise tempest api test for events
+* revise tempest api test for policy 1
+* revise tempest api test for profile 2
+* Fix health check enable/disable problem
+* revise tempest api test for profile 1
+* Add 'enabled' column to health registry
+* revise versioned objects' exception message
+* Add developer doc for health policy
+* Return support status in policy type show
+* Fix typo in policy-type-list related code
+* revise tempest api test for node 1
+* Return support status in profile type show
+* revise tempest api test for cluster 5
+* Fix log issue in do cluster check action
+* Add floating ip operations to neutron driver
+* Promote unit test coverage for ClusterAction.do_recover
+* Updated from global requirements
+* Release notes backlog for ocata-3
+* Fix receiver create parameter checking
+* Perform action check when attach health policy
+* revise tempest api for cluster 4
+* Remove LB_STATUS_POLLING from health detection type
+* revise tempest api for cluster 3
+* Add security_group_find to neutron driver
+* Fix various problems in doc tree
+* revise tempest api for cluster 2
+* Add port_create/port_delete to neutron driver
+* unify exceptions' message
+* revise BadRequest exception message
+* Fix cluster-list failed of ResourceNotFound problem
+* Updated from global requirements
+* Fix _add_listener cannot get project
+* improve tempest api for action show
+* improve tempest test for action list
+* revise tempest api test for cluster policy
+* revise tempest api test for cluster-1
+* Replaced e.message with str(e)
+* Fix cluster-check cannot work problem
+* Revise health policy example
+* Fix user, project, domain columns in sqlalchemy
+* Updated from global requirements
+* Bump API micro-version to 1.5
+* Return support status in profile/policy type list
+* Revise Profile.from_object name
+* Revise workflow intergation spec with new recover design
+* Documentation on API changes
+* Add 'VERSIONS' to all profile/policy types
+* Trivial: add the missing comment in do_scale_in
+* Revise cluster action class names
+* Api support for "destroy_after_deletion" in cluster del nodes
+* Fix bug in ClusterAction._delete_nodes
+* Revise issue in do_del_nodes
+* Update api history.rst about destroy_after_deletion
+* Replace the definition about action cause in action with it in consts
+* Revise Log.Warning in leave operation
+* Revise history.rst format for rendering
+* Unit test for ClusterAction.do_update
+* Remove conditional "if child:" in _create_nodes
+* Explicitly state that 406 will be raised
+* API test for node-operation call
+* Fix operation handler invocation in node
+* Bump max micro-version for V1 API to 1.4
+* Revise navigation level of "6.3 Reviewing Patches"
+* Split API tests for node actions
+* API test for cluster-collect
+* Split API tests for cluster actions
+* Explicitly spell out cloud backend choices
+* Api-ref update for filter "user_id" in receiver list
+* Fix coverage test failed problem
+* Remove unnecessary coding format in files
+* Hook service clean up to lock breaker
+* Api support for filter "user_id" in receiver list
+* Revise webhook middleware
+* Engine support for filter "user_id" in receiver list
+* Objects support for filter "user_id" in receiver list
+* Enforce project_safe checking for admin users
+* Extend Senlin to support mistral workflow service
+* Remove NotificationAction field type
+* Updated from global requirements
+* Trivial: fix typos about stringify
+* DB API for cleaning mess left by dead engine
+* Split the unit tests for cluster_action
+* Use call to repleace call2
+* Remove call method in rpc client
+* Delete python bytecode file
+* Prepare for removing call method
+* Revise FEATURES pipeline
+* Some operations for container profile
+* Additional operations for docker driver
+* Add IntegerParam data type in schema
+* Remove the temporary flag "rpc_use_object" in config.py
+* Documentation for node-operation API
+* API layer support for node-operation
+* Exclude derived actions by default in events
+* Enable healthmgr related opts
+* Add validation to health policy
+* Trivial: Revise TODO comments
+* Improve event logging for x_OPERATION actions
+* Revise health policy to add action params
+* Add additional description to message config
+* API-REF for the cluster-operations API
+* Optimize notification to use its own transport
+* Fix sample health policy yaml files
+* Bumping the version of ClusterDelNodeRequest
+* Revise parameter description in config.py
+* Revise the event.rst
+* Trivial: modify the description of node op
+* Cover event dispatchers related opts in senlin.conf.sample
+* API layer support to cluster-operation API
+* Engine support to cluster-operation call
+* Action support to CLUSTER_OPERATION
+* Replace profile_type_xyz2 with profile_type_xyz
+* Replace profile_xyz2 with profile_xyz
+* revise event notification doc
+* Replace webhook_trigger2 with webhook_trigger
+* Use policy_* to replace policy_*2
+* Replace receiver_xyz2 with receiver_xyz
+* Request object for cluster-operation
+* Use event_* to replace event_*2
+* Use node_* to replace node_*2
+* Use cluster_* to replace cluster_*2
+* Use request_context to replace request_context2
+* API-REF documentation for profile-type-ops API
+* Replace credential_xyz2 with credential_xyz
+* Replace get-revision2 with get-revision
+* API support for profile_type_ops
+* User/developer doc for event dispatchers
+* Add parameter in CLUSTER_DEL_NODES action
+* Correct the key in test_action_base.py
+* Use action_* to replace action_*2
+* Improve the coverage of node updated_at
+* Improve error message for Json field validation
+* Trivial: remove two TODO items
+* Trivial: fix pep8 error in rally job plugin
+* Engine support to NODE_OPERATION
+* NODE_OPERATION action support
+* Node do_operation support
+* Improve Operation schema validation
+* add missing param about alarm create
+* Updated from global requirements
+* Add user and project support in action  parse
+* Trivial: Revise the parameter description in node_get2
+* Trivial: Revise the code annotation in cluster_collect2
+* Trivial: Revise the parameter description in cluster_scale_in2
+* Remove deadcode about request_context
+* Trivial: Revise the code annotation in cluster_add_nodes2
+* Add profile_type_ops RPC call
+* Trivial: Revise the parameter name of event_get2
+* Remove deadcode about get_revision
+* Revise the class GetRevisionRequest
+* Remove dead code about credential_update
+* Add ProfileTypeOpListRequest
+* Add request object for node operations
+* Versioned request and engine support for credential_update
+* Trivial: fix the error description in receiver_list2
+* Trivial: fix the error description in receiver_get2
+* Disable message notification by default
+* Updated from global requirements
+* fix typo in doc
+* Modify the description of profile validate
+* Trivial: fix the parameter description error in _validate_policy
+* Removes unnecessary utf-8 encoding
+* Make soft link _50_senlin.py from enabled folder
+* Reorg the documentation structure
+* use receiver_obj to load receiver objects
+* Api support for get-revision2
+* Add get-revision requests in object and service
+* use action_obj to load action objects
+* Remove dead code about credential_get
+* API support for credential_get2
+* use policy_obj to load policy objects
+* Versioned object and engine support for credential_get
+* Trivial:  Arrange the imported objects in alphabetical order
+* Fix typo in examples
+* rework profile-get2/list2
+* Fix Senlin tempest plugin
+* Remove '_get_host_cluster' method from docker profile
+* Remove 'get_specified_node' method from container
+* Add 'do_validate' to docker profile
+* revise node api (2)
+* Support to more nova server operations
+* revise node api (1)
+* revise action api
+* Fix usage of NotImplementedError
+* revise profile api
+* revise cluster-policy api
+* revise event API
+* revise receiver api
+* revise profile-types api
+* use util method to parse request object in policy_types
+* revise policy-api to use parse_request()
+* use util method to parse request obj
+* Updated from global requirements
+* Add checking exception in node-list2
+* Remove dead code about credential_create
+* API support for credential_create2
+* Add checking exception in action_create2
+* Ensure objects are registered in api process
+* Move event-find into object layer
+* Move action-find to object layer
+* Enhance the parameter check for "path"
+* Move receiver-find to object layer
+* Move policy_find to object layer
+* Move profile-find into object layer
+* Move 'node-find' to object layer
+* Move cluster-find to object layer
+* Updated from global requirements
+* Add configuration option for event logging
+* Release note for Ocata-2
+* Versioned request and engine support for credential_create
+* Add name none test for profile_update
+
+3.0.0.0b2
+---------
+
+* Remove some dead code in rpc client
+* Add http_proxy_to_wsgi to api-paste
+* handle exception when creating nova server
+* Remove useless decorator for _validate_policy
+* Set max_size to cfg.CONF.max_nodes_per_cluster if -1
+* rally jobs for cluster-scale-in
+* 'project_safe' is a required parameter
+* Fix node dependency handling in docker profile
+* Improve DB API for node dependency
+* Remove dead code about action-delete
+* Remove retry logic from lock_acquire
+* Lookup a random action to execute
+* Use util function in cluster API (4)
+* Use util function in cluster API (3)
+* Use util function in cluster API (2)
+* Use util function in cluster API (1)
+* Doc update for node replace
+* Utility function for API request conversion
+* Remove dead code about receiver-notify
+* API support for receiver_notify2
+* Engine support for receiver_notify2
+* remove dead code related to cluster-policy
+* remove dead code of cluster-policy-get2
+* api layer support cluster-policy-get2
+* Fix policy-update in engine layer
+* Fix profile-update caused name null
+* remove dead code of cluster-policy-list
+* api layer support cluster-policy-list2
+* engine service support cluster-policy-list2
+* engine service support cluster-policy-get2
+* fields obj support cluster-policy-get2
+* Remove dead code about node_create in engine layer
+* Add engine support for action_delete2
+* Request object for action-delete
+* Add engine support for action_create2
+* Add version map search to base object
+* Versioned request object for receiver_nofity
+* Augment request context with api microversion
+* Updated from global requirements
+* Fix implementation of docker profile deletion
+* Request object for action-create
+* fields obj support cluster-policy-list2
+* Fix object attributeError when node update
+* Add a TODO item for oslo.messaging version bump
+* kill dead code in engine service and rpc
+* api support webhook-trigger2
+* engine service support webhook-trigger2
+* Remove 'ProfileTypeNotMatch' exception type
+* Remove 'InvalidParameter' exception type
+* fields object support webhook trigger
+* Correct the installation doc, fix path of openrc
+* Move 'parse_bool_param' to api common
+* Remove 'validate_sort_params"
+* Replace 'parse_int_param' with 'get_positive_int'
+* Fix docker create class method
+* Fix profile create - call subclass methods
+* Temporarily disable failed receiver integration test
+* Rework profile_create call
+* Remove 'InvalidSchemaError' exception type
+* Replace 'SpecValidationFailed' with 'InvalidSpec'
+* Refactor exception types for schema/constraints
+* Chnage exception type for policy type not found
+* Get both event drivers into action
+* Change exception type for profile type not found
+* Rename 'status' parameter to 'phase' in db driver
+* Remove redundant parameters from event interface
+* Further simplify event module
+* Further simplify event dispatch interface
+* Add event dispatcher pluggin infrastructure
+* Updated from global requirements
+* Fix import method to follow community guideline
+* Rename node/cluster dependency key name
+* Remove dead code about receiver-delete
+* API support for receiver-delete2
+* Add a TODO item about test
+* Minor change on event code in action modules
+* Add consts definition for notification priority and phase
+* Remove request id TODO item
+* Trivial: revise class InternalError comment
+* Extract common logic into base class
+* Simplify database driver for notification/events
+* Fix event calls from action base
+* Tweak 'cluster' and 'node' member of actions
+* Remove event logging for action signal
+* Forbid deleting a cluster if it is referenced by container nodes
+* Forbid deleting vm nodes from a cluster which have containers running on
+* Minor tweak to Database event driver
+* Remove dead codes related to profile_type in rpc layer
+* Remove dead codes related to profile_create in engine layer
+* Remove dead codes related to profile_validate in engine layer
+* Message driver for event notification
+* Versioned notifications for node actions
+* Show team and repo badges on README
+* Updated from global requirements
+* Remove dead codes related to profile_type_get in engine layer
+* Remove dead codes related to profile_type_list in engine layer
+* Add/delete container node profile id to/from vm cluster 'dependents' property
+* Notification for cluster actions
+* Trivial: remove some redundant comment
+* Allow None to be passed for Exception payload
+* Add a hacking check rule
+* Update .gitignore
+* Revise status_reason when create container fail
+* API support for profile-create2
+* Engine support for profile-create2
+* Tweak base objects/fields for notification
+* Exception payload for error notification
+* New fields for versioned notification
+* Remove NotificationPayloadBase class
+* Registry support for notification classes
+* Fix devstack plugin setup
+* Updated from global requirements
+* Remove dead code about event get
+* Remove dead code about event-list
+* Fix nova resource leak
+* API support for profile_type_get2
+* Engine support for profile_type_get2
+* API support for profile_type_list2
+* Engine support for profile_type_list2
+* revise error in replace-nodes unit test
+* Modify the cli in doc of policy attach command
+* Versioned request objects for profile_type
+* Engine support for receiver_delete2
+* Versioned request object for receiver-delete
+* Remove dead code related to profile-delete in engine layer
+* Remove dead code related to profile-update in engine layer
+* Remove dead code related to profile-get in engine layer
+* Fix an error in integration test
+* Update host node 'dependents' when create/delete container node
+* API support for profile-validate2
+* Move notifications object down one level
+* revise error handling in cluster-delete
+* revise error handling in cluster-del-nodes
+* revise error handling in cluster-add-nodes
+* Api support for event_get2
+* Add engine support for event_get2
+* Add request object for event-get
+* revise error handling in replace_nodes
+* Revise event dump to use the DB driver
+* Support action project_safe in db layer
+* Add sort key "cluster_id" for event list
+* Remove dead code about action get
+* Revise action's raise catch
+* Remove dead code about action list
+* Api support for event_list2
+
+3.0.0.0b1
+---------
+
+* Add TODO item about referencing existing pool
+* Support sort key "oid" in event list
+* remove some useless rpc code
+* remove dead code about policy-type-list
+* api support policy-type-list2
+* Engine support for profile-validate2
+* Revise versioned object fields for profile-create2
+* Updated from global requirements
+* Add engine support for event_list2
+* Add request object for event-list
+* Revise the DB event dumper
+* Revise ex_lbas.yaml cannot be found
+* Update the cli in doc of policy command
+* API support for profile-get2
+* API support for profile-update2
+* Move event database driver out of engine
+* Remove unsupported sort key "user"
+* add batch policy spec
+* Remove unsupported sort key "priority"
+* remove dead code in rpc
+* Revise profile-validate2 object fields
+* Remove dead code related to profile list
+* APi support for profile-delete2
+* Engine support for profile-delete2
+* Engine support for profile-update2
+* Updated from global requirements
+* fix policy-list2 error
+* engine service support policy-type-list2
+* fields support policy-type-list2
+* Fix environment unit test
+* Move approved spec into the 'approved dir
+* API support for profile-list2
+* Engine support for profile-list2
+* Enable dummy (empty) objects
+* Engine support for profile-get2
+* Remove dead code about receiver_get2
+* Use receiver_get2 in webhook middleware
+* remove dead code about policy-type-get
+* api layer support policy-type-get2
+* Fix unit test for policy_validate
+* API support for receiver_get2
+* Engine support for receiver-get
+* engine service support policy-type-get2
+* Add toggle in devstack plugin to run senlin-api under Apache2
+* versioned obj support policy type get v2
+* Api support for action_get2
+* Add engine support for action_get2
+* Add request object for action-get
+* remove dead code of policy delete
+* remove dead code of policy create
+* api support policy- create2
+* engine service support policy create v2
+* Fix unstable test about policy_update
+* prepare for policy-create v2
+* Api support for action_list2
+* remove dead code in policy validate
+* api support policy validate v2
+* engine service support policy validate v2
+* fields support policy-validate2
+* Remove dead code about receiver list
+* API support for receiver_list2
+* A spec for generic event/notification support
+* Add support to have Senlin API run under Apache
+* Add engine support for action_list2
+* Revise TODO list
+* Add request object for action-list
+* Versioned request object for receiver get
+* Updated from global requirements
+* Versioned objects for profile request
+* api layer support policy delete v2
+* Replace oslo_utils.timeutils.isotime
+* Updated from global requirements
+* Remove container nodes information from dependents property of cluster
+* Replaces uuid.uuid4 with uuidutils.generate_uuid()
+* Move container spec to approved dir
+* Ensure /v1 endpoint returns proper version info
+* engine support policy delete v2
+* remove dead code in policy update
+* api support policy update v2
+* engine work prepare for policy update v2
+* Engine support for receiver_list2
+* Versioned request object for receiver list
+* Fix an error in API reference for receiver list
+* Remove some obsolete rpc client calls
+* Minor fix on node-create API
+* Remove dead code about receiver_create2
+* API support for receiver_create2
+* Engine support for receiver_create2
+* remove dead code in policy get
+* api support policy get v2
+* engine support policy get v2
+* remove dead code in policy list
+* Versioned request object for receiver create
+* Further remove some useless RPC client code
+* Remove dead code when migrating to cluster-delete v2
+* API layer rework for cluster-delete
+* Object and engine prep for cluster-delete v2
+* api support policy list v2
+* Updated from global requirements
+* engine prepare for policy list v2
+* Fix order in updating lock table and action table
+* support versioned resource for policy
+* Remove dead code about node check/recover
+* Remove dead code after migrating cluster-collect
+* API support for node_check2 and node_receove2
+* API support to cluster-collect v2
+* Engine support to cluster-collect v2
+* Versioned object for cluster-collect request
+* Fix an error in API reference for receiver create
+* Split action name definition for cluster and node
+* Remove dead engine code about replace nodes
+* API support to cluster-replace-nodes v2
+* Engine layer cluster-replace-nodes v2
+* Request object for replace nodes request
+* Engine support for node_check2 and node_recover2
+* Verioned req object for node check/recover
+* Add UniqueDict field type
+* Remove dead code about node-delete
+* API support for node_delete2
+* Versioned req object and engine support for node delete
+* Add filters "policy_name" and "policy_type" for policy binding list
+* Remove some dead code in rpc client
+* Remove dead code about cluster check/recover
+* Updated from global requirements
+* Tune health manager to use new RPC
+* API layer support to cluster check/recover v2
+* Engine support to objectified cluster check/recover
+* Versioned objects for check/recover requests
+* remove dead code in node action layer
+* Kill dead code wrt cluster policy detach/update
+* check size constraint in cluster action layer
+* API layer objectified policy detach and update
+* Engine support for policy update/detach
+* Request object for policy update and detach
+* Remove dead engine code wrt cluster policy attach
+* API layer support for cluster-policy-attach2
+* Integration test for message receiver
+* Engine layer cluster-policy-attach2
+* Request object for cluster policy attach operation
+* Remove dead code about node update
+* API support for node_update2
+* Engine support for node_update2
+* Remove engine dead code related to scaling
+* API support for cluster scale v2
+* Engine support for cluster scale in/out v2
+* Objects for scaling requests
+* Add request objects for node update
+* cluster delete action handler for batch policy
+* Rename request object classes for cluster/node list
+* Minor revise clustering_client for tempest test
+* Add Zaqar messaging client for tempest integration test
+* batch policy support "cluster delete"
+* Fix status_reson when active nodes equal to desired
+* Add a bandit environment to tox
+* Clean DETECTION_TYPES definition in health_policy module
+* Clean action name definition in cluster and node modules
+* Clean cluster status definition in cluster module
+* Revise cluster_policy_get_by_type
+* Minor revise normalize_req
+* Add cluster_policy_get_by_name to db api
+* Updated from global requirements
+* Add unit test in test_cluster_update_cluster_bad_status
+* Remove dead code about node get
+* API support for node_get2
+* Request object and engine support for node_get
+* Add "policy_type" and "policy_name" to CLUSTER_POLICY_ATTRS
+* Remove dead code about node-list
+* API support for node_list2
+* Add engine support for node_list2
+* Add request object for node-list
+* Modify node status const using
+* Remove redundant parameter comment
+* Add developer doc for osprofiler
+* Standardize log translation
+* Clean node status definition in node module
+* Remove get_session
+* Add NODE_STATUSES definition into consts
+* Use 'openstack' command-client to replace 'senlin receiver-create'
+* Remove dead code about node_create
+* log.exception should use _LE of i18n
+* Add API support for node_create2
+* Add engine support for node_create2
+* functional test for batch policy
+* action handler support batch policy
+* Request object for node-create
+* Remove dead code related to cluster resize
+* API support for cluster-resize2
+* Use openstack command-client to replace some deprecated senlin commands
+* Updated from global requirements
+* Revise cluster.rt to rt
+* Add request/response sample for policy validate API doc
+* Tune enum fields for validation
+* Add request/response sample for profile validate API doc
+* Configure Zaqar options in devstack plugin
+* Engine support for cluster-resize2
+* Add missed requirement of keystoneauth1
+* Stricter validation for cluster-create
+* Updated from global requirements
+* Support batch policy
+* Request object for cluster-resize
+* Add 'Boolean' and 'AdjustmentType' fields
+* Remove dead code for cluster-del-nodes
+* API support for cluster-del-nodes2
+* Engine support for cluster-del-nodes2
+* Object for cluster-del-nodes request
+* Remove dead code from engine
+* Remove dead code from api layer
+* Switching to objectified RPC
+* Address a TODO in message receiver
+* Fix engine and engine test cases
+* Fix cluster list checking
+* Trivial: fix a comment typo in engine service
+* Stricter object fields checking
+* Validation when cluster create missing cluster key
+* API support to cluster-add-nodes2
+* Engine support for cluster-add-nodes2
+* ClusterAddNodes request object
+* Add IdentityList field type
+* Api Ref of cluster replace nodes
+* API support for cluster-update2
+* Updated from global requirements
+* Engine support for cluster-update2
+* Versioned object for cluster update request
+* API support to cluster_get2
+* Engine support to cluster_get2
+* Add ClusterGetRequest object
+* API and functional test for node replace
+* Integrate osprofiler into Senlin
+* Add developer doc for message receiver
+* API cluster-list2
+* Add user doc for message receiver
+* Some guidelines for code reviews
+* Support api microversion for tempest API test
+* Add 'jsonschema' to required packages
+* Engine support to cluster_list2
+* Engine service cluster_list2
+* Change max api version
+* Updated from global requirements
+* Updated from global requirements
+* Revise lb_policy version
+* Add ClusterListRequestBody to objects
+* Add Sort field as versioned object
+* Add cluster.rt[nodes] type unit test
+* desired_capacity default value to min_size default value
+* Revise node-list in engine layer
+* Fix typos in glossary.rst & profiles.rst
+* Reworked cluster-create API
+* Tweak name field
+* Prepare engine for object deserialization
+* Util function for normalizing requests
+* Tweak object base classes for serialization
+* Add RPC call for passing object as parameters
+* API support node replace
+* Add config option 'rpc_use_object'
+* Prepare engine and client for object parameters
+* Engine service cluster request v2
+* Add Capacity/CapacityField to senlin objects
+* Add missing 'timeout' field to cluster create
+* Fix some pep8 errors
+* Enforce max_nodes_per_cluster in check_size_params
+* Fix miscalculation of desired_capacity
+* Set workers min=0
+* Correct desired when create node with cluster_id
+* Fix the incorrect version and release details
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* Fix typo in comment
+* Revision to TODO list
+* More unit tests for schema module
+* More unit tests for schema module
+* Stop adding ServiceAvailable group option
+* Fix typos in parameters.yaml
+* More unit tests for schema module
+* Updated from global requirements
+* Schema unit tests
+* Display symbolic levels instead of numbers in event list
+* Fix action context usage in message receiver
+* Fix typos in parameters.yaml
+* Fix message receiver
+* Fix incorrect order of params of assertEqual()
+
+2.0.0
+-----
+
+* Release notes for newton RC2
+* Quick fix on message receiver
+* Implement receiver notification handling
+* Updated from global requirements
+* Unit test for Json get_schema
+* Add doc about cloud_backend
+* Removed redundant 'the'
+* Fix typos in context.py&clusters.rst
+* Add Apache 2.0 license to source file
+* Updated from global requirements
+* Avoid Forcing the Translation of Translatable Variables
+* Modify minor problem in service.py
+* Fix some typos
+* Using assertTrue() instead of assertEqual(True)
+* Fix service manage cleanup
+* Versioned object for cluster create request
+* Update description for filters and sort
+* Address a TODO item in integration test
+* Fix typo in docstrings
+* Fix typo in docstrings
+* Fix typo
+* Add Name and NameField support
+* Creating new keypair for integration test
+* Revise the bindings.rst
+* change cb to cm
+* Add to_json_schema support to Object fields
+* Revise the clusters.rst
+* Specifying proper subscription ttl
+* Revise the actions.rst
+* Fix CONF.set_override for type enforcement
+* Fix integration test
+* Fix the valid keys for filtering event list in doc
+* Support template_url for heat profile
+* Add missing ":command:" markup for the command
+* Fix error in user/action.rst
+* Fix evnet-list show
+* Updated from global requirements
+* revise the "cluster-policy-attach"
+* Use constant instead of 'STRING'
+* Fix handling of ResourceNotFound that is not thrown
+* Translate error-level log messages for LOG.error
+* Correct reraising of exception
+* Cleanse zaqar driver for functions unused
+* Revise TODO.rst
+* Add new config option for Zaqar queue
+* Define new config options for receiver notification
+* Use new min_size/max_size when eval cluster status
+* Fix FEATURES.rst error
+* Fix cluster_check from health manage
+* Fix error in registry.py
+* Fix error in tutorial/receivers.rst
+* Fix user/policy_types.rst error
+* Revise schema _validate_version
+* Replace 'MagicMock' with 'Mock'
+* Fix typos in api-ref/source/policies.inc
+* modify profile_update
+* Correct driver calls in affinity policy
+* Cleanse nova driver for unused calls
+* Clean neutron driver interface for unused calls
+* Remove unuse keystone interface functions
+* Move is_engine_dead test to common utils
+* Fix capacity calculation in scaling actions
+* Tweak CLUSTER_DEL_NODES for base capacity
+* Tweak CLUSTER_ADD_NODE action for capacity update
+* Updated from global requirements
+* fix typos in TODO.rst
+* Fix a typo in template.rst
+* Fix typos in scaling_policy.py & service.py
+* Fix error in authorization.rst
+* Fix error in deletion_v1.rst
+* Service support node replace
+* Delete engine from db when stop engine
+* fix typos in doc
+* Remove a finished TODO in comment
+* Fix a typo in utils.py
+* Fix nova_v2 test driver
+* Use new desired when eval cluster status
+* Fix error in actions.rst
+* Fix error in template.rst
+* Fix error in container-cluster
+* Remove unnecessary setUp
+* Rework NODE_LEAVE action logic
+* Modify test_service_manage_report_cleanup
+* Fix error in FEATURES.rst
+* Fix error in status.yaml
+* Fix misspelling in parameters.yaml
+* Fix error in actions.inc
+* Rework NODE_JOIN logic
+* Fix error in conf.py
+* Rework NODE_DELETE action logic
+* Rework NODE_CREATE action logic
+* API and engine support for receiver notifying
+* Support cluster replace action
+* Select roles for trust building
+* Fix error in senlin-manage.rst
+* Fix some typos in doc
+* Fix error in receivers.rst
+* Fix error in policies.rst
+* Remove is_admin judge in xyz_get_all at db layer
+* Enable senlin policy for dashboard via devstack installation
+* Rebase deletion policy on real capacity
+* Rebase LB policy on real capacity of cluster
+* Rebase affinity policy on real capacity of clusters
+* Enable health policy to base on real capacity
+* Add a unit test for deletion policy
+* Have zone policy based on real capacity
+* Have region policy to base on current capacity
+* Have RESIZE based on real capacity
+* Enable parse_resize_params to handle current capacity
+* Rebase RESIZE operation on actual capacity
+* Allow node count api to carry filters
+* Fix error in membership.rst
+* Fix error in clusters.rst
+* Fix error in glossary.rst
+* Update XyzNotFound to ResourceNotFound
+* Remove ClusterBusy exception
+* Refact ResourceInUse exception
+* Unit test for policy load with db object
+* Fix  specs/container-cluster.rst error
+* Update reno for stable/newton
+
+2.0.0.0rc1
+----------
+
+* Release notes for RC1 release
+* Remove block_device_mapping property
+* Fix typo 'duplcate' to 'duplicate'
+* Fix various properties of nova server profile
+* Fix docs for node and cluster
+* profile "type_name" synchronize with code
+* Fix error in authorization.rst
+* fix typo in doc
+* Fix error in zone_v1.rst
+* Fix user/Nodes.rst error
+* Remove PROFILE_METADATA in profile_list filter_whitelist
+* Fix error in region_v1.rst
+* Fix user/bindings.rst synchronize with code
+* Synchronize user/profiles.rst with code
+* Fix user/clusters.rst error
+* Fix error in loadbalance_v1.rst
+* Fix error in deletion_v1.rst
+* Fix error in action.rst
+* Rework nova server update logic
+* Unit tests for password checking/update
+* Rework _delete_interfaces and unit tests
+* Fix error in policy_type.rst
+* Add exception handling to _add_interfaces
+* Rework network validation logic for nova server
+* Optimize EResourceOperation
+* Rework network update logic for nova server
+* Tweak network update for nova server
+* Update class `ResourceInUse`
+* Refine flavor validation
+* Updated from global requirements
+* Rework name checking and updating
+* TrivialFix: Remove cfg import unused
+* Rework _update_image logic for nova server profile
+* [api-ref] Re-allocation response example
+* remove ProfileInUse
+* Fix error in profile_type.rst
+* Use scenario for image and keypair unit tests
+* Use scenario for az and flavor validation test
+* Revise feature items
+* Split nova server profile unit tests
+* Tweak exception handling for server update
+* [api-ref] Correct parameter's type
+* Build trust for receiver creation
+* Delete dependencies when deleting a node or cluster
+* Tweak not found exception handling
+* Fix unit test for nova server network validation
+* Improve network resolving for nova server
+* Improve get_details for heat stack profile
+* [api-ref] Update version response table
+* Guard against nova exception when creating server
+* Rename 'keypair_get_by_name' to 'keypair_find'
+* [api-ref] Add 'Show All' button
+* Add 'dependents' property to cluster
+* Grammatical mistake  in node.rst
+* Misspelling in cluster.rst
+* Guard against driver error for nova validation
+* [api-ref] Remove parameters unused
+* Rework rally test jobs
+* Handle exceptions of docker driver
+* Fix receiver create
+* Store node relationship into 'dependents'
+* Don't import unused logging
+* [api-ref] Correcting parameter's types
+* Fix API history doc
+* Modify parameters' type
+* Misspelling in the comment of cluster and node
+* cluster-check results the status error
+* Refactor CLUSTER_RESIZE handler
+* Refactor container profile for driver calls
+* Refactor heat stack profile driver calls
+* Refactor nova server profile for driver calls
+* Refactor LB policy for driver calls
+* Add dependents column to node  and cluster tables
+* Updated from global requirements
+* Refactor region placement policy
+* Refactor zone placement policy
+* Refactor affinity policy
+
+2.0.0.0b3
+---------
+
+* Trim container id to a suitable size
+* Some more release notes for newton-3
+* Use openstack client in profile examples readme file uniformly
+* Fix container profile samples and README file
+* Remove unused LOG and CONF
+* EResourceOperation code comments need modify
+* Enable node filtering to filter nodes not created
+* Validation for zone placement policy
+* Validation for region placement policy
+* Updated from global requirements
+* Change type of X-Openstack-Request-Id
+* Config logABug feature for Senlin api-ref
+* Release notes for newton-3
+* Add host_cluster support in container profile
+* Protect cluster from being deleted when appropriate
+* Protect node from being deleted when necessary
+* Fix SDK log output setting
+* Spec validation for LB policy
+* Fix 'load banlancer' in i18n strings
+* Mask unimplemented properties for health policy
+* Fix cluster timestamp setting
+* Fix cluster status update for SCALE_IN
+* Fix cluster status update during SCALE_OUT
+* Fix cluster status setting when RESIZE
+* Fix cluster status update after CHECK/RECOVER
+* Initial work for message type of receiver
+* Fix cluster status update after CLUSTER_DELETE
+* Fix cluster status update after CLUSTER_CREATE
+* Fix formatting strings when using multiple variables
+* Fix cluster status update after CLUSTER_UPDATE
+* Profile validation for nova server
+* Revise sanity check for receiver creating
+* Policy validation - affinity polcy
+* Rework policy validation invocation
+* Fix some bugs for container creation
+* Rework _build_conn_params for policies
+* Fix coverage test script
+* Fix operation passing for cluster/node recover
+* Fix exception handling in server check
+* Fix oslo.i18n in senlin project
+* Fix exception handling in nova server recover
+* Fix exception handling in node_recover
+* Enable health policy to skip more actions
+* Fix using filter() to meet python2,3
+* Add negative API tests for policy validation
+* Add API tests for policy validation
+* Minor tweak webhook receiver
+* api-ref doc for policy validation
+* Add API tests for profile validation
+* Add negative API tests for profile validation
+* Add API tests for profile validation
+* Always change desired_capacity for node_delete
+* Adjust desired_capacity updating in NODE_CREATE action
+* api-ref doc for profile validation
+* Clean imports in code
+* Tweak cluster recover workflow
+* Health policy support to CLUSTER_RESIZE
+* Update api-ref configuration
+* Fix reraise issue
+* Add version support to schema and spec
+* Updated from global requirements
+* Rework receiver delete
+* Fix policy command example
+* Fix api version mismatch return code
+* Fix docs about autoscaling
+* TrivialFix: Remove logging import usused
+* Updated from global requirements
+* api-ref: OpenStack-Request-Id and location
+* Faithful dump nova server addresses property
+* Revise tools/setup-service to make it work with keystone v3
+* A spec for container cluster service
+* Some new typos need to be fixed
+* Add eval_status operation to cluster
+* Release note for Zaqar resource support
+* Updated from global requirements
+* Remove 'description' from Action class
+* Imported Translations from Zanata
+* Enable health policy to handle CLUSTER_SCALE_IN
+* Close health manager loop
+* Improve server metadata format
+* Reorganize receivers directory
+* Add new api for policy validation
+* Add policy_validate function to engine
+* Fix do_validate in heat profile
+* Add new api for profile validation
+* Remove usage of mox/mox3
+* Get ready for os-api-ref sphinx theme change
+* py3:Remove six.iteritems/iterkeys
+* Fix nova_v2 fake driver
+* Fix stack status wait
+* Remove garbage parameters at db layer
+* Fix DB setup for unit tests
+* Fix node join behavior
+* Support Fencing by Health Policy and Cluster Action
+* Make server delete operation back compatible
+* Add zaqar v2 driver interfaces for claim resource
+* Allow health check to be enabled/disabled
+* Fix health manager initialization
+* Fix service filtering when claiming clusters
+* Add function to perform profile validation
+* Fix service list status report
+* Fix endpoint href for v1 api
+* Add unit tests for _update_flavor
+* Updated from global requirements
+* Rework version negotiation
+* Prepare v1 controller for version negotiation
+* Throw and catch EResourceDeletion properly
+* Move profile validation logic into a function
+* Optimize version negotiation
+* Throw and catch EResourceUpdate properly
+* Fix object serialization about metadata
+* Refactor version negotiation middleware
+* Throw and handle EResourceCreation properly
+* Rework constructor of InternalError exception
+* Fix api-ref for version related samples
+* Replication version info into v1
+* Rename ResourceUpdateFailure and ResourceDeletion Failure
+* Rename ResourceCreationFailure
+* Rename 'ResourceBusyError' to 'EResourceBusy'
+* Add a 'help' link into version list response
+* Use constraints in tox.ini
+* Trivial: Fix some typos in testing dev doc
+* Fix stack profile waiting operation
+* Add 'stack_check' operation to heat driver
+* Add zaqar v2 driver for subscription resource
+* Add status code tables to api-ref doc
+* Add fencing support into Driver and Profile
+* Fix redundancy api-ref index
+* Fix cluster-collect API documentation
+* Developer doc for testing
+* Add Apple OS X ".DS_Store" to ".gitignore" file
+* Updated from global requirements
+* Fix unit tests for stack profile
+* Use SDK status wait when creating stacks
+* Fix some typos in the doc
+* Improve api-ref docs generation
+* Updated from global requirements
+* Minior revise pre/post_test_hook
+* Add wait_for_stack call to heat driver
+* Refactor rally plugin
+* Fix some typos in the files
+* Correct the installation doc
+* Updated from global requirements
+* Add get_schema() method to Json field type
+* Implement two operations for nova server profile
+* Update topic name to listen versioned notices of nova
+* Add 'reboot' and 'change_password' ops for nova server
+* Template for specs
+* Remove TODO item related to node-create/delete
+* Documentation for Aodh Scaling Scenario
+* Zaqar v2 driver for message resource
+* Remove discover from test-requirements
+* Fix tox.ini for docs venv
+* command in doc is incorrect
+* Move some config options into senlin_api group
+* User scenario documentation for autoscaling (1)
+* Updated from global requirements
+* Doc for affinity and affinity policy
+* Tutorial doc code is out of date
+* Make lb timeout configurable
+* Documentation for builtin policies
+* Integration test for heat stack cluster
+* Integration test for nova server cluster
+* Revise affinity policy doc for developer
+* Revise zone placement policy doc for developer
+* Revise region placement policy doc for developer
+* Revise LB policy doc for developer
+* Revise deletion policy doc for developer
+* Fix affinity policy for node create
+* Use assertEqual() instead of assertDictEqual()
+* Add some release notes about recent changes
+* Initial work for integration test
+* Typo!
+* [Trivial] Remove executable privilege of doc/source/conf.py
+* Update the home-page info with the developer documentation
+* Add hacking check to ensure LOG.warn is not used
+* Add docs for configuration options
+* Consolidate configuration options
+* Make sure service password not leaked into logs
+* Fix listener setup in health manager
+* Enable zone placement to handle NODE_CREATE
+* Enable region policy to handle NODE_CREATE
+* Enable LB policy to handle NODE_CREATE
+* Enable affinity policy to handle NODE_CREATE
+* Fix docstring for affinity policy
+* Make NODE_DELETE operation respect grace_period
+* Improve coverage test
+* Fix test cases for orphan node operations
+* Enable LB policy to handle NODE_DELETE
+* Updated from global requirements
+* Refactor lbaas driver
+* Add 'NODE_DELETE' support to deletion policy
+* Updated from global requirements
+* TODO Item for integration with Glare
+* TODO: Add OSProfiler support
+* Fix node action execution logic
+* Fix coverage test
+* Introduce microversion-parse package
+* Fix the typo in the files
+* Trivial: use stripped path when doing collect
+* Spelling errors need to be fixed
+* Fix some spelling mistakes in the files
+* The typo in the file need to be fixed
+* Simplify context tests to senlin only attributes
+* Change "senlin profile-create" to "openstack cluster profile create"
+* Updated from global requirements
+* Replace deprecated LOG.warn with LOG.warning
+* Add a TODO item about documentation
+* Add some release notes for some important patches
+* Prepare context tests for new to_dict() attributes
+
+2.0.0.0b2
+---------
+
+* Cleanup i18n marker functions to match Oslo docs
+* Add Python 3.5 classifier and venv
+* Revert "Add debug information for engine workflow"
+* Fix delete API of profile/policy/receiver resources
+* Fix lb healthmonitor delay/timeout unit
+* Add driver for Zaqar v2 API
+* Fix context comparison problem
+* Minor typo fixes and grammar adjustments
+* Revise nova server profile spec example
+* Updated from global requirements
+* Imported Translations from Zanata
+* Updated from global requirements
+* Twist the Tutorial for composition of ceilometer, Aodh, and Gnocchi
+* Define api test in tox.ini
+* Updated from global requirements
+* Remove deprecated functional test code
+* Imported Translations from Zanata
+* Add tempest functional test for cluster resize
+* Release note for tempest functional test
+* Add tempest functional test for webhook receiver
+* Add tempest functional test for lb policy
+* Add tempest functional test for scaling policy
+* Add missing negative tempest API test cases
+* Fix cluster-resize API
+* Add Container create/delete driver
+* Add tempest functional test for cluster scale in/out
+* Add tempest functional test for node basic operations
+* Don't create network during API and functional tests
+* Updated from global requirements
+* Rework some util functions for tempest test
+* Add tempest functional test for cluster membership
+* Add tempest functional test for basic cluster operations
+* Fix cluster next_index updating
+* Make tempest utils available for both api and functional tests
+* Initial work for tempest functional test
+* Updated from global requirements
+* Add debug information for engine workflow
+* Fix NoSuchOptError when using senlin-manage service list
+* Fix oslo.config.opts in setup.cfg
+* Releasenote for tempest API test
+* Relocate openstack_test driver
+* Add negative tempest API test for cluster check/recover
+* Add negative tempest API test for cluster-policy-update
+* Add negative tempest API test for cluster policy attach/detach
+* API layer support for cluster-collect
+* Add negative tempest API test for cluster-del-nodes
+* Add negative tempest API test for cluster-add-nodes
+* Add negative tempest API test for cluster scale in/out
+* Add fake heat_v1 driver
+* Add unittest for node recover with unsupported operations
+* Add negative tempest API test for cluster resize
+* Common negative tempset API test for cluster action
+* Add rally plugin for cluster-size
+* RPC support for cluster-collect
+* Updated from global requirements
+* Add API test for cluster policy_update action
+* Add API test for cluster policy_detach action
+* Add API test for cluster policy_attach action
+* Add API  test for cluster recover action
+* Add API test for cluster check action
+* Add API test for cluster del_nodes action
+* Fix usage of NotImplemented
+* Add API test for cluster add_nodes action
+* Engine level cluster-collect call
+* Util function for parsing JsonPath
+* Remove an unnecessary log info
+* Imported Translations from Zanata
+* Add negative tempset API test for node actions
+* Add negative tempset API test for api-version
+* Updated from global requirements
+* Fix some errors in API doc
+* Add negative tempset API test for resource delete
+* Add two negative tempest API tests for cluster_policy
+* Add negative tempest API test for receiver create
+* Updated from global requirements
+* Add negative tempest API test for profile create
+* Add negative tempest API test for policy-create
+* Minor fix for action/event API doc
+* Add negative tempest API test for cluster_policy show
+* Add API test for node recover action
+* Fix cluster-policies list API
+* Reorg cluster_polcy related tempest API test
+* Add negative tempest API test for all resource list APIs
+* Fix an error in action API doc
+* Add first rally-gate job for Senlin
+* Add a db_api interface for deleting actions
+* Remove event config option and fix prune api
+* Add API test for cluster scale_in action
+* Add API test for cluster scale_out action
+* Revise cluster resize test
+* Add negative tempest API test for profile/policy update
+* Minor revise cluster_update and profile_update
+* Minor revise profile_update API
+* Initialize docker driver
+* Replace 'format_time' with 'isotime'
+* Add basic schema support for profile operations
+* Add negative tempest API test for node update
+* Improve DB sorting
+* Remove 'readonly' from property schema definition
+* Add negative tempest API test for cluster update
+* Add negative tempest API test for resource show
+* Minor tweak negative tempest API test
+* Revise some neutron_v2 driver interfaces
+* Initial framework for health manager listener
+* Updated from global requirements
+* Add negative tempest API test for cluster create
+* Add negative tempest API test for node create
+* Add negative tempest API test for resource get
+
+2.0.0.0b1
+---------
+
+* Release notes for newton-1
+* Add negative tempest API test for delete notfound
+* Fix nova_v2 driver
+* Unify the naming of tempest API test cases
+* Fix typo in tutorial about removing node
+* Minor tweak versioned object implementation
+* Remove duplicated logic about oslo notifier
+* Fix TZAwareDateTime
+* Optimize unit tests
+* Unit tests for versioned notification
+* Simplify ovo fields/base import
+* RPC notifier infra
+* Add Json comparison method for test case
+* Updated from global requirements
+* Unit test for objects fields
+* Fix event unit test
+* Fix policy unit test
+* Fix scaling policy unit test
+* Fix receiver unit tests
+* Fix engine service unit test
+* Fix unit tests for action module
+* Revise cluster and cluster_policy unit test
+* Tune node unit test
+* Fix a tiny defect of API ref
+* Improvement to oslo.versionedobject support
+* Updated from global requirements
+* Rename event table columns
+* Updated from global requirements
+* Add 'host_node' and 'host_cluster' properties to container profile
+* Rework tempest policy functions into utils
+* Rework node utility functions in tempest
+* Fix tempest runs
+* Revise receiver util function calls
+* Remove 'get_test_cluster' function
+* Make create_a_cluster return a UUID
+* Further tune the tempest api tests
+* Further tune tempest api tests
+* Further tune tempest api tests
+* Move test cluster creation into a util module
+* [trivial] Tune tox.ini
+* Move build info api test to its own directory
+* Add negative tempest API test for cluster_delete
+* Minor revise cluster_delete engine service call
+* ovo - switch action calls
+* ovo - swith cluster-policy calls
+* ovo - switch cluster calls
+* ovo - switch credential calls
+* ovo - switch dependency calls
+* ovo - switch event calls
+* Add tempest test for API event show
+* ovo - switch health registry calls
+* Updated from global requirements
+* ovo - switch cluster lock and node lock calls
+* ovo - switch node calls
+* ovo - switch receiver calls
+* ovo - switch policy calls
+* ovo - switch profile calls
+* ovo - switch service calls
+* Add negative tempest API test for http conflict cases
+* Fix links to API reference docs
+* Fix typos in tempest API tests for profile_delete
+* Fix senlin-dashboard install
+* Updated from global requirements
+* Tune health manager module
+* versioned object -- credential
+* versioned object -- service
+* versioned object -- event
+* versioned object -- action
+* versioned object -- receiver
+* versioned object -- action dependency
+* versioned objects -- health_registry
+* Remove unnecessary executable permissions
+* versioned objects -- cluster lock and node lock
+* versioned object -- cluster_policy
+* versioned object -- node
+* versioned object - cluster
+* versioned object - policy
+* versioned object - profile
+* Initialization of versioned objects
+* Add release note about DB deadlock fix
+* Release note for scheduler batch control
+* Add tempest API test for API version show
+* Minor fix for API document of API versions
+* Add negative test for cluster show
+* Fix parameters 'required' status
+* Updated from global requirements
+* Updated from global requirements
+* Reorg profile_type and policy_type tempest API tests
+* Add tempest API test for API versions list
+* Tutorial documentation for receivers
+* Reorder parameters to make os-api-ref happy
+* Add batch control for node action scheduling
+* Add tutorial doc for policies
+* Add tempest tests for events list API
+* Trivial fix to README doc
+* Tune health manager options
+* Add basic section to tutorial doc
+* Rename container profile
+* Migrate to os-api-ref upstream library
+* Add DB retry decorator for DeadLock problem
+* Updated from global requirements
+* Revert "Allow parameter location to be specified in rst"
+* Fix functional tests
+* Tune DB API for session sync
+* Add tempest tests for build-info API
+* Add API tests for action list/show
+* Add API test for cluster policies list/show
+* Add create_test_policy function to base test class
+* Bump cirros version to 0.3.4
+* Updated from global requirements
+* Add API test for receiver show
+* Add API test for receiver list
+* Remove emacs magic line
+* Fix typo in API docs
+* Add API document for build_info
+* Add gate scripts for tempest
+* Action APIs doc
+* Nodes API doc
+* Add API document for receiver
+* Add API document for webhook
+* Add API document for event
+* Clusters API doc (3)
+* Fix minor issues of profiles tests
+* Add API test for policy show
+* Add API test for policy list
+* Clusters API doc (2)
+* Add support for container profile
+* Revert "Fix minor issues of profiles tests"
+* Add API test for profile type show/list
+* Fix minor issues of profiles tests
+* Minor tweaks to policies API docs
+* Clusters API doc (1)
+* Add API test for profile list
+* Add API test for profile show
+* Add API test for profile update
+* Add API tests for profile delete
+* Add API tests for profile create
+* Add API tests for policy type list/show
+* Fix nits found in profiles API doc
+* Fix nits in policies api doc
+* Add API document for cluster_policies
+* Remove the useless run_tests.sh
+* Fix links in tutorials doc
+* Allow parameter location to be specified in rst
+* Migrate DS action items into TODO/FEATURES
+* Add tempest API test for Node show/list
+* Add tempest API test for cluster show/list
+* [TrivialFix] Add missing `help` in README.rst
+* API documentation for policies
+* Improve parameter parsing in api-ref
+* Updated from global requirements
+* Add API tests for node action
+* Release note for scheduler rework
+* Add API tests for cluster action
+* Updated from global requirements
+* Remove mitaka release notes data
+* Rework engine scheduler
+* Add tempest tests for policy create/delete/update API
+* Add tempest test cases for node create/delete/update API
+* Profile API doc part 2
+* API documentation for profiles (1)
+* Add tempest tests for receiver create/delete API
+* replace logging with oslo.log
+* Added missing brackets in api microversion docs
+* Reorg existing tempeset test cases
+* Updated from global requirements
+* API documentation for policy types
+* Revert "Add Rally plugin for Senlin tempest"
+* Fix cluster scaling operations
+* Add a profile example
+* Fix warnings in current documentation tree
+* Fix ref links in user reference docs
+* Add API doc content (1)
+* api-ref docs site for senlin
+* Updated from global requirements
+* Add Rally plugin for Senlin tempest
+* Fix problems in glossary
+* Clarify some guidelines on contribution
+* Initial framework for user tutorial doc
+* Reorg user documentation to be references
+* Release note for the event generation bug fix
+* Release note for trust creation concurrency
+* Release note for API versioning
+* Use with_for_update in cluster_next_index db call
+* Rename tempest_tests to tempest
+* Catch DBDuplicateEntry Error during cred_create
+* Updated from global requirements
+* Add a tutorial for creation of senlin cluster from heat template
+* Add a TODO item (unexpected attribute)
+* Add unit test for event module (1)
+* Remove duplicated keys in the dict
+* Fixed typos in the Mitaka Series Release Notes
+* Reorganize profile example dir
+* Initial tempest plugin framework
+* Updated from global requirements
+* Define context.roles with base class
+* [doc] Removed the invalid link for Module Index
+* Add senlin-dashboard in doc/source/overview.rst
+* Fix event generation
+* Remove concurrency constraint for functional tests
+* Updated from global requirements
+* Correct test case test_profile_create_with_bad_type
+* Remove duplicated keys in the dict
+* Updated from global requirements
+* Use the new enginefacade from oslo.db
+* Fix create profile API interface
+* Add NoneType protection for ex.response in sdk.py
+* Developer doc for API microversioning
+* Re-enable E402 check
+* Fix minor typo in senlin project
+* Support security_groups in nova profile
+* Refactor do_create for nova profile
+* More test case for method with diff versions
+* Add hacking rule for api_version
+* Fix typos in Senlin files
+* Add support to 'latest' version
+* Modify location to point to action
+* Rework senlin docs based on CLI changes
+* Refactor API version range support
+* Add API version header in responses
+* Add global API version check for micronversion
+* Add versioned method support
+* Make version resource a subclass of Controller
+* Set API version request on request objects
+* Move middleware filter resources
+* Add version request object
+* Add health policy example
+* Reorg unit tests for API
+* Complete functional test of cluster_membership
+* Update reno for stable/mitaka
+
+1.0.0.0rc1
+----------
+
+* Store random assigned VIP address to cluster data
+* Fix desired_capacity computation
+* Release notes for RC1
+* Optimize event deserialization
+* Set update_at to new value after resize
+* Add size checking when deleting nodes
+* Documentation for the region placement policy
+* Add size checking when adding nodes
+* Remove a TODO item
+* Fix problems with add timer and improve periodic tasks
+* Fix zone CLUSTER_RESIZE support
+* Fix deletion policy for resize parsing
+* Use assertIn for test
+* Documentation for zone placement policy
+* Add CLUSTER_RESIZE support to zone placement
+* Add CLUSTER_RESIZE support to region placement policy
+* Revise zone placement policy
+* Revise region placement policy
+* Optimize action data update in lb policy
+* Optimize lb policy for the case count is 0
+* Documentation for the load-balance policy
+* Fix attach error in affinity policy
+* Fix tox env for coverage test
+* Affinity policy documentation
+* Enable affinity policy to handle cluster resize
+* Revise trust middleware
+* RPC support for credential operations
+* Add engine service RPC api for credentials
+* Verify whether Senlin Server is successfully installed
+* Refine Senlin manual install doc
+* Add property updatable check in Senlin profile
+* Minor revise os.nova.server profile
+* Move an item back to TODO list
+* Improve the text in install-guide
+* Updated from global requirements
+
+1.0.0.0b3
+---------
+
+* Final batch of release notes for Mitaka-3
+* Fix cluster list documentation
+* Add hypervisor and server group support to nova_v2
+* Revise Cache of Registry of Health Manager
+* Fix action status update
+* Fix an error in test lbaas driver
+* Revision to FEATURES.rst
+* Argument Twist to Health Policy
+* Revise neutron driver for change in sdk 0.8.1 release
+* Fix Health Manager Problems
+* Support to affinity policy
+* Revise DRS policy to be a generic affinity policy
+* Revise action dependency check
+* Add functional test for cluster update with new profile
+* Revise the logic of cluster/profile metadata update
+* Add functional test for cluster update
+* Add functional test for node get details
+* Use assert(Not)Equal/Less/Greater
+* Make map schema resolve json serialized map value
+* Rework to_dict method of sdk resource in functional test
+* separate two different commands in two lines
+* Simplify action initialization
+* Add unit test for cluster check action
+* Fix various problems in health manager
+* Optimize the registry claim function
+* Refactor cluster recover action
+* Quick Fix to Remove the block when Engine Start
+* Refactor add nodes operation in cluster action
+* Refactor node delete operation in cluster action
+* Refactor node update operation in cluster action
+* Refactor node create operation in cluster action
+* Refactor webhook trigger operation
+* Refactor action create operation
+* Refactor cluster update policy operation
+* Refactor cluster detach policy operation
+* Refactor cluster attach policy operation
+* Refactor node check/recover operations
+* Refactor node delete operation
+* Refactor node update operation
+* Refactor node create operation
+* Refactor cluster check/recover operations
+* Refactor cluster scale in operation
+* Refactor cluster scale out operation
+* Refactor cluster resize operation
+* Refactor cluster del nodes operation
+* Refactor cluster add nodes operation
+* Refactor cluster delete operation
+* Refactor cluster update action
+* Refactor cluster create
+* Enable cluster registry and health check in Health Manager
+* Revise Health Policy for Health Management
+* Add create method to Action class
+* Revise vSphere DRS policy
+* Fix cluster status_reason setting when actions failed
+* Fix SDK exception parsing
+* Fix multitenancy check when listing resources
+* Updated from global requirements
+* Remove event logs in lbaas driver
+* Quick fix of a bug in lb_create method in lbaas driver
+* Add healthmonitor support for lb_policy
+* Update doc/docbkx/README.rst
+* Cleanse sqlalchemy models
+* Add Registry Table for Health Management
+* Add healthmonitor support in openstack lbaas driver
+* Translate exceptions happen in Neutron driver
+* Minor revise scaling_policy functional test
+* Documentation for scaling policy v1.0
+* Fix target capacity calculation
+* Documentation for deletion policy
+* Refactor health manager for future work
+* Remove extra parameters from actions document
+* Remove Extra parameters from document
+* Remove WritableLogger from wsgi
+* Revise trust_id param for sdk connection
+* Refactor scaling policy implementation
+* Revised TODO list
+* Add some backlog of release notes
+* Remove unused `paramiko`
+* Convert count to int in cluster scale_out/in action
+* Minor tweak setup-service tool
+* Use oslo.config fixture to avoid gate break
+* Add check for bad parameter in policy-list
+* Add check for bad parameter in profile-list
+* Remove keyerror when only LB Policy Attached
+* Doc fix
+* Updated from global requirements
+* Update unit test of profile for filters
+* Remove keys from filters option for profile-list
+* Validate 'sort' when listing events
+* Validate 'sort' parameter for recievers when listing
+* Validate 'sort' parameter when listing actions
+* Updated from global requirements
+* Add devstack support for senlin dashboard
+* Validate 'sort' parameter for listing cluster-policy
+* Validate 'sort' parameter for nodes in engine
+* Validate 'sort' parameter for clusters in engine
+* Validate 'sort' parameter for policies in engine
+* Validate 'sort' parameter for profiles in engine
+* Avoid using literal strings in API layer
+* Raise Exception when the paramter is invalid
+* Add functional test for cluster check recover
+* Fix an error in openstack_test driver
+* Fix a bug in cluster recover action
+* Fix some alignment nit
+* Remove an unneeded requirement
+* Add senlin dashboard info in README.rst file
+* Util function 'validate_sort_param'
+* Add unit test for is_admin check in DB interfaces
+* Refactor sorting param parsing at db layer
+* Enable is_admin check in DB APIs
+* Rename SenlinBadRequest to BadRequest
+* Raise InvalidParameter exception when get resource with invalid sort key
+* Enforce multi-tenancy for event find
+* Revise node check and recover parameters
+* Update devstack comment
+* Enforce multi-tenancy for actions
+* Add cluster check and recover into API
+* Enforce multi-tenancy for node find
+* Enforce multi-tenancy for cluster find
+* Remove some useless methods in rpc client
+* Add functional test for node check/recover
+* Set default isolation_level to READ_COMMITTED
+* Add a specs directory to hold design proposals
+* Fix race condition in service delete
+* Avoid using '__class__.__name__' when possible
+* Enforce multi-tenancy for policy-find
+* Enforce multi-tenancy for profile find
+* Tune receiver unit tests in service engine
+* Rework profile type unit tests
+* Rework policy type unit tests
+* Validate project_safe when listing actions
+* Add functional test for cluster node add/del
+* tools/setup-service: Add email info when user-create
+* Enable default_region_name config option
+* Remove some dead options in engine config
+* Refactor controllers in API layer
+* Enforce 'max_clusters_per_project' quota
+* Add node_count_by_cluster DB API
+* Make do_join/leave in profile base return True
+* Check nova server status after rebuilding it
+* Rework unit tests for profile operations
+* Rework unit tests for policy service support
+* Remove 'force' kwarg from node_delete api/rpc
+* Revise authorization doc
+* Remove useless encrypt/decrypt methods
+* Remove some EVENT calls from node module
+* Remove some EVENT call from cluster module
+* Improve param checking for event-list
+* Rework unit tests for node service requests
+* Remove a TODO item in engine service
+* Rework engine service test case for events
+* Remove trace back from server responses
+* Updated from global requirements
+* Support to event filtering by level names
+* Unify event module import
+* Add multi-tenant support for actions
+* Rework cluster service api unit tests
+* Avoid unnecessary session creation
+* Rework cluster-policy service api unit test
+* Reworked unit test for action service apis
+* Fix unit test for cluster module
+* Fine tune the HACKING.rst document
+* Remove max_nested_cluster_depth config option
+* Remove nested cluster support for function test
+* Remove nested cluster support from document
+* Fix some word spellings
+* Add reno for lock-breaker and engine status suppport
+* Make 'location' returned by node_update point to action
+* Fix node update will get error if not specify new profile
+* Add receiver functional test
+* Remove nested cluster support
+* Updated from global requirements
+* Re-enable lock breaker
+* Trival fix to service report
+* Fix functional test
+* Fix a bug in cluster_resize service routine
+* Add Node Check and Recover into API
+* Set strict param to False by default for check_size_params
+* Fix cluster name update error
+* Relax checking on server metadata
+* Add missing unit tests for cluster module
+* Add unit tests for node check/recover
+* Add missing unit tests for nova driver
+* Fix check_size_params method
+* Use server_metadata_delete to update meatadata value in do_leave
+* Support property update for os.heat.stack profile
+* Add missing options registration for webhook
+* Remove useless function from db model
+* Fix service_get call in keystone driver
+* Trivial: Make parse_exception cover all cases
+* Fix Error in Base Recover
+* One more test case for deletion policy
+* Add unit test for cluster_resize in engine
+* Fix cluster resize service call
+* Fix DB coherency problem (again)
+* Fix service DB API
+* Don't set verbose in default group
+* Updated from global requirements
+* Add size checking for cluster scaling
+* Fix cluster-resize parameter checking
+* Fix cluster_create function
+* Improve size parameter checking function
+* Make node-delete return an action ID
+* Make cluster-delete return action id
+* Updated from global requirements
+* Update server metadata before updating node/cluster properties
+* Fix a bug about cluster-node-add/del
+* Fix cluster-node-add bug caused by 'None' custer_id
+* Change 'status_code' to 'http_status' to parse SDK's exception
+* Fix spelling mistake
+* Updated from global requirements
+* Reorg sample profiles directory
+* Fix some dict sorting problems
+* Move load_paste_app into WSGI module
+* Updated from global requirements
+* Remove version from setup.cfg
+
+1.0.0.0b2
+---------
+
+* Added release notes for mitaka-2
+* Fix two errors in functional test
+* Further rework lb_policy
+* Remove webhook test API from functional test
+* Updated from global requirements
+* Add senlin-manage service list/clean for engine status
+* Add periodic task to report engine status
+* Rework lb policy
+* Add db api for service table
+* Add 'service' table in db
+* Using [trust_id] in '_build_conn_params'
+* Remove unused WEBHOOK_ATTRS
+* Add Doc for Check and Recover Actions
+* Reworked deletion policy
+* Add node selection utils to scale utils
+* Rework zone placement policy
+* Add node query by region and zone to cluster
+* Add select_random_nodes function
+* Remove a dead function in test case
+* Fix devstack script to use console scripts
+* Make senlin-engine a console script entry point
+* Remove useless test module
+* Enable nova driver to validate azs
+* Rework region placement policy
+* Make senlin-api a console script entry point
+* Add check and Recover into RPC API
+* Add fixed priority for built-in policies
+* Fix db problem for node creation
+* Enable cluster to do node distribution refresh
+* Updated from global requirements
+* Add Check and Recover as a Cluster Action
+* Add Check and Recover into Node Action
+* Warning when delete cluster with receivers
+* Add region validation to keystone driver
+* Make senlin-manage a console_script entry point
+* Fix getting node addrress logic in os lbaas driver
+* Method's default argument shouldn't be mutable
+* Add 'cooldown' for scaling policy
+* Fix a bug in profile base module
+* Add version controller for V1 API
+* Move app controller into dedicated module
+* Revise version json format
+* Remove purge_deleted from senlin-manage
+* Ensure that jsonutils.%(fun)s must be used instead of json.%(fun)s
+* Update text strings
+* Fix receiver params string generation
+* Fix zone test case to make it stable
+* Unit test for base profile
+* Add unit tests for receiver in engine
+* Updated from global requirements
+* Added release notes about recent changes
+* Simplify API resource creation
+* Refactor modules used by senlin-api
+* Revert "Pass environment variables of proxy to tox"
+* DISRUPTIVE: add version to profile/policy types
+* Optimize node query at DB layer
+* Add cluster_policy_get_by_type method to db_api
+* Expose Check Function in Profile
+* RPC unit tests for cluster_policy_attach/detach
+* Remove 'permission' from profiles
+* Revise docs about node-join and node-leave
+* Remove node actions from engine service
+* Remove node actions from api layer
+* Revert "Fix action columns in db migration scripts"
+* Remove 'level', 'priority' and 'cooldown' from DB
+* Further cleanse developer doc
+* Revise user docs for policy and bindings changes
+* Further cleanse useless properties of cp/policies
+* Fix action columns in db migration scripts
+* Revise policy functional test
+* Add metadata update support for os.nova.server profile
+* Add Description about Recover Function in Profile
+* Remove old properties of c-p binding (engine)
+* Fix action sort
+* Remove old properties from cluster-policy-binding (API)
+* Remove 'level' and 'cooldown' from policies
+* Trival: Remove unused logging import
+* add debug testenv in tox
+* Replace deprecated library function os.popen() with subprocess
+* Remove 'priority' and 'level' from API layer
+* use oslo.utils.reflection extract the class name
+* Attempt to fix gate about PEP8 errors
+* Revised TODO list for mitaka release prep
+* Revise user doc for sorting options
+* Revise receiver sorting
+* Revise action sorting
+* Revise event sorting
+* Revise cluster-policy sorting
+* Revise profile sorting
+* Revise policy sorting
+* Revise node sorting
+* Revise cluster sorting
+* Optimize Zone Distribution Get Logic for Placement
+* Fix sample placement policies
+* Rework get_details of nova server profile
+* Add utility function for parsing sort parameter
+* Rework DB sorting functions
+* Implement node_recover in Profile
+* Updated from global requirements
+* Move cluster_update logic from service to cluster_action
+* Set cluster to correct status when scaling failed
+* Move some policies into WIP directory
+* Remove some example policies
+* Add 'wait_for_delete' call for functional tests
+* Remove webhook functional test
+* Add DB API to Help Health Check in Scaling Policy
+* Fix KeyError caused by getting 'security_groups' from server_data
+* doc: fix cluster
+* Change the right subdirectory for user doc
+* Remove MANIFEST.in
+* Trivial: docstring fix
+* Remove some useless db apis
+* Optimize action list method
+* Backlog of release notes
+* Rename timestamp fields (2)
+* Rename timestamp fields (1)
+* doc: Fix profiles
+* doc: Fix typo, ReST -> REST
+* doc: Fix install 'Install via Devstack'
+* Remove 'DELETED' as a cluster/node status
+* Misc fix to senlin db model
+* Remove 'show_deleted' from DB layer
+* Remove 'show_deleted' from engine entities
+* Remove 'show_deleted' from engine service
+* Remove 'show_deleted' from API interface
+* Remove 'deleted_time' from database
+* Simplify DB schema code
+* User doc for events
+* Updated from global requirements
+* Fix typos in engine.service.py
+* Use assertIsNone rather than assertEqual(A, None)
+* Allow events to be filtered by 'level'
+* Catch ProfileNotFound exception when load_runtime_data in Node
+* Exclude releasenotes while run flake8 tests
+* Remove unnecessary judgement for cluster_id in node_get_all
+* Implement do_check method for nova profile
+* Add to_dict() method for faked resource
+* Add user doc for actions
+* Allow action list to be filtered by 'status'
+* Add new cluster status RESIZING
+* User documentation for receivers
+* Receiver developer documentation update
+* Fix argument type for health_policy
+* Remove webhook from DB model
+* Remove DB API for webhooks
+* Remove webhook module
+* Rework webhook tests
+* Allow receivers to be sorted by action
+* Rework webhook middleware
+* Fix multi-tenancy support for receivers
+* Fix receiver loading logic
+* Fix action deserialization
+* Fix install.rst output format
+* Fix broken policy JSON file
+* Set status to updating when execute resize action
+* install.sh: stop using deprecated option group for rabbit
+* Remove webhook in "etc/senlin/policy.json"
+* Enable name property update for os.nova.server profile
+* Make name property of os.nova.server profile take effect
+* Enable update of flavor property of Nova server profile
+* Remove webhook from service layer
+* Remove useless webhook RPC calls
+* Change LOG.warn to LOG.warning
+* Add 'EVENT' checking for scaling policy
+* Disable webhook functional for the moment
+* Remove unused webhook APIs
+* Delete the unused LOG configure code
+* API support to receivers
+* Add wait_for_stack_delete to heat driver
+* RPC support to receivers
+* Creation of receivers (webhooks)
+* Rework action dependency
+* More test cases for purge_deleted
+* Add 'dependency' table
+* Temporarily disable lock stealer
+* Fix action dependency problem
+* Set cluster.next_index to correct value after node join/leave
+* Fix "test_vSphereDRSPolicy.py" file's mode to 644
+* Fix some nits in profile base
+* Implement purge_deleted command
+* Make health_mgr_opts auto generate to config sample
+* Remove senlin.conf.sample
+* Updated from global requirements
+* Add blue-green deployment as a feature request
+* Update node status when fail to create nova instance
+* Fix server get_details when server is not found
+* Change String to Boolean type when listing cluster policies
+* delete __context__ that unused
+* Refactor YamlLoader
+* Use jsonutils from oslo in engine/parser.py
+* Add unit tests to engine.parser
+* Fix list data type implementation
+* Fix cluster node updating failed with new image
+* Revise list field read/write
+* Engine support for receivers
+* Add detailed devstack instructions
+* Update TODO list
+* Remove `return None` for functions in file senlin/engine/service.py
+* DB support for receivers
+* Fix behavior of deletion policy with 'RANDOM' constrain not in random way for selecting candidates
+* Add block_device_mapping_v2 support for 'os.nova.server' profile
+* Updated from global requirements
+* Fix "report a bug" launchpad project
+* Fix MutableList implementation
+* Fix SDK test case
+* Fix typo
+* Fix action status setting logic
+* Revise 'Heat' to 'Senlin' in doc/docbkx/README.rst
+* Fix message in developer doc linking to API
+* Remove local copy of api doc
+* Remove default handling for 'RETRY' actions
+* Pework functional tests of cluster_list and node_list
+* Improve logging in functional testings
+* Updated from global requirements
+* Shorten the event ID in log output for reability
+* Make webhook-trigger return a location header
+* Format time to cut microsecond
+* Make cluster actions API return a location header
+* Make node-create return a location header
+* Make node join/leave return a location header
+* Rework webhook to adapt to latest API change
+* Make cluster-resize return a location header
+* Make node-delete return a location header
+* Make cluster-delete return a location header
+* Revert to use keystone v2 based OSC
+* Updated from global requirements
+* Fix user documentation for schema changes
+* Delete tenant_id from location header
+* Make node-update return a location header and body
+* Misc fix to functional tests
+* Fix service setup script for new endpoints
+* Remove croniter useless requirement
+* Fix policy json file to delete project checking
+* Remove 'tenant_id' from senlin API paths
+* Cut microsecond from init_time
+* Make cluster-update return a location header
+* Make cluster_create return a 'location' header
+* Remove argparse useless requirement
+* Update TODO list
+* Fix policy schema api
+* Fix profile schema api
+* Revise functional test to adapt to latest API change
+* Fix a typo in action status definition
+* Remove HTTPNoContent from profile delete API
+* Remove HTTPNoContent from webhook delete API
+* Remove HTTPNoContent from policy delete API
+* Mark 400/404 error as fixed
+* Make node delete request return no body
+* Remove timestamp fields from filtering parameters
+* Remove kombu as a dependency for Senlin
+* Remove HTTPAccept exception from node update API
+* Remove HTTPAccept exception raised when update cluster
+* Revise functional test to adapt to latest API change
+* Change data precision of action.start_time and action.end_time
+* Remove HTTPNoContent from cluster delete API
+* Make senlin API return correct status code
+* Make build-info api return an object
+* Give unique name to all resources created in functional test
+* Reorganize documentation
+* Webhook creation refactor
+* Check new_profile before updating node
+* Revise action api interfaces used in functional test
+* Fix status code returned from API
+* Store the actual UUID of obj_id in Senlin database for webhook create
+* Pass environment variables of proxy to tox
+* Move release note of 'remove-trigger-support' to right location
+* Attempt to log more info on sdk exceptions
+* Add cluster lock steal
+* Add node_steal for node lock
+* Add more configurable parameters to wait_for_server
+* Fix documentation for conformance
+* Add action_on_dead_engine function
+* Decide auth_plugin type in create_connection
+* Fix action request method and URI
+* Make policy-create return 400 when appropriate
+* Make profile-create return 400 when appropriate
+* Minor tweaks to policy-update log messages
+* Make node-update return 400 when appropriate
+* Make webhook calls return 400 when appropriate
+* Make node-create return 400 when appropriate
+* Fix placement policy organization
+* Fix engine service function's decorator
+* Updated from global requirements
+* Make policy-update return 400 instead of 404
+* Add parameter validation for policy-create
+* Set default auth_plugin to token when creating SDK connection
+* Create SDK connection with identity version set to v3
+* Make cluster-policy-detach return 400 instead of 404
+* Let cluster-policy-attach return 400 rather than 404
+* Updated from global requirements
+* Let node-join return 400 if cluster is not found
+* Rename image_get_by_name to image_find
+* Enable a new role for migrated node
+* Enable update of image property for nova server profile
+* Remove examples for triggers
+* Force releasenotes warnings to be treated as errors
+* Parameter checking for cluster-policy-update
+* Set auth_plugin type to password when building sdk connection
+* Parameter checking for cluster-policy-detach
+* Minor tweaking of an error message
+* Fixed a typo in error message
+* Remove DB support to triggers
+* Remove environment support for triggers
+* Remove trigger implementations
+* Add backlog for release notes during mitaka
+* Fix PEP8 error in doc source file
+* Remove 'trigger' support from rpc client
+* Remove 'trigger' from engine layer
+* Add reno for release notes generation
+* Reimplement authenticate method in sdk driver
+* Change developer/user docs about profile-update
+* Remove 'trigger' from api layer
+* Let cluster-update return 400 if profile not found
+* Let cluster-create return 400 if profile not found
+* Claim fixing 404/400 usage in engine service
+* Disallow profile update for spec
+* Change pre_test_hook.sh mode to executable
+* Add jobs related to gating/publishing (API) docs
+* Support single test
+* Enable update of network properties for nova server profile
+* Fix authenticate method in sdk driver
+* Add parameter sanitization for policy-attach
+* Fix cluster-list api inconsistency
+* Update doc environ to use OpenStack docs theme
+* Fix CONF.set_override usage
+* Updated from global requirements
+* Update TODO work items
+* Updated from global requirements
+* Enable initiative action selecting in start_action
+* Remove 'spec' from profile-update service api
+* API doc change for profile-update operation
+* Updated from global requirements
+* Delete .pyc files before running test
+* Updated from global requirements
+* Move action status definition to consts module
+* Pick up Lock Breaker from TODO items
+* Fix SDK exception message parse
+* Correct set the default value for min_size/max_size
+* Enable pre_test_hook for functional test
+* Updated from global requirements
+* Pick up a TODO item
+* Add a FEATURE item
+* Updated from global requirements
+* Move policy update logic to cluster
+* Fix cooldown_inprogress method return reversed values
+* Region placement policy
+* Update TODO/FEATURE item list
+* Fix spelling error for senlin.policy.deletion schema
+* Add config option for name uniqueness
+* Convert count value into integer in scaling policy
+* API resource names should not include underscores
+* Put py34 first in the env order of tox
+* Move policy detach from action to cluster
+* Fix setup-service script for RC/role checking
+* Update TODO item list
+* Add oslo_config "IPOpt" and  "PortOpt" support
+* Fix the log message issue in engine.service.profile_create
+* Use assertTrue/False instead of assertEqual(T/F)
+* Use assertIsNone(observed) instead of assertEqual(None, observed)
+* Updated from global requirements
+* Add sample conf to .gitignore
+* Move add policy logic to cluster
+* Remove unnecessary code in webhook logic
+* Complete README file under tools subdirectory
+* Rename gen_pot to gen-pot-files
+* Fix setup service call in doc
+* Add option to generate sample conf file
+* Fixed typo in getting started doc
+* Make webhook related DB query project safe
+* Make trigger related DB queries project safe
+* Make event related DB queries project safe
+* Bump development version to 0.2.0
+
+0.1.0
+-----
+
+* Revise cluster_add_nodes action's behavior
+* Updated from global requirements
+* Mark branch as 0.1
+* Make policy related DB query project_safe
+* Zone placement policy
+* Check grace_period before use it
+* Make profile related DB query project_safe
+* Add project_safe param for cluster/node load
+* Change the repositories from stackforge to openstack
+* Update .gitreview for new namespace
+* Make node related DB queries project safe
+* Make all cluster DB queries project_safe
+* Remove two useless DB API interfaces
+* TODO item for actions API
+* Make 'grace_period' and 'destroy_after_deletion' work
+* Make deletion policy work for CLUSTER_DEL_NODES action
+* Add owner properties for profile object
+* Add a TODO item
+* Updated from global requirements
+* add a placement-policy to enable vSphere DRS functions
+* Make to_dict method work for deleted cluster
+* Add more check to node functional test
+* Revise nova server get_details call
+* Updated from global requirements
+* Add a TODO item about document
+* Make deletion policy work for cluster resize action
+* Temporarily disable exception logging
+* Revise node index assignment
+* Add DB API to get next index from cluster
+* Updated from global requirements
+* Add batch constraint for cluster operations
+* Docstring for cluster actions
+* Docstring for node actions
+* Updated from global requirements
+* Rename driver test case folder
+* Revise data passing for LB policy
+* Remove resize doc from TODO items
+* Fix errors in building API docs
+* Reorganize getting-started doc
+* Add API doc for cluster resize
+* Revisit and revise TODO list as necessary
+* Do rule validation when validaing alarm triggers
+* Fix alarm rule parsing behavior
+* Fix sample yaml for threshold alarm
+* Cleanse functional test
+* Add functional test for node operations
+* Refresh node membership for node actions
+* Optimize cluster action implementation
+* Remove two TODO items in cluster module
+* Rename batch policy to be senlin.policy.batching
+* Fix cluster update behavior
+* Reset cluster status before RETRY
+* Fix node membership refresh when adding nodes
+* Fix cluster node membership refresh
+* Quick return from create nodes if count 0
+* Fix action constructor
+* Fix sample nova server profile
+* Optimize node actions
+* Revise policy attach action default value
+* Further optimize cluster action
+* Optimize cluster action construction
+* Add functional test for lb_policy
+* Add functional test for webhook
+* Install python-senlinclient using pip by default
+* Revise ssl filter in api-paste.ini
+* Use correct cluster_id in NodeAction.execute
+* Add py3 support to setup.cfg
+* Update policy_types documentation
+* Remove ERROR_ON_CLONE references
+* Updated from global requirements
+* Update desired_capacity of target cluster after node creation
+* Fail to create node when port is None
+* Enable node-update operation
+* Add LOGs to engine service entry points
+* Add functional test for cluster resize
+* Delete error nodes first in deletion_policy
+* Fix schema and template call for os.heat.stack profile
+* Change ignore-errors to ignore_errors
+* Remove a TODO item in cluster detach policy
+* Get 'count' from action.inputs instead of action.data
+* Remove local version of ssl middleware
+* Treat action retry as a warning instead of an error
+* Remove PolicyAction class
+* Add functional test for scaling policy
+* Fix two bugs in lb policy
+* Updated from global requirements
+* Fix a bug in _create_nodes
+* Update TODO list
+* Clean node lb info after detaching lb_policy
+* Remove extra comma
+* Fix a bug about add/del action dependency
+* Fix event log errors in action modules
+* Fix a bug of cluster policy detach
+* Rework context initialization in action module
+* Fix trust parameter error
+* Update locale string
+* Add functional test for cluster scale in/out
+* Fix a bug in cluster scale in action
+* Cluster action test case (5)
+* Cluster action test case (4)
+* Remove context from dispatcher and scheduler
+* Use versioned profile spec in functional test
+* Check action status before lock it
+* Cluster action test case (3)
+* Reinitialize action properties after locking it
+* Do some source cleanup
+* Cluster action test case (2)
+* Revised SDK driver with unit test case
+* Cluster action test case (1)
+* Add test case for Node Action
+* Removed some requirement entries
+* Delete dead code in sdk module
+* Fix cluster status refresh error
+* Fix a bug in _wait_for_dependents method of ClusterAction
+* Revise policy_type functional test
+* Unit test case for keystone v3 driver
+* Updated from global requirements
+* Fix functional test for policy type listing
+* Revise doc to reflect latest changes
+* Fix trust-based connection building in policy
+* Make profile schema versioned
+* Sample profiles with type and version keys
+* Add timeout validation for server creation
+* Fix trust-based connection building
+* Add 'singleton' property to base policy
+* Tweak connection parameter building for profiles
+* Remove half-baked profile types
+* Expose event choice from scaling policy
+* Invoke parse_exception directly to handle exception in sdk driver
+* Misc tweaking to action behavior
+* Format timestamp for event list
+* Rename policy file
+* Rename policy type names
+* Add 'description' to policy spec
+* Add 'type' and 'version' to policy spec
+* Reorg sample policies dir
+* Tweak registry dump function
+* Remove ActionNotSupported exception type
+* Updated from global requirements
+* Improve devstack plugin
+* Make triggers project-safe
+* Avoid passing rich object when reschedule
+* Change default names for actions
+* Handle exception in neutron_v2 module
+* Revise response of action_get api interface
+* Add network support for os.nova.server profile
+* Handle SDK exception of sdk module
+* Forbid deletion of actions in use
+* Tweak runtime data of clusters
+* Refactor action constructor
+* Remove a TODO item
+* Enable triggers for stevedore
+* Fix ceilometer alarm time constraints
+* Fix policy json file for project checking
+* Fix errors in sample trigger spec and db model
+* Add functional test for listing policy_types
+* Add keystone driver plugin for functional test
+* Updated from global requirements
+* Fail webhook creation if url is not correctly created
+* Updated from global requirements
+* Use senlin generic driver to manege keystone driver
+* Removal of debugging code
+* Catch all the driver exceptions on node engine layer
+* Minor tweaks to the drivers base
+* Define _build_connection_params in policy base module
+* Fix webhook triggering logic
+* API layer support for triggers
+* Remove context usage from driver layer
+* Updated from global requirements
+* Handle exceptions in keystone_v3 driver
+* Add fake nova_v2 driver for functional test
+* Updated from global requirements
+* Replace python-openstacksdk with openstacksdk
+* Use wait_for_delete to wait for nova server deletion
+* Fix a bug in trust middleware
+* Fix three bugs in webhook related workflows
+* Rework some interfaces in keystone_v3 driver
+* Ensure policy enforcement level is less equal than 100
+* Check cluster size constraint before doing node join/leave
+* Check wait_for_lb_ready method's return value
+* Correct description about marker option in getting_started doc
+* Mock correct cred_get function in unit test of lb_policy
+* Set cluster status to warning after deletion failed
+* Use correct return value in cluster_action module
+* Fix misleading document for webhooks usage
+* Fix some exception mapping miss
+* Add functional test for listing profile_type
+* Revise cluster-scale-in/out default value
+* Check size limitation in cluster scale in/out action
+* Fix some test cases about illegal sort_dir
+* Treat return value of sdk function call as object
+* Use Senlin generic driver to manage ceilometer_v2 driver
+* Unit test for events in service engine
+* Updated from global requirements
+* Use a workaround to make lb_policy work
+* Fix a bug in lbaas driver
+* Test case for lb_delete with no physical objects
+* Fix action base module test case
+* Fix a typo in lbaas driver plugin
+* Fix gate job of Senlin functional test
+* Handle exceptions which happen in heat driver
+* Updated from global requirements
+* Unit test for actions in engine service
+* Modify parse_exception method
+* Remove 'wrap_exception' function
+* Unit test for custom action module
+* Use Senlin generic driver to manage openstack lbaas driver
+* Replace flavor_get_by_name with flavor_find
+* Make ignore_missing default to False
+* Updated from global requirements
+* Revised node implementation with test cases
+* Webhook API optimization with test cases
+* Profile types API test case fix
+* Policy types API test case fix
+* RPC client support to triggers
+* Unit test for webhook functions in RPC client
+* Use Senlin generic driver to manage neutron_v2 driver
+* Complete the unit test of os.nova.server profile type
+* Fix misleading documentation for associating metadata
+* Polish stack profile unit test
+* Use Senlin generic driver to manage heat_v1 driver
+* Delete trust resource implementation
+* Add test case for 'call' and 'cast' for rpcclient
+* Add test case for LoadBalancer driver(2)
+* More test cases for registry module
+* Fix cluster rt data operation
+* Fix error in serializers with test case
+* Add server_metadata_get and server_metadata_update method
+* Add two more test cases to cover environment module
+* Fix webhook middleware test case
+* Branch revision for 100% coverage
+* Fix tox environment for coverage test
+* Use Senlin generic driver to manage nova_v2 driver
+* Test case for base action module
+* Check spec key correctly in os.nova.server profile
+* Rework some interfaces in sdk and keystone_v3 drivers
+* Updated from global requirements
+* Add cloud_backend_name option into Senlin config
+* Revise webhook unit tests
+* Test case for scaleutils
+* Test case for middlewre filters
+* Unit test for openstack api version controller
+* Revised Senlin lock implementation
+* Revise policy enforcement level implementation
+* Test case for common policy enforcer
+* B64encode user_data content before handling it to nova
+* Revise senlin exception handling from SDK side
+* Add environment support for driver plugin
+* Fix errors in policies API and test cases
+* Fix nodes API and test cases
+* Fix profiles API and test cases
+* Tune scaling_out policy unit test
+* Improve event unit test coverage
+* Improve trigger base test case coverage
+* Fix version middleware and test case
+* Tune scaling_in policy unit tests
+* Delete the AES based crypto module
+* Unit test for base policy module
+* Fix deletion policy candidate selection
+* Fix alarm trigger validation
+* Add unit test for different HM type
+* Added one unit test for webhook store
+* Fix coverage test
+* Revise server delete-wait logic
+* Polish the nova server profile unit test
+* Add test for heat_v1 driver
+* Engine support for triggers
+* Ceilometer alarm trigger support
+* Start point of Senlin functional tests
+* Rename a folder under unit test
+* Add SenlinTest profile type
+* Fix some errors in profile unit test
+* Base trigger implementation
+* Do not update other properties if exception happens
+* Add config reload capability to wsgi
+* Changes literal ation names to consts.<action_name> to make action creation consistent
+* Updated from global requirements
+* Fix UnboundLocalError when updating a cluster without nodes
+* Relocate Senlin unit tests
+* Specify exception type when adding node from cluster
+* Environment support for trigger types
+* Updated from global requirements
+* Make node-update support more parameters
+* Utility function for type and version checking
+* Resolve TypeError of cooldown_inprogress when cluster_scale_out
+* Fix node join/leave cluster error
+* Check profile type matching earlier
+* Cleanse health policy stubs in cluster
+* Fix some spelling misses
+* API docs for webhooks
+* Update TODO list
+* DB support for triggers
+* Make HTTPAccepted exception response in JSON format
+* Unit test cases for nova driver
+* Unit test case for ceilometer v2 driver
+* Add test case for Nova Server Profile
+* Fix cluster-resize operation param checking in server side
+* Fix some time related function calls
+* Refactor plugin name checking logic
+* Add test case for LoadBalancingPolicy(2)
+* Add test case for Trust Middleware
+* Add test case for LoadBalancingPolicy
+* Updated from global requirements
+* Node module test case part2
+* Sample triggers using ceilometer alarm
+* Revise some TODO items
+* Fix image finding call
+* Refactor random heat stack name
+* Fix trust listing
+* Transfer roles of context as inputs to create trust
+* Fix test case of environment
+* enable scheduler_hints when nova server create
+* Use correct input parameter when detach policy
+* Complete test case of policy base module
+* Move webhook test case to tests/engine directory
+* Fix environment test case error
+* Add test case for LoadBalancer driver(1)
+* Updated from global requirements
+* Remove some unused dependencies
+* Add a new exception type 'ResourceUpdateFailure'
+* Updated from global requirements
+* Add test case for policy base module and fix a bug
+* Add node module test case part1
+* Updated from global requirements
+* Fix sdk service credentials
+* Add a utility function for random name generation
+* Fix environment intialization logic
+* Refactor profile/policy schema retrieval
+* Add test case for webhook middleware
+* Test case for neutron_v2 driver(2)
+* Change spec validation exception type
+* Revised design document for webhooks
+* Remove some not-so-useful internal exception types
+* Test case for neutron_v2 driver(1)
+* Rework webhook implementation
+* Move webhook into engine
+* Remove requirements.txt from tox.ini
+* Fix errors in trust checking
+* Updated from global requirements
+* Fix parameter name passed to trust operations
+* Stop stealing keystonemiddleware options
+* Fix trust creation error
+* Fix trusts initliazation problem
+* Updated from global requirements
+* Revise devstack README.rst with new git repo
+* Add test case for Heat Stack Profile
+* Using openstacksdk function call in keystone_v3 driver
+* Updated from global requirements
+* Temporarily unmask nova exception
+* Add user/project/domain to policy objects
+* Updated from global requirements
+* Remove initilization of auth and session attrs in some drivers
+* Updated from global requirements
+* Remove tox and requirements hacking
+* Add test case for ScalingOutPolicy
+* Use policy defaults when not specified for attach
+* Updated from global requirements
+* Minor tweak to policy attach flow
+* Add test case for ScalingInPolicy
+* Add test case for webhook module
+* Use LOG.exception instead of LOG.error for debug
+* Getting Started Doc (4)
+* Rename 'perm' argument of profile_create method to 'permission'
+* Getting Started Doc (5)
+* Getting Started Doc (6)
+* Rework from_dict method of some modules
+* Rework ScalingOutPolicy
+* Rework webhook module
+* Getting started doc (3)
+* Remove incorrect usage of assert_called_once in test cases
+* Getting Started Doc (2)
+* Fix cooldown implementation
+* Refactor code to use oslo_utils.timeutils where appropriate
+* Add test case for deletion policy module and fix some bugs in it
+* Remove some fields from action sorting keys
+* Tweaking LB policy implementation
+* Fix a bug in environment module
+* Fix method parameter error
+* Rework scaling_in_policy
+* Updated from global requirements
+* Fix tox environment for package version problems
+* First step of getting started doc
+* Make node index unique in a cluster
+* Remove argument examining and exception raising in action init
+* Fix a small nit in cluster test case
+* Fix classmethod call error
+* Remove unneeded OS_TEST_DBAPI_ADMIN_CONNECTION
+* Flake8 fix for doc source conf.py
+* Fix flake8 test directories
+* Relocate test modules
+* Fix a bug in schema spec validate and add test case for it
+* Make some exceptions Senlin internal errors
+* Initial version of developer doc for policy types
+* Fix _check_action_complete method to wait for object status change
+* Initial version of lb_policy
+* Add some random strings to create nova server name
+* Revised profile type developer doc
+* Handle exceptions which happen during node creation/deletion/update
+* Switch from MySQL-python to PyMySQL
+* Use random strings to create heat stack name
+* Test case for default handler in cluster controller
+* Test case for default handler in cluster_policies API
+* Remove dead code from cluster's action API
+* Test case for engine start/stop
+* Catch unexpected exception happened during action execution
+* Change status_reason column's type to TEXT
+* Status_reason, stats and created_time are overwritten by mistake
+* Add a TODO item of high priority
+* Unify input parameter definition in Senlin openstack drivers
+* Fix a syntax error in profile base module
+* Test case for cluster_policies API
+* Fix ceilometer driver interface
+* Remove our own copy of Trust implementation
+* Remove useless code related to views
+* Initial version of developer doc for policy
+* Add missing namespace for config generator
+* Handle NodeStatusError exception
+* Add policy cooldown support
+* Refactor context usage in profile
+* Add binding check in cluster_policy_detach in engine
+* Add pool_member related interfaces to neutron v2 driver
+* Add vertical scaling into the pipeline
+* Add item about wiki page improvement
+* Change ProfileInUse exception to ResourceBusyError
+* Switch to use oslo.service
+* Rename NotSupported exception to FeatureNotSupported
+* Rename PolicyExists to PolicyTypeConflict
+* Change PolicyNotAttached to an internal exception and handle it
+* Switch to use ostestr
+* Change PolicyInUse exception to ResourceBusyError
+* Avoid using 'type' keyword as variable name
+* Redefine policy enforcement levels
+* Initial version of profile design doc
+* Updated from global requirements
+* Remove deprecated PolicyData class
+* Add webhook policy
+* Fixed a typo in node doc
+* Rework nova_v2 driver
+* Initial version of developer doc for action
+* Remove unused exception
+* Use correct property name in get_details of os.nova.server profile
+* Cluster and node design doc
+* Add/remove some TODO items
+* Bump oslo.utils version
+* Add 'MultipleChoices' exception mapping
+* Forbid deleting cluster which has policy attached to
+* Fix cluser update behavior regarding metadata
+* Fix some spelling miss and message output
+* Implement the do_check method to check stack's status
+* Add data field to action DB model for policy_check
+* Remove UPDATE_CANCELLED cluster state
+* Sync requirements versions
+* Add action_update interface to db_api
+* Tweak webhook middleware for optimization
+* stack_get of heat_v1 driver now accpet stack_id as input param
+* Tweak webhook implementation
+* Add action parameter to attach & detach mothods of policy
+* Tweak webhook implementation
+* Remove two TODOs from cluster_action
+* Refactored the doc subtree
+* Removed a TODO item
+* Bump python-keystoneclient version
+* Bump requirement versions
+* Revised heat driver and profile
+* Stop using isotime()
+* New cipher module based on AES/CBC
+* Release green threads properly
+* Avoid using SenlinException class directly
+* Forbid deleting profiles in use
+* Test cases for engine scheduler module
+* Sync oslo packages
+* Fix some test cases for ClusterDataTest
+* Fix env bug and add test cases
+* Bump sqlalchemy-migrate version
+* Fixed bugs in registry and add test case
+* Fix a bug about cluster status
+* Add driver for Neutron
+* Fix catalog error when finding user_id from user_name
+* Test case for dispatcher module
+* Add TODO wrt start_action function in scheduler
+* Revised dispatcher notification
+* Add get_connection_params method to trust module
+* Initialize data field of cluster_policy after policy attaching
+* Sync with global requirements
+* Tweaking webhook usage doc
+* Fix some misses of README.rst
+* Delete domain option of 'user create' command
+* Fix two README.rst errors
+* Replace sdk user_reference module with profile
+* Sync cryptography version with global requirement
+* Add a TODO item about Senlin drivers
+* Fix a bug in scaleutils.truncate_desired
+* Fix two bugs in cluster resize
+* Add consts of adjustment params
+* Add webhook documentation
+* Fix errors in service engine
+* feature request: customizable batch size
+* API support for CLUSTER_RESIZE operation
+* Cluster resize operation support
+* Add consts for scaling adjustment types
+* Sample scaling policies
+* Revised TODO list
+* Test case for cluster module
+* Test case for cluster_policy module
+* Test case for cluster size param validation
+* Fix admin requirement in trust middleware
+* Sync pbr version requirement
+* Add last_op property to ClusterPolicy
+* Update pot file with a script for future use
+* Add a TODO item
+* Handle HttpNotFound correctly in nova server_delete
+* Bump oslo.middleware to 1.2.0
+* Revised TODO items
+* Sync-up global requirements
+* Forbid deleting a policy in use
+* Rename 'tags' to be 'metadata'
+* Added user/role create for service setup
+* Add TODO item for service setup
+* Provide best-effort option in scaling policy
+* Add ScalingInPolicy and ScalingOutPolicy
+* Revised service API to use ClusterPolicy module
+* ClusterPolicy module for bindings btw the two objects
+* Fix a bug in event module
+* Added field 'data' to cluster-policy bindings table
+* Minor tweaking to cluster update flow
+* Fix two bugs of cluster updating
+* Revised cluster-update action implementation
+* Revised cluster-update implementation
+* Revised cluster-data module
+* Bump version to 2015.2
+* Add min_size and max_size properties to Cluster
+* A sample spec complex scaling policy
+* Enfore key sorting for serializers
+* Revised metadata support
+* Use absolute value of input count for cluster scalein
+* Sync oslo.config version requirement
+* Rework with nova driver
+* Replace cluster size with new property desired_capacity
+* FEATURES: Fault Tolerance
+* Ensure scaling limitation check will always be done
+* Initial version of ceilometer driver
+* Using senlin endpoint url to create webhook url
+* Resync requirements
+* Set node status to DELETED after node deletion
+* Allow node_get_all_by_cluster ignore deleted nodes
+* Revise two log errors in webhook workflow
+* Make datetime output in ISO format
+* Use function calls for user operations
+* Fix sqlalchemy try...catch problem
+* Remove api-flavor configuration option
+* Delete some useless options in config
+* Delete some unused methods in cluster
+* Removed one todo item
+* Fix a bug about next_index property of cluster
+* Fix a bug about scalingpolicy candidates
+* Fix a small bug in heat stack profile
+* Added API support for getting node with details
+* Support to get details of physical objects
+* Rename TODO to TODO.rst
+* Fix some six related issues
+* Revised the README file
+* Two changes about count calculation in ScalingPolicy
+* Fix a small bug in webhook middleware
+* Trivial fixes for devstack integration
+* Enable flavor retrieval by name
+* Add db_sync to senlin-db-recreate
+* Revised cluster action for node user/proj properties
+* Build RequestContext in webhook middleware
+* Rework server profile using new context building
+* Sort TODO and FEATURES again
+* Implement webhook trigger
+* Abstraction layer for service context
+* Revisions to cluster/node db model
+* New feature request item: CoreOS support
+* Trust middleware implementation
+* Integrate senlin with devstack
+* Revised credential database table definition
+* Change the owner of TODO item about authorization
+* Initial version of a keystone driver
+* Initial version of authorization doc
+* Fix a small bug in cluster model
+* Fix a little bug about cluster policy add/remove
+* Fix three bugs in webhook
+* Remove force param which is useless for webhook_delete
+* Initial version of webhook API
+* Split webhook middleware from webhooks module
+* Tuning tox configuration
+* Fixed missing pieces in doc generation
+* Fix a minor error in profile api testcase
+* Fix oslo modules description
+* Updated oslo dependency to reality
+* Initial version of credential db api
+* Update setup.cfg to reflect new reality
+* Reorganize openstack drivers
+* Separate trust middleware out from common module
+* Move context middleware out of common module
+* Implement webhook engine service
+* Migrate to oslo.policy
+* Initial version of FEATURES file
+* Fix setup scripts in tools folder
+* Add new TODO item for exposing node attributes
+* Fix a little bug of webhook
+* Encrypt webhook url
+* Remove dead file
+* Add two webhook exceptions
+* Remove 'tenant' from RequestContext
+* Replace 'tenant' by 'project'
+* Use openstacksdk to do authenticate in WebhookMiddleware
+* Remove authurl middleware
+* Add authenticate method in sdk module
+* Remove debugging garbage left in context
+* Add username parameter for sdk.create_connection()
+* Initial version of webhook class and middleware
+* Allowing translations to come in
+* Updated the sample conf file
+* Revised tool for service setup
+* Removed useless configuration options
+* Add missing oslo.log module into config generation
+* Initial version of a sample nova server spec
+* Simplified authurl middleware
+* Revised request context implementation
+* Fixed some errors in the nova server profile
+* Added waiting logic for server operations
+* Fixed node deletion return value
+* Remove outdated alias in messaging module
+* Add nova server profile to setup.cfg
+* Initial version of nova server profile
+* Enable nova create/delete to wait for completion
+* Add 2 new exception types for profile operations
+* Detailize the TODO item of webhook
+* Added one TODO item about scaling policy
+* Use oslo log for wsgi
+* Added readonly attribute to a schema
+* Remove unused oslo module local
+* Initial version of nova driver
+* Store user_id in user property of Cluster
+* Added some docs about hacking and testing
+* Initial version - Webhook DB APIs
+* Add webhook table in Senlin DB
+* Revised TODO items
+* Tuned action status checking during signalling
+* Second round of cleansing of the exception module
+* Initial test cases for cluster policy operations
+* More test cases for node operations (engine)
+* Fixed error in node_join operation
+* More test cases for node operations (engine)
+* Added a new TODO item
+* Added doc into build tree
+* Bump requirement versions
+* First round cleansing of exceptions
+* Add test case for tenant_safe in cluster_list
+* Fixed typo in node operation test cases
+* Added some test cases for node operations (engine)
+* Removed a TODO item that has been done
+* Add more test cases of cluster operations (engine)
+* Updated TODO list
+* Added a new test case for cluster_add_nodes
+* Added missing __init__.py file for engine test cases
+* Fixed request_id data type error under py3
+* Remove unused log module import in context module
+* Fixed typo in .gitreview file
+* Added .gitreview file
+* Fixing initial PEP8 and python check errors
+* More test cases for cluster operations (engine)
+* Added more test cases to cluster operations (engine)
+* Make cluster_update operation return something
+* Fixed typo in policy_delete operation test case (engine)
+* Fixed policy checking that was broken by 1cccb9
+* Added some more test cases to cluster operations (engine)
+* Fixed some typos in test cases
+* Fixed some condition checkings in service engine
+* add context in example profile
+* Fixed some errors in engine service
+* Partial stack operations test case (engine)
+* Make 'status' an optional parameter
+* Fixed typo in test case
+* Fixed typo in test case
+* Initial version of policy operation test cases (engine)
+* Added param checking for profile list
+* Do param extraction only when specified (policy_list)
+* Added type checking for policy update
+* Initial version profile operation test cases
+* Fixed bugs in profile create/update
+* Added context to fake profile type constructor
+* Fixed a typo in schema utility
+* Added context to profile constructor
+* Added context support to profile objects
+* Make ascending sorting the default, except for policy bindings
+* Fixed typo in method names
+* Fixed incorrect profile-context customization logic
+* Removed profile_context from profile_create
+* Basic test cases for policy types in engine
+* Fixed some more PEP8 errors
+* Fixed a PEP8 error
+* Fixed a PEP8 error
+* Initial version of engine test case: profile types
+* A module for faked entities
+* Minor tweaking to the service engine module
+* Add project_id based target policy check
+* add context support for profile in API
+* Removed some outdated comments
+* add context in profile in the API layer
+* refactor for the profile context
+* fix pep8 error
+* add one more attribute for Profile
+* fix the problem for the preference doesn't work in openstackSDK
+* Added one todo item
+* Undo commit ee6b7a8b
+* Removed incorrect copyright claim
+* Removed useless entries
+* Remove changlog file since no one is using it
+* update stack_create to accept a specific region name
+* update TODO to add multi-region/cloud support
+* Fixed oslo namespace reference error
+* Fixed fault middleware test case
+* Remove test case from other projects
+* Fixed exception checking in cluster db api tests
+* fix the issue to set region to create service connection
+* Removed one TODO item that has been completed
+* Add trust middleware into senlin-api pipeline
+* Add SenlinTrust class to wrap trust information
+* Fix a small bug in health_manager
+* Redefine get_trust and list_trust mothods
+* Removed 'identify_cluster' method
+* Initial test case for rpc client
+* Simplified event logging
+* Added status/status_reason inference to event module
+* Added some event log support to cluster module
+* Revised DB exception type
+* Initial version of trust middleware
+* Allow retrieve operation in trust SDK resource
+* Fixed stack_update() call in heat stack profile
+* Removed one todo item
+* Removed some useless calls from parser module
+* Removed one TODO item
+* New DB test cases for node update
+* Move status update from node object to db layer
+* Add omitted __init__ file
+* Removed several items that have been completed
+* Test case for cluster-policy binding deletion
+* Add Health Manager and move periodic healthy checking to it
+* Add a TODO item
+* Add a TODO item for privilege management
+* Initial version of Trust resource of SDK
+* Added one TODO item
+* Rename exception test case
+* Revised common/context test case
+* Added missing 'user' key in context dump
+* Initial test case for common/constraints
+* Revised constraint validation logic
+* Added constraint checking
+* Remove auth_password which is not used at present
+* Fixed faked bind port error
+* Initial version of events api test cases
+* Removed one TODO item related to event table
+* Remove API layer todos
+* Fixed initialization of placement policy
+* Bump oslo.context to 0.2.0
+* Fixed error in event-show API
+* Revised API doc for events
+* Revised sample JSON data from action_get operation
+* Fixed import error in action controller
+* Initial version action controller test case
+* Revised sample JSON file for action_list operation
+* Add trusts attribute to context
+* Added data checking for action-list
+* Fixed API doc for action_list
+* Removed some fields on which actions are sorted
+* Removed 'permission' from action list filters
+* Revised API doc for action_list operation
+* Make node_join/leave return simpler results
+* Added API doc for node_action operations
+* Revised API doc for node_get operation
+* Bump oslo.db version to 1.5.0
+* Updated API doc for node-update operation
+* Added policy item for node-update
+* Use PATCH verb for update operation
+* Initial version of node_update support
+* Fixed project id checking error in service
+* Fixed the initialization of init_time for node
+* Revised API doc for node-create operation
+* fix node-delete issues and make status changes to cluster if node in error
+* More test cases for the node_list api
+* Fixed error in node_index
+* Fixed API doc for node_list operation
+* Fixed inconsistency in node_list operations
+* Bump oslo.config to 1.9.0
+* Revised cluster_delete implementation
+* Added one more test case for cluster_delete
+* Revised API doc for cluster-policy-show
+* Revised cluster-policy-get implementation
+* Bump sqlalchemy-migrate version to >= 0.9.5
+* Added support for cluster_policy_get()
+* Fixed TOC error in generating API docs
+* Revised API doc for cluster-policy-list
+* Revised field names for cluster delete operation
+* Remove 'limit' and 'marker' from cluster-policy list parameters
+* refine readme
+* refine readme to use setup-service to create service and endpoint in keystone
+* Revised TOC file to reflect the latest changes
+* Revised cluster actions API doc
+* refine readme
+* add installation steps in readme
+* fix pep8 problem
+* Make sure cluster-policy association is deleted when a cluster is deleted
+* fix the KeyError error when duing cluster delete
+* Remove another unused json sample
+* Remove unused json example file
+* More test cases for cluster-update operations
+* Fixed xml structure errors in the doc
+* Use a custom clouddocs plugin for doc building
+* Revised cluster-update API doc
+* Initial support to cluster_update
+* RPC layer support to cluster_update
+* Intial version of cluster_update API support
+* Use PATCH as command for cluster update
+* Revised sample response for cluster_get
+* Revised API doc for cluster_create
+* Revised cluster list API doc
+* Fixed HTTP requests for profile/policy update
+* Fixed initialization error for lb policy
+* Revised policy_get API doc
+* Added checking for policy_update
+* Fixed HTTP method for update method
+* Added entry for policy_update
+* Updated API doc for policy_update
+* Bump oslo_log version requirement to 0.4.0
+* Revised test case that allows flexible profile update
+* Added one TODO item
+* Added policy_update support
+* Test cases for policies API
+* Avoid 1.7.0 oslo.messaging
+* Fixed policy_create response code
+* Make setup-service tool work
+* Fixed profile-create api doc inaccuracy
+* Fixed api doc for profile-create
+* Bump openstacksdk version to 0.4.1
+* Fixed policy-list api doc
+* Fixed Map schema parsing error
+* Fixed scaling policy field parsing error
+* Added one TODO item
+* Remove osprofiler module which is unnecessary
+* Updated profile-update api doc
+* Use 'PATCH' for profile_update method
+* Fixed profile_update method implementation
+* Fixed profile update API incorrect behaviors
+* Revised profile-get api doc
+* Modified conf file path for config generation
+* Remove log from namespace
+* Fixed config gen namespace error
+* Fixed error in cluster create path
+* Added oslo.log to requirements
+* Fixed profile create api doc
+* Fixed profile create api doc
+* Revised profile list api doc
+* Revised policy_types resource api doc
+* Revised api doc for profile_types resource
+* Make event_prune() a standalone function
+* Revised TODO items
+* More test cases for profile DB API
+* Fixed profile creation error in test case
+* Added more test cases to profile DB API
+* Fixed errors in profile_get()
+* Fixed cluster_policy_get_all() errors
+* Test cases for cluster-policy-binding db apis
+* Revised policy DB API test cases
+* More test cases to policy DB API
+* Enable policy_get_by_short_id() to show deleted
+* Enable show_deleted for policy_get_by_name()
+* Removed create_policy function
+* Revised TODO items
+* Make node created auto have a project assigned
+* More test cases to node DB APIs
+* Fixed cluster index increment error
+* Added tenant_safe for node_get_all()
+* Added profile type and project match checking
+* Added profile type and project checking for node_join
+* Added two exception types to fault middleware
+* Added two more exception classes
+* Add 'project' property to node object
+* Added 'project' column to node table
+* Fixed node_get_all parameter cluster_id none case
+* More test cases for node DB API
+* More tests cases to node DB APIs
+* Enable node_get_by_short_id to handle show_deleted
+* Enable node_get_by_name/short_id to honor show_deleted
+* Revised cluster DB API test cases
+* Added profile_delete test case
+* Policy enabling for event list/show
+* API layer support for event list/show
+* Event list/get support in RPC layer
+* Event find/list/show support in engine
+* Make Event loading smarter
+* Fixed stack_context merge error
+* Added 'global_tenant' as a common parameter for API calls
+* Added one event log call for test
+* Fixed PEP8 error
+* Added event not found exception
+* Initial version of event module
+* More test cases for by-cluster event retrieval/counting
+* Allow for node creation with none cluster ID
+* Fixed errors in getting events by cluster
+* Added column 'cluster_id' to event object model
+* Added cluster_id to event object
+* Added unit tests for event_get_all()
+* Removed 'node_count' attribute from cluster
+* Revised DB event API test cases
+* Move create_event away to the unit test module
+* Allow event list to be sorted by obj_name
+* Improved DB API event_get_all()
+* Added 'project' attribute to Event object
+* Added column 'project' to Event table
+* Added test case for event_get_by_short_id
+* Removed useless test cases for event controller
+* Removed some helper functions in DB event apis
+* Revised schema return result
+* Minor tweaking to profile_types controller (comments)
+* Basic test cases for policy_types controller
+* Basic test case for profile_types controller
+* Fixed routes test cases based on new routes
+* revised policy entries related to 'schema' route
+* Fixed profiles test case for TypeNotFound exception
+* Added PolicyTypeNotFound exception type
+* Fixed exception throw in environment
+* Added ProfileTypeNotFound exception
+* Revise profile/policy type interface
+* Fix incorrect import module name
+* Add Health_policy implementation
+* Re-enable senlin/tests/* files to be flake tested
+* Added test cases for profile deletion operations
+* Rename 'perm' to 'permission' to avoid confusion
+* Allow spec to be None in profile update
+* Allow spec to be None for profile update
+* Test cases for profile update calls
+* Added support to profile_update operation
+* Added update support to profile
+* Cleanse PEP8 errors in db api test cases
+* Further removal of PEP8 errors
+* Fixed PEP8 error for some test cases
+* Test cases for profile-get API
+* Minor tweaks to node controller tests
+* Two more test cases for profiles controller
+* Make SpecValidationFailed a 400 error
+* Added some test cases to profiles API
+* Move parameter validation to API layer
+* Added missing space in error messages
+* Add limit to welknown request parameters
+* Make ProfileValidationFailed a 400 error
+* Make sure limit is an integer
+* Enforce boolean conversion for 'show_deleted'
+* Ensure that 'profile' key exists for create/update call
+* Event serialization support (basic)
+* One more test case for cluster-policy update
+* Test case for cluster-policy operations
+* Added non-int test for scaling in operation
+* Bump six version to 1.9.0
+* Added more test cases of scale in/out
+* Added single quotation to exception message string
+* Make SenlinBadRequest kind of HTTPBadRequest
+* More test cases to cluster-action api
+* More test cases to cluster APIs
+* Make sure tags is not None
+* More test cases for cluster action apis
+* Added test cases for profile/cluster not found
+* Fixed typo in cluster_update
+* Revised parameter extraction for cluster-update
+* Added test cases for cluster_update operation
+* Revised cluster get api
+* Added missing space in error message string
+* Added two test cases for cluster apis
+* Added test cases for cluster_get_by_short_id
+* Fixe param problems in DB test cases
+* Make DB API throw the right exception type
+* Revised stack profile spec data retrieval
+* Added show_deleted support to profile_find
+* Removed a TODO comment
+* Profile show_deleted support
+* Added one TODO item for Heat profile type
+* Added code for node-update
+* Minor tweaking to nodes API
+* Initial version of node API test case
+* Force conversion of boolean parameters
+* Make InvalidParameter a 400 error
+* Tolerate bad format of create/update request bodies
+* Minor tweaking to error message
+* Make node/profile not-found 'acceptable' exception
+* Initial test case for build_info API
+* Fixed an error in cluster-policy API
+* Test case for API routing
+* Renamed from test_openstack_api_v1_util
+* Shared class and utility functions for api test cases
+* Make InvalidParameter a case of BadRequest
+* Tweaked some comments
+* Use six for text translation
+* Added consts for some API request parameters
+* Initial API test for cluster controller
+* Force boolean parameter type conversion in clusters API
+* Fixed PEP8 error found so far
+* Removed log from dependency to oslo_incubator
+* Migrating to use oslo_log
+* Remove deprecated module
+* Adapted namespace for oslo modules
+* Sync with oslo-incubator
+* Initial subdir for API test cases
+* Deleted a test case
+* Minor tweaking to cluster controller in API
+* Added one more configuration option
+* Added url_fetch() utility function and test case
+* Added test case for List data type
+* Fixed broken policy DB API
+* Correct action params
+* Fixed node DB API tests that were broken
+* Fixed cluster_delete API errors
+* Import correct 'socket'
+* Added back support to auth_uri in config file
+* Added test cases for utils module
+* Removed useless module param_utils
+* A sample data for policy tests case
+* Enable policy to accept a policy file
+* Initial test case for policy module
+* Remove useless policy json file
+* Moved version middleware test case
+* Moved middleware test cases
+* Initial test case for ssl middleware
+* Fixed fault middleware test cases
+* Fixed errors in schema processing
+* Added dummy spec schema for some profiles
+* Make action_acquire atomic
+* Schema definition for update policy
+* Added schema definition for LB policy
+* Make constraints a list
+* Initial support to policy schema
+* Enable constraints to be listed in schema
+* Added more policies for validation
+* Make constraints iteratable
+* Added schema show support to profile types
+* Added missing parameter 'constraints' to schema
+* Basic schema support to heat stack profile
+* Basic schema support for profiles
+* Basic schema support for health policy
+* Basic schema support for scaling policy
+* Basic schema support for deletion policy
+* Basic support policy spec validation
+* Added validation for profile/policy when creation
+* Added SpecValidationFailed exception type
+* Initial version of schema checking
+* Initial version of constraints module
+* Added more parameter checkings for service interface
+* Added bool parameter parsing utility function
+* Parameter validation for cluster scaling
+* Remove 'size' from cluster-update operation
+* Added InvalidParameter exception
+* Added value parsing/validation for cluster create operation
+* Added util function of int param parsing
+* Rename short_id.py
+* Removed one TODO item
+* Added empty method for template and schema
+* A small nit in tools README
+* Bump keystoneclient version to 1.1.0
+* Initial implementation for scaling policy
+* Enable scale-out to do scale-in
+* Added log to policy checking
+* Make 'count' parameter optional for scaling operations at RPC layer
+* Added count value check and validation for scaling operations
+* Don't forge 'count' parameter if not specified
+* Fixed errors in scaling policy
+* Fixed error in setting data items in policy data
+* Added initialization of a new policy_data dict
+* Fixed cluster id reference error
+* Added backref for cross-table reference convenience
+* Make cluster-policy operations work
+* Make LB policy conform the attach/detach interface protocol
+* Tweaking the base action implementation
+* Make attach and detach methods accept only positional arguments
+* Make attach/detach/update operations 'action' PUT requests on Clusters
+* Remove attach/detach/update from ClusterPolicyController
+* Added CLUSTER_UPDATE_POLICY as new action name
+* Fixed errors in policy-detach
+* Reworked cluster-policies binding DB API
+* Remove policy binding actions from cluster controller
+* RPC layer support for cluster-policy listing
+* RPC layer support cluster_policy listing support
+* Fixed cluster_action behaviors
+* Revised DB API for cluster_policies query
+* API layer support for cluster-policy bindings
+* Added policies for cluster-policies domain
+* Enable cluster-node-list to handle cluster name or short ids
+* Fixed node deletion logic
+* Cluster action support for SCALE_OUT and SCALE_IN
+* Removed incorrect exception catch logic
+* RPC layer support scale-in and scale-out
+* Added API layer for scale-in and scale-out support
+* Fixed cluster_lock_steal() call
+* Fix node deletion error
+* Enable Heat drivers to ignore NotFound exception when doing delete
+* Added min_step support
+* Added logic to tolerance ill-formed Heat exception
+* Fixed scaling policy sample for consistency
+* Added basic exception parsing for interaction w/ drivers
+* Revised policy comments and some details
+* Added missing priority parameter
+* Pass parameters to attach_policy action
+* Add a TODO item
+* Bump keystonemiddleware version
+* Fixed typo in deletion-policy
+* RPC layer for cluster-policy association
+* API layer support cluster policy association
+* Fixed typo
+* Fixed some PEP8 errors
+* Fixed cluster-del-nodes error
+* Revised base action exception detection
+* Make node creation increment cluster size if needed
+* Enable node-create to do profile/cluster find/validate
+* Added update method to PolicyData object
+* Fixed action name and return result error
+* Enable cluster create to do a profile find/validate
+* Fixed errors introduced by module renaming
+* Minor tweaking to update policy
+* Minor tweaking to scaling policy
+* Minor tweaking to placement policy
+* Initial framework for lb policy
+* Minor tweaking of health policy module
+* Major rework of the deletion policy
+* Refactored cluster action implementation
+* Removed ACTION_RETRY and enforce() method
+* Reworked policy_check() in action base
+* Rename 'destroy_after_delete' to 'destroy_after_deletion'
+* Added one more criterion for deletion policy
+* Added a 'priority' column to cluster_policy table
+* Merged 'senlin_consts' and 'attr' module
+* Moved HealthCheck out of the AWS LB policy spec
+* AWS style health policy
+* Make some properties part of pool spec
+* Initial samples of policy specs
+* Added new TODO item
+* Remove 'get_next_index()' method from cluster
+* RPC/Engine layer support for policy operations
+* Revised policy base class implementation
+* Fixed typo in last commit
+* Revised profile store() logic
+* Modified policy_get_all API implementation
+* Added 'updated_time' and 'deleted_time' to policy
+* Added API layer support for policy operations
+* Updated sample policy
+* Added policy related policy
+* Fixed node join/leave transaction
+* Revised node_migrate DB API
+* Added new item to policy.json
+* Added missing 'SUPPORTED_ACTIONS' check
+* RPC layer support to NODE_JOIN/LEAVE
+* Added TODO comment in node module
+* Trivial modification
+* Added API layer node action support
+* Fixed errors in add_nodes/del_nodes path
+* Fixed action naming for node actions
+* Fixed errors in node do_join() and do_leave()
+* Another way to print stack
+* Fixed api body parsing for cluster_del_nodes
+* Return only action id when action is scheduled
+* Fixed action_get error
+* Reworked cluster_add_nodes and cluster_del_nodes
+* Added do_join() and do_leave() methods
+* Optimized node update logic
+* Added check for cluster_add_nodes
+* Raise proper exception when request validation fails
+* Basic support to CLUSTER_DEL_NODES
+* Preliminary support to CLUSTER_ADD_NODES
+* Fixed support to node indexing
+* Removed unused variable 'values'
+* Optimized calls to set_status()
+* Fixed method name typo
+* Revised cluster action implementation
+* Revised node action implementation
+* Revised base action implementation
+* Fixed oslo messaging namespace deprecation error
+* Fixed RPC call error after upgrade
+* Make oslo_messaging a little silience
+* Remove reference to identifier
+* Revised messaging to use 1.6.0 naming convention
+* Fixed oslo_messaging package version requirement
+* Tuned the cluster creation logic
+* Reworked policy checking
+* Added a TODO item
+* Added cluster_get_next_index() API
+* Added cluster:action to policy list
+* Test case modification for exception handling
+* More support to short-id and name based query
+* Unified throwing exception Not Found
+* Support to by name query for profile and policy
+* Added short id query to profile, policy, action and event
+* Added one TODO item
+* Added short ID support for cluster finding
+* Add one new exception - MultipleChoices
+* Supporting action-get by name
+* Added default cluster operation timeout value
+* Just enable cluster delete to be a forciable action
+* Fixed node status checking in do_create()
+* Fixed action status checking errors
+* Revised support to node actions
+* Fixed node status checking error
+* Fixed profile type validation errors
+* Fixed lock API bugs and added test cases
+* Added node_lock_acquire/release APIs
+* Fixed typo errors in db api
+* Revised node_lock DB APIs
+* Renamed 'engine_id' or 'worker_id' to 'action_id'
+* Avoid passing action around
+* Avoid double deletion
+* Add stack dump for debugging
+* Added name reference support for Nodes
+* Added NodeNotFound exception
+* Added new API node_get_by_name()
+* Revised TODO list
+* Removed identifier support
+* Enable cluster-show to handle cluster names
+* Revised cluster-delete logic
+* Fixed errors in cluster-delete path
+* Fixed error message when timing out waiting lock
+* Avoid generator for node load_all()
+* Avoid nested db transaction when action udpate
+* Escalate debug log to error
+* Make get_nodes() and get_policies() more safer
+* Fixed reference to dispatcher.Dispatcher NEW_ACTION
+* Renamed action_control_check to action_signal_query
+* Refactor cluster get method
+* Separate regular failure from timeout
+* Revised action status checking/setting implementation
+* Remove worker from action_abandon() call
+* Fixed node_create/show API for consistency
+* Added a potential todo item for name conflict detection
+* Remove lock_steal logic for the moment
+* Wrap action.execute() in a try-except block
+* Added TODO for cancel_action()
+* Remove cluster_lock_steal() API
+* Removed username from environment parameters
+* Check whether profile type is supported when creation
+* Fixed cluster lock acquisition parameter error
+* Revised cluster_create api implementation
+* Bump oslo.messaging to 1.6.0+
+* Revised profile-create API
+* Revised cluster lock usage to use the new design
+* Reworked ClusterLock module and test cases
+* Revise ClusterLock table definition
+* Replace 'scope' field with 'semaphore'
+* Added column 'scope' to cluster lock
+* Reduce cluster size when node is deleted
+* Major re-org to scheduler and dispatcher
+* Call action method to determine if it is cancelled
+* Revised cluster_lock_acquire logic
+* Revised base Action class implementation
+* Add policy for profile type template/spec
+* Added signal method to Action and moved ActionProc here
+* Renamed 'action_control' to 'action_signal'
+* Added optional reason parameter to mark_failed()
+* Revised some action APIs
+* Added signal() class method to action base
+* Renamed 'action_release' to 'action_abandon'
+* Removed a log info call
+* Have cluser actions use the lock facilities
+* Revised lock implementation
+* Added IRC channel
+* Revised log format to be consistent
+* Revised log format
+* Make action cancel failed silently
+* Comment out redundant deletion logic
+* Fixed calls to _from_db_record()
+* Revised cluster class implementation
+* Revised node class implementation
+* Revised node_get logic
+* Handle cluster not found exception
+* Dictionarize the node_get result
+* Fixed node-delete and node-update path
+* Fixed errors in node deletion path
+* Refactor module import for 'action' module
+* Refactor module import for 'node' module
+* Refactor module import for 'cluster'
+* Fixed lock checking typo
+* Fixed auto-naming of cluster nodes
+* Fixed errors in cluster actions
+* Revise cluster lock invocations to use new API
+* Revised cluster_lock_create() function
+* Added lock retry options to global config
+* No need to check profile existence, due already check in profile_get
+* Set profile.context and profile.created_time for memory
+* Some small nits for profiles.py
+* Fixed node status setting
+* Make cluster creation work
+* Re-design cluster locking in ClusterAction
+* Switch parameter position in node_create call
+* Enable E265 and H307 PEP8 checking
+* Fixed H233, H402 PEP8 errors
+* Fix stack profile properties error
+* remove healthy_check due to redundant
+* Revised profiles documentation
+* Enable E202 and F812 PEP8 checking
+* remove periodic_interval, it is duplicated in common/config.py
+* Enforce PEP8 F402 checking
+* Removed one more PEP8 error
+* Initial version of profiles doc
+* Revise several minor errors about policy
+* Fixed H404 and related pep8 errors
+* Cleanse Flake8 errors
+* Remove clients from environment module
+* Sample configuration file
+* Further remove useless configuration options
+* Removed TLS related config stuff
+* Removed one useless import
+* Removed clients config options
+* Remove clients package from config generator
+* Remove clients module from setup config
+* Removed parameters section from spec
+* Fixed errors in sample stack template
+* Revised Heat stack profile implementation
+* Stack model for interacting with Heat
+* Initial version of Heat stack driver
+* Revised context contents
+* Removed dead reference to auth_uri option
+* Revised base driver implementation
+* Profile base to store context
+* Initial version of sdk client module
+* Revised stack model for client side sdk
+* Initial version of orchestration stack model
+* Revised project requirements
+* Revised TODO list
+* Enable cluster action to deal with NotFound exceptions
+* Added DriverFailure exception
+* Removed lockfile from test requirements
+* First round of code cleansing for node-create action
+* Revised context usage
+* Added node_update DB API
+* Added missing node_update() DB API
+* Remove some finished TODO items
+* Fixed API layer cluster delete support
+* Fixed cluster status setting error
+* Remove custom sleep time assignment
+* Fixed timestamp passing error in db apis
+* Fixed RPC client side error for cluster delete
+* Fixed some errors in cluster deletion path
+* Fixed api layer support for cluster update and delete
+* Renamed two exceptions for actions
+* Fixed runtime data reference error
+* Refined action thread implementation
+* Refined some action APIs
+* Initial attempt to support cluster deletion
+* Make start_time and end_time float values
+* Added missing parameter when calling action.store()
+* Restrict oslo_messaging version as suggested
+* Add timer to call periodic_tasks
+* Initial version of exception test cases
+* Initial version of api util test cases
+* Minor tweaks
+* Initial version of fault middleware test case
+* Rename 'statuses' to 'STATUSES'
+* Partially rework cluster action module
+* Fixed policy check logic
+* Reworked some of the action processing logics
+* Fixed (hopefully) db transaction errors
+* Make ActionProc a standalone procedure again
+* Unify naming of contexts
+* Minor code flavor tweaking
+* Bump eventlet to 0.16.1
+* Cleanse PEP8 error found so far
+* Added default action name for cluster create
+* Assign default action name for node create/delete
+* Added missing 'init_time' field
+* Example spec for creating profile of os.heat.stack type
+* Remove old sample
+* Fixed PEP8 errors in test cases
+* Fixed action list where the generator may get returned to client side
+* Fixed pep8 error in scheduler module
+* Fixed registry error where path is replaced by name
+* Add 'init_time' to node and 'cluster_id'
+* Added 'init_time' to cluster objects
+* Fixed errors introduced by code reorg
+* Added more datetime fields to table
+* Make most object list having a default order
+* Fix profile list tricky errors
+* Fixed typo error
+* Bump keystonecllient to 1.0.0
+* Initial version of version negotiation test case
+* Initial version of WSGI test case
+* Error fixes with basic cluster show support
+* Fixed policy spec error
+* Fixed reference to rpc_api
+* Fixed paginated query errors
+* add action_mark_failed/cancel in db api
+* Preliminary support to cluster list
+* Add module that was missing in git
+* Initial support to cluster creation
+* Add code into error dict for exception handling
+* Import correct action module in engine service
+* Add missing __init__.py to actions/
+* Further split action module
+* Split base action from action module
+* Removed uselss code
+* Added missing attr module
+* Modify http method 'POST' to 'PUT' for update actions
+* Removed useless policies
+* Add periodic_task support
+* Initial version of serializer test case
+* Fixed auth_url middleware with test cases
+* Initial version of policy checking test cases
+* Tuned action implementation
+* Reorganized paginate query
+* Remove several clients from configuration
+* Renamed rpc api module to common/attr
+* Removed 'name' from cluster constructor
+* Various tweakings to cluster class
+* revised for db table 'action' change(depends_on/depended_by change to list))
+* Move configuration file generation into tools
+* Minor tweakings
+* Added action-list, action-get API support
+* Added policies for actions
+* Correcting usage of context
+* Added node-show support
+* Added node delete support
+* Added two more policies for node operations
+* Move policy.json file to the correct path
+* New data type to support Json lists
+* Node create and node list operation
+* Add a TODO item of multi-thread rework
+* Added more suport functions to action module
+* Added three policy items to policy
+* Add TODO item of Policy framework
+* Remove mutable module from sqlalchemy data model
+* Initial version - Policy framework
+* Initial version - Policy framework
+* Initial version -- Policy framework
+* Add a comment about profile_type
+* Synchronized with global-requirements
+* Added support to profile-show
+* Improve profile listing
+* Added attributes for profiles
+* Implemented profile delete operation
+* Added profile delete policy
+* Added created_time and updated_time to profile
+* Fixed Oslo.i18n namespace error in tests module
+* Profile list method prototype change
+* Fix error in base profile class
+* Engine support for profile list and create
+* Fixed error in profile search logic
+* Profile controller support for list and create
+* Fixed typo errors in handlers
+* Fixed method name in rpc invocations
+* Fixed method declaration errors
+* Revised cluster operation interface
+* Initial support to profile operations
+* Cleanse interface for policy types
+* Cleansed profile type API invocation chain
+* Fixed oslo.i18n namespace errors
+* New policy entries for profile operations
+* Fixed oslo.i18n namespace errors
+* Initial version script for service setup
+* Remove non-existent service names
+* Allow eventlet version > 0.16.0
+* Fixe oslo i18n namespace errors
+* Fixed oslo.i18n namespace error
+* Fixed oslo.middleware namespace error
+* Fixed oslo.config namespace errors
+* Fix oslo.utils namespace error
+* Minor revisions to profile controller
+* New todo item
+* Fixed some PEP8 errors
+* Fixed PEP8 error in identifier.py
+* Add cluster actions policy
+* Add version support for API and Engine versions
+* Added missing comma in json file
+* Added 3 policy entries
+* Modify create_cluster api
+* Added some empty API entries and build_info
+* Fix oslo namespace error
+* Add clusters:index policy rule
+* TODO item for cleansing name/id kind of identifier
+* PEP8 error fix
+* Initial version for policy types endpoint
+* Revise oslo package name
+* Registry returns a list of dictionary
+* Make oslo package names conform to new convention
+* remove action query lock task
+* add transaction support to 'action_start_work_on'
+* Fix status field error
+* Test case for JSON serializer
+* Remove XML deserializer support
+* Code refactoring
+* Cap eventlet version due to bugs found
+* Removed old files that are useless now
+* Reordered method definitions
+* Simplified registry implementation
+* Disable initialization of clients for the moment
+* Fix base class name error
+* Fix base class name error
+* Make stack operations invoke sleep() directly
+* Add sleep method to scheduler module
+* Add profile type list method
+* Fix method's doc typo errors
+* Make engine/topic work without host name specified
+* Fixed i18n references and policy scope
+* Add profile_type interface in rpc client
+* Initial version - profile_types API
+* Initial version - profiles API
+* Sync global requirements oslo.serialization
+* Add status control in ClusterAction
+* Revise several minor errors
+* Remove timeout check in reschedule
+* Add lock operations for ClusterAction
+* Add 'control' field to 'action' table
+* Fix a little bug in ClusterAction
+* Redesign action scheduling interface
+* Remove a TODO item that has been supported
+* Add a TODO item about DB API
+* Fix a bug about service stop
+* Make senlin-engine and senlin-api runnable
+* Revised TODO list
+* Initial version of devstack support
+*  Inital version of cancel cluster update
+* Put Dispatcher into an individual module
+* Add action lock related DB API
+* Inital version of cancel cluster update
+* Add action control DB api
+* Add action control DB api
+* Add a TODO item
+* Redesign scheduler module
+* revised action depency tests
+* Synchronized from global requirements
+* Added some checkings to be ignored
+* Remove useless files
+* Re-implement dispatcher notify and broadcast
+* Bump oslo.db version to 1.3.0
+* Fix build info method error
+* Implement ActionCheckpoint to help ActionPorc to check possible control event during exection
+* Delete useless json file
+* Initial verion of API specification
+* Integrate Timeout and TimedCancel
+* Action proc will now wait for a while for possible control event before going to next step
+* Wrap actionProc into callable class *ActionProc*
+* Correct senlin_api conf to start wsgi server
+* Avoid using private class from oslo.i18n
+* Reverse insane MutableDict revision
+* Add a work item about action progress control
+* Implement _broadcast_dispatcher in EngineService
+* Add a work item of action progress control in TODO list
+* Add event injection in start_action process
+* API site configuration
+* Delete stalled xml file of no use
+* Move to use MutableDict from new SQLAlchemy versions
+* Added level field to event table
+* Remove action lock from senlin_lock module. Now ThreadGroupManager will directly use db_api interface to handle Action lock
+* Take schedule module task
+* Start initial version of schedule module(unfinished):
+* Task 2 tasks
+* Add policy.json file
+* Added a new item
+* Some TODOs for scheduler module
+* More test cases for cluster DB APIs
+* Add paginate query test case
+* More test cases for cluster-policy bindings
+* Test case for cluster-policy binding
+* Fixed column name typos
+* Compliant to PEP8
+* Removed dead code
+* README file for tools subdirectory
+* Added profile type checking for UPDATE actions
+* Added profile type checking for update actions
+* Enable update action to pass profile id
+* Added 'NodeStatusError' as new exception type
+* Minor tweaking
+* Fix deserialization of profile objects
+* Stack profile implementation draft
+* Added one more exception class
+* Add config generator config file
+* Include README.md into setup
+* Removed since not used anywhere
+* Fix some minimal errors
+* Update policy to conform to new interface
+* Scaling policy to conform to new interface
+* Complete DB action APIs basic functionality
+* Placement policy to conform to new interfaces
+* Renamed args to kwargs
+* LB policy to conform to new interfaces
+* HealthPolicy skeleton for checking
+* Revised to use global constants
+* Move victim selection to enforce
+* Revise to match base class
+* Rename policy.py to base.py
+* Rename policy.py back to base.py
+* Added implementation for attach_policy
+* Revised cluster_attach_policy api
+* Added DB serialization logics
+* Remove openstack.common.uuidutils
+* Remove license text
+* Fixed typo errors
+* Added three new exception types
+* Rewriting base Profile class
+* Fixed initialization of global registries
+* Fixed flake8 errors
+* Fixed global registry intialization
+* Minor revision
+* Rough implementation of Node class
+* Fixed flake8 errors
+* Revised execute() logics
+* Added node_migrate API
+* Initial version
+* Initial version
+* Added some required methods
+* Fixed typo errors
+* Switch to oslo.context
+* Added two comments as TODOs
+* Added two new types of exceptions
+* A bunch of changes to Action implementation
+* Make service engine do explict store()
+* Rework scheduler interface
+* Add DB load/store logic to Node class
+* Mass rewriting -- fixing holes
+* Rename 'node_count' to 'size' in cluster table
+* Added create_action function
+* Cleansed the class implementation
+* add action API revision task
+* Rename base.py to policy.py
+* WIP version for Yanyan to continue work on
+* Add 'ActionNotSupport' exception
+* Revised
+* Remove action_update interface
+* Revised
+* Revert profile reference revision
+* Fixed error when parsing a stream from memory
+* Fixed cluster db model (important!!!)
+* Fixed comment error
+* Initial version
+* Revised
+* WIP change to stack profile example
+* Added support to '!include' mechanism
+* Initial version
+* Initial version
+* Replaced README.rst with README.md
+* Remove this file for refactoring
+* Added some optimization to YAML loader
+* Renamed some exceptions
+* Initial version
+* Added back 'environment_dir' option
+* Fixed a typo
+* Added ClusterValidationException
+* Renamed some action names
+* Revised password
+* Create README.md
+* Initial commit
+* Keep working on senlin engine items:  - increase runAction and wait function in senlin scheduler;  - do_create/do_update method of Cluster will create a node    object before creating a nodeAction;
+* Add action APIs
+* Revised
+* Revised
+* Initial version
+* Revised
+* Initial version
+* Revised
+* Fixed SQLAlchemy version requirement
+* Fixed errors in Event DB API
+* Initial test case for event db api
+* Added new util function for creating event
+* Added utility function for policy testing
+* Initial version of policy DB API test cases
+* Allow policies to be softdeleted
+* Support soft-delete for some objects
+* Make some objects soft-deleted
+* Fixed column name typo error
+* Revised
+* Added policy_delete() API
+* Add action APIs of db
+* Added a TODO item for node_set_status()
+* Initial version for profile DB API testing
+* Revised test case for profile parsing
+* Modify action table to support dependency
+* Added comments to Action statuses definition
+* Added status definition to Action
+* New work items
+* Initial version
+* Perform flake8 check for engine/service.py
+* Perform flake8 check for api and rpc source code
+* Initial version for node API with test cases
+* Fix a little syntax error
+* Remove crypto and versionutils from openstack-common.conf since these two modules has not been used so far
+* Add local module which was omitted before
+* Minor tweaking
+* Added more util functions
+* Feature enriched
+* Fixed some errors and inconveniences
+* Initial version
+* Revised to contain more useful information
+* Added action table
+* Renamed script to be more accurate
+* Initial version
+* Initial version
+* Add description about some unsure oslo modules importing
+* No longer needed if oslo.config is used
+* Falsely removed engine/service.py before, add it back
+* Remove gettextutils in config/generator
+* Split ThreadGroupManager from EngineService
+* Initial version
+* Initial version
+* Reworked policy file and remove gettextutils
+* Minor tweaking
+* Add 'data' fields to cluster and node
+* Revised version
+* Initial version
+* Simplifed version -- Senlin engine service
+* Remove some unnecessary properties from Senlin RequestContext, e.g. trust related ones, aws_creds and overwrite
+* Add openstack/common/policy module and its dependency
+* Base classes for test cases
+* Remove osprofiler for now
+* Switch to oslo.config
+* Make heat client works first
+* Add policy handling
+* Add ssl middleware for Senlin API
+* Correct the code of Cluster.rt initialization
+* Add server parameter when creating rpclient for Senlin API
+* This file is no longer needed
+* This file is no longer needed
+* Removed config and gettextutils from requirement
+* Rename uuid attribute of cluster/node to id
+* Working version
+* Working version
+* Working version
+* Working version
+* Remove stupid timestamp mixing and softdelete
+* Finally works!
+* Profile table must be created as the first table
+* Revised DB implementation
+* Revise basic_key definition in clusters_view based on rpc/api.py
+* Revise some syntax errors about Senlin engine service implementation
+* Add the omitted 'INIT' statuses key
+* Fixed errors in the code
+* Revise some syntax errors in engine/cluster.py
+* Fixed column name confusion
+* Make 0 the default version
+* Removed multi-cloud support
+* Removed profiler support
+* Added missing session property
+* Added APIs for profiles
+* Revised version
+* Initial version
+* Initial version
+* Initial version
+* Revise erroneous project name in service.py
+* Revised, try merge
+* Simplified version -- Senlin engine service
+* Simplified version -- Senlin lock hierarchy
+* Revise cluster related key definition in rpc api based on current class implementation
+* Add to_dict for Cluster
+* Add load and load_all for Cluster db model converting
+* Initial version
+* Initial version
+* Initial version
+* Initial version
+* Moved to common subdir
+* Moved to common subdir
+* Initial version
+* Initial version
+* Initial version
+* Initial version
+* Code reorg
+* Replace with real API
+* WIP version
+* Make pip install a possibility
+* Revised design of interface
+* WIP version
+* Added timeout property
+* Removed profiler support
+* Removed profiler support
+* Try a different version
+* Fixed module name errors
+* Initial version
+* Initial version
+* Rename dbapi back to api
+* Rename simulated API for testing
+* Initial version
+* Initial version
+* Initial version
+* Initial version
+* Initial version
+* Initial version
+* Initial version
+* Initial version
+* Initial version
+* Initial version
+* Initial version
+* Initial version
+* Initial version
+* WIP version
+* Initial version -- Lock hierarchy in Senlin engine
+* Initial version -- start working on lock hierarchy in Senlin engine
+* Rename db/api_sim.py to db/api.py
+* WIP
+* WIP version for discussion
+* Add PolicyAction and define ACTIONS
+* Rename Member to Node
+* Rename Member to Node
+* Rename member to node
+* Fixed import path and class name used
+* Fixed import path and class name when calling init
+* Fixed import paths
+* Consider return boolean values from pre_ops
+* Fixed spelling error and grammar error
+* Fixed typo error in class name
+* Fixed TARGET for health policy
+* Removed enabled from property
+* Rename DeletePolicy to DeletionPolicy
+* Initial version -- Senlin context
+* Added new properties to be AWS compatible
+* Added properties for AWS compatibility
+* Initial version
+* Initial version
+* Initial version
+* WIP version
+* WIP version
+* WIP version
+* Initial version
+* Initial version
+* Initial version
+* Initial version
+* Revised implementation
+* WIP version
+* Initial version
+* Added missed **args parameter to method
+* Initial version
+* Initial verion
+* Initial version
+* Initial version
+* Added level definition and enforce() method
+* Added enforcement level definition
+* Initial version
+* Initial version
+* Initial version
+* Initial version
+* Initial version of ProfileBase class
+* Placeholder for profiles
+* Add pre_op and post_op methods to PolicyBase
+* Initial version
+* Initial version -- Senlin engine
+* Cluster create/update now accpet cluster_name, size and profile as input parameters
+* Remove ssl middleware from v1 Senlin Rest API
+* Tailored version -- Cluster endpoint
+* Rename senlin/api/openstack/v1/cluster.py to clusters.py
+* Initial version -- Cluster endpoint for Senlin v1 ReST API
+* Simplified version
+* Initial version -- rpc
+* Initial version -- rpc
+* Initial version -- api
+* Initial version
+* Initial version -- api&rpc
+* Only for test's purpose
+* Initial version -- api
+* Initial version borrowed from Heat
+* Initial version -- placeholder
+* Initial version
+* Initial version -- placeholder
+* Initial version -- placeholder
+* Initial version from Heat
+* Initial version
+* Initial version
+* Disable profiler for the moment
+* Initial version
+* Initial version
+* Initial version of admin-guide docs
+* Initial version copied from Heat
+* Initial version of package dependencies
+* Initial version on binaries
+* Initial version borrowed from Heat
+* Fixed non error
+* Initial version of tox configuration
+* Initial version of test script
+* Initial version of setup configuration
+* Initial version of config for openstack common
+* Initial version of install script
+* Initial copy of project files from Heat
+* Initialial commit

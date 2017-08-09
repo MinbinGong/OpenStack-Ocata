@@ -1,0 +1,620 @@
+CHANGES
+=======
+
+1.0.1
+-----
+
+* Add checking audit state
+* Fix that remove 'strategy' attribute does not work
+* Fix the mapping between the instance and the node
+* Fix log level error to warning
+* Update UPPER_CONSTRAINTS_FILE for stable/ocata
+* Update .gitreview for stable/ocata
+
+1.0.0
+-----
+
+* Added action_plan.execution.* actions
+* Added action_plan.create|update|delete notifs
+* Add release note for action plan notifications
+* Add first alembic version for db migration
+* Updated graph model to use attr_dict
+* Fix context error for user
+* Idiomatic loop for calculate_num_migrations
+* Fix multinode tempest test failure
+
+0.34.0
+------
+
+* add Ocata release notes
+* Add period input parameter to basic strategy
+* Fix invalid mock on ceilometerclient
+* Documentation update
+* Updated from global requirements
+* New Applier Workflow Engine
+* Remove obsolete Resource element
+* Graph cluster model instead of mapping one
+* Fix building of model with a  scoped exclusion rule
+* Fix broken gates because of wrong pip command
+* Fix test_clients_monasca failure
+* Updated from global requirements
+* New default planner
+* Modify the field in tox.ini
+* Add action plan SUPERSEDED state
+* Fix dummy strategy to use input parameters
+* Updated from global requirements
+* Update Server Consolidation global efficacy
+* Fix a typo in watcher/objects/base.py
+* resolve KeyError exception
+* Enable notification for vm task state update
+* Should use glanceclient to get images
+* Multi datasource support for Basic Consolidation
+* Added Monasca Helper
+* Removed unnecessary utf-8 encoding
+* Updated from global requirements
+* Enable coverage report in console output
+* Fix TypeError if no input_parameters added
+* Update configuration document
+* Add additional depencencies of CentOS 7
+* Fix reference http
+* remove incorrect inline comment
+* Add auto_trigger support to watcher
+* Fix variable name error
+* Updated from global requirements
+* Updated from global requirements
+* Fix bad CDMC update on reception of service.update
+
+0.33.0
+------
+
+* Implemented clients and auth config module
+* Implemented wacther decision engine config module
+* Documentation for Uniform Airflow Migration Strategy Fixed issues
+* Implemented applier config module
+* Implemented planner config module
+* Implemented db config module
+* Implemented exception config module
+* Implemented paths config module
+* remove unused log
+* Repair log parameter error
+* multinode devstack update for live-migration
+* Function call pass parameter error
+* Documentation for Workload Balance Migration Strategy Fixed comments and added the doc primitive call
+* Specific exception for stale cluster state was added
+* Implemented utils config module
+* Fix CI failures
+* improve statistic_aggregation
+* Unnecessary exception
+* update strategy table when parameters_spec changes
+* Implemented api config module
+* Updated from global requirements
+* Updated from global requirements
+* Improve the instruction of vm_workload_consolidation
+* Fix method name in doc/source/dev/plugin/action-plugin.rst
+* Repairing unit test failures
+* Fix some incorrect description in doc
+* [Doc] Fix example code of goal plugin
+* Use uuidutils instead of uuid.uuid4()
+* Modify the variable assignment errors
+* Show team and repo badges on README
+* Fix 'ImportError' when docbuild
+* Fix one ref that does not work
+* Updated from global requirements
+* Add periods input parameter
+* Solve some spelling mistakes
+* Remove redundan lines
+* Documentation for Outlet Temperature Based Strategy Fixed outstanding comments
+* Change hardware.cpu_util in workload_stabilization
+* Fix inconsistent descriptions in docstring in action_plan.py
+* Removed nullable flag from audit_id in ActionPlan
+* Replaces uuid.uuid4 with uuidutils.generate_uuid()
+* Fixed update of WatcherObject fields on update
+* Fix some typos in action.py & action_plan.py & audit.py
+* [Doc] Fix default value in workload_stabilization
+* Fix the wrong ref for 'Compute node'
+
+0.32.0
+------
+
+* Implemented base + moved plugins & service conf
+* Add audit.planner events
+* Add audit.strategy events
+* Implemented audit.delete notification
+* Implemented audit.create notification
+* Implemented audit.update notification
+* Update devstack plugin to add notification param
+* Added notification_level config option
+* Removed status_topic config parameter
+* Remove stale notification code
+* Added notifications documentation page
+* Added support for versioned notifications
+* Add doc for vm_workload_consolidation strategy
+* Fix rally gate test
+* Updated from global requirements
+* Add doc for workload-stabilization spec
+* Fix the typo in efficacy_indicator module
+* Fix NoMetricValuesForInstance error
+* Use oslo_log instead of logging
+* optimized 'find_instance()'
+* Fix workload stabilization strategy to ignore disabled hosts
+* Added Tempest API tests for /scoring_engines
+* Remove unused SUBMITTED audit state
+* Added action_plan ObjectField for Action
+* Added audit & strategy ObjectField for ActionPlan
+* Added goal & strategy ObjectField for Audit
+* Added goal+strategy ObjectField for AuditTemplate
+* Added 'goal' ObjectField for Strategy object
+* Refactored Watcher objects to use OVO
+* Removed deadline, version, extra & host_aggregate
+* Eager loading on One-to-X foreign keys
+* [Doc] Fix strategy list optional argument
+* Use Enum value instead of String Value Fixing Gating Issue
+* Change "Openstack" to "OpenStack"
+* Avoid use xx=[] for parameter to initialize it's value
+* Transform KB into MB and normalize CPU
+* Updated from global requirements
+* Delete python bytecode file
+* Add strategy template doc
+* Drop MANIFEST.in - it's not needed by pbr
+* Add Audit Scope Handler
+* Add service object to the watcher_db_schema
+* Add service supervisor
+* Updated from global requirements
+* Added Model base class + related doc
+* Add RECOMMENDED state
+* Enable release notes translation
+* Added composite unique name constraints
+* Added missing test on GMR plugin
+* Moved Watcher doc plugin outside main package
+* Stop adding ServiceAvailable group option
+* HasLength() rewritten to assertEqual()
+* Updated from global requirements
+* Fix typo in docstring
+* Remove duplicate unittest
+* Fix typo in hooks.py
+* Docstrings should not start with a space
+* Fix capital letter in doc
+* Doc updates
+* Watcher utils cleanup
+* Fixed GMR configuration issue
+* Add constraint target to tox.ini and remove 1 dep
+* Updated from global requirements
+* 'tox -e py27' failed
+* Fix typo in docstring from "interprete" to "interpret"
+* Fix a typo in watcher.po
+* Deactivate dashboard plugin until fixed
+* remove redundant word
+* Fix a typo in basic_consolidation.py
+* Update Watcher description
+* Test code tidy up
+* Update reno for stable/newton
+* Fixed issue on compute nodes iteration
+* Refactored Tests to load scenarios from file
+* Updated from global requirements
+* Remove group_by statement in metric queries
+
+0.30.0
+------
+
+* Add rally-jobs folder to get rally support
+* Log CDM structure before+after executing strategy
+* Fixed Tempest test due to notification issues
+* Use memory mode for sqlite in db test
+* Added tests on API hooks and related context
+* When action plan is empty, its state is incorrect
+* Use parameters instead of config for workload stabilization
+* Add documentation for Scoring Module
+* Implemented GMR plugin to show CDM structures
+* Fix incorrect strings and formatting
+* Modify use of assertTrue(A in B)
+* Fixed indentation
+* The default value of 'is_admin_project'
+
+0.29.0
+------
+
+* Add release notes for Newton blueprints
+* TrivialFix: Remove cfg import unused
+* TrivialFix: Remove logging import unused
+* Remove unused LOG
+* Update configuration section for notifications
+* Doc on how to add notification endpoints
+* Notification and CDM partial update
+* Remove unreachable line
+* Added start/end date params on ceilometer queries
+* Correct watcher reraising of exception
+* Check unspecified parameters create audit
+* Fix loading of plugin configuration parameters
+* Add Scoring Module implementation
+* Add unit tests for continuous.py
+* Updated from global requirements
+* Fixed flaky tempest test
+* Remove pot files
+* Updated from global requirements
+* Added strategy ID + Action Plan syncing
+* Fixes to get cluster data model
+* Updated from global requirements
+* Fix double self._goal definition
+* Scheduler of decision_engine fix
+* Updated from global requirements
+* Clean imports in code
+* Modify libvirt_opts="-d -l" to libvirtd_opts="-d -l"
+* Rename (pre/post)condition to (pre/post)_condition
+* Add unit tests for nova_helper.py
+* Updated from global requirements
+* Removed unused function in uniform airflow
+* Update the home-page info with the developer documentation
+* Updated from global requirements
+* Refactored the compute model and its elements
+* Use more specific asserts
+* Merged metrics_engine package into decision_engine
+* Updated DE architecture doc + 'period' param
+* Added DE Background Scheduler w/ model sync jobs
+* Cluster data model collector plugin documentation
+* Loadable Cluster Data Model Collectors
+* Updated from global requirements
+* Add scoring engines to database and API layers
+* Implement goal_id, strategy_id and host_aggregate into Audit api
+* use parameters to set the threshold
+* Updated from global requirements
+* Fixed Basic optim tempest test
+* Fix 2 occurrences of typo: "occured" --> "occurred"
+* Add hacking checks to watcher
+* Update docs links to docs.openstack.org
+* Remove discover from test-requirements
+* Updated from global requirements
+* Fix typos and messages in strategies
+* Remove unused columns parameters in watcher/db/api
+* test_context_hook_before_method failed
+* Fix dict.keys() PY3 compatible
+
+0.28.0
+------
+
+* There are some spelling errors in the code
+* Add Python 3.5 classifier and venv
+* Update unitaty tests to verify strategy and goal name
+* Bad goal and strategy name for Airflow Optimization
+* Fix unittest in test_api.py
+* Optimize local.conf.controller file to enable watche-dashboard
+* Add continuously optimization
+* Add Desktop Service Store to .gitignore file
+* Documentation for strategy parameters
+* Updated from global requirements
+* Add installation from Debian packages section
+* Add new documentation section for Watcher policies rules
+* Update executor to eventlet
+* Add policies for API access control to watcher project
+* Fix watcher doc build error
+* Fix field type to audit_type
+* Remove duplicate unittest
+* Fix link error in base-setup.rst
+* Fix failing Tempest tests
+* Enable strategy parameters
+* Update Docs links to docs.openstack.org
+* add dependency for 3rd-party plugins
+* Make default Planner generic to handle new action
+* Modify IRC weekly meeting time
+* Uniform Airflow migration strategy implementation
+* Updated from global requirements
+* Centralize plugin loaders in watcher/applier
+* Add importing modules instead of classes
+* Centralize plugin loaders in decision engine
+* Add goal_name field in strategy
+* Updated from global requirements
+* Use disabled/enabled to change service state
+* Check if nova-service is already disabled
+* Add bandit in tox -e pep8
+* Added filter operators
+* Fix StrategyContext to use the strategy_id in the Audit Template
+* Use proper theme for release notes
+* Fix releasenotes generation
+* Documentation on goal and efficacy
+* Added efficacy indicators to /action_plans
+* Added pre/post execution methods to strategies
+* Added EfficacyIndicator object
+* Added efficacy specification to /goals
+* Add reno for release notes management
+* Added EfficacyIndicator model in DB
+* Decoupled Goal from Strategy
+* Fix broken link in doc
+* Added missing config section for autogeneration
+* Updated from global requirements
+* Added audit_template filter to /audits/detail
+* Add fix for hardware.cpu.util meter in sd-strategy
+* Add fix for __init__() error
+* Updated tempest test creds retrieval mechanism
+
+0.27.0
+------
+
+* Documentation for plugins-parameters
+* Workload balance migration strategy implementation
+* Watcher plugins table in Guru meditation reports
+* Enabled config parameters to plugins
+* Add Overload standard deviation strategy
+* Add goal name as filter for strategy list cmd
+* Update Watcher documentation
+* Updated from global requirements
+* Added cold VM migration support
+* Add goal_name & strategy_name in /audit_templates
+* Replace assertEqual(None, *) with assertIsNone in tests
+* Fix lazy translation issue with watcher-db-manage
+* Fixed flaky tempest test
+* Removed telemetry tag from tempest tests
+* Updated from global requirements
+* Fix for statistic_aggregation
+* Remove direct access to dbapi
+* Updated from global requirements
+* Fix documentation watcher sql database
+* Watcher DB class diagram
+* Added .pot file
+* Remove [watcher_goals] config section
+* Remove watcher_goals section from devstack plugin
+* Documentation update for get-goal-from-strategy
+* Updated purge to now include goals and strategies
+* Syncer now syncs stale audit templates
+* Add strategy_id & goal_id fields in audit template
+* Refactored Strategy selector to select from DB
+* Added /strategies endpoint in Watcher API
+* Add Goal in BaseStrategy + Goal API reads from DB
+* DB sync for Strategies
+* Added Strategy model
+* Added Goal object + goal syncing
+* Added Goal model into Watcher DB
+* Log "https" if using SSL
+* [nova_helper] get keypair name by every admin users
+* Remove using of UUID field in POST methods of Watcher API
+* Refactored DE and Applier to use oslo.service
+* Refactored Watcher API service
+* Updated from global requirements
+* Removed unused 'alarm' field
+* Add parameters verification when Audit is being created
+* correct the available disk, memory calculating Source data are misused in outlet temperature strategy. This patch fixes it
+* Upgrade Watcher Tempest tests for multinode
+* Update .coveragerc to ignore abstract methods
+* Updated from global requirements
+* Fix for deleting audit template
+* Remove unused logging import and LOG global var
+* Updated from global requirements
+
+0.26.0
+------
+
+* Added missing support for resource states in unicode format in VM workload consolidation strategy
+* Disabled PATCH, POST and DELETE for /actions
+* Added information on plugin mechanism to glossary
+* Invalid states for Action Plan in the glossary
+* Integrated consolidation strategy with watcher
+* Added oslo.context to requirements.txt
+
+0.25.0
+------
+
+* Remove the watcher sample configuration file
+* Updated action-plugin doc to refer to Voluptuous
+* Rename variable vm_avg_cpu_util
+* renamed "efficiency" with "efficacy" Closes-Bug:#1558468
+* Remove true/false return from action.execute()
+* Updated from global requirements
+* Documentation on purge command
+* Added purge script for soft deleted objects
+* Added Mixin-related filters on DB queries
+* Updated from global requirements
+* Refactored check for invalid goal
+* Renamed api.py to base.py in metrics engine
+* Re-generated the watcher.pot
+* Added Disk Capacity in cluster-data-model
+* Removing unicode from README.rst
+
+0.24.0
+------
+
+* Doc on how to set up a thirdparty project
+* Remove tests omission from coverage target in tox.ini
+* add Goal into RESTful Web API (v1) documentation
+* Updated Strategy plugin doc
+* Doc on how to implement a custom Watcher planner
+* Add Watcher dashboard to the list of projects
+* Doc on how to implement a custom Watcher action
+* Fixed wrongly used assertEqual method
+* Improve DevStack documentation for beginners
+* Added support for live migration on non-shared storage
+* Updated Watcher doc to mention Tempest tests
+* RST directive to discover and generate drivers doc
+* Rename 'TRIGGERED' state as 'PENDING'
+* Fixed type in get_audit_template_by_name method
+* Updated from global requirements
+* Cleanup in tests/__init__.py
+* Update nova service state
+* Replace "Triggered" state by "Pending" state
+* Add start directory for oslo_debug_helper
+* Add missing requirements
+* Updated from global requirements
+* Re-enable related Tempest test
+* Useless return statement in validate_sort_dir
+* Pass parameter to the query in get_last_sample_values
+* Remove unused function and argument
+* Added goal filter in Watcher API
+* Improve variable names in strategy implementations
+* Added unit tests on actions
+* Clean imports in code
+* Add Voluptuous to validate the action parameters
+* Remove KEYSTONE_CATALOG_BACKEND from DevStack plugin
+* Cleanup in test_objects.py
+* Better cleanup for Tempest tests
+* Ceilometer client instantiation fixup
+* Update the default version of Neutron API
+* Sync with openstack/requirements master branch
+* Delete linked actions when deleting an action plan
+
+0.23.2
+------
+
+* Add IRC information into contributing page
+* Update docs for password auth configuration options
+* Remove references to SERVERS_CONSOLIDATION
+* Create OpenStackClients convenience class
+* Added Tempest scenario for BASIC_CONSOLIDATION
+* Use install instead of mkdir for DevStack dirs
+* Removed unused parameter in dt_deserializer()
+* Remove unused parameter in Actions API controller
+* Define self.client in MessagingCore
+* Remove InvalidParameterValue exception
+* Tempest API tests on /actions
+* GET on an action_plan provides first_action_uuid
+* Fixed ActionPlanNotFound typo in msg_fmt
+
+0.23.1
+------
+
+* Fixed tempest test bug
+
+0.23.0
+------
+
+* Action plan state transition - payload validation
+* Add 'workers' section into configuration doc
+* API Tempest tests on goals
+* Fix HTML warnings on HTML doc
+* Action Plan state - Changed STARTING to TRIGGERED
+* Tempest scenario - execute a dummy strategy
+* Added doc8
+* Add reference to Ceilometer developer guide
+* API Tempest tests on Action plans
+* Re-organize the Wacher documentation Home Page
+* Fix 'Module index' broken HTTP link
+* API Tempest tests on Audits
+* Refactored existing tempest API tests
+* Renamed Status to State
+* Update the user-guide to explain the main steps
+* Refactor Commands section
+* Use taskflow library for building and executing action plans
+* Removed unused parameters from api controllers
+* Validate audit template UUID on audit create
+* Add diagrams to the architecture doc page
+* Fix Warnings generated while building of HTML docu
+* Reduced the complexity of the execute() method
+* Missing super() in API collection controllers
+* Remove shadow BaseException class
+* Replace message with msg_fmt for custom exceptions
+* Removed use of deprecated LOG.warn method
+* Add a dynamic loading of Actions handlers in the Watcher Applier
+* Update API documentation for action plan
+* Renamed diskInfo.py
+* Fix extraction of _LI _LW _LE _LC for translation
+* Clean up flake8 ignore list
+* Move terminology definition to class related
+* Keep py3.X compatibility for urllib
+* Use dict.items() dirrectly instead of six.iteritems
+* Test: make enforce_type=True in CONF.set_override and fix error
+* Remove incorrect spaces for libvirt_opts value
+* Add a generic and extensible way to describe the flow of actions
+* Add a dynamic loading of the Watcher Planner implementation
+* Add a common generic dynamic loader for watcher
+* Add the possibility to store several parameters for an Action
+* Changed testr to os-testr
+* Strategy goals should be required in conf
+* Use assertTrue/False instead of assertEqual(T/F)
+* Implement DevStack plugin
+* Remove useless Meta-Action
+
+0.22.0
+------
+
+* outlet Temperature based migration strategy
+* Move Audit-template management in DefaultStrategyContext
+* Remove duplicated nova wrapper
+* Move glossary.rst to root folder of doc
+* Remove string concatenation in favor of string formatting
+* Remove useless event factory
+* Rename NovaWrapper to NovaClient
+* i18n - Make string translatable
+* Change default strategy to DummyStrategy
+* Add Creative Commons Attribution header to documentation
+* Code refactoring - StrategyContext and Auditendpoint
+* Remove *.pyc files before running tox tests
+* Add missing parameter in prepare_service for api
+* Fix generation of watcher config file
+* Rename command to audit
+* 'admin_user' opt (and others) imported twice
+* Removed duplicated function prepare_service()
+* Internationalization (i18n) - Enable French locale
+* Include terminology definition from docstring
+* Remove pragma no cover from code
+* Tidy up - Watcher Decision Engine package
+* Typo in ClusteStateNotDefined
+* Some tests are ignored
+* Tidy up - Rename Base
+* Refactored Watcher codebase to add py34 support
+* Added unit tests on nova wrapper
+* Removed H404, H405, H305 ignore in pep8
+* Removed unnecessary code from basic_consolidation
+* Remove unreachable code in basic_consolidation.py
+* Rename Mapper to Mapping
+* Tidy up - Primitive
+* Remove references to removed watcher/openstack directory
+* Removed py33, pypy support
+* Remove alembic revision of watcher db
+* Add Apache license header to all rst documentation
+* Rename Command to Action
+* Update the glossary to lay down Watcher terminology
+* Rename command to action_plan
+* Removed unused enum
+* Rename Meta-Action to Action
+* Add a checker for the documentation
+* Rename efficiency to efficacy
+* Fix Watcher Applier variables in CamelCase
+* Remove duplicate setup in Watcher API main()
+* Cleanup deprecated documentation
+* Provide detailed information on architecture
+
+0.21.0
+------
+
+* Update configuration section for rabbitmq
+* Created a glossary to lay down Watcher terminology
+* Update documentation regarding Ceilometer API V2
+* Fixed missing attribute in the data model
+* Removed py26 support
+* Code refactoring - Watcher Applier package
+* Removed old (and unused) openstack/oslo libs
+* Fixed doc generation warning
+* add missing keystoneclient dependency
+* Added priority level to Nop action
+* Removed 'watcher_messaging' to use oslo.messaging
+* Improve OpenStack clients API
+* Added 'dummy' entrypoint within watcher_strategies
+* Fixed tense consistency (used past) in statuses
+* Added LaunchActionPlanCommand's init super call
+* Explained KEYSTONE_SERVICE_PROJECT_NAME variable
+* Added missing super call in DefaultApplier's init
+* AMQP Channel have to be set espacially to 'watcher'
+* Updated the config sample file generation command
+* Code refactoring - Watcher Decision Engine package
+* Strategy plugins documentation
+* Update requirements from OS Global Requirements
+* Made Decision Engine extensible via stevedore
+* Integration of Ceilometer in Watcher
+* Update configuration file sample
+* Fix config loading when running the watcher-api
+* Fix tiny typo on configuration doc
+* Avoid dividing zero
+* Should use watcher/common/context.py for consistency
+* Update policy.py
+* Watcher notification listener is associated with an executor which integrates the listener with a specific I/O handling framework. blocking executor should be the default one
+* Update Rabbit MQ server configuration extract
+* Use a single command to create the 3 watcher endpoints
+* Use i18n directly
+* Use olso.log directly
+* refactoring documentation
+* Change stackforge to openstack, corrected some heading underlines
+* use https instead of http for doc link
+* update Watcher mission
+* consolidation of watcher
+* update config file sample
+* update documentation
+* fix dependencies version
+* Documention fixes
+* initial version
+* Added .gitreview

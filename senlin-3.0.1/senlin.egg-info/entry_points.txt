@@ -1,0 +1,37 @@
+[console_scripts]
+senlin-api = senlin.cmd.api:main
+senlin-engine = senlin.cmd.engine:main
+senlin-manage = senlin.cmd.manage:main
+
+[oslo.config.opts]
+senlin.config = senlin.common.config:list_opts
+
+[senlin.dispatchers]
+database = senlin.events.database:DBEvent
+message = senlin.events.message:MessageEvent
+
+[senlin.drivers]
+openstack = senlin.drivers.openstack
+openstack_test = senlin.tests.drivers.openstack
+
+[senlin.policies]
+senlin.policy.affinity-1.0 = senlin.policies.affinity_policy:AffinityPolicy
+senlin.policy.batch-1.0 = senlin.policies.batch_policy:BatchPolicy
+senlin.policy.deletion-1.0 = senlin.policies.deletion_policy:DeletionPolicy
+senlin.policy.health-1.0 = senlin.policies.health_policy:HealthPolicy
+senlin.policy.loadbalance-1.1 = senlin.policies.lb_policy:LoadBalancingPolicy
+senlin.policy.region_placement-1.0 = senlin.policies.region_placement:RegionPlacementPolicy
+senlin.policy.scaling-1.0 = senlin.policies.scaling_policy:ScalingPolicy
+senlin.policy.zone_placement-1.0 = senlin.policies.zone_placement:ZonePlacementPolicy
+
+[senlin.profiles]
+container.dockerinc.docker-1.0 = senlin.profiles.container.docker:DockerProfile
+os.heat.stack-1.0 = senlin.profiles.os.heat.stack:StackProfile
+os.nova.server-1.0 = senlin.profiles.os.nova.server:ServerProfile
+
+[tempest.test_plugins]
+senlin_tests = senlin.tests.tempest.plugin:SenlinTempestPlugin
+
+[wsgi_scripts]
+senlin-wsgi-api = senlin.cmd.api_wsgi:init_app
+

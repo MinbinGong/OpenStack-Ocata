@@ -1,0 +1,104 @@
+[console_scripts]
+designate-agent = designate.cmd.agent:main
+designate-api = designate.cmd.api:main
+designate-central = designate.cmd.central:main
+designate-manage = designate.cmd.manage:main
+designate-mdns = designate.cmd.mdns:main
+designate-pool-manager = designate.cmd.pool_manager:main
+designate-producer = designate.cmd.producer:main
+designate-rootwrap = oslo_rootwrap.cmd:main
+designate-sink = designate.cmd.sink:main
+designate-worker = designate.cmd.worker:main
+designate-zone-manager = designate.cmd.zone_manager:main
+
+[designate.api.admin.extensions]
+quotas = designate.api.admin.controllers.extensions.quotas:QuotasController
+reports = designate.api.admin.controllers.extensions.reports:ReportsController
+target_sync = designate.api.admin.controllers.extensions.target_sync:TargetSyncController
+zones = designate.api.admin.controllers.extensions.zones:ZonesController
+
+[designate.api.v1]
+domains = designate.api.v1.domains:blueprint
+limits = designate.api.v1.limits:blueprint
+records = designate.api.v1.records:blueprint
+servers = designate.api.v1.servers:blueprint
+tsigkeys = designate.api.v1.tsigkeys:blueprint
+
+[designate.api.v1.extensions]
+diagnostics = designate.api.v1.extensions.diagnostics:blueprint
+quotas = designate.api.v1.extensions.quotas:blueprint
+reports = designate.api.v1.extensions.reports:blueprint
+sync = designate.api.v1.extensions.sync:blueprint
+touch = designate.api.v1.extensions.touch:blueprint
+
+[designate.backend]
+agent = designate.backend.agent:AgentPoolBackend
+akamai = designate.backend.impl_akamai:AkamaiBackend
+bind9 = designate.backend.impl_bind9:Bind9Backend
+designate = designate.backend.impl_designate:DesignateBackend
+dynect = designate.backend.impl_dynect:DynECTBackend
+fake = designate.backend.impl_fake:FakeBackend
+infoblox = designate.backend.impl_infoblox:InfobloxBackend
+nsd4 = designate.backend.impl_nsd4:NSD4Backend
+pdns4 = designate.backend.impl_pdns4:PDNS4Backend
+powerdns = designate.backend.impl_powerdns:PowerDNSBackend
+
+[designate.backend.agent_backend]
+bind9 = designate.backend.agent_backend.impl_bind9:Bind9Backend
+denominator = designate.backend.agent_backend.impl_denominator:DenominatorBackend
+djbdns = designate.backend.agent_backend.impl_djbdns:DjbdnsBackend
+fake = designate.backend.agent_backend.impl_fake:FakeBackend
+gdnsd = designate.backend.agent_backend.impl_gdnsd:GdnsdBackend
+knot2 = designate.backend.agent_backend.impl_knot2:Knot2Backend
+msdns = designate.backend.agent_backend.impl_msdns:MSDNSBackend
+
+[designate.heartbeat_emitter]
+noop = designate.service_status:NoopEmitter
+rpc = designate.service_status:RpcEmitter
+
+[designate.manage]
+akamai = designate.manage.akamai:AkamaiCommands
+database = designate.manage.database:DatabaseCommands
+pool = designate.manage.pool:PoolCommands
+pool-manager-cache = designate.manage.pool_manager_cache:DatabaseCommands
+powerdns = designate.manage.powerdns:DatabaseCommands
+tlds = designate.manage.tlds:TLDCommands
+
+[designate.network_api]
+fake = designate.network_api.fake:FakeNetworkAPI
+neutron = designate.network_api.neutron:NeutronNetworkAPI
+
+[designate.notification.handler]
+neutron_floatingip = designate.notification_handler.neutron:NeutronFloatingHandler
+nova_fixed = designate.notification_handler.nova:NovaFixedHandler
+
+[designate.notification.plugin]
+audit = designate.notifications:Audit
+default = designate.notifications:Default
+
+[designate.pool_manager.cache]
+memcache = designate.pool_manager.cache.impl_memcache:MemcachePoolManagerCache
+noop = designate.pool_manager.cache.impl_noop:NoopPoolManagerCache
+sqlalchemy = designate.pool_manager.cache.impl_sqlalchemy:SQLAlchemyPoolManagerCache
+
+[designate.producer_tasks]
+delayed_notify = designate.producer.tasks:PeriodicGenerateDelayedNotifyTask
+periodic_exists = designate.producer.tasks:PeriodicExistsTask
+periodic_secondary_refresh = designate.producer.tasks:PeriodicSecondaryRefreshTask
+worker_periodic_recovery = designate.producer.tasks:WorkerPeriodicRecovery
+zone_purge = designate.producer.tasks:DeletedZonePurgeTask
+
+[designate.quota]
+noop = designate.quota.impl_noop:NoopQuota
+storage = designate.quota.impl_storage:StorageQuota
+
+[designate.scheduler.filters]
+attribute = designate.scheduler.filters.attribute_filter:AttributeFilter
+default_pool = designate.scheduler.filters.default_pool_filter:DefaultPoolFilter
+fallback = designate.scheduler.filters.fallback_filter:FallbackFilter
+pool_id_attribute = designate.scheduler.filters.pool_id_attribute_filter:PoolIDAttributeFilter
+random = designate.scheduler.filters.random_filter:RandomFilter
+
+[designate.storage]
+sqlalchemy = designate.storage.impl_sqlalchemy:SQLAlchemyStorage
+

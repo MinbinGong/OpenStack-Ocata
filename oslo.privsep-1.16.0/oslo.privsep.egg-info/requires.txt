@@ -1,0 +1,9 @@
+oslo.log>=3.11.0
+oslo.i18n>=2.1.0
+oslo.config!=3.18.0,>=3.14.0
+oslo.utils>=3.18.0
+enum34
+cffi
+eventlet!=0.18.3,>=0.18.2
+greenlet>=0.3.2
+msgpack-python>=0.4.0
