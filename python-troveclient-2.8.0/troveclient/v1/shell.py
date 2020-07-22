@@ -572,7 +572,7 @@ def do_create(cs, args):
         if replica_of:
             raise exceptions.ValidationError(
                 _('Cannot specify locality when adding replicas to existing '
-                  'master.'))
+                  'main.'))
     databases = [{'name': value} for value in args.databases]
     users = [{'name': n, 'password': p, 'databases': databases} for (n, p) in
              [z.split(':')[:2] for z in args.users]]

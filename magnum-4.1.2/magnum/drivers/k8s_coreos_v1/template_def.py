@@ -27,8 +27,8 @@ class CoreOSK8sTemplateDefinition(k8s_template_def.K8sTemplateDefinition):
         super(CoreOSK8sTemplateDefinition, self).__init__()
         self.add_output('kube_minions',
                         cluster_attr='node_addresses')
-        self.add_output('kube_masters',
-                        cluster_attr='master_addresses')
+        self.add_output('kube_mains',
+                        cluster_attr='main_addresses')
 
     def get_env_files(self, cluster_template):
         env_files = []

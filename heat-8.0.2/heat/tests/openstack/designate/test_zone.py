@@ -32,7 +32,7 @@ sample_template = {
                 'ttl': 3600,
                 'email': 'abc@test-zone.com',
                 'type': 'PRIMARY',
-                'masters': []
+                'mains': []
             }
         }
     }

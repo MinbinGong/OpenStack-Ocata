@@ -336,48 +336,48 @@ class ShellTest(utils.TestCase):
             }})
 
     def test_boot_replica(self):
-        self.run_command('create slave-1 1 --size 1 --replica_of=master_1')
+        self.run_command('create subordinate-1 1 --size 1 --replica_of=main_1')
         self.assert_called_anytime(
             'POST', '/instances',
             {'instance': {
                 'volume': {'size': 1, 'type': None},
                 'flavorRef': 1,
-                'name': 'slave-1',
+                'name': 'subordinate-1',
                 'replica_of': 'myid',
                 'replica_count': 1
             }})
 
     def test_boot_replica_count(self):
-        self.run_command('create slave-1 1 --size 1 --replica_of=master_1 '
+        self.run_command('create subordinate-1 1 --size 1 --replica_of=main_1 '
                          '--replica_count=3')
         self.assert_called_anytime(
             'POST', '/instances',
             {'instance': {
                 'volume': {'size': 1, 'type': None},
                 'flavorRef': 1,
-                'name': 'slave-1',
+                'name': 'subordinate-1',
                 'replica_of': 'myid',
                 'replica_count': 3
             }})
 
     def test_boot_locality(self):
-        self.run_command('create master-1 1 --size 1 --locality=affinity')
+        self.run_command('create main-1 1 --size 1 --locality=affinity')
         self.assert_called_anytime(
             'POST', '/instances',
             {'instance': {
                 'volume': {'size': 1, 'type': None},
                 'flavorRef': 1,
-                'name': 'master-1',
+                'name': 'main-1',
                 'locality': 'affinity'
             }})
 
     def test_boot_locality_error(self):
-        cmd = ('create slave-1 1 --size 1 --locality=affinity '
-               '--replica_of=master_1')
+        cmd = ('create subordinate-1 1 --size 1 --locality=affinity '
+               '--replica_of=main_1')
         self.assertRaisesRegexp(
             exceptions.ValidationError,
             'Cannot specify locality when adding replicas to existing '
-            'master.',
+            'main.',
             self.run_command, cmd)
 
     def test_boot_nic_error(self):

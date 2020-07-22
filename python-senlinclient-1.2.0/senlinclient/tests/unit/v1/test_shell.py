@@ -1437,7 +1437,7 @@ class ShellTest(testtools.TestCase):
             'name': 'node1',
             'cluster': 'cluster1',
             'profile': 'profile1',
-            'role': 'master',
+            'role': 'main',
             'metadata': ['user=demo'],
         }
         args = self._make_args(args)
@@ -1445,7 +1445,7 @@ class ShellTest(testtools.TestCase):
             'name': 'node1',
             'cluster_id': 'cluster1',
             'profile_id': 'profile1',
-            'role': 'master',
+            'role': 'main',
             'metadata': {'user': 'demo'},
         }
         service = mock.Mock()
@@ -1522,14 +1522,14 @@ class ShellTest(testtools.TestCase):
         args = {
             'id': 'node_id',
             'name': 'node1',
-            'role': 'master',
+            'role': 'main',
             'profile': 'profile1',
             'metadata': ['user=demo'],
         }
         args = self._make_args(args)
         attrs = {
             'name': 'node1',
-            'role': 'master',
+            'role': 'main',
             'profile_id': 'profile1',
             'metadata': {'user': 'demo'},
         }

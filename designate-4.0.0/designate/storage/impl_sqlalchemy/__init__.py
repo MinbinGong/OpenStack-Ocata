@@ -235,17 +235,17 @@ class SQLAlchemyStorage(sqlalchemy_base.SQLAlchemy, storage_base.Storage):
 
         def _load_relations(zone):
             if zone.type == 'SECONDARY':
-                zone.masters = self._find_zone_masters(
+                zone.mains = self._find_zone_mains(
                     context, {'zone_id': zone.id})
             else:
                 # This avoids an extra DB call per primary zone. This will
                 # always have 0 results for a PRIMARY zone.
-                zone.masters = objects.ZoneMasterList()
+                zone.mains = objects.ZoneMainList()
 
             zone.attributes = self._find_zone_attributes(
-                context, {'zone_id': zone.id, "key": "!master"})
+                context, {'zone_id': zone.id, "key": "!main"})
 
-            zone.obj_reset_changes(['masters', 'attributes'])
+            zone.obj_reset_changes(['mains', 'attributes'])
 
         # TODO(Federico) refactor part of _find_zones into _find_zone, move
         # _load_relations out
@@ -268,7 +268,7 @@ class SQLAlchemyStorage(sqlalchemy_base.SQLAlchemy, storage_base.Storage):
         # Don't handle recordsets for now
         zone = self._create(
             tables.zones, zone, exceptions.DuplicateZone,
-            ['attributes', 'recordsets', 'masters'],
+            ['attributes', 'recordsets', 'mains'],
             extra_values=extra_values)
 
         if zone.obj_attr_is_set('attributes'):
@@ -276,12 +276,12 @@ class SQLAlchemyStorage(sqlalchemy_base.SQLAlchemy, storage_base.Storage):
                 self.create_zone_attribute(context, zone.id, attrib)
         else:
             zone.attributes = objects.ZoneAttributeList()
-        if zone.obj_attr_is_set('masters'):
-            for master in zone.masters:
-                self.create_zone_master(context, zone.id, master)
+        if zone.obj_attr_is_set('mains'):
+            for main in zone.mains:
+                self.create_zone_main(context, zone.id, main)
         else:
-            zone.masters = objects.ZoneMasterList()
-        zone.obj_reset_changes(['masters', 'attributes'])
+            zone.mains = objects.ZoneMainList()
+        zone.obj_reset_changes(['mains', 'attributes'])
 
         return zone
 
@@ -310,7 +310,7 @@ class SQLAlchemyStorage(sqlalchemy_base.SQLAlchemy, storage_base.Storage):
         updated_zone = self._update(
             context, tables.zones, zone, exceptions.DuplicateZone,
             exceptions.ZoneNotFound,
-            ['attributes', 'recordsets', 'masters'])
+            ['attributes', 'recordsets', 'mains'])
 
         if zone.obj_attr_is_set('attributes'):
             # Gather the Attribute ID's we have
@@ -352,9 +352,9 @@ class SQLAlchemyStorage(sqlalchemy_base.SQLAlchemy, storage_base.Storage):
                 attr.zone_id = zone.id
                 self.create_zone_attribute(context, zone.id, attr)
 
-        if zone.obj_attr_is_set('masters'):
+        if zone.obj_attr_is_set('mains'):
             # Gather the Attribute ID's we have
-            have = set([r.id for r in self._find_zone_masters(
+            have = set([r.id for r in self._find_zone_mains(
                 context, {'zone_id': zone.id})])
 
             # Prep some lists of changes
@@ -363,7 +363,7 @@ class SQLAlchemyStorage(sqlalchemy_base.SQLAlchemy, storage_base.Storage):
             update = []
 
             # Determine what to change
-            for i in zone.masters:
+            for i in zone.mains:
                 keep.add(i.id)
                 try:
                     i.obj_get_original_value('id')
@@ -379,18 +379,18 @@ class SQLAlchemyStorage(sqlalchemy_base.SQLAlchemy, storage_base.Storage):
 
             # Delete Attributes
             for i_id in have - keep:
-                attr = self._find_zone_masters(
+                attr = self._find_zone_mains(
                     context, {'id': i_id}, one=True)
-                self.delete_zone_master(context, attr.id)
+                self.delete_zone_main(context, attr.id)
 
             # Update Attributes
             for i in update:
-                self.update_zone_master(context, i)
+                self.update_zone_main(context, i)
 
             # Create Attributes
             for attr in create:
                 attr.zone_id = zone.id
-                self.create_zone_master(context, zone.id, attr)
+                self.create_zone_main(context, zone.id, attr)
 
         if zone.obj_attr_is_set('recordsets'):
             existing = self.find_recordsets(context, {'zone_id': zone.id})
@@ -554,50 +554,50 @@ class SQLAlchemyStorage(sqlalchemy_base.SQLAlchemy, storage_base.Storage):
 
         return deleted_zone_attribute
 
-    # Zone master methods
-    def _find_zone_masters(self, context, criterion, one=False,
+    # Zone main methods
+    def _find_zone_mains(self, context, criterion, one=False,
                            marker=None, limit=None, sort_key=None,
                            sort_dir=None):
 
-        return self._find(context, tables.zone_masters,
-                          objects.ZoneMaster, objects.ZoneMasterList,
-                          exceptions.ZoneMasterNotFound, criterion, one,
+        return self._find(context, tables.zone_mains,
+                          objects.ZoneMain, objects.ZoneMainList,
+                          exceptions.ZoneMainNotFound, criterion, one,
                           marker, limit, sort_key, sort_dir)
 
-    def create_zone_master(self, context, zone_id, zone_master):
+    def create_zone_main(self, context, zone_id, zone_main):
 
-        zone_master.zone_id = zone_id
-        return self._create(tables.zone_masters, zone_master,
-                            exceptions.DuplicateZoneMaster)
+        zone_main.zone_id = zone_id
+        return self._create(tables.zone_mains, zone_main,
+                            exceptions.DuplicateZoneMain)
 
-    def get_zone_masters(self, context, zone_attribute_id):
-        return self._find_zone_masters(
+    def get_zone_mains(self, context, zone_attribute_id):
+        return self._find_zone_mains(
             context, {'id': zone_attribute_id}, one=True)
 
-    def find_zone_masters(self, context, criterion=None, marker=None,
+    def find_zone_mains(self, context, criterion=None, marker=None,
                           limit=None, sort_key=None, sort_dir=None):
-        return self._find_zone_masters(context, criterion, marker=marker,
+        return self._find_zone_mains(context, criterion, marker=marker,
                                        limit=limit, sort_key=sort_key,
                                        sort_dir=sort_dir)
 
-    def find_zone_master(self, context, criterion):
-        return self._find_zone_master(context, criterion, one=True)
+    def find_zone_main(self, context, criterion):
+        return self._find_zone_main(context, criterion, one=True)
 
-    def update_zone_master(self, context, zone_master):
+    def update_zone_main(self, context, zone_main):
 
-        return self._update(context, tables.zone_masters,
-                            zone_master,
-                            exceptions.DuplicateZoneMaster,
-                            exceptions.ZoneMasterNotFound)
+        return self._update(context, tables.zone_mains,
+                            zone_main,
+                            exceptions.DuplicateZoneMain,
+                            exceptions.ZoneMainNotFound)
 
-    def delete_zone_master(self, context, zone_master_id):
-        zone_master = self._find_zone_masters(
-            context, {'id': zone_master_id}, one=True)
-        deleted_zone_master = self._delete(
-            context, tables.zone_masters, zone_master,
-            exceptions.ZoneMasterNotFound)
+    def delete_zone_main(self, context, zone_main_id):
+        zone_main = self._find_zone_mains(
+            context, {'id': zone_main_id}, one=True)
+        deleted_zone_main = self._delete(
+            context, tables.zone_mains, zone_main,
+            exceptions.ZoneMainNotFound)
 
-        return deleted_zone_master
+        return deleted_zone_main
 
     # RecordSet Methods
     def _find_recordsets(self, context, criterion, one=False, marker=None,
@@ -1161,10 +1161,10 @@ class SQLAlchemyStorage(sqlalchemy_base.SQLAlchemy, storage_base.Storage):
             pool_target.options = self._find_pool_target_options(
                 context, {'pool_target_id': pool_target.id})
 
-            pool_target.masters = self._find_pool_target_masters(
+            pool_target.mains = self._find_pool_target_mains(
                 context, {'pool_target_id': pool_target.id})
 
-            pool_target.obj_reset_changes(['options', 'masters'])
+            pool_target.obj_reset_changes(['options', 'mains'])
 
         if one:
             _load_relations(pool_targets)
@@ -1179,7 +1179,7 @@ class SQLAlchemyStorage(sqlalchemy_base.SQLAlchemy, storage_base.Storage):
 
         pool_target = self._create(
             tables.pool_targets, pool_target, exceptions.DuplicatePoolTarget,
-            ['options', 'masters'])
+            ['options', 'mains'])
 
         if pool_target.obj_attr_is_set('options'):
             for pool_target_option in pool_target.options:
@@ -1188,14 +1188,14 @@ class SQLAlchemyStorage(sqlalchemy_base.SQLAlchemy, storage_base.Storage):
         else:
             pool_target.options = objects.PoolTargetOptionList()
 
-        if pool_target.obj_attr_is_set('masters'):
-            for pool_target_master in pool_target.masters:
-                self.create_pool_target_master(
-                    context, pool_target.id, pool_target_master)
+        if pool_target.obj_attr_is_set('mains'):
+            for pool_target_main in pool_target.mains:
+                self.create_pool_target_main(
+                    context, pool_target.id, pool_target_main)
         else:
-            pool_target.masters = objects.PoolTargetMasterList()
+            pool_target.mains = objects.PoolTargetMainList()
 
-        pool_target.obj_reset_changes(['options', 'masters'])
+        pool_target.obj_reset_changes(['options', 'mains'])
 
         return pool_target
 
@@ -1273,7 +1273,7 @@ class SQLAlchemyStorage(sqlalchemy_base.SQLAlchemy, storage_base.Storage):
     def _update_pool_target_items(self, context, pool_target, attribute_name):
         """Update attributes beloging to a pool target
         """
-        assert attribute_name in ('options', 'masters')
+        assert attribute_name in ('options', 'mains')
 
         # Gather the pool ID's we have
         finder = getattr(self, "_find_pool_target_%s" % attribute_name)
@@ -1328,9 +1328,9 @@ class SQLAlchemyStorage(sqlalchemy_base.SQLAlchemy, storage_base.Storage):
         pool_target = self._update(
             context, tables.pool_targets, pool_target,
             exceptions.DuplicatePoolTarget, exceptions.PoolTargetNotFound,
-            ['options', 'masters'])
+            ['options', 'mains'])
 
-        for attribute_name in ('options', 'masters'):
+        for attribute_name in ('options', 'mains'):
             if pool_target.obj_attr_is_set(attribute_name):
                 self._update_pool_target_items(context, pool_target,
                                                attribute_name)
@@ -1393,50 +1393,50 @@ class SQLAlchemyStorage(sqlalchemy_base.SQLAlchemy, storage_base.Storage):
 
         return deleted_pool_target_option
 
-    # PoolTargetMaster methods
-    def _find_pool_target_masters(self, context, criterion, one=False,
+    # PoolTargetMain methods
+    def _find_pool_target_mains(self, context, criterion, one=False,
                                   marker=None, limit=None, sort_key=None,
                                   sort_dir=None):
         return self._find(
-            context, tables.pool_target_masters,
-            objects.PoolTargetMaster, objects.PoolTargetMasterList,
-            exceptions.PoolTargetMasterNotFound, criterion, one,
+            context, tables.pool_target_mains,
+            objects.PoolTargetMain, objects.PoolTargetMainList,
+            exceptions.PoolTargetMainNotFound, criterion, one,
             marker, limit, sort_key, sort_dir)
 
-    def create_pool_target_master(self, context, pool_target_id,
-                                  pool_target_master):
-        pool_target_master.pool_target_id = pool_target_id
+    def create_pool_target_main(self, context, pool_target_id,
+                                  pool_target_main):
+        pool_target_main.pool_target_id = pool_target_id
 
-        return self._create(tables.pool_target_masters, pool_target_master,
-                            exceptions.DuplicatePoolTargetMaster)
+        return self._create(tables.pool_target_mains, pool_target_main,
+                            exceptions.DuplicatePoolTargetMain)
 
-    def get_pool_target_master(self, context, pool_target_master_id):
-        return self._find_pool_target_masters(
-            context, {'id': pool_target_master_id}, one=True)
+    def get_pool_target_main(self, context, pool_target_main_id):
+        return self._find_pool_target_mains(
+            context, {'id': pool_target_main_id}, one=True)
 
-    def find_pool_target_masters(self, context, criterion=None, marker=None,
+    def find_pool_target_mains(self, context, criterion=None, marker=None,
                                  limit=None, sort_key=None, sort_dir=None):
-        return self._find_pool_target_masters(
+        return self._find_pool_target_mains(
             context, criterion, marker=marker, limit=limit, sort_key=sort_key,
             sort_dir=sort_dir)
 
-    def find_pool_target_master(self, context, criterion):
-        return self._find_pool_target_masters(context, criterion, one=True)
+    def find_pool_target_main(self, context, criterion):
+        return self._find_pool_target_mains(context, criterion, one=True)
 
-    def update_pool_target_master(self, context, pool_target_master):
+    def update_pool_target_main(self, context, pool_target_main):
         return self._update(
-            context, tables.pool_target_masters, pool_target_master,
-            exceptions.DuplicatePoolTargetMaster,
-            exceptions.PoolTargetMasterNotFound)
+            context, tables.pool_target_mains, pool_target_main,
+            exceptions.DuplicatePoolTargetMain,
+            exceptions.PoolTargetMainNotFound)
 
-    def delete_pool_target_master(self, context, pool_target_master_id):
-        pool_target_master = self._find_pool_target_masters(
-            context, {'id': pool_target_master_id}, one=True)
-        deleted_pool_target_master = self._delete(
-            context, tables.pool_target_masters, pool_target_master,
-            exceptions.PoolTargetMasterNotFound)
+    def delete_pool_target_main(self, context, pool_target_main_id):
+        pool_target_main = self._find_pool_target_mains(
+            context, {'id': pool_target_main_id}, one=True)
+        deleted_pool_target_main = self._delete(
+            context, tables.pool_target_mains, pool_target_main,
+            exceptions.PoolTargetMainNotFound)
 
-        return deleted_pool_target_master
+        return deleted_pool_target_main
 
     # PoolAlsoNotify methods
     def _find_pool_also_notifies(self, context, criterion, one=False,

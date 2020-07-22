@@ -23,8 +23,8 @@ class DeployCDHV550(base.SaharaTestCase):
 
     def setUp(self):
         super(DeployCDHV550, self).setUp()
-        self.master = mock.MagicMock()
-        self.master.node_group.node_processes = [
+        self.main = mock.MagicMock()
+        self.main.node_group.node_processes = [
             "HDFS_NAMENODE", "YARN_RESOURCEMANAGER", "CLOUDERA_MANAGER",
             "SENTRY_SERVER", "YARN_NODEMANAGER", "ZOOKEEPER_SERVER",
             "OOZIE_SERVER", "YARN_JOBHISTORY", "HDFS_SECONDARYNAMENODE",
@@ -38,7 +38,7 @@ class DeployCDHV550(base.SaharaTestCase):
             "HDFS_DATANODE", "HDFS_JOURNALNODE", "JOURNALNODE",
             "YARN_NODEMANAGER", "YARN_STANDBYRM",
         ]
-        self.instances = [self.master, self.worker]
+        self.instances = [self.main, self.worker]
         self.cluster = mock.MagicMock()
 
         self.is_cdh_exists = mock.patch(
@@ -85,7 +85,7 @@ class DeployCDHV550(base.SaharaTestCase):
         mock_cu.get_service_by_role.assert_any_call('DATANODE',
                                                     instance=self.worker)
         mock_cu.get_service_by_role.assert_any_call('NODEMANAGER',
-                                                    instance=self.master)
+                                                    instance=self.main)
         mock_cu.get_service_by_role.assert_any_call('NODEMANAGER',
                                                     instance=self.worker)
         self.assertEqual(mock_cu.start_roles.call_count, 3)
@@ -182,7 +182,7 @@ class DeployCDHV550(base.SaharaTestCase):
         mock_finish.assert_called_once_with(self.cluster)
 
     def test_get_open_ports(self):
-        master_ports = [
+        main_ports = [
             9000,
             7180, 7182, 7183, 7432, 7184, 8084, 8086, 10101,
             9997, 9996, 8087, 9998, 9999, 8085, 9995, 9994,
@@ -208,9 +208,9 @@ class DeployCDHV550(base.SaharaTestCase):
             21050, 21000, 23000, 25000, 28000, 22000,
             16000, 16001
         ]
-        deploy.get_open_ports(self.master.node_group)
-        self.assertItemsEqual(master_ports,
-                              deploy.get_open_ports(self.master.node_group))
+        deploy.get_open_ports(self.main.node_group)
+        self.assertItemsEqual(main_ports,
+                              deploy.get_open_ports(self.main.node_group))
         worker_ports = [
             9000,
             50010, 1004, 50075, 1006, 50020,

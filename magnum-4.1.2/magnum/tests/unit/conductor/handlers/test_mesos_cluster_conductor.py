@@ -28,7 +28,7 @@ class TestClusterConductorWithMesos(base.TestCase):
         self.cluster_template_dict = {
             'image_id': 'image_id',
             'flavor_id': 'flavor_id',
-            'master_flavor_id': 'master_flavor_id',
+            'main_flavor_id': 'main_flavor_id',
             'keypair_id': 'keypair_id',
             'dns_nameserver': 'dns_nameserver',
             'external_network_id': 'external_network_id',
@@ -41,13 +41,13 @@ class TestClusterConductorWithMesos(base.TestCase):
             'server_type': 'vm',
             'volume_driver': 'volume_driver',
             'labels': {'rexray_preempt': 'False',
-                       'mesos_slave_isolation':
+                       'mesos_subordinate_isolation':
                        'docker/runtime,filesystem/linux',
-                       'mesos_slave_image_providers': 'docker',
-                       'mesos_slave_executor_env_variables': '{}',
-                       'mesos_slave_work_dir': '/tmp/mesos/slave'
+                       'mesos_subordinate_image_providers': 'docker',
+                       'mesos_subordinate_executor_env_variables': '{}',
+                       'mesos_subordinate_work_dir': '/tmp/mesos/subordinate'
                        },
-            'master_lb_enabled': False,
+            'main_lb_enabled': False,
             'fixed_network': 'fixed_network',
             'fixed_subnet': 'fixed_subnet',
         }
@@ -61,7 +61,7 @@ class TestClusterConductorWithMesos(base.TestCase):
             'api_address': '172.17.2.3',
             'node_addresses': ['172.17.2.4'],
             'node_count': 1,
-            'master_count': 1,
+            'main_count': 1,
             'trustee_username': 'fake_trustee',
             'trustee_password': 'fake_trustee_password',
             'trustee_user_id': '7b489f04-b458-4541-8179-6a48a553e656',
@@ -106,10 +106,10 @@ class TestClusterConductorWithMesos(base.TestCase):
             'fixed_subnet': 'fixed_subnet',
             'dns_nameserver': 'dns_nameserver',
             'server_image': 'image_id',
-            'master_flavor': 'master_flavor_id',
-            'slave_flavor': 'flavor_id',
-            'number_of_slaves': 1,
-            'number_of_masters': 1,
+            'main_flavor': 'main_flavor_id',
+            'subordinate_flavor': 'flavor_id',
+            'number_of_subordinates': 1,
+            'number_of_mains': 1,
             'http_proxy': 'http_proxy',
             'https_proxy': 'https_proxy',
             'no_proxy': 'no_proxy',
@@ -126,15 +126,15 @@ class TestClusterConductorWithMesos(base.TestCase):
             'tenant_name': 'admin',
             'domain_name': 'domainname',
             'rexray_preempt': 'False',
-            'mesos_slave_executor_env_variables': '{}',
-            'mesos_slave_isolation': 'docker/runtime,filesystem/linux',
-            'mesos_slave_work_dir': '/tmp/mesos/slave',
-            'mesos_slave_image_providers': 'docker'
+            'mesos_subordinate_executor_env_variables': '{}',
+            'mesos_subordinate_isolation': 'docker/runtime,filesystem/linux',
+            'mesos_subordinate_work_dir': '/tmp/mesos/subordinate',
+            'mesos_subordinate_image_providers': 'docker'
         }
         self.assertEqual(expected, definition)
         self.assertEqual(
             ['../../common/templates/environments/no_private_network.yaml',
-             '../../common/templates/environments/no_master_lb.yaml'],
+             '../../common/templates/environments/no_main_lb.yaml'],
             env_files)
 
     @patch('magnum.objects.ClusterTemplate.get_by_uuid')
@@ -143,7 +143,7 @@ class TestClusterConductorWithMesos(base.TestCase):
             self,
             mock_driver,
             mock_objects_cluster_template_get_by_uuid):
-        not_required = ['image_id', 'master_flavor_id', 'flavor_id',
+        not_required = ['image_id', 'main_flavor_id', 'flavor_id',
                         'dns_nameserver', 'fixed_network', 'http_proxy',
                         'https_proxy', 'no_proxy', 'volume_driver',
                         'fixed_subnet']
@@ -165,8 +165,8 @@ class TestClusterConductorWithMesos(base.TestCase):
         expected = {
             'ssh_key_name': 'keypair_id',
             'external_network': 'external_network_id',
-            'number_of_slaves': 1,
-            'number_of_masters': 1,
+            'number_of_subordinates': 1,
+            'number_of_mains': 1,
             'cluster_name': 'cluster1',
             'trustee_domain_id': self.mock_keystone.trustee_domain_id,
             'trustee_username': 'fake_trustee',
@@ -179,15 +179,15 @@ class TestClusterConductorWithMesos(base.TestCase):
             'tenant_name': 'admin',
             'domain_name': 'domainname',
             'rexray_preempt': 'False',
-            'mesos_slave_isolation': 'docker/runtime,filesystem/linux',
-            'mesos_slave_executor_env_variables': '{}',
-            'mesos_slave_work_dir': '/tmp/mesos/slave',
-            'mesos_slave_image_providers': 'docker'
+            'mesos_subordinate_isolation': 'docker/runtime,filesystem/linux',
+            'mesos_subordinate_executor_env_variables': '{}',
+            'mesos_subordinate_work_dir': '/tmp/mesos/subordinate',
+            'mesos_subordinate_image_providers': 'docker'
         }
         self.assertEqual(expected, definition)
         self.assertEqual(
             ['../../common/templates/environments/with_private_network.yaml',
-             '../../common/templates/environments/no_master_lb.yaml'],
+             '../../common/templates/environments/no_main_lb.yaml'],
             env_files)
 
     @patch('magnum.objects.ClusterTemplate.get_by_uuid')
@@ -196,7 +196,7 @@ class TestClusterConductorWithMesos(base.TestCase):
             self,
             mock_driver,
             mock_objects_cluster_template_get_by_uuid):
-        self.cluster_template_dict['master_lb_enabled'] = True
+        self.cluster_template_dict['main_lb_enabled'] = True
         cluster_template = objects.ClusterTemplate(
             self.context, **self.cluster_template_dict)
         mock_objects_cluster_template_get_by_uuid.return_value = \
@@ -216,10 +216,10 @@ class TestClusterConductorWithMesos(base.TestCase):
             'fixed_subnet': 'fixed_subnet',
             'dns_nameserver': 'dns_nameserver',
             'server_image': 'image_id',
-            'master_flavor': 'master_flavor_id',
-            'slave_flavor': 'flavor_id',
-            'number_of_slaves': 1,
-            'number_of_masters': 1,
+            'main_flavor': 'main_flavor_id',
+            'subordinate_flavor': 'flavor_id',
+            'number_of_subordinates': 1,
+            'number_of_mains': 1,
             'http_proxy': 'http_proxy',
             'https_proxy': 'https_proxy',
             'no_proxy': 'no_proxy',
@@ -236,25 +236,25 @@ class TestClusterConductorWithMesos(base.TestCase):
             'tenant_name': 'admin',
             'domain_name': 'domainname',
             'rexray_preempt': 'False',
-            'mesos_slave_executor_env_variables': '{}',
-            'mesos_slave_isolation': 'docker/runtime,filesystem/linux',
-            'mesos_slave_work_dir': '/tmp/mesos/slave',
-            'mesos_slave_image_providers': 'docker'
+            'mesos_subordinate_executor_env_variables': '{}',
+            'mesos_subordinate_isolation': 'docker/runtime,filesystem/linux',
+            'mesos_subordinate_work_dir': '/tmp/mesos/subordinate',
+            'mesos_subordinate_image_providers': 'docker'
         }
         self.assertEqual(expected, definition)
         self.assertEqual(
             ['../../common/templates/environments/no_private_network.yaml',
-             '../../common/templates/environments/with_master_lb.yaml'],
+             '../../common/templates/environments/with_main_lb.yaml'],
             env_files)
 
     @patch('magnum.objects.ClusterTemplate.get_by_uuid')
     @patch('magnum.drivers.common.driver.Driver.get_driver')
-    def test_extract_template_definition_multi_master(
+    def test_extract_template_definition_multi_main(
             self,
             mock_driver,
             mock_objects_cluster_template_get_by_uuid):
-        self.cluster_template_dict['master_lb_enabled'] = True
-        self.cluster_dict['master_count'] = 2
+        self.cluster_template_dict['main_lb_enabled'] = True
+        self.cluster_dict['main_count'] = 2
         cluster_template = objects.ClusterTemplate(
             self.context, **self.cluster_template_dict)
         mock_objects_cluster_template_get_by_uuid.return_value = \
@@ -274,10 +274,10 @@ class TestClusterConductorWithMesos(base.TestCase):
             'fixed_subnet': 'fixed_subnet',
             'dns_nameserver': 'dns_nameserver',
             'server_image': 'image_id',
-            'master_flavor': 'master_flavor_id',
-            'slave_flavor': 'flavor_id',
-            'number_of_slaves': 1,
-            'number_of_masters': 2,
+            'main_flavor': 'main_flavor_id',
+            'subordinate_flavor': 'flavor_id',
+            'number_of_subordinates': 1,
+            'number_of_mains': 2,
             'http_proxy': 'http_proxy',
             'https_proxy': 'https_proxy',
             'no_proxy': 'no_proxy',
@@ -294,15 +294,15 @@ class TestClusterConductorWithMesos(base.TestCase):
             'tenant_name': 'admin',
             'domain_name': 'domainname',
             'rexray_preempt': 'False',
-            'mesos_slave_executor_env_variables': '{}',
-            'mesos_slave_isolation': 'docker/runtime,filesystem/linux',
-            'mesos_slave_work_dir': '/tmp/mesos/slave',
-            'mesos_slave_image_providers': 'docker'
+            'mesos_subordinate_executor_env_variables': '{}',
+            'mesos_subordinate_isolation': 'docker/runtime,filesystem/linux',
+            'mesos_subordinate_work_dir': '/tmp/mesos/subordinate',
+            'mesos_subordinate_image_providers': 'docker'
         }
         self.assertEqual(expected, definition)
         self.assertEqual(
             ['../../common/templates/environments/no_private_network.yaml',
-             '../../common/templates/environments/with_master_lb.yaml'],
+             '../../common/templates/environments/with_main_lb.yaml'],
             env_files)
 
     @patch('magnum.conductor.utils.retrieve_cluster_template')
@@ -331,7 +331,7 @@ class TestClusterConductorWithMesos(base.TestCase):
     def test_poll_node_count(self):
         mock_heat_stack, cluster, poller = self.setup_poll_test()
 
-        mock_heat_stack.parameters = {'number_of_slaves': 1}
+        mock_heat_stack.parameters = {'number_of_subordinates': 1}
         mock_heat_stack.stack_status = cluster_status.CREATE_IN_PROGRESS
         poller.poll_and_check()
 
@@ -340,7 +340,7 @@ class TestClusterConductorWithMesos(base.TestCase):
     def test_poll_node_count_by_update(self):
         mock_heat_stack, cluster, poller = self.setup_poll_test()
 
-        mock_heat_stack.parameters = {'number_of_slaves': 2}
+        mock_heat_stack.parameters = {'number_of_subordinates': 2}
         mock_heat_stack.stack_status = cluster_status.UPDATE_COMPLETE
         poller.poll_and_check()
 

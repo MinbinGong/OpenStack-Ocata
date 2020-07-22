@@ -66,8 +66,8 @@ source_suffix = '.rst'
 # The encoding of source files.
 # source_encoding = 'utf-8-sig'
 
-# The master toctree document.
-master_doc = 'index'
+# The main toctree document.
+main_doc = 'index'
 
 # General information about the project.
 project = u'Shared File Systems API Reference'
@@ -258,7 +258,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'manila.tex',
+    (main_doc, 'manila.tex',
      u'OpenStack Shared File Systems API Documentation',
      u'OpenStack Foundation', 'manual'),
 ]
@@ -289,7 +289,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'manila', u'OpenStack Shared File Systems API Documentation',
+    (main_doc, 'manila', u'OpenStack Shared File Systems API Documentation',
      u'Openstack Foundation', 1)
 ]
 
@@ -303,7 +303,7 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'Manila', u'OpenStack Shared File Systems API Documentation',
+    (main_doc, 'Manila', u'OpenStack Shared File Systems API Documentation',
      u'OpenStack Foundation', 'Manila', 'OpenStack Shared File Systems',
      'Miscellaneous'),
 ]

@@ -36,7 +36,7 @@ class ClusterTemplate(base.MagnumPersistentObject, base.MagnumObject,
     # Version 1.10: Removed 'ssh_authorized_key' field
     # Version 1.11: Added 'insecure_registry' field
     # Version 1.12: Added 'docker_storage_driver' field
-    # Version 1.13: Added 'master_lb_enabled' field
+    # Version 1.13: Added 'main_lb_enabled' field
     # Version 1.14: Added 'fixed_subnet' field
     # Version 1.15: Added 'floating_ip_enabled' field
     # Version 1.16: Renamed the class from "BayModel' to 'ClusterTemplate'
@@ -53,7 +53,7 @@ class ClusterTemplate(base.MagnumPersistentObject, base.MagnumObject,
         'name': fields.StringField(nullable=True),
         'image_id': fields.StringField(nullable=True),
         'flavor_id': fields.StringField(nullable=True),
-        'master_flavor_id': fields.StringField(nullable=True),
+        'main_flavor_id': fields.StringField(nullable=True),
         'keypair_id': fields.StringField(nullable=True),
         'dns_nameserver': fields.StringField(nullable=True),
         'external_network_id': fields.StringField(nullable=True),
@@ -76,7 +76,7 @@ class ClusterTemplate(base.MagnumPersistentObject, base.MagnumObject,
         'public': fields.BooleanField(default=False),
         'server_type': fields.StringField(nullable=True),
         'insecure_registry': fields.StringField(nullable=True),
-        'master_lb_enabled': fields.BooleanField(default=False),
+        'main_lb_enabled': fields.BooleanField(default=False),
         'floating_ip_enabled': fields.BooleanField(default=True),
     }
 

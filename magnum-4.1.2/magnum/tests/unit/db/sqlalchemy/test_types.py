@@ -45,25 +45,25 @@ class SqlAlchemyCustomTypesTestCase(base.DbTestCase):
                            ['this is not a dict']})
 
     def test_JSONEncodedList_default_value(self):
-        # Create cluster w/o master_addresses
+        # Create cluster w/o main_addresses
         cluster1_id = uuidutils.generate_uuid()
         self.dbapi.create_cluster({'uuid': cluster1_id})
         cluster1 = sa_api.model_query(
             models.Cluster).filter_by(uuid=cluster1_id).one()
-        self.assertEqual([], cluster1.master_addresses)
+        self.assertEqual([], cluster1.main_addresses)
 
-        # Create cluster with master_addresses
+        # Create cluster with main_addresses
         cluster2_id = uuidutils.generate_uuid()
         self.dbapi.create_cluster({'uuid': cluster2_id,
-                                   'master_addresses': ['mymaster_address1',
-                                                        'mymaster_address2']})
+                                   'main_addresses': ['mymain_address1',
+                                                        'mymain_address2']})
         cluster2 = sa_api.model_query(
             models.Cluster).filter_by(uuid=cluster2_id).one()
-        self.assertEqual(['mymaster_address1', 'mymaster_address2'],
-                         cluster2.master_addresses)
+        self.assertEqual(['mymain_address1', 'mymain_address2'],
+                         cluster2.main_addresses)
 
     def test_JSONEncodedList_type_check(self):
         self.assertRaises(db_exc.DBError,
                           self.dbapi.create_cluster,
-                          {'master_addresses':
+                          {'main_addresses':
                            {'this is not a list': 'test'}})

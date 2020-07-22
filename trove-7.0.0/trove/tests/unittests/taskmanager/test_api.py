@@ -55,7 +55,7 @@ class ApiTest(trove_testtools.TestCase):
             'inst-id', 'inst-name', flavor, 'img-id', {'name': 'db1'},
             {'name': 'usr1'}, 'mysql', None, 1, backup_id='bk-id',
             availability_zone='az', root_password='pwd', nics=['nic-id'],
-            overrides={}, slave_of_id='slv-id', cluster_config={},
+            overrides={}, subordinate_of_id='slv-id', cluster_config={},
             volume_type='type', modules=['mod-id'], locality='affinity')
         self._verify_rpc_prepare_before_cast()
         self._verify_cast(
@@ -64,7 +64,7 @@ class ApiTest(trove_testtools.TestCase):
             datastore_manager='mysql', flavor='flv-id', image_id='img-id',
             instance_id='inst-id', locality='affinity', modules=['mod-id'],
             name='inst-name', nics=['nic-id'], overrides={}, packages=None,
-            root_password='pwd', slave_of_id='slv-id', users={'name': 'usr1'},
+            root_password='pwd', subordinate_of_id='slv-id', users={'name': 'usr1'},
             volume_size=1, volume_type='type')
 
     def test_detach_replica(self):

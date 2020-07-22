@@ -47,7 +47,7 @@ class EdpSparkEngine(edp_spark_engine.SparkJobEngine):
 
     def __init__(self, cluster):
         super(EdpSparkEngine, self).__init__(cluster)
-        self.master = plugin_utils.get_instance(cluster,
+        self.main = plugin_utils.get_instance(cluster,
                                                 "spark history server")
         self.plugin_params["spark-user"] = "sudo -u hadoop "
         self.plugin_params["spark-submit"] = os.path.join(
@@ -55,7 +55,7 @@ class EdpSparkEngine(edp_spark_engine.SparkJobEngine):
                 "Spark", "Spark home", self.cluster),
             "bin/spark-submit")
         self.plugin_params["deploy-mode"] = "cluster"
-        self.plugin_params["master"] = "yarn"
+        self.plugin_params["main"] = "yarn"
 
         driver_cp = plugin_utils.get_config_value_or_default(
             "Spark", "Executor extra classpath", self.cluster)

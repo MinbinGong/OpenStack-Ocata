@@ -537,12 +537,12 @@ class TestClusterOperation(test_base.SenlinTestCase):
 
     def test_init(self):
         sot = clusters.ClusterOperationRequest(
-            identity='foo', filters={'role': 'slave'},
+            identity='foo', filters={'role': 'subordinate'},
             operation='dance', params={'style': 'tango'})
 
         self.assertEqual('foo', sot.identity)
         self.assertEqual('dance', sot.operation)
-        self.assertEqual({'role': 'slave'}, sot.filters)
+        self.assertEqual({'role': 'subordinate'}, sot.filters)
         self.assertEqual({'style': 'tango'}, sot.params)
 
     def test_init_minimal(self):

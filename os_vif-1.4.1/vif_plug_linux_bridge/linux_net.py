@@ -149,7 +149,7 @@ def _ensure_bridge_privileged(bridge, interface, net_attrs, gateway,
         out, err = processutils.execute('brctl', 'addif', bridge,
                                         interface, check_exit_code=False)
         if (err and err != "device %s is already a member of a bridge; "
-              "can't enslave it to bridge %s.\n" % (interface, bridge)):
+              "can't ensubordinate it to bridge %s.\n" % (interface, bridge)):
             msg = _('Failed to add interface: %s') % err
             raise Exception(msg)
 

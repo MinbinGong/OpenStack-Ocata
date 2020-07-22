@@ -39,7 +39,7 @@ class Bind9BackendTestCase(BackendTestCase):
         target = objects.PoolTarget.from_dict({
             'id': '4588652b-50e7-46b9-b688-a9bad40a873e',
             'type': 'bind9',
-            'masters': [{'host': '192.0.2.1', 'port': 53},
+            'mains': [{'host': '192.0.2.1', 'port': 53},
                         {'host': '192.0.2.2', 'port': 35}],
             'options': [{'key': 'host', 'value': '192.0.2.3'},
                         {'key': 'port', 'value': 53},
@@ -62,7 +62,7 @@ class Bind9BackendTestCase(BackendTestCase):
         target = objects.PoolTarget.from_dict({
             'id': '4588652b-50e7-46b9-b688-a9bad40a873e',
             'type': 'bind9',
-            'masters': [{'host': '192.0.2.1', 'port': 53},
+            'mains': [{'host': '192.0.2.1', 'port': 53},
                         {'host': '192.0.2.2', 'port': 35}],
             'options': []
         })
@@ -81,8 +81,8 @@ class Bind9BackendTestCase(BackendTestCase):
             '-c', '/etc/rndc.conf', '-k', '/etc/rndc.key', 'addzone',
         ), args[:10])
 
-        e1 = 'example.com  { type slave; masters { 192.0.2.1 port 53; 192.0.2.2 port 35;}; file "slave.example.com.cca7908b-dad4-4c50-adba-fb67d4c556e8"; };'  # noqa
-        e2 = 'example.com  { type slave; masters { 192.0.2.2 port 35; 192.0.2.1 port 53;}; file "slave.example.com.cca7908b-dad4-4c50-adba-fb67d4c556e8"; };'  # noqa
+        e1 = 'example.com  { type subordinate; mains { 192.0.2.1 port 53; 192.0.2.2 port 35;}; file "subordinate.example.com.cca7908b-dad4-4c50-adba-fb67d4c556e8"; };'  # noqa
+        e2 = 'example.com  { type subordinate; mains { 192.0.2.2 port 35; 192.0.2.1 port 53;}; file "subordinate.example.com.cca7908b-dad4-4c50-adba-fb67d4c556e8"; };'  # noqa
         self.assertTrue(args[-1] == e1 or args[-1] == e2)
 
     @mock.patch('designate.utils.execute')
@@ -132,7 +132,7 @@ options {
         target = objects.PoolTarget.from_dict({
             'id': '4588652b-50e7-46b9-b688-a9bad40a873e',
             'type': 'bind9',
-            'masters': [{'host': '127.0.0.1', 'port': 33353}],
+            'mains': [{'host': '127.0.0.1', 'port': 33353}],
             'options': [{'key': 'host', 'value': '127.0.0.1'},
                         {'key': 'port', 'value': 33353},
                         {'key': 'rndc_host', 'value': '127.0.0.1'},

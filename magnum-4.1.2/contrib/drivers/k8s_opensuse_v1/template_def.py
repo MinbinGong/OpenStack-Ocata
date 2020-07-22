@@ -30,8 +30,8 @@ class JeOSK8sTemplateDefinition(k8s_template_def.K8sTemplateDefinition):
                            cluster_template_attr='docker_volume_size')
         self.add_output('kube_minions',
                         cluster_attr='node_addresses')
-        self.add_output('kube_masters',
-                        cluster_attr='master_addresses')
+        self.add_output('kube_mains',
+                        cluster_attr='main_addresses')
 
     def get_params(self, context, cluster_template, cluster, **kwargs):
         extra_params = kwargs.pop('extra_params', {})
@@ -46,12 +46,12 @@ class JeOSK8sTemplateDefinition(k8s_template_def.K8sTemplateDefinition):
 
     def get_env_files(self, cluster_template):
         env_files = []
-        if cluster_template.master_lb_enabled:
+        if cluster_template.main_lb_enabled:
             env_files.append(
-                template_def.COMMON_ENV_PATH + 'with_master_lb.yaml')
+                template_def.COMMON_ENV_PATH + 'with_main_lb.yaml')
         else:
             env_files.append(
-                template_def.COMMON_ENV_PATH + 'no_master_lb.yaml')
+                template_def.COMMON_ENV_PATH + 'no_main_lb.yaml')
         if cluster_template.floating_ip_enabled:
             env_files.append(
                 template_def.COMMON_ENV_PATH + 'enable_floating_ip.yaml')

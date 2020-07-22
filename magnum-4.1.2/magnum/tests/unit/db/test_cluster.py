@@ -139,12 +139,12 @@ class DbClusterTestCase(base.DbTestCase):
             uuid=uuidutils.generate_uuid(),
             cluster_template_id=ct2['uuid'],
             node_count=1,
-            master_count=1,
+            main_count=1,
             status=cluster_status.UPDATE_IN_PROGRESS)
         cluster3 = utils.create_test_cluster(
             name='cluster-three',
             node_count=2,
-            master_count=5,
+            main_count=5,
             status=cluster_status.DELETE_IN_PROGRESS)
 
         res = self.dbapi.get_cluster_list(
@@ -172,11 +172,11 @@ class DbClusterTestCase(base.DbTestCase):
         self.assertEqual([cluster2.id], [r.id for r in res])
 
         res = self.dbapi.get_cluster_list(self.context,
-                                          filters={'master_count': 3})
+                                          filters={'main_count': 3})
         self.assertEqual([cluster1.id], [r.id for r in res])
 
         res = self.dbapi.get_cluster_list(self.context,
-                                          filters={'master_count': 1})
+                                          filters={'main_count': 1})
         self.assertEqual([cluster2.id], [r.id for r in res])
 
         filters = {'status': [cluster_status.CREATE_IN_PROGRESS,

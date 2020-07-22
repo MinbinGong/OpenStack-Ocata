@@ -57,7 +57,7 @@ class K8sAPI(core_v1_api.CoreV1Api):
         config.cert_file = self.cert_file.name
         config.key_file = self.key_file.name
 
-        # build a connection with Kubernetes master
+        # build a connection with Kubernetes main
         client = api_client.ApiClient(config=config)
 
         super(K8sAPI, self).__init__(client)
@@ -74,7 +74,7 @@ class K8sAPI(core_v1_api.CoreV1Api):
 def create_k8s_api(context, cluster):
     """Create a kubernetes API client
 
-    Creates connection with Kubernetes master and creates ApivApi instance
+    Creates connection with Kubernetes main and creates ApivApi instance
     to call Kubernetes APIs.
 
     :param context: The security context

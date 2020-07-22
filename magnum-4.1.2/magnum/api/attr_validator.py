@@ -110,14 +110,14 @@ def validate_labels(labels):
 
 
 def validate_labels_isolation(labels):
-    """Validate mesos_slave_isolation"""
-    mesos_slave_isolation = labels.get('mesos_slave_isolation')
-    mesos_slave_isolation_list = mesos_slave_isolation.split(',')
-    unsupported_isolations = set(mesos_slave_isolation_list) - set(
+    """Validate mesos_subordinate_isolation"""
+    mesos_subordinate_isolation = labels.get('mesos_subordinate_isolation')
+    mesos_subordinate_isolation_list = mesos_subordinate_isolation.split(',')
+    unsupported_isolations = set(mesos_subordinate_isolation_list) - set(
         SUPPORTED_ISOLATION)
     if (len(unsupported_isolations) > 0):
         raise exception.InvalidParameterValue(_(
-            'property "labels/mesos_slave_isolation" with value '
+            'property "labels/mesos_subordinate_isolation" with value '
             '"%(isolation_val)s" is not supported, supported values are: '
             '%(supported_isolation)s') % {
                 'isolation_val': ', '.join(list(unsupported_isolations)),
@@ -126,15 +126,15 @@ def validate_labels_isolation(labels):
 
 
 def validate_labels_image_providers(labels):
-    """Validate mesos_slave_image_providers"""
-    mesos_slave_image_providers = labels.get('mesos_slave_image_providers')
-    mesos_slave_image_providers_list = mesos_slave_image_providers.split(',')
+    """Validate mesos_subordinate_image_providers"""
+    mesos_subordinate_image_providers = labels.get('mesos_subordinate_image_providers')
+    mesos_subordinate_image_providers_list = mesos_subordinate_image_providers.split(',')
     isolation_with_valid_data = False
-    for image_providers_val in mesos_slave_image_providers_list:
+    for image_providers_val in mesos_subordinate_image_providers_list:
         image_providers_val = image_providers_val.lower()
         if image_providers_val not in SUPPORTED_IMAGE_PROVIDERS:
             raise exception.InvalidParameterValue(_(
-                'property "labels/mesos_slave_image_providers" with value '
+                'property "labels/mesos_subordinate_image_providers" with value '
                 '"%(image_providers)s" is not supported, supported values '
                 'are: %(supported_image_providers)s') % {
                 'image_providers': image_providers_val,
@@ -142,26 +142,26 @@ def validate_labels_image_providers(labels):
                     SUPPORTED_IMAGE_PROVIDERS + ['unspecified'])})
 
         if image_providers_val == 'docker':
-            mesos_slave_isolation = labels.get('mesos_slave_isolation')
-            if mesos_slave_isolation is not None:
-                mesos_slave_isolation_list = mesos_slave_isolation.split(',')
-                for isolations_val in mesos_slave_isolation_list:
+            mesos_subordinate_isolation = labels.get('mesos_subordinate_isolation')
+            if mesos_subordinate_isolation is not None:
+                mesos_subordinate_isolation_list = mesos_subordinate_isolation.split(',')
+                for isolations_val in mesos_subordinate_isolation_list:
                     if isolations_val == 'docker/runtime':
                         isolation_with_valid_data = True
-            if mesos_slave_isolation is None or not isolation_with_valid_data:
+            if mesos_subordinate_isolation is None or not isolation_with_valid_data:
                 raise exception.RequiredParameterNotProvided(_(
                     "Docker runtime isolator has to be specified if 'docker' "
-                    "is included in 'mesos_slave_image_providers' Please add "
-                    "'docker/runtime' to 'mesos_slave_isolation' labels "
+                    "is included in 'mesos_subordinate_image_providers' Please add "
+                    "'docker/runtime' to 'mesos_subordinate_isolation' labels "
                     "flags"))
 
 
 def validate_labels_executor_env_variables(labels):
     """Validate executor_environment_variables"""
-    mesos_slave_executor_env_val = labels.get(
-        'mesos_slave_executor_env_variables')
+    mesos_subordinate_executor_env_val = labels.get(
+        'mesos_subordinate_executor_env_variables')
     try:
-        json.loads(mesos_slave_executor_env_val)
+        json.loads(mesos_subordinate_executor_env_val)
     except ValueError:
         err = (_("Json format error"))
         raise exception.InvalidParameterValue(err)
@@ -198,24 +198,24 @@ def validate_os_resources(context, cluster_template, cluster=None):
         validate_keypair(cli, cluster['keypair'])
 
 
-def validate_master_count(cluster, cluster_template):
-    if cluster['master_count'] > 1 and \
-            not cluster_template['master_lb_enabled']:
+def validate_main_count(cluster, cluster_template):
+    if cluster['main_count'] > 1 and \
+            not cluster_template['main_lb_enabled']:
         raise exception.InvalidParameterValue(_(
-            "master_count must be 1 when master_lb_enabled is False"))
+            "main_count must be 1 when main_lb_enabled is False"))
 
 
 # Dictionary that maintains a list of validation functions
 validators = {'image_id': validate_image,
               'flavor_id': validate_flavor,
-              'master_flavor_id': validate_flavor,
+              'main_flavor_id': validate_flavor,
               'external_network_id': validate_external_network,
               'fixed_network': validate_fixed_network,
               'labels': validate_labels}
 
-labels_validators = {'mesos_slave_isolation': validate_labels_isolation,
-                     'mesos_slave_image_providers':
+labels_validators = {'mesos_subordinate_isolation': validate_labels_isolation,
+                     'mesos_subordinate_image_providers':
                      validate_labels_image_providers,
-                     'mesos_slave_executor_env_variables':
+                     'mesos_subordinate_executor_env_variables':
                      validate_labels_executor_env_variables,
                      'swarm_strategy': validate_labels_strategy}

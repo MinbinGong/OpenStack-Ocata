@@ -120,12 +120,12 @@ class Cluster(Base):
     api_address = Column(String(255))
     node_addresses = Column(JSONEncodedList)
     node_count = Column(Integer())
-    master_count = Column(Integer())
+    main_count = Column(Integer())
     status = Column(String(20))
     status_reason = Column(Text)
     create_timeout = Column(Integer())
     discovery_url = Column(String(255))
-    master_addresses = Column(JSONEncodedList)
+    main_addresses = Column(JSONEncodedList)
     # TODO(wanghua): encrypt trust_id in db
     trust_id = Column(String(255))
     trustee_username = Column(String(255))
@@ -159,7 +159,7 @@ class ClusterTemplate(Base):
     name = Column(String(255))
     image_id = Column(String(255))
     flavor_id = Column(String(255))
-    master_flavor_id = Column(String(255))
+    main_flavor_id = Column(String(255))
     keypair_id = Column(String(255))
     external_network_id = Column(String(255))
     fixed_network = Column(String(255))
@@ -181,7 +181,7 @@ class ClusterTemplate(Base):
     public = Column(Boolean, default=False)
     server_type = Column(String(255))
     insecure_registry = Column(String(255))
-    master_lb_enabled = Column(Boolean, default=False)
+    main_lb_enabled = Column(Boolean, default=False)
     floating_ip_enabled = Column(Boolean, default=True)
 
 

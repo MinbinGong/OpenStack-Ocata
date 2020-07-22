@@ -332,9 +332,9 @@ class InstanceController(wsgi.Controller):
         availability_zone = body['instance'].get('availability_zone')
         nics = body['instance'].get('nics')
 
-        slave_of_id = body['instance'].get('replica_of',
+        subordinate_of_id = body['instance'].get('replica_of',
                                            # also check for older name
-                                           body['instance'].get('slave_of'))
+                                           body['instance'].get('subordinate_of'))
         replica_count = body['instance'].get('replica_count')
         locality = body['instance'].get('locality')
         if locality:
@@ -345,10 +345,10 @@ class InstanceController(wsgi.Controller):
                                     "', '".join(locality_domain)))
             if locality not in locality_domain:
                 raise exception.BadRequest(msg=locality_domain_msg)
-            if slave_of_id:
+            if subordinate_of_id:
                 dupe_locality_msg = (
                     'Cannot specify locality when adding replicas to existing '
-                    'master.')
+                    'main.')
                 raise exception.BadRequest(msg=dupe_locality_msg)
         region_name = body['instance'].get('region_name', CONF.os_region_name)
 
@@ -357,7 +357,7 @@ class InstanceController(wsgi.Controller):
                                           datastore, datastore_version,
                                           volume_size, backup_id,
                                           availability_zone, nics,
-                                          configuration, slave_of_id,
+                                          configuration, subordinate_of_id,
                                           replica_count=replica_count,
                                           volume_type=volume_type,
                                           modules=modules,
@@ -439,7 +439,7 @@ class InstanceController(wsgi.Controller):
 
         args = {}
         args['detach_replica'] = ('replica_of' in body['instance'] or
-                                  'slave_of' in body['instance'])
+                                  'subordinate_of' in body['instance'])
 
         if 'name' in body['instance']:
             args['name'] = body['instance']['name']

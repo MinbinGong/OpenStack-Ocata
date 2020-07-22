@@ -115,14 +115,14 @@ class DNSUtilsTestCase(test_base.OsWinBaseTestCase):
             ZoneType=mock.sentinel.zone_type,
             DsIntegrated=mock.sentinel.ds_integrated,
             DataFile=mock.sentinel.data_file_name,
-            MasterServers=[mock.sentinel.ip_addrs])
+            MainServers=[mock.sentinel.ip_addrs])
 
         zone_properties = self._dnsutils.get_zone_properties(
             mock.sentinel.zone_name)
         expected_zone_props = {
             'zone_type': mock.sentinel.zone_type,
             'ds_integrated': mock.sentinel.ds_integrated,
-            'master_servers': [mock.sentinel.ip_addrs],
+            'main_servers': [mock.sentinel.ip_addrs],
             'data_file_name': mock.sentinel.data_file_name
         }
         self.assertEqual(expected_zone_props, zone_properties)

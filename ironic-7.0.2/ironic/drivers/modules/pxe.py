@@ -274,7 +274,7 @@ def validate_boot_parameters_for_trusted_boot(node):
 class TFTPImageCache(image_cache.ImageCache):
     def __init__(self):
         super(TFTPImageCache, self).__init__(
-            CONF.pxe.tftp_master_path,
+            CONF.pxe.tftp_main_path,
             # MiB -> B
             cache_size=CONF.pxe.image_cache_size * 1024 * 1024,
             # min -> sec

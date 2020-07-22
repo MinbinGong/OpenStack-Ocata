@@ -45,8 +45,8 @@ class KekRewrap(object):
         self.hsm_session = self.pkcs11.get_session()
         self.new_mkek_label = self.crypto_plugin.mkek_label
         self.new_hmac_label = self.crypto_plugin.hmac_label
-        self.new_mkek = self.crypto_plugin._get_master_key(self.new_mkek_label)
-        self.new_mkhk = self.crypto_plugin._get_master_key(self.new_hmac_label)
+        self.new_mkek = self.crypto_plugin._get_main_key(self.new_mkek_label)
+        self.new_mkhk = self.crypto_plugin._get_main_key(self.new_hmac_label)
 
     def rewrap_kek(self, project, kek):
         with self.db_session.begin():
@@ -64,7 +64,7 @@ class KekRewrap(object):
 
             session = self.hsm_session
 
-            # Get KEK's master keys
+            # Get KEK's main keys
             kek_mkek = self.pkcs11.get_key_handle(
                 meta_dict['mkek_label'], session
             )
@@ -82,7 +82,7 @@ class KekRewrap(object):
             current_kek = self.pkcs11.unwrap_key(kek_mkek, iv, wrapped_key,
                                                  session)
 
-            # Wrap KEK with new master keys
+            # Wrap KEK with new main keys
             new_kek = self.pkcs11.wrap_key(self.new_mkek, current_kek,
                                            session)
             # Compute HMAC for rewrapped KEK

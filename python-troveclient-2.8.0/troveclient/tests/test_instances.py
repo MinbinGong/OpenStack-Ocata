@@ -216,9 +216,9 @@ class InstancesTest(testtools.TestCase):
         resp.status_code = 204
 
         def fake_patch(url, body):
-            # Make sure we never pass slave_of to the API.
+            # Make sure we never pass subordinate_of to the API.
             self.assertIn('instance', body)
-            self.assertNotIn('slave_of', body['instance'])
+            self.assertNotIn('subordinate_of', body['instance'])
             return resp, None
 
         self.instances.api.client.patch = mock.Mock(side_effect=fake_patch)

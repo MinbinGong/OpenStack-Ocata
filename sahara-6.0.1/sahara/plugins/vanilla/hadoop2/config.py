@@ -75,31 +75,31 @@ def configure_spark(cluster):
 
 
 def _push_spark_configs_to_node(cluster, extra):
-    spark_master = vu.get_spark_history_server(cluster)
-    if spark_master:
-        _push_spark_configs_to_existing_node(spark_master, cluster, extra)
-        _push_cleanup_job(spark_master, extra)
-        with spark_master.remote() as r:
+    spark_main = vu.get_spark_history_server(cluster)
+    if spark_main:
+        _push_spark_configs_to_existing_node(spark_main, cluster, extra)
+        _push_cleanup_job(spark_main, extra)
+        with spark_main.remote() as r:
             r.execute_command('sudo su - -c "mkdir /tmp/spark-events" hadoop')
 
 
-def _push_spark_configs_to_existing_node(spark_master, cluster, extra):
+def _push_spark_configs_to_existing_node(spark_main, cluster, extra):
 
     sp_home = c_helper.get_spark_home(cluster)
     files = {
         os.path.join(sp_home,
-                     'conf/spark-env.sh'): extra['sp_master'],
+                     'conf/spark-env.sh'): extra['sp_main'],
         os.path.join(
             sp_home,
             'conf/spark-defaults.conf'): extra['sp_defaults']
         }
 
-    with spark_master.remote() as r:
+    with spark_main.remote() as r:
         r.write_files_to(files, run_as_root=True)
 
 
-def _push_cleanup_job(sp_master, extra):
-    with sp_master.remote() as r:
+def _push_cleanup_job(sp_main, extra):
+    with sp_main.remote() as r:
         if extra['job_cleanup']['valid']:
             r.write_file_to('/opt/hadoop/tmp-cleanup.sh',
                             extra['job_cleanup']['script'],
@@ -113,20 +113,20 @@ def _push_cleanup_job(sp_master, extra):
 
 
 def _extract_spark_configs_to_extra(cluster):
-    sp_master = utils.get_instance(cluster, "spark history server")
+    sp_main = utils.get_instance(cluster, "spark history server")
 
     extra = dict()
 
-    config_master = ''
-    if sp_master is not None:
-        config_master = c_helper.generate_spark_env_configs(cluster)
+    config_main = ''
+    if sp_main is not None:
+        config_main = c_helper.generate_spark_env_configs(cluster)
 
     # Any node that might be used to run spark-submit will need
     # these libs for swift integration
     config_defaults = c_helper.generate_spark_executor_classpath(cluster)
 
     extra['job_cleanup'] = c_helper.generate_job_cleanup_config(cluster)
-    extra['sp_master'] = config_master
+    extra['sp_main'] = config_main
     extra['sp_defaults'] = config_defaults
 
     return extra

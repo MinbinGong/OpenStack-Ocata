@@ -62,9 +62,9 @@ class Cluster(base.MagnumPersistentObject, base.MagnumObject,
         'api_address': fields.StringField(nullable=True),
         'node_addresses': fields.ListOfStringsField(nullable=True),
         'node_count': fields.IntegerField(nullable=True),
-        'master_count': fields.IntegerField(nullable=True),
+        'main_count': fields.IntegerField(nullable=True),
         'discovery_url': fields.StringField(nullable=True),
-        'master_addresses': fields.ListOfStringsField(nullable=True),
+        'main_addresses': fields.ListOfStringsField(nullable=True),
         'ca_cert_ref': fields.StringField(nullable=True),
         'magnum_cert_ref': fields.StringField(nullable=True),
         'cluster_template': fields.ObjectField('ClusterTemplate'),
@@ -167,7 +167,7 @@ class Cluster(base.MagnumPersistentObject, base.MagnumObject,
         :param filters: filter dict, can includes 'cluster_template_id',
                         'name', 'node_count', 'stack_id', 'api_address',
                         'node_addresses', 'project_id', 'user_id',
-                        'status'(should be a status list), 'master_count'.
+                        'status'(should be a status list), 'main_count'.
         :returns: a list of :class:`Cluster` object.
 
         """

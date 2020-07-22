@@ -127,11 +127,11 @@ This parameter defines that timeout (for example: socket_timeout=0.1).
 
 _sentinel_service_name_opt = cfg.StrOpt(
     "sentinel_service_name",
-    default="mymaster",
+    default="mymain",
     help="""
-Redissentinel uses a service name to identify a master redis service.
+Redissentinel uses a service name to identify a main redis service.
 This parameter defines the name (for example:
-sentinal_service_name=mymaster).
+sentinal_service_name=mymain).
 """)
 
 

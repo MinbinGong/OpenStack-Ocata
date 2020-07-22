@@ -1914,7 +1914,7 @@ class StorageTestCase(object):
             'targets': [{
                 'type': "fake",
                 'description': u"FooBar",
-                'masters': [{'host': "192.0.2.2",
+                'mains': [{'host': "192.0.2.2",
                              'port': DEFAULT_MDNS_PORT}],
                 'options': [{'key': 'fake_option', 'value': 'fake_value'}],
             }],
@@ -2071,7 +2071,7 @@ class StorageTestCase(object):
             'targets': [{
                 'type': "fake",
                 'description': u"FooBar",
-                'masters': [{'host': "192.0.2.2",
+                'mains': [{'host': "192.0.2.2",
                              'port': DEFAULT_MDNS_PORT}],
                 'options': [{'key': 'fake_option', 'value': 'fake_value'}],
             }],
@@ -2096,13 +2096,13 @@ class StorageTestCase(object):
             'targets': [{
                 'type': "fake",
                 'description': u"NewFooBar",
-                'masters': [{'host': "192.0.2.2",
+                'mains': [{'host': "192.0.2.2",
                              'port': DEFAULT_MDNS_PORT}],
                 'options': [{'key': 'fake_option', 'value': 'fake_value'}],
             }, {
                 'type': "fake",
                 'description': u"FooBar2",
-                'masters': [{'host': "192.0.2.7", 'port': 5355}],
+                'mains': [{'host': "192.0.2.7", 'port': 5355}],
                 'options': [{'key': 'fake_option', 'value': 'new_fake_value'}],
             }],
             'also_notifies': []

@@ -32,20 +32,20 @@ opts = [
                default='/var/lib/ironic/images/',
                help=_('On the ironic-conductor node, directory where images '
                       'are stored on disk.')),
-    cfg.StrOpt('instance_master_path',
-               default='/var/lib/ironic/master_images',
-               help=_('On the ironic-conductor node, directory where master '
+    cfg.StrOpt('instance_main_path',
+               default='/var/lib/ironic/main_images',
+               help=_('On the ironic-conductor node, directory where main '
                       'instance images are stored on disk. '
                       'Setting to <None> disables image caching.')),
     cfg.IntOpt('image_cache_size',
                default=20480,
-               help=_('Maximum size (in MiB) of cache for master images, '
+               help=_('Maximum size (in MiB) of cache for main images, '
                       'including those in use.')),
     # 10080 here is 1 week - 60*24*7. It is entirely arbitrary in the absence
     # of a facility to disable the ttl entirely.
     cfg.IntOpt('image_cache_ttl',
                default=10080,
-               help=_('Maximum TTL (in minutes) for old master images in '
+               help=_('Maximum TTL (in minutes) for old main images in '
                       'cache.')),
     cfg.StrOpt('pxe_config_template',
                default=os.path.join(
@@ -72,9 +72,9 @@ opts = [
                help=_("ironic-conductor node's TFTP root path. The "
                       "ironic-conductor must have read/write access to this "
                       "path.")),
-    cfg.StrOpt('tftp_master_path',
-               default='/tftpboot/master_images',
-               help=_('On ironic-conductor node, directory where master TFTP '
+    cfg.StrOpt('tftp_main_path',
+               default='/tftpboot/main_images',
+               help=_('On ironic-conductor node, directory where main TFTP '
                       'images are stored on disk. '
                       'Setting to <None> disables image caching.')),
     cfg.StrOpt('pxe_bootfile_name',

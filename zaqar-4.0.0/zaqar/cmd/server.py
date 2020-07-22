@@ -21,7 +21,7 @@ from zaqar import bootstrap
 from zaqar.common import cli
 from zaqar.common import configs
 
-# NOTE(eggmaster): define command line options for zaqar-server
+# NOTE(eggmain): define command line options for zaqar-server
 _CLI_OPTIONS = (
     configs._ADMIN_MODE_OPT,
     cfg.BoolOpt('daemon', default=False,
@@ -33,7 +33,7 @@ _CLI_OPTIONS = (
 def run():
     # Use the global CONF instance
     conf = cfg.CONF
-    # NOTE(eggmaster): register command line options for zaqar-server
+    # NOTE(eggmain): register command line options for zaqar-server
     conf.register_cli_opts(_CLI_OPTIONS)
     log.register_options(conf)
 

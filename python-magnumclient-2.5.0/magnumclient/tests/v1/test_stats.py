@@ -24,7 +24,7 @@ CLUSTER1 = {'id': 123,
             'api_address': '172.17.2.1',
             'node_addresses': ['172.17.2.3'],
             'node_count': 2,
-            'master_count': 1,
+            'main_count': 1,
             'project_id': 'abc'
             }
 CLUSTER2 = {'id': 124,
@@ -35,13 +35,13 @@ CLUSTER2 = {'id': 124,
             'api_address': '172.17.2.2',
             'node_addresses': ['172.17.2.4'],
             'node_count': 2,
-            'master_count': 1,
+            'main_count': 1,
             'project_id': 'bcd'
             }
 
 
 nc = 'node_count'
-mc = 'master_count'
+mc = 'main_count'
 C1 = CLUSTER1
 C2 = CLUSTER2
 fake_responses = {

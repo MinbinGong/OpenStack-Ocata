@@ -1418,7 +1418,7 @@ class ClusterControllerTest(shared.ControllerTest, base.SenlinTestCase):
                     'style': 'tango'
                 },
                 'filters': {
-                    'role': 'slave'
+                    'role': 'subordinate'
                 }
             }
         }

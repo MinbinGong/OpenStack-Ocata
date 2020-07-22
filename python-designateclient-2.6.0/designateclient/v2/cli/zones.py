@@ -30,7 +30,7 @@ LOG = logging.getLogger(__name__)
 
 def _format_zone(zone):
     zone.pop('links', None)
-    zone['masters'] = ", ".join(zone['masters'])
+    zone['mains'] = ", ".join(zone['mains'])
     attrib = ''
     for attr in zone['attributes']:
         attrib += "%s:%s\n" % (attr, zone['attributes'][attr])
@@ -134,7 +134,7 @@ class CreateZoneCommand(command.ShowOne):
         parser.add_argument('--type', help="Zone Type", default='PRIMARY')
         parser.add_argument('--ttl', type=int, help="Time To Live (Seconds)")
         parser.add_argument('--description', help="Description")
-        parser.add_argument('--masters', help="Zone Masters", nargs='+')
+        parser.add_argument('--mains', help="Zone Mains", nargs='+')
         parser.add_argument('--attributes', help="Zone Attributes", nargs='+')
 
         common.add_all_common_options(parser)
@@ -173,7 +173,7 @@ class CreateZoneCommand(command.ShowOne):
             if parsed_args.ttl is not None:
                 payload["ttl"] = parsed_args.ttl
         elif parsed_args.type == 'SECONDARY':
-            payload["masters"] = parsed_args.masters
+            payload["mains"] = parsed_args.mains
         else:
             msg = "Type %s is not supported. Please choose between " \
                 "PRIMARY or SECONDARY"
@@ -199,7 +199,7 @@ class SetZoneCommand(command.ShowOne):
         description_group.add_argument('--description', help="Description")
         description_group.add_argument('--no-description', action='store_true')
 
-        parser.add_argument('--masters', help="Zone Masters", nargs='+')
+        parser.add_argument('--mains', help="Zone Mains", nargs='+')
 
         common.add_all_common_options(parser)
 
@@ -223,8 +223,8 @@ class SetZoneCommand(command.ShowOne):
         elif parsed_args.description:
             data['description'] = parsed_args.description
 
-        if parsed_args.masters:
-            data['masters'] = parsed_args.masters
+        if parsed_args.mains:
+            data['mains'] = parsed_args.mains
 
         updated = client.zones.update(parsed_args.id, data)
         _format_zone(updated)

@@ -211,7 +211,7 @@ class TestNodeCreate(TestNode):
         "profile_id": "edc63d0a-2ca4-48fa-9854-27926da76a4a",
         "profile_name": "mystack",
         "project": "6e18cc2bdbeb48a5b3cad2dc499f6804",
-        "role": "master",
+        "role": "main",
         "status": "INIT",
         "status_reason": "Initializing",
         "updated_at": None,
@@ -260,9 +260,9 @@ class TestNodeCreate(TestNode):
 
     def test_node_create_with_role(self):
         arglist = ['my_node', '--profile', 'mystack',
-                   '--role', 'master']
+                   '--role', 'main']
         kwargs = copy.deepcopy(self.defaults)
-        kwargs['role'] = 'master'
+        kwargs['role'] = 'main'
         parsed_args = self.check_parser(self.cmd, arglist, [])
         self.cmd.take_action(parsed_args)
         self.mock_client.create_node.assert_called_with(**kwargs)
@@ -284,7 +284,7 @@ class TestNodeUpdate(TestNode):
         "profile_id": "edc63d0a-2ca4-48fa-9854-27926da76a4a",
         "profile_name": "mystack",
         "project": "6e18cc2bdbeb48a5b3cad2dc499f6804",
-        "role": "master",
+        "role": "main",
         "status": "INIT",
         "status_reason": "Initializing",
         "updated_at": None,

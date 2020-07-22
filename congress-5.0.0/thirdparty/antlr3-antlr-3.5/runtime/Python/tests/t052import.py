@@ -69,10 +69,10 @@ class T(testbase.ANTLRTest):
         return TLexer
 
 
-    def execParser(self, grammar, grammarEntry, slaves, input):
-        for slave in slaves:
-            parserName = self.writeInlineGrammar(slave)[0]
-            # slave parsers are imported as normal python modules
+    def execParser(self, grammar, grammarEntry, subordinates, input):
+        for subordinate in subordinates:
+            parserName = self.writeInlineGrammar(subordinate)[0]
+            # subordinate parsers are imported as normal python modules
             # to force reloading current version, purge module from sys.modules
             try:
                 del sys.modules[parserName+'Parser']
@@ -90,10 +90,10 @@ class T(testbase.ANTLRTest):
         return parser._output
 
 
-    def execLexer(self, grammar, slaves, input):
-        for slave in slaves:
-            parserName = self.writeInlineGrammar(slave)[0]
-            # slave parsers are imported as normal python modules
+    def execLexer(self, grammar, subordinates, input):
+        for subordinate in subordinates:
+            parserName = self.writeInlineGrammar(subordinate)[0]
+            # subordinate parsers are imported as normal python modules
             # to force reloading current version, purge module from sys.modules
             try:
                 del sys.modules[parserName+'Parser']
@@ -127,7 +127,7 @@ class T(testbase.ANTLRTest):
 
 
     def testDelegatorInvokesDelegateRule(self):
-        slave = textwrap.dedent(
+        subordinate = textwrap.dedent(
         r'''
         parser grammar S1;
         options {
@@ -142,7 +142,7 @@ class T(testbase.ANTLRTest):
         a : B { self.capture("S.a") } ;
         ''')
 
-        master = textwrap.dedent(
+        main = textwrap.dedent(
         r'''
         grammar M1;
         options {
@@ -155,8 +155,8 @@ class T(testbase.ANTLRTest):
         ''')
 
         found = self.execParser(
-            master, 's',
-            slaves=[slave],
+            main, 's',
+            subordinates=[subordinate],
             input="b"
             )
 
@@ -167,25 +167,25 @@ class T(testbase.ANTLRTest):
         #     // must generate something like:
         #          // public int a(int x) throws RecognitionException { return gS.a(x); }
         #        // in M.
-        #        String slave =
+        #        String subordinate =
         #        "parser grammar S;\n" +
         #        "a : B {System.out.print(\"S.a\");} ;\n";
         #        mkdir(tmpdir);
-        #        writeFile(tmpdir, "S.g", slave);
-        #        String master =
+        #        writeFile(tmpdir, "S.g", subordinate);
+        #        String main =
         #        "grammar M;\n" +
         #        "import S;\n" +
         #        "s : a {System.out.println($a.text);} ;\n" +
         #        "B : 'b' ;" + // defines B from inherited token space
         #        "WS : (' '|'\\n') {skip();} ;\n" ;
-        #        String found = execParser("M.g", master, "MParser", "MLexer",
+        #        String found = execParser("M.g", main, "MParser", "MLexer",
         #                                    "s", "b", debug);
         #        assertEquals("S.ab\n", found);
         #        }
 
 
     def testDelegatorInvokesDelegateRuleWithArgs(self):
-        slave = textwrap.dedent(
+        subordinate = textwrap.dedent(
         r'''
         parser grammar S2;
         options {
@@ -198,7 +198,7 @@ class T(testbase.ANTLRTest):
         a[x] returns [y] : B {self.capture("S.a"); $y="1000";} ;
         ''')
 
-        master = textwrap.dedent(
+        main = textwrap.dedent(
         r'''
         grammar M2;
         options {
@@ -211,8 +211,8 @@ class T(testbase.ANTLRTest):
         ''')
 
         found = self.execParser(
-            master, 's',
-            slaves=[slave],
+            main, 's',
+            subordinates=[subordinate],
             input="b"
             )
 
@@ -220,7 +220,7 @@ class T(testbase.ANTLRTest):
 
 
     def testDelegatorAccessesDelegateMembers(self):
-        slave = textwrap.dedent(
+        subordinate = textwrap.dedent(
         r'''
         parser grammar S3;
         options {
@@ -236,7 +236,7 @@ class T(testbase.ANTLRTest):
         a : B ;
         ''')
 
-        master = textwrap.dedent(
+        main = textwrap.dedent(
         r'''
         grammar M3;        // uses no rules from the import
         options {
@@ -248,8 +248,8 @@ class T(testbase.ANTLRTest):
         ''')
 
         found = self.execParser(
-            master, 's',
-            slaves=[slave],
+            main, 's',
+            subordinates=[subordinate],
             input="b"
             )
 
@@ -257,7 +257,7 @@ class T(testbase.ANTLRTest):
 
 
     def testDelegatorInvokesFirstVersionOfDelegateRule(self):
-        slave = textwrap.dedent(
+        subordinate = textwrap.dedent(
         r'''
         parser grammar S4;
         options {
@@ -271,7 +271,7 @@ class T(testbase.ANTLRTest):
         b : B ;
         ''')
 
-        slave2 = textwrap.dedent(
+        subordinate2 = textwrap.dedent(
         r'''
         parser grammar T4;
         options {
@@ -284,7 +284,7 @@ class T(testbase.ANTLRTest):
         a : B {self.capture("T.a");} ; // hidden by S.a
         ''')
 
-        master = textwrap.dedent(
+        main = textwrap.dedent(
         r'''
         grammar M4;
         options {
@@ -297,8 +297,8 @@ class T(testbase.ANTLRTest):
         ''')
 
         found = self.execParser(
-            master, 's',
-            slaves=[slave, slave2],
+            main, 's',
+            subordinates=[subordinate, subordinate2],
             input="b"
             )
 
@@ -306,7 +306,7 @@ class T(testbase.ANTLRTest):
 
 
     def testDelegatesSeeSameTokenType(self):
-        slave = textwrap.dedent(
+        subordinate = textwrap.dedent(
         r'''
         parser grammar S5; // A, B, C token type order
         options {
@@ -320,7 +320,7 @@ class T(testbase.ANTLRTest):
         x : A {self.capture("S.x ");} ;
         ''')
 
-        slave2 = textwrap.dedent(
+        subordinate2 = textwrap.dedent(
         r'''
         parser grammar T5;
         options {
@@ -334,7 +334,7 @@ class T(testbase.ANTLRTest):
         y : A {self.capture("T.y");} ;
         ''')
 
-        master = textwrap.dedent(
+        main = textwrap.dedent(
         r'''
         grammar M5;
         options {
@@ -349,8 +349,8 @@ class T(testbase.ANTLRTest):
         ''')
 
         found = self.execParser(
-            master, 's',
-            slaves=[slave, slave2],
+            main, 's',
+            subordinates=[subordinate, subordinate2],
             input="aa"
             )
 
@@ -360,20 +360,20 @@ class T(testbase.ANTLRTest):
         # @Test public void testDelegatesSeeSameTokenType2() throws Exception {
         #         ErrorQueue equeue = new ErrorQueue();
         #         ErrorManager.setErrorListener(equeue);
-        #         String slave =
+        #         String subordinate =
         #                 "parser grammar S;\n" + // A, B, C token type order
         #                 "tokens { A; B; C; }\n" +
         #                 "x : A {System.out.println(\"S.x\");} ;\n";
         #         mkdir(tmpdir);
-        #         writeFile(tmpdir, "S.g", slave);
-        #         String slave2 =
+        #         writeFile(tmpdir, "S.g", subordinate);
+        #         String subordinate2 =
         #                 "parser grammar T;\n" +
         #                 "tokens { C; B; A; }\n" + // reverse order
         #                 "y : A {System.out.println(\"T.y\");} ;\n";
         #         mkdir(tmpdir);
-        #         writeFile(tmpdir, "T.g", slave2);
+        #         writeFile(tmpdir, "T.g", subordinate2);
 
-        #         String master =
+        #         String main =
         #                 "grammar M;\n" +
         #                 "import S,T;\n" +
         #                 "s : x y ;\n" + // matches AA, which should be "aa"
@@ -381,7 +381,7 @@ class T(testbase.ANTLRTest):
         #                 "A : 'a' ;\n" +
         #                 "C : 'c' ;\n" +
         #                 "WS : (' '|'\\n') {skip();} ;\n" ;
-        #         writeFile(tmpdir, "M.g", master);
+        #         writeFile(tmpdir, "M.g", main);
         #         Tool antlr = newTool(new String[] {"-lib", tmpdir});
         #         CompositeGrammar composite = new CompositeGrammar();
         #         Grammar g = new Grammar(antlr,tmpdir+"/M.g",composite);
@@ -406,20 +406,20 @@ class T(testbase.ANTLRTest):
         #         // for now, we don't allow combined to import combined
         #         ErrorQueue equeue = new ErrorQueue();
         #         ErrorManager.setErrorListener(equeue);
-        #         String slave =
+        #         String subordinate =
         #                 "grammar S;\n" + // A, B, C token type order
         #                 "tokens { A; B; C; }\n" +
         #                 "x : 'x' INT {System.out.println(\"S.x\");} ;\n" +
         #                 "INT : '0'..'9'+ ;\n" +
         #                 "WS : (' '|'\\n') {skip();} ;\n";
         #         mkdir(tmpdir);
-        #         writeFile(tmpdir, "S.g", slave);
+        #         writeFile(tmpdir, "S.g", subordinate);
 
-        #         String master =
+        #         String main =
         #                 "grammar M;\n" +
         #                 "import S;\n" +
         #                 "s : x INT ;\n";
-        #         writeFile(tmpdir, "M.g", master);
+        #         writeFile(tmpdir, "M.g", main);
         #         Tool antlr = newTool(new String[] {"-lib", tmpdir});
         #         CompositeGrammar composite = new CompositeGrammar();
         #         Grammar g = new Grammar(antlr,tmpdir+"/M.g",composite);
@@ -435,25 +435,25 @@ class T(testbase.ANTLRTest):
         # @Test public void testSameStringTwoNames() throws Exception {
         #         ErrorQueue equeue = new ErrorQueue();
         #         ErrorManager.setErrorListener(equeue);
-        #         String slave =
+        #         String subordinate =
         #                 "parser grammar S;\n" +
         #                 "tokens { A='a'; }\n" +
         #                 "x : A {System.out.println(\"S.x\");} ;\n";
         #         mkdir(tmpdir);
-        #         writeFile(tmpdir, "S.g", slave);
-        #         String slave2 =
+        #         writeFile(tmpdir, "S.g", subordinate);
+        #         String subordinate2 =
         #                 "parser grammar T;\n" +
         #                 "tokens { X='a'; }\n" +
         #                 "y : X {System.out.println(\"T.y\");} ;\n";
         #         mkdir(tmpdir);
-        #         writeFile(tmpdir, "T.g", slave2);
+        #         writeFile(tmpdir, "T.g", subordinate2);
 
-        #         String master =
+        #         String main =
         #                 "grammar M;\n" +
         #                 "import S,T;\n" +
         #                 "s : x y ;\n" +
         #                 "WS : (' '|'\\n') {skip();} ;\n" ;
-        #         writeFile(tmpdir, "M.g", master);
+        #         writeFile(tmpdir, "M.g", main);
         #         Tool antlr = newTool(new String[] {"-lib", tmpdir});
         #         CompositeGrammar composite = new CompositeGrammar();
         #         Grammar g = new Grammar(antlr,tmpdir+"/M.g",composite);
@@ -488,25 +488,25 @@ class T(testbase.ANTLRTest):
         # @Test public void testSameNameTwoStrings() throws Exception {
         #         ErrorQueue equeue = new ErrorQueue();
         #         ErrorManager.setErrorListener(equeue);
-        #         String slave =
+        #         String subordinate =
         #                 "parser grammar S;\n" +
         #                 "tokens { A='a'; }\n" +
         #                 "x : A {System.out.println(\"S.x\");} ;\n";
         #         mkdir(tmpdir);
-        #         writeFile(tmpdir, "S.g", slave);
-        #         String slave2 =
+        #         writeFile(tmpdir, "S.g", subordinate);
+        #         String subordinate2 =
         #                 "parser grammar T;\n" +
         #                 "tokens { A='x'; }\n" +
         #                 "y : A {System.out.println(\"T.y\");} ;\n";
                 
-        #         writeFile(tmpdir, "T.g", slave2);
+        #         writeFile(tmpdir, "T.g", subordinate2);
 
-        #         String master =
+        #         String main =
         #                 "grammar M;\n" +
         #                 "import S,T;\n" +
         #                 "s : x y ;\n" +
         #                 "WS : (' '|'\\n') {skip();} ;\n" ;
-        #         writeFile(tmpdir, "M.g", master);
+        #         writeFile(tmpdir, "M.g", main);
         #         Tool antlr = newTool(new String[] {"-lib", tmpdir});
         #         CompositeGrammar composite = new CompositeGrammar();
         #         Grammar g = new Grammar(antlr,tmpdir+"/M.g",composite);
@@ -541,20 +541,20 @@ class T(testbase.ANTLRTest):
         # @Test public void testImportedTokenVocabIgnoredWithWarning() throws Exception {
         #         ErrorQueue equeue = new ErrorQueue();
         #         ErrorManager.setErrorListener(equeue);
-        #         String slave =
+        #         String subordinate =
         #                 "parser grammar S;\n" +
         #                 "options {tokenVocab=whatever;}\n" +
         #                 "tokens { A='a'; }\n" +
         #                 "x : A {System.out.println(\"S.x\");} ;\n";
         #         mkdir(tmpdir);
-        #         writeFile(tmpdir, "S.g", slave);
+        #         writeFile(tmpdir, "S.g", subordinate);
 
-        #         String master =
+        #         String main =
         #                 "grammar M;\n" +
         #                 "import S;\n" +
         #                 "s : x ;\n" +
         #                 "WS : (' '|'\\n') {skip();} ;\n" ;
-        #         writeFile(tmpdir, "M.g", master);
+        #         writeFile(tmpdir, "M.g", main);
         #         Tool antlr = newTool(new String[] {"-lib", tmpdir});
         #         CompositeGrammar composite = new CompositeGrammar();
         #         Grammar g = new Grammar(antlr,tmpdir+"/M.g",composite);
@@ -579,24 +579,24 @@ class T(testbase.ANTLRTest):
         # @Test public void testImportedTokenVocabWorksInRoot() throws Exception {
         #         ErrorQueue equeue = new ErrorQueue();
         #         ErrorManager.setErrorListener(equeue);
-        #         String slave =
+        #         String subordinate =
         #                 "parser grammar S;\n" +
         #                 "tokens { A='a'; }\n" +
         #                 "x : A {System.out.println(\"S.x\");} ;\n";
         #         mkdir(tmpdir);
-        #         writeFile(tmpdir, "S.g", slave);
+        #         writeFile(tmpdir, "S.g", subordinate);
 
         #         String tokens =
         #                 "A=99\n";
         #         writeFile(tmpdir, "Test.tokens", tokens);
 
-        #         String master =
+        #         String main =
         #                 "grammar M;\n" +
         #                 "options {tokenVocab=Test;}\n" +
         #                 "import S;\n" +
         #                 "s : x ;\n" +
         #                 "WS : (' '|'\\n') {skip();} ;\n" ;
-        #         writeFile(tmpdir, "M.g", master);
+        #         writeFile(tmpdir, "M.g", main);
         #         Tool antlr = newTool(new String[] {"-lib", tmpdir});
         #         CompositeGrammar composite = new CompositeGrammar();
         #         Grammar g = new Grammar(antlr,tmpdir+"/M.g",composite);
@@ -620,18 +620,18 @@ class T(testbase.ANTLRTest):
         # @Test public void testSyntaxErrorsInImportsNotThrownOut() throws Exception {
         #         ErrorQueue equeue = new ErrorQueue();
         #         ErrorManager.setErrorListener(equeue);
-        #         String slave =
+        #         String subordinate =
         #                 "parser grammar S;\n" +
         #                 "options {toke\n";
         #         mkdir(tmpdir);
-        #         writeFile(tmpdir, "S.g", slave);
+        #         writeFile(tmpdir, "S.g", subordinate);
 
-        #         String master =
+        #         String main =
         #                 "grammar M;\n" +
         #                 "import S;\n" +
         #                 "s : x ;\n" +
         #                 "WS : (' '|'\\n') {skip();} ;\n" ;
-        #         writeFile(tmpdir, "M.g", master);
+        #         writeFile(tmpdir, "M.g", main);
         #         Tool antlr = newTool(new String[] {"-lib", tmpdir});
         #         CompositeGrammar composite = new CompositeGrammar();
         #         Grammar g = new Grammar(antlr,tmpdir+"/M.g",composite);
@@ -646,18 +646,18 @@ class T(testbase.ANTLRTest):
         # @Test public void testSyntaxErrorsInImportsNotThrownOut2() throws Exception {
         #         ErrorQueue equeue = new ErrorQueue();
         #         ErrorManager.setErrorListener(equeue);
-        #         String slave =
+        #         String subordinate =
         #                 "parser grammar S;\n" +
         #                 ": A {System.out.println(\"S.x\");} ;\n";
         #         mkdir(tmpdir);
-        #         writeFile(tmpdir, "S.g", slave);
+        #         writeFile(tmpdir, "S.g", subordinate);
 
-        #         String master =
+        #         String main =
         #                 "grammar M;\n" +
         #                 "import S;\n" +
         #                 "s : x ;\n" +
         #                 "WS : (' '|'\\n') {skip();} ;\n" ;
-        #         writeFile(tmpdir, "M.g", master);
+        #         writeFile(tmpdir, "M.g", main);
         #         Tool antlr = newTool(new String[] {"-lib", tmpdir});
         #         CompositeGrammar composite = new CompositeGrammar();
         #         Grammar g = new Grammar(antlr,tmpdir+"/M.g",composite);
@@ -671,7 +671,7 @@ class T(testbase.ANTLRTest):
 
 
     def testDelegatorRuleOverridesDelegate(self):
-        slave = textwrap.dedent(
+        subordinate = textwrap.dedent(
         r'''
         parser grammar S6;
         options {
@@ -685,7 +685,7 @@ class T(testbase.ANTLRTest):
         b : B ;
         ''')
 
-        master = textwrap.dedent(
+        main = textwrap.dedent(
         r'''
         grammar M6;
         options {
@@ -697,8 +697,8 @@ class T(testbase.ANTLRTest):
         ''')
 
         found = self.execParser(
-            master, 'a',
-            slaves=[slave],
+            main, 'a',
+            subordinates=[subordinate],
             input="c"
             )
 
@@ -706,7 +706,7 @@ class T(testbase.ANTLRTest):
 
 
     #     @Test public void testDelegatorRuleOverridesLookaheadInDelegate() throws Exception {
-    #             String slave =
+    #             String subordinate =
     #                     "parser grammar JavaDecl;\n" +
     #                     "type : 'int' ;\n" +
     #                     "decl : type ID ';'\n" +
@@ -714,8 +714,8 @@ class T(testbase.ANTLRTest):
     #                     "     ;\n" +
     #                     "init : '=' INT ;\n" ;
     #             mkdir(tmpdir);
-    #             writeFile(tmpdir, "JavaDecl.g", slave);
-    #             String master =
+    #             writeFile(tmpdir, "JavaDecl.g", subordinate);
+    #             String main =
     #                     "grammar Java;\n" +
     #                     "import JavaDecl;\n" +
     #                     "prog : decl ;\n" +
@@ -725,31 +725,31 @@ class T(testbase.ANTLRTest):
     #                     "INT : '0'..'9'+ ;\n" +
     #                     "WS : (' '|'\\n') {skip();} ;\n" ;
     #             // for float to work in decl, type must be overridden
-    #             String found = execParser("Java.g", master, "JavaParser", "JavaLexer",
+    #             String found = execParser("Java.g", main, "JavaParser", "JavaLexer",
     #                                                               "prog", "float x = 3;", debug);
     #             assertEquals("JavaDecl: floatx=3;\n", found);
     #     }
 
     # @Test public void testDelegatorRuleOverridesDelegates() throws Exception {
-    #     String slave =
+    #     String subordinate =
     #         "parser grammar S;\n" +
     #         "a : b {System.out.println(\"S.a\");} ;\n" +
     #         "b : B ;\n" ;
     #     mkdir(tmpdir);
-    #     writeFile(tmpdir, "S.g", slave);
+    #     writeFile(tmpdir, "S.g", subordinate);
 
-    #     String slave2 =
+    #     String subordinate2 =
     #         "parser grammar T;\n" +
     #         "tokens { A='x'; }\n" +
     #         "b : B {System.out.println(\"T.b\");} ;\n";
-    #     writeFile(tmpdir, "T.g", slave2);
+    #     writeFile(tmpdir, "T.g", subordinate2);
 
-    #     String master =
+    #     String main =
     #         "grammar M;\n" +
     #         "import S, T;\n" +
     #         "b : 'b'|'c' {System.out.println(\"M.b\");}|B|A ;\n" +
     #         "WS : (' '|'\\n') {skip();} ;\n" ;
-    #     String found = execParser("M.g", master, "MParser", "MLexer",
+    #     String found = execParser("M.g", main, "MParser", "MLexer",
     #                               "a", "c", debug);
     #     assertEquals("M.b\n" +
     #                  "S.a\n", found);
@@ -758,7 +758,7 @@ class T(testbase.ANTLRTest):
     # LEXER INHERITANCE
 
     def testLexerDelegatorInvokesDelegateRule(self):
-        slave = textwrap.dedent(
+        subordinate = textwrap.dedent(
         r'''
         lexer grammar S7;
         options {
@@ -772,7 +772,7 @@ class T(testbase.ANTLRTest):
         C : 'c' ;
         ''')
 
-        master = textwrap.dedent(
+        main = textwrap.dedent(
         r'''
         lexer grammar M7;
         options {
@@ -784,8 +784,8 @@ class T(testbase.ANTLRTest):
         ''')
 
         found = self.execLexer(
-            master,
-            slaves=[slave],
+            main,
+            subordinates=[subordinate],
             input="abc"
             )
 
@@ -793,7 +793,7 @@ class T(testbase.ANTLRTest):
 
 
     def testLexerDelegatorRuleOverridesDelegate(self):
-        slave = textwrap.dedent(
+        subordinate = textwrap.dedent(
         r'''
         lexer grammar S8;
         options {
@@ -806,7 +806,7 @@ class T(testbase.ANTLRTest):
         A : 'a' {self.capture("S.A")} ;
         ''')
 
-        master = textwrap.dedent(
+        main = textwrap.dedent(
         r'''
         lexer grammar M8;
         options {
@@ -818,8 +818,8 @@ class T(testbase.ANTLRTest):
         ''')
 
         found = self.execLexer(
-            master,
-            slaves=[slave],
+            main,
+            subordinates=[subordinate],
             input="a"
             )
 
@@ -828,17 +828,17 @@ class T(testbase.ANTLRTest):
         # @Test public void testLexerDelegatorRuleOverridesDelegateLeavingNoRules() throws Exception {
         #         // M.Tokens has nothing to predict tokens from S.  Should
         #         // not include S.Tokens alt in this case?
-        #         String slave =
+        #         String subordinate =
         #                 "lexer grammar S;\n" +
         #                 "A : 'a' {System.out.println(\"S.A\");} ;\n";
         #         mkdir(tmpdir);
-        #         writeFile(tmpdir, "S.g", slave);
-        #         String master =
+        #         writeFile(tmpdir, "S.g", subordinate);
+        #         String main =
         #                 "lexer grammar M;\n" +
         #                 "import S;\n" +
         #                 "A : 'a' {System.out.println(\"M.A\");} ;\n" +
         #                 "WS : (' '|'\\n') {skip();} ;\n" ;
-        #         writeFile(tmpdir, "/M.g", master);
+        #         writeFile(tmpdir, "/M.g", main);
 
         #         ErrorQueue equeue = new ErrorQueue();
         #         ErrorManager.setErrorListener(equeue);
@@ -869,16 +869,16 @@ class T(testbase.ANTLRTest):
         # @Test public void testInvalidImportMechanism() throws Exception {
         #         // M.Tokens has nothing to predict tokens from S.  Should
         #         // not include S.Tokens alt in this case?
-        #         String slave =
+        #         String subordinate =
         #                 "lexer grammar S;\n" +
         #                 "A : 'a' {System.out.println(\"S.A\");} ;\n";
         #         mkdir(tmpdir);
-        #         writeFile(tmpdir, "S.g", slave);
-        #         String master =
+        #         writeFile(tmpdir, "S.g", subordinate);
+        #         String main =
         #                 "tree grammar M;\n" +
         #                 "import S;\n" +
         #                 "a : A ;";
-        #         writeFile(tmpdir, "/M.g", master);
+        #         writeFile(tmpdir, "/M.g", main);
 
         #         ErrorQueue equeue = new ErrorQueue();
         #         ErrorManager.setErrorListener(equeue);
@@ -900,22 +900,22 @@ class T(testbase.ANTLRTest):
         #         // if this compiles, it means that synpred1_S is defined in S.java
         #         // but not MParser.java.  MParser has its own synpred1_M which must
         #         // be separate to compile.
-        #         String slave =
+        #         String subordinate =
         #                 "parser grammar S;\n" +
         #                 "a : 'a' {System.out.println(\"S.a1\");}\n" +
         #                 "  | 'a' {System.out.println(\"S.a2\");}\n" +
         #                 "  ;\n" +
         #                 "b : 'x' | 'y' {;} ;\n"; // preds generated but not need in DFA here
         #         mkdir(tmpdir);
-        #         writeFile(tmpdir, "S.g", slave);
-        #         String master =
+        #         writeFile(tmpdir, "S.g", subordinate);
+        #         String main =
         #                 "grammar M;\n" +
         #                 "options {backtrack=true;}\n" +
         #                 "import S;\n" +
         #                 "start : a b ;\n" +
         #                 "nonsense : 'q' | 'q' {;} ;" + // forces def of preds here in M
         #                 "WS : (' '|'\\n') {skip();} ;\n" ;
-        #         String found = execParser("M.g", master, "MParser", "MLexer",
+        #         String found = execParser("M.g", main, "MParser", "MLexer",
         #                                                           "start", "ax", debug);
         #         assertEquals("S.a1\n", found);
         # }
@@ -923,18 +923,18 @@ class T(testbase.ANTLRTest):
         # @Test public void testKeywordVSIDGivesNoWarning() throws Exception {
         #         ErrorQueue equeue = new ErrorQueue();
         #         ErrorManager.setErrorListener(equeue);
-        #         String slave =
+        #         String subordinate =
         #                 "lexer grammar S;\n" +
         #                 "A : 'abc' {System.out.println(\"S.A\");} ;\n" +
         #                 "ID : 'a'..'z'+ ;\n";
         #         mkdir(tmpdir);
-        #         writeFile(tmpdir, "S.g", slave);
-        #         String master =
+        #         writeFile(tmpdir, "S.g", subordinate);
+        #         String main =
         #                 "grammar M;\n" +
         #                 "import S;\n" +
         #                 "a : A {System.out.println(\"M.a\");} ;\n" +
         #                 "WS : (' '|'\\n') {skip();} ;\n" ;
-        #         String found = execParser("M.g", master, "MParser", "MLexer",
+        #         String found = execParser("M.g", main, "MParser", "MLexer",
         #                                                           "a", "abc", debug);
 
         #         assertEquals("unexpected errors: "+equeue, 0, equeue.errors.size());
@@ -946,12 +946,12 @@ class T(testbase.ANTLRTest):
         # @Test public void testWarningForUndefinedToken() throws Exception {
         #         ErrorQueue equeue = new ErrorQueue();
         #         ErrorManager.setErrorListener(equeue);
-        #         String slave =
+        #         String subordinate =
         #                 "lexer grammar S;\n" +
         #                 "A : 'abc' {System.out.println(\"S.A\");} ;\n";
         #         mkdir(tmpdir);
-        #         writeFile(tmpdir, "S.g", slave);
-        #         String master =
+        #         writeFile(tmpdir, "S.g", subordinate);
+        #         String main =
         #                 "grammar M;\n" +
         #                 "import S;\n" +
         #                 "a : ABC A {System.out.println(\"M.a\");} ;\n" +
@@ -959,7 +959,7 @@ class T(testbase.ANTLRTest):
         #         // A is defined in S but M should still see it and not give warning.
         #         // only problem is ABC.
 
-        #         rawGenerateAndBuildRecognizer("M.g", master, "MParser", "MLexer", debug);
+        #         rawGenerateAndBuildRecognizer("M.g", main, "MParser", "MLexer", debug);
 
         #         assertEquals("unexpected errors: "+equeue, 0, equeue.errors.size());
         #         assertEquals("unexpected warnings: "+equeue, 1, equeue.warnings.size());
@@ -973,23 +973,23 @@ class T(testbase.ANTLRTest):
         # @Test public void test3LevelImport() throws Exception {
         #         ErrorQueue equeue = new ErrorQueue();
         #         ErrorManager.setErrorListener(equeue);
-        #         String slave =
+        #         String subordinate =
         #                 "parser grammar T;\n" +
         #                 "a : T ;\n" ;
         #         mkdir(tmpdir);
-        #         writeFile(tmpdir, "T.g", slave);
-        #         String slave2 =
+        #         writeFile(tmpdir, "T.g", subordinate);
+        #         String subordinate2 =
         #                 "parser grammar S;\n" + // A, B, C token type order
         #                 "import T;\n" +
         #                 "a : S ;\n" ;
         #         mkdir(tmpdir);
-        #         writeFile(tmpdir, "S.g", slave2);
+        #         writeFile(tmpdir, "S.g", subordinate2);
 
-        #         String master =
+        #         String main =
         #                 "grammar M;\n" +
         #                 "import S;\n" +
         #                 "a : M ;\n" ;
-        #         writeFile(tmpdir, "M.g", master);
+        #         writeFile(tmpdir, "M.g", main);
         #         Tool antlr = newTool(new String[] {"-lib", tmpdir});
         #         CompositeGrammar composite = new CompositeGrammar();
         #         Grammar g = new Grammar(antlr,tmpdir+"/M.g",composite);
@@ -1011,7 +1011,7 @@ class T(testbase.ANTLRTest):
         #         assertEquals("unexpected errors: "+equeue, 0, equeue.errors.size());
 
         #         boolean ok =
-        #                 rawGenerateAndBuildRecognizer("M.g", master, "MParser", null, false);
+        #                 rawGenerateAndBuildRecognizer("M.g", main, "MParser", null, false);
         #         boolean expecting = true; // should be ok
         #         assertEquals(expecting, ok);
         # }
@@ -1019,40 +1019,40 @@ class T(testbase.ANTLRTest):
         # @Test public void testBigTreeOfImports() throws Exception {
         #         ErrorQueue equeue = new ErrorQueue();
         #         ErrorManager.setErrorListener(equeue);
-        #         String slave =
+        #         String subordinate =
         #                 "parser grammar T;\n" +
         #                 "x : T ;\n" ;
         #         mkdir(tmpdir);
-        #         writeFile(tmpdir, "T.g", slave);
-        #         slave =
+        #         writeFile(tmpdir, "T.g", subordinate);
+        #         subordinate =
         #                 "parser grammar S;\n" +
         #                 "import T;\n" +
         #                 "y : S ;\n" ;
         #         mkdir(tmpdir);
-        #         writeFile(tmpdir, "S.g", slave);
+        #         writeFile(tmpdir, "S.g", subordinate);
 
-        #         slave =
+        #         subordinate =
         #                 "parser grammar C;\n" +
         #                 "i : C ;\n" ;
         #         mkdir(tmpdir);
-        #         writeFile(tmpdir, "C.g", slave);
-        #         slave =
+        #         writeFile(tmpdir, "C.g", subordinate);
+        #         subordinate =
         #                 "parser grammar B;\n" +
         #                 "j : B ;\n" ;
         #         mkdir(tmpdir);
-        #         writeFile(tmpdir, "B.g", slave);
-        #         slave =
+        #         writeFile(tmpdir, "B.g", subordinate);
+        #         subordinate =
         #                 "parser grammar A;\n" +
         #                 "import B,C;\n" +
         #                 "k : A ;\n" ;
         #         mkdir(tmpdir);
-        #         writeFile(tmpdir, "A.g", slave);
+        #         writeFile(tmpdir, "A.g", subordinate);
 
-        #         String master =
+        #         String main =
         #                 "grammar M;\n" +
         #                 "import S,A;\n" +
         #                 "a : M ;\n" ;
-        #         writeFile(tmpdir, "M.g", master);
+        #         writeFile(tmpdir, "M.g", main);
         #         Tool antlr = newTool(new String[] {"-lib", tmpdir});
         #         CompositeGrammar composite = new CompositeGrammar();
         #         Grammar g = new Grammar(antlr,tmpdir+"/M.g",composite);
@@ -1074,7 +1074,7 @@ class T(testbase.ANTLRTest):
         #         assertEquals("unexpected errors: "+equeue, 0, equeue.errors.size());
 
         #         boolean ok =
-        #                 rawGenerateAndBuildRecognizer("M.g", master, "MParser", null, false);
+        #                 rawGenerateAndBuildRecognizer("M.g", main, "MParser", null, false);
         #         boolean expecting = true; // should be ok
         #         assertEquals(expecting, ok);
         # }
@@ -1082,23 +1082,23 @@ class T(testbase.ANTLRTest):
         # @Test public void testRulesVisibleThroughMultilevelImport() throws Exception {
         #         ErrorQueue equeue = new ErrorQueue();
         #         ErrorManager.setErrorListener(equeue);
-        #         String slave =
+        #         String subordinate =
         #                 "parser grammar T;\n" +
         #                 "x : T ;\n" ;
         #         mkdir(tmpdir);
-        #         writeFile(tmpdir, "T.g", slave);
-        #         String slave2 =
+        #         writeFile(tmpdir, "T.g", subordinate);
+        #         String subordinate2 =
         #                 "parser grammar S;\n" + // A, B, C token type order
         #                 "import T;\n" +
         #                 "a : S ;\n" ;
         #         mkdir(tmpdir);
-        #         writeFile(tmpdir, "S.g", slave2);
+        #         writeFile(tmpdir, "S.g", subordinate2);
 
-        #         String master =
+        #         String main =
         #                 "grammar M;\n" +
         #                 "import S;\n" +
         #                 "a : M x ;\n" ; // x MUST BE VISIBLE TO M
-        #         writeFile(tmpdir, "M.g", master);
+        #         writeFile(tmpdir, "M.g", main);
         #         Tool antlr = newTool(new String[] {"-lib", tmpdir});
         #         CompositeGrammar composite = new CompositeGrammar();
         #         Grammar g = new Grammar(antlr,tmpdir+"/M.g",composite);
@@ -1180,12 +1180,12 @@ class T(testbase.ANTLRTest):
         # }
 
         # @Test public void testHeadersPropogatedCorrectlyToImportedGrammars() throws Exception {
-        #         String slave =
+        #         String subordinate =
         #                 "parser grammar S;\n" +
         #                 "a : B {System.out.print(\"S.a\");} ;\n";
         #         mkdir(tmpdir);
-        #         writeFile(tmpdir, "S.g", slave);
-        #         String master =
+        #         writeFile(tmpdir, "S.g", subordinate);
+        #         String main =
         #                 "grammar M;\n" +
         #                 "import S;\n" +
         #                 "@header{package mypackage;}\n" +
@@ -1193,7 +1193,7 @@ class T(testbase.ANTLRTest):
         #                 "s : a ;\n" +
         #                 "B : 'b' ;" + // defines B from inherited token space
         #                 "WS : (' '|'\\n') {skip();} ;\n" ;
-        #         boolean ok = antlr("M.g", "M.g", master, debug);
+        #         boolean ok = antlr("M.g", "M.g", main, debug);
         #         boolean expecting = true; // should be ok
         #         assertEquals(expecting, ok);
         # }

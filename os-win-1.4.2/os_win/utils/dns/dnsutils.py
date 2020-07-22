@@ -70,7 +70,7 @@ class DNSUtils(baseutils.BaseUtils):
         zone_properties['zone_type'] = zone.ZoneType
         zone_properties['ds_integrated'] = zone.DsIntegrated
         zone_properties['data_file_name'] = zone.DataFile
-        zone_properties['master_servers'] = zone.MasterServers or []
+        zone_properties['main_servers'] = zone.MainServers or []
 
         return zone_properties
 
@@ -82,15 +82,15 @@ class DNSUtils(baseutils.BaseUtils):
         :param zone_name: string representing the name of the zone.
         :param zone_type: type of zone
             0 = Primary zone
-            1 = Secondary zone, MUST include at least one master IP
-            2 = Stub zone, MUST include at least one master IP
-            3 = Zone forwarder, MUST include at least one master IP
+            1 = Secondary zone, MUST include at least one main IP
+            2 = Stub zone, MUST include at least one main IP
+            3 = Zone forwarder, MUST include at least one main IP
         :param ds_integrated: Only Primary zones cand be stored in AD
             True = the zone data is stored in the Active Directory
             False = the data zone is stored in files
         :param data_file_name(Optional): name of the data file associated
             with the zone.
-        :param ip_addrs(Optional): IP addresses of the master DNS servers
+        :param ip_addrs(Optional): IP addresses of the main DNS servers
             for this zone. Parameter type MUST be list
         :param admin_email_name(Optional): email address of the administrator
             responsible for the zone.

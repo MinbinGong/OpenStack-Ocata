@@ -132,12 +132,12 @@ class DjbdnsBackend(base.AgentBackend):
         self._resolver.timeout = SOA_QUERY_TIMEOUT
         self._resolver.lifetime = SOA_QUERY_TIMEOUT
         self._resolver.nameservers = [cfg.CONF[CFG_GROUP].query_destination]
-        self._masters = [utils.split_host_port(ns)
-                         for ns in cfg.CONF['service:agent'].masters]
+        self._mains = [utils.split_host_port(ns)
+                         for ns in cfg.CONF['service:agent'].mains]
         LOG.info(_LI("Resolvers: %r"), self._resolver.nameservers)
-        LOG.info(_LI("AXFR masters: %r"), self._masters)
-        if not self._masters:
-            raise exceptions.Backend("Missing agent AXFR masters")
+        LOG.info(_LI("AXFR mains: %r"), self._mains)
+        if not self._mains:
+            raise exceptions.Backend("Missing agent AXFR mains")
 
         self._tcpclient_cmd_name = cfg.CONF[CFG_GROUP].tcpclient_cmd_name
         self._axfr_get_cmd_name = cfg.CONF[CFG_GROUP].axfr_get_cmd_name
@@ -263,7 +263,7 @@ class DjbdnsBackend(base.AgentBackend):
         # Perform AXFR, create or update a zone datafile
         # No need to lock globally here.
         # Axfr-get creates the datafile atomically by doing rename
-        mdns_hostname, mdns_port = random.choice(self._masters)
+        mdns_hostname, mdns_port = random.choice(self._mains)
         with lockutils.lock("%s.lock" % zone_name):
             LOG.debug("writing to %s", zone_fn)
             cmd = (

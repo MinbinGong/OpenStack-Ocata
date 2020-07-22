@@ -36,11 +36,11 @@ class TestClusterObject(base.TestCase):
     def test_cluster_init(self):
         cluster_dict = apiutils.cluster_post_data(cluster_template_id=None)
         del cluster_dict['node_count']
-        del cluster_dict['master_count']
+        del cluster_dict['main_count']
         del cluster_dict['create_timeout']
         cluster = api_cluster.Cluster(**cluster_dict)
         self.assertEqual(1, cluster.node_count)
-        self.assertEqual(1, cluster.master_count)
+        self.assertEqual(1, cluster.main_count)
         self.assertEqual(60, cluster.create_timeout)
 
         # test unset value for cluster_template_id
@@ -55,12 +55,12 @@ class TestClusterObject(base.TestCase):
 
 class TestListCluster(api_base.FunctionalTest):
     _cluster_attrs = ("name", "cluster_template_id", "node_count", "status",
-                      "master_count", "stack_id", "create_timeout")
+                      "main_count", "stack_id", "create_timeout")
 
     _expand_cluster_attrs = ("name", "cluster_template_id", "node_count",
                              "status", "api_address", "discovery_url",
-                             "node_addresses", "master_count",
-                             "master_addresses", "stack_id",
+                             "node_addresses", "main_count",
+                             "main_addresses", "stack_id",
                              "create_timeout", "status_reason")
 
     def setUp(self):
@@ -450,8 +450,8 @@ class TestPatch(api_base.FunctionalTest):
         self.assertEqual(self.cluster_obj.cluster_template_id,
                          response['cluster_template_id'])
         self.assertEqual(self.cluster_obj.name, response['name'])
-        self.assertEqual(self.cluster_obj.master_count,
-                         response['master_count'])
+        self.assertEqual(self.cluster_obj.main_count,
+                         response['main_count'])
 
     def test_remove_mandatory_property_fail(self):
         mandatory_properties = ('/uuid', '/cluster_template_id')
@@ -607,17 +607,17 @@ class TestPost(api_base.FunctionalTest):
         self.assertEqual('application/json', response.content_type)
         self.assertEqual(202, response.status_int)
 
-    def test_create_cluster_with_master_count_zero(self):
+    def test_create_cluster_with_main_count_zero(self):
         bdict = apiutils.cluster_post_data()
-        bdict['master_count'] = 0
+        bdict['main_count'] = 0
         response = self.post_json('/clusters', bdict, expect_errors=True)
         self.assertEqual('application/json', response.content_type)
         self.assertEqual(400, response.status_int)
         self.assertTrue(response.json['errors'])
 
-    def test_create_cluster_with_no_master_count(self):
+    def test_create_cluster_with_no_main_count(self):
         bdict = apiutils.cluster_post_data()
-        del bdict['master_count']
+        del bdict['main_count']
         response = self.post_json('/clusters', bdict)
         self.assertEqual('application/json', response.content_type)
         self.assertEqual(202, response.status_int)
@@ -739,18 +739,18 @@ class TestPost(api_base.FunctionalTest):
 
     def test_create_cluster_with_no_lb_one_node(self):
         cluster_template = obj_utils.create_test_cluster_template(
-            self.context, name='foo', uuid='foo', master_lb_enabled=False)
+            self.context, name='foo', uuid='foo', main_lb_enabled=False)
         bdict = apiutils.cluster_post_data(
-            cluster_template_id=cluster_template.name, master_count=1)
+            cluster_template_id=cluster_template.name, main_count=1)
         response = self.post_json('/clusters', bdict, expect_errors=True)
         self.assertEqual('application/json', response.content_type)
         self.assertEqual(202, response.status_int)
 
     def test_create_cluster_with_no_lb_multi_node(self):
         cluster_template = obj_utils.create_test_cluster_template(
-            self.context, name='foo', uuid='foo', master_lb_enabled=False)
+            self.context, name='foo', uuid='foo', main_lb_enabled=False)
         bdict = apiutils.cluster_post_data(
-            cluster_template_id=cluster_template.name, master_count=3)
+            cluster_template_id=cluster_template.name, main_count=3)
         response = self.post_json('/clusters', bdict, expect_errors=True)
         self.assertEqual('application/json', response.content_type)
         self.assertEqual(400, response.status_int)

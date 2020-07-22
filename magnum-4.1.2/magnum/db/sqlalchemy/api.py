@@ -149,7 +149,7 @@ class Connection(api.Connection):
             filters = {}
 
         possible_filters = ["cluster_template_id", "name", "node_count",
-                            "master_count", "stack_id", "api_address",
+                            "main_count", "stack_id", "api_address",
                             "node_addresses", "project_id", "user_id"]
 
         filter_names = set(filters).intersection(possible_filters)
@@ -217,8 +217,8 @@ class Connection(api.Connection):
     def get_cluster_stats(self, context, project_id=None):
         query = model_query(models.Cluster)
         node_count_col = models.Cluster.node_count
-        master_count_col = models.Cluster.master_count
-        ncfunc = func.sum(node_count_col + master_count_col)
+        main_count_col = models.Cluster.main_count
+        ncfunc = func.sum(node_count_col + main_count_col)
 
         if project_id:
             query = query.filter_by(project_id=project_id)
@@ -276,7 +276,7 @@ class Connection(api.Connection):
             filters = {}
 
         possible_filters = ["name", "image_id", "flavor_id",
-                            "master_flavor_id", "keypair_id",
+                            "main_flavor_id", "keypair_id",
                             "external_network_id", "dns_nameserver",
                             "project_id", "user_id", "labels"]
 

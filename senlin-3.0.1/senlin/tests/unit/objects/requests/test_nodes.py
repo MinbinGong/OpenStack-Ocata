@@ -40,14 +40,14 @@ class TestNodeCreate(test_base.SenlinTestCase):
 
     def test_node_create_request_body_full(self):
         body = copy.deepcopy(self.body)
-        body['role'] = 'master'
+        body['role'] = 'main'
         body['cluster_id'] = 'cluster-01'
         body['metadata'] = {'foo': 'bar'}
         sot = nodes.NodeCreateRequestBody(**body)
         self.assertEqual('test-node', sot.name)
         self.assertEqual('test-profile', sot.profile_id)
         self.assertEqual('cluster-01', sot.cluster_id)
-        self.assertEqual('master', sot.role)
+        self.assertEqual('main', sot.role)
         self.assertEqual({'foo': 'bar'}, sot.metadata)
 
     def test_request_body_to_primitive(self):
@@ -146,7 +146,7 @@ class TestNodeUpdate(test_base.SenlinTestCase):
         'name': 'test-node-newname',
         'profile_id': 'test-profile',
         'metadata': {'foo': 'bar'},
-        'role': 'master'
+        'role': 'main'
     }
 
     def test_node_update_request(self):
@@ -154,7 +154,7 @@ class TestNodeUpdate(test_base.SenlinTestCase):
         self.assertEqual('test-node', sot.identity)
         self.assertEqual('test-node-newname', sot.name)
         self.assertEqual('test-profile', sot.profile_id)
-        self.assertEqual('master', sot.role)
+        self.assertEqual('main', sot.role)
         self.assertEqual({'foo': 'bar'}, sot.metadata)
 
 

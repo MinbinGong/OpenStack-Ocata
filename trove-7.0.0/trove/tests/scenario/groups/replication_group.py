@@ -53,20 +53,20 @@ class ReplicationInstCreateGroup(TestGroup):
 
     @test
     def add_data_for_replication(self):
-        """Add data to master for initial replica setup."""
+        """Add data to main for initial replica setup."""
         self.test_runner.run_add_data_for_replication()
 
     @test(depends_on=[add_data_for_replication])
     def verify_data_for_replication(self):
-        """Verify initial data exists on master."""
+        """Verify initial data exists on main."""
         self.test_runner.run_verify_data_for_replication()
 
     @test(runs_after=[verify_data_for_replication])
-    def create_non_affinity_master(self):
-        """Test creating a non-affinity master."""
-        self.test_runner.run_create_non_affinity_master()
+    def create_non_affinity_main(self):
+        """Test creating a non-affinity main."""
+        self.test_runner.run_create_non_affinity_main()
 
-    @test(runs_after=[create_non_affinity_master])
+    @test(runs_after=[create_non_affinity_main])
     def create_single_replica(self):
         """Test creating a single replica."""
         self.test_runner.run_create_single_replica()
@@ -83,11 +83,11 @@ class ReplicationInstCreateWaitGroup(TestGroup):
             ReplicationRunnerFactory.instance())
 
     @test
-    def wait_for_non_affinity_master(self):
-        """Wait for non-affinity master to complete."""
-        self.test_runner.run_wait_for_non_affinity_master()
+    def wait_for_non_affinity_main(self):
+        """Wait for non-affinity main to complete."""
+        self.test_runner.run_wait_for_non_affinity_main()
 
-    @test(depends_on=[wait_for_non_affinity_master])
+    @test(depends_on=[wait_for_non_affinity_main])
     def create_non_affinity_replica(self):
         """Test creating a non-affinity replica."""
         self.test_runner.run_create_non_affinity_replica()
@@ -109,7 +109,7 @@ class ReplicationInstCreateWaitGroup(TestGroup):
 
     @test(depends_on=[wait_for_single_replica])
     def add_data_after_replica(self):
-        """Add data to master after initial replica is setup"""
+        """Add data to main after initial replica is setup"""
         self.test_runner.run_add_data_after_replica()
 
     @test(depends_on=[add_data_after_replica])
@@ -129,13 +129,13 @@ class ReplicationInstMultiCreateGroup(TestGroup):
         self.backup_runner = BackupRunnerFactory.instance()
 
     @test
-    def backup_master_instance(self):
-        """Backup the master instance."""
+    def backup_main_instance(self):
+        """Backup the main instance."""
         self.backup_runner.run_backup_create()
         self.backup_runner.run_backup_create_completed()
-        self.test_runner.master_backup_count += 1
+        self.test_runner.main_backup_count += 1
 
-    @test(depends_on=[backup_master_instance])
+    @test(depends_on=[backup_main_instance])
     def create_multiple_replicas(self):
         """Test creating multiple replicas."""
         self.test_runner.run_create_multiple_replicas()
@@ -163,9 +163,9 @@ class ReplicationInstDeleteNonAffReplWaitGroup(TestGroup):
         self.test_runner.run_wait_for_delete_non_affinity_repl()
 
     @test(depends_on=[wait_for_delete_non_affinity_repl])
-    def delete_non_affinity_master(self):
-        """Test deleting non-affinity master."""
-        self.test_runner.run_delete_non_affinity_master()
+    def delete_non_affinity_main(self):
+        """Test deleting non-affinity main."""
+        self.test_runner.run_delete_non_affinity_main()
 
 
 @test(depends_on_groups=[groups.REPL_INST_DELETE_NON_AFFINITY_WAIT,
@@ -179,11 +179,11 @@ class ReplicationInstMultiCreateWaitGroup(TestGroup):
             ReplicationRunnerFactory.instance())
 
     @test
-    def wait_for_delete_non_affinity_master(self):
-        """Wait for the non-affinity master to delete."""
-        self.test_runner.run_wait_for_delete_non_affinity_master()
+    def wait_for_delete_non_affinity_main(self):
+        """Wait for the non-affinity main to delete."""
+        self.test_runner.run_wait_for_delete_non_affinity_main()
 
-    @test(runs_after=[wait_for_delete_non_affinity_master])
+    @test(runs_after=[wait_for_delete_non_affinity_main])
     def wait_for_multiple_replicas(self):
         """Wait for multiple replicas to complete."""
         self.test_runner.run_wait_for_multiple_replicas()
@@ -196,12 +196,12 @@ class ReplicationInstMultiCreateWaitGroup(TestGroup):
     @test(depends_on=[wait_for_multiple_replicas],
           runs_after=[verify_replica_data_orig])
     def add_data_to_replicate(self):
-        """Add new data to master to verify replication."""
+        """Add new data to main to verify replication."""
         self.test_runner.run_add_data_to_replicate()
 
     @test(depends_on=[add_data_to_replicate])
     def verify_data_to_replicate(self):
-        """Verify new data exists on master."""
+        """Verify new data exists on main."""
         self.test_runner.run_verify_data_to_replicate()
 
     @test(depends_on=[add_data_to_replicate],
@@ -218,27 +218,27 @@ class ReplicationInstMultiCreateWaitGroup(TestGroup):
 
     @test(depends_on=[wait_for_multiple_replicas],
           runs_after=[verify_replica_data_new])
-    def promote_master(self):
-        """Ensure promoting master fails."""
-        self.test_runner.run_promote_master()
+    def promote_main(self):
+        """Ensure promoting main fails."""
+        self.test_runner.run_promote_main()
 
     @test(depends_on=[wait_for_multiple_replicas],
-          runs_after=[promote_master])
+          runs_after=[promote_main])
     def eject_replica(self):
-        """Ensure ejecting non master fails."""
+        """Ensure ejecting non main fails."""
         self.test_runner.run_eject_replica()
 
     @test(depends_on=[wait_for_multiple_replicas],
           runs_after=[eject_replica])
-    def eject_valid_master(self):
-        """Ensure ejecting valid master fails."""
-        self.test_runner.run_eject_valid_master()
+    def eject_valid_main(self):
+        """Ensure ejecting valid main fails."""
+        self.test_runner.run_eject_valid_main()
 
     @test(depends_on=[wait_for_multiple_replicas],
-          runs_after=[eject_valid_master])
-    def delete_valid_master(self):
-        """Ensure deleting valid master fails."""
-        self.test_runner.run_delete_valid_master()
+          runs_after=[eject_valid_main])
+    def delete_valid_main(self):
+        """Ensure deleting valid main fails."""
+        self.test_runner.run_delete_valid_main()
 
 
 @test(depends_on_groups=[groups.REPL_INST_MULTI_CREATE_WAIT],
@@ -252,23 +252,23 @@ class ReplicationInstMultiPromoteGroup(TestGroup):
 
     @test
     def promote_to_replica_source(self):
-        """Test promoting a replica to replica source (master)."""
+        """Test promoting a replica to replica source (main)."""
         self.test_runner.run_promote_to_replica_source()
 
     @test(depends_on=[promote_to_replica_source])
-    def verify_replica_data_new_master(self):
-        """Verify data is still on new master."""
-        self.test_runner.run_verify_replica_data_new_master()
+    def verify_replica_data_new_main(self):
+        """Verify data is still on new main."""
+        self.test_runner.run_verify_replica_data_new_main()
 
     @test(depends_on=[promote_to_replica_source],
-          runs_after=[verify_replica_data_new_master])
+          runs_after=[verify_replica_data_new_main])
     def add_data_to_replicate2(self):
-        """Add data to new master to verify replication."""
+        """Add data to new main to verify replication."""
         self.test_runner.run_add_data_to_replicate2()
 
     @test(depends_on=[add_data_to_replicate2])
     def verify_data_to_replicate2(self):
-        """Verify data exists on new master."""
+        """Verify data exists on new main."""
         self.test_runner.run_verify_data_to_replicate2()
 
     @test(depends_on=[add_data_to_replicate2],
@@ -285,12 +285,12 @@ class ReplicationInstMultiPromoteGroup(TestGroup):
 
     @test(depends_on=[promote_original_source])
     def add_final_data_to_replicate(self):
-        """Add final data to original master to verify switch."""
+        """Add final data to original main to verify switch."""
         self.test_runner.run_add_final_data_to_replicate()
 
     @test(depends_on=[add_final_data_to_replicate])
     def verify_data_to_replicate_final(self):
-        """Verify final data exists on master."""
+        """Verify final data exists on main."""
         self.test_runner.run_verify_data_to_replicate_final()
 
     @test(depends_on=[verify_data_to_replicate_final])
@@ -316,7 +316,7 @@ class ReplicationInstDeleteGroup(TestGroup):
 
     @test(runs_after=[remove_replicated_data])
     def detach_replica_from_source(self):
-        """Test detaching a replica from the master."""
+        """Test detaching a replica from the main."""
         self.test_runner.run_detach_replica_from_source()
 
     @test(runs_after=[detach_replica_from_source])
@@ -354,6 +354,6 @@ class ReplicationInstDeleteWaitGroup(TestGroup):
         self.backup_runner.run_delete_backup()
 
     @test(runs_after=[test_backup_deleted])
-    def cleanup_master_instance(self):
-        """Remove slave users from master instance."""
-        self.test_runner.run_cleanup_master_instance()
+    def cleanup_main_instance(self):
+        """Remove subordinate users from main instance."""
+        self.test_runner.run_cleanup_main_instance()

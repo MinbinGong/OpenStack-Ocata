@@ -46,16 +46,16 @@ class MesosMonitor(monitors.MonitorBase):
         self.data['mem_used'] = 0
         self.data['cpu_total'] = 0
         self.data['cpu_used'] = 0
-        for master_addr in self.cluster.master_addresses:
-            mesos_master_url = self._build_url(master_addr, port='5050',
+        for main_addr in self.cluster.main_addresses:
+            mesos_main_url = self._build_url(main_addr, port='5050',
                                                path='/state')
-            master = jsonutils.loads(urlfetch.get(mesos_master_url))
-            if self._is_leader(master):
-                for slave in master['slaves']:
-                    self.data['mem_total'] += slave['resources']['mem']
-                    self.data['mem_used'] += slave['used_resources']['mem']
-                    self.data['cpu_total'] += slave['resources']['cpus']
-                    self.data['cpu_used'] += slave['used_resources']['cpus']
+            main = jsonutils.loads(urlfetch.get(mesos_main_url))
+            if self._is_leader(main):
+                for subordinate in main['subordinates']:
+                    self.data['mem_total'] += subordinate['resources']['mem']
+                    self.data['mem_used'] += subordinate['used_resources']['mem']
+                    self.data['cpu_total'] += subordinate['resources']['cpus']
+                    self.data['cpu_used'] += subordinate['used_resources']['cpus']
                 break
 
     def compute_memory_util(self):

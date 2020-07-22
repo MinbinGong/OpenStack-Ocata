@@ -105,8 +105,8 @@ class Cluster(base.APIBase):
     node_count = wsme.wsattr(wtypes.IntegerType(minimum=1), default=1)
     """The node count for this cluster. Default to 1 if not set"""
 
-    master_count = wsme.wsattr(wtypes.IntegerType(minimum=1), default=1)
-    """The number of master nodes for this cluster. Default to 1 if not set"""
+    main_count = wsme.wsattr(wtypes.IntegerType(minimum=1), default=1)
+    """The number of main nodes for this cluster. Default to 1 if not set"""
 
     create_timeout = wsme.wsattr(wtypes.IntegerType(minimum=0), default=60)
     """Timeout for creating the cluster in minutes. Default to 60 if not set"""
@@ -127,7 +127,7 @@ class Cluster(base.APIBase):
     """Url used for cluster node discovery"""
 
     api_address = wsme.wsattr(wtypes.text, readonly=True)
-    """Api address of cluster master node"""
+    """Api address of cluster main node"""
 
     coe_version = wsme.wsattr(wtypes.text, readonly=True)
     """Version of the COE software currently running in this cluster.
@@ -137,10 +137,10 @@ class Cluster(base.APIBase):
     """Version of the container software. Example: docker version."""
 
     node_addresses = wsme.wsattr([wtypes.text], readonly=True)
-    """IP addresses of cluster slave nodes"""
+    """IP addresses of cluster subordinate nodes"""
 
-    master_addresses = wsme.wsattr([wtypes.text], readonly=True)
-    """IP addresses of cluster master nodes"""
+    main_addresses = wsme.wsattr([wtypes.text], readonly=True)
+    """IP addresses of cluster main nodes"""
 
     faults = wsme.wsattr(wtypes.DictType(str, wtypes.text))
     """Fault info collected from the heat resources of this cluster"""
@@ -160,7 +160,7 @@ class Cluster(base.APIBase):
         if not expand:
             cluster.unset_fields_except(['uuid', 'name', 'cluster_template_id',
                                          'keypair', 'node_count', 'status',
-                                         'create_timeout', 'master_count',
+                                         'create_timeout', 'main_count',
                                          'stack_id'])
 
         cluster.links = [link.Link.make_link('self', url,
@@ -183,7 +183,7 @@ class Cluster(base.APIBase):
                      cluster_template_id=temp_id,
                      keypair=None,
                      node_count=2,
-                     master_count=1,
+                     main_count=1,
                      create_timeout=15,
                      stack_id='49dc23f5-ffc9-40c3-9d34-7be7f9e34d63',
                      status=fields.ClusterStatus.CREATE_COMPLETE,
@@ -203,7 +203,7 @@ class ClusterPatchType(types.JsonPatchType):
     @staticmethod
     def internal_attrs():
         internal_attrs = ['/api_address', '/node_addresses',
-                          '/master_addresses', '/stack_id',
+                          '/main_addresses', '/stack_id',
                           '/ca_cert_ref', '/magnum_cert_ref',
                           '/trust_id', '/trustee_user_name',
                           '/trustee_password', '/trustee_user_id']
@@ -399,7 +399,7 @@ class ClustersController(base.Controller):
         attr_validator.validate_os_resources(context,
                                              cluster_template.as_dict(),
                                              cluster_dict)
-        attr_validator.validate_master_count(cluster_dict,
+        attr_validator.validate_main_count(cluster_dict,
                                              cluster_template.as_dict())
 
         cluster_dict['project_id'] = context.project_id

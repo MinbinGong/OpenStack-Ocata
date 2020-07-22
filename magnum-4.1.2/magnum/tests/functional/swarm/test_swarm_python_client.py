@@ -48,7 +48,7 @@ class TestSwarmAPIs(ClusterTest):
         if self.cluster_is_ready is True:
             return
         # Note(eliqiao): In our test cases, docker client or magnum client will
-        # try to connect to swarm service which is running on master node,
+        # try to connect to swarm service which is running on main node,
         # the endpoint is cluster.api_address(listen port is included), but the
         # service is not ready right after the cluster was created, sleep for
         # an acceptable time to wait for service being started.

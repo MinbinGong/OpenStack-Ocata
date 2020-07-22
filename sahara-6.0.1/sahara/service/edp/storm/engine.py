@@ -86,18 +86,18 @@ class StormJobEngine(base_engine.JobEngine):
             return edp.JOB_STATUSES_TERMINATED
 
         topology_name = self._get_topology_name(job_execution)
-        master = plugin_utils.get_instance(self.cluster, "nimbus")
+        main = plugin_utils.get_instance(self.cluster, "nimbus")
 
         cmd = (
             "%(storm)s -c nimbus.host=%(host)s "
             "list | grep %(topology_name)s | awk '{print $2}'") % (
             {
                 "storm": "/usr/local/storm/bin/storm",
-                "host": master.hostname(),
+                "host": main.hostname(),
                 "topology_name": topology_name
             })
         for i in range(retries):
-            with remote.get_remote(master) as r:
+            with remote.get_remote(main) as r:
                 ret, stdout = r.execute_command("%s " % (cmd))
             # If the status is ACTIVE is there, it's still running
             if stdout.strip() == "ACTIVE":
@@ -135,9 +135,9 @@ class StormJobEngine(base_engine.JobEngine):
 
             return uploaded_paths
 
-    def _exec_cmd_on_remote_instance(self, master, cmd):
-        if master is not None:
-            with remote.get_remote(master) as r:
+    def _exec_cmd_on_remote_instance(self, main, cmd):
+        if main is not None:
+            with remote.get_remote(main) as r:
                 ret, stdout = r.execute_command("%s > /dev/null 2>&1 & echo $!"
                                                 % cmd)
 
@@ -149,13 +149,13 @@ class StormJobEngine(base_engine.JobEngine):
             return None
 
         topology_name = self._get_topology_name(job_execution)
-        master = plugin_utils.get_instance(self.cluster, "nimbus")
+        main = plugin_utils.get_instance(self.cluster, "nimbus")
 
         cmd = (
             '%(storm_kill)s -c nimbus.host=%(host)s %(topology_name)s') % (
             {
                 "storm_kill": "/usr/local/storm/bin/storm kill",
-                "host": master.hostname(),
+                "host": main.hostname(),
                 "topology_name": topology_name
             })
 
@@ -170,11 +170,11 @@ class StormJobEngine(base_engine.JobEngine):
         if instance is not None:
             return self._get_job_status_from_remote(job_execution, retries=3)
 
-    def _execute_remote_job(self, master, wf_dir, cmd):
+    def _execute_remote_job(self, main, wf_dir, cmd):
         # If an exception is raised here, the job_manager will mark
         # the job failed and log the exception
         # The redirects of stdout and stderr will preserve output in the wf_dir
-        with remote.get_remote(master) as r:
+        with remote.get_remote(main) as r:
             # Upload the command launch script
             launch = os.path.join(wf_dir, "launch_command")
             r.write_file_to(launch, self._job_script())
@@ -234,15 +234,15 @@ class StormJobEngine(base_engine.JobEngine):
         data_source_urls = job_utils.to_url_dict(data_source_urls,
                                                  runtime=True)
 
-        # We'll always run the driver program on the master
-        master = plugin_utils.get_instance(self.cluster, "nimbus")
+        # We'll always run the driver program on the main
+        main = plugin_utils.get_instance(self.cluster, "nimbus")
 
         # TODO(tmckay): wf_dir should probably be configurable.
         # The only requirement is that the dir is writable by the image user
-        wf_dir = job_utils.create_workflow_dir(master, '/tmp/storm-edp', job,
+        wf_dir = job_utils.create_workflow_dir(main, '/tmp/storm-edp', job,
                                                job_execution.id, "700")
 
-        paths = self._upload_job_files(master, wf_dir, job,
+        paths = self._upload_job_files(main, wf_dir, job,
                                        updated_job_configs)
 
         # We can shorten the paths in this case since we'll run out of wf_dir
@@ -250,7 +250,7 @@ class StormJobEngine(base_engine.JobEngine):
         topology_name = self._set_topology_name(job_execution, job.name)
 
         # Launch the storm job using storm jar
-        host = master.hostname()
+        host = main.hostname()
         cmd = self._build_command(paths, updated_job_configs, host,
                                   topology_name)
 
@@ -258,12 +258,12 @@ class StormJobEngine(base_engine.JobEngine):
         if job_execution.info['status'] == edp.JOB_STATUS_TOBEKILLED:
             return (None, edp.JOB_STATUS_KILLED, None)
 
-        ret, stdout = self._execute_remote_job(master, wf_dir, cmd)
+        ret, stdout = self._execute_remote_job(main, wf_dir, cmd)
         if ret == 0:
             # Success, we'll add the wf_dir in job_execution.extra and store
             # topology_name@instance_id as the job id
             # We know the job is running so return "RUNNING"
-            return (topology_name + "@" + master.id,
+            return (topology_name + "@" + main.id,
                     edp.JOB_STATUS_RUNNING,
                     {'storm-path': wf_dir})
 
@@ -305,8 +305,8 @@ class StormPyleusJobEngine(StormJobEngine):
         topology_name = job_execution["configs"]["topology_name"]
         return topology_name
 
-    def _execute_remote_job(self, master, wf_dir, cmd):
-        with remote.get_remote(master) as r:
+    def _execute_remote_job(self, main, wf_dir, cmd):
+        with remote.get_remote(main) as r:
             ret, stdout = r.execute_command(
                 "cd %s; %s > /dev/null 2>&1 & echo $!"
                 % (wf_dir, cmd))

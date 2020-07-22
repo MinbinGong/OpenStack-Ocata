@@ -221,8 +221,8 @@ class BaseTemplateDefinition(TemplateDefinition):
                            cluster_template_attr='https_proxy')
         self.add_parameter('no_proxy',
                            cluster_template_attr='no_proxy')
-        self.add_parameter('number_of_masters',
-                           cluster_attr='master_count')
+        self.add_parameter('number_of_mains',
+                           cluster_attr='main_count')
 
     @property
     def driver_module_path(self):
@@ -299,16 +299,16 @@ class BaseTemplateDefinition(TemplateDefinition):
 
     def get_discovery_url(self, cluster):
         if hasattr(cluster, 'discovery_url') and cluster.discovery_url:
-            if getattr(cluster, 'master_count', None) is not None:
+            if getattr(cluster, 'main_count', None) is not None:
                 self.validate_discovery_url(cluster.discovery_url,
-                                            cluster.master_count)
+                                            cluster.main_count)
             else:
                 self.validate_discovery_url(cluster.discovery_url, 1)
             discovery_url = cluster.discovery_url
         else:
             discovery_endpoint = (
                 CONF.cluster.etcd_discovery_service_endpoint_format %
-                {'size': cluster.master_count})
+                {'size': cluster.main_count})
             try:
                 discovery_url = requests.get(discovery_endpoint).text
             except req_exceptions.RequestException as err:
@@ -325,10 +325,10 @@ class BaseTemplateDefinition(TemplateDefinition):
 
 
 def add_lb_env_file(env_files, cluster_template):
-    if cluster_template.master_lb_enabled:
-        env_files.append(COMMON_ENV_PATH + 'with_master_lb.yaml')
+    if cluster_template.main_lb_enabled:
+        env_files.append(COMMON_ENV_PATH + 'with_main_lb.yaml')
     else:
-        env_files.append(COMMON_ENV_PATH + 'no_master_lb.yaml')
+        env_files.append(COMMON_ENV_PATH + 'no_main_lb.yaml')
 
 
 def add_volume_env_file(env_files, cluster_template):

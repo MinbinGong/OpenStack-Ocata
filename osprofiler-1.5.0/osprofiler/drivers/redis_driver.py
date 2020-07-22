@@ -129,7 +129,7 @@ class RedisSentinel(Redis, base.Driver):
         parsed_url = parser.urlparse(self.connection_str)
         sentinel = Sentinel([(parsed_url.hostname, int(parsed_url.port))],
                             socket_timeout=socket_timeout)
-        self.db = sentinel.master_for(self.conf.profiler.sentinel_service_name,
+        self.db = sentinel.main_for(self.conf.profiler.sentinel_service_name,
                                       socket_timeout=socket_timeout)
 
     @classmethod

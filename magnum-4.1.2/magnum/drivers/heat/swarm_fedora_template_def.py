@@ -47,8 +47,8 @@ class SwarmFedoraTemplateDefinition(template_def.BaseTemplateDefinition):
                            param_type=str)
         self.add_parameter('number_of_nodes',
                            cluster_attr='node_count')
-        self.add_parameter('master_flavor',
-                           cluster_template_attr='master_flavor_id')
+        self.add_parameter('main_flavor',
+                           cluster_template_attr='main_flavor_id')
         self.add_parameter('node_flavor',
                            cluster_template_attr='flavor_id')
         self.add_parameter('docker_volume_size',
@@ -77,10 +77,10 @@ class SwarmFedoraTemplateDefinition(template_def.BaseTemplateDefinition):
         self.add_output('api_address',
                         cluster_attr='api_address',
                         mapping_type=SwarmApiAddressOutputMapping)
-        self.add_output('swarm_master_private',
+        self.add_output('swarm_main_private',
                         cluster_attr=None)
-        self.add_output('swarm_masters',
-                        cluster_attr='master_addresses')
+        self.add_output('swarm_mains',
+                        cluster_attr='main_addresses')
         self.add_output('swarm_nodes_private',
                         cluster_attr=None)
         self.add_output('swarm_nodes',

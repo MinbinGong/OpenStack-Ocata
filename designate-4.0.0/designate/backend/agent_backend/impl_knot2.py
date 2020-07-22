@@ -154,7 +154,7 @@ class Knot2Backend(base.AgentBackend):
         zone_name = zone_name.rstrip('.')
         LOG.debug("Finding %s", zone_name)
         # Output example:
-        # [530336536.com.] type: slave | serial: 0 | next-event: idle |
+        # [530336536.com.] type: subordinate | serial: 0 | next-event: idle |
         # auto-dnssec: disabled]
         try:
             out, err = execute(self._knotc_cmd_name, 'zone-status', zone_name)

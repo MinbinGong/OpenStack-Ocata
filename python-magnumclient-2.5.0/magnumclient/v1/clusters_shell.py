@@ -60,7 +60,7 @@ def _show_cluster(cluster):
            metavar='<fields>',
            help=_('Comma-separated list of fields to display. '
                   'Available fields: uuid, name, cluster_template_id, '
-                  'stack_id, status, master_count, node_count, links, '
+                  'stack_id, status, main_count, node_count, links, '
                   'create_timeout'
                   )
            )
@@ -70,7 +70,7 @@ def do_cluster_list(cs, args):
                                 sort_key=args.sort_key,
                                 sort_dir=args.sort_dir)
     columns = [
-        'uuid', 'name', 'keypair', 'node_count', 'master_count', 'status'
+        'uuid', 'name', 'keypair', 'node_count', 'main_count', 'status'
     ]
     columns += utils._get_list_table_columns_and_formatters(
         args.fields, clusters,
@@ -106,11 +106,11 @@ def do_cluster_list(cs, args):
            type=int,
            default=1,
            help=_('The cluster node count.'))
-@utils.arg('--master-count',
-           metavar='<master-count>',
+@utils.arg('--main-count',
+           metavar='<main-count>',
            type=int,
            default=1,
-           help=_('The number of master nodes for the cluster.'))
+           help=_('The number of main nodes for the cluster.'))
 @utils.arg('--discovery-url',
            metavar='<discovery-url>',
            help=_('Specifies custom discovery url for node discovery.'))
@@ -129,7 +129,7 @@ def do_cluster_create(cs, args):
     opts['cluster_template_id'] = cluster_template.uuid
     opts['keypair'] = args.keypair
     opts['node_count'] = args.node_count
-    opts['master_count'] = args.master_count
+    opts['main_count'] = args.main_count
     opts['discovery_url'] = args.discovery_url
     opts['create_timeout'] = args.timeout
 

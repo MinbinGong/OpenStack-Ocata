@@ -30,7 +30,7 @@ class TestClusterConductorWithK8s(base.TestCase):
         self.cluster_template_dict = {
             'image_id': 'image_id',
             'flavor_id': 'flavor_id',
-            'master_flavor_id': 'master_flavor_id',
+            'main_flavor_id': 'main_flavor_id',
             'keypair_id': 'keypair_id',
             'dns_nameserver': 'dns_nameserver',
             'external_network_id': 'external_network_id',
@@ -56,7 +56,7 @@ class TestClusterConductorWithK8s(base.TestCase):
             'server_type': 'vm',
             'registry_enabled': False,
             'insecure_registry': '10.0.0.1:5000',
-            'master_lb_enabled': False,
+            'main_lb_enabled': False,
             'floating_ip_enabled': False,
         }
         self.cluster_dict = {
@@ -68,9 +68,9 @@ class TestClusterConductorWithK8s(base.TestCase):
             'api_address': '172.17.2.3',
             'node_addresses': ['172.17.2.4'],
             'node_count': 1,
-            'master_count': 1,
+            'main_count': 1,
             'discovery_url': 'https://discovery.etcd.io/test',
-            'master_addresses': ['172.17.2.18'],
+            'main_addresses': ['172.17.2.18'],
             'ca_cert_ref': 'http://barbican/v1/containers/xx-xx-xx-xx',
             'magnum_cert_ref': 'http://barbican/v1/containers/xx-xx-xx-xx',
             'trustee_username': 'fake_trustee',
@@ -139,10 +139,10 @@ class TestClusterConductorWithK8s(base.TestCase):
             'docker_storage_driver': 'docker_storage_driver',
             'network_driver': 'network_driver',
             'volume_driver': 'volume_driver',
-            'master_flavor_id': 'master_flavor',
+            'main_flavor_id': 'main_flavor',
             'apiserver_port': '',
             'node_count': 'number_of_minions',
-            'master_count': 'number_of_masters',
+            'main_count': 'number_of_mains',
             'discovery_url': 'discovery_url',
             'labels': {'flannel_network_cidr': '10.101.0.0/16',
                        'flannel_network_subnetlen': '26',
@@ -168,9 +168,9 @@ class TestClusterConductorWithK8s(base.TestCase):
             'dns_nameserver': 'dns_nameserver',
             'server_image': 'image_id',
             'minion_flavor': 'flavor_id',
-            'master_flavor': 'master_flavor_id',
+            'main_flavor': 'main_flavor_id',
             'number_of_minions': 1,
-            'number_of_masters': 1,
+            'number_of_mains': 1,
             'docker_volume_size': 20,
             'docker_storage_driver': 'devicemapper',
             'discovery_url': 'https://discovery.etcd.io/test',
@@ -206,7 +206,7 @@ class TestClusterConductorWithK8s(base.TestCase):
         self.assertEqual(
             ['../../common/templates/environments/no_private_network.yaml',
              '../../common/templates/environments/with_volume.yaml',
-             '../../common/templates/environments/no_master_lb.yaml',
+             '../../common/templates/environments/no_main_lb.yaml',
              '../../common/templates/environments/disable_floating_ip.yaml',
              ],
             env_files)
@@ -264,11 +264,11 @@ class TestClusterConductorWithK8s(base.TestCase):
             'http_proxy': 'http_proxy',
             'https_proxy': 'https_proxy',
             'magnum_url': 'http://127.0.0.1:9511/v1',
-            'master_flavor': 'master_flavor_id',
+            'main_flavor': 'main_flavor_id',
             'minion_flavor': 'flavor_id',
             'network_driver': 'network_driver',
             'no_proxy': 'no_proxy',
-            'number_of_masters': 1,
+            'number_of_mains': 1,
             'number_of_minions': 1,
             'region_name': 'RegionOne',
             'registry_container': 'docker_registry',
@@ -293,7 +293,7 @@ class TestClusterConductorWithK8s(base.TestCase):
         self.assertEqual(
             ['../../common/templates/environments/no_private_network.yaml',
              '../../common/templates/environments/with_volume.yaml',
-             '../../common/templates/environments/no_master_lb.yaml',
+             '../../common/templates/environments/no_main_lb.yaml',
              '../../common/templates/environments/disable_floating_ip.yaml',
              ],
             env_files)
@@ -310,7 +310,7 @@ class TestClusterConductorWithK8s(base.TestCase):
         not_required = ['image_id', 'flavor_id', 'dns_nameserver',
                         'docker_volume_size', 'fixed_network', 'http_proxy',
                         'https_proxy', 'no_proxy', 'network_driver',
-                        'master_flavor_id', 'docker_storage_driver',
+                        'main_flavor_id', 'docker_storage_driver',
                         'volume_driver', 'fixed_subnet']
         for key in not_required:
             self.cluster_template_dict[key] = None
@@ -347,7 +347,7 @@ class TestClusterConductorWithK8s(base.TestCase):
             'insecure_registry_url': '10.0.0.1:5000',
             'kube_version': 'fake-version',
             'magnum_url': 'http://127.0.0.1:9511/v1',
-            'number_of_masters': 1,
+            'number_of_mains': 1,
             'number_of_minions': 1,
             'region_name': 'RegionOne',
             'registry_enabled': False,
@@ -365,7 +365,7 @@ class TestClusterConductorWithK8s(base.TestCase):
         self.assertEqual(
             ['../../common/templates/environments/with_private_network.yaml',
              '../../common/templates/environments/no_volume.yaml',
-             '../../common/templates/environments/no_master_lb.yaml',
+             '../../common/templates/environments/no_main_lb.yaml',
              '../../common/templates/environments/disable_floating_ip.yaml',
              ],
             env_files)
@@ -404,9 +404,9 @@ class TestClusterConductorWithK8s(base.TestCase):
             'dns_nameserver': 'dns_nameserver',
             'server_image': 'image_id',
             'minion_flavor': 'flavor_id',
-            'master_flavor': 'master_flavor_id',
+            'main_flavor': 'main_flavor_id',
             'number_of_minions': 1,
-            'number_of_masters': 1,
+            'number_of_mains': 1,
             'network_driver': 'network_driver',
             'volume_driver': 'volume_driver',
             'discovery_url': 'https://discovery.etcd.io/test',
@@ -435,7 +435,7 @@ class TestClusterConductorWithK8s(base.TestCase):
         self.assertEqual(expected, definition)
         self.assertEqual(
             ['../../common/templates/environments/no_private_network.yaml',
-             '../../common/templates/environments/no_master_lb.yaml',
+             '../../common/templates/environments/no_main_lb.yaml',
              '../../common/templates/environments/disable_floating_ip.yaml'],
             env_files)
 
@@ -471,9 +471,9 @@ class TestClusterConductorWithK8s(base.TestCase):
             'dns_nameserver': 'dns_nameserver',
             'server_image': 'image_id',
             'minion_flavor': 'flavor_id',
-            'master_flavor': 'master_flavor_id',
+            'main_flavor': 'main_flavor_id',
             'number_of_minions': 1,
-            'number_of_masters': 1,
+            'number_of_mains': 1,
             'network_driver': 'network_driver',
             'volume_driver': 'volume_driver',
             'discovery_url': 'http://tokentest/h1/h2/h3',
@@ -502,7 +502,7 @@ class TestClusterConductorWithK8s(base.TestCase):
         self.assertEqual(expected, definition)
         self.assertEqual(
             ['../../common/templates/environments/no_private_network.yaml',
-             '../../common/templates/environments/no_master_lb.yaml',
+             '../../common/templates/environments/no_main_lb.yaml',
              '../../common/templates/environments/disable_floating_ip.yaml'],
             env_files)
 
@@ -569,7 +569,7 @@ class TestClusterConductorWithK8s(base.TestCase):
     @patch('requests.get')
     @patch('magnum.objects.ClusterTemplate.get_by_uuid')
     @patch('magnum.drivers.common.driver.Driver.get_driver')
-    def test_extract_template_definition_without_master_flavor(
+    def test_extract_template_definition_without_main_flavor(
             self,
             mock_driver,
             mock_objects_cluster_template_get_by_uuid,
@@ -579,7 +579,7 @@ class TestClusterConductorWithK8s(base.TestCase):
             mock_driver,
             mock_objects_cluster_template_get_by_uuid,
             mock_get,
-            missing_attr='master_flavor_id')
+            missing_attr='main_flavor_id')
 
     @patch('requests.get')
     @patch('magnum.objects.ClusterTemplate.get_by_uuid')
@@ -614,7 +614,7 @@ class TestClusterConductorWithK8s(base.TestCase):
     @patch('requests.get')
     @patch('magnum.objects.ClusterTemplate.get_by_uuid')
     @patch('magnum.drivers.common.driver.Driver.get_driver')
-    def test_extract_template_definition_without_master_count(
+    def test_extract_template_definition_without_main_count(
             self,
             mock_driver,
             mock_objects_cluster_template_get_by_uuid,
@@ -624,7 +624,7 @@ class TestClusterConductorWithK8s(base.TestCase):
             mock_driver,
             mock_objects_cluster_template_get_by_uuid,
             mock_get,
-            missing_attr='master_count')
+            missing_attr='main_count')
 
     @patch('requests.get')
     @patch('magnum.objects.ClusterTemplate.get_by_uuid')
@@ -661,10 +661,10 @@ class TestClusterConductorWithK8s(base.TestCase):
             'fixed_subnet': 'fixed_subnet',
             'dns_nameserver': 'dns_nameserver',
             'server_image': 'image_id',
-            'master_flavor': 'master_flavor_id',
+            'main_flavor': 'main_flavor_id',
             'minion_flavor': 'flavor_id',
             'number_of_minions': 1,
-            'number_of_masters': 1,
+            'number_of_mains': 1,
             'network_driver': 'network_driver',
             'volume_driver': 'volume_driver',
             'docker_volume_size': 20,
@@ -699,7 +699,7 @@ class TestClusterConductorWithK8s(base.TestCase):
         self.assertEqual(
             ['../../common/templates/environments/no_private_network.yaml',
              '../../common/templates/environments/with_volume.yaml',
-             '../../common/templates/environments/no_master_lb.yaml',
+             '../../common/templates/environments/no_main_lb.yaml',
              '../../common/templates/environments/disable_floating_ip.yaml',
              ],
             env_files)

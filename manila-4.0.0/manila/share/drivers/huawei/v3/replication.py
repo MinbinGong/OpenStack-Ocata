@@ -241,7 +241,7 @@ class ReplicaPairManager(object):
         """Create replication pair for RPC call.
 
         This is for remote call, because replica pair can only be created
-        by master node.
+        by main node.
         """
         return self.create(local_share_info,
                            remote_device_wwn,

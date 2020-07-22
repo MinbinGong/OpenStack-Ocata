@@ -109,7 +109,7 @@ class ClusterTest(base.BaseTempestTest):
         if config.Config.copy_logs:
             self.addOnException(self.copy_logs_handler(
                 lambda: list(
-                    [self._get_cluster_by_id(model.uuid)[1].master_addresses,
+                    [self._get_cluster_by_id(model.uuid)[1].main_addresses,
                      self._get_cluster_by_id(model.uuid)[1].node_addresses]),
                 self.cluster_template.coe,
                 self.keypair))
@@ -222,10 +222,10 @@ Q0uA0aVog3f5iJxCa3Hp5gxbJQ6zV6kJ0TEsuaaOhEko9sdpCoPOnRBm2i/XRD2D
             self.cluster_client.post_cluster, gen_model)
 
     @testtools.testcase.attr('negative')
-    def test_create_cluster_with_zero_masters(self):
+    def test_create_cluster_with_zero_mains(self):
         uuid = self.cluster_template.uuid
         gen_model = datagen.valid_cluster_data(cluster_template_id=uuid,
-                                               master_count=0)
+                                               main_count=0)
         self.assertRaises(
             exceptions.BadRequest,
             self.cluster_client.post_cluster, gen_model)

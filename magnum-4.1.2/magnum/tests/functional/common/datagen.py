@@ -111,7 +111,7 @@ def baymodel_data(**kwargs):
         "public": False,
         "dns_nameserver": "8.8.8.8",
         "flavor_id": data_utils.rand_name('bay'),
-        "master_flavor_id": data_utils.rand_name('bay'),
+        "main_flavor_id": data_utils.rand_name('bay'),
         "external_network_id": config.Config.nic_id,
         "keypair_id": data_utils.rand_name('bay'),
         "image_id": data_utils.rand_name('bay')
@@ -162,7 +162,7 @@ def baymodel_data_with_valid_keypair_image_flavor():
     return baymodel_data(keypair_id=config.Config.keypair_id,
                          image_id=config.Config.image_id,
                          flavor_id=config.Config.flavor_id,
-                         master_flavor_id=config.Config.master_flavor_id)
+                         main_flavor_id=config.Config.main_flavor_id)
 
 
 def baymodel_data_with_missing_image():
@@ -173,7 +173,7 @@ def baymodel_data_with_missing_image():
 
     return baymodel_data(keypair_id=config.Config.keypair_id,
                          flavor_id=config.Config.flavor_id,
-                         master_flavor_id=config.Config.master_flavor_id)
+                         main_flavor_id=config.Config.main_flavor_id)
 
 
 def baymodel_data_with_missing_flavor():
@@ -194,7 +194,7 @@ def baymodel_data_with_missing_keypair():
 
     return baymodel_data(image_id=config.Config.image_id,
                          flavor_id=config.Config.flavor_id,
-                         master_flavor_id=config.Config.master_flavor_id)
+                         main_flavor_id=config.Config.main_flavor_id)
 
 
 def baymodel_valid_data_with_specific_coe(coe):
@@ -217,7 +217,7 @@ def valid_swarm_baymodel(is_public=False):
     return baymodel_data(image_id=config.Config.image_id,
                          flavor_id=config.Config.flavor_id, public=is_public,
                          dns_nameserver=config.Config.dns_nameserver,
-                         master_flavor_id=config.Config.master_flavor_id,
+                         main_flavor_id=config.Config.main_flavor_id,
                          keypair_id=config.Config.keypair_id, coe="swarm",
                          cluster_distro=None,
                          external_network_id=config.Config.nic_id,
@@ -230,7 +230,7 @@ def bay_data(name=data_utils.rand_name('bay'),
              baymodel_id=data_utils.rand_uuid(),
              node_count=random_int(1, 5), discovery_url=gen_random_ip(),
              bay_create_timeout=random_int(1, 30),
-             master_count=random_int(1, 5)):
+             main_count=random_int(1, 5)):
     """Generates random bay data
 
     BayModel_id cannot be random for the bay to be valid due to
@@ -242,7 +242,7 @@ def bay_data(name=data_utils.rand_name('bay'),
     :param node_count: number of agents for bay
     :param discovery_url: url provided for node discovery
     :param bay_create_timeout: timeout in minutes for bay create
-    :param master_count: number of master nodes for the bay
+    :param main_count: number of main nodes for the bay
     :returns: BayEntity with generated data
     """
 
@@ -252,7 +252,7 @@ def bay_data(name=data_utils.rand_name('bay'),
         "node_count": node_count,
         "discovery_url": None,
         "bay_create_timeout": bay_create_timeout,
-        "master_count": master_count
+        "main_count": main_count
     }
     model = bay_model.BayEntity.from_dict(data)
 
@@ -260,7 +260,7 @@ def bay_data(name=data_utils.rand_name('bay'),
 
 
 def valid_bay_data(baymodel_id, name=data_utils.rand_name('bay'), node_count=1,
-                   master_count=1, bay_create_timeout=None):
+                   main_count=1, bay_create_timeout=None):
     """Generates random bay data with valid
 
     :param baymodel_id: baymodel unique id that already exists
@@ -270,7 +270,7 @@ def valid_bay_data(baymodel_id, name=data_utils.rand_name('bay'), node_count=1,
     """
 
     return bay_data(baymodel_id=baymodel_id, name=name,
-                    master_count=master_count, node_count=node_count,
+                    main_count=main_count, node_count=node_count,
                     bay_create_timeout=bay_create_timeout)
 
 
@@ -351,7 +351,7 @@ def cluster_template_data(**kwargs):
         "public": False,
         "dns_nameserver": "8.8.8.8",
         "flavor_id": data_utils.rand_name('cluster'),
-        "master_flavor_id": data_utils.rand_name('cluster'),
+        "main_flavor_id": data_utils.rand_name('cluster'),
         "external_network_id": config.Config.nic_id,
         "keypair_id": data_utils.rand_name('cluster'),
         "image_id": data_utils.rand_name('cluster')
@@ -433,11 +433,11 @@ def cluster_template_data_with_valid_keypair_image_flavor():
 
     :returns: ClusterTemplateEntity with generated data
     """
-    master_flavor = config.Config.master_flavor_id
+    main_flavor = config.Config.main_flavor_id
     return cluster_template_data(keypair_id=config.Config.keypair_id,
                                  image_id=config.Config.image_id,
                                  flavor_id=config.Config.flavor_id,
-                                 master_flavor_id=master_flavor)
+                                 main_flavor_id=main_flavor)
 
 
 def cluster_template_data_with_missing_image():
@@ -449,7 +449,7 @@ def cluster_template_data_with_missing_image():
     return cluster_template_data(
         keypair_id=config.Config.keypair_id,
         flavor_id=config.Config.flavor_id,
-        master_flavor_id=config.Config.master_flavor_id)
+        main_flavor_id=config.Config.main_flavor_id)
 
 
 def cluster_template_data_with_missing_flavor():
@@ -471,7 +471,7 @@ def cluster_template_data_with_missing_keypair():
     return cluster_template_data(
         image_id=config.Config.image_id,
         flavor_id=config.Config.flavor_id,
-        master_flavor_id=config.Config.master_flavor_id)
+        main_flavor_id=config.Config.main_flavor_id)
 
 
 def cluster_template_valid_data_with_specific_coe(coe):
@@ -490,12 +490,12 @@ def valid_swarm_cluster_template(is_public=False):
 
     :returns: ClusterTemplateEntity with generated data
     """
-    master_flavor_id = config.Config.master_flavor_id
+    main_flavor_id = config.Config.main_flavor_id
     return cluster_template_data(image_id=config.Config.image_id,
                                  flavor_id=config.Config.flavor_id,
                                  public=is_public,
                                  dns_nameserver=config.Config.dns_nameserver,
-                                 master_flavor_id=master_flavor_id,
+                                 main_flavor_id=main_flavor_id,
                                  coe="swarm",
                                  cluster_distro=None,
                                  external_network_id=config.Config.nic_id,
@@ -509,7 +509,7 @@ def cluster_data(name=data_utils.rand_name('cluster'),
                  cluster_template_id=data_utils.rand_uuid(),
                  node_count=random_int(1, 5), discovery_url=gen_random_ip(),
                  create_timeout=random_int(1, 30),
-                 master_count=random_int(1, 5)):
+                 main_count=random_int(1, 5)):
     """Generates random cluster data
 
     cluster_template_id cannot be random for the cluster to be valid due to
@@ -521,7 +521,7 @@ def cluster_data(name=data_utils.rand_name('cluster'),
     :param node_count: number of agents for cluster
     :param discovery_url: url provided for node discovery
     :param create_timeout: timeout in minutes for cluster create
-    :param master_count: number of master nodes for the cluster
+    :param main_count: number of main nodes for the cluster
     :returns: ClusterEntity with generated data
     """
 
@@ -532,7 +532,7 @@ def cluster_data(name=data_utils.rand_name('cluster'),
         "node_count": node_count,
         "discovery_url": None,
         "create_timeout": create_timeout,
-        "master_count": master_count
+        "main_count": main_count
     }
     model = cluster_model.ClusterEntity.from_dict(data)
 
@@ -541,7 +541,7 @@ def cluster_data(name=data_utils.rand_name('cluster'),
 
 def valid_cluster_data(cluster_template_id,
                        name=data_utils.rand_name('cluster'),
-                       node_count=1, master_count=1, create_timeout=None):
+                       node_count=1, main_count=1, create_timeout=None):
     """Generates random cluster data with valid
 
     :param cluster_template_id: clustertemplate unique id that already exists
@@ -551,7 +551,7 @@ def valid_cluster_data(cluster_template_id,
     """
 
     return cluster_data(cluster_template_id=cluster_template_id, name=name,
-                        master_count=master_count, node_count=node_count,
+                        main_count=main_count, node_count=node_count,
                         create_timeout=create_timeout)
 
 

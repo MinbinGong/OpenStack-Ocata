@@ -34,7 +34,7 @@ class MSDNSAgentBackendUnitTestCase(TestCase):
 
     def setUp(self):
         super(MSDNSAgentBackendUnitTestCase, self).setUp()
-        self.CONF.set_override('masters', ['127.0.0.1:5354'], 'service:agent')
+        self.CONF.set_override('mains', ['127.0.0.1:5354'], 'service:agent')
 
         patcher = mock.patch('os_win.utilsfactory.get_dnsutils')
         self._dnsutils = patcher.start().return_value
@@ -50,7 +50,7 @@ class MSDNSAgentBackendUnitTestCase(TestCase):
         return dns.zone.from_text(zone_text, check_origin=False)
 
     def test_init(self):
-        self.assertEqual(['127.0.0.1'], self.backend._masters)
+        self.assertEqual(['127.0.0.1'], self.backend._mains)
         self.assertEqual(self._dnsutils, self.backend._dnsutils)
 
     def test_find_zone_serial(self):
@@ -80,7 +80,7 @@ class MSDNSAgentBackendUnitTestCase(TestCase):
             zone_name=self._FAKE_ZONE_NAME,
             zone_type=constants.DNS_ZONE_TYPE_SECONDARY,
             ds_integrated=False,
-            ip_addrs=self.backend._masters)
+            ip_addrs=self.backend._mains)
 
     def test_create_zone_already_existing_diff(self):
         zone = self._create_dnspy_zone(self._FAKE_ZONE_NAME)
@@ -99,7 +99,7 @@ class MSDNSAgentBackendUnitTestCase(TestCase):
             os_win_exc.DNSZoneAlreadyExists(zone_name=self._FAKE_ZONE_NAME))
         mock_zone_properties = {'zone_type': constants.DNS_ZONE_TYPE_SECONDARY,
                                 'ds_integrated': False,
-                                'master_servers': self.backend._masters}
+                                'main_servers': self.backend._mains}
         self._dnsutils.get_zone_properties.return_value = mock_zone_properties
 
         self.backend.create_zone(zone)

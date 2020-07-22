@@ -67,10 +67,10 @@ class DesignateYAMLAdapterTest(oslotest.base.BaseTestCase):
             self.assertEqual('powerdns', r_pool.targets[0].type)
             self.assertEqual(
                 'PowerDNS Database Cluster', r_pool.targets[0].description)
-            self.assertEqual(1, len(r_pool.targets[0].masters))
-            self.assertEqual('192.0.2.1', r_pool.targets[0].masters[0].host)
+            self.assertEqual(1, len(r_pool.targets[0].mains))
+            self.assertEqual('192.0.2.1', r_pool.targets[0].mains[0].host)
             self.assertEqual(DEFAULT_MDNS_PORT,
-                             r_pool.targets[0].masters[0].port)
+                             r_pool.targets[0].mains[0].port)
             self.assertEqual(1, len(r_pool.targets[0].options))
             self.assertEqual('connection', r_pool.targets[0].options[0].key)
             self.assertEqual(
@@ -125,7 +125,7 @@ class DesignateYAMLAdapterTest(oslotest.base.BaseTestCase):
             'targets': [
                 {
                     'description': u'PowerDNS Database Cluster',
-                    'masters': [
+                    'mains': [
                         {
                             'host': u'192.0.2.1',
                             'pool_target_id': u'd567d569-2d69-41d5-828d-f7054bb10b5c',  # noqa

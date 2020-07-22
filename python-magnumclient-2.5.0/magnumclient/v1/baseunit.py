@@ -18,7 +18,7 @@ from magnumclient import exceptions
 
 
 # Derived classes may append their own custom attributes to this default list
-CREATION_ATTRIBUTES = ['name', 'node_count', 'discovery_url', 'master_count']
+CREATION_ATTRIBUTES = ['name', 'node_count', 'discovery_url', 'main_count']
 
 
 class BaseTemplate(base.Resource):

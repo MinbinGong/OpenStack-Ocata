@@ -36,9 +36,9 @@ cluster_json = {
             "node_group_template_id": "{vanilla-260-default-worker}"
         },
         {
-            "name": "master",
+            "name": "main",
             "count": 1,
-            "node_group_template_id": "{vanilla-260-default-master}"
+            "node_group_template_id": "{vanilla-260-default-main}"
         }
     ],
     "name": "vanilla-260-default-cluster",
@@ -46,7 +46,7 @@ cluster_json = {
     "cluster_configs": {}
 }
 
-master_json = {
+main_json = {
     "plugin_name": "vanilla",
     "hadoop_version": "2.7.1",
     "node_processes": [
@@ -54,7 +54,7 @@ master_json = {
         "resourcemanager",
         "hiveserver"
     ],
-    "name": "vanilla-260-default-master",
+    "name": "vanilla-260-default-main",
     "floating_ip_pool": "{floating_ip_pool}",
     "flavor_id": "{flavor_id}",
     "auto_security_group": "{auto_security_group}",
@@ -244,7 +244,7 @@ class TemplateUpdateTestCase(base.ConductorManagerTestCase):
                            "description": "not a template"}
 
         files = self._write_files(
-            tempdir, [cluster_json, master_json, worker_json, some_other_json])
+            tempdir, [cluster_json, main_json, worker_json, some_other_json])
 
         get_configs.return_value = {"flavor_id": '2', 'security_groups': [],
                                     'auto_security_group': False}
@@ -257,7 +257,7 @@ class TemplateUpdateTestCase(base.ConductorManagerTestCase):
         cl_temp_names = [f["template"]["name"] for f in cl_templates]
         ng_temp_names = [f["template"]["name"] for f in ng_templates]
         self.assertEqual([cluster_json["name"]], cl_temp_names)
-        self.assertEqual([master_json["name"],
+        self.assertEqual([main_json["name"],
                           worker_json["name"]], ng_temp_names)
 
         # Plugin name/version filtering applied
@@ -283,7 +283,7 @@ class TemplateUpdateTestCase(base.ConductorManagerTestCase):
         tempdir = tempfile.mkdtemp()
 
         files = self._write_files(
-            tempdir, [cluster_json, master_json, worker_json])
+            tempdir, [cluster_json, main_json, worker_json])
 
         get_configs.return_value = {
             "flavor_id": '2',
@@ -314,7 +314,7 @@ class TemplateUpdateTestCase(base.ConductorManagerTestCase):
         tempdir = tempfile.mkdtemp()
 
         files = self._write_files(
-            tempdir, [cluster_json, master_json, worker_json])
+            tempdir, [cluster_json, main_json, worker_json])
 
         get_configs.return_value = {"flavor_id": '2', 'security_groups': [],
                                     'auto_security_group': False}
@@ -614,7 +614,7 @@ class TemplateUpdateTestCase(base.ConductorManagerTestCase):
 
         tempdir = tempfile.mkdtemp()
 
-        self._write_files(tempdir, [cluster_json, master_json, worker_json])
+        self._write_files(tempdir, [cluster_json, main_json, worker_json])
 
         get_configs.return_value = {
             "flavor_id": '2',
@@ -633,7 +633,7 @@ class TemplateUpdateTestCase(base.ConductorManagerTestCase):
 
         ngs = self.api.node_group_template_get_all(ctx)
         ng_names = sorted([ng["name"] for ng in ngs])
-        self.assertEqual(sorted([master_json["name"], worker_json["name"]]),
+        self.assertEqual(sorted([main_json["name"], worker_json["name"]]),
                          ng_names)
 
         clts = self.api.cluster_template_get_all(ctx)
@@ -651,7 +651,7 @@ class TemplateUpdateTestCase(base.ConductorManagerTestCase):
 
         tempdir = tempfile.mkdtemp()
 
-        self._write_files(tempdir, [cluster_json, master_json, worker_json])
+        self._write_files(tempdir, [cluster_json, main_json, worker_json])
 
         get_configs.return_value = {
             "flavor_id": '2',
@@ -689,7 +689,7 @@ class TemplateUpdateTestCase(base.ConductorManagerTestCase):
 
         tempdir = tempfile.mkdtemp()
 
-        self._write_files(tempdir, [cluster_json, master_json, worker_json])
+        self._write_files(tempdir, [cluster_json, main_json, worker_json])
 
         get_configs.return_value = {
             "flavor_id": '2',
@@ -726,7 +726,7 @@ class TemplateUpdateTestCase(base.ConductorManagerTestCase):
 
         tempdir = tempfile.mkdtemp()
 
-        self._write_files(tempdir, [cluster_json, master_json, worker_json])
+        self._write_files(tempdir, [cluster_json, main_json, worker_json])
 
         get_configs.return_value = {
             "flavor_id": '2',
@@ -770,7 +770,7 @@ class TemplateUpdateTestCase(base.ConductorManagerTestCase):
 
         tempdir = tempfile.mkdtemp()
 
-        self._write_files(tempdir, [cluster_json, master_json, worker_json])
+        self._write_files(tempdir, [cluster_json, main_json, worker_json])
 
         get_configs.return_value = {
             "flavor_id": '2',

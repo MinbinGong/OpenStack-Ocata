@@ -464,7 +464,7 @@ class NovaHelper(object):
 
         # Voir ici
         # https://github.com/openstack/nova/
-        # blob/master/nova/virt/xenapi/host.py
+        # blob/main/nova/virt/xenapi/host.py
         # set_host_enabled(self, enabled):
         # Sets the compute host's ability to accept new instances.
         # host_maintenance_mode(self, host, mode):

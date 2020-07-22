@@ -47,21 +47,21 @@ class MariaDBGTIDReplication(mysql_base.MysqlReplicationBase):
     def repl_backup_extra_opts(self):
         return CONF.backup_runner_options.get('MariaDBInnoBackupEx', '')
 
-    def connect_to_master(self, service, snapshot):
+    def connect_to_main(self, service, snapshot):
         logging_config = snapshot['log_position']
-        LOG.debug("connect_to_master %s" % logging_config['replication_user'])
-        change_master_cmd = (
+        LOG.debug("connect_to_main %s" % logging_config['replication_user'])
+        change_main_cmd = (
             "CHANGE MASTER TO MASTER_HOST='%(host)s', "
             "MASTER_PORT=%(port)s, "
             "MASTER_USER='%(user)s', "
             "MASTER_PASSWORD='%(password)s', "
             "MASTER_CONNECT_RETRY=15, "
-            "MASTER_USE_GTID=slave_pos" %
+            "MASTER_USE_GTID=subordinate_pos" %
             {
-                'host': snapshot['master']['host'],
-                'port': snapshot['master']['port'],
+                'host': snapshot['main']['host'],
+                'port': snapshot['main']['port'],
                 'user': logging_config['replication_user']['name'],
                 'password': logging_config['replication_user']['password']
             })
-        service.execute_on_client(change_master_cmd)
-        service.start_slave()
+        service.execute_on_client(change_main_cmd)
+        service.start_subordinate()

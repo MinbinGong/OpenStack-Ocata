@@ -34,11 +34,11 @@ class TestBayObject(base.TestCase):
     def test_bay_init(self):
         bay_dict = apiutils.bay_post_data(baymodel_id=None)
         del bay_dict['node_count']
-        del bay_dict['master_count']
+        del bay_dict['main_count']
         del bay_dict['bay_create_timeout']
         bay = api_bay.Bay(**bay_dict)
         self.assertEqual(1, bay.node_count)
-        self.assertEqual(1, bay.master_count)
+        self.assertEqual(1, bay.main_count)
         self.assertEqual(60, bay.bay_create_timeout)
 
         # test unset value for baymodel_id
@@ -57,7 +57,7 @@ class TestBayObject(base.TestCase):
     def test_as_dict_faults(self):
         bay_dict = apiutils.bay_post_data(baymodel_id=None)
         del bay_dict['node_count']
-        del bay_dict['master_count']
+        del bay_dict['main_count']
         del bay_dict['bay_create_timeout']
         bay = api_bay.Bay(**bay_dict)
         bay.bay_faults = {'testfault': 'fault'}
@@ -68,11 +68,11 @@ class TestBayObject(base.TestCase):
 class TestListBay(api_base.FunctionalTest):
 
     _bay_attrs = ("name", "baymodel_id", "node_count", "status",
-                  "master_count", "stack_id", "bay_create_timeout")
+                  "main_count", "stack_id", "bay_create_timeout")
 
     _expand_bay_attrs = ("name", "baymodel_id", "node_count", "status",
                          "api_address", "discovery_url", "node_addresses",
-                         "master_count", "master_addresses", "stack_id",
+                         "main_count", "main_addresses", "stack_id",
                          "bay_create_timeout", "status_reason")
 
     def setUp(self):
@@ -419,7 +419,7 @@ class TestPatch(api_base.FunctionalTest):
         self.assertEqual(self.bay.uuid, response['uuid'])
         self.assertEqual(self.bay.cluster_template_id, response['baymodel_id'])
         self.assertEqual(self.bay.name, response['name'])
-        self.assertEqual(self.bay.master_count, response['master_count'])
+        self.assertEqual(self.bay.main_count, response['main_count'])
 
     def test_remove_mandatory_property_fail(self):
         mandatory_properties = ('/uuid', '/baymodel_id')
@@ -554,21 +554,21 @@ class TestPost(api_base.FunctionalTest):
         self.assertEqual(201, response.status_int)
         self.assertEqual(1, response.json['node_count'])
 
-    def test_create_bay_with_master_count_zero(self):
+    def test_create_bay_with_main_count_zero(self):
         bdict = apiutils.bay_post_data()
-        bdict['master_count'] = 0
+        bdict['main_count'] = 0
         response = self.post_json('/bays', bdict, expect_errors=True)
         self.assertEqual('application/json', response.content_type)
         self.assertEqual(400, response.status_int)
         self.assertTrue(response.json['errors'])
 
-    def test_create_bay_with_no_master_count(self):
+    def test_create_bay_with_no_main_count(self):
         bdict = apiutils.bay_post_data()
-        del bdict['master_count']
+        del bdict['main_count']
         response = self.post_json('/bays', bdict)
         self.assertEqual('application/json', response.content_type)
         self.assertEqual(201, response.status_int)
-        self.assertEqual(1, response.json['master_count'])
+        self.assertEqual(1, response.json['main_count'])
 
     def test_create_bay_with_invalid_long_name(self):
         bdict = apiutils.bay_post_data(name='x' * 243)
@@ -772,18 +772,18 @@ class TestPost(api_base.FunctionalTest):
 
     def test_create_bay_with_no_lb_one_node(self):
         cluster_template = obj_utils.create_test_cluster_template(
-            self.context, name='foo', uuid='foo', master_lb_enabled=False)
+            self.context, name='foo', uuid='foo', main_lb_enabled=False)
         bdict = apiutils.bay_post_data(baymodel_id=cluster_template.name,
-                                       master_count=1)
+                                       main_count=1)
         response = self.post_json('/bays', bdict, expect_errors=True)
         self.assertEqual('application/json', response.content_type)
         self.assertEqual(201, response.status_int)
 
     def test_create_bay_with_no_lb_multi_node(self):
         cluster_template = obj_utils.create_test_cluster_template(
-            self.context, name='foo', uuid='foo', master_lb_enabled=False)
+            self.context, name='foo', uuid='foo', main_lb_enabled=False)
         bdict = apiutils.bay_post_data(baymodel_id=cluster_template.name,
-                                       master_count=3)
+                                       main_count=3)
         response = self.post_json('/bays', bdict, expect_errors=True)
         self.assertEqual('application/json', response.content_type)
         self.assertEqual(400, response.status_int)

@@ -60,8 +60,8 @@ class InstanceDetailViewTest(trove_testtools.TestCase):
         self.instance.volume_used = '3'
         self.instance.root_password = 'iloveyou'
         self.instance.get_visible_ip_addresses = lambda: ["1.2.3.4"]
-        self.instance.slave_of_id = None
-        self.instance.slaves = []
+        self.instance.subordinate_of_id = None
+        self.instance.subordinates = []
         self.instance.locality = 'affinity'
         self.instance.server_id = 'server_abc'
         self.instance.volume_id = 'volume_abc'

@@ -64,7 +64,7 @@ class ProvisioningPluginBase(plugins_base.PluginInterface):
         For example:
         {
             "HDFS": ["namenode", "datanode"],
-            "Spark": ["master", "slave"]
+            "Spark": ["main", "subordinate"]
         }
 
         """

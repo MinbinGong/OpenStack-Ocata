@@ -25,7 +25,7 @@ BAYMODEL1 = {'id': 123,
              'uuid': '66666666-7777-8888-9999-000000000001',
              'name': 'baymodel1',
              'image_id': 'baymodel1-image',
-             'master_flavor_id': 'm1.tiny',
+             'main_flavor_id': 'm1.tiny',
              'flavor_id': 'm1.small',
              'keypair_id': 'keypair1',
              'external_network_id': 'd1f02cfb-d27f-4068-9332-84d907cb0e21',
@@ -44,7 +44,7 @@ BAYMODEL1 = {'id': 123,
              'tls_disabled': False,
              'public': False,
              'registry_enabled': False,
-             'master_lb_enabled': True,
+             'main_lb_enabled': True,
              'floating_ip_enabled': True,
              }
 
@@ -53,7 +53,7 @@ BAYMODEL2 = {'id': 124,
              'name': 'baymodel2',
              'image_id': 'baymodel2-image',
              'flavor_id': 'm2.small',
-             'master_flavor_id': 'm2.tiny',
+             'main_flavor_id': 'm2.tiny',
              'keypair_id': 'keypair2',
              'external_network_id': 'd1f02cfb-d27f-4068-9332-84d907cb0e22',
              'fixed_network': 'private2',
@@ -278,8 +278,8 @@ class BayModelManagerTest(testtools.TestCase):
         self.assertEqual(BAYMODEL1['public'], baymodel.public)
         self.assertEqual(BAYMODEL1['registry_enabled'],
                          baymodel.registry_enabled)
-        self.assertEqual(BAYMODEL1['master_lb_enabled'],
-                         baymodel.master_lb_enabled)
+        self.assertEqual(BAYMODEL1['main_lb_enabled'],
+                         baymodel.main_lb_enabled)
         self.assertEqual(BAYMODEL1['floating_ip_enabled'],
                          baymodel.floating_ip_enabled)
 
@@ -308,8 +308,8 @@ class BayModelManagerTest(testtools.TestCase):
         self.assertEqual(BAYMODEL1['public'], baymodel.public)
         self.assertEqual(BAYMODEL1['registry_enabled'],
                          baymodel.registry_enabled)
-        self.assertEqual(BAYMODEL1['master_lb_enabled'],
-                         baymodel.master_lb_enabled)
+        self.assertEqual(BAYMODEL1['main_lb_enabled'],
+                         baymodel.main_lb_enabled)
         self.assertEqual(BAYMODEL1['floating_ip_enabled'],
                          baymodel.floating_ip_enabled)
 

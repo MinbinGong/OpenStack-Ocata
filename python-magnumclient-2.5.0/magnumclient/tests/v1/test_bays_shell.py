@@ -28,7 +28,7 @@ class FakeBay(Bay):
         self.baymodel_id = kwargs.get('baymodel_id', 'x')
         self.stack_id = kwargs.get('stack_id', 'x')
         self.status = kwargs.get('status', 'x')
-        self.master_count = kwargs.get('master_count', 1)
+        self.main_count = kwargs.get('main_count', 1)
         self.node_count = kwargs.get('node_count', 1)
         self.links = kwargs.get('links', [])
         self.bay_create_timeout = kwargs.get('bay_create_timeout', 60)
@@ -52,13 +52,13 @@ class ShellTest(shell_test_base.TestCommandLineArgument):
         return expected_args
 
     def _get_expected_args_create(self, baymodel_id, name=None,
-                                  master_count=1, node_count=1,
+                                  main_count=1, node_count=1,
                                   bay_create_timeout=60,
                                   discovery_url=None):
         expected_args = {}
         expected_args['name'] = name
         expected_args['baymodel_id'] = baymodel_id
-        expected_args['master_count'] = master_count
+        expected_args['main_count'] = main_count
         expected_args['node_count'] = node_count
         expected_args['bay_create_timeout'] = bay_create_timeout
         expected_args['discovery_url'] = discovery_url
@@ -87,10 +87,10 @@ class ShellTest(shell_test_base.TestCommandLineArgument):
         mock_list.return_value = [FakeBay()]
         self._test_arg_success('bay-list --fields status,status,status,name',
                                keyword=('\n| uuid | name | node_count | '
-                                        'master_count | status |\n'))
+                                        'main_count | status |\n'))
         # Output should be
         # +------+------+------------+--------------+--------+
-        # | uuid | name | node_count | master_count | status |
+        # | uuid | name | node_count | main_count | status |
         # +------+------+------------+--------------+--------+
         # | x    | x    | x          | x            | x      |
         # +------+------+------------+--------------+--------+
@@ -151,9 +151,9 @@ class ShellTest(shell_test_base.TestCommandLineArgument):
                                                        node_count=123)
 
         self._test_arg_success('bay-create --baymodel xxx --node-count 123 '
-                               '--master-count 123')
+                               '--main-count 123')
         expected_args = self._get_expected_args_create('xxx',
-                                                       master_count=123,
+                                                       main_count=123,
                                                        node_count=123)
         mock_create.assert_called_with(**expected_args)
 
@@ -215,8 +215,8 @@ class ShellTest(shell_test_base.TestCommandLineArgument):
         mock_create.assert_not_called()
 
     @mock.patch('magnumclient.v1.bays.BayManager.create')
-    def test_bay_create_failure_invalid_master_count(self, mock_create):
-        self._test_arg_failure('bay-create --baymodel xxx --master-count test',
+    def test_bay_create_failure_invalid_main_count(self, mock_create):
+        self._test_arg_failure('bay-create --baymodel xxx --main-count test',
                                self._invalid_value_error)
         mock_create.assert_not_called()
 

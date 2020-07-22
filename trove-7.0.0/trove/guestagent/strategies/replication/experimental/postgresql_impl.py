@@ -40,7 +40,7 @@ LOG = logging.getLogger(__name__)
 
 TRIGGER_FILE = '/tmp/postgresql.trigger'
 REPL_USER = 'replicator'
-SLAVE_STANDBY_OVERRIDE = 'SlaveStandbyOverride'
+SLAVE_STANDBY_OVERRIDE = 'SubordinateStandbyOverride'
 
 
 class PostgresqlReplicationStreaming(base.Replication):
@@ -62,12 +62,12 @@ class PostgresqlReplicationStreaming(base.Replication):
     def repl_backup_extra_opts(self):
         return CONF.backup_runner_options.get('PgBaseBackup', '')
 
-    def get_master_ref(self, service, snapshot_info):
-        master_ref = {
+    def get_main_ref(self, service, snapshot_info):
+        main_ref = {
             'host': netutils.get_my_ipv4(),
             'port': cfg.get_configuration_property('postgresql_port')
         }
-        return master_ref
+        return main_ref
 
     def backup_required_for_replication(self):
         return True
@@ -98,11 +98,11 @@ class PostgresqlReplicationStreaming(base.Replication):
 
     def _get_or_create_replication_user(self, service):
         """There are three scenarios we need to deal with here:
-        - This is a fresh master, with no replicator user created.
+        - This is a fresh main, with no replicator user created.
            Generate a new u/p
-        - We are attaching a new slave and need to give it the login creds
+        - We are attaching a new subordinate and need to give it the login creds
            Send the creds we have stored in PGDATA/.replpass
-        - This is a failed-over-to slave, who will have the replicator user
+        - This is a failed-over-to subordinate, who will have the replicator user
            but not the credentials file. Recreate the repl user in this case
         """
 
@@ -148,12 +148,12 @@ class PostgresqlReplicationStreaming(base.Replication):
 
         return pw
 
-    def enable_as_master(self, service, master_config, for_failover=False):
-        """For a server to be a master in postgres, we need to enable
+    def enable_as_main(self, service, main_config, for_failover=False):
+        """For a server to be a main in postgres, we need to enable
         the replication user in pg_hba and ensure that WAL logging is
         at the appropriate level (use the same settings as backups)
         """
-        LOG.debug("Enabling as master, with cfg: %s " % master_config)
+        LOG.debug("Enabling as main, with cfg: %s " % main_config)
         self._get_or_create_replication_user(service)
         hba_entry = "host   replication   replicator    0.0.0.0/0   md5 \n"
 
@@ -173,39 +173,39 @@ class PostgresqlReplicationStreaming(base.Replication):
         operating_system.remove(tmp_hba, as_root=True)
         service.reload_configuration()
 
-    def enable_as_slave(self, service, snapshot, slave_config):
+    def enable_as_subordinate(self, service, snapshot, subordinate_config):
         """Adds appropriate config options to postgresql.conf, and writes out
         the recovery.conf file used to set up replication
         """
-        LOG.debug("Got slave_config: %s" % str(slave_config))
+        LOG.debug("Got subordinate_config: %s" % str(subordinate_config))
         self._write_standby_recovery_file(service, snapshot, sslmode='prefer')
         self.enable_hot_standby(service)
         # Ensure the WAL arch is empty before restoring
         service.recreate_wal_archive_dir()
 
-    def detach_slave(self, service, for_failover):
+    def detach_subordinate(self, service, for_failover):
         """Touch trigger file in to disable recovery mode"""
-        LOG.info(_("Detaching slave, use trigger to disable recovery mode"))
+        LOG.info(_("Detaching subordinate, use trigger to disable recovery mode"))
         operating_system.write_file(TRIGGER_FILE, '')
         operating_system.chown(TRIGGER_FILE, user=service.pgsql_owner,
                                group=service.pgsql_owner, as_root=True)
 
         def _wait_for_failover():
-            """Wait until slave has switched out of recovery mode"""
+            """Wait until subordinate has switched out of recovery mode"""
             return not service.pg_is_in_recovery()
 
         try:
             utils.poll_until(_wait_for_failover, time_out=120)
 
         except exception.PollTimeOut:
-            raise RuntimeError(_("Timeout occurred waiting for slave to exit"
+            raise RuntimeError(_("Timeout occurred waiting for subordinate to exit"
                                  "recovery mode"))
 
     def cleanup_source_on_replica_detach(self, admin_service, replica_info):
         pass
 
-    def _rewind_against_master(self, service):
-        """Call pg_rewind to resync datadir against state of new master
+    def _rewind_against_main(self, service):
+        """Call pg_rewind to resync datadir against state of new main
         We should already have a recovery.conf file in PGDATA
         """
         rconf = operating_system.read_file(
@@ -230,19 +230,19 @@ class PostgresqlReplicationStreaming(base.Replication):
 
         operating_system.move(tmprec, rec, as_root=True)
 
-    def demote_master(self, service):
-        """In order to demote a master we need to shutdown the server and call
-           pg_rewind against the new master to enable a proper timeline
+    def demote_main(self, service):
+        """In order to demote a main we need to shutdown the server and call
+           pg_rewind against the new main to enable a proper timeline
            switch.
            """
         service.stop_db()
-        self._rewind_against_master(service)
+        self._rewind_against_main(service)
         service.start_db()
 
-    def connect_to_master(self, service, snapshot):
-        """All that is required in postgresql to connect to a slave is to
+    def connect_to_main(self, service, snapshot):
+        """All that is required in postgresql to connect to a subordinate is to
         restart with a recovery.conf file in the data dir, which contains
-        the connection information for the master.
+        the connection information for the main.
         """
         assert operating_system.exists(service.pgsql_recovery_config,
                                        as_root=True)
@@ -257,8 +257,8 @@ class PostgresqlReplicationStreaming(base.Replication):
 
         logging_config = snapshot['log_position']
         conninfo_params = \
-            {'host': snapshot['master']['host'],
-             'port': snapshot['master']['port'],
+            {'host': snapshot['main']['host'],
+             'port': snapshot['main']['port'],
              'repl_user': logging_config['replication_user']['name'],
              'password': logging_config['replication_user']['password'],
              'sslmode': sslmode}
@@ -302,6 +302,6 @@ class PostgresqlReplicationStreaming(base.Replication):
         }
 
         return {
-            'master': self.get_master_ref(None, None),
+            'main': self.get_main_ref(None, None),
             'log_position': log_position
         }

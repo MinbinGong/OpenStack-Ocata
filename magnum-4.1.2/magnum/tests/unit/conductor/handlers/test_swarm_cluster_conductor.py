@@ -31,7 +31,7 @@ class TestClusterConductorWithSwarm(base.TestCase):
         self.cluster_template_dict = {
             'image_id': 'image_id',
             'flavor_id': 'flavor_id',
-            'master_flavor_id': 'master_flavor_id',
+            'main_flavor_id': 'main_flavor_id',
             'keypair_id': 'keypair_id',
             'dns_nameserver': 'dns_nameserver',
             'docker_volume_size': 20,
@@ -53,7 +53,7 @@ class TestClusterConductorWithSwarm(base.TestCase):
                        'flannel_backend': 'vxlan',
                        'rexray_preempt': 'False',
                        'swarm_strategy': 'spread'},
-            'master_lb_enabled': False,
+            'main_lb_enabled': False,
             'volume_driver': 'rexray'
         }
         self.cluster_dict = {
@@ -65,7 +65,7 @@ class TestClusterConductorWithSwarm(base.TestCase):
             'stack_id': 'xx-xx-xx-xx',
             'api_address': '172.17.2.3',
             'node_addresses': ['172.17.2.4'],
-            'master_count': 1,
+            'main_count': 1,
             'node_count': 1,
             'discovery_url': 'https://discovery.test.io/123456789',
             'trustee_username': 'fake_trustee',
@@ -123,9 +123,9 @@ class TestClusterConductorWithSwarm(base.TestCase):
             'fixed_subnet': 'fixed_subnet',
             'dns_nameserver': 'dns_nameserver',
             'server_image': 'image_id',
-            'master_flavor': 'master_flavor_id',
+            'main_flavor': 'main_flavor_id',
             'node_flavor': 'flavor_id',
-            'number_of_masters': 1,
+            'number_of_mains': 1,
             'number_of_nodes': 1,
             'docker_volume_size': 20,
             'docker_storage_driver': 'devicemapper',
@@ -156,7 +156,7 @@ class TestClusterConductorWithSwarm(base.TestCase):
         self.assertEqual(
             ['../../common/templates/environments/no_private_network.yaml',
              '../../common/templates/environments/with_volume.yaml',
-             '../../common/templates/environments/no_master_lb.yaml'],
+             '../../common/templates/environments/no_main_lb.yaml'],
             env_files)
 
     @patch('requests.get')
@@ -196,9 +196,9 @@ class TestClusterConductorWithSwarm(base.TestCase):
             'fixed_subnet': 'fixed_subnet',
             'dns_nameserver': 'dns_nameserver',
             'server_image': 'image_id',
-            'master_flavor': 'master_flavor_id',
+            'main_flavor': 'main_flavor_id',
             'node_flavor': 'flavor_id',
-            'number_of_masters': 1,
+            'number_of_mains': 1,
             'number_of_nodes': 1,
             'docker_volume_size': 20,
             'discovery_url': 'https://discovery.test.io/123456789',
@@ -231,7 +231,7 @@ class TestClusterConductorWithSwarm(base.TestCase):
         self.assertEqual(
             ['../../common/templates/environments/no_private_network.yaml',
              '../../common/templates/environments/with_volume.yaml',
-             '../../common/templates/environments/no_master_lb.yaml'],
+             '../../common/templates/environments/no_main_lb.yaml'],
             env_files)
 
     @patch('requests.get')
@@ -246,7 +246,7 @@ class TestClusterConductorWithSwarm(base.TestCase):
         not_required = ['image_id', 'flavor_id', 'dns_nameserver',
                         'docker_volume_size', 'fixed_network', 'http_proxy',
                         'https_proxy', 'no_proxy', 'network_driver',
-                        'master_flavor_id', 'docker_storage_driver',
+                        'main_flavor_id', 'docker_storage_driver',
                         'volume_driver', 'rexray_preempt', 'fixed_subnet']
         for key in not_required:
             self.cluster_template_dict[key] = None
@@ -272,7 +272,7 @@ class TestClusterConductorWithSwarm(base.TestCase):
         expected = {
             'ssh_key_name': 'keypair_id',
             'external_network': 'external_network_id',
-            'number_of_masters': 1,
+            'number_of_mains': 1,
             'number_of_nodes': 1,
             'discovery_url': 'https://discovery.etcd.io/test',
             'cluster_uuid': '5d12f6fd-a196-4bf0-ae4c-1f639a523a52',
@@ -296,7 +296,7 @@ class TestClusterConductorWithSwarm(base.TestCase):
         self.assertEqual(
             ['../../common/templates/environments/with_private_network.yaml',
              '../../common/templates/environments/no_volume.yaml',
-             '../../common/templates/environments/no_master_lb.yaml'],
+             '../../common/templates/environments/no_main_lb.yaml'],
             env_files)
 
     @patch('requests.get')
@@ -307,7 +307,7 @@ class TestClusterConductorWithSwarm(base.TestCase):
             mock_driver,
             mock_objects_cluster_template_get_by_uuid,
             mock_get):
-        self.cluster_template_dict['master_lb_enabled'] = True
+        self.cluster_template_dict['main_lb_enabled'] = True
         cluster_template = objects.ClusterTemplate(
             self.context, **self.cluster_template_dict)
         mock_objects_cluster_template_get_by_uuid.return_value = \
@@ -332,9 +332,9 @@ class TestClusterConductorWithSwarm(base.TestCase):
             'fixed_subnet': 'fixed_subnet',
             'dns_nameserver': 'dns_nameserver',
             'server_image': 'image_id',
-            'master_flavor': 'master_flavor_id',
+            'main_flavor': 'main_flavor_id',
             'node_flavor': 'flavor_id',
-            'number_of_masters': 1,
+            'number_of_mains': 1,
             'number_of_nodes': 1,
             'docker_volume_size': 20,
             'docker_storage_driver': 'devicemapper',
@@ -365,19 +365,19 @@ class TestClusterConductorWithSwarm(base.TestCase):
         self.assertEqual(
             ['../../common/templates/environments/no_private_network.yaml',
              '../../common/templates/environments/with_volume.yaml',
-             '../../common/templates/environments/with_master_lb.yaml'],
+             '../../common/templates/environments/with_main_lb.yaml'],
             env_files)
 
     @patch('requests.get')
     @patch('magnum.objects.ClusterTemplate.get_by_uuid')
     @patch('magnum.drivers.common.driver.Driver.get_driver')
-    def test_extract_template_definition_multi_master(
+    def test_extract_template_definition_multi_main(
             self,
             mock_driver,
             mock_objects_cluster_template_get_by_uuid,
             mock_get):
-        self.cluster_template_dict['master_lb_enabled'] = True
-        self.cluster_dict['master_count'] = 2
+        self.cluster_template_dict['main_lb_enabled'] = True
+        self.cluster_dict['main_count'] = 2
         cluster_template = objects.ClusterTemplate(
             self.context, **self.cluster_template_dict)
         mock_objects_cluster_template_get_by_uuid.return_value = \
@@ -402,9 +402,9 @@ class TestClusterConductorWithSwarm(base.TestCase):
             'fixed_subnet': 'fixed_subnet',
             'dns_nameserver': 'dns_nameserver',
             'server_image': 'image_id',
-            'master_flavor': 'master_flavor_id',
+            'main_flavor': 'main_flavor_id',
             'node_flavor': 'flavor_id',
-            'number_of_masters': 2,
+            'number_of_mains': 2,
             'number_of_nodes': 1,
             'docker_volume_size': 20,
             'docker_storage_driver': 'devicemapper',
@@ -435,7 +435,7 @@ class TestClusterConductorWithSwarm(base.TestCase):
         self.assertEqual(
             ['../../common/templates/environments/no_private_network.yaml',
              '../../common/templates/environments/with_volume.yaml',
-             '../../common/templates/environments/with_master_lb.yaml'],
+             '../../common/templates/environments/with_main_lb.yaml'],
             env_files)
 
     @patch('magnum.conductor.utils.retrieve_cluster_template')

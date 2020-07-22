@@ -51,8 +51,8 @@ class InstanceView(object):
             if ip:
                 instance_dict['ip'] = ip
 
-        if self.instance.slave_of_id is not None:
-            instance_dict['replica_of'] = self._build_master_info()
+        if self.instance.subordinate_of_id is not None:
+            instance_dict['replica_of'] = self._build_main_info()
 
         LOG.debug(instance_dict)
         return {"instance": instance_dict}
@@ -70,11 +70,11 @@ class InstanceView(object):
         return create_links("flavors", self.req,
                             self.instance.flavor_id)
 
-    def _build_master_info(self):
+    def _build_main_info(self):
         return {
-            "id": self.instance.slave_of_id,
+            "id": self.instance.subordinate_of_id,
             "links": create_links("instances", self.req,
-                                  self.instance.slave_of_id)
+                                  self.instance.subordinate_of_id)
         }
 
 
@@ -96,8 +96,8 @@ class InstanceDetailView(InstanceView):
         if self.instance.fault:
             result['instance']['fault'] = self._build_fault_info()
 
-        if self.instance.slaves:
-            result['instance']['replicas'] = self._build_slaves_info()
+        if self.instance.subordinates:
+            result['instance']['replicas'] = self._build_subordinates_info()
 
         if self.instance.configuration is not None:
             result['instance']['configuration'] = (self.
@@ -139,12 +139,12 @@ class InstanceDetailView(InstanceView):
             "details": self.instance.fault.details,
         }
 
-    def _build_slaves_info(self):
+    def _build_subordinates_info(self):
         data = []
-        for slave in self.instance.slaves:
+        for subordinate in self.instance.subordinates:
             data.append({
-                "id": slave.id,
-                "links": create_links("instances", self.req, slave.id)
+                "id": subordinate.id,
+                "links": create_links("instances", self.req, subordinate.id)
             })
         return data
 

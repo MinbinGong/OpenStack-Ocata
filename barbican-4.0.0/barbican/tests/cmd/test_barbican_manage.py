@@ -141,7 +141,7 @@ class TestBarbicanManage(TestBarbicanManageBase):
             ['barbican.cmd.barbican_manage', 'hsm', 'gen_mkek',
              '--library-path', 'mocklib', '--passphrase', 'mockpassewd',
              '--label', 'mocklabel'], mock_genkey,
-            32, 1, 'mocklabel', encrypt=True, wrap=True, master_key=True)
+            32, 1, 'mocklabel', encrypt=True, wrap=True, main_key=True)
 
     @mock.patch('barbican.plugin.crypto.pkcs11.PKCS11')
     def test_hsm_gen_hmac(self, mock_pkcs11):
@@ -153,7 +153,7 @@ class TestBarbicanManage(TestBarbicanManageBase):
             ['barbican.cmd.barbican_manage', 'hsm', 'gen_hmac',
              '--library-path', 'mocklib', '--passphrase', 'mockpassewd',
              '--label', 'mocklabel'], mock_genkey,
-            32, 1, 'mocklabel', sign=True, master_key=True)
+            32, 1, 'mocklabel', sign=True, main_key=True)
 
     @mock.patch('barbican.plugin.crypto.pkcs11.PKCS11')
     def test_hsm_gen_mkek_non_default_length(self, mock_pkcs11):
@@ -166,7 +166,7 @@ class TestBarbicanManage(TestBarbicanManageBase):
              '--length', '48', '--library-path', 'mocklib',
              '--passphrase', 'mockpassewd', '--label', 'mocklabel'],
             mock_genkey, 48, 1, 'mocklabel', encrypt=True, wrap=True,
-            master_key=True)
+            main_key=True)
 
     @mock.patch('barbican.plugin.crypto.pkcs11.PKCS11')
     def test_hsm_gen_hmac_non_default_length(self, mock_pkcs11):
@@ -178,4 +178,4 @@ class TestBarbicanManage(TestBarbicanManageBase):
             ['barbican.cmd.barbican_manage', 'hsm', 'gen_hmac',
              '--length', '48', '--library-path', 'mocklib',
              '--passphrase', 'mockpassewd', '--label', 'mocklabel'],
-            mock_genkey, 48, 1, 'mocklabel', sign=True, master_key=True)
+            mock_genkey, 48, 1, 'mocklabel', sign=True, main_key=True)

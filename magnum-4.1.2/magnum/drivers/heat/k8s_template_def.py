@@ -51,8 +51,8 @@ class K8sTemplateDefinition(template_def.BaseTemplateDefinition):
 
     def __init__(self):
         super(K8sTemplateDefinition, self).__init__()
-        self.add_parameter('master_flavor',
-                           cluster_template_attr='master_flavor_id')
+        self.add_parameter('main_flavor',
+                           cluster_template_attr='main_flavor_id')
         self.add_parameter('minion_flavor',
                            cluster_template_attr='flavor_id')
         self.add_parameter('number_of_minions',
@@ -86,7 +86,7 @@ class K8sTemplateDefinition(template_def.BaseTemplateDefinition):
                         mapping_type=K8sApiAddressOutputMapping)
         self.add_output('kube_minions_private',
                         cluster_attr=None)
-        self.add_output('kube_masters_private',
+        self.add_output('kube_mains_private',
                         cluster_attr=None)
 
     def get_params(self, context, cluster_template, cluster, **kwargs):

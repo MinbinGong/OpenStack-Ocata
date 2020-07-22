@@ -23,7 +23,7 @@ DEPRECATING_PARAMS = {
     "--flavor-id": "--flavor",
     "--image-id": "--image",
     "--keypair-id": "--keypair",
-    "--master-flavor-id": "--master-flavor",
+    "--main-flavor-id": "--main-flavor",
 }
 
 
@@ -109,17 +109,17 @@ def _show_cluster_template(cluster_template):
            default='m1.medium',
            help=_('The nova flavor name or UUID to use when launching the '
                   'Cluster.'))
-@utils.arg('--master-flavor-id',
-           dest='master_flavor',
-           metavar='<master-flavor>',
+@utils.arg('--main-flavor-id',
+           dest='main_flavor',
+           metavar='<main-flavor>',
            help=utils.deprecation_message(
-                'The nova flavor name or UUID to use when launching the master'
-                ' node of the Cluster.', 'master-flavor'))
-@utils.arg('--master-flavor',
-           dest='master_flavor',
-           metavar='<master-flavor>',
+                'The nova flavor name or UUID to use when launching the main'
+                ' node of the Cluster.', 'main-flavor'))
+@utils.arg('--main-flavor',
+           dest='main_flavor',
+           metavar='<main-flavor>',
            help=_('The nova flavor name or UUID to use when launching the'
-                  ' master node of the Cluster.'))
+                  ' main node of the Cluster.'))
 @utils.arg('--docker-volume-size',
            metavar='<docker-volume-size>',
            type=int,
@@ -159,10 +159,10 @@ def _show_cluster_template(cluster_template):
            help=_('Specify the server type to be used '
                   'for example vm. For this release '
                   'default server type will be vm.'))
-@utils.arg('--master-lb-enabled',
+@utils.arg('--main-lb-enabled',
            action='store_true', default=False,
            help=_('Indicates whether created Clusters should have a load '
-                  'balancer for master nodes or not.'))
+                  'balancer for main nodes or not.'))
 @utils.arg('--floating-ip-enabled',
            action='store_true', default=True,
            help=_('Indicates whether created Clusters should have a '
@@ -172,7 +172,7 @@ def do_cluster_template_create(cs, args):
     opts = {}
     opts['name'] = args.name
     opts['flavor_id'] = args.flavor
-    opts['master_flavor_id'] = args.master_flavor
+    opts['main_flavor_id'] = args.main_flavor
     opts['image_id'] = args.image
     opts['keypair_id'] = args.keypair
     opts['external_network_id'] = args.external_network
@@ -192,7 +192,7 @@ def do_cluster_template_create(cs, args):
     opts['public'] = args.public
     opts['registry_enabled'] = args.registry_enabled
     opts['server_type'] = args.server_type
-    opts['master_lb_enabled'] = args.master_lb_enabled
+    opts['main_lb_enabled'] = args.main_lb_enabled
     opts['floating_ip_enabled'] = args.floating_ip_enabled
 
     cluster_template = cs.cluster_templates.create(**opts)

@@ -59,7 +59,7 @@ def _get_enforcers():
             missing_config_file = False
 
             # oslo.policy's approach to locating these files seems to be
-            # changing; current master doesn't raise an exception
+            # changing; current main doesn't raise an exception
             try:
                 enforcer.load_rules()
                 if not enforcer.policy_path:

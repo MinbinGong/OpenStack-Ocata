@@ -37,8 +37,8 @@ SPARK_HISTORY_SERVER = np.NodeProcess(
     open_ports=[SPARK_HS_UI_PORT]
 )
 SPARK_SLAVE = np.NodeProcess(
-    name='spark-master',
-    ui_name='Spark Slave',
+    name='spark-main',
+    ui_name='Spark Subordinate',
     package='mapr-spark',
     open_ports=[SPARK_SLAVE_UI_PORT]
 )

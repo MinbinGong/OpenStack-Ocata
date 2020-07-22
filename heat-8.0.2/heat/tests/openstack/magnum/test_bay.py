@@ -37,7 +37,7 @@ magnum_template = '''
           name: test_bay
           baymodel: 123456
           node_count: 5
-          master_count: 1
+          main_count: 1
           discovery_url: https://discovery.etcd.io
           bay_create_timeout: 15
 '''
@@ -150,12 +150,12 @@ class TestMagnumBay(common.HeatTestCase):
             'name': 'test_bay',
             'baymodel': 123456,
             'node_count': 5,
-            'master_count': 1,
+            'main_count': 1,
             'discovery_url': 'https://discovery.etcd.io',
             'bay_create_timeout': 15}
         self.client.bays.get.return_value = value
         reality = b.get_live_state(b.properties)
-        self.assertEqual({'node_count': 5, 'master_count': 1}, reality)
+        self.assertEqual({'node_count': 5, 'main_count': 1}, reality)
 
 
 class BaymodelConstraintTest(common.HeatTestCase):

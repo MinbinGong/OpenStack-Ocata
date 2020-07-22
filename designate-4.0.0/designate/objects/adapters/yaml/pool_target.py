@@ -31,7 +31,7 @@ class PoolTargetYAMLAdapter(base.YAMLAdapter):
             'description': {
                 'read_only': False
             },
-            'masters': {
+            'mains': {
                 'read_only': False
             },
             'options': {

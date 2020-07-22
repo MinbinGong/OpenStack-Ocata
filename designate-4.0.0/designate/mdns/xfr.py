@@ -32,7 +32,7 @@ class XFRMixin(object):
     """
     @metrics.timed('mdns.xfr.zone_sync')
     def zone_sync(self, context, zone, servers=None):
-        servers = servers or zone.masters
+        servers = servers or zone.mains
         servers = servers.to_list()
 
         timeout = cfg.CONF["service:mdns"].xfr_timeout

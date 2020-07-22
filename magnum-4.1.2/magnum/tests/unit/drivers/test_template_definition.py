@@ -182,9 +182,9 @@ class BaseTemplateDefinitionTestCase(base.TestCase):
     def _test_update_outputs_server_addrtess(
         self,
         floating_ip_enabled=True,
-        public_ip_output_key='kube_masters',
-        private_ip_output_key='kube_masters_private',
-        cluster_attr='master_addresses',
+        public_ip_output_key='kube_mains',
+        private_ip_output_key='kube_mains_private',
+        cluster_attr='main_addresses',
     ):
 
         definition = self.get_definition()
@@ -405,7 +405,7 @@ class AtomicK8sTemplateDefinitionTestCase(BaseTemplateDefinitionTestCase):
         mock_resp.text = expected_discovery_url
         mock_get.return_value = mock_resp
         mock_cluster = mock.MagicMock()
-        mock_cluster.master_count = 10
+        mock_cluster.main_count = 10
         mock_cluster.discovery_url = None
 
         k8s_def = k8sa_tdef.AtomicK8sTemplateDefinition()
@@ -422,7 +422,7 @@ class AtomicK8sTemplateDefinitionTestCase(BaseTemplateDefinitionTestCase):
                           group='cluster')
         mock_get.side_effect = req_exceptions.RequestException()
         mock_cluster = mock.MagicMock()
-        mock_cluster.master_count = 10
+        mock_cluster.main_count = 10
         mock_cluster.discovery_url = None
 
         k8s_def = k8sa_tdef.AtomicK8sTemplateDefinition()
@@ -567,11 +567,11 @@ class AtomicK8sTemplateDefinitionTestCase(BaseTemplateDefinitionTestCase):
         template_definition = swarm_tdef.AtomicSwarmTemplateDefinition()
         self._test_update_outputs_none_api_address(template_definition, params)
 
-    def test_update_outputs_master_address(self):
+    def test_update_outputs_main_address(self):
         self._test_update_outputs_server_addrtess(
-            public_ip_output_key='kube_masters',
-            private_ip_output_key='kube_masters_private',
-            cluster_attr='master_addresses',
+            public_ip_output_key='kube_mains',
+            private_ip_output_key='kube_mains_private',
+            cluster_attr='main_addresses',
         )
 
     def test_update_outputs_node_address(self):
@@ -581,12 +581,12 @@ class AtomicK8sTemplateDefinitionTestCase(BaseTemplateDefinitionTestCase):
             cluster_attr='node_addresses',
         )
 
-    def test_update_outputs_master_address_fip_disabled(self):
+    def test_update_outputs_main_address_fip_disabled(self):
         self._test_update_outputs_server_addrtess(
             floating_ip_enabled=False,
-            public_ip_output_key='kube_masters',
-            private_ip_output_key='kube_masters_private',
-            cluster_attr='master_addresses',
+            public_ip_output_key='kube_mains',
+            private_ip_output_key='kube_mains_private',
+            cluster_attr='main_addresses',
         )
 
     def test_update_outputs_node_address_fip_disabled(self):
@@ -851,10 +851,10 @@ class AtomicSwarmTemplateDefinitionTestCase(base.TestCase):
              "output_key": "api_address"},
             {"output_value": ['any', 'output'],
              "description": "No description given",
-             "output_key": "swarm_master_private"},
+             "output_key": "swarm_main_private"},
             {"output_value": ['any', 'output'],
              "description": "No description given",
-             "output_key": "swarm_master"},
+             "output_key": "swarm_main"},
             {"output_value": ['any', 'output'],
              "description": "No description given",
              "output_key": "swarm_nodes_private"},
@@ -891,14 +891,14 @@ class UbuntuMesosTemplateDefinitionTestCase(base.TestCase):
         mock_cluster_template = mock.MagicMock()
         mock_cluster_template.tls_disabled = False
         rexray_preempt = mock_cluster_template.labels.get('rexray_preempt')
-        mesos_slave_isolation = mock_cluster_template.labels.get(
-            'mesos_slave_isolation')
-        mesos_slave_work_dir = mock_cluster_template.labels.get(
-            'mesos_slave_work_dir')
-        mesos_slave_image_providers = mock_cluster_template.labels.get(
+        mesos_subordinate_isolation = mock_cluster_template.labels.get(
+            'mesos_subordinate_isolation')
+        mesos_subordinate_work_dir = mock_cluster_template.labels.get(
+            'mesos_subordinate_work_dir')
+        mesos_subordinate_image_providers = mock_cluster_template.labels.get(
             'image_providers')
-        mesos_slave_executor_env_variables = mock_cluster_template.labels.get(
-            'mesos_slave_executor_env_variables')
+        mesos_subordinate_executor_env_variables = mock_cluster_template.labels.get(
+            'mesos_subordinate_executor_env_variables')
         mock_cluster = mock.MagicMock()
         mock_cluster.uuid = '5d12f6fd-a196-4bf0-ae4c-1f639a523a52'
         del mock_cluster.stack_id
@@ -922,12 +922,12 @@ class UbuntuMesosTemplateDefinitionTestCase(base.TestCase):
             'tenant_name': 'admin',
             'domain_name': 'domainname',
             'rexray_preempt': rexray_preempt,
-            'mesos_slave_isolation': mesos_slave_isolation,
-            'mesos_slave_work_dir': mesos_slave_work_dir,
-            'mesos_slave_executor_env_variables':
-                mesos_slave_executor_env_variables,
-            'mesos_slave_image_providers': mesos_slave_image_providers,
-            'slaves_to_remove': removal_nodes}}
+            'mesos_subordinate_isolation': mesos_subordinate_isolation,
+            'mesos_subordinate_work_dir': mesos_subordinate_work_dir,
+            'mesos_subordinate_executor_env_variables':
+                mesos_subordinate_executor_env_variables,
+            'mesos_subordinate_image_providers': mesos_subordinate_image_providers,
+            'subordinates_to_remove': removal_nodes}}
         mock_get_params.assert_called_once_with(mock_context,
                                                 mock_cluster_template,
                                                 mock_cluster,
@@ -937,17 +937,17 @@ class UbuntuMesosTemplateDefinitionTestCase(base.TestCase):
         mesos_def = mesos_tdef.UbuntuMesosTemplateDefinition()
 
         heat_param = mesos_def.get_heat_param(cluster_attr='node_count')
-        self.assertEqual('number_of_slaves', heat_param)
+        self.assertEqual('number_of_subordinates', heat_param)
 
-        heat_param = mesos_def.get_heat_param(cluster_attr='master_count')
-        self.assertEqual('number_of_masters', heat_param)
+        heat_param = mesos_def.get_heat_param(cluster_attr='main_count')
+        self.assertEqual('number_of_mains', heat_param)
 
     def test_update_outputs(self):
         mesos_def = mesos_tdef.UbuntuMesosTemplateDefinition()
 
         expected_api_address = 'updated_address'
-        expected_node_addresses = ['ex_slave', 'address']
-        expected_master_addresses = ['ex_master', 'address']
+        expected_node_addresses = ['ex_subordinate', 'address']
+        expected_main_addresses = ['ex_main', 'address']
 
         outputs = [
             {"output_value": expected_api_address,
@@ -955,16 +955,16 @@ class UbuntuMesosTemplateDefinitionTestCase(base.TestCase):
              "output_key": "api_address"},
             {"output_value": ['any', 'output'],
              "description": "No description given",
-             "output_key": "mesos_master_private"},
-            {"output_value": expected_master_addresses,
+             "output_key": "mesos_main_private"},
+            {"output_value": expected_main_addresses,
              "description": "No description given",
-             "output_key": "mesos_master"},
+             "output_key": "mesos_main"},
             {"output_value": ['any', 'output'],
              "description": "No description given",
-             "output_key": "mesos_slaves_private"},
+             "output_key": "mesos_subordinates_private"},
             {"output_value": expected_node_addresses,
              "description": "No description given",
-             "output_key": "mesos_slaves"},
+             "output_key": "mesos_subordinates"},
         ]
         mock_stack = mock.MagicMock()
         mock_stack.to_dict.return_value = {'outputs': outputs}
@@ -976,5 +976,5 @@ class UbuntuMesosTemplateDefinitionTestCase(base.TestCase):
 
         self.assertEqual(expected_api_address, mock_cluster.api_address)
         self.assertEqual(expected_node_addresses, mock_cluster.node_addresses)
-        self.assertEqual(expected_master_addresses,
-                         mock_cluster.master_addresses)
+        self.assertEqual(expected_main_addresses,
+                         mock_cluster.main_addresses)

@@ -29,7 +29,7 @@ class FakeCluster(Cluster):
         self.cluster_template_id = kwargs.get('cluster_template_id', 'x')
         self.stack_id = kwargs.get('stack_id', 'x')
         self.status = kwargs.get('status', 'x')
-        self.master_count = kwargs.get('master_count', 1)
+        self.main_count = kwargs.get('main_count', 1)
         self.node_count = kwargs.get('node_count', 1)
         self.links = kwargs.get('links', [])
         self.create_timeout = kwargs.get('create_timeout', 60)
@@ -53,13 +53,13 @@ class ShellTest(shell_test_base.TestCommandLineArgument):
         return expected_args
 
     def _get_expected_args_create(self, cluster_template_id, name=None,
-                                  master_count=1, node_count=1,
+                                  main_count=1, node_count=1,
                                   create_timeout=60, keypair=None,
                                   discovery_url=None):
         expected_args = {}
         expected_args['name'] = name
         expected_args['cluster_template_id'] = cluster_template_id
-        expected_args['master_count'] = master_count
+        expected_args['main_count'] = main_count
         expected_args['node_count'] = node_count
         expected_args['create_timeout'] = create_timeout
         expected_args['discovery_url'] = discovery_url
@@ -90,10 +90,10 @@ class ShellTest(shell_test_base.TestCommandLineArgument):
         self._test_arg_success(
             'cluster-list --fields status,status,status,name',
             keyword=('\n| uuid | name | keypair | node_count | '
-                     'master_count | status |\n'))
+                     'main_count | status |\n'))
         # Output should be
         # +------+------+---------+--------------+--------------+--------+
-        # | uuid | name | keypair | node_count   | master_count | status |
+        # | uuid | name | keypair | node_count   | main_count | status |
         # +------+------+---------+--------------+--------------+--------+
         # | x    | x    | x       | x            | x            | x      |
         # +------+------+---------+--------------+--------------+--------+
@@ -164,9 +164,9 @@ class ShellTest(shell_test_base.TestCommandLineArgument):
         mock_create.assert_called_with(**expected_args)
 
         self._test_arg_success('cluster-create --cluster-template xxx '
-                               '--node-count 123 --master-count 123')
+                               '--node-count 123 --main-count 123')
         expected_args = self._get_expected_args_create('xxx',
-                                                       master_count=123,
+                                                       main_count=123,
                                                        node_count=123)
         mock_create.assert_called_with(**expected_args)
 
@@ -264,9 +264,9 @@ class ShellTest(shell_test_base.TestCommandLineArgument):
         mock_create.assert_not_called()
 
     @mock.patch('magnumclient.v1.clusters.ClusterManager.create')
-    def test_cluster_create_failure_invalid_master_count(self, mock_create):
+    def test_cluster_create_failure_invalid_main_count(self, mock_create):
         self._test_arg_failure('cluster-create --cluster-template xxx '
-                               '--master-count test',
+                               '--main-count test',
                                self._invalid_value_error)
         mock_create.assert_not_called()
 

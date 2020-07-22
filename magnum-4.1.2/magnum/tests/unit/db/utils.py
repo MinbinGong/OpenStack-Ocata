@@ -27,7 +27,7 @@ def get_test_cluster_template(**kw):
         'name': kw.get('name', 'clustermodel1'),
         'image_id': kw.get('image_id', 'ubuntu'),
         'flavor_id': kw.get('flavor_id', 'm1.small'),
-        'master_flavor_id': kw.get('master_flavor_id', 'm1.small'),
+        'main_flavor_id': kw.get('main_flavor_id', 'm1.small'),
         'keypair_id': kw.get('keypair_id', 'keypair1'),
         'external_network_id': kw.get('external_network_id',
                                       'd1f02cfb-d27f-4068-9332-84d907cb0e2e'),
@@ -53,7 +53,7 @@ def get_test_cluster_template(**kw):
         'public': kw.get('public', False),
         'server_type': kw.get('server_type', 'vm'),
         'insecure_registry': kw.get('insecure_registry', '10.0.0.1:5000'),
-        'master_lb_enabled': kw.get('master_lb_enabled', True),
+        'main_lb_enabled': kw.get('main_lb_enabled', True),
         'floating_ip_enabled': kw.get('floating_ip_enabled', True),
     }
 
@@ -92,8 +92,8 @@ def get_test_cluster(**kw):
         'api_address': kw.get('api_address', '172.17.2.3'),
         'node_addresses': kw.get('node_addresses', ['172.17.2.4']),
         'node_count': kw.get('node_count', 3),
-        'master_count': kw.get('master_count', 3),
-        'master_addresses': kw.get('master_addresses', ['172.17.2.18']),
+        'main_count': kw.get('main_count', 3),
+        'main_addresses': kw.get('main_addresses', ['172.17.2.18']),
         'created_at': kw.get('created_at'),
         'updated_at': kw.get('updated_at'),
     }

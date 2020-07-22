@@ -42,7 +42,7 @@ class MonitorsTestCase(base.TestCase):
 
         cluster = utils.get_test_cluster(node_addresses=['1.2.3.4'],
                                          api_address='https://5.6.7.8:2376',
-                                         master_addresses=['10.0.0.6'])
+                                         main_addresses=['10.0.0.6'])
         self.cluster = objects.Cluster(self.context, **cluster)
         self.monitor = swarm_monitor.SwarmMonitor(self.context, self.cluster)
         self.k8s_monitor = k8s_monitor.K8sMonitor(self.context, self.cluster)
@@ -241,9 +241,9 @@ class MonitorsTestCase(base.TestCase):
     @mock.patch('magnum.common.urlfetch.get')
     def test_mesos_monitor_pull_data_success(self, mock_url_get):
         state_json = {
-            'leader': 'master@10.0.0.6:5050',
-            'pid': 'master@10.0.0.6:5050',
-            'slaves': [{
+            'leader': 'main@10.0.0.6:5050',
+            'pid': 'main@10.0.0.6:5050',
+            'subordinates': [{
                 'resources': {
                     'mem': 100,
                     'cpus': 1,
@@ -260,16 +260,16 @@ class MonitorsTestCase(base.TestCase):
     @mock.patch('magnum.common.urlfetch.get')
     def test_mesos_monitor_pull_data_success_not_leader(self, mock_url_get):
         state_json = {
-            'leader': 'master@10.0.0.6:5050',
-            'pid': 'master@1.1.1.1:5050',
-            'slaves': []
+            'leader': 'main@10.0.0.6:5050',
+            'pid': 'main@1.1.1.1:5050',
+            'subordinates': []
         }
         self._test_mesos_monitor_pull_data(mock_url_get, state_json,
                                            0, 0, 0, 0)
 
     @mock.patch('magnum.common.urlfetch.get')
-    def test_mesos_monitor_pull_data_success_no_master(self, mock_url_get):
-        self.cluster.master_addresses = []
+    def test_mesos_monitor_pull_data_success_no_main(self, mock_url_get):
+        self.cluster.main_addresses = []
         self._test_mesos_monitor_pull_data(mock_url_get, {}, 0, 0, 0, 0)
 
     def test_mesos_monitor_get_metric_names(self):

@@ -20,7 +20,7 @@ from trove.db.sqlalchemy.migrate_repo.schema import String
 from trove.db.sqlalchemy.migrate_repo.schema import Table
 
 
-COLUMN_NAME = 'slave_of_id'
+COLUMN_NAME = 'subordinate_of_id'
 
 
 def upgrade(migrate_engine):

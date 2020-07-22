@@ -306,7 +306,7 @@ class TestNodePayload(testtools.TestCase):
             'cluster_id': cluster_uuid,
             'physical_id': physical_uuid,
             'index': 3,
-            'role': 'master',
+            'role': 'main',
             'init_at': dt,
             'created_at': dt,
             'updated_at': dt,

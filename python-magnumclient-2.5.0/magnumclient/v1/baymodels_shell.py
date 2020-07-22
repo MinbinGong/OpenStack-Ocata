@@ -72,9 +72,9 @@ def _show_baymodel(baymodel):
            metavar='<flavor-id>',
            default='m1.medium',
            help=_('The nova flavor id to use when launching the bay.'))
-@utils.arg('--master-flavor-id',
-           metavar='<master-flavor-id>',
-           help=_('The nova flavor id to use when launching the master node '
+@utils.arg('--main-flavor-id',
+           metavar='<main-flavor-id>',
+           help=_('The nova flavor id to use when launching the main node '
                   'of the bay.'))
 @utils.arg('--docker-volume-size',
            metavar='<docker-volume-size>',
@@ -115,10 +115,10 @@ def _show_baymodel(baymodel):
            help=_('Specify the server type to be used '
                   'for example vm. For this release '
                   'default server type will be vm.'))
-@utils.arg('--master-lb-enabled',
+@utils.arg('--main-lb-enabled',
            action='store_true', default=False,
            help=_('Indicates whether created bays should have a load balancer '
-                  'for master nodes or not.'))
+                  'for main nodes or not.'))
 @utils.arg('--floating-ip-enabled',
            action='store_true', default=True,
            help=_('Indicates whether created bays should have a floating ip'
@@ -132,7 +132,7 @@ def do_baymodel_create(cs, args):
     opts = {}
     opts['name'] = args.name
     opts['flavor_id'] = args.flavor_id
-    opts['master_flavor_id'] = args.master_flavor_id
+    opts['main_flavor_id'] = args.main_flavor_id
     opts['image_id'] = args.image_id
     opts['keypair_id'] = args.keypair_id
     opts['external_network_id'] = args.external_network_id
@@ -152,7 +152,7 @@ def do_baymodel_create(cs, args):
     opts['public'] = args.public
     opts['registry_enabled'] = args.registry_enabled
     opts['server_type'] = args.server_type
-    opts['master_lb_enabled'] = args.master_lb_enabled
+    opts['main_lb_enabled'] = args.main_lb_enabled
     opts['floating_ip_enabled'] = args.floating_ip_enabled
 
     baymodel = cs.baymodels.create(**opts)

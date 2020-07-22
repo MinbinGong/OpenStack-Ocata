@@ -30,7 +30,7 @@ CLUSTER1 = {'id': 123,
             'api_address': '172.17.2.1',
             'node_addresses': ['172.17.2.3'],
             'node_count': 2,
-            'master_count': 1,
+            'main_count': 1,
             }
 CLUSTER2 = {'id': 124,
             'uuid': '66666666-7777-8888-9999-000000000002',
@@ -40,7 +40,7 @@ CLUSTER2 = {'id': 124,
             'api_address': '172.17.2.2',
             'node_addresses': ['172.17.2.4'],
             'node_count': 2,
-            'master_count': 1,
+            'main_count': 1,
             }
 
 CREATE_CLUSTER = copy.deepcopy(CLUSTER1)

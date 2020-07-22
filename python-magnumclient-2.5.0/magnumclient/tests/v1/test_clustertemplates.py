@@ -27,7 +27,7 @@ CLUSTERTEMPLATE1 = {
     'uuid': '66666666-7777-8888-9999-000000000001',
     'name': 'clustertemplate1',
     'image_id': 'clustertemplate1-image',
-    'master_flavor_id': 'm1.tiny',
+    'main_flavor_id': 'm1.tiny',
     'flavor_id': 'm1.small',
     'external_network_id': 'd1f02cfb-d27f-4068-9332-84d907cb0e21',
     'fixed_network': 'private',
@@ -45,7 +45,7 @@ CLUSTERTEMPLATE1 = {
     'tls_disabled': False,
     'public': False,
     'registry_enabled': False,
-    'master_lb_enabled': True,
+    'main_lb_enabled': True,
     'floating_ip_enabled': True
     }
 
@@ -55,7 +55,7 @@ CLUSTERTEMPLATE2 = {
     'name': 'clustertemplate2',
     'image_id': 'clustertemplate2-image',
     'flavor_id': 'm2.small',
-    'master_flavor_id': 'm2.tiny',
+    'main_flavor_id': 'm2.tiny',
     'external_network_id': 'd1f02cfb-d27f-4068-9332-84d907cb0e22',
     'fixed_network': 'private2',
     'network_driver': 'flannel',
@@ -305,8 +305,8 @@ class ClusterTemplateManagerTest(testtools.TestCase):
                          cluster_template.public)
         self.assertEqual(CLUSTERTEMPLATE1['registry_enabled'],
                          cluster_template.registry_enabled)
-        self.assertEqual(CLUSTERTEMPLATE1['master_lb_enabled'],
-                         cluster_template.master_lb_enabled)
+        self.assertEqual(CLUSTERTEMPLATE1['main_lb_enabled'],
+                         cluster_template.main_lb_enabled)
         self.assertEqual(CLUSTERTEMPLATE1['floating_ip_enabled'],
                          cluster_template.floating_ip_enabled)
 
@@ -351,8 +351,8 @@ class ClusterTemplateManagerTest(testtools.TestCase):
                          cluster_template.public)
         self.assertEqual(CLUSTERTEMPLATE1['registry_enabled'],
                          cluster_template.registry_enabled)
-        self.assertEqual(CLUSTERTEMPLATE1['master_lb_enabled'],
-                         cluster_template.master_lb_enabled)
+        self.assertEqual(CLUSTERTEMPLATE1['main_lb_enabled'],
+                         cluster_template.main_lb_enabled)
         self.assertEqual(CLUSTERTEMPLATE1['floating_ip_enabled'],
                          cluster_template.floating_ip_enabled)
 

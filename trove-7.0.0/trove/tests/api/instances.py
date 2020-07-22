@@ -1623,16 +1623,16 @@ class CheckInstance(AttrCheck):
                 msg="Replica-of links not found")
             self.links(self.instance['replica_of']['links'])
 
-    def slaves(self):
+    def subordinates(self):
         if 'replicas' not in self.instance:
             self.fail("'replicas' not found in instance.")
         else:
             allowed_attrs = ['id', 'links']
-            for slave in self.instance['replicas']:
+            for subordinate in self.instance['replicas']:
                 self.contains_allowed_attrs(
-                    slave, allowed_attrs,
+                    subordinate, allowed_attrs,
                     msg="Replica links not found")
-                self.links(slave['links'])
+                self.links(subordinate['links'])
 
 
 @test(groups=[GROUP])

@@ -419,7 +419,7 @@ class PgSqlApp(object):
 
     def pg_current_xlog_location(self):
         """Wrapper for pg_current_xlog_location()
-        Cannot be used against a running slave
+        Cannot be used against a running subordinate
         """
         r = self.build_admin().query("SELECT pg_current_xlog_location()")
         return r[0][0]

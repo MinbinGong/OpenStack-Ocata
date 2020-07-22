@@ -1724,8 +1724,8 @@ class V3StorageConnection(driver.HuaweiBase):
         location = self.create_share(new_replica, share_server)
 
         # create a replication pair.
-        # replication pair only can be created by master node,
-        # so here is a remote call to trigger master node to
+        # replication pair only can be created by main node,
+        # so here is a remote call to trigger main node to
         # start the creating progress.
         try:
             replica_pair_id = self.rpc_client.create_replica_pair(

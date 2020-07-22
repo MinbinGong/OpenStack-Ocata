@@ -30,15 +30,15 @@ primary = client.zones.create(
     'root@x.com')
 
 # Secondary Zone
-slave = client.zones.create(
+subordinate = client.zones.create(
     'secondary-%s.io.' % str(uuid.uuid4()),
     'SECONDARY',
-    masters=["127.0.1.1"])
+    mains=["127.0.1.1"])
 
-# Try updating Masters for the Secondary
-new_slave = client.zones.update(
-    slave['id'],
-    {"masters": ["10.0.0.1", "10.0.0.10"]}
+# Try updating Mains for the Secondary
+new_subordinate = client.zones.update(
+    subordinate['id'],
+    {"mains": ["10.0.0.1", "10.0.0.10"]}
 )
 
 # List all Zones

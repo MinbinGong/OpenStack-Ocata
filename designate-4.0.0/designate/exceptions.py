@@ -58,7 +58,7 @@ class AdapterNotFound(Base):
     error_type = 'adapter_not_found'
 
 
-class NSD4SlaveBackendError(Backend):
+class NSD4SubordinateBackendError(Backend):
     pass
 
 
@@ -311,8 +311,8 @@ class DuplicatePoolTargetOption(Duplicate):
     error_type = 'duplicate_pool_target_option'
 
 
-class DuplicatePoolTargetMaster(Duplicate):
-    error_type = 'duplicate_pool_target_master'
+class DuplicatePoolTargetMain(Duplicate):
+    error_type = 'duplicate_pool_target_main'
 
 
 class DuplicatePoolAlsoNotify(Duplicate):
@@ -345,7 +345,7 @@ class DuplicateZoneAttribute(Duplicate):
     error_type = 'duplicate_zone_attribute'
 
 
-class DuplicateZoneMaster(Duplicate):
+class DuplicateZoneMain(Duplicate):
     error_type = 'duplicate_zone_attribute'
 
 
@@ -379,8 +379,8 @@ class ZoneNotFound(NotFound):
     error_type = 'zone_not_found'
 
 
-class ZoneMasterNotFound(NotFound):
-    error_type = 'zone_master_not_found'
+class ZoneMainNotFound(NotFound):
+    error_type = 'zone_main_not_found'
 
 
 class ZoneAttributeNotFound(NotFound):
@@ -435,8 +435,8 @@ class PoolTargetOptionNotFound(NotFound):
     error_type = 'pool_target_option_not_found'
 
 
-class PoolTargetMasterNotFound(NotFound):
-    error_type = 'pool_target_master_not_found'
+class PoolTargetMainNotFound(NotFound):
+    error_type = 'pool_target_main_not_found'
 
 
 class PoolAlsoNotifyNotFound(NotFound):

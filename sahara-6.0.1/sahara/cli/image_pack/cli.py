@@ -32,7 +32,7 @@ CONF.register_cli_opts([
         required=True,
         help=_("The path to an image to modify. This image will be modified "
                "in-place: be sure to target a copy if you wish to maintain a "
-               "clean master image.")),
+               "clean main image.")),
     cfg.StrOpt(
         'root-filesystem',
         dest='root_fs',

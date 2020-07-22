@@ -255,16 +255,16 @@ class Manager(manager.Manager):
     def backup_required_for_replication(self, context):
         return self.replication.backup_required_for_replication()
 
-    def attach_replica(self, context, replica_info, slave_config):
-        self.replication.enable_as_slave(self.app, replica_info, None)
+    def attach_replica(self, context, replica_info, subordinate_config):
+        self.replication.enable_as_subordinate(self.app, replica_info, None)
 
     def detach_replica(self, context, for_failover=False):
-        replica_info = self.replication.detach_slave(self.app, for_failover)
+        replica_info = self.replication.detach_subordinate(self.app, for_failover)
         return replica_info
 
-    def enable_as_master(self, context, replica_source_config):
+    def enable_as_main(self, context, replica_source_config):
         self.app.enable_backups()
-        self.replication.enable_as_master(self.app, None)
+        self.replication.enable_as_main(self.app, None)
 
     def make_read_only(self, context, read_only):
         """There seems to be no way to flag this at the database level in
@@ -288,9 +288,9 @@ class Manager(manager.Manager):
         return lsn
 
     def get_last_txn(self, context):
-        master_host = self.app.pg_primary_host()
+        main_host = self.app.pg_primary_host()
         repl_offset = self.get_latest_txn_id(context)
-        return master_host, repl_offset
+        return main_host, repl_offset
 
     def wait_for_txn(self, context, txn):
         if not self.app.pg_is_in_recovery():
@@ -312,16 +312,16 @@ class Manager(manager.Manager):
         self.replication.cleanup_source_on_replica_detach(self.app,
                                                           replica_info)
 
-    def demote_replication_master(self, context):
-        LOG.debug("Calling demote_replication_master")
-        self.replication.demote_master(self.app)
+    def demote_replication_main(self, context):
+        LOG.debug("Calling demote_replication_main")
+        self.replication.demote_main(self.app)
 
     def get_replication_snapshot(self, context, snapshot_info,
                                  replica_source_config=None):
         LOG.debug("Getting replication snapshot.")
 
         self.app.enable_backups()
-        self.replication.enable_as_master(self.app, None)
+        self.replication.enable_as_main(self.app, None)
 
         snapshot_id, log_position = (
             self.replication.snapshot_for_replication(context, self.app, None,
@@ -338,7 +338,7 @@ class Manager(manager.Manager):
                 'snapshot_id': snapshot_id
             },
             'replication_strategy': self.replication_strategy,
-            'master': self.replication.get_master_ref(self.app, snapshot_info),
+            'main': self.replication.get_main_ref(self.app, snapshot_info),
             'log_position': log_position
         }
 

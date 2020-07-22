@@ -57,7 +57,7 @@ def _show_bay(bay):
            metavar='<fields>',
            help=_('Comma-separated list of fields to display. '
                   'Available fields: uuid, name, baymodel_id, stack_id, '
-                  'status, master_count, node_count, links, bay_create_timeout'
+                  'status, main_count, node_count, links, bay_create_timeout'
                   )
            )
 @utils.deprecated(DEPRECATION_MESSAGE)
@@ -69,7 +69,7 @@ def do_bay_list(cs, args):
     bays = cs.bays.list(marker=args.marker, limit=args.limit,
                         sort_key=args.sort_key,
                         sort_dir=args.sort_dir)
-    columns = ['uuid', 'name', 'node_count', 'master_count', 'status']
+    columns = ['uuid', 'name', 'node_count', 'main_count', 'status']
     columns += utils._get_list_table_columns_and_formatters(
         args.fields, bays,
         exclude_fields=(c.lower() for c in columns))[0]
@@ -91,11 +91,11 @@ def do_bay_list(cs, args):
            type=int,
            default=1,
            help=_('The bay node count.'))
-@utils.arg('--master-count',
-           metavar='<master-count>',
+@utils.arg('--main-count',
+           metavar='<main-count>',
            type=int,
            default=1,
-           help=_('The number of master nodes for the bay.'))
+           help=_('The number of main nodes for the bay.'))
 @utils.arg('--discovery-url',
            metavar='<discovery-url>',
            help=_('Specifies custom discovery url for node discovery.'))
@@ -116,7 +116,7 @@ def do_bay_create(cs, args):
     opts['name'] = args.name
     opts['baymodel_id'] = baymodel.uuid
     opts['node_count'] = args.node_count
-    opts['master_count'] = args.master_count
+    opts['main_count'] = args.main_count
     opts['discovery_url'] = args.discovery_url
     opts['bay_create_timeout'] = args.timeout
     try:

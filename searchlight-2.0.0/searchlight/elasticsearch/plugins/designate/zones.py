@@ -73,7 +73,7 @@ class ZoneIndex(designate.DesignateBase):
                 "action": {"type": "string", "index": "not_analyzed"},
                 "type": {"type": "string", "index": "not_analyzed"},
                 "transferred_at": {"type": "string"},
-                "masters": {"type": "string"}
+                "mains": {"type": "string"}
             },
             "_meta": {
                 "project_id": {

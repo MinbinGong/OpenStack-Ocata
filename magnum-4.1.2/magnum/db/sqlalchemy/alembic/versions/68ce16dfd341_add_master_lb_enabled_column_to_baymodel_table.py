@@ -9,7 +9,7 @@
 # WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
 # License for the specific language governing permissions and limitations
 # under the License.
-"""add master_lb_enabled column to baymodel table
+"""add main_lb_enabled column to baymodel table
 
 Revision ID: 68ce16dfd341
 Revises: 085e601a39f6
@@ -27,4 +27,4 @@ import sqlalchemy as sa
 
 def upgrade():
     op.add_column('baymodel',
-                  sa.Column('master_lb_enabled', sa.Boolean(), default=False))
+                  sa.Column('main_lb_enabled', sa.Boolean(), default=False))

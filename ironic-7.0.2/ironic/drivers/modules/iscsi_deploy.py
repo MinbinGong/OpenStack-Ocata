@@ -48,7 +48,7 @@ class InstanceImageCache(image_cache.ImageCache):
 
     def __init__(self):
         super(self.__class__, self).__init__(
-            CONF.pxe.instance_master_path,
+            CONF.pxe.instance_main_path,
             # MiB -> B
             cache_size=CONF.pxe.image_cache_size * 1024 * 1024,
             # min -> sec

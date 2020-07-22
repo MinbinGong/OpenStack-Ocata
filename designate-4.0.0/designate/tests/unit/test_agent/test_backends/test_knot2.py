@@ -148,7 +148,7 @@ class Knot2AgentBackendUnitTestCase(TestCase):
 
     @mock.patch('designate.backend.agent_backend.impl_knot2.execute')
     def test_find_zone_serial(self, mock_exe):
-        mock_exe.return_value = "[example.com.] type: slave | serial: 20 | " \
+        mock_exe.return_value = "[example.com.] type: subordinate | serial: 20 | " \
             "next-event: idle | auto-dnssec: disabled]", ""
         serial = self.kb.find_zone_serial('example.com')
         self.assertEqual(20, serial)

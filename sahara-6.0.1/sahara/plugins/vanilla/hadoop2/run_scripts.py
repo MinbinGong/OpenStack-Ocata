@@ -108,10 +108,10 @@ def start_oozie_process(pctx, instance):
 
 @cpo.event_wrapper(
     True, step=pu.start_process_event_message("Spark History Server"))
-def start_spark_history_server(master):
-    sp_home = c_helper.get_spark_home(master.cluster)
-    with context.set_current_instance_id(master.instance_id):
-        with master.remote() as r:
+def start_spark_history_server(main):
+    sp_home = c_helper.get_spark_home(main.cluster)
+    with context.set_current_instance_id(main.instance_id):
+        with main.remote() as r:
             r.execute_command('sudo su - -c "bash %s" hadoop' % os.path.join(
                 sp_home, 'sbin/start-history-server.sh'))
 

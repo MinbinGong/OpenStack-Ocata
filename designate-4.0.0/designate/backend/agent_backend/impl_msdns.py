@@ -47,13 +47,13 @@ class MSDNSBackend(base.AgentBackend):
 
         self._dnsutils = utilsfactory.get_dnsutils()
 
-        masters = cfg.CONF['service:agent'].masters
-        if not masters:
-            raise exceptions.Backend("Missing agent AXFR masters")
+        mains = cfg.CONF['service:agent'].mains
+        if not mains:
+            raise exceptions.Backend("Missing agent AXFR mains")
         # Only ip addresses are needed
-        self._masters = [ns.split(":")[0] for ns in masters]
+        self._mains = [ns.split(":")[0] for ns in mains]
 
-        LOG.info(_LI("AXFR masters: %r"), self._masters)
+        LOG.info(_LI("AXFR mains: %r"), self._mains)
 
     @classmethod
     def get_cfg_opts(cls):
@@ -82,7 +82,7 @@ class MSDNSBackend(base.AgentBackend):
                 zone_name=zone_name,
                 zone_type=constants.DNS_ZONE_TYPE_SECONDARY,
                 ds_integrated=False,
-                ip_addrs=self._masters)
+                ip_addrs=self._mains)
         except os_win_exc.DNSZoneAlreadyExists:
             # Zone already exists, check its properties to see if the
             # existing zone is identical to the requested one
@@ -92,7 +92,7 @@ class MSDNSBackend(base.AgentBackend):
                 zone_properties['zone_type'] == (
                     constants.DNS_ZONE_TYPE_SECONDARY) and
                 zone_properties['ds_integrated'] is False and
-                set(zone_properties['master_servers']) == set(self._masters))
+                set(zone_properties['main_servers']) == set(self._mains))
 
             if not identical_zone_exists:
                 raise

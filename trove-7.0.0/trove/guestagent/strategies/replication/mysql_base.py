@@ -54,12 +54,12 @@ class MysqlReplicationBase(base.Replication):
     def repl_backup_extra_opts(self):
         return CONF.backup_runner_options.get('InnoBackupEx', '')
 
-    def get_master_ref(self, service, snapshot_info):
-        master_ref = {
+    def get_main_ref(self, service, snapshot_info):
+        main_ref = {
             'host': netutils.get_my_ipv4(),
             'port': service.get_port()
         }
-        return master_ref
+        return main_ref
 
     def _create_replication_user(self):
         replication_user = None
@@ -71,7 +71,7 @@ class MysqlReplicationBase(base.Replication):
 
         while replication_user is None:
             try:
-                name = 'slave_' + str(uuid.uuid4())[:8]
+                name = 'subordinate_' + str(uuid.uuid4())[:8]
                 if mysql_user:
                     mysql_user.name = name
                 else:
@@ -115,32 +115,32 @@ class MysqlReplicationBase(base.Replication):
         service.grant_replication_privilege(replication_user)
 
         # With streamed InnobackupEx, the log position is in
-        # the stream and will be decoded by the slave
+        # the stream and will be decoded by the subordinate
         log_position = {
             'replication_user': replication_user
         }
         return snapshot_id, log_position
 
-    def enable_as_master(self, service, master_config):
+    def enable_as_main(self, service, main_config):
         if not service.exists_replication_source_overrides():
-            service.write_replication_source_overrides(master_config)
+            service.write_replication_source_overrides(main_config)
             service.restart()
 
     @abc.abstractmethod
-    def connect_to_master(self, service, snapshot):
-        """Connects a slave to a master"""
+    def connect_to_main(self, service, snapshot):
+        """Connects a subordinate to a main"""
 
-    def enable_as_slave(self, service, snapshot, slave_config):
+    def enable_as_subordinate(self, service, snapshot, subordinate_config):
         try:
-            service.write_replication_replica_overrides(slave_config)
+            service.write_replication_replica_overrides(subordinate_config)
             service.restart()
-            self.connect_to_master(service, snapshot)
+            self.connect_to_main(service, snapshot)
         except Exception:
             LOG.exception(_("Exception enabling guest as replica"))
             raise
 
-    def detach_slave(self, service, for_failover):
-        replica_info = service.stop_slave(for_failover)
+    def detach_subordinate(self, service, for_failover):
+        replica_info = service.stop_subordinate(for_failover)
         service.remove_replication_replica_overrides()
         service.restart()
         return replica_info
@@ -149,7 +149,7 @@ class MysqlReplicationBase(base.Replication):
         replication_user = self._create_replication_user()
         service.grant_replication_privilege(replication_user)
         return {
-            'master': self.get_master_ref(service, None),
+            'main': self.get_main_ref(service, None),
             'log_position': {
                 'replication_user': replication_user
             }
@@ -158,6 +158,6 @@ class MysqlReplicationBase(base.Replication):
     def cleanup_source_on_replica_detach(self, admin_service, replica_info):
         admin_service.delete_user_by_name(replica_info['replication_user'])
 
-    def demote_master(self, service):
+    def demote_main(self, service):
         service.remove_replication_source_overrides()
         service.restart()

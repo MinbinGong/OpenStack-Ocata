@@ -18,7 +18,7 @@ database_opts = [
     cfg.StrOpt('sqlite_db',
                deprecated_for_removal=True,
                deprecated_reason='Should use config option connection or '
-                                 'slave_connection to connect the database.',
+                                 'subordinate_connection to connect the database.',
                deprecated_group='DEFAULT',
                default='oslo.sqlite',
                help='The file name to use with SQLite.'),
@@ -41,10 +41,10 @@ database_opts = [
                                                   group='DATABASE'),
                                 cfg.DeprecatedOpt('connection',
                                                   group='sql'), ]),
-    cfg.StrOpt('slave_connection',
+    cfg.StrOpt('subordinate_connection',
                secret=True,
                help='The SQLAlchemy connection string to use to connect to the'
-                    ' slave database.'),
+                    ' subordinate database.'),
     cfg.StrOpt('mysql_sql_mode',
                default='TRADITIONAL',
                help='The SQL mode to be used for MySQL sessions. '

@@ -271,7 +271,7 @@ class T(testbase.ANTLRTest):
 
 
     def testGrammarImport(self):
-        slave = textwrap.dedent(
+        subordinate = textwrap.dedent(
             r'''
             parser grammar T8S;
             options {
@@ -281,15 +281,15 @@ class T(testbase.ANTLRTest):
             a : B;
             ''')
 
-        parserName = self.writeInlineGrammar(slave)[0]
-        # slave parsers are imported as normal python modules
+        parserName = self.writeInlineGrammar(subordinate)[0]
+        # subordinate parsers are imported as normal python modules
         # to force reloading current version, purge module from sys.modules
         try:
             del sys.modules[parserName+'Parser']
         except KeyError:
             pass
 
-        master = textwrap.dedent(
+        main = textwrap.dedent(
             r'''
             grammar T8M;
             options {
@@ -303,7 +303,7 @@ class T(testbase.ANTLRTest):
 
         stdout = StringIO()
 
-        lexerMod, parserMod = self.compileInlineGrammar(master, returnModule=True)
+        lexerMod, parserMod = self.compileInlineGrammar(main, returnModule=True)
         parserMod.main(
             ['import.py', '--rule', 's'],
             stdin=StringIO("b"),

@@ -82,10 +82,10 @@ def args_array_to_patch(op, attributes):
 
 def handle_labels(labels):
     labels = format_labels(labels)
-    if 'mesos_slave_executor_env_file' in labels:
+    if 'mesos_subordinate_executor_env_file' in labels:
         environment_variables_data = handle_json_from_file(
-            labels['mesos_slave_executor_env_file'])
-        labels['mesos_slave_executor_env_variables'] = json.dumps(
+            labels['mesos_subordinate_executor_env_file'])
+        labels['mesos_subordinate_executor_env_variables'] = json.dumps(
             environment_variables_data)
     return labels
 

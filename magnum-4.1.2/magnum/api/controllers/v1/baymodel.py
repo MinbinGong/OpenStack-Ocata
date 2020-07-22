@@ -56,8 +56,8 @@ class BayModel(base.APIBase):
     flavor_id = wtypes.StringType(min_length=1, max_length=255)
     """The flavor of this Baymodel"""
 
-    master_flavor_id = wtypes.StringType(min_length=1, max_length=255)
-    """The flavor of the master node for this Baymodel"""
+    main_flavor_id = wtypes.StringType(min_length=1, max_length=255)
+    """The flavor of the main node for this Baymodel"""
 
     dns_nameserver = wtypes.IPv4AddressType()
     """The DNS nameserver address"""
@@ -130,8 +130,8 @@ class BayModel(base.APIBase):
     docker_storage_driver = wtypes.Enum(str, *fields.DockerStorageDriver.ALL)
     """Docker storage driver"""
 
-    master_lb_enabled = wsme.wsattr(types.boolean, default=False)
-    """Indicates whether created bays should have a load balancer for master
+    main_lb_enabled = wsme.wsattr(types.boolean, default=False)
+    """Indicates whether created bays should have a load balancer for main
        nodes or not.
        """
 
@@ -168,7 +168,7 @@ class BayModel(base.APIBase):
             name='example',
             image_id='Fedora-k8s',
             flavor_id='m1.small',
-            master_flavor_id='m1.small',
+            main_flavor_id='m1.small',
             dns_nameserver='8.8.1.1',
             keypair_id='keypair1',
             external_network_id='ffc44e4a-2319-4062-bce0-9ae1c38b05ba',
@@ -190,7 +190,7 @@ class BayModel(base.APIBase):
             created_at=timeutils.utcnow(),
             updated_at=timeutils.utcnow(),
             public=False,
-            master_lb_enabled=False,
+            main_lb_enabled=False,
             floating_ip_enabled=True,
         )
         return cls._convert_with_links(sample, 'http://localhost:9511')

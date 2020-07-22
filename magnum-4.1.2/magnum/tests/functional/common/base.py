@@ -41,7 +41,7 @@ class BaseMagnumTest(base.BaseTestCase):
 
         :param get_nodes_fn: function that takes no parameters and returns
             a list of node IPs which are in such form:
-                [[master_nodes], [slave_nodes]].
+                [[main_nodes], [subordinate_nodes]].
         :param coe: the COE type of the nodes
         """
         def int_copy_logs(exec_info):
@@ -52,8 +52,8 @@ class BaseMagnumTest(base.BaseTestCase):
                 msg = (_LE("Failed to copy logs for cluster"))
                 nodes_addresses = get_nodes_fn()
 
-                master_nodes = nodes_addresses[0]
-                slave_nodes = nodes_addresses[1]
+                main_nodes = nodes_addresses[0]
+                subordinate_nodes = nodes_addresses[1]
 
                 base_path = os.path.split(os.path.dirname(
                     os.path.abspath(magnum.__file__)))[0]
@@ -88,8 +88,8 @@ class BaseMagnumTest(base.BaseTestCase):
                                  'log_name': log_name})
                             cls.LOG.exception(msg)
 
-                do_copy_logs('master', master_nodes)
-                do_copy_logs('node', slave_nodes)
+                do_copy_logs('main', main_nodes)
+                do_copy_logs('node', subordinate_nodes)
             except Exception:
                 cls.LOG.exception(msg)
 

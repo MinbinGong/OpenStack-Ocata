@@ -211,7 +211,7 @@ ShareGroup = [
                 help="Enable or disable mountable snapshot tests."),
 
     cfg.StrOpt("image_with_share_tools",
-               default="manila-service-image-master",
+               default="manila-service-image-main",
                help="Image name for vm booting with nfs/smb clients tool."),
     cfg.StrOpt("image_username",
                default="manila",

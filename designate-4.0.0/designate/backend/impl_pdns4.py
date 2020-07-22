@@ -44,13 +44,13 @@ class PDNS4Backend(base.Backend):
     def create_zone(self, context, zone):
         """Create a DNS zone"""
 
-        masters = \
-            ['%s:%d' % (master.host, master.port) for master in self.masters]
+        mains = \
+            ['%s:%d' % (main.host, main.port) for main in self.mains]
 
         data = {
             "name": zone.name,
-            "kind": "slave",
-            "masters": masters,
+            "kind": "subordinate",
+            "mains": mains,
 
         }
         headers = {

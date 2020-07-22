@@ -69,10 +69,10 @@ class T(testbase.ANTLRTest):
         return TLexer
 
 
-    def execParser(self, grammar, grammarEntry, slaves, input):
-        for slave in slaves:
-            parserName = self.writeInlineGrammar(slave)[0]
-            # slave parsers are imported as normal python modules
+    def execParser(self, grammar, grammarEntry, subordinates, input):
+        for subordinate in subordinates:
+            parserName = self.writeInlineGrammar(subordinate)[0]
+            # subordinate parsers are imported as normal python modules
             # to force reloading current version, purge module from sys.modules
             if parserName + 'Parser' in sys.modules:
                 del sys.modules[parserName + 'Parser']
@@ -88,10 +88,10 @@ class T(testbase.ANTLRTest):
         return parser._output
 
 
-    def execLexer(self, grammar, slaves, input):
-        for slave in slaves:
-            parserName = self.writeInlineGrammar(slave)[0]
-            # slave parsers are imported as normal python modules
+    def execLexer(self, grammar, subordinates, input):
+        for subordinate in subordinates:
+            parserName = self.writeInlineGrammar(subordinate)[0]
+            # subordinate parsers are imported as normal python modules
             # to force reloading current version, purge module from sys.modules
             if parserName + 'Parser' in sys.modules:
                 del sys.modules[parserName + 'Parser']
@@ -112,7 +112,7 @@ class T(testbase.ANTLRTest):
 
 
     def testDelegatorInvokesDelegateRule(self):
-        slave = textwrap.dedent(
+        subordinate = textwrap.dedent(
         r'''
         parser grammar S1;
         options {
@@ -127,7 +127,7 @@ class T(testbase.ANTLRTest):
         a : B { self.capture("S.a") } ;
         ''')
 
-        master = textwrap.dedent(
+        main = textwrap.dedent(
         r'''
         grammar M1;
         options {
@@ -140,8 +140,8 @@ class T(testbase.ANTLRTest):
         ''')
 
         found = self.execParser(
-            master, 's',
-            slaves=[slave],
+            main, 's',
+            subordinates=[subordinate],
             input="b"
             )
 
@@ -149,7 +149,7 @@ class T(testbase.ANTLRTest):
 
 
     def testDelegatorInvokesDelegateRuleWithArgs(self):
-        slave = textwrap.dedent(
+        subordinate = textwrap.dedent(
         r'''
         parser grammar S2;
         options {
@@ -162,7 +162,7 @@ class T(testbase.ANTLRTest):
         a[x] returns [y] : B {self.capture("S.a"); $y="1000";} ;
         ''')
 
-        master = textwrap.dedent(
+        main = textwrap.dedent(
         r'''
         grammar M2;
         options {
@@ -175,8 +175,8 @@ class T(testbase.ANTLRTest):
         ''')
 
         found = self.execParser(
-            master, 's',
-            slaves=[slave],
+            main, 's',
+            subordinates=[subordinate],
             input="b"
             )
 
@@ -184,7 +184,7 @@ class T(testbase.ANTLRTest):
 
 
     def testDelegatorAccessesDelegateMembers(self):
-        slave = textwrap.dedent(
+        subordinate = textwrap.dedent(
         r'''
         parser grammar S3;
         options {
@@ -200,7 +200,7 @@ class T(testbase.ANTLRTest):
         a : B ;
         ''')
 
-        master = textwrap.dedent(
+        main = textwrap.dedent(
         r'''
         grammar M3;        // uses no rules from the import
         options {
@@ -212,8 +212,8 @@ class T(testbase.ANTLRTest):
         ''')
 
         found = self.execParser(
-            master, 's',
-            slaves=[slave],
+            main, 's',
+            subordinates=[subordinate],
             input="b"
             )
 
@@ -221,7 +221,7 @@ class T(testbase.ANTLRTest):
 
 
     def testDelegatorInvokesFirstVersionOfDelegateRule(self):
-        slave = textwrap.dedent(
+        subordinate = textwrap.dedent(
         r'''
         parser grammar S4;
         options {
@@ -235,7 +235,7 @@ class T(testbase.ANTLRTest):
         b : B ;
         ''')
 
-        slave2 = textwrap.dedent(
+        subordinate2 = textwrap.dedent(
         r'''
         parser grammar T4;
         options {
@@ -248,7 +248,7 @@ class T(testbase.ANTLRTest):
         a : B {self.capture("T.a");} ; // hidden by S.a
         ''')
 
-        master = textwrap.dedent(
+        main = textwrap.dedent(
         r'''
         grammar M4;
         options {
@@ -261,8 +261,8 @@ class T(testbase.ANTLRTest):
         ''')
 
         found = self.execParser(
-            master, 's',
-            slaves=[slave, slave2],
+            main, 's',
+            subordinates=[subordinate, subordinate2],
             input="b"
             )
 
@@ -270,7 +270,7 @@ class T(testbase.ANTLRTest):
 
 
     def testDelegatesSeeSameTokenType(self):
-        slave = textwrap.dedent(
+        subordinate = textwrap.dedent(
         r'''
         parser grammar S5; // A, B, C token type order
         options {
@@ -284,7 +284,7 @@ class T(testbase.ANTLRTest):
         x : A {self.capture("S.x ");} ;
         ''')
 
-        slave2 = textwrap.dedent(
+        subordinate2 = textwrap.dedent(
         r'''
         parser grammar T5;
         options {
@@ -298,7 +298,7 @@ class T(testbase.ANTLRTest):
         y : A {self.capture("T.y");} ;
         ''')
 
-        master = textwrap.dedent(
+        main = textwrap.dedent(
         r'''
         grammar M5;
         options {
@@ -313,8 +313,8 @@ class T(testbase.ANTLRTest):
         ''')
 
         found = self.execParser(
-            master, 's',
-            slaves=[slave, slave2],
+            main, 's',
+            subordinates=[subordinate, subordinate2],
             input="aa"
             )
 
@@ -322,7 +322,7 @@ class T(testbase.ANTLRTest):
 
 
     def testDelegatorRuleOverridesDelegate(self):
-        slave = textwrap.dedent(
+        subordinate = textwrap.dedent(
         r'''
         parser grammar S6;
         options {
@@ -336,7 +336,7 @@ class T(testbase.ANTLRTest):
         b : B ;
         ''')
 
-        master = textwrap.dedent(
+        main = textwrap.dedent(
         r'''
         grammar M6;
         options {
@@ -348,8 +348,8 @@ class T(testbase.ANTLRTest):
         ''')
 
         found = self.execParser(
-            master, 'a',
-            slaves=[slave],
+            main, 'a',
+            subordinates=[subordinate],
             input="c"
             )
 
@@ -359,7 +359,7 @@ class T(testbase.ANTLRTest):
     # LEXER INHERITANCE
 
     def testLexerDelegatorInvokesDelegateRule(self):
-        slave = textwrap.dedent(
+        subordinate = textwrap.dedent(
         r'''
         lexer grammar S7;
         options {
@@ -373,7 +373,7 @@ class T(testbase.ANTLRTest):
         C : 'c' ;
         ''')
 
-        master = textwrap.dedent(
+        main = textwrap.dedent(
         r'''
         lexer grammar M7;
         options {
@@ -385,8 +385,8 @@ class T(testbase.ANTLRTest):
         ''')
 
         found = self.execLexer(
-            master,
-            slaves=[slave],
+            main,
+            subordinates=[subordinate],
             input="abc"
             )
 
@@ -394,7 +394,7 @@ class T(testbase.ANTLRTest):
 
 
     def testLexerDelegatorRuleOverridesDelegate(self):
-        slave = textwrap.dedent(
+        subordinate = textwrap.dedent(
         r'''
         lexer grammar S8;
         options {
@@ -407,7 +407,7 @@ class T(testbase.ANTLRTest):
         A : 'a' {self.capture("S.A")} ;
         ''')
 
-        master = textwrap.dedent(
+        main = textwrap.dedent(
         r'''
         lexer grammar M8;
         options {
@@ -419,8 +419,8 @@ class T(testbase.ANTLRTest):
         ''')
 
         found = self.execLexer(
-            master,
-            slaves=[slave],
+            main,
+            subordinates=[subordinate],
             input="a"
             )
 

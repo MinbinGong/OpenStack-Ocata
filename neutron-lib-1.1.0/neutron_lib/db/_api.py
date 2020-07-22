@@ -19,8 +19,8 @@ context_manager.configure(sqlite_fk=True)
 
 # TODO(akamyshnikova): when all places in the code, which use sessions/
 # connections will be updated, this won't be needed
-def get_session(autocommit=True, expire_on_commit=False, use_slave=False):
+def get_session(autocommit=True, expire_on_commit=False, use_subordinate=False):
     """Helper method to grab session."""
     return context_manager.get_legacy_facade().get_session(
         autocommit=autocommit, expire_on_commit=expire_on_commit,
-        use_slave=use_slave)
+        use_subordinate=use_subordinate)

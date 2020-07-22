@@ -81,7 +81,7 @@ class TestStatsController(api_base.FunctionalTest):
                                       project_id=234,
                                       uuid='uuid2',
                                       node_count=5,
-                                      master_count=1)
+                                      main_count=1)
         headers = self.base_headers.copy()
         headers['X-Project-Id'] = '234'
         response = self.get_json('/stats',
@@ -97,7 +97,7 @@ class TestStatsController(api_base.FunctionalTest):
                                       project_id=234,
                                       uuid='uuid2',
                                       node_count=5,
-                                      master_count=1)
+                                      main_count=1)
         headers = self.base_headers.copy()
         headers['X-Project-Id'] = '234'
         response = self.get_json('/stats',

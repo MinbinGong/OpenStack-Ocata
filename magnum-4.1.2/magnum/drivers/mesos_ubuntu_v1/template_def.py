@@ -28,11 +28,11 @@ class UbuntuMesosTemplateDefinition(template_def.BaseTemplateDefinition):
                            cluster_template_attr='fixed_network')
         self.add_parameter('fixed_subnet',
                            cluster_template_attr='fixed_subnet')
-        self.add_parameter('number_of_slaves',
+        self.add_parameter('number_of_subordinates',
                            cluster_attr='node_count')
-        self.add_parameter('master_flavor',
-                           cluster_template_attr='master_flavor_id')
-        self.add_parameter('slave_flavor',
+        self.add_parameter('main_flavor',
+                           cluster_template_attr='main_flavor_id')
+        self.add_parameter('subordinate_flavor',
                            cluster_template_attr='flavor_id')
         self.add_parameter('cluster_name',
                            cluster_attr='name')
@@ -41,13 +41,13 @@ class UbuntuMesosTemplateDefinition(template_def.BaseTemplateDefinition):
 
         self.add_output('api_address',
                         cluster_attr='api_address')
-        self.add_output('mesos_master_private',
+        self.add_output('mesos_main_private',
                         cluster_attr=None)
-        self.add_output('mesos_master',
-                        cluster_attr='master_addresses')
-        self.add_output('mesos_slaves_private',
+        self.add_output('mesos_main',
+                        cluster_attr='main_addresses')
+        self.add_output('mesos_subordinates_private',
                         cluster_attr=None)
-        self.add_output('mesos_slaves',
+        self.add_output('mesos_subordinates',
                         cluster_attr='node_addresses')
 
     def get_params(self, context, cluster_template, cluster, **kwargs):
@@ -62,18 +62,18 @@ class UbuntuMesosTemplateDefinition(template_def.BaseTemplateDefinition):
         extra_params['domain_name'] = context.domain_name
         extra_params['region_name'] = osc.cinder_region_name()
 
-        label_list = ['rexray_preempt', 'mesos_slave_isolation',
-                      'mesos_slave_image_providers',
-                      'mesos_slave_work_dir',
-                      'mesos_slave_executor_env_variables']
+        label_list = ['rexray_preempt', 'mesos_subordinate_isolation',
+                      'mesos_subordinate_image_providers',
+                      'mesos_subordinate_work_dir',
+                      'mesos_subordinate_executor_env_variables']
 
         for label in label_list:
             extra_params[label] = cluster_template.labels.get(label)
 
         scale_mgr = kwargs.pop('scale_manager', None)
         if scale_mgr:
-            hosts = self.get_output('mesos_slaves_private')
-            extra_params['slaves_to_remove'] = (
+            hosts = self.get_output('mesos_subordinates_private')
+            extra_params['subordinates_to_remove'] = (
                 scale_mgr.get_removal_nodes(hosts))
 
         return super(UbuntuMesosTemplateDefinition,

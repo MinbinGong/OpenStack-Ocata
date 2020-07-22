@@ -39,7 +39,7 @@ class SchedulerFilterTest(test.BaseTestCase):
         self.zone = objects.Zone(
             name="example.com.",
             type="PRIMARY",
-            email="hostmaster@example.com"
+            email="hostmain@example.com"
         )
 
         attrs = {
@@ -131,7 +131,7 @@ class SchedulerPoolIDAttributeFilterTest(SchedulerFilterTest):
         self.zone = objects.Zone(
             name="example.com.",
             type="PRIMARY",
-            email="hostmaster@example.com",
+            email="hostmain@example.com",
             attributes=objects.ZoneAttributeList.from_list(
                 [
                     {
@@ -215,7 +215,7 @@ class SchedulerAttributeFilterTest(SchedulerFilterTest):
         self.zone = objects.Zone(
             name="example.com.",
             type="PRIMARY",
-            email="hostmaster@example.com",
+            email="hostmain@example.com",
             attributes=objects.ZoneAttributeList.from_list(
                 [
                     {

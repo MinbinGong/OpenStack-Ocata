@@ -51,7 +51,7 @@ class ClusterOpTest(base.SenlinTestCase):
         mock_cluster.return_value = x_cluster
         mock_action.return_value = 'ACTION_ID'
         params = {'style': 'tango'}
-        filters = {'role': 'slave'}
+        filters = {'role': 'subordinate'}
         mock_nodes.return_value = [
             mock.Mock(id='NODE1'),
             mock.Mock(id='NODE2')
@@ -67,7 +67,7 @@ class ClusterOpTest(base.SenlinTestCase):
         mock_find.assert_called_once_with(self.ctx, 'FAKE_CLUSTER')
         mock_cluster.assert_called_once_with(self.ctx, db_cluster=x_db_cluster)
         x_schema.validate.assert_called_once_with({'style': 'tango'})
-        mock_nodes.assert_called_once_with(self.ctx, filters={'role': 'slave'},
+        mock_nodes.assert_called_once_with(self.ctx, filters={'role': 'subordinate'},
                                            cluster_id='12345678AB')
         mock_action.assert_called_once_with(
             self.ctx, '12345678AB', consts.CLUSTER_OPERATION,
@@ -158,7 +158,7 @@ class ClusterOpTest(base.SenlinTestCase):
         x_cluster.rt = {'profile': x_profile}
         mock_cluster.return_value = x_cluster
         mock_action.return_value = 'ACTION_ID'
-        filters = {'role': 'slave'}
+        filters = {'role': 'subordinate'}
         mock_nodes.return_value = [
             mock.Mock(id='NODE1'),
             mock.Mock(id='NODE2')
@@ -173,7 +173,7 @@ class ClusterOpTest(base.SenlinTestCase):
         mock_find.assert_called_once_with(self.ctx, 'FAKE_CLUSTER')
         mock_cluster.assert_called_once_with(self.ctx, db_cluster=x_db_cluster)
         self.assertEqual(0, x_schema.validate.call_count)
-        mock_nodes.assert_called_once_with(self.ctx, filters={'role': 'slave'},
+        mock_nodes.assert_called_once_with(self.ctx, filters={'role': 'subordinate'},
                                            cluster_id='12345678AB')
         mock_action.assert_called_once_with(
             self.ctx, '12345678AB', consts.CLUSTER_OPERATION,
@@ -280,7 +280,7 @@ class ClusterOpTest(base.SenlinTestCase):
         x_cluster.rt = {'profile': x_profile}
         mock_cluster.return_value = x_cluster
         mock_action.return_value = 'ACTION_ID'
-        filters = {'role': 'slave'}
+        filters = {'role': 'subordinate'}
         req = orco.ClusterOperationRequest(identity='FAKE_CLUSTER',
                                            operation='dance', filters=filters)
 
@@ -293,6 +293,6 @@ class ClusterOpTest(base.SenlinTestCase):
                          six.text_type(ex.exc_info[1]))
         mock_find.assert_called_once_with(self.ctx, 'FAKE_CLUSTER')
         mock_cluster.assert_called_once_with(self.ctx, db_cluster=x_db_cluster)
-        mock_nodes.assert_called_once_with(self.ctx, filters={'role': 'slave'},
+        mock_nodes.assert_called_once_with(self.ctx, filters={'role': 'subordinate'},
                                            cluster_id='12345678AB')
         self.assertEqual(0, mock_action.call_count)

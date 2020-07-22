@@ -34,7 +34,7 @@ class DesignateZone(resource.Resource):
     PROPERTIES = (
         NAME, TTL, DESCRIPTION, EMAIL, TYPE, MASTERS
     ) = (
-        'name', 'ttl', 'description', 'email', 'type', 'masters'
+        'name', 'ttl', 'description', 'email', 'type', 'mains'
     )
 
     ATTRIBUTES = (
@@ -81,14 +81,14 @@ class DesignateZone(resource.Resource):
         TYPE: properties.Schema(
             properties.Schema.STRING,
             _('Type of zone. PRIMARY is controlled by Designate, SECONDARY '
-              'zones are slaved from another DNS Server.'),
+              'zones are subordinated from another DNS Server.'),
             default=PRIMARY,
             constraints=[constraints.AllowedValues(
                 allowed=TYPES)]
         ),
         MASTERS: properties.Schema(
             properties.Schema.LIST,
-            _('The servers to slave from to get DNS information and is '
+            _('The servers to subordinate from to get DNS information and is '
               'mandatory for zone type SECONDARY, otherwise ignored.'),
             update_allowed=True
         )

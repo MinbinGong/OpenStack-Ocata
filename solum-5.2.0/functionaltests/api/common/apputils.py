@@ -25,7 +25,7 @@ def get_sample_data(languagepack=''):
 
     source = {}
     source['repository'] = "https://github.com/a/b.git"
-    source['revision'] = "master"
+    source['revision'] = "main"
     data["source"] = source
 
     workflow = {}

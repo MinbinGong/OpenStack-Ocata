@@ -191,7 +191,7 @@ class ParseSDRFileTestCase(base.BaseTestCase):
         data = b'\x00\xFF\x00\xFF\x57\x01\x00\x0D\x01\x0A\xB2\x00\xFF'
         with open(self.temp_file, 'wb') as f:
             f.write(data)
-        result = node_manager.NodeManager._parse_slave_and_channel(
+        result = node_manager.NodeManager._parse_subordinate_and_channel(
             self.temp_file)
         self.assertEqual(('0a', 'b'), result)
 
@@ -199,6 +199,6 @@ class ParseSDRFileTestCase(base.BaseTestCase):
         data = b'\x00\xFF\x00\xFF\x52\x01\x80\x0D\x01\x6A\xB7\x00\xFF'
         with open(self.temp_file, 'wb') as f:
             f.write(data)
-        result = node_manager.NodeManager._parse_slave_and_channel(
+        result = node_manager.NodeManager._parse_subordinate_and_channel(
             self.temp_file)
         self.assertIsNone(result)

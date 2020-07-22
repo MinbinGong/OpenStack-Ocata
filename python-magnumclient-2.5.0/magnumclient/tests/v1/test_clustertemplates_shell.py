@@ -46,7 +46,7 @@ class ShellTest(shell_test_base.TestCommandLineArgument):
         return expected_args
 
     def _get_expected_args(self, image_id, external_network_id, coe,
-                           master_flavor_id=None, name=None,
+                           main_flavor_id=None, name=None,
                            keypair_id=None, fixed_network=None,
                            fixed_subnet=None, network_driver=None,
                            volume_driver=None, dns_nameserver='8.8.8.8',
@@ -55,7 +55,7 @@ class ShellTest(shell_test_base.TestCommandLineArgument):
                            docker_volume_size=None, http_proxy=None,
                            https_proxy=None, no_proxy=None, labels={},
                            tls_disabled=False, public=False,
-                           master_lb_enabled=False, server_type='vm',
+                           main_lb_enabled=False, server_type='vm',
                            floating_ip_enabled=True,
                            registry_enabled=False):
 
@@ -63,7 +63,7 @@ class ShellTest(shell_test_base.TestCommandLineArgument):
         expected_args['image_id'] = image_id
         expected_args['external_network_id'] = external_network_id
         expected_args['coe'] = coe
-        expected_args['master_flavor_id'] = master_flavor_id
+        expected_args['main_flavor_id'] = main_flavor_id
         expected_args['name'] = name
         expected_args['keypair_id'] = keypair_id
         expected_args['fixed_network'] = fixed_network
@@ -80,7 +80,7 @@ class ShellTest(shell_test_base.TestCommandLineArgument):
         expected_args['labels'] = labels
         expected_args['tls_disabled'] = tls_disabled
         expected_args['public'] = public
-        expected_args['master_lb_enabled'] = master_lb_enabled
+        expected_args['main_lb_enabled'] = main_lb_enabled
         expected_args['server_type'] = server_type
         expected_args['floating_ip_enabled'] = floating_ip_enabled
         expected_args['registry_enabled'] = registry_enabled
@@ -103,12 +103,12 @@ class ShellTest(shell_test_base.TestCommandLineArgument):
                                '--volume-driver test_volume '
                                '--network-driver test_driver '
                                '--labels key=val '
-                               '--master-flavor-id test_flavor '
+                               '--main-flavor-id test_flavor '
                                '--docker-volume-size 10 '
                                '--docker-storage-driver devicemapper '
                                '--public '
                                '--server-type vm '
-                               '--master-lb-enabled '
+                               '--main-lb-enabled '
                                '--floating-ip-enabled ')
         expected_args = \
             self._get_expected_args(name='test', image_id='test_image',
@@ -116,7 +116,7 @@ class ShellTest(shell_test_base.TestCommandLineArgument):
                                     external_network_id='test_net',
                                     dns_nameserver='test_dns', public=True,
                                     flavor_id='test_flavor',
-                                    master_flavor_id='test_flavor',
+                                    main_flavor_id='test_flavor',
                                     fixed_network='private',
                                     fixed_subnet='private-subnet',
                                     server_type='vm',
@@ -124,7 +124,7 @@ class ShellTest(shell_test_base.TestCommandLineArgument):
                                     volume_driver='test_volume',
                                     docker_storage_driver='devicemapper',
                                     docker_volume_size=10,
-                                    master_lb_enabled=True,
+                                    main_lb_enabled=True,
                                     floating_ip_enabled=True,
                                     labels={'key': 'val'})
         mock_create.assert_called_with(**expected_args)
@@ -159,7 +159,7 @@ class ShellTest(shell_test_base.TestCommandLineArgument):
                                '--fixed-network public '
                                '--network-driver test_driver '
                                '--labels key=val '
-                               '--master-flavor-id test_flavor '
+                               '--main-flavor-id test_flavor '
                                '--docker-volume-size 10 '
                                '--docker-storage-driver devicemapper '
                                '--public ')
@@ -169,7 +169,7 @@ class ShellTest(shell_test_base.TestCommandLineArgument):
                                     external_network_id='test_net',
                                     dns_nameserver='test_dns', public=True,
                                     flavor_id='test_flavor',
-                                    master_flavor_id='test_flavor',
+                                    main_flavor_id='test_flavor',
                                     fixed_network='public',
                                     network_driver='test_driver',
                                     docker_storage_driver='devicemapper',
@@ -232,7 +232,7 @@ class ShellTest(shell_test_base.TestCommandLineArgument):
 
     @mock.patch(
         'magnumclient.v1.cluster_templates.ClusterTemplateManager.create')
-    def test_cluster_template_create_success_with_master_flavor(self,
+    def test_cluster_template_create_success_with_main_flavor(self,
                                                                 mock_create):
         self._test_arg_success('cluster-template-create '
                                '--name test '
@@ -241,13 +241,13 @@ class ShellTest(shell_test_base.TestCommandLineArgument):
                                '--external-network-id test_net '
                                '--coe swarm '
                                '--dns-nameserver test_dns '
-                               '--master-flavor-id test_flavor')
+                               '--main-flavor-id test_flavor')
         expected_args = \
             self._get_expected_args(name='test', image_id='test_image',
                                     keypair_id='test_keypair', coe='swarm',
                                     external_network_id='test_net',
                                     dns_nameserver='test_dns',
-                                    master_flavor_id='test_flavor')
+                                    main_flavor_id='test_flavor')
         mock_create.assert_called_with(**expected_args)
 
     @mock.patch(
@@ -530,7 +530,7 @@ class ShellTest(shell_test_base.TestCommandLineArgument):
         mock_create.assert_not_called()
 
         self._test_arg_failure(required_args +
-                               '--master-flavor test --master-flavor-id test',
+                               '--main-flavor test --main-flavor-id test',
                                self._too_many_group_arg_error)
         mock_create.assert_not_called()
 
@@ -590,11 +590,11 @@ class ShellTest(shell_test_base.TestCommandLineArgument):
                                     external_network_id='public')
         mock_create.assert_called_with(**expected_args)
 
-        self._test_arg_failure(required_args + '--master-flavor-id test',
+        self._test_arg_failure(required_args + '--main-flavor-id test',
                                self._deprecated_warning)
         expected_args = \
             self._get_expected_args(image_id='test', coe='test',
-                                    master_flavor_id='test',
+                                    main_flavor_id='test',
                                     external_network_id='public')
         mock_create.assert_called_with(**expected_args)
 
